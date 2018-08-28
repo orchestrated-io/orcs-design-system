@@ -1,4 +1,6 @@
 # orca - orchestrated design system with React Components
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Forchestrated-io%2Forca-design-system.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Forchestrated-io%2Forca-design-system?ref=badge_shield)
+
 
 ## Getting Started
 
@@ -171,3 +173,6 @@ This design system is intended to work correctly on all modern desktop and mobil
 ---
 
 > "A design system is a living, funded product with a roadmap and backlog, serving an ecosystem." — Nathan Curtis
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Forchestrated-io%2Forca-design-system.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Forchestrated-io%2Forca-design-system?ref=badge_large)
