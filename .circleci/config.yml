@@ -1,54 +1,111 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
 version: 2
-jobs:
-  build:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:10
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
+defaults:
     working_directory: ~/repo
+    docker: &ref_0
+        -
+            image: 'circleci/node:10'
+jobs:
+    build:
+        docker: *ref_0
+        steps:
+            - checkout
+            -
+                run: >-
+                    echo "@fortawesome:registry=https://npm.fontawesome.com/" >
+                    .npmrc
+            -
+                run: >-
+                    echo
+                    "//npm.fontawesome.com/:_authToken=$FONT_AWESOME_NPM_TOKEN"
+                    >> .npmrc
+            -
+                run: 'echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> .npmrc'
+            -
+                restore_cache:
+                    keys:
+                        - >-
+                            package-dependencies-{{ checksum "package-lock.json"
+                            }}
+                        - package-dependencies-
+            -
+                run: npm i
+            -
+                save_cache:
+                    paths:
+                        - node_modules
+                    key: 'package-dependencies-{{ checksum "package-lock.json" }}'
+            -
+                run:
+                    name: build
+                    command: npm run-script build
+            -
+                persist_to_workspace:
+                    root: ~/repo
+                    paths:
+                        - .
+    deploy:
+        docker: *ref_0
+        steps:
+            -
+                attach_workspace:
+                    at: ~/repo
+            -
+                run:
+                    name: create artifacts
+                    command: >
+                        mkdir ./artifacts
 
-    steps:
-      - checkout
-      - run: echo "@fortawesome:registry=https://npm.fontawesome.com/" > .npmrc
-      - run: echo "//npm.fontawesome.com/:_authToken=$FONT_AWESOME_NPM_TOKEN" >> .npmrc
-      - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> .npmrc
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - package-dependencies-{{ checksum "package-lock.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - package-dependencies-
-
-      - run: npm i
-      - save_cache:
-          paths:
-            - node_modules
-          key: package-dependencies-{{ checksum "package-lock.json" }}
-      - run:
-          name: build
-          command: npm run-script build
-      - run:
-          name: create artifacts
-          command: |
-            mkdir ./artifacts
-            (cd build && tar -cvzf ../artifacts/dist_$CIRCLE_BUILD_NUM.tar.gz *)
-      - store_artifacts:
-          path: ./artifacts
-          destination: artifacts
-      - deploy:
-          name: deploy aws stack
-          command:  npm run-script deploy-stack -- --stage dev --build $CIRCLE_BUILD_NUM
-      - deploy:
-          name: deploy site
-          command: npm run-script  deploy-client
-
-
+                        (cd build && tar -cvzf
+                        ../artifacts/dist_$CIRCLE_BUILD_NUM.tar.gz *)
+            -
+                store_artifacts:
+                    path: ./artifacts
+                    destination: artifacts
+            -
+                run:
+                    name: deploy aws stack
+                    command: >-
+                        npx serverless deploy --stage dev --build
+                        $CIRCLE_BUILD_NUM
+            -
+                run:
+                    name: deploy site
+                    command: npx serverless client deploy  --no-confirm
+    publish:
+        docker: *ref_0
+        steps:
+            -
+                attach_workspace:
+                    at: ~/repo
+            -
+                run:
+                    name: Publish  package
+                    command: npm publish
+           
+workflows:
+    version: 2
+    build-n-deploy:
+        jobs:
+            -
+                build:
+                    filters:
+                        tags:
+                            only: /.*/
+            -
+                deploy:
+                    requires:
+                        - build
+                    filters:
+                        tags:
+                            only: /^v.*/
+                        branches:
+                            ignore: /.*/
+            -
+                publish:
+                    requires:
+                        - build
+                    filters:
+                        tags:
+                            only: /^v.*/
+                        branches:
+                            ignore: /.*/
