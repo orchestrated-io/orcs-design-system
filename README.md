@@ -1,5 +1,7 @@
 # orca - orchestrated design system with React Components
 
+[![npm version](https://badge.fury.io/js/orca-design-system.svg)](https://badge.fury.io/js/orca-design-system) [![GitHub license](https://img.shields.io/github/license/orchestrated-io/orca-design-system.svg)](https://github.com/orchestrated-io/orca-design-system/blob/master/LICENSE)
+
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Forchestrated-io%2Forca-design-system.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Forchestrated-io%2Forca-design-system?ref=badge_large)
 
 ## Getting Started
