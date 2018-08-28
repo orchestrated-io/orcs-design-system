@@ -1,0 +1,1 @@
+Using 3rd party component. See: <https://www.npmjs.com/package/styled-grid-component> for usage.
