@@ -1,6 +1,6 @@
 {
   "name": "orca-design-system",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Orchestrated Frontend React NPM library for Brand designs",
   "main": "dist/index.js",
   "scripts": {
@@ -10,8 +10,7 @@
     "build": "styleguidist build",
     "dist": "babel lib -d dist",
     "deploy-stack": "serverless deploy",
-    "deploy-client": "serverless client deploy  --no-confirm",
-    "precommit": "yarn dist; git add dist"
+    "deploy-client": "serverless client deploy  --no-confirm"
   },
   "dependencies": {
     "husky": "^0.14.3",
