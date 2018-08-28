@@ -18,9 +18,9 @@ jobs:
 
     steps:
       - checkout
-      - run: echo "\n" >> .npmrc
-      - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> .npmrc
+      - run: echo "@fortawesome:registry=https://npm.fontawesome.com/" > .npmrc
       - run: echo "//npm.fontawesome.com/:_authToken=$FONT_AWESOME_NPM_TOKEN" >> .npmrc
+      - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> .npmrc
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -29,7 +29,6 @@ jobs:
           - package-dependencies-
 
       - run: npm i
-
       - save_cache:
           paths:
             - node_modules
