@@ -3,6 +3,7 @@ Example of basic and alternative cards. Child elements can be anything, plain te
 If your UI is split into different areas or sections you can also choose to colour code your cards to match, by applying a colour prop which adds the corresponding colour as a top border.
 
 ```js
+const colours = require("../../colours").default;
 <Layout background padding childVerticalSpacing>
 
   <Card title="Card title" subtitle="Sub title">
@@ -88,6 +89,30 @@ If your UI is split into different areas or sections you can also choose to colo
       subtitle to the right of the title, rather than underneath it.
     </Typography.P>
   </Card>
+
+  <Flex justifyBetween>
+    <Card width="calc(50% - 10px)" center>
+      <Layout childVerticalSpacing>
+        <Icon icon={["far", "file-plus"]} size="3x" color={colours.greyLight} />
+        <Typography.H1 center>Create new</Typography.H1>
+        <Typography.P center>Start with a blank slate and add your own data</Typography.P>
+        <Button>
+          Start fresh
+        </Button>
+      </Layout>
+    </Card>
+
+    <Card width="calc(50% - 10px)" center>
+      <Layout childVerticalSpacing>
+        <Icon icon={["far", "eye"]} size="3x" color={colours.greyLight} />
+        <Typography.H1 center>Explore app</Typography.H1>
+        <Typography.P center>Look at pre-populated data to see app in action</Typography.P>
+        <Button>
+          View example
+        </Button>
+      </Layout>
+    </Card>
+  </Flex>
 
 </Layout>
 ```
