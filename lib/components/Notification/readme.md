@@ -21,7 +21,7 @@ Default notifications are displayed inline, if a floating notification is requir
     Error notification e.g. Update failed! Please try again.
   </Notification>
 
-  <Notification floating icon={["far", "bell"]}>
+  <Notification floating bottom="20px" right="20px" icon={["far", "bell"]}>
     Floating notification.
   </Notification>
 
