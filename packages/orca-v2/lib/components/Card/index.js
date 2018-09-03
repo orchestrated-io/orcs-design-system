@@ -7,8 +7,8 @@ import variables from "../../variables";
 
 const Item = styled.div`
   word-wrap: break-word;
-  width: ${props => (props.fluid ? "100%" : "auto")};
-  height: ${props => (props.fluid ? "100%" : "auto")};
+  width: ${props => props.width ? props.width : props.fluid ? "100%" : "auto"};
+  height: ${props => props.fluid ? "100%" : "auto"};
   background: ${theme.white};
   border-radius: ${variables.borderRadius};
   padding: ${variables.defaultSpacing};
@@ -47,6 +47,16 @@ const Item = styled.div`
               : css`
                   border-top: 0;
                 `};
+
+  ${props => props.center
+  ? css`
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+  `
+  : css``};
 
   ${props =>
     props.alternate
@@ -88,15 +98,19 @@ class Card extends React.Component {
       subtitle,
       children,
       fluid,
+      width,
+      center,
       ...restProps
     } = this.props;
     return (
-      <Item alternate={alternate} colour={colour} fluid={fluid} {...restProps}>
-        <Header>
-          {icon ? <Icon icon={icon} size="lg" /> : null}
-          {title ? <Title>{title}</Title> : null}
-          {subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
-        </Header>
+      <Item alternate={alternate} colour={colour} fluid={fluid} width={width} center={center} {...restProps}>
+        {!icon & !title & !subtitle ? null :
+          <Header>
+            {icon ? <Icon icon={icon} size="lg" /> : null}
+            {title ? <Title>{title}</Title> : null}
+            {subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
+          </Header>
+        }
         <Content>{children}</Content>
       </Item>
     );
@@ -114,6 +128,10 @@ Card.propTypes = {
   title: PropTypes.node,
   /** Card subtitle */
   subtitle: PropTypes.node,
+  /** Horizontally centers content inside card */
+  center: PropTypes.bool,
+  /** Can specify a width in pixels or percentages (make sure you specify units) */
+  width: PropTypes.string
 };
 
 /** @component */
