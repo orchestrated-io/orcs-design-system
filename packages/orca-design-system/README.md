@@ -12,24 +12,35 @@ Clone repo
 git clone https://github.com/orchestrated-io/orca-design-system.git
 ````
 
-### deploy styleguide publish
+### Prerequisites
 
-- > `npm version patch`
-- > `git push --follow-tags`
+**Requires Font Awesome 5.1.x Pro licence.**
 
-Install dependencies
+At the moment, design system has a dependency on Font Awesome Pro for font icons.
+We are planning to use free version of Font Awesome by default and make paid Pro version optional.
+
+Please set your Font Awesome NPM token to `FONT_AWESOME_NPM_TOKEN` environment variable.
+
+### Run the style guide
+
+#### Install dependencies
 
 `npm install` or `yarn`
 
-Start development server
+#### Start development server
 
 `npm start` or `yarn start`
 
-Run the styleguide
+#### View style guide
 
 Open [http://localhost:6060](http://localhost:6060) to view it in the browser.
 
 All library files are located inside `/lib`
+
+### Publish style guide
+
+- > `npm version patch`
+- > `git push --follow-tags`
 
 ## Testing
 
