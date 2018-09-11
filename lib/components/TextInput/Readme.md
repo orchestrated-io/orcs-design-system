@@ -30,19 +30,19 @@ Ensure to use a unique id for each input, and helpful placeholder text which sho
 <Flex wrap="true">
 
   <Layout marginHalf>
-    <TextInput id="textInput4" type="text" label="Full name" placeholder="E.g. John Smith" floating />
+    <TextInput id="textInput5" type="text" label="Full name" placeholder="E.g. John Smith" floating />
   </Layout>
 
   <Layout marginHalf>
-    <TextInput id="textInput5" type="text" label="Full name" placeholder="E.g. John Smith" floating invalid />
+    <TextInput id="textInput6" type="text" label="Full name" placeholder="E.g. John Smith" floating invalid />
   </Layout>
 
   <Layout marginHalf>
-    <TextInput fullWidth id="textInput6" type="text" label="Full name" placeholder="E.g. John Smith" floating valid />
+    <TextInput fullWidth id="textInput7" type="text" label="Full name" placeholder="E.g. John Smith" floating valid />
   </Layout>
   
    <Layout marginHalf>
-      <TextInput fullWidth id="textInput7" type="text" label="Full name" placeholder="E.g. John Smith" floating valid mandatory/>
+      <TextInput fullWidth id="textInput8" type="text" label="Full name" placeholder="E.g. John Smith" floating valid mandatory/>
     </Layout>
   
 </Flex>
