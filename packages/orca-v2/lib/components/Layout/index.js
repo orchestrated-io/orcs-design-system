@@ -7,6 +7,7 @@ const Layout = styled.div`
   display: block;
   width: ${props => props.width ? props.width : "auto"};
   min-height: ${props => (props.fullHeight ? "calc(100vh - 60px)" : "0")};
+  box-shadow: ${props => (props.boxShadow ? "0 1px 2px 0 rgba(0, 0, 0, 0.1)" : "none")};
   text-align: ${props =>
     props.textCenter ? "center"
     : props.textRight ? "right" 
@@ -172,6 +173,8 @@ Layout.propTypes = {
   mobileWidth: PropTypes.string,
   /** Adds a light grey background */
   background: PropTypes.bool,
+  /** Adds a slight drop shadow */
+  boxShadow: PropTypes.bool,
   /** Adds a white background */
   backgroundWhite: PropTypes.bool,
   /** Adds a dark grey background */
