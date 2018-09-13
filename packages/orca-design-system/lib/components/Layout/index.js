@@ -8,6 +8,7 @@ const Layout = styled.div`
   width: ${props => props.width ? props.width : "auto"};
   min-height: ${props => (props.fullHeight ? "calc(100vh - 60px)" : "0")};
   box-shadow: ${props => (props.boxShadow ? "0 1px 2px 0 rgba(0, 0, 0, 0.1)" : "none")};
+  border-radius: ${props => (props.roundedCorners ? variables.borderRadius : "0")};
   text-align: ${props =>
     props.textCenter ? "center"
     : props.textRight ? "right" 
@@ -175,6 +176,8 @@ Layout.propTypes = {
   background: PropTypes.bool,
   /** Adds a slight drop shadow */
   boxShadow: PropTypes.bool,
+  /** Adds a border radius for rounded corners */
+  roundedCorners: PropTypes.bool,
   /** Adds a white background */
   backgroundWhite: PropTypes.bool,
   /** Adds a dark grey background */
