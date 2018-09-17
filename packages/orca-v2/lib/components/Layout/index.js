@@ -6,9 +6,10 @@ import variables from "../../variables";
 const Layout = styled.div`
   display: block;
   width: ${props => props.width ? props.width : "auto"};
-  min-height: ${props => (props.fullHeight ? "calc(100vh - 60px)" : "0")};
+  height: ${props => props.height ? props.height : "auto"};
   box-shadow: ${props => (props.boxShadow ? "0 1px 2px 0 rgba(0, 0, 0, 0.1)" : "none")};
   border-radius: ${props => (props.roundedCorners ? variables.borderRadius : "0")};
+  overflow: ${props => (props.roundedCorners ? "hidden" : "auto")};
   text-align: ${props =>
     props.textCenter ? "center"
     : props.textRight ? "right" 
@@ -61,18 +62,6 @@ const Layout = styled.div`
       : props.backgroundWhite ? theme.white
       : props.backgroundDark ? theme.greyDarkest : `transparent`};
 
-  ${props => props.fullPage ? css`
-    min-width: 100%;
-    max-width: 100%;
-    min-height: calc(100vh - 60px);
-    max-height: calc(100vh - 60px);
-    display: flex;
-    > div {
-      flex-grow: 1;
-      max-width: 100%;
-    }
-  `
-  : css``}
   ${props =>
     props.fluidFlex
       ? css`
@@ -182,6 +171,8 @@ const Layout = styled.div`
 Layout.propTypes = {
   /** Can specify a width in pixels or percentages (make sure you specify units) */
   width: PropTypes.string,
+  /** Can specify a height in pixels or percentages (make sure you specify units) */
+  height: PropTypes.string,
   /** Can specify a width in pixels or percentages (make sure you specify units) for devices/browsers less than 800px wide */
   mobileWidth: PropTypes.string,
   /** Adds a light grey background */
