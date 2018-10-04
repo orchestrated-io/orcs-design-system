@@ -22,7 +22,7 @@ Ensure to use a unique id for each input, and helpful placeholder text which sho
   </Layout>
   
   <Layout marginHalf>
-      <TextInput id="textInput4" type="text" label="Full name" placeholder="E.g. John Smith" valid mandatory/>
+      <TextInput id="textInput4" type="text" label="Full name" placeholder="E.g. John Smith" mandatory/>
     </Layout>
 
 </Flex>
@@ -42,8 +42,32 @@ Ensure to use a unique id for each input, and helpful placeholder text which sho
   </Layout>
   
    <Layout marginHalf>
-      <TextInput fullWidth id="textInput8" type="text" label="Full name" placeholder="E.g. John Smith" floating valid mandatory/>
+      <TextInput fullWidth id="textInput8" type="text" label="Full name" placeholder="E.g. John Smith" floating mandatory/>
     </Layout>
   
+</Flex>
+
+<Flex wrap="true">
+
+  <Layout marginHalf>
+    <TextInput id="textInput9" type="text" label="Phone number" placeholder="E.g. (03) 9451 1786" iconLeft={["far", "phone"]} />
+  </Layout>
+
+  <Layout marginHalf>
+    <TextInput id="textInput11" type="text" label="What are you looking for?" placeholder="E.g. agile teams" iconRight={["far", "search"]} />
+  </Layout>
+
+</Flex>
+
+<Flex wrap="true">
+
+  <Layout marginHalf width="220px">
+    <TextInput id="textInput12" type="text" label="Phone number" placeholder="E.g. (03) 9451 1786" floating iconLeft={["far", "phone"]} fullWidth />
+  </Layout>
+
+  <Layout marginHalf width="220px">
+    <TextInput id="textInput10" type="text" label="What are you looking for?" placeholder="E.g. agile teams" floating iconRight={["far", "search"]} fullWidth />
+  </Layout>
+
 </Flex>
 ```
