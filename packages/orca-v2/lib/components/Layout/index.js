@@ -164,7 +164,7 @@ const Layout = styled.div`
           `
         : css``};
   @media only screen and (max-width: 800px) {
-    width: ${props => props.mobileWidth ? props.mobileWidth : "auto"};
+    width: ${props => props.mobileWidth ? props.mobileWidth : props.width ? props.width : "auto"};
   }
 `;
 
