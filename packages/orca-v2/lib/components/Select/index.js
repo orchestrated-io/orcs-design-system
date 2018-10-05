@@ -189,7 +189,7 @@ const Input = styled(ReactSelect)`
     display: table;
     border-spacing: 0;
     border-collapse: separate;
-    height: 36px;
+    height: ${props =>  props.large ? "60px" : "36px"};
     outline: none;
     overflow: hidden;
     position: relative;
@@ -217,7 +217,7 @@ const Input = styled(ReactSelect)`
     bottom: 0;
     color: ${theme.grey};
     left: 0;
-    line-height: 34px;
+    line-height: ${props =>  props.large ? "58px" : "34px"};
     padding-left: 10px;
     padding-right: 10px;
     position: absolute;
@@ -232,7 +232,7 @@ const Input = styled(ReactSelect)`
     bottom: 0;
     color: #aaa;
     left: 0;
-    line-height: 34px;
+    line-height: ${props =>  props.large ? "58px" : "34px"};
     padding-left: 10px;
     padding-right: 10px;
     position: absolute;
@@ -243,7 +243,7 @@ const Input = styled(ReactSelect)`
     text-overflow: ellipsis;
   }
   .Select-input {
-    height: 32px;
+    height: ${props =>  props.large ? "56px" : "32px"};
     padding-left: 10px;
     padding-right: 10px;
     vertical-align: middle;
@@ -260,8 +260,8 @@ const Input = styled(ReactSelect)`
     display: inline-block;
     font-family: inherit;
     font-size: inherit;
-    height: 32px;
-    font-size: 1.4rem;
+    height: ${props =>  props.large ? "56px" : "32px"};
+    font-size: 1.6rem;
     margin: 0;
     outline: none;
     line-height: 17px;
