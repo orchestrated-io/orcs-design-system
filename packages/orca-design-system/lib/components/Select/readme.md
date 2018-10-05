@@ -5,6 +5,7 @@ Following are some examples, but for the complete list of examples please visit 
 ```js
 <Layout marginHalf>
   <Select
+    id="select1"
     label="Label text"
     disabled
     options={[
@@ -182,5 +183,21 @@ Following are some examples, but for the complete list of examples please visit 
       placeholder="Select your favourite(s)"
     />
   </Layout>
+</Layout>
+<Layout marginHalf>
+  <Select
+    large
+    id="select2"
+    label="Large select box"
+    options={[
+      { label: "Chocolate", value: "chocolate" },
+      { label: "Vanilla", value: "vanilla" },
+      { label: "Strawberry", value: "strawberry" },
+      { label: "Caramel", value: "caramel" },
+      { label: "Cookies and Cream", value: "cookiescream" },
+      { label: "Peppermint", value: "peppermint" }
+    ]}
+    placeholder="Select flavour"
+  />
 </Layout>
 ```
