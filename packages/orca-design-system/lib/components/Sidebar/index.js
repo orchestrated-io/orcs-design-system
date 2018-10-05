@@ -70,7 +70,7 @@ const Panel = styled.div`
   display: ${props => (props.active ? "block" : "none")};
   min-width: 300px;
   height: calc(100vh - (60px + 72px));
-  overflow-y: scroll;
+  overflow-y: auto;
   background: ${theme.greyDarker};
 `;
 
