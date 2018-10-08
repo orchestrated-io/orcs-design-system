@@ -1,15 +1,15 @@
-Tabs are intended to provide a way to navigate between distinct sections of content within a page without leaving the page or triggering a page refresh.
+ContentTabs are intended to provide a way to navigate between distinct sections of content within a page without leaving the page or triggering a page refresh.
 
 Any child content is supported including text, elements or other components.
 
 ```js
-<Tabs.Container>
-  <Tabs.Tab active>Details</Tabs.Tab>
-  <Tabs.Tab>Additional information</Tabs.Tab>
-  <Tabs.Tab>Location</Tabs.Tab>
-</Tabs.Container>
+<ContentTabs.Container>
+  <ContentTabs.Tab active>Details</ContentTabs.Tab>
+  <ContentTabs.Tab>Additional information</ContentTabs.Tab>
+  <ContentTabs.Tab>Location</ContentTabs.Tab>
+</ContentTabs.Container>
 
-<Tabs.Content active>
+<ContentTabs.Content active>
   <Layout verticalPadding>
     <Typography.P>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -21,9 +21,9 @@ Any child content is supported including text, elements or other components.
       mollit anim id est laborum.
     </Typography.P>
   </Layout>
-</Tabs.Content>
+</ContentTabs.Content>
 
-<Tabs.Content>
+<ContentTabs.Content>
   <Layout verticalPadding>
     <Typography.P>
       Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -37,9 +37,9 @@ Any child content is supported including text, elements or other components.
       voluptatem.
     </Typography.P>
   </Layout>
-</Tabs.Content>
+</ContentTabs.Content>
 
-<Tabs.Content>
+<ContentTabs.Content>
   <Layout verticalPadding>
     <Typography.P>
       Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
@@ -49,5 +49,5 @@ Any child content is supported including text, elements or other components.
       voluptas nulla pariatur?
     </Typography.P>
   </Layout>
-</Tabs.Content>
+</ContentTabs.Content>
 ```
