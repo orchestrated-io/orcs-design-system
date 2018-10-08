@@ -34,10 +34,12 @@ const Bar = styled.header`
   }
 `;
 
-const AppName = styled.span`
-  display: block;
+const AppName = styled.div`
+  display: flex;
+  align-items: center;
   font-size: 2rem;
   line-height: 60px;
+  height: 60px;
   padding-right: ${variables.defaultSpacing};
   color: ${theme.white};
   border-right: solid 1px ${theme.white.fade(0.8)};
