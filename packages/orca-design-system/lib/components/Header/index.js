@@ -35,7 +35,7 @@ const Bar = styled.header`
 `;
 
 const AppName = styled.div`
-  display: flex;
+  display: flex !important;
   align-items: center;
   font-size: 2rem;
   line-height: 60px;
