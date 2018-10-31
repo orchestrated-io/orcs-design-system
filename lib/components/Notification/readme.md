@@ -5,7 +5,7 @@ Default notifications are displayed inline, if a floating notification is requir
 ```js
 <Layout childVerticalSpacing>
 
-  <Notification icon={["far", "share-square"]}>
+  <Notification icon={["far", "share-square"]} onDismiss={()=>{}}>
     Default notification message for messages that aren't super important, e.g. Link shared.
   </Notification>
 
