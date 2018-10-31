@@ -47,7 +47,7 @@
     "react-styleguidist": "^7.0.19",
     "serverless": "^1.27.3",
     "serverless-finch": "^2.1.2",
-    "styled-components": "^3.3.3",
+    "styled-components": "^3.4.10",
     "webpack": "^4.13.0",
     "webpack-cli": "^3.0.8"
   },
@@ -59,7 +59,7 @@
     "@fortawesome/react-fontawesome": "^0.1.0",
     "react": ">=0.16",
     "react-dom": ">=0.16",
-    "styled-components": "^3.3.3"
+    "styled-components": "^3.4.10"
   },
   "jest": {
     "collectCoverageFrom": [
