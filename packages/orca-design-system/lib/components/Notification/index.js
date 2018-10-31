@@ -99,7 +99,7 @@ Notification.propTypes = {
   /** Applies an icon to notification with specified name. */
   icon: PropTypes.array,
   /** Specifies notification colour */
-  colour: PropTypes.oneOf(["success", "warning", "danger"]),
+  colour: PropTypes.oneOf(["success", "warning", "danger", "primary"]),
   /** Positions notification floating over content, instead of inline. Must be combined with top, right, bottom, left or centered props to correctly position in your desired location */
   floating: PropTypes.bool,
   /** Specifies the position of a floating notification from top of browser window (units must be specified) */
