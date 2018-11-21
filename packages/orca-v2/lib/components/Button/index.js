@@ -41,22 +41,28 @@ const Button = styled.button`
   color: ${props =>
     props.ghost
       ? theme.primary
-      : props.disabled ? theme.greyLight : theme.white};
+      : props.disabled
+      ? theme.greyLight
+      : theme.white};
 
   border: solid 1px
     ${props =>
       props.disabled
         ? theme.greyLighter.darken(0.05)
-        : props.secondary
-          ? theme.success.darken(0.05)
-          : props.ghost ? "transparent" : theme.primary.darken(0.05)};
+        : props.colour && theme[props.colour]
+        ? theme[props.colour].darken(0.05)
+        : props.ghost
+        ? "transparent"
+        : theme.primary.darken(0.05)};
 
   background: ${props =>
     props.disabled
       ? theme.greyLighter
-      : props.secondary
-        ? theme.success
-        : props.ghost ? "transparent" : theme.primary};
+      : props.colour && theme[props.colour]
+      ? theme[props.colour]
+      : props.ghost
+      ? "transparent"
+      : theme.primary};
 
   padding: ${props =>
     props.large ? "14px 24px" : props.small ? "6px 8px" : "10px 16px"};
@@ -66,25 +72,29 @@ const Button = styled.button`
       ${props =>
         props.disabled
           ? theme.greyLighter.darken(0.05)
-          : props.secondary
-            ? theme.success.darken(0.2)
-            : props.ghost ? "transparent" : theme.primary.darken(0.2)};
+          : props.colour && theme[props.colour]
+          ? theme[props.colour].darken(0.2)
+          : props.ghost
+          ? "transparent"
+          : theme.primary.darken(0.2)};
 
     background: ${props =>
       props.disabled
         ? theme.greyLighter
-        : props.secondary
-          ? theme.success.darken(0.15)
-          : props.ghost
-            ? theme.primary.fade(0.85)
-            : theme.primary.darken(0.15)};
+        : props.colour && theme[props.colour]
+        ? theme[props.colour].darken(0.15)
+        : props.ghost
+        ? theme.primary.fade(0.85)
+        : theme.primary.darken(0.15)};
   }
 
   &:focus {
     outline: 0;
     box-shadow: 0 0 0 3px
       ${props =>
-        props.secondary ? theme.success.fade(0.6) : theme.primary.fade(0.6)};
+        props.colour && theme[props.colour]
+          ? theme[props.colour].fade(0.6)
+          : theme.primary.fade(0.6)};
   }
 
   ${props =>
@@ -95,33 +105,32 @@ const Button = styled.button`
           }
         `
       : props.iconRight
-        ? css`
-            svg {
-              margin-left: ${variables.defaultSpacingHalf};
-            }
-          `
-        : css``} ${props =>
-      props.isLoading
-        ? css`
-            &:after {
-              content: "";
-              position: relative;
-              animation: loadingSpin 500ms infinite linear;
-              width: 16px;
-              height: 16px;
-              border-radius: 50%;
-              margin-left: ${variables.defaultSpacingHalf};
-              border: 2px solid rgba(0, 0, 0, 0.2);
-              border-right-color: rgba(255, 255, 255, 0.7);
-              display: inline-block;
-            }
-          `
-        : css``};
+      ? css`
+          svg {
+            margin-left: ${variables.defaultSpacingHalf};
+          }
+        `
+      : css``}
+    ${props =>
+    props.isLoading
+      ? css`
+          &:after {
+            content: "";
+            position: relative;
+            animation: loadingSpin 500ms infinite linear;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            margin-left: ${variables.defaultSpacingHalf};
+            border: 2px solid rgba(0, 0, 0, 0.2);
+            border-right-color: rgba(255, 255, 255, 0.7);
+            display: inline-block;
+          }
+        `
+      : css``};
 `;
 
 Button.propTypes = {
-  /** Secondary button */
-  secondary: PropTypes.bool,
   /** Large button */
   large: PropTypes.bool,
   /** Small button */
@@ -133,7 +142,15 @@ Button.propTypes = {
   /** Adds disabled attribute and styling to button */
   disabled: PropTypes.bool,
   /** Adds loading spinner */
-  isLoading: PropTypes.bool
+  isLoading: PropTypes.bool,
+  /** Styles button to fit an icon on the left of text */
+  iconLeft: PropTypes.bool,
+  /** Styles button to fit an icon on the right of text */
+  iconRight: PropTypes.bool,
+  /** Styles button to suit having only an icon */
+  iconOnly: PropTypes.bool,
+  /** Specifies alternate button colour */
+  colour: PropTypes.oneOf(["successDark", "danger"])
 };
 
 /** @component */
