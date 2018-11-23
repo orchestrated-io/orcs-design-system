@@ -4,13 +4,14 @@ Default notifications are displayed inline, if a floating notification is requir
 
 ```js
 <Layout childVerticalSpacing>
-
-  <Notification icon={["far", "share-square"]} onDismiss={()=>{}}>
-    Default notification message for messages that aren't super important, e.g. Link shared.
+  <Notification icon={["far", "share-square"]} onDismiss={() => {}}>
+    Default notification message for messages that aren't super important, e.g.
+    Link shared.
   </Notification>
 
   <Notification colour="success" icon={["far", "check-circle"]}>
-    Green notification for good/successful notifications, e.g. Details updated successfully!
+    Green notification for good/successful notifications, e.g. Details updated
+    successfully!
   </Notification>
 
   <Notification colour="warning" icon={["far", "exclamation-triangle"]}>
@@ -21,9 +22,17 @@ Default notifications are displayed inline, if a floating notification is requir
     Error notification e.g. Update failed! Please try again.
   </Notification>
 
+  <Notification
+    colour="warning"
+    icon={["far", "spinner"]}
+    iconSpin
+    closable={false}
+  >
+    Fixed Loading notification.
+  </Notification>
+
   <Notification floating bottom="20px" right="20px" icon={["far", "bell"]}>
     Floating notification.
   </Notification>
-
 </Layout>
 ```
