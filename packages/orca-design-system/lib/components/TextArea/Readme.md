@@ -10,29 +10,29 @@ Specify size using cols and rows like shown in the example. adding fullWidth pro
 <Flex wrap="true">
 
   <Layout marginHalf>
-    <TextArea id="TextArea1" type="text" label="Message" col="3" />
+    <TextArea id="TextArea1" label="Message" col="3" />
   </Layout>
 
   <Layout marginHalf>
-    <TextArea id="TextArea2" type="text" label="Message" invalid />
+    <TextArea id="TextArea2" label="Message" invalid />
   </Layout>
 
   <Layout marginHalf>
-    <TextArea id="TextArea3" type="text" label="Message" valid />
+    <TextArea id="TextArea3" label="Message" valid />
   </Layout>
   
   <Layout marginHalf>
-    <TextArea id="TextArea4" type="text" label="Message" mandatory/>
+    <TextArea id="TextArea4" label="Message" mandatory/>
   </Layout>
 
 </Flex>
 
 <Layout marginHalf>
-  <TextArea id="TextArea5" type="text" label="Message" cols="50" rows="5" />
+  <TextArea id="TextArea5" label="Message" cols="50" rows="5" />
 </Layout>
 
 <Layout marginHalf>
-  <TextArea id="TextArea5" type="text" label="Message" fullWidth />
+  <TextArea id="TextArea6" label="Message" fullWidth />
 </Layout>
 
 ```
