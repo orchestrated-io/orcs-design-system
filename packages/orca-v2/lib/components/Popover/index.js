@@ -5,13 +5,14 @@ import theme from "../../theme";
 import variables from "../../variables";
 import Flex from "../Flex";
 import Button from "../Button";
+import Layout from "../Layout";
 
 const Container = styled.div`
   display: block !important;
   position: relative;
   &:hover {
     > div {
-      display: ${props => (props.trigger === "hover" && "block")};
+      display: ${props => props.trigger === "hover" && "block"};
     }
   }
 `;
@@ -160,7 +161,14 @@ class Popover extends React.Component {
   }
 
   render() {
-    const { children, direction, width, text, trigger, confirm, confirmAction } = this.props;
+    const {
+      children,
+      direction,
+      width,
+      text,
+      trigger,
+      confirmAction
+    } = this.props;
     const { isOpen } = this.state;
     return (
       <Container
