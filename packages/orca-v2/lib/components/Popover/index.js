@@ -7,6 +7,7 @@ import Flex from "../Flex";
 import Button from "../Button";
 
 const Container = styled.div`
+  display: block !important;
   position: relative;
   &:hover {
     > div {
@@ -24,7 +25,7 @@ const Text = styled.div`
   left: 100%;
   top: 50%;
   outline: 0;
-  display: ${props => (props.open ? "block" : "none")};
+  display: ${props => (props.open ? "block !important" : "none !important")};
   padding: 8px 10px;
   border-radius: 2px;
   transform: translateX(10px) translateY(-50%);
@@ -122,6 +123,13 @@ const Text = styled.div`
       : css``};
 `;
 
+const FlexButtons = styled.div`
+  display: flex;
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+  align-items: center;
+  width: 100%;
+`;
 const ConfirmButton = styled(Button)`
   z-index: 3;
   margin-right: 5px;
@@ -164,10 +172,10 @@ class Popover extends React.Component {
           <Layout childVerticalSpacingHalf>
             <span>{text}</span>
             {confirmAction ? (
-                <Flex spaceBetween alignCenter>
+                <FlexButtons>
                   <ConfirmButton small onClick={() => this.confirmAndClose(confirmAction)}>yes</ConfirmButton>
                   <CancelButton ghost small onClick={() => this.close()}>no</CancelButton>
-                </Flex>
+                </FlexButtons>
             ) : null}
           </Layout>
         </Text>
