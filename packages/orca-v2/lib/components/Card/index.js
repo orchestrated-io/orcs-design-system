@@ -50,7 +50,7 @@ const Item = styled.div`
 
   ${props => props.center
   ? css`
-      div {
+      , > *, > div > * {
         display: flex;
         flex-direction: column;
         align-items: center;

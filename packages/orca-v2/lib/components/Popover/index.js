@@ -26,7 +26,7 @@ const Text = styled.div`
   left: 100%;
   top: 50%;
   outline: 0;
-  display: ${props => (props.open ? "block !important" : "none !important")};
+  display: ${props => (props.open ? "block" : "none")};
   padding: 8px 10px;
   border-radius: 2px;
   transform: translateX(10px) translateY(-50%);
