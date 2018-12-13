@@ -6,9 +6,11 @@ const Container = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
+  overflow-x: scroll;
 `;
 
 const Tab = styled.button`
+  flex: 1 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
