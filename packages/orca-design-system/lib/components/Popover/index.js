@@ -199,7 +199,9 @@ Popover.propTypes = {
   /** Specifies the width of the popover in pixels */
   width: PropTypes.string,
   /** Changes appearance to suit a dark background. */
-  inverted: PropTypes.bool
+  inverted: PropTypes.bool,
+  /** Specifies the fucntion to run on clicking yes */
+  confirmAction: PropTypes.func
 };
 
 /** @component */
