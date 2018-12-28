@@ -14,6 +14,7 @@ const Overlay = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
+  margin: 0;
   align-items: center;
   justify-content: center;
   width: 100vw;
