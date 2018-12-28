@@ -5,6 +5,7 @@ export { default as Badge } from "./components/Badge";
 export { default as Button } from "./components/Button";
 export { default as Card } from "./components/Card";
 export { default as Checkbox } from "./components/Checkbox";
+export { default as Dialogue } from "./components/Dialogue";
 export { default as Divider } from "./components/Divider";
 export { default as Expandable } from "./components/Expandable";
 export { default as Flex, FlexItem } from "./components/Flex";
