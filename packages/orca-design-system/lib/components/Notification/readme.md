@@ -23,12 +23,13 @@ Default notifications are displayed inline, if a floating notification is requir
   </Notification>
 
   <Notification
-    colour="warning"
-    icon={["far", "spinner"]}
-    iconSpin
     closable={false}
   >
-    Fixed Loading notification.
+    <Layout childChildHorizontalSpacingHalf>
+      <Flex>
+        <Loading inverted/> <span>In progress notification with disabled close. E.g. Importing data...</span>
+      </Flex>
+    </Layout>
   </Notification>
 
   <Notification floating bottom="20px" right="20px" icon={["far", "bell"]}>
