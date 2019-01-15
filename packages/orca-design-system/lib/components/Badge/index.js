@@ -20,6 +20,26 @@ const Badge = styled.div`
       ? theme[props.colour].fade(0.7)
       : theme.grey.fade(0.7)};
   border-radius: 2px;
+  ${props =>
+    props.inverted
+      ? css`
+          color: #fff;
+          background: ${props =>
+            props.colour === "success"
+              ? theme.success.fade(0.1)
+              : props.colour === "warning"
+              ? theme.warning.fade(0.1)
+              : props.colour === "danger"
+              ? theme.danger.fade(0.1)
+              : props.colour === "primaryLight"
+              ? theme.primaryLight.fade(0.1)
+              : props.colour === "primaryDark"
+              ? theme.primaryDark.fade(0.1)
+              : props.colour === "primaryDarkest"
+              ? theme.primaryDarkest.fade(0.1)
+              : theme.grey.fade(0.1)};
+        `
+      : css``}
 `;
 
 Badge.propTypes = {
@@ -31,7 +51,9 @@ Badge.propTypes = {
     "primaryLight",
     "primaryDark",
     "primaryDarkest"
-  ])
+  ]),
+  /** Changes colours to suit a dark background */
+  inverted: PropTypes.bool
 };
 
 /** @component */
