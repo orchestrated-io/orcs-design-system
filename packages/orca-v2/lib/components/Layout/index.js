@@ -5,63 +5,66 @@ import variables from "../../variables";
 
 const Layout = styled.div`
   display: block;
-  width: ${props => props.width ? props.width : "auto"};
-  height: ${props => props.height ? props.height : "auto"};
-  min-height: ${props => props.minHeight ? props.minHeight : "0"};
-  box-shadow: ${props => (props.boxShadow ? "0 1px 2px 0 rgba(0, 0, 0, 0.1)" : "none")};
-  border-radius: ${props => (props.roundedCorners ? variables.borderRadius : "0")};
+  width: ${props => (props.width ? props.width : "auto")};
+  height: ${props => (props.height ? props.height : "auto")};
+  min-height: ${props => (props.minHeight ? props.minHeight : "0")};
+  box-shadow: ${props =>
+    props.boxShadow ? "0 1px 2px 0 rgba(0, 0, 0, 0.1)" : "none"};
+  border-radius: ${props =>
+    props.roundedCorners ? variables.borderRadius : "0"};
   overflow: ${props => (props.roundedCorners ? "hidden" : "visible")};
   text-align: ${props =>
-    props.textCenter ? "center"
-    : props.textRight ? "right" 
-    : "left"};
+    props.textCenter ? "center" : props.textRight ? "right" : "left"};
   padding: ${props =>
     props.paddingDouble
       ? variables.defaultSpacingDouble
       : props.paddingHalf
-        ? variables.defaultSpacingHalf
-        : props.padding
-          ? variables.defaultSpacing
-          : props.verticalPaddingDouble
-            ? `${variables.defaultSpacingDouble} 0`
-            : props.verticalPaddingHalf
-              ? `${variables.defaultSpacingHalf} 0`
-              : props.verticalPadding
-                ? `${variables.defaultSpacing} 0`
-                : props.horizontalPaddingDouble
-                  ? `0 ${variables.defaultSpacingDouble}`
-                  : props.horizontalPaddingHalf
-                    ? `0 ${variables.defaultSpacingHalf}`
-                    : props.horizontalPadding
-                      ? `0 ${variables.defaultSpacing}`
-                      : 0};
+      ? variables.defaultSpacingHalf
+      : props.padding
+      ? variables.defaultSpacing
+      : props.verticalPaddingDouble
+      ? `${variables.defaultSpacingDouble} 0`
+      : props.verticalPaddingHalf
+      ? `${variables.defaultSpacingHalf} 0`
+      : props.verticalPadding
+      ? `${variables.defaultSpacing} 0`
+      : props.horizontalPaddingDouble
+      ? `0 ${variables.defaultSpacingDouble}`
+      : props.horizontalPaddingHalf
+      ? `0 ${variables.defaultSpacingHalf}`
+      : props.horizontalPadding
+      ? `0 ${variables.defaultSpacing}`
+      : 0};
 
   margin: ${props =>
     props.marginDouble
       ? variables.defaultSpacingDouble
       : props.marginHalf
-        ? variables.defaultSpacingHalf
-        : props.margin
-          ? variables.defaultSpacing
-          : props.verticalMarginDouble
-            ? `${variables.defaultSpacingDouble} 0`
-            : props.verticalMarginHalf
-              ? `${variables.defaultSpacingHalf} 0`
-              : props.verticalMargin
-                ? `${variables.defaultSpacing} 0`
-                : props.horizontalMarginDouble
-                  ? `0 ${variables.defaultSpacingDouble}`
-                  : props.horizontalMarginHalf
-                    ? `0 ${variables.defaultSpacingHalf}`
-                    : props.horizontalMargin
-                      ? `0 ${variables.defaultSpacing}`
-                      : 0};
+      ? variables.defaultSpacingHalf
+      : props.margin
+      ? variables.defaultSpacing
+      : props.verticalMarginDouble
+      ? `${variables.defaultSpacingDouble} 0`
+      : props.verticalMarginHalf
+      ? `${variables.defaultSpacingHalf} 0`
+      : props.verticalMargin
+      ? `${variables.defaultSpacing} 0`
+      : props.horizontalMarginDouble
+      ? `0 ${variables.defaultSpacingDouble}`
+      : props.horizontalMarginHalf
+      ? `0 ${variables.defaultSpacingHalf}`
+      : props.horizontalMargin
+      ? `0 ${variables.defaultSpacing}`
+      : 0};
 
   background: ${props =>
     props.background
       ? theme.greyLightest
-      : props.backgroundWhite ? theme.white
-      : props.backgroundDark ? theme.greyDarkest : `transparent`};
+      : props.backgroundWhite
+      ? theme.white
+      : props.backgroundDark
+      ? theme.greyDarkest
+      : `transparent`};
 
   ${props =>
     props.fluidFlex
@@ -69,103 +72,121 @@ const Layout = styled.div`
           flex: 1 1;
         `
       : props.growFlex
-        ? css`
-            flex: 1 1 auto;
-          `
-        : css``} ${props =>
+      ? css`
+          flex: 1 1 auto;
+        `
+      : css``} 
+    ${props =>
       props.border
         ? css`
             border: solid 1px ${theme.greyLighter};
           `
         : css`
             border: none;
-          `} ${props =>
+          `} 
+    ${props =>
       props.childVerticalSpacing
         ? css`
             > * + * {
-              margin-top: ${variables.defaultSpacing};
+              margin-top: ${variables.defaultSpacing} !important;
             }
           `
-        : css``} ${props =>
-      props.childHorizontalSpacing
-        ? css`
-            > * + * {
-              margin-left: ${variables.defaultSpacing};
-            }
-          `
-        : css``} ${props =>
-      props.childChildVerticalSpacing
-        ? css`
-            > * > * + * {
-              margin-top: ${variables.defaultSpacing};
-            }
-          `
-        : css``} ${props =>
-      props.childChildHorizontalSpacing
-        ? css`
-            > * > * + * {
-              margin-left: ${variables.defaultSpacing};
-            }
-          `
-        : css``} ${props =>
-      props.childVerticalSpacingHalf
-        ? css`
-            > * + * {
-              margin-top: ${variables.defaultSpacingHalf};
-            }
-          `
-        : css``} ${props =>
-      props.childHorizontalSpacingHalf
-        ? css`
-            > * + * {
-              margin-left: ${variables.defaultSpacingHalf};
-            }
-          `
-        : css``} ${props =>
-      props.childChildVerticalSpacingHalf
-        ? css`
-            > * > * + * {
-              margin-top: ${variables.defaultSpacingHalf};
-            }
-          `
-        : css``} ${props =>
-      props.childChildHorizontalSpacingHalf
-        ? css`
-            > * > * + * {
-              margin-left: ${variables.defaultSpacingHalf};
-            }
-          `
-        : css``} ${props =>
-      props.childVerticalSpacingQuarter
-        ? css`
-            > * + * {
-              margin-top: ${variables.defaultSpacingQuarter};
-            }
-          `
-        : css``} ${props =>
-      props.childHorizontalSpacingQuarter
-        ? css`
-            > * + * {
-              margin-left: ${variables.defaultSpacingQuarter};
-            }
-          `
-        : css``} ${props =>
-      props.childChildVerticalSpacingQuarter
-        ? css`
-            > * > * + * {
-              margin-top: ${variables.defaultSpacingQuarter};
-            }
-          `
-        : css``} ${props =>
-      props.childChildHorizontalSpacingQuarter
-        ? css`
-            > * > * + * {
-              margin-left: ${variables.defaultSpacingQuarter};
-            }
-          `
-        : css``};
+        : css``}
+  ${props =>
+    props.childHorizontalSpacing
+      ? css`
+          > * + * {
+            margin-left: ${variables.defaultSpacing} !important;
+          }
+        `
+      : css``} 
+      ${props =>
+  props.childChildVerticalSpacing
+    ? css`
+        > * > * + * {
+          margin-top: ${variables.defaultSpacing} !important;
+        }
+      `
+    : css``} 
+    ${props =>
+  props.childChildHorizontalSpacing
+    ? css`
+        > * > * + * {
+          margin-left: ${variables.defaultSpacing} !important;
+        }
+      `
+    : css``} 
+    ${props =>
+  props.childVerticalSpacingHalf
+    ? css`
+        > * + * {
+          margin-top: ${variables.defaultSpacingHalf} !important;
+        }
+      `
+    : css``} 
+    ${props =>
+  props.childHorizontalSpacingHalf
+    ? css`
+        > * + * {
+          margin-left: ${variables.defaultSpacingHalf} !important;
+        }
+      `
+    : css``} 
+    ${props =>
+  props.childChildVerticalSpacingHalf
+    ? css`
+        > * > * + * {
+          margin-top: ${variables.defaultSpacingHalf} !important;
+        }
+      `
+    : css``} 
+    ${props =>
+  props.childChildHorizontalSpacingHalf
+    ? css`
+        > * > * + * {
+          margin-left: ${variables.defaultSpacingHalf} !important;
+        }
+      `
+    : css``} 
+    ${props =>
+  props.childVerticalSpacingQuarter
+    ? css`
+        > * + * {
+          margin-top: ${variables.defaultSpacingQuarter} !important;
+        }
+      `
+    : css``} 
+    ${props =>
+  props.childHorizontalSpacingQuarter
+    ? css`
+        > * + * {
+          margin-left: ${variables.defaultSpacingQuarter} !important;
+        }
+      `
+    : css``} 
+    ${props =>
+  props.childChildVerticalSpacingQuarter
+    ? css`
+        > * > * + * {
+          margin-top: ${variables.defaultSpacingQuarter} !important;
+        }
+      `
+    : css``} 
+    ${props =>
+  props.childChildHorizontalSpacingQuarter
+    ? css`
+        > * > * + * {
+          margin-left: ${variables.defaultSpacingQuarter} !important;
+        }
+      `
+    : css``};
   @media only screen and (max-width: 800px) {
-    width: ${props => props.mobileWidth ? props.mobileWidth : props.width ? props.width : "auto"};
+    width: ${props =>
+      props.mobileWidth
+        ? props.mobileWidth
+        : props.width
+        ? props.width
+        : "auto"};
   }
 `;
 
