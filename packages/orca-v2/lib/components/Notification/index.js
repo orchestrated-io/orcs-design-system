@@ -94,7 +94,6 @@ class Notification extends React.Component {
       bottom,
       left,
       centered,
-      iconSpin = false,
       closable = true
     } = this.props;
     const { dismissed } = this.state;
@@ -109,7 +108,7 @@ class Notification extends React.Component {
           left={left}
           centered={centered}
         >
-          <Icon icon={icon} color="white" spin={iconSpin} />
+          <Icon icon={icon} color="white" />
           <span>{children}</span>
           {closable && (
             <Icon
@@ -145,8 +144,6 @@ Notification.propTypes = {
   centered: PropTypes.bool,
   /** A callback function for the dismiss operation.*/
   onDismiss: PropTypes.func,
-  /** Spin the icon.*/
-  iconSpin: PropTypes.bool,
   /** Showing the close button, default to true.*/
   closable: PropTypes.bool
 };
