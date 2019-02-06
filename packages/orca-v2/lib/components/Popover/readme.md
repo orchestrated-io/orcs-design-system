@@ -16,7 +16,7 @@ If you don't specify a width, 200px is the default, but as a general guide try a
       <Button>Hover me</Button>
     </Popover>
 
-    <Popover direction="bottom" text="Description of what this button does">
+    <Popover direction="bottom" text="Centered description of what this button does" textAlign="center">
       <Button>Hover me</Button>
     </Popover>
 

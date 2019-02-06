@@ -21,7 +21,8 @@ const Text = styled.div`
   position: absolute;
   font-size: 1.2rem;
   font-weight: 400;
-  text-align: left;
+  text-align: ${props => props.textAlign ? props.textAlign : "left"};
+  word-break: break-word;
   left: 100%;
   top: 50%;
   color: ${theme.greyDarkest};
@@ -133,11 +134,12 @@ class Popover extends React.Component {
       children,
       direction,
       width,
+      textAlign,
       text
     } = this.props;
     return (
       <Container>
-        <Text direction={direction} width={width}>
+        <Text textAlign={textAlign} direction={direction} width={width}>
           {text}
         </Text>
         {children}
@@ -149,6 +151,8 @@ class Popover extends React.Component {
 Popover.propTypes = {
   /** Specifies the direction of the popover */
   direction: PropTypes.oneOf(["top", "right", "bottom", "left"]),
+  /** Specifies the direction of the popover */
+  textAlign: PropTypes.oneOf(["left", "right", "center"]),
   /** Specifies the width of the popover in pixels */
   width: PropTypes.string
 };
