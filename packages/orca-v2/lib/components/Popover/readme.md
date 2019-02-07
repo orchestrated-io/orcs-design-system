@@ -1,4 +1,4 @@
-This popover component is intended to be used to supplement buttons that require some helper text. It supports customisation of direction and width. This is so that you can ensure that the popover doesn't run off the screen, and that the width suits the amount of text in the popover. 
+This popover component is intended to be used to supplement buttons (or other elements) that require some helper text. It supports customisation of direction and width. This is so that you can ensure that the popover doesn't run off the screen, and that the width suits the amount of text in the popover. 
 
 If you don't specify a width, 200px is the default, but as a general guide try and keep widths somewhere between 150-250 if you are modifying. The width is set in pixels within the component, so no need to add px units to your props.
 
@@ -8,11 +8,11 @@ If you don't specify a width, 200px is the default, but as a general guide try a
 
   <Flex wrap="true">
   
-    <Popover direction="right" text="Description of what this button does">
+    <Popover direction="right" text="Text description of what this button does">
       <Button>Hover me</Button>
     </Popover>
     
-    <Popover direction="left"  text="Description of what this button does">
+    <Popover direction="left"  text="Text description of what this button does">
       <Button>Hover me</Button>
     </Popover>
 
@@ -20,7 +20,7 @@ If you don't specify a width, 200px is the default, but as a general guide try a
       <Button>Hover me</Button>
     </Popover>
 
-    <Popover direction="top" text="Description of what this button does">
+    <Popover direction="top" text="Text description of what this button does">
       <Button>Hover me</Button>
     </Popover>
 
