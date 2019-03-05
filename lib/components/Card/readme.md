@@ -67,8 +67,8 @@ const colours = require("../../colours").default;
   <Card
     alternate
     icon={["far", "chart-pie"]}
-    title="Divisions"
-    subtitle="12"
+    title="12 Divisions"
+    changeDown="2 (-1%)"
     colour="danger"
   >
     <Typography.P>
@@ -80,8 +80,8 @@ const colours = require("../../colours").default;
   <Card
     alternate
     icon={["far", "users"]}
-    title="Teams"
-    subtitle="289"
+    title="289 Teams"
+    changeUp="9 (+2%)"
     colour="greyDark"
   >
     <Typography.P>
