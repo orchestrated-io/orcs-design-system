@@ -88,43 +88,37 @@ const Subtitle = styled.h4``;
 
 const Content = styled.div``;
 
-const ChangeDown = styled.small`
+const ChangeIcon = styled.div`
+    display: inline-block;
+    width: 14px;
+    height: 2px;
+    background-size: 14px 14px;
+    background-color: ${theme.grey};
+    margin: 0 ${variables.defaultSpacingQuarter} 0 ${variables.defaultSpacingHalf};
+    ${props =>
+    props.changeIcon === "arrowUp"
+    ? css`
+      background-color: transparent;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' version='1.1'%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg transform='translate(-1173.000000, -214.000000)' fill='%2378797D'%3E%3Cg transform='translate(1173.000000, 210.000000)'%3E%3Cpath d='M0.1 12.1L0.8 12.8C1 13 1.3 13 1.4 12.8L6.9 7.3 6.9 19.4C6.9 19.6 7.1 19.8 7.3 19.8L8.3 19.8C8.6 19.8 8.8 19.6 8.8 19.4L8.8 7.3 14.3 12.8C14.4 13 14.7 13 14.9 12.8L15.6 12.1C15.7 11.9 15.7 11.7 15.6 11.5L8.1 4.1C8 4 7.7 4 7.5 4.1L0.1 11.5C0 11.7 0 11.9 0.1 12.1Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      height: 14px;
+      transform: rotate(180deg);
+    `
+    : props.changeIcon === "arrowDown"
+    ? css`
+      background-color: transparent;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' version='1.1'%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg transform='translate(-1173.000000, -214.000000)' fill='%2378797D'%3E%3Cg transform='translate(1173.000000, 210.000000)'%3E%3Cpath d='M0.1 12.1L0.8 12.8C1 13 1.3 13 1.4 12.8L6.9 7.3 6.9 19.4C6.9 19.6 7.1 19.8 7.3 19.8L8.3 19.8C8.6 19.8 8.8 19.6 8.8 19.4L8.8 7.3 14.3 12.8C14.4 13 14.7 13 14.9 12.8L15.6 12.1C15.7 11.9 15.7 11.7 15.6 11.5L8.1 4.1C8 4 7.7 4 7.5 4.1L0.1 11.5C0 11.7 0 11.9 0.1 12.1Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      height: 14px;
+    `
+    : css``}
+`
+
+const ChangeValue = styled.small`
   display: flex;
   align-items: center;
   font-size: 1.8rem;
   font-weight: 300;
-  margin-left: ${variables.defaultSpacingHalf};
   color: ${theme.grey};
-  &:before {
-    content: "";
-    display: inline-block;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' version='1.1'%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg transform='translate(-1173.000000, -214.000000)' fill='%2378797D'%3E%3Cg transform='translate(1173.000000, 210.000000)'%3E%3Cpath d='M0.1 12.1L0.8 12.8C1 13 1.3 13 1.4 12.8L6.9 7.3 6.9 19.4C6.9 19.6 7.1 19.8 7.3 19.8L8.3 19.8C8.6 19.8 8.8 19.6 8.8 19.4L8.8 7.3 14.3 12.8C14.4 13 14.7 13 14.9 12.8L15.6 12.1C15.7 11.9 15.7 11.7 15.6 11.5L8.1 4.1C8 4 7.7 4 7.5 4.1L0.1 11.5C0 11.7 0 11.9 0.1 12.1Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    transform: rotate(180deg);
-    background-size: 14px 14px;
-    width: 14px;
-    height: 14px;
-    margin-right: ${variables.defaultSpacingQuarter};
-  }
-`;
-
-const ChangeUp = styled.small`
-  display: flex;
-  align-items: center;
-  font-size: 1.8rem;
-  font-weight: 300;
-  margin-left: ${variables.defaultSpacingHalf};
-  color: ${theme.grey};
-  &:before {
-    content: "";
-    display: inline-block;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' version='1.1'%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg transform='translate(-1173.000000, -214.000000)' fill='%2378797D'%3E%3Cg transform='translate(1173.000000, 210.000000)'%3E%3Cpath d='M0.1 12.1L0.8 12.8C1 13 1.3 13 1.4 12.8L6.9 7.3 6.9 19.4C6.9 19.6 7.1 19.8 7.3 19.8L8.3 19.8C8.6 19.8 8.8 19.6 8.8 19.4L8.8 7.3 14.3 12.8C14.4 13 14.7 13 14.9 12.8L15.6 12.1C15.7 11.9 15.7 11.7 15.6 11.5L8.1 4.1C8 4 7.7 4 7.5 4.1L0.1 11.5C0 11.7 0 11.9 0.1 12.1Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    background-size: 14px 14px;
-    width: 14px;
-    height: 14px;
-    margin-right: ${variables.defaultSpacingQuarter};
-  }
-`;
-
+`
 class Card extends React.Component {
   render() {
     const {
@@ -133,8 +127,8 @@ class Card extends React.Component {
       colour,
       title,
       subtitle,
-      changeDown,
-      changeUp,
+      changeIcon,
+      changeValue,
       children,
       fluid,
       width,
@@ -147,8 +141,8 @@ class Card extends React.Component {
           <Header>
             {icon ? <Icon icon={icon} size="lg" /> : null}
             {title ? <Title>{title}</Title> : null}
-            {changeDown ? <ChangeDown>{changeDown}</ChangeDown> : null}
-            {changeUp ? <ChangeUp>{changeUp}</ChangeUp> : null}
+            {changeIcon ? <ChangeIcon changeIcon={changeIcon}/> : null}
+            {changeValue ? <ChangeValue>{changeValue}</ChangeValue> : null}
             {subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
           </Header>
         }

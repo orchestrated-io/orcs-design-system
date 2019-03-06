@@ -54,8 +54,9 @@ const colours = require("../../colours").default;
   <Card
     alternate
     icon={["far", "user"]}
-    title="People"
-    subtitle="4,539"
+    title="4,539 People"
+    changeValue="0 (no change)"
+    changeIcon="dash"
     colour="warning"
   >
     <Typography.P>
@@ -68,7 +69,8 @@ const colours = require("../../colours").default;
     alternate
     icon={["far", "chart-pie"]}
     title="12 Divisions"
-    changeDown="2 (-1%)"
+    changeValue="2 (-1%)"
+    changeIcon="arrowDown"
     colour="danger"
   >
     <Typography.P>
@@ -81,7 +83,8 @@ const colours = require("../../colours").default;
     alternate
     icon={["far", "users"]}
     title="289 Teams"
-    changeUp="9 (+2%)"
+    changeValue="9 (+2%)"
+    changeIcon="arrowUp"
     colour="greyDark"
   >
     <Typography.P>
