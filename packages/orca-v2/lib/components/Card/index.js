@@ -94,7 +94,7 @@ const ChangeIcon = styled.div`
     height: 2px;
     background-size: 14px 14px;
     background-color: ${theme.grey};
-    margin: 0 ${variables.defaultSpacingQuarter} 0 ${variables.defaultSpacingHalf};
+    margin: 0 0 0 ${variables.defaultSpacingHalf};
     ${props =>
     props.changeIcon === "arrowUp"
     ? css`
@@ -118,6 +118,7 @@ const ChangeValue = styled.small`
   font-size: 1.8rem;
   font-weight: 300;
   color: ${theme.grey};
+  margin: 0 0 0 ${variables.defaultSpacingHalf};
 `
 class Card extends React.Component {
   render() {
