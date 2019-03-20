@@ -55,8 +55,7 @@ const colours = require("../../colours").default;
     alternate
     icon={["far", "user"]}
     title="4,539 People"
-    changeValue="0 (no change)"
-    changeIcon="dash"
+    changeValue="No change"
     colour="warning"
   >
     <Typography.P>
