@@ -65,6 +65,9 @@ resources:
               Cookies:
                 Forward: none
             ViewerProtocolPolicy: redirect-to-https
+          ViewerCertificate:
+            AcmCertificateArn: ${opt:cert_arn, "arn:aws:acm:us-east-1:786128346995:certificate/faabcb9c-992c-4f20-b031-995dc4eabcaf"}
+            SslSupportMethod: sni-only
           CustomErrorResponses:
           - ErrorCode: 404
             ResponseCode: 200
