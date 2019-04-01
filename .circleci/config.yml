@@ -69,14 +69,19 @@ jobs:
                     destination: artifacts
             -
                 run:
+                    name: assume role
+                    command: >-
+                        node scripts/assume_role | xargs env
+            -
+                run:
                     name: deploy aws stack
                     command: >-
-                        npx serverless deploy --stage dev --build
+                        env $(echo $ASSUME_ROLE_ENV | xargs) npx serverless deploy --stage dev --build
                         $CIRCLE_BUILD_NUM
             -
                 run:
                     name: deploy site
-                    command: npx serverless client deploy  --no-confirm
+                    command: env $(echo $ASSUME_ROLE_ENV | xargs) npx serverless client deploy  --no-confirm
     publish:
         docker: *ref_0
         working_directory: ~/repo

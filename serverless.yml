@@ -64,16 +64,22 @@ resources:
               QueryString: false
               Cookies:
                 Forward: none
-            ViewerProtocolPolicy: allow-all
+            ViewerProtocolPolicy: redirect-to-https
           CustomErrorResponses:
           - ErrorCode: 404
             ResponseCode: 200
             ResponsePagePath: /index.html
+    HostedZone:
+      Type: AWS::Route53::HostedZone
+      Properties:
+        Name: ${self:custom.client.bucketName}.
     Route:
       Type: AWS::Route53::RecordSet
-      DependsOn: CDNDistribution
+      DependsOn: 
+        - HostedZone
+        - CDNDistribution
       Properties:
-        HostedZoneName: orchestrated.io.
+        HostedZoneName: ${self:custom.client.bucketName}.
         Name: ${self:custom.client.bucketName}.
         Type: A
         AliasTarget:
