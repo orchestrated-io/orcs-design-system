@@ -72,14 +72,14 @@ jobs:
                 run:
                     name: deploy aws stack
                     command: >-
-                        node scripts/assume-role.js | xargs env
+                        node scripts/assume-role.js | xargs env &&
                         npx serverless deploy --stage dev --build
                         $CIRCLE_BUILD_NUM
             -
                 run:
                     name: deploy site
                     command: >-
-                        node scripts/assume-role.js | xargs env
+                        node scripts/assume-role.js | xargs env &&
                         npx serverless client deploy  --no-confirm
     publish:
         docker: *ref_0
