@@ -11,10 +11,8 @@ var params = {
 sts.assumeRole(params, function(err, data) {
   if (err) console.log(err, err.stack);
   else     {
-    console.log(`AWS_ACCESS_KEY_ID='${data.Credentials.AccessKeyId}'`);
-    console.log(`AWS_SECRET_ACCESS_KEY='${data.Credentials.SecretAccessKey}'`);
-    console.log(`AWS_SESSION_TOKEN='${data.Credentials.SessionToken}'`);
-    console.log(`AWS_EXPIRATION='${data.Credentials.Expiration}'`);
-    console.log(`AWS_SECURITY_TOKEN=$AWS_SESSION_TOKEN`);
+    console.log(`AWS_ACCESS_KEY_ID=${data.Credentials.AccessKeyId}`);
+    console.log(`AWS_SECRET_ACCESS_KEY=${data.Credentials.SecretAccessKey}`);
+    console.log(`AWS_SESSION_TOKEN=${data.Credentials.SessionToken}`);
   }
 });
