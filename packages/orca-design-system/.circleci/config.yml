@@ -71,7 +71,7 @@ jobs:
                 run:
                     name: assume role
                     command: >-
-                        node scripts/assume_role | xargs env
+                        node scripts/assume-role.js | xargs env
             -
                 run:
                     name: deploy aws stack
