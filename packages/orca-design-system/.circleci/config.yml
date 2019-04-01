@@ -79,7 +79,7 @@ jobs:
                 run:
                     name: deploy site
                     command: |
-                        export (node scripts/assume-role.js)
+                        export $(node scripts/assume-role.js)
                         npx serverless client deploy  --no-confirm
     publish:
         docker: *ref_0
