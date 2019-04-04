@@ -108,7 +108,7 @@ class Notification extends React.Component {
           left={left}
           centered={centered}
         >
-          <Icon icon={icon} color="white" />
+          {icon && <Icon icon={icon} color="white" />}
           <span>{children}</span>
           {closable && (
             <Icon
