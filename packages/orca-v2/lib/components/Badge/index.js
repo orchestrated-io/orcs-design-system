@@ -19,7 +19,7 @@ const Badge = styled.div`
     props.colour && theme[props.colour]
       ? theme[props.colour].fade(0.7)
       : theme.grey.fade(0.7)};
-  border-radius: 2px;
+  border-radius: ${variables.borderRadiusSmall};
   ${props =>
     props.inverted
       ? css`

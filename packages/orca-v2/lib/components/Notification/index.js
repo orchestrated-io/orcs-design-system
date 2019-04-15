@@ -15,7 +15,7 @@ const Item = styled.div`
   align-items: center;
   justify-content: flex-start;
   color: ${theme.white};
-  border-radius: 2px;
+  border-radius: ${variables.borderRadiusSmall};
   background: ${props => {
     const colour =
       props.colour && theme[`${props.colour}Dark`]

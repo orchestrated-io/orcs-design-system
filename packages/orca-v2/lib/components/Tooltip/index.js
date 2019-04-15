@@ -55,7 +55,7 @@ const Text = styled.div`
   opacity: 0;
   padding: 8px 10px;
   pointer-events: none;
-  border-radius: 2px;
+  border-radius: ${variables.borderRadiusSmall};
   transform: translateX(10px);
   box-shadow: 0 2px 5px ${theme.greyDarkest.fade(0.7)};
   transition: ${variables.defaultTransition};
