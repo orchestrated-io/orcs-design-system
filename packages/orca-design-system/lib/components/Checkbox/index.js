@@ -119,7 +119,7 @@ const Check = styled.div`
   width: 20px;
   height: 20px;
   border: 2px solid;
-  border-radius: 2px;
+  border-radius: ${variables.borderRadiusSmall};
   overflow: hidden;
   z-index: 1;
   color: ${theme.greyDarker};

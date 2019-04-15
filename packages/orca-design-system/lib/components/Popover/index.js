@@ -29,7 +29,7 @@ const Text = styled.div`
   color: ${theme.greyDarkest};
   outline: 0;
   padding: 8px 10px;
-  border-radius: 2px;
+  border-radius: ${variables.borderRadiusSmall};
   transform: translateX(10px) translateY(-50%);
   transition: ${variables.defaultTransition};
   box-shadow: -3px 0px 12px 0 ${theme.greyDarkest.fade(0.85)};
