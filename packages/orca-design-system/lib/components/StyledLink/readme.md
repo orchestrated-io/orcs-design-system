@@ -25,45 +25,29 @@ Then you can use in your code like so:
   This is an example of an <StyledLink.Hyperlink href="#">inline link</StyledLink.Hyperlink> that sits inside a body of text.
 </Typography.P>
 
-<StyledLink.Hyperlink href="#" marginBottom block>
-  Block link
-</StyledLink.Hyperlink>
-
 <Typography.P marginBottom>
   This is an example of a <StyledLink.Hyperlink bold href="#"> bold inline link</StyledLink.Hyperlink> that sits inside a body of text.
 </Typography.P>
 
-<StyledLink.Hyperlink href="#" bold block marginBottom>
-  Bold block link
-</StyledLink.Hyperlink>
-
-<Layout childHorizontalSpacing backgroundDark>
+<Layout childChildHorizontalSpacing backgroundDark padding>
 
   <Flex wrap="true">
 
-    <Layout margin>
-      <StyledLink.Hyperlink href="#" white bold block>
-        White navigation link on dark background
-      </StyledLink.Hyperlink>
-    </Layout>
+    <StyledLink.Hyperlink href="#" white bold>
+      White navigation link on dark background
+    </StyledLink.Hyperlink>
 
-    <Layout margin>
-      <StyledLink.Hyperlink href="#" white active bold block>
-        Active/selected navigation link
-      </StyledLink.Hyperlink>
-    </Layout>
+    <StyledLink.Hyperlink href="#" white active bold>
+      Active/selected navigation link
+    </StyledLink.Hyperlink>
 
-    <Layout margin>
-      <StyledLink.Hyperlink href="#" white bold block>
-        Link
-      </StyledLink.Hyperlink>
-    </Layout>
+    <StyledLink.Hyperlink href="#" white bold>
+      Link
+    </StyledLink.Hyperlink>
 
-    <Layout margin>
-      <StyledLink.Hyperlink href="#" white bold block>
-        Link
-      </StyledLink.Hyperlink>
-    </Layout>
+    <StyledLink.Hyperlink href="#" white bold>
+      Link
+    </StyledLink.Hyperlink>
 
   </Flex>
 

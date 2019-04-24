@@ -3,11 +3,12 @@ import variables from "../../variables";
 import theme from "../../theme";
 
 const styleLink = LinkComponent => styled(LinkComponent)`
+  display: inline-block;
+  position: relative;
   text-decoration: none;
   cursor: pointer;
   transition: ${variables.defaultTransition};
   font-weight: ${props => (props.bold ? 600 : 300)};
-  display: ${props => (props.block ? `block` : `inline`)};
 
   color: ${props =>
     props.active ? theme.primary : props.white ? theme.white : theme.primary};
@@ -19,10 +20,22 @@ const styleLink = LinkComponent => styled(LinkComponent)`
         ? variables.defaultSpacingHalf
         : props.marginBottom ? variables.defaultSpacing : 0};
 
+  &:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: ${props => (props.bold ? "2px" : "1px")};
+    background-color: transparent;
+    transition: ${variables.defaultTransition};
+  }
   &:hover,
   &:focus {
     outline: none;
-    color: ${props => (props.white ? theme.warning : theme.warningDark)};
+    &:after {
+      background-color: ${props => (props.active ? theme.primary : props.white ? theme.white : theme.primary)};
+    }
   }
 `;
 
