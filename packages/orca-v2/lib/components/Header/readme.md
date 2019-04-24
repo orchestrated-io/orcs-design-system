@@ -12,7 +12,7 @@ At screen sizes less than 1100px the links are instead moved into a mobile menu 
           <Header.UserName>John Smith</Header.UserName>
           <Header.Tenant>orchestrated</Header.Tenant>
         </Header.LoggedInAs>
-        <Header.LogoutLink>Logout</Header.LogoutLink>
+        <StyledLink.Hyperlink white bold>Logout</StyledLink.Hyperlink>
       </React.Fragment>
     }
 >

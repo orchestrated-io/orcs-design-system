@@ -75,20 +75,6 @@ const Tenant = styled.small`
   color: ${theme.white};
 `;
 
-const LogoutLink = styled.a`
-  text-decoration: none;
-  cursor: pointer;
-  transition: ${variables.defaultTransition};
-  font-weight: 600;
-  color: ${theme.white};
-
-  &:hover,
-  &:focus {
-    outline: none;
-    color: ${theme.warning};
-  }
-`;
-
 const MobileMenuToggle = styled.label`
   z-index: 3;
   cursor: pointer;
@@ -173,4 +159,4 @@ class Navbar extends React.Component {
 }
 
 /** @component */
-export default { Navbar, Avatar, LoggedInAs, UserName, Tenant, LogoutLink };
+export default { Navbar, Avatar, LoggedInAs, UserName, Tenant };
