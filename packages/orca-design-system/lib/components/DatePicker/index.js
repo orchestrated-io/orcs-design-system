@@ -8,13 +8,56 @@ import "react-dates/initialize";
 import { DateRangePicker, SingleDatePicker } from "react-dates";
 
 const DatePickerContainer = styled.div`
+  .SingleDatePickerInput,
+  .DateRangePickerInput {
+    display: block;
+    cursor: text;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
   .SingleDatePickerInput__withBorder,
   .DateRangePickerInput__withBorder {
-    border: 1px solid ${theme.greyDarker};
+    border: none;
     border-radius: 0;
   }
+  .DateInput {
+    width: auto;
+  }
+  .DateInput_input {
+    display: block;
+    cursor: text;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    font-size: 1.4rem;
+    z-index: 1;
+    transition: ${variables.defaultTransition};
+    background: ${theme.white};
+    color: ${theme.greyDarkest};
+    height: 40px;
+    width: 110px;
+    padding: 5px 12px 6px 12px;
+    border-radius: ${variables.borderRadius};
+    border: 1px solid ${theme.black.fade(0.8)};
+    &:hover {
+      border: 1px solid ${theme.primary};
+    }
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 0 3px ${theme.primary.fade(0.6)};
+      border: 1px solid ${theme.primary};
+    }
+  }
   .DateInput_input__focused {
-    border-bottom: 2px solid ${theme.primary};
+    outline: 0;
+    box-shadow: 0 0 0 3px ${theme.primary.fade(0.6)};
+    border: 1px solid ${theme.primary};
   }
   .CalendarDay__default {
     transition: ${variables.defaultTransition};
@@ -45,6 +88,13 @@ const DatePickerContainer = styled.div`
   .CalendarDay__selected_span:hover {
     background: ${theme.primaryLight};
     border: 1px solid ${theme.primaryLight};
+  }
+  .SingleDatePicker_picker,
+  .DateRangePicker_picker {
+    margin-top: -9px;
+  }
+  .DateInput_fang {
+    margin-top: -8px;
   }
 `;
 
