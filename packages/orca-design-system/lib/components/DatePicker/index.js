@@ -27,6 +27,14 @@ const DatePickerContainer = styled.div`
   }
   .DateInput {
     width: auto;
+    background: none;
+  }
+  .DateRangePickerInput_arrow_svg path {
+    fill: ${theme.greyLight};
+  }
+  .SingleDatePicker_picker,
+  .DateRangePicker_picker {
+    background: none;
   }
   .DateInput_input {
     display: block;
@@ -68,6 +76,14 @@ const DatePickerContainer = styled.div`
     background: ${theme.primary};
     border: 1px solid ${theme.primary};
   }
+  .DayPickerKeyboardShortcuts_show__bottomRight {
+    border-radius: 0 0 3px 0;
+    overflow: hidden;
+  }
+  .DayPickerKeyboardShortcuts_show__topRight {
+    border-radius: 0 3px 0 0;
+    overflow: hidden;
+  }
   .DayPickerKeyboardShortcuts_show__bottomRight:before,
   .DayPickerKeyboardShortcuts_show__topRight:before {
     border-right: 33px solid ${theme.primary};
@@ -76,7 +92,6 @@ const DatePickerContainer = styled.div`
   .DayPickerKeyboardShortcuts_show__bottomRight:hover:before,
   .DayPickerKeyboardShortcuts_show__topRight:hover:before {
     border-right: 33px solid ${theme.primaryDark};
-    cursor: help;
   }
   .CalendarDay__selected_span,
   .CalendarDay__hovered_span {
@@ -126,7 +141,9 @@ DatePicker.propTypes = {
   /** Specifies a single date picker */
   single: PropTypes.bool,
   /** Specifies a range date picker */
-  range: PropTypes.bool
+  range: PropTypes.bool,
+  /** Specifies that datepicker is on a dark background */
+  inverted: PropTypes.bool
 };
 
 /** @component */
