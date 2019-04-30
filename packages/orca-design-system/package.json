@@ -1,6 +1,6 @@
 {
   "name": "orca-design-system",
-  "version": "1.0.65",
+  "version": "1.0.66",
   "description": "Orchestrated Frontend React NPM library for Brand designs",
   "main": "dist/index.js",
   "scripts": {
