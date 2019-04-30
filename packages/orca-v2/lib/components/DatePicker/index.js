@@ -107,6 +107,9 @@ const DatePickerContainer = styled.div`
     background: ${theme.primaryLight};
     border: 1px solid ${theme.primaryLight};
   }
+  .DateInput_fang {
+    margin-top: 1px;
+  }
 `;
 
 const PickDate = styled(SingleDatePicker)``;
