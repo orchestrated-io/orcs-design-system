@@ -67,6 +67,9 @@ const DatePickerContainer = styled.div`
     box-shadow: 0 0 0 3px ${theme.primary.fade(0.6)};
     border: 1px solid ${theme.primary};
   }
+  .DayPickerKeyboardShortcuts_panel {
+    color: ${theme.greyDarkest};
+  }
   .CalendarDay__default {
     transition: ${variables.defaultTransition};
   }
@@ -103,13 +106,6 @@ const DatePickerContainer = styled.div`
   .CalendarDay__selected_span:hover {
     background: ${theme.primaryLight};
     border: 1px solid ${theme.primaryLight};
-  }
-  .SingleDatePicker_picker,
-  .DateRangePicker_picker {
-    margin-top: -9px;
-  }
-  .DateInput_fang {
-    margin-top: -8px;
   }
 `;
 
