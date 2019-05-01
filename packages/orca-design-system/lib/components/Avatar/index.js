@@ -3,35 +3,46 @@ import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 import theme from "../../theme";
 import variables from "../../variables";
+import Typography from "../Typography";
+import StyledLink from "../StyledLink";
 
-const AvatarContainer = styled.div`
+const Container = styled.div`
   display: flex;
   align-items: center;
-  `
+  > * + * {
+    margin-left: ${variables.defaultSpacingHalf};
+  }
+`
 
-const AvatarText = styled.div`
+const Text = styled.div`
   > * + * {
     margin-top: ${variables.defaultSpacingQuarter};
   }
   a:after {
-    height: ${props => props.small ? "1px" : "2px"};;
+    height: 1px;
   }
+  ${props => props.inverted
+  ? css`
+    h2, h4, small {
+      color: ${theme.white};
+    }
+  `
+  : css``};
 `
 
-const AvatarImage = styled.img`
+const Image = styled.img`
   width: ${props => props.small ? "38px" : "50px"};
   height: ${props => props.small ? "38px" : "50px"};
   background-color: ${theme.greyLighter};
-  border-radius: 100%;
+  border-radius: 50%;
   border: 0;
   display: block;
-  margin-right: ${variables.defaultSpacingHalf};
   `;
 
-const AvatarDefault = styled.div`
+const Default = styled.div`
   width: ${props => props.small ? "38px" : "50px"};
   height: ${props => props.small ? "38px" : "50px"};
-  border-radius: 100%;
+  border-radius: 50%;
   background: ${theme.greyLighter};
   display: flex;
   align-items: center;
@@ -44,7 +55,6 @@ const AvatarDefault = styled.div`
   letter-spacing: normal;
   line-height: normal;
   color: ${theme.white};
-  margin-right: ${variables.defaultSpacingHalf};
   ${props => !props.initials
   ? css`
       &:before {
@@ -63,17 +73,40 @@ const AvatarDefault = styled.div`
 
 class Avatar extends React.Component {
   render() {
-    const { src, initials, children, small } = this.props;
+    const { image, initials, link, small, inverted, title, subtitle } = this.props;
+    console.log(image, initials, link, small, inverted, title, subtitle);
     return (
-      <AvatarContainer>
-        {src ? 
-          <AvatarImage src={src} small={small}/>
-        : <AvatarDefault small={small} initials={initials}>{initials}</AvatarDefault>
+      <Container>
+        {image ? 
+          <Image src={image} small={small}/>
+        : <Default small={small} initials={initials}>{initials}</Default>
         }
-        <AvatarText>
-          {children}
-        </AvatarText>
-      </AvatarContainer>
+        <Text inverted={inverted}>
+          {title ? 
+            small ? 
+              <Typography.H4>
+                {link ? 
+                  <StyledLink.Hyperlink href={link}>{title}</StyledLink.Hyperlink>
+                : title
+                }
+              </Typography.H4>
+            :
+              <Typography.H2>
+                {link ? 
+                  <StyledLink.Hyperlink href={link}>{title}</StyledLink.Hyperlink>
+                : title
+                }
+              </Typography.H2>
+          : null
+          }
+          {subtitle ? 
+          <Typography.Small grey>
+            {subtitle}
+          </Typography.Small>
+          : null
+          }
+        </Text>
+      </Container>
     );
   }
 }
@@ -81,9 +114,17 @@ class Avatar extends React.Component {
 Avatar.propTypes = {
   /** Specifies to use small avatar instead of regular size */
   small: PropTypes.bool,
-  /** Specifies a source path if a profile picture is available */
-  src: PropTypes.string,
+  /** Specifies to use inverted styling if on dark background */
+  inverted: PropTypes.bool,
+  /** Specifies a source path for an image */
+  image: PropTypes.string,
+  /** Specifies a link url */
+  link: PropTypes.string,
   /** Specifies initials of person if available */
+  initials: PropTypes.string,
+  /** Specifies title / first name */
+  title: PropTypes.string,
+  /** Specifies sub title / surname */
   initials: PropTypes.string
 };
 
