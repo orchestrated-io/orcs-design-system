@@ -18,9 +18,6 @@ const Text = styled.div`
   > * + * {
     margin-top: ${variables.defaultSpacingQuarter};
   }
-  a:after {
-    height: 1px;
-  }
   ${props => props.inverted
   ? css`
     h2, h4, small {
