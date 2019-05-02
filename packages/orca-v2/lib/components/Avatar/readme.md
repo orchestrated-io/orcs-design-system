@@ -12,23 +12,35 @@ Follow example code below to achieve desired option.
 
 ```js
 <Layout childVerticalSpacing>
+
   <Avatar title="Ayden Lundgre" subtitle="Senior Business Analyst"/>
+  
   <Avatar title="Ayden Lundgre" subtitle="Senior Business Analyst" initials="AL"/>
+  
   <Avatar title="Ayden Lundgre" subtitle="Senior Business Analyst" initials="AL" image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"/>
+  
   <Avatar title={<StyledLink.Hyperlink href="#">Ayden Lundgre</StyledLink.Hyperlink>} subtitle="Senior Business Analyst" initials="AL" image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"/>
+  
   <Layout backgroundDark paddingHalf roundedCorners>
     <Avatar inverted title="Ayden Lundgre" subtitle="Senior Business Analyst" initials="AL" image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"/>
   </Layout>
+  
   <Layout backgroundDark paddingHalf roundedCorners>
     <Avatar inverted title={<StyledLink.Hyperlink href="#">Ayden Lundgre</StyledLink.Hyperlink>} subtitle="Senior Business Analyst" initials="AL" image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"/>
   </Layout>
+  
   <Avatar small title="Ayden Lundgre" subtitle="Senior Business Analyst"/>
+  
   <Avatar small title="Ayden Lundgre" subtitle="Senior Business Analyst" initials="AL"/>
+  
   <Avatar small title="Ayden Lundgre" subtitle="Senior Business Analyst" initials="AL" image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"/>
+  
   <Avatar small title={<StyledLink.Hyperlink href="#">Ayden Lundgre</StyledLink.Hyperlink>} subtitle="Senior Business Analyst" initials="AL" image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"/>
+  
   <Layout backgroundDark paddingHalf roundedCorners>
     <Avatar inverted small title="Ayden Lundgre" subtitle="Senior Business Analyst" initials="AL" image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"/>
   </Layout>
+  
   <Layout backgroundDark paddingHalf roundedCorners>
     <Avatar inverted small title={<StyledLink.Hyperlink href="#">Ayden Lundgre</StyledLink.Hyperlink>} subtitle="Senior Business Analyst" initials="AL" image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"/>
   </Layout>
