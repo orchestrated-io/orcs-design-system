@@ -112,24 +112,15 @@ const DatePickerContainer = styled.div`
   }
 `;
 
-const PickDate = styled(SingleDatePicker)``;
-
-const PickRange = styled(DateRangePicker)``;
-
 class DatePicker extends React.Component {
   render() {
-    const { single, range, id, label, inverted } = this.props;
+    const { single, range, ...pickerProps } = this.props;
     return (
       <DatePickerContainer>
-        {label ? (
-          <Label inverted={inverted} htmlFor={id}>
-            {label}
-          </Label>
-        ) : null}
         {single ? (
-          <PickDate {...this.props} />
+          <SingleDatePicker {...pickerProps} />
         ) : range ? (
-          <PickRange {...this.props} />
+          <DateRangePicker {...pickerProps} />
         ) : null}
       </DatePickerContainer>
     );
