@@ -2,7 +2,7 @@ Datepicker uses airbnb's react datepicker under the hood. This is just a wrapper
 
 ```js
 <div>
-  <Layout height="380px">
+  <Layout height="400px">
     <DatePicker single
                 focused
                 onDateChange={() => {}}
@@ -11,7 +11,7 @@ Datepicker uses airbnb's react datepicker under the hood. This is just a wrapper
                 displayFormat="DD/MM/YYYY"
               />
   </Layout>
-  <Layout height="380px">
+  <Layout height="400px">
     <DatePicker range
                 focusedInput="startDate"
                 onDatesChange={() => {}}
