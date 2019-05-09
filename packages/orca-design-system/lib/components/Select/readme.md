@@ -200,21 +200,4 @@ Following are some examples, but for the complete list of examples please visit 
     placeholder="Select flavour"
   />
 </Layout>
-<Layout marginHalf>
-  <Select
-    enhancedOptions
-    id="enhancedOptions"
-    label="Enhance Options"
-    optionSubText="Gluten free, vegetarian. Contains dairy."
-    options={[
-      { label: "Chocolate", value: "chocolate" },
-      { label: "Vanilla", value: "vanilla" },
-      { label: "Strawberry", value: "strawberry" },
-      { label: "Caramel", value: "caramel" },
-      { label: "Cookies and Cream", value: "cookiescream" },
-      { label: "Peppermint", value: "peppermint" }
-    ]}
-    placeholder="Select flavour"
-  />
-</Layout>
 ```
