@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import theme from "../../theme";
 import variables from "../../variables";
 import ReactSelect from "react-select";
@@ -403,20 +403,6 @@ const Input = styled(ReactSelect)`
     background-color: ${props =>
       props.inverted ? theme.greyDarkest : theme.white};
     color: ${props => (props.inverted ? theme.white : theme.greyDarkest)};
-    ${props =>
-  props.enhancedOptions
-    ? css`
-      &:after {
-        content: "${props => props.optionSubText}";
-        position: relative;
-        display: block;
-        width: 100%;
-        margin-top: 5px;
-        font-size: 1.2rem;
-        color: ${theme.grey};
-      }
-      `
-      : css``};
   }
   .Select-option:last-child {
     border-bottom-right-radius: 4px;
