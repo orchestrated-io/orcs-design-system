@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import theme from "../../theme";
+import colours from "../../colours";
 
 const StatusDot = styled.div`
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: ${props => props.on ? theme.success : props.warning ? theme.warning : theme.danger};
+  background-color: ${props => props.on ? colours.success : props.warning ? colours.warning : colours.danger};
 `;
 
 StatusDot.propTypes = {

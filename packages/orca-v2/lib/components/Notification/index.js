@@ -2,8 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import Icon from "../Icon";
-import theme from "../../theme";
+import colours from "../../colours";
 import variables from "../../variables";
+import { rgba } from "polished";
 
 const Item = styled.div`
   position: relative;
@@ -14,16 +15,13 @@ const Item = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  color: ${theme.white};
+  color: ${colours.white};
   border-radius: ${variables.borderRadiusSmall};
-  background: ${props => {
-    const colour =
-      props.colour && theme[`${props.colour}Dark`]
-        ? `${props.colour}Dark`
-        : "primaryDark";
-    return theme[colour].fade(0.1);
-  }};
-
+  background: ${props =>
+    props.colour && colours[props.colour]
+      ? rgba(colours[`${props.colour}Dark`], 0.9)
+      : rgba(colours.primaryDark, 0.9)};
+  
   ${props =>
     props.floating
       ? css`

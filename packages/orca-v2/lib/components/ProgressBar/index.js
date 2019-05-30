@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import theme from "../../theme";
+import colours from "../../colours";
 import variables from "../../variables";
 
 const Background = styled.div`
   position: relative;
-  background: ${theme.greyLighter};
-  background: ${props => (props.inverted ? theme.greyDark : theme.greyLighter)};
+  background: ${colours.greyLighter};
+  background: ${props => (props.inverted ? colours.greyDark : colours.greyLighter)};
   height: 16px;
   border-radius: 8px;
 `;
@@ -25,17 +25,17 @@ const Fill = styled.div`
       ? css`
           background: linear-gradient(
             to right,
-            ${theme.danger} 0%,
-            ${theme.warning} 50%,
-            ${theme.success} 100%
+            ${colours.danger} 0%,
+            ${colours.warning} 50%,
+            ${colours.success} 100%
           );
         `
       : props.inverted
         ? css`
-            background: ${theme.primaryLight};
+            background: ${colours.primaryLight};
           `
         : css`
-            background: ${theme.primaryDark};
+            background: ${colours.primaryDark};
           `};
 `;
 

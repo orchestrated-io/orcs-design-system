@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
-import theme from "../../theme";
+import colours from "../../colours";
 import variables from "../../variables";
 import Typography from "../Typography";
 
@@ -20,7 +20,7 @@ const Text = styled.div`
   ${props => props.inverted
   ? css`
     h2, h4, small {
-      color: ${theme.white};
+      color: ${colours.white};
     }
   `
   : css``};
@@ -29,7 +29,7 @@ const Text = styled.div`
 const Image = styled.img`
   width: ${props => props.small ? "38px" : "50px"};
   height: ${props => props.small ? "38px" : "50px"};
-  background-color: ${theme.greyLighter};
+  background-color: ${colours.greyLighter};
   border-radius: 50%;
   border: 0;
   display: block;
@@ -39,7 +39,7 @@ const Default = styled.div`
   width: ${props => props.small ? "38px" : "50px"};
   height: ${props => props.small ? "38px" : "50px"};
   border-radius: 50%;
-  background: ${theme.greyLighter};
+  background: ${colours.greyLighter};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,7 +50,7 @@ const Default = styled.div`
   font-family: "Arial", sans-serif;
   letter-spacing: normal;
   line-height: normal;
-  color: ${theme.white};
+  color: ${colours.white};
   ${props => !props.initials
   ? css`
       &:before {

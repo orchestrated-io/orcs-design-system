@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import theme from "../../theme";
+import colours from "../../colours";
 import variables from "../../variables";
 
 const Container = styled.div`
@@ -19,9 +19,9 @@ const Tab = styled.button`
   width: 100%;
   transition: ${variables.defaultTransition};
   border: 0;
-  border-top: solid ${theme.primary} ${props => (props.active ? "2px" : "0")};
-  background: ${props => (props.active ? theme.white : theme.greyLightest)};
-  color: ${props => (props.active ? theme.primary : theme.greyDark)};
+  border-top: solid ${colours.primary} ${props => (props.active ? "2px" : "0")};
+  background: ${props => (props.active ? colours.white : colours.greyLightest)};
+  color: ${props => (props.active ? colours.primary : colours.greyDark)};
   cursor: ${props => (props.active ? "default" : "pointer")};
 
   + button {
@@ -29,12 +29,12 @@ const Tab = styled.button`
   }
 
   &:hover {
-    background: ${props => (props.active ? theme.white : theme.greyLighter)};
+    background: ${props => (props.active ? colours.white : colours.greyLighter)};
   }
 
   &:focus {
     outline: 0;
-    background: ${props => (props.active ? theme.white : theme.greyLighter)};
+    background: ${props => (props.active ? colours.white : colours.greyLighter)};
   }
 `;
 

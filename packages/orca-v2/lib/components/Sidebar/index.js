@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
-import theme from "../../theme";
+import colours from "../../colours";
 import variables from "../../variables";
+import { darken } from "polished";
 
 const Container = styled.div`
   max-width: 360px;
@@ -20,24 +21,24 @@ const Tabs = styled.div`
   text-align: center;
   justify-content: flex-start;
   height: calc(100vh - 60px);
-  background: ${theme.greyDark};
+  background: ${colours.greyDark};
 `;
 
 const Tab = styled.label`
   position: relative;
   min-width: 60px;
   padding: 15px 0;
-  border-bottom: solid 1px ${theme.grey.darken(0.2)};
+  border-bottom: solid 1px ${darken(0.2, colours.grey)};
   display: block;
   width: 100%;
   transition: ${variables.defaultTransition};
-  color: ${props => (props.active ? theme.primary : theme.greyLight)};
-  background: ${props => (props.active ? theme.greyDarker : "transparent")};
+  color: ${props => (props.active ? colours.primary : colours.greyLight)};
+  background: ${props => (props.active ? colours.greyDarker : "transparent")};
   cursor: ${props => (props.active ? "default" : "pointer")};
   &:hover,
   &:hover {
     background: ${props =>
-      props.active ? theme.greyDarker : "rgba(0, 0, 0, 0.15)"};
+      props.active ? colours.greyDarker : "rgba(0, 0, 0, 0.15)"};
   }
   ${props =>
     props.badge
@@ -55,8 +56,8 @@ const Tab = styled.label`
           border-radius: 100%;
           font-size: 1.1rem;
           font-weight: 600;
-          color: ${theme.white};
-          background-color: ${theme.danger};
+          color: ${colours.white};
+          background-color: ${colours.danger};
         }
       `
       : css``};
@@ -71,7 +72,7 @@ const Panel = styled.div`
   min-width: 300px;
   height: calc(100vh - (60px + 72px));
   overflow-y: auto;
-  background: ${theme.greyDarker};
+  background: ${colours.greyDarker};
 `;
 
 const Close = styled.label`
@@ -85,7 +86,7 @@ const Close = styled.label`
   border-radius: 100%;
   margin-top: -11px;
   cursor: w-resize;
-  background: ${theme.greyDarker};
+  background: ${colours.greyDarker};
 `;
 
 const Footer = styled.footer`
@@ -95,7 +96,7 @@ const Footer = styled.footer`
   bottom: 0;
   left: 0;
   width: 100%;
-  background: ${theme.greyDarker};
+  background: ${colours.greyDarker};
   box-shadow: 0 -1px 0px 0px rgba(0, 0, 0, 0.3);
   svg {
     display: block;

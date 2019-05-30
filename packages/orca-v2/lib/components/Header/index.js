@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import theme from "../../theme";
+import colours from "../../colours";
 import variables from "../../variables";
+import { rgba } from "polished";
 
 const Bar = styled.header`
   width: 100%;
@@ -13,7 +14,7 @@ const Bar = styled.header`
   display: flex;
   align-items: center;
   padding: 0 ${variables.defaultSpacing};
-  background: ${theme.greyDarkest};
+  background: ${colours.greyDarkest};
 
   > a {
     display: none;
@@ -41,8 +42,8 @@ const AppName = styled.div`
   line-height: 60px;
   height: 60px;
   padding-right: ${variables.defaultSpacing};
-  color: ${theme.white};
-  border-right: solid 1px ${theme.white.fade(0.8)};
+  color: ${colours.white};
+  border-right: solid 1px ${rgba(colours.white, 0.2)};
 `;
 
 const RightAlignedChildren = styled.div`
@@ -67,12 +68,12 @@ const LoggedInAs = styled.div`
 `;
 
 const UserName = styled.div`
-  color: ${theme.white};
+  color: ${colours.white};
 `;
 
 const Tenant = styled.small`
   display: block;
-  color: ${theme.white};
+  color: ${colours.white};
 `;
 
 const MobileMenuToggle = styled.label`

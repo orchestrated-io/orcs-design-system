@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import theme from "../../theme";
+import colours from "../../colours";
 import variables from "../../variables";
+import { rgba } from "polished";
 
 const Group = styled.div`
   display: flex;
@@ -13,14 +14,14 @@ const Group = styled.div`
           input {
             &:focus {
               + label {
-                box-shadow: 0 0 0 3px ${theme.greyDark.fade(0.6)};
+                box-shadow: 0 0 0 3px ${rgba(colours.greyDark, 0.4)};
               }
             }
           }
           label {
-            color: ${theme.white};
+            color: ${colours.white};
             &:first-of-type {
-              background: ${theme.greyDark};
+              background: ${colours.greyDark};
             }
           }
         `
@@ -41,13 +42,13 @@ const Input = styled.input.attrs({
 
   &:focus {
     + label {
-      box-shadow: 0 0 0 3px ${theme.greyDarker.fade(0.8)};
+      box-shadow: 0 0 0 3px ${rgba(colours.greyDarker, 0.2)};
     }
   }
 
   :checked {
     + label {
-      background: ${theme.success};
+      background: ${colours.success};
       &:after {
         left: calc(100% - 3px);
         transform: translateX(-100%);
@@ -55,7 +56,7 @@ const Input = styled.input.attrs({
     }
     &:focus {
       + label {
-        box-shadow: 0 0 0 3px ${theme.success.fade(0.7)};
+        box-shadow: 0 0 0 3px ${rgba(colours.success, 0.3)};
       }
     }
   }
@@ -68,7 +69,7 @@ const Item = styled.label`
   display: block;
   position: relative;
   transition: ${variables.defaultTransition};
-  background: ${theme.greyDarker};
+  background: ${colours.greyDarker};
   width: ${props => (props.small ? "36px" : "44px")};
   height: ${props => (props.small ? "20px" : "24px")};
   border-radius: ${props => (props.small ? "10px" : "12px")};
@@ -78,7 +79,7 @@ const Item = styled.label`
     position: absolute;
     top: 3px;
     left: 3px;
-    background: ${theme.white};
+    background: ${colours.white};
     transition: ${variables.defaultTransition};
     width: ${props => (props.small ? "14px" : "18px")};
     height: ${props => (props.small ? "14px" : "18px")};

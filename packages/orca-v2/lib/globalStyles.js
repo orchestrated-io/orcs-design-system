@@ -1,8 +1,7 @@
-import { injectGlobal } from "styled-components";
-import theme from "./theme";
+import { createGlobalStyle } from 'styled-components'
+import colours from "./colours";
 
-/* eslint no-unused-expressions: 0 */
-injectGlobal`
+const GlobalStyles = createGlobalStyle`
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
@@ -25,7 +24,7 @@ body {
 
 body {
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: ${theme.greyDarkest};
+    color: ${colours.greyDarkest};
 }
 
 body.fontLoaded {
@@ -214,4 +213,6 @@ h6 {
 @keyframes expandWidth {
    0% { width: 0; }
 }
-`;
+`
+
+export default GlobalStyles;

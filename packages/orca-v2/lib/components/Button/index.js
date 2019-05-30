@@ -1,7 +1,8 @@
 import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
-import theme from "../../theme";
+import colours from "../../colours";
 import variables from "../../variables";
+import { rgba, darken } from "polished";
 
 const Button = styled.button`
   display: flex;
@@ -40,29 +41,29 @@ const Button = styled.button`
 
   color: ${props =>
     props.ghost
-      ? theme.primary
+      ? colours.primary
       : props.disabled
-      ? theme.greyLight
-      : theme.white};
+      ? colours.greyLight
+      : colours.white};
 
   border: solid 1px
     ${props =>
       props.disabled
-        ? theme.greyLighter.darken(0.05)
-        : props.colour && theme[props.colour]
-        ? theme[props.colour].darken(0.05)
+        ? colours.greyLighter
+        : props.colour && colours[props.colour]
+        ? colours[props.colour]
         : props.ghost
         ? "transparent"
-        : theme.primary.darken(0.05)};
+        : colours.primary};
 
   background: ${props =>
     props.disabled
-      ? theme.greyLighter
-      : props.colour && theme[props.colour]
-      ? theme[props.colour]
+      ? colours.greyLighter
+      : props.colour && colours[props.colour]
+      ? colours[props.colour]
       : props.ghost
       ? "transparent"
-      : theme.primary};
+      : colours.primary};
 
   padding: ${props =>
     props.large ? "14px 24px" : props.small ? "6px 8px" : "10px 16px"};
@@ -71,30 +72,37 @@ const Button = styled.button`
     border: solid 1px
       ${props =>
         props.disabled
-          ? theme.greyLighter.darken(0.05)
-          : props.colour && theme[props.colour]
-          ? theme[props.colour].darken(0.2)
+          ? darken(0.05, colours.greyLighter)
+          : props.colour && colours[props.colour]
+          ? darken(0.1, colours[props.colour])
           : props.ghost
           ? "transparent"
-          : theme.primary.darken(0.2)};
+          : darken(0.1, colours.primary)};
 
     background: ${props =>
       props.disabled
-        ? theme.greyLighter
-        : props.colour && theme[props.colour]
-        ? theme[props.colour].darken(0.15)
+        ? colours.greyLighter
+        : props.colour && colours[props.colour]
+        ? darken(0.1, colours[props.colour])
         : props.ghost
-        ? theme.primary.fade(0.85)
-        : theme.primary.darken(0.15)};
+        ? rgba(colours.primary, 0.2)
+        : darken(0.1, colours.primary)};
+
+    color: ${props =>
+      props.ghost
+        ? darken(0.1, colours.primary)
+        : props.disabled
+        ? colours.greyLight
+        : colours.white};
   }
 
   &:focus {
     outline: 0;
     box-shadow: 0 0 0 3px
       ${props =>
-        props.colour && theme[props.colour]
-          ? theme[props.colour].fade(0.6)
-          : theme.primary.fade(0.6)};
+        props.colour && colours[props.colour]
+          ? rgba(colours[props.colour], 0.4)
+          : rgba(colours.primary, 0.4)};
   }
 
   ${props =>

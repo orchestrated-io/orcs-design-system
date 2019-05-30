@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import variables from "../../variables";
-import theme from "../../theme";
+import colours from "../../colours";
 
 const styleLink = LinkComponent => styled(LinkComponent)`
   display: ${props => (props.block ? "block" : "inline-block")};
@@ -11,7 +11,7 @@ const styleLink = LinkComponent => styled(LinkComponent)`
   font-weight: ${props => (props.bold ? 600 : 300)};
 
   color: ${props =>
-    props.active ? theme.primary : props.white ? theme.white : theme.primary};
+    props.active ? colours.primary : props.white ? colours.white : colours.primary};
 
   margin-bottom: ${props =>
     props.marginBottomDouble

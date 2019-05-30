@@ -1,9 +1,10 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import theme from "../../theme";
+import colours from "../../colours";
 import variables from "../../variables";
 import ReactSelect from "react-select";
+import { rgba } from "polished";
 
 const Group = styled.div`
   display: block;
@@ -14,7 +15,7 @@ const Label = styled.label`
   text-align: left;
   font-size: 1.4rem;
   margin-bottom: ${variables.defaultSpacingQuarter};
-  color: ${props => (props.inverted ? theme.white : theme.greyDarkest)};
+  color: ${props => (props.inverted ? colours.white : colours.greyDarkest)};
 `;
 
 const Input = styled(ReactSelect)`
@@ -57,7 +58,7 @@ const Input = styled(ReactSelect)`
   }
   &.is-disabled > .Select-control {
     background-color: ${props =>
-      props.inverted ? theme.greyDark : theme.greyLighter};
+      props.inverted ? colours.greyDark : colours.greyLighter};
   }
   &.is-disabled > .Select-control:hover {
     box-shadow: none;
@@ -80,13 +81,13 @@ const Input = styled(ReactSelect)`
   }
   &.is-focused > .Select-control {
     background-color: ${props =>
-      props.inverted ? "transparent" : theme.white};
-    border: solid 1px ${theme.primary};
+      props.inverted ? "transparent" : colours.white};
+    border: solid 1px ${colours.primary};
   }
   &.is-focused:not(.is-open) > .Select-control {
-    border-color: ${theme.primary};
+    border-color: ${colours.primary};
     background-color: ${props =>
-      props.inverted ? "transparent" : theme.white};
+      props.inverted ? "transparent" : colours.white};
   }
   &.has-value.is-clearable.Select--single > .Select-control .Select-value {
     padding-right: 42px;
@@ -95,25 +96,25 @@ const Input = styled(ReactSelect)`
     > .Select-control
     .Select-value
     .Select-value-label {
-    color: ${props => (props.inverted ? theme.white : theme.greyDarkest)};
+    color: ${props => (props.inverted ? colours.white : colours.greyDarkest)};
   }
   &.has-value.is-pseudo-focused.Select--single
     > .Select-control
     .Select-value
     .Select-value-label {
-    color: ${props => (props.inverted ? theme.white : theme.greyDarkest)};
+    color: ${props => (props.inverted ? colours.white : colours.greyDarkest)};
   }
   &.is-disabled.has-value.Select--single
     > .Select-control
     .Select-value
     .Select-value-label {
-    color: ${theme.grey};
+    color: ${colours.grey};
   }
   &.is-disabled.has-value.Select--single
     > .Select-control
     .Select-value
     .Select-value-label {
-    color: ${theme.grey};
+    color: ${colours.grey};
   }
   &.has-value.Select--single
     > .Select-control
@@ -195,27 +196,27 @@ const Input = styled(ReactSelect)`
     position: relative;
     width: 100%;
     background-color: ${props =>
-      props.inverted ? "transparent" : theme.white};
+      props.inverted ? "transparent" : colours.white};
     border-radius: ${variables.borderRadius};
     border: 1px solid
-      ${props => (props.inverted ? theme.greyDark : theme.black.fade(0.8))};
-    color: ${props => (props.inverted ? theme.white : theme.greyDarkest)};
+      ${props => props.inverted ? colours.greyDark : rgba(colours.black, 0.2)};
+    color: ${props => props.inverted ? colours.white : colours.greyDarkest};
     transition: ${variables.defaultTransition};
   }
   .Select-control:hover {
-    border-color: ${theme.primary};
+    border-color: ${colours.primary};
   }
   &.is-disabled .Select-control:hover {
-    border: 1px solid ${theme.black.fade(0.8)};
+    border: 1px solid ${rgba(colours.black, 0.2)};
   }
   .Select-control .Select-input:focus {
     outline: 0;
-    box-shadow: 0 0 0 3px ${theme.primary.fade(0.6)};
-    border: 1px solid ${theme.primary};
+    box-shadow: 0 0 0 3px ${rgba(colours.primary, 0.3)};
+    border: 1px solid ${colours.primary};
   }
   .Select-placeholder {
     bottom: 0;
-    color: ${theme.grey};
+    color: ${colours.grey};
     left: 0;
     line-height: ${props =>  props.large ? "58px" : "34px"};
     padding-left: 10px;
@@ -265,7 +266,7 @@ const Input = styled(ReactSelect)`
     margin: 0;
     outline: none;
     line-height: 17px;
-    color: ${props => (props.inverted ? theme.white : theme.greyDarkest)};
+    color: ${props => (props.inverted ? colours.white : colours.greyDarkest)};
   }
   .is-focused .Select-input > input {
     cursor: text;
@@ -311,7 +312,7 @@ const Input = styled(ReactSelect)`
     width: 17px;
   }
   .Select-clear-zone:hover {
-    color: ${theme.danger};
+    color: ${colours.danger};
   }
   .Select-clear {
     display: inline-block;
@@ -380,7 +381,7 @@ const Input = styled(ReactSelect)`
     border-bottom-left-radius: ${variables.borderRadius};
     background: transparent;
     overflow: hidden;
-    border: 1px solid ${theme.primary};
+    border: 1px solid ${colours.primary};
     margin-top: -1px;
     max-height: 200px;
     position: absolute;
@@ -401,8 +402,8 @@ const Input = styled(ReactSelect)`
     padding: 8px 10px;
     transition: ${variables.defaultTransition};
     background-color: ${props =>
-      props.inverted ? theme.greyDarkest : theme.white};
-    color: ${props => (props.inverted ? theme.white : theme.greyDarkest)};
+      props.inverted ? colours.greyDarkest : colours.white};
+    color: ${props => (props.inverted ? colours.white : colours.greyDarkest)};
   }
   .Select-option:last-child {
     border-bottom-right-radius: 4px;
@@ -410,11 +411,11 @@ const Input = styled(ReactSelect)`
   }
   .Select-option.is-selected {
     background-color: ${props =>
-      props.inverted ? theme.greyDarker : theme.greyLightest};
+      props.inverted ? colours.greyDarker : colours.greyLightest};
   }
   .Select-option.is-focused {
     background-color: ${props =>
-      props.inverted ? theme.greyDarker : theme.greyLightest};
+      props.inverted ? colours.greyDarker : colours.greyLightest};
   }
   .Select-option.is-disabled {
     color: #cccccc;
@@ -422,8 +423,8 @@ const Input = styled(ReactSelect)`
   }
   .Select-noresults {
     box-sizing: border-box;
-    color: ${props => (props.inverted ? theme.white : theme.greyDarkest)};
-    background: ${props => (props.inverted ? theme.greyDarkest : theme.white)};
+    color: ${props => (props.inverted ? colours.white : colours.greyDarkest)};
+    background: ${props => (props.inverted ? colours.greyDarkest : colours.white)};
     cursor: default;
     display: block;
     padding: 8px 10px;
@@ -442,9 +443,9 @@ const Input = styled(ReactSelect)`
   }
   &.Select--multi .Select-value {
     position: relative;
-    background-color: ${theme.primary};
+    background-color: ${colours.primary};
     border-radius: 13px;
-    color: ${theme.white};
+    color: ${colours.white};
     font-size: 1.4rem;
     margin: 0 3px 3px 0;
     top: 3px;
@@ -478,7 +479,7 @@ const Input = styled(ReactSelect)`
     transition: ${variables.defaultTransition};
   }
   &.Select--multi .Select-value-icon:hover {
-    color: ${theme.primaryDarkest};
+    color: ${colours.primaryDarkest};
   }
   &.Select--multi .Select-value-icon:focus {
     background-color: rgba(0, 113, 230, 0.08);
@@ -497,9 +498,9 @@ const Input = styled(ReactSelect)`
   }
   &.Select--multi.is-disabled .Select-value {
     background-color: ${props =>
-      props.inverted ? theme.greyDarker : theme.greyDark};
+      props.inverted ? colours.greyDarker : colours.greyDark};
     border: none;
-    color: ${theme.greyLightest};
+    color: ${colours.greyLightest};
   }
   &.Select--multi.is-disabled .Select-value-icon {
     cursor: not-allowed;
