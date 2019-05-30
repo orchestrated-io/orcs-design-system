@@ -1,4 +1,4 @@
-const orchestratedColours = {
+const colours = {
   /* Greyscale */
   black: "#000000" /* Base black */,
   greyDarkest:
@@ -62,4 +62,4 @@ const orchestratedColours = {
     "#F2ABBE" /* Lightest version of brand danger/error colour - Mainly used to indicate error, at risk or over due states */
 };
 
-export default orchestratedColours;
+export default colours;

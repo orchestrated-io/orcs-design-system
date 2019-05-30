@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
-import theme from "../../theme";
+import colours from "../../colours";
 import variables from "../../variables";
 
 const Layout = styled.div`
@@ -59,11 +59,11 @@ const Layout = styled.div`
 
   background: ${props =>
     props.background
-      ? theme.greyLightest
+      ? colours.greyLightest
       : props.backgroundWhite
-      ? theme.white
+      ? colours.white
       : props.backgroundDark
-      ? theme.greyDarkest
+      ? colours.greyDarkest
       : `transparent`};
 
   ${props =>
@@ -79,7 +79,7 @@ const Layout = styled.div`
     ${props =>
       props.border
         ? css`
-            border: solid 1px ${theme.greyLighter};
+            border: solid 1px ${colours.greyLighter};
           `
         : css`
             border: none;

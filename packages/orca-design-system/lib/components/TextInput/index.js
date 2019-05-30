@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import theme from "../../theme";
+import colours from "../../colours";
 import variables from "../../variables";
-import Icon from "../Icon"
+import Icon from "../Icon";
+import { rgba } from "polished";
 
 const Group = styled.div`
   position: relative;
@@ -54,8 +55,8 @@ const Input = styled.input`
   z-index: 1;
   border-radius: ${variables.borderRadius};
   transition: ${variables.defaultTransition};
-  background: ${theme.white};
-  color: ${theme.greyDarkest};
+  background: ${colours.white};
+  color: ${colours.greyDarkest};
   width: ${props => (props.fullWidth ? `100%` : `auto`)};
   height: ${props => (props.floating ? `60px` : `40px`)};
   padding: ${props => {
@@ -69,8 +70,8 @@ const Input = styled.input`
   border: 1px solid
     ${props =>
   props.invalid
-    ? theme.dangerLight
-    : props.valid ? theme.successLight : theme.black.fade(0.8)};
+    ? colours.dangerLight
+    : props.valid ? colours.successLight : rgba(colours.black, 0.2)};
 
   ${props =>
   props.floating
@@ -99,14 +100,14 @@ const Input = styled.input`
         `
     : css`
           &::placeholder {
-            color: ${theme.grey};
+            color: ${colours.grey};
           }
         `} &:hover {
     border: 1px solid
       ${props =>
   props.invalid
-    ? theme.dangerDark
-    : props.valid ? theme.successDark : theme.primary};
+    ? colours.dangerDark
+    : props.valid ? colours.successDark : colours.primary};
   }
 
   &:focus {
@@ -115,28 +116,28 @@ const Input = styled.input`
     box-shadow: 0 0 0 3px
       ${props =>
   props.invalid
-    ? theme.danger.fade(0.6)
-    : props.valid ? theme.success.fade(0.6) : theme.primary.fade(0.6)};
+    ? rgba(colours.danger, 0.4)
+    : props.valid ? rgba(colours.success, 0.4) : rgba(colours.primary, 0.4)};
 
     border: 1px solid
       ${props =>
   props.invalid
-    ? theme.dangerDark
-    : props.valid ? theme.successDark : theme.primary};
+    ? colours.dangerDark
+    : props.valid ? colours.successDark : colours.primary};
 
     ${props =>
   props.floating
     ? css`
             &::placeholder {
-              color: ${theme.greyLight};
+              color: ${colours.greyLight};
             }
             ~ label {
               transform: translateY(-10px);
               font-size: 1.2rem;
               color: ${props =>
       props.invalid
-        ? theme.dangerDark
-        : props.valid ? theme.successDark : theme.primary};
+        ? colours.dangerDark
+        : props.valid ? colours.successDark : colours.primary};
             }
           `
     : css``};
@@ -157,10 +158,10 @@ const Label = styled.label`
 
   color: ${props =>
   props.inverted
-    ? theme.white
+    ? colours.white
     : props.valid
-    ? theme.successDark
-    : props.invalid ? theme.dangerDark : theme.greyDarkest};
+    ? colours.successDark
+    : props.invalid ? colours.dangerDark : colours.greyDarkest};
 
   ${props =>
   props.floating
@@ -171,8 +172,8 @@ const Label = styled.label`
           top: 22px;
           color: ${props =>
       props.invalid
-        ? theme.dangerDark
-        : props.valid ? theme.successDark : theme.grey};
+        ? colours.dangerDark
+        : props.valid ? colours.successDark : colours.grey};
         `
     : css``};
       
@@ -181,7 +182,7 @@ const Label = styled.label`
     ? css`
         &:after{ 
           content: " *";
-          color : ${theme.danger}; 
+          color : ${colours.danger}; 
         }
       `
     : css``};

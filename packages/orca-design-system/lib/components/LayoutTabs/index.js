@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
-import theme from "../../theme";
+import colours from "../../colours";
 import variables from "../../variables";
+import { rgba } from "polished";
 
 const Container = styled.div`
   width: 100%;
@@ -31,8 +32,8 @@ const Tab = styled.button`
   border-radius: ${variables.borderRadius};
   transition: ${variables.defaultTransition};
   cursor: ${props => (props.active ? "default" : "pointer")};;
-  background: ${props => (props.active ? theme.white : theme.greyLighter.fade(0.5))};
-  color: ${props => (props.active ? theme.primary : theme.grey)};
+  background: ${props => (props.active ? colours.white : rgba(colours.greyLighter, 0.5))};
+  color: ${props => (props.active ? colours.primary : colours.grey)};
   + button {
     margin-left: ${variables.defaultSpacingHalf};
   }
@@ -43,8 +44,8 @@ const Tab = styled.button`
   : css`
     &:hover,
     &:focus {
-      color: ${theme.greyDark};
-      background: ${theme.greyLighter};
+      color: ${colours.greyDark};
+      background: ${colours.greyLighter};
     }
   `}
 `;

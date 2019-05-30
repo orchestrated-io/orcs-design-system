@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import theme from "../../theme";
+import colours from "../../colours";
 import variables from "../../variables";
 import Button from "../Button";
 
@@ -38,7 +38,7 @@ const Overlay = styled.div`
 const Container = styled.div`
   position: relative;
   z-index: 9001;
-  background: ${theme.white};
+  background: ${colours.white};
   width: ${props => (props.width ? props.width : "300px")};
   border-radius: ${variables.borderRadius};
 `;
@@ -48,7 +48,7 @@ const Actions = styled.div`
   align-items: center;
   justify-content: flex-end;
   padding: ${variables.defaultSpacingHalf};
-  border-top: solid 1px ${theme.greyLighter};
+  border-top: solid 1px ${colours.greyLighter};
   button + button {
     margin-left: ${variables.defaultSpacingQuarter};
   }

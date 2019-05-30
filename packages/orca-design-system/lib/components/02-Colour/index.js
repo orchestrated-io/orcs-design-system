@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import theme from "../../theme";
+import colours from "../../colours";
 import variables from "../../variables";
 
 const Colour = styled.div`
@@ -8,79 +8,79 @@ const Colour = styled.div`
 
   background: ${props =>
     props.black
-      ? theme.black
+      ? colours.black
       : props.greyDarkest
-        ? theme.greyDarkest
+        ? colours.greyDarkest
         : props.greyDarker
-          ? theme.greyDarker
+          ? colours.greyDarker
           : props.greyDark
-            ? theme.greyDark
+            ? colours.greyDark
             : props.grey
-              ? theme.grey
+              ? colours.grey
               : props.greyLight
-                ? theme.greyLight
+                ? colours.greyLight
                 : props.greyLighter
-                  ? theme.greyLighter
+                  ? colours.greyLighter
                   : props.greyLightest
-                    ? theme.greyLightest
+                    ? colours.greyLightest
                     : props.white
-                      ? theme.white
+                      ? colours.white
                       : props.primaryDarkest
-                        ? theme.primaryDarkest
+                        ? colours.primaryDarkest
                         : props.primaryDarker
-                          ? theme.primaryDarker
+                          ? colours.primaryDarker
                           : props.primaryDark
-                            ? theme.primaryDark
+                            ? colours.primaryDark
                             : props.primary
-                              ? theme.primary
+                              ? colours.primary
                               : props.primaryLight
-                                ? theme.primaryLight
+                                ? colours.primaryLight
                                 : props.primaryLighter
-                                  ? theme.primaryLighter
+                                  ? colours.primaryLighter
                                   : props.primaryLightest
-                                    ? theme.primaryLightest
+                                    ? colours.primaryLightest
                                     : props.successDarkest
-                                      ? theme.successDarkest
+                                      ? colours.successDarkest
                                       : props.successDarker
-                                        ? theme.successDarker
+                                        ? colours.successDarker
                                         : props.successDark
-                                          ? theme.successDark
+                                          ? colours.successDark
                                           : props.success
-                                            ? theme.success
+                                            ? colours.success
                                             : props.successLight
-                                              ? theme.successLight
+                                              ? colours.successLight
                                               : props.successLighter
-                                                ? theme.successLighter
+                                                ? colours.successLighter
                                                 : props.successLightest
-                                                  ? theme.successLightest
+                                                  ? colours.successLightest
                                                   : props.warningDarkest
-                                                    ? theme.warningDarkest
+                                                    ? colours.warningDarkest
                                                     : props.warningDarker
-                                                      ? theme.warningDarker
+                                                      ? colours.warningDarker
                                                       : props.warningDark
-                                                        ? theme.warningDark
+                                                        ? colours.warningDark
                                                         : props.warning
-                                                          ? theme.warning
+                                                          ? colours.warning
                                                           : props.warningLight
-                                                            ? theme.warningLight
+                                                            ? colours.warningLight
                                                             : props.warningLighter
-                                                              ? theme.warningLighter
+                                                              ? colours.warningLighter
                                                               : props.warningLightest
-                                                                ? theme.warningLightest
+                                                                ? colours.warningLightest
                                                                 : props.dangerDarkest
-                                                                  ? theme.dangerDarkest
+                                                                  ? colours.dangerDarkest
                                                                   : props.dangerDarker
-                                                                    ? theme.dangerDarker
+                                                                    ? colours.dangerDarker
                                                                     : props.dangerDark
-                                                                      ? theme.dangerDark
+                                                                      ? colours.dangerDark
                                                                       : props.danger
-                                                                        ? theme.danger
+                                                                        ? colours.danger
                                                                         : props.dangerLight
-                                                                          ? theme.dangerLight
+                                                                          ? colours.dangerLight
                                                                           : props.dangerLighter
-                                                                            ? theme.dangerLighter
+                                                                            ? colours.dangerLighter
                                                                             : props.dangerLightest
-                                                                              ? theme.dangerLightest
+                                                                              ? colours.dangerLightest
                                                                               : "transparent;"};
 `;
 

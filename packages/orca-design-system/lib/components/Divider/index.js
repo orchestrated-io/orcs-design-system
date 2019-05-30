@@ -1,14 +1,15 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import theme from "../../theme";
+import colours from "../../colours";
+import { rgba } from "polished";
 
 const Divider = styled.div`
   display: block;
   width: 100%;
   background: ${props =>
     props.light
-      ? theme.greyLightest
-      : props.inverted ? theme.greyDark.fade(0.4) : theme.greyLighter};
+      ? colours.greyLightest
+      : props.inverted ? rgba(colours.greyDark, 0.6) : colours.greyLighter};
   height: ${props => (props.thick ? "3px;" : "1px;")};
 `;
 

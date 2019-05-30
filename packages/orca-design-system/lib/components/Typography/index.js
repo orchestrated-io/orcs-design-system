@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import variables from "../../variables";
-import theme from "../../theme";
+import colours from "../../colours";
+import { rgba } from "polished";
 
 const marginBottom = props =>
   props.marginBottomDouble
@@ -11,14 +12,14 @@ const marginBottom = props =>
 
 const colour = props =>
   props.grey
-    ? theme.grey
+    ? colours.grey
     : props.success
-      ? theme.success
+      ? colours.success
       : props.warning
-        ? theme.warning
+        ? colours.warning
         : props.danger
-          ? theme.danger
-          : props.white ? theme.white : theme.greyDarkest;
+          ? colours.danger
+          : props.white ? colours.white : colours.greyDarkest;
 
 const textAlign = props =>
   props.center ? "center" : props.right ? "right" : props.left ? "left" : "inherit";
@@ -114,12 +115,12 @@ const Quote = styled.blockquote`
   line-height: 2rem;
   padding: ${variables.defaultSpacingHalf} ${variables.defaultSpacing};
   margin: ${variables.defaultSpacing};
-  border-left: solid 3px ${theme.greyDark};
+  border-left: solid 3px ${colours.greyDark};
   em {
     display: block;
     font-style: italic;
     font-size: 1.4rem;
-    color: ${theme.greyDark};
+    color: ${colours.greyDark};
     margin-top: ${variables.defaultSpacingQuarter};
   }
 `;
@@ -128,7 +129,7 @@ const Code = styled.code`
   margin-bottom: ${marginBottom};
   text-align: ${textAlign};
   line-height: 2rem;
-  background: ${theme.warningLightest.fade(0.6)};
+  background: ${rgba(colours.warningLightest, 0.4)};
   padding: ${variables.defaultSpacingQuarter};
 `;
 
