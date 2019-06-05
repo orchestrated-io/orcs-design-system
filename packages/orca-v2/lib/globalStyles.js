@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 import colours from "./colours";
 
 const GlobalStyles = createGlobalStyle`
@@ -213,6 +213,6 @@ h6 {
 @keyframes expandWidth {
    0% { width: 0; }
 }
-`
+`;
 
 export default GlobalStyles;
