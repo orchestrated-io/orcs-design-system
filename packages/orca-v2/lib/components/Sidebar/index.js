@@ -85,6 +85,7 @@ const Close = styled.label`
   padding-top: 2px;
   border-radius: 100%;
   margin-top: -11px;
+  z-index: 2;
   cursor: w-resize;
   background: ${colours.greyDarker};
 `;
