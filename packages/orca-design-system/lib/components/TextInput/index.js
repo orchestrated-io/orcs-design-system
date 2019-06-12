@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import colours from "../../colours";
@@ -16,33 +16,37 @@ const IconWrapper = styled.label`
     opacity: 0.4;
     position: absolute;
   }
-  ${props => props.iconLeft && !props.floating ? css`
-    svg {
-      bottom: 12px;
-      left: 12px;
-    }
-  `
-  : props.iconLeft && props.floating ? css`
-    svg {
-      bottom: 22px;
-      left: 12px;
-    }
-  `
-  : props.iconRight && !props.floating ? css`
-    svg {
-      right: 12px;
-      bottom: 12px;
-    }
-  `
-  : props.iconRight && props.floating ? css`
-    svg {
-      right: 12px;
-      bottom: 22px;
-    }
-  `
-  : css``
-  };
-`
+  ${props =>
+    props.iconLeft && !props.floating
+      ? css`
+          svg {
+            bottom: 12px;
+            left: 12px;
+          }
+        `
+      : props.iconLeft && props.floating
+      ? css`
+          svg {
+            bottom: 22px;
+            left: 12px;
+          }
+        `
+      : props.iconRight && !props.floating
+      ? css`
+          svg {
+            right: 12px;
+            bottom: 12px;
+          }
+        `
+      : props.iconRight && props.floating
+      ? css`
+          svg {
+            right: 12px;
+            bottom: 22px;
+          }
+        `
+      : css``};
+`;
 
 const Input = styled.input`
   display: block;
@@ -60,22 +64,23 @@ const Input = styled.input`
   width: ${props => (props.fullWidth ? `100%` : `auto`)};
   height: ${props => (props.floating ? `60px` : `40px`)};
   padding: ${props => {
-      let left = props.iconLeft ? 40 : 12;
-      let right = props.iconRight ? 40 : 12;
-      let top = props.floating ? 25 : 5;
-      let bottom = 6;
-      return `${top}px ${right}px ${bottom}px ${left}px`;
-    }
-  };
+    let left = props.iconLeft ? 40 : 12;
+    let right = props.iconRight ? 40 : 12;
+    let top = props.floating ? 25 : 5;
+    let bottom = 6;
+    return `${top}px ${right}px ${bottom}px ${left}px`;
+  }};
   border: 1px solid
     ${props =>
-  props.invalid
-    ? colours.dangerLight
-    : props.valid ? colours.successLight : rgba(colours.black, 0.2)};
+      props.invalid
+        ? colours.dangerLight
+        : props.valid
+        ? colours.successLight
+        : rgba(colours.black, 0.2)};
 
   ${props =>
-  props.floating
-    ? css`
+    props.floating
+      ? css`
           &::placeholder {
             color: transparent;
           }
@@ -98,16 +103,18 @@ const Input = styled.input`
             }
           }
         `
-    : css`
+      : css`
           &::placeholder {
             color: ${colours.grey};
           }
         `} &:hover {
     border: 1px solid
       ${props =>
-  props.invalid
-    ? colours.dangerDark
-    : props.valid ? colours.successDark : colours.primary};
+        props.invalid
+          ? colours.dangerDark
+          : props.valid
+          ? colours.successDark
+          : colours.primary};
   }
 
   &:focus {
@@ -115,19 +122,23 @@ const Input = styled.input`
 
     box-shadow: 0 0 0 3px
       ${props =>
-  props.invalid
-    ? rgba(colours.danger, 0.4)
-    : props.valid ? rgba(colours.success, 0.4) : rgba(colours.primary, 0.4)};
+        props.invalid
+          ? rgba(colours.danger, 0.4)
+          : props.valid
+          ? rgba(colours.success, 0.4)
+          : rgba(colours.primary, 0.4)};
 
     border: 1px solid
       ${props =>
-  props.invalid
-    ? colours.dangerDark
-    : props.valid ? colours.successDark : colours.primary};
+        props.invalid
+          ? colours.dangerDark
+          : props.valid
+          ? colours.successDark
+          : colours.primary};
 
     ${props =>
-  props.floating
-    ? css`
+      props.floating
+        ? css`
             &::placeholder {
               color: ${colours.greyLight};
             }
@@ -135,12 +146,14 @@ const Input = styled.input`
               transform: translateY(-10px);
               font-size: 1.2rem;
               color: ${props =>
-      props.invalid
-        ? colours.dangerDark
-        : props.valid ? colours.successDark : colours.primary};
+                props.invalid
+                  ? colours.dangerDark
+                  : props.valid
+                  ? colours.successDark
+                  : colours.primary};
             }
           `
-    : css``};
+        : css``};
   }
 `;
 
@@ -151,74 +164,75 @@ const Label = styled.label`
   font-size: 1.4rem;
   transition: ${variables.defaultTransition};
   padding-right: ${props =>
-    props.floating && props.iconRight ? `40px` 
-  : `12px`};
+    props.floating && props.iconRight ? `40px` : `12px`};
   margin-bottom: ${props =>
-  props.floating ? 0 : variables.defaultSpacingQuarter};
+    props.floating ? 0 : variables.defaultSpacingQuarter};
 
   color: ${props =>
-  props.inverted
-    ? colours.white
-    : props.valid
-    ? colours.successDark
-    : props.invalid ? colours.dangerDark : colours.greyDarkest};
+    props.inverted
+      ? colours.white
+      : props.valid
+      ? colours.successDark
+      : props.invalid
+      ? colours.dangerDark
+      : colours.greyDarkest};
 
   ${props =>
-  props.floating
-    ? css`
-          padding-left: ${props => props.iconLeft ? "41px" : "13px"};
+    props.floating
+      ? css`
+          padding-left: ${props => (props.iconLeft ? "41px" : "13px")};
           cursor: text;
           position: absolute;
           top: 22px;
           color: ${props =>
-      props.invalid
-        ? colours.dangerDark
-        : props.valid ? colours.successDark : colours.grey};
+            props.invalid
+              ? colours.dangerDark
+              : props.valid
+              ? colours.successDark
+              : colours.grey};
         `
-    : css``};
-      
-      ${ props =>
-  props.mandatory 
-    ? css`
-        &:after{ 
-          content: " *";
-          color : ${colours.danger}; 
-        }
-      `
-    : css``};
-  
- `;
+      : css``};
 
-class TextInput extends React.Component {
-  render() {
-    const {
-      inverted,
-      floating,
-      id,
-      label,
-      invalid,
-      valid,
-      fullWidth,
-      mandatory,
-      iconLeft,
-      iconRight
-    } = this.props;
-    return (
-      <Group fullWidth={fullWidth}>
-        {label && !floating ? (
-          <Label
+  ${props =>
+    props.mandatory
+      ? css`
+          &:after {
+            content: " *";
+            color: ${colours.danger};
+          }
+        `
+      : css``};
+`;
+
+const TextInput = forwardRef((props, ref) => {
+  const {
+    inverted,
+    floating,
+    id,
+    label,
+    invalid,
+    valid,
+    fullWidth,
+    mandatory,
+    iconLeft,
+    iconRight
+  } = props;
+  return (
+    <Group fullWidth={fullWidth}>
+      {label && !floating ? (
+        <Label
           inverted={inverted}
           invalid={invalid}
           valid={valid}
           htmlFor={id}
           mandatory={mandatory}
-          >
-            {label}
-          </Label>
-        ) : null}
-        <Input {...this.props} />
-        {label && floating ? (
-          <Label
+        >
+          {label}
+        </Label>
+      ) : null}
+      <Input ref={ref} {...this.props} />
+      {label && floating ? (
+        <Label
           floating={floating}
           invalid={invalid}
           valid={valid}
@@ -226,29 +240,27 @@ class TextInput extends React.Component {
           mandatory={mandatory}
           iconRight={iconRight}
           iconLeft={iconLeft}
-          
-          >
-            {label}
-          </Label>
-        ) : null}
-        {iconLeft ? (
-          <div>
-            <IconWrapper htmlFor={id} iconLeft={iconLeft} floating={floating}>
-              <Icon icon={iconLeft} htmlFor={id} color="black" />
-            </IconWrapper>
-          </div>
-        ) : null}
-        {iconRight ? (
-          <div>
-            <IconWrapper htmlFor={id} iconRight={iconRight} floating={floating}>
-              <Icon icon={iconRight} htmlFor={id} color="#black" />
-            </IconWrapper>
-          </div>
-        ) : null}
-      </Group>
-    );
-  }
-}
+        >
+          {label}
+        </Label>
+      ) : null}
+      {iconLeft ? (
+        <div>
+          <IconWrapper htmlFor={id} iconLeft={iconLeft} floating={floating}>
+            <Icon icon={iconLeft} htmlFor={id} color="black" />
+          </IconWrapper>
+        </div>
+      ) : null}
+      {iconRight ? (
+        <div>
+          <IconWrapper htmlFor={id} iconRight={iconRight} floating={floating}>
+            <Icon icon={iconRight} htmlFor={id} color="#black" />
+          </IconWrapper>
+        </div>
+      ) : null}
+    </Group>
+  );
+});
 
 TextInput.propTypes = {
   /** Must be used to specify a unique ID. */
@@ -266,7 +278,7 @@ TextInput.propTypes = {
   /** Applies invalid input styles */
   invalid: PropTypes.bool,
   /** Applies valid input styles */
-  valid: PropTypes.bool ,
+  valid: PropTypes.bool,
   /** Shows asterisk to denote a mandatory field */
   mandatory: PropTypes.bool,
   /** Applies an icon to the left of the text box with specified name. */
