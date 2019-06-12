@@ -104,7 +104,7 @@ const TextArea = forwardRef((ref, props) => {
       >
         {label}
       </Label>
-      <Input ref={ref} {...this.props} />
+      <Input ref={ref} {...props} />
     </Group>
   );
 });

@@ -230,7 +230,7 @@ const TextInput = forwardRef((props, ref) => {
           {label}
         </Label>
       ) : null}
-      <Input ref={ref} {...this.props} />
+      <Input ref={ref} {...props} />
       {label && floating ? (
         <Label
           floating={floating}
