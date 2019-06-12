@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import colours from "../../colours";
@@ -91,33 +91,23 @@ const Label = styled.label`
       : css``};
 `;
 
-class TextArea extends React.Component {
-  render() {
-    const {
-      inverted,
-      id,
-      label,
-      invalid,
-      valid,
-      fullWidth,
-      mandatory
-    } = this.props;
-    return (
-      <Group fullWidth={fullWidth}>
-        <Label
-          inverted={inverted}
-          invalid={invalid}
-          valid={valid}
-          htmlFor={id}
-          mandatory={mandatory}
-        >
-          {label}
-        </Label>
-        <Input {...this.props} />
-      </Group>
-    );
-  }
-}
+const TextArea = forwardRef((ref, props) => {
+  const { inverted, id, label, invalid, valid, fullWidth, mandatory } = props;
+  return (
+    <Group fullWidth={fullWidth}>
+      <Label
+        inverted={inverted}
+        invalid={invalid}
+        valid={valid}
+        htmlFor={id}
+        mandatory={mandatory}
+      >
+        {label}
+      </Label>
+      <Input ref={ref} {...this.props} />
+    </Group>
+  );
+});
 
 TextArea.propTypes = {
   /** Must be used to specify a unique ID. */
