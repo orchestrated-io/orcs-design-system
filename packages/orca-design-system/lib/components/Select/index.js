@@ -518,7 +518,7 @@ const Input = styled(ReactSelect)`
   }
 `;
 
-const Select = forwardRef((ref, props) => {
+const Select = forwardRef((props, ref) => {
   const { id, label, inverted } = props;
   return (
     <Group>
