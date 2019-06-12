@@ -91,7 +91,7 @@ const Label = styled.label`
       : css``};
 `;
 
-const TextArea = forwardRef((ref, props) => {
+const TextArea = forwardRef((props, ref) => {
   const { inverted, id, label, invalid, valid, fullWidth, mandatory } = props;
   return (
     <Group fullWidth={fullWidth}>
