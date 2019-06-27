@@ -81,10 +81,11 @@ class Dialogue extends React.Component {
   };
 
   render() {
-    const { children, buttonText, confirmAction, width, ...props } = this.props;
+    const { children, buttonText, confirmAction, width, icon, confirmText, ...props } = this.props;
     return (
       <Fragment>
         <Button {...props} onClick={this.showDialogue}>
+          {icon ? <Icon icon={icon} /> : null}
           {buttonText}
         </Button>
         <Overlay
@@ -98,7 +99,7 @@ class Dialogue extends React.Component {
               <Button ghost onClick={this.handleCancel}>
                 Cancel
               </Button>
-              <Button onClick={() => this.handleOk(confirmAction)}>OK</Button>
+              <Button onClick={() => this.handleOk(confirmAction)}>{confirmText}</Button>
             </Actions>
           </Container>
         </Overlay>
@@ -112,8 +113,12 @@ Dialogue.propTypes = {
   width: PropTypes.string,
   /** Specifies the text for the button that triggers the dialogue */
   buttonText: PropTypes.string,
-  /** Specifies the fucntion to run on clicking OK */
-  confirmAction: PropTypes.func
+  /** Specifies an icon for the button if required */
+  icon: PropTypes.string,
+  /** Specifies the function to run on clicking OK */
+  confirmAction: PropTypes.func,
+  /** Specifies the text to use for the confirm button */
+  confirmAction: PropTypes.string
 };
 
 /** @component */
