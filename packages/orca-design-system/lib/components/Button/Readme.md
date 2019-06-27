@@ -34,9 +34,9 @@ Make use of icons when they help enhance or support the text or aesthetic of the
   
   <Button isLoading>isLoading button</Button>
   
-  <Button iconLeft><Icon icon={["fas", "user-plus"]} /> Left icon</Button>
+  <Button iconLeft><Icon icon={["fas", "user-plus"]} />Left icon</Button>
   
-  <Button iconRight>Right icon <Icon icon={["fas", "cloud-download"]} /></Button>
+  <Button iconRight>Right icon<Icon icon={["fas", "cloud-download"]} /></Button>
   
   <Flex alignStart>
     <Button large iconOnly><Icon icon={["far", "calendar-alt"]} /></Button>
