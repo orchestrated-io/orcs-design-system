@@ -8,6 +8,8 @@ const Badge = styled.div`
   font-size: 1.2rem;
   font-weight: 600;
   margin: 3px;
+  display: inline-block;
+  text-align: center;
   white-space: nowrap;
   position: relative;
   padding: 5px 10px;
