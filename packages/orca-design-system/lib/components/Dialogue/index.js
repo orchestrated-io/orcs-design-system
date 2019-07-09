@@ -75,10 +75,12 @@ class Dialogue extends React.Component {
     const result = confirmAction();
     if(result && result.then) {
       // we have been given a promise
-      result.then(() => {
-        this.setState({
-          visible: false
-        });
+      result.then((result) => {
+        if(result) {
+          this.setState({
+            visible: false
+          });
+        }
       })
     }
     else if(result) {
@@ -129,7 +131,7 @@ Dialogue.propTypes = {
   buttonText: PropTypes.string,
   /** Specifies an icon for the button if required */
   icon: PropTypes.string,
-  /** Specifies the function to run on clicking OK. Function must return a successful promise or truthy value in order to close the dialogue (see example code) */
+  /** Specifies the function to run on clicking OK. Function must return a truthy value or a promise that resolves to a truthy value in order to close the dialogue (see example code) */
   confirmAction: PropTypes.func,
   /** Specifies the text to use for the confirm button */
   confirmText: PropTypes.string
