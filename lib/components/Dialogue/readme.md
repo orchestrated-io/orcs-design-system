@@ -5,16 +5,19 @@ You can add any child content as you wish, using other components, e.g. Typograp
 Width is also configurable, units must be specified (px, %, vw, etc.).
 
 ```js
-const testAction = () => {
-  console.log("You clicked OK!");
+const testConfirmAction = () => {
+  console.log("You clicked OK");
   // Must return a truthy value or a promise that resolves to a truthy value in order to close the dialogue
   //return true;
   return Promise.resolve(true);
 };
+const testCancelAction = () => {
+  console.log("You clicked Cancel");
+};
 
 <Layout padding childChildHorizontalSpacing>
 
-  <Dialogue width="320px" buttonText="Delete data" colour="danger" confirmAction={testAction} confirmText="OK">
+  <Dialogue width="320px" buttonText="Delete data" colour="danger" confirmAction={testConfirmAction} confirmText="OK" cancelAction={testCancelAction} cancelText="Cancel">
 
     <Typography.P marginBottom bold>This will remove all data from the application.</Typography.P>
     <Typography.P>Do you wish to continue?</Typography.P>
