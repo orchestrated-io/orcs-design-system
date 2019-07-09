@@ -63,41 +63,59 @@ const Content = styled.div`
 `;
 
 class Dialogue extends React.Component {
+  
   state = { visible: false };
 
   showDialogue = () => {
     this.setState({
       visible: true
     });
+    document.addEventListener("keydown", this.handleKeypress);
   };
 
-  handleOk = confirmAction => {
+  closeDialogue = () => {
+    this.setState({
+      visible: false
+    });
+    document.removeEventListener("keydown", this.handleKeypress);
+  };
+
+  handleKeypress = (event) => {
+    var code = event.keyCode || event.which;
+    if(code === 13) { // 13 is the enter keycode
+      this.handleOk();
+      event.preventDefault();
+    } else if (code === 27) {  // 27 is the escape keycode
+      this.handleCancel();
+      event.preventDefault();
+    }
+  }
+
+  handleOk = () => {
+    const { confirmAction } = this.props;
     const result = confirmAction();
     if(result && result.then) {
       // we have been given a promise
       result.then((result) => {
         if(result) {
-          this.setState({
-            visible: false
-          });
+          this.closeDialogue();
         }
       })
     }
     else if(result) {
-      this.setState({
-        visible: false
-      });
+      this.closeDialogue();
     }
   };
 
   handleCancel = () => {
-    this.setState({
-      visible: false
-    });
+    const { cancelAction } = this.props;
+    this.closeDialogue();
+    cancelAction && cancelAction();
   };
 
+
   render() {
-    const { children, buttonText, confirmAction, width, icon, confirmText, ...props } = this.props;
+    const { children, buttonText, width, icon, confirmText, cancelText, ...props } = this.props;
     return (
       <Fragment>
         <Button {...props} onClick={this.showDialogue}>
@@ -106,15 +124,15 @@ class Dialogue extends React.Component {
         </Button>
         <Overlay
           visible={this.state.visible}
-          onOk={this.handleOk}
-          onCancel={this.handleCancel}
         >
           <Container width={width}>
             <Content>{children}</Content>
             <Actions>
-              <Button onClick={() => this.handleOk(confirmAction)}>{confirmText}</Button>
+              <Button onClick={this.handleOk}>
+                {confirmText}
+              </Button>
               <Button ghost onClick={this.handleCancel}>
-                Cancel
+                {cancelText}
               </Button>
             </Actions>
           </Container>
@@ -131,10 +149,14 @@ Dialogue.propTypes = {
   buttonText: PropTypes.string,
   /** Specifies an icon for the button if required */
   icon: PropTypes.string,
-  /** Specifies the function to run on clicking OK. Function must return a truthy value or a promise that resolves to a truthy value in order to close the dialogue (see example code) */
+  /** Specifies the text to use for the confirm button. Recommend using words like OK, Confirm, Yes, Proceed, Add, Save. */
+  confirmText: PropTypes.string,
+  /** Specifies the function to run on clicking confirm button. Function must return a truthy value or a promise that resolves to a truthy value in order to close the dialogue (see example code) */
   confirmAction: PropTypes.func,
-  /** Specifies the text to use for the confirm button */
-  confirmText: PropTypes.string
+  /** Specifies the text to use for the cancel button. Recommend using words like Cancel, Close, No. */
+  cancelText: PropTypes.string,
+  /** Specifies the function to run on clicking cancel button. (Note, dialogue is closed automatically) */
+  cancelAction: PropTypes.func
 };
 
 /** @component */
