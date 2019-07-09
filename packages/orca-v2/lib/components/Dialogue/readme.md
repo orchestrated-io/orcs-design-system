@@ -7,7 +7,7 @@ Width is also configurable, units must be specified (px, %, vw, etc.).
 ```js
 const testAction = () => {
   console.log("You clicked OK!");
-  // Must return a successful promise or truthy value in order to close the dialogue
+  // Must return a truthy value or a promise that resolves to a truthy value in order to close the dialogue
   //return true;
   return Promise.resolve(true);
 };
