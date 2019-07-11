@@ -5,4 +5,4 @@
 #### The Design System created, maintained and used by Orchestrated Systems Pty. Ltd.
 [Visit our website](https://orchestrated.io/)
 
-For installation and usage documentation for this Design System, view the readme on our [github repository](https://github.com/orchestrated-io/orchestrated-design-system).
+For installation and usage documentation for this Design System, view the readme on our [github repository](https://github.com/orchestrated-io/orca-design-system).
