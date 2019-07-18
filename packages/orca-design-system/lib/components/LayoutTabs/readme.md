@@ -5,7 +5,7 @@ LayoutTabs are intended to provide a way to navigate between distinct sections w
   <LayoutTabs.Container>
     <LayoutTabs.Tab active>Details</LayoutTabs.Tab>
     <LayoutTabs.Tab>Additional information</LayoutTabs.Tab>
-    <LayoutTabs.Tab>Map</LayoutTabs.Tab>
+    <LayoutTabs.Tab notification="2">Map</LayoutTabs.Tab>
   </LayoutTabs.Container>
 </Layout>
 ```
