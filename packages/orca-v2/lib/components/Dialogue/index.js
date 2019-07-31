@@ -38,7 +38,7 @@ const Overlay = styled.div`
 
 const CustomIcon = styled(Icon)`
   margin-right: ${variables.defaultSpacingHalf};
-`
+`;
 
 const Container = styled.div`
   position: relative;
@@ -62,8 +62,9 @@ const Content = styled.div`
   padding: ${variables.defaultSpacing};
 `;
 
+const alwayShow = () => true;
+
 class Dialogue extends React.Component {
-  
   state = { visible: false };
 
   showDialogue = () => {
@@ -80,29 +81,30 @@ class Dialogue extends React.Component {
     document.removeEventListener("keydown", this.handleKeypress);
   };
 
-  handleKeypress = (event) => {
+  handleKeypress = event => {
     var code = event.keyCode || event.which;
-    if(code === 13) { // 13 is the enter keycode
+    if (code === 13) {
+      // 13 is the enter keycode
       this.handleOk();
       event.preventDefault();
-    } else if (code === 27) {  // 27 is the escape keycode
+    } else if (code === 27) {
+      // 27 is the escape keycode
       this.handleCancel();
       event.preventDefault();
     }
-  }
+  };
 
   handleOk = () => {
     const { confirmAction } = this.props;
     const result = confirmAction();
-    if(result && result.then) {
+    if (result && result.then) {
       // we have been given a promise
-      result.then((result) => {
-        if(result) {
+      result.then(result => {
+        if (result) {
           this.closeDialogue();
         }
-      })
-    }
-    else if(result) {
+      });
+    } else if (result) {
       this.closeDialogue();
     }
   };
@@ -113,24 +115,37 @@ class Dialogue extends React.Component {
     cancelAction && cancelAction();
   };
 
+  handleButtonClick = () => {
+    const { shouldShowDialogue = alwayShow } = this.props;
+    if (shouldShowDialogue()) {
+      this.showDialogue();
+    } else {
+      this.handleOk();
+    }
+  };
 
   render() {
-    const { children, buttonText, width, icon, confirmText, cancelText, ...props } = this.props;
+    const {
+      children,
+      buttonText,
+      width,
+      icon,
+      confirmText,
+      cancelText,
+      ...props
+    } = this.props;
+
     return (
       <Fragment>
-        <Button {...props} onClick={this.showDialogue}>
+        <Button {...props} onClick={this.handleButtonClick}>
           {icon ? <CustomIcon icon={icon} /> : null}
           {buttonText}
         </Button>
-        <Overlay
-          visible={this.state.visible}
-        >
+        <Overlay visible={this.state.visible}>
           <Container width={width}>
             <Content>{children}</Content>
             <Actions>
-              <Button onClick={this.handleOk}>
-                {confirmText}
-              </Button>
+              <Button onClick={this.handleOk}>{confirmText}</Button>
               <Button ghost onClick={this.handleCancel}>
                 {cancelText}
               </Button>
@@ -156,7 +171,10 @@ Dialogue.propTypes = {
   /** Specifies the text to use for the cancel button. Recommend using words like Cancel, Close, No. */
   cancelText: PropTypes.string,
   /** Specifies the function to run on clicking cancel button. (Note, dialogue is closed automatically) */
-  cancelAction: PropTypes.func
+  cancelAction: PropTypes.func,
+  /** Specifies the function to decide should show the dialogue or not, executing confirmAction immediately if falsy value returned */
+
+  shouldShowDialogue: PropTypes.func
 };
 
 /** @component */
