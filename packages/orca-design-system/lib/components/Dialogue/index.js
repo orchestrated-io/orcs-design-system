@@ -1,68 +1,14 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
-import colours from "../../colours";
+import styled from "styled-components";
 import variables from "../../variables";
 import Button from "../Button";
 import Icon from "../Icon";
-
-const Overlay = styled.div`
-  position: fixed;
-  background: rgba(0, 0, 0, 0.7);
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: 0;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  opacity: 0;
-  transition: all 300ms ease-in-out;
-
-  ${props =>
-    props.visible
-      ? css`
-          opacity: 1;
-          z-index: 900;
-          visibility: visible;
-        `
-      : css`
-          opacity: 0;
-          z-index: -900;
-          visibility: hidden;
-        `};
-`;
+import Modal from "../Modal";
 
 const CustomIcon = styled(Icon)`
   margin-right: ${variables.defaultSpacingHalf};
 `;
-
-const Container = styled.div`
-  position: relative;
-  z-index: 9001;
-  background: ${colours.white};
-  width: ${props => (props.width ? props.width : "300px")};
-  border-radius: ${variables.borderRadius};
-`;
-
-const Actions = styled.div`
-  display: flex;
-  align-items: center;
-  padding: ${variables.defaultSpacing};
-  border-top: solid 1px ${colours.greyLighter};
-  button + button {
-    margin-left: ${variables.defaultSpacingHalf};
-  }
-`;
-
-const Content = styled.div`
-  padding: ${variables.defaultSpacing};
-`;
-
-const alwayShow = () => true;
 
 class Dialogue extends React.Component {
   state = { visible: false };
@@ -71,27 +17,12 @@ class Dialogue extends React.Component {
     this.setState({
       visible: true
     });
-    document.addEventListener("keydown", this.handleKeypress);
   };
 
   closeDialogue = () => {
     this.setState({
       visible: false
     });
-    document.removeEventListener("keydown", this.handleKeypress);
-  };
-
-  handleKeypress = event => {
-    var code = event.keyCode || event.which;
-    if (code === 13) {
-      // 13 is the enter keycode
-      this.handleOk();
-      event.preventDefault();
-    } else if (code === 27) {
-      // 27 is the escape keycode
-      this.handleCancel();
-      event.preventDefault();
-    }
   };
 
   handleOk = () => {
@@ -115,15 +46,6 @@ class Dialogue extends React.Component {
     cancelAction && cancelAction();
   };
 
-  handleButtonClick = () => {
-    const { shouldShowDialogue = alwayShow } = this.props;
-    if (shouldShowDialogue()) {
-      this.showDialogue();
-    } else {
-      this.handleOk();
-    }
-  };
-
   render() {
     const {
       children,
@@ -137,21 +59,20 @@ class Dialogue extends React.Component {
 
     return (
       <Fragment>
-        <Button {...props} onClick={this.handleButtonClick}>
+        <Button {...props} onClick={this.showDialogue}>
           {icon ? <CustomIcon icon={icon} /> : null}
           {buttonText}
         </Button>
-        <Overlay visible={this.state.visible}>
-          <Container width={width}>
-            <Content>{children}</Content>
-            <Actions>
-              <Button onClick={this.handleOk}>{confirmText}</Button>
-              <Button ghost onClick={this.handleCancel}>
-                {cancelText}
-              </Button>
-            </Actions>
-          </Container>
-        </Overlay>
+        <Modal
+          visible={this.state.visible}
+          width={width}
+          confirmText={confirmText}
+          cancelText={cancelText}
+          onConfirm={this.handleOk}
+          onCancel={this.handleCancel}
+        >
+          {children}
+        </Modal>
       </Fragment>
     );
   }
@@ -173,8 +94,6 @@ Dialogue.propTypes = {
   /** Specifies the function to run on clicking cancel button. (Note, dialogue is closed automatically) */
   cancelAction: PropTypes.func,
   /** Specifies the function to decide should show the dialogue or not, executing confirmAction immediately if falsy value returned */
-
-  shouldShowDialogue: PropTypes.func
 };
 
 /** @component */

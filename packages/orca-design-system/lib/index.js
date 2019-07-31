@@ -34,6 +34,7 @@ export { default as Typography } from "./components/Typography";
 export { default as DatePicker } from "./components/DatePicker";
 export { default as Avatar } from "./components/Avatar";
 export { default as StatusDot } from "./components/StatusDot";
+export { default as Modal } from "./components/Modal";
 
 export { default as variables } from "./variables";
 export { default as colours } from "./colours";
