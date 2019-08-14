@@ -20,6 +20,7 @@ const testCancelAction = () => {
     width="320px"
     buttonText="Delete data"
     colour="danger"
+    icon={["fas", "trash"]}
     confirmAction={testConfirmAction}
     confirmText="OK"
     cancelAction={testCancelAction}
