@@ -29,6 +29,10 @@ Then you can use in your code like so:
   This is an example of a <StyledLink.Hyperlink bold href="#"> bold inline link</StyledLink.Hyperlink> that sits inside a body of text.
 </Typography.P>
 
+<Typography.P marginBottom>
+  This is an example of a <StyledLink.Hyperlink colour="success" href="#">coloured inline link</StyledLink.Hyperlink> that sits inside a body of text.
+</Typography.P>
+
 <Layout childChildHorizontalSpacing backgroundDark padding>
 
   <Flex wrap="true">
@@ -53,3 +57,4 @@ Then you can use in your code like so:
 
 </Layout>
 ```
+
