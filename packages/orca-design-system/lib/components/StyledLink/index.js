@@ -11,13 +11,7 @@ const styleLink = LinkComponent => styled(LinkComponent)`
   font-weight: ${props => (props.bold ? 600 : 300)};
 
   color: ${props =>
-    props.active
-      ? colours.primary
-      : props.white
-        ? colours.white
-        : props.colour
-          ? colours[props.colour]
-          : colours.primary};
+    props.active ? colours.primary : props.white ? colours.white : colours.primary};
 
   margin-bottom: ${props =>
     props.marginBottomDouble
