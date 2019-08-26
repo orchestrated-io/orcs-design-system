@@ -25,5 +25,9 @@ Badges should be used for things like status, indicators, or other additional in
     </Flex>
   </Layout>
 
+  <Popover inlineBlock width="300" direction="top" text="Example of badge with too much text which we can set a max width where it will cut off with ellipsis and show full text in tooltip">
+    <Badge maxWidth="300px">Example of badge with too much text which we can set a max width where it will cut off with ellipsis and show full text in tooltip</Badge>
+  </Popover>
+
 </Layout>
 ```
