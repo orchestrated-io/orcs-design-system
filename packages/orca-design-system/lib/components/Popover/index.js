@@ -34,7 +34,7 @@ const Text = styled.div`
   transform: translateX(10px) translateY(-50%);
   transition: ${variables.defaultTransition};
   box-shadow: -3px 0px 12px 0 ${rgba(colours.greyDarkest, 0.15)};
-  width: ${props => (props.width ? props.width + "px" : "200px")};
+  width: ${props => (props.width ? props.width : "200px")};
   background: ${colours.white};
   transition: all 300ms ease-in-out;
   opacity: 0;
@@ -159,7 +159,7 @@ Popover.propTypes = {
   direction: PropTypes.oneOf(["top", "right", "bottom", "left"]),
   /** Specifies the direction of the popover */
   textAlign: PropTypes.oneOf(["left", "right", "center"]),
-  /** Specifies the width of the popover in pixels */
+  /** Specifies the width of the popover (you need to specify units, e.g. pixels, %) */
   width: PropTypes.string,
   /** Sets display property of popover tooltip to inline-block */
   inlineBlock: PropTypes.bool
