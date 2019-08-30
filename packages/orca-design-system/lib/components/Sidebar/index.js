@@ -11,6 +11,9 @@ const Container = styled.div`
   align-items: stretch;
   align-content: stretch;
   width: auto;
+  @media (max-resolution: 124dpi) {
+    height: calc(100vh + 14px);
+  }
 `;
 
 const Tabs = styled.div`
@@ -22,6 +25,9 @@ const Tabs = styled.div`
   justify-content: flex-start;
   height: calc(100vh - 60px);
   background: ${colours.greyDark};
+  @media (max-resolution: 124dpi) {
+    height: calc(100vh + 14px);
+  }
 `;
 
 const Tab = styled.label`
@@ -73,6 +79,9 @@ const Panel = styled.div`
   height: calc(100vh - (60px + 72px));
   overflow-y: auto;
   background: ${colours.greyDarker};
+  @media (max-resolution: 124dpi) {
+    height: calc(100vh - 58px);
+  }
 `;
 
 const Close = styled.label`
