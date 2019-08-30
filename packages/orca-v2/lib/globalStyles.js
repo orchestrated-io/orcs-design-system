@@ -12,6 +12,13 @@ html {
     box-sizing: inherit;
 }
 
+/* Set zoom level on devices with low resolution */
+@media (max-resolution: 124dpi) {
+  html {
+    zoom: 0.9;
+  }
+}
+
 html,
 body {
     height: 100%;
@@ -36,7 +43,7 @@ html { font-size: 62.5%; }
 body { font-size: 16px; font-size: 1.6rem; }
 
 main {
-    display: flex;
+  display: flex;
 	align-items: stretch;
 	align-content: stretch;
 	width: 100%;
