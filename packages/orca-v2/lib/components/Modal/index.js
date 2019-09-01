@@ -16,7 +16,11 @@ const Overlay = styled.div`
   align-items: center;
   justify-content: center;
   width: 100vw;
+  min-width: 100vw;
+  max-width: 100vw;
   height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
   display: flex;
   opacity: 0;
   transition: all 300ms ease-in-out;
