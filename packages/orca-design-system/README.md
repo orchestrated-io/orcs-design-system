@@ -12,11 +12,11 @@ Clone repo
 git clone https://github.com/orchestrated-io/orca-design-system.git
 ````
 
-### Run the style guide
-
 #### Install dependencies
 
 `npm install` or `yarn`
+
+### Run the style guide
 
 #### Start development server
 
