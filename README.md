@@ -12,15 +12,6 @@ Clone repo
 git clone https://github.com/orchestrated-io/orca-design-system.git
 ````
 
-### Prerequisites
-
-**Requires Font Awesome 5.1.x Pro licence.**
-
-At the moment, design system has a dependency on Font Awesome Pro for font icons.
-We are planning to use free version of Font Awesome by default and make paid Pro version optional.
-
-Please set your Font Awesome NPM token to `FONT_AWESOME_NPM_TOKEN` environment variable.
-
 ### Run the style guide
 
 #### Install dependencies
@@ -71,7 +62,25 @@ then at top of file add `import styled from 'styled-components';`
   </ThemeProvider>
 ```
 
-- You will also need to add the icon library that we are using (which is Font Awesome 5.1.x Pro). To do this, add this to the top of your root app file:
+- You will also need to add the icon library that we are using (which is Font Awesome). To do this, add this to the top of your root app file:
+
+```
+import { library } from '@fortawesome/fontawesome-svg-core'
+import {far} from '@fortawesome/free-regular-svg-icons'
+import {fas} from '@fortawesome/free-solid-svg-icons'
+library.add(far, fas);
+```
+
+- Alternatively, you can use the full icon packages if you purchase Font Awesome Pro license.
+
+Once you have purchased a license you need to add your Font Awesome NPM token as an environment variable in a .npmrc file at the root of your app in the following format:
+
+```
+@fortawesome:registry=https://npm.fontawesome.com
+//npm.fontawesome.com/:_authToken=FONT_AWESOME_NPM_TOKEN_GOES_HERE
+```
+
+And then install and import the correct packages:
 
 ```
 import { library } from '@fortawesome/fontawesome-svg-core'
