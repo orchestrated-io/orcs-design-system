@@ -10,7 +10,7 @@
     "test": "node scripts/test.js --env=jsdom",
     "test-coverage": "node scripts/test.js --env=jsdom --coverage",
     "build": "styleguidist build",
-    "dist": "babel lib -d dist",
+    "dist": "babel lib -d dist && npm run module",
     "module": "BABEL_ENV=es babel lib -d es",
     "deploy-stack": "serverless deploy",
     "deploy-client": "serverless client deploy  --no-confirm"
