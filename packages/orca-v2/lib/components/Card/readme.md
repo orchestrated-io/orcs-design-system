@@ -18,7 +18,7 @@ const colours = require("../../colours").default;
     </StyledLink.Hyperlink>
   </Card>
 
-  <Card alternate icon={["far", "building"]} title="Works for" subtitle="18">
+  <Card alternate icon={["fas", "building"]} title="Works for" subtitle="18">
     <Typography.P>
       This is an alternate style card that supports an icon and moves the
       subtitle to the right of the title, rather than underneath it.
@@ -27,7 +27,7 @@ const colours = require("../../colours").default;
 
   <Card
     alternate
-    icon={["far", "location-arrow"]}
+    icon={["fas", "map-marker-alt"]}
     title="Locations"
     subtitle="57"
     colour="primary"
@@ -40,7 +40,7 @@ const colours = require("../../colours").default;
 
   <Card
     alternate
-    icon={["far", "address-card"]}
+    icon={["fas", "address-card"]}
     title="Roles"
     subtitle="31"
     colour="success"
@@ -53,7 +53,7 @@ const colours = require("../../colours").default;
 
   <Card
     alternate
-    icon={["far", "user"]}
+    icon={["fas", "user"]}
     title="4,539 People"
     changeValue="No change"
     colour="warning"
@@ -66,7 +66,7 @@ const colours = require("../../colours").default;
 
   <Card
     alternate
-    icon={["far", "chart-pie"]}
+    icon={["fas", "chart-pie"]}
     title="12 Divisions"
     changeValue="2 (-1%)"
     changeIcon="arrowDown"
@@ -80,7 +80,7 @@ const colours = require("../../colours").default;
 
   <Card
     alternate
-    icon={["far", "users"]}
+    icon={["fas", "users"]}
     title="289 Teams"
     changeValue="9 (+2%)"
     changeIcon="arrowUp"
@@ -95,7 +95,7 @@ const colours = require("../../colours").default;
   <Flex justifyBetween>
     <Card width="calc(50% - 10px)" center>
       <Layout childVerticalSpacing>
-        <Icon icon={["far", "file-plus"]} size="3x" color={colours.greyLight} />
+        <Icon icon={["fas", "file"]} size="3x" color={colours.greyLight} />
         <Typography.H1 center>Create new</Typography.H1>
         <Typography.P center>Start with a blank slate and add your own data</Typography.P>
         <Button>
@@ -106,7 +106,7 @@ const colours = require("../../colours").default;
 
     <Card width="calc(50% - 10px)" center>
       <Layout childVerticalSpacing>
-        <Icon icon={["far", "eye"]} size="3x" color={colours.greyLight} />
+        <Icon icon={["fas", "eye"]} size="3x" color={colours.greyLight} />
         <Typography.H1 center>Explore app</Typography.H1>
         <Typography.P center>Look at pre-populated data to see app in action</Typography.P>
         <Button>
