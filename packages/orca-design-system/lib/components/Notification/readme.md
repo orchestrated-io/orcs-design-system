@@ -6,21 +6,21 @@ If you want your notification to be closable, you must use the onDismiss prop to
 
 ```js
 <Layout childVerticalSpacing>
-  <Notification icon={["far", "share-square"]} onDismiss={() => {}}>
+  <Notification icon={["fas", "share-square"]} onDismiss={() => {}}>
     Default notification message for messages that aren't super important, e.g.
     Link shared.
   </Notification>
 
-  <Notification colour="success" icon={["far", "check-circle"]}>
+  <Notification colour="success" icon={["fas", "check-circle"]}>
     Green notification for good/successful notifications, e.g. Details updated
     successfully!
   </Notification>
 
-  <Notification colour="warning" icon={["far", "exclamation-triangle"]}>
+  <Notification colour="warning" icon={["fas", "exclamation-triangle"]}>
     Warning notification e.g. This may take a few minutes to update.
   </Notification>
 
-  <Notification colour="danger" icon={["far", "exclamation-circle"]}>
+  <Notification colour="danger" icon={["fas", "exclamation-circle"]}>
     Error notification e.g. Update failed! Please try again.
   </Notification>
 
@@ -34,7 +34,7 @@ If you want your notification to be closable, you must use the onDismiss prop to
     </Layout>
   </Notification>
 
-  <Notification floating bottom="20px" right="20px" icon={["far", "bell"]}>
+  <Notification floating bottom="20px" right="20px" icon={["fas", "bell"]}>
     Floating notification.
   </Notification>
 </Layout>

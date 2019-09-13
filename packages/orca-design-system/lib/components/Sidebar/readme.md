@@ -8,15 +8,15 @@ Ensure to use an appropriate icon for each tab so that the intent of that tab se
   <Sidebar.Tabs>
 
     <Sidebar.Tab active badge="3">
-      <Icon icon={["far", "filter"]} size="lg" />
+      <Icon icon={["fas", "filter"]} size="lg" />
     </Sidebar.Tab>
 
     <Sidebar.Tab>
-      <Icon icon={["far", "info-circle"]} size="lg" />
+      <Icon icon={["fas", "info-circle"]} size="lg" />
     </Sidebar.Tab>
 
     <Sidebar.Tab>
-      <Icon icon={["far", "cog"]} size="lg" />
+      <Icon icon={["fas", "cog"]} size="lg" />
     </Sidebar.Tab>
   </Sidebar.Tabs>
 

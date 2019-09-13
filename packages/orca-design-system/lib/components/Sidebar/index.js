@@ -27,9 +27,11 @@ const Tabs = styled.div`
 const Tab = styled.label`
   position: relative;
   min-width: 60px;
-  padding: 15px 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-bottom: solid 1px ${darken(0.2, colours.grey)};
-  display: block;
   width: 100%;
   transition: ${variables.defaultTransition};
   color: ${props => (props.active ? colours.primary : colours.greyLight)};
