@@ -10,10 +10,10 @@ module.exports = {
   ],
   assetsDir: "./public",
   styleguideComponents: {
-    Wrapper: path.join(__dirname, "lib/styleguide/Wrapper")
+    Wrapper: path.join(__dirname, "/styleguide/Wrapper")
   },
   require: [
-    path.resolve(__dirname, 'lib/styleguide/setup.js')
+    path.resolve(__dirname, 'styleguide/setup.js')
   ],
   styleguideDir: "./build",
   webpackConfig: {
