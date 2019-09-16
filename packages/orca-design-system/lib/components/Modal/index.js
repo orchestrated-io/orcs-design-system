@@ -106,6 +106,8 @@ class Modal extends React.Component {
 
   render() {
     const {
+      disabledConfirm = false,
+      disabledCancel = false,
       children,
       width,
       confirmText,
@@ -120,8 +122,10 @@ class Modal extends React.Component {
         <Container width={width}>
           <Content>{children}</Content>
           <Actions>
-            <Button onClick={onConfirm}>{confirmText}</Button>
-            <Button ghost onClick={onCancel}>
+            <Button disabled={disabledConfirm} onClick={onConfirm}>
+              {confirmText}
+            </Button>
+            <Button disabled={disabledCancel} ghost onClick={onCancel}>
               {cancelText}
             </Button>
           </Actions>
@@ -143,7 +147,10 @@ Modal.propTypes = {
   /** Specifies the text to use for the cancel button. Recommend using words like Cancel, Close, No. */
   cancelText: PropTypes.string,
   /** Specifies the function to run on clicking cancel button. (Note, dialogue is closed automatically) */
-  onCancel: PropTypes.func
+  onCancel: PropTypes.func,
+  /** Specifies the button disabled state */
+  disabledConfirm: PropTypes.bool,
+  disabledCancel: PropTypes.bool
 };
 
 /** @component */
