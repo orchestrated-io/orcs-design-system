@@ -14,6 +14,7 @@ const Button = styled.button`
   box-shadow: none;
   text-decoration: none;
   text-align: center;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   border-radius: ${variables.borderRadius};
   transition: ${variables.defaultTransition};
   cursor: ${props => (props.disabled ? "not-allowed" : "pointer")};
@@ -62,7 +63,7 @@ const Button = styled.button`
       : props.colour && colours[props.colour]
       ? colours[props.colour]
       : props.ghost
-      ? "transparent"
+      ? rgba(colours.primary, 0.075)
       : colours.primary};
 
   padding: ${props =>
