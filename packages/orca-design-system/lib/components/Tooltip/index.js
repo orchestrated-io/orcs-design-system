@@ -13,6 +13,7 @@ const Container = styled.button`
   border: none;
   appearance: none;
   -webkit-font-smoothing: antialiased;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   border-radius: 10px;
   display: block;
   color: ${props => (props.inverted ? colours.greyDarkest : colours.white)};
@@ -43,6 +44,7 @@ const QuestionMark = styled.span`
   font-size: 1.4rem;
   font-weight: 700;
   text-indent: 1px;
+  line-height: 18px;
 `;
 
 const Text = styled.div`

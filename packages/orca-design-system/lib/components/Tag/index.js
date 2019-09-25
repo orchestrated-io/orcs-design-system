@@ -9,6 +9,7 @@ const Tag = styled.button`
   -webkit-appearance: none;
   appearance: none;
   box-shadow: none;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   display: block;
   border-radius: 13px;
   font-size: 1.4rem;
@@ -20,7 +21,7 @@ const Tag = styled.button`
   border: solid 1px
     ${props => (props.disabled ? colours.greyDark : colours.primary)};
   padding: ${props =>
-    props.hideCross ? "3px 12px 3px 12px;" : props.selected ? "3px 25px 3px 12px;" : "3px 12px 3px 12px;"};
+    props.hideCross ? "3px 12px 4px 12px;" : props.selected ? "3px 25px 4px 12px;" : "3px 12px 4px 12px;"};
 
   background: ${props =>
     props.selected
@@ -56,8 +57,11 @@ const Tag = styled.button`
           content: "+";
           display: block;
           position: absolute;
-          right: 8px;
-          top: 2px;
+          right: 7px;
+          top: 1px;
+          font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+          font-size: 1.8rem;
+          font-weight: 600;
           transform-origin: 50% 50%;
           color: ${colours.white};
           transition: ${variables.defaultTransition};

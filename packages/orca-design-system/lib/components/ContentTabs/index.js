@@ -16,6 +16,7 @@ const Tab = styled.button`
   font-weight: 400;
   height: 40px;
   text-transform: uppercase;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   width: 100%;
   transition: ${variables.defaultTransition};
   border: 0;
