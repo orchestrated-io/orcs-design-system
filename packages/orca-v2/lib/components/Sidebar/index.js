@@ -5,7 +5,8 @@ import { darken } from "polished";
 
 const Container = styled.div`
   max-width: 360px;
-  height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px);
+  height: 100%;
   color: white;
   display: flex;
   align-items: stretch;
@@ -20,7 +21,8 @@ const Tabs = styled.div`
   align-items: center;
   text-align: center;
   justify-content: flex-start;
-  height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px);
+  height: 100%;
   background: ${colours.greyDark};
 `;
 
