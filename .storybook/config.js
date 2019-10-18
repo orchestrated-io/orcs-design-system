@@ -10,7 +10,7 @@ import GlobalStyles from "../lib/globalStyles";
 
 library.add(far, fas);
 
-configure(require.context("../lib", true, /\.stories\.js$/), module);
+configure(require.context('../lib', true, /\.stories\.(js|mdx)$/), module);
 
 const ThemeDecorator = storyFn => {
   return (
