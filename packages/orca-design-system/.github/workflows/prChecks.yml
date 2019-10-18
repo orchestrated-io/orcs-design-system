@@ -29,6 +29,6 @@ jobs:
           # TODO: introduce lint/test
           # npm run lint
           # npm test
-          npm run chromatic --exit-zero-on-changes --if-present
+          npm run chromatic:ci --if-present
         env:
           CI: true
