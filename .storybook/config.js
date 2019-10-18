@@ -2,7 +2,13 @@ import React from "react";
 import { configure, addDecorator } from "@storybook/react";
 import { ThemeProvider } from "styled-components";
 
-import { colours, GlobalStyles } from "../lib";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { far } from "@fortawesome/free-regular-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import colours from "../lib/colours";
+import GlobalStyles from "../lib/globalStyles";
+
+library.add(far, fas);
 
 configure(require.context("../lib", true, /\.stories\.js$/), module);
 
