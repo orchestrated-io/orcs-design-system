@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import colours from "../../colours";
 import variables from "../../variables";
 import { rgba } from "polished";
@@ -148,7 +148,15 @@ const Text = styled.div`
 
 class RadioButton extends React.Component {
   render() {
-    const { name, value, label, colour, disabled, checked, onChange } = this.props;
+    const {
+      name,
+      value,
+      label,
+      colour,
+      disabled,
+      checked,
+      onChange
+    } = this.props;
     return (
       <Item colour={colour}>
         <Label disabled={disabled}>
@@ -171,11 +179,15 @@ class RadioButton extends React.Component {
 }
 
 RadioButton.propTypes = {
+  name: PropTypes.string,
+  value: PropTypes.string,
+  label: PropTypes.string,
   colour: PropTypes.oneOf(["success", "warning", "danger", "primary", "white"]),
   /** Applies disabled attribute and styling */
   disabled: PropTypes.bool,
   /** Applies checked attribute and styling */
-  checked: PropTypes.bool
+  checked: PropTypes.bool,
+  onChange: PropTypes.func
 };
 
 /** @component */

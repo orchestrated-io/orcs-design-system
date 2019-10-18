@@ -17,7 +17,7 @@ const Input = styled.textarea`
   -webkit-appearance: none;
   appearance: none;
   box-shadow: none;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.4rem;
   z-index: 1;
   border-radius: ${variables.borderRadius};

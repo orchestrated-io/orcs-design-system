@@ -21,7 +21,7 @@ const Item = styled.div`
     props.colour && colours[props.colour]
       ? rgba(colours[`${props.colour}Dark`], 0.9)
       : rgba(colours.primaryDark, 0.9)};
-  
+
   ${props =>
     props.floating
       ? css`
@@ -124,6 +124,7 @@ class Notification extends React.Component {
 }
 
 Notification.propTypes = {
+  children: PropTypes.element,
   /** Applies an icon to notification with specified name. */
   icon: PropTypes.array,
   /** Specifies notification colour */

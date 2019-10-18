@@ -9,7 +9,9 @@ const Divider = styled.div`
   background: ${props =>
     props.light
       ? colours.greyLightest
-      : props.inverted ? rgba(colours.greyDark, 0.6) : colours.greyLighter};
+      : props.inverted
+      ? rgba(colours.greyDark, 0.6)
+      : colours.greyLighter};
   height: ${props => (props.thick ? "3px;" : "1px;")};
 `;
 

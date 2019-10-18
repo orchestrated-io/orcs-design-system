@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import colours from "../../colours";
-import variables from "../../variables";
 
 const Welcome = styled.img`
   width: 100%;
