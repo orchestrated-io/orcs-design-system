@@ -8,7 +8,7 @@ const vars = {
   thumbDiameter: "20px"
 };
 
-const thumb = props => `
+const thumb = () => `
     margin-top: -8px;
     box-sizing: border-box;
     border: none;
@@ -18,7 +18,7 @@ const thumb = props => `
     background: ${colours.primary};
 `;
 
-const track = props => `
+const track = () => `
     box-sizing: border-box;
     border: none;
     width: 100%;

@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
-import styled, { css } from "styled-components";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 import colours from "../../colours";
 import variables from "../../variables";
 
@@ -176,6 +177,13 @@ class MobileNav extends React.Component {
     );
   }
 }
+
+MobileNav.propTypes = {
+  userName: PropTypes.string,
+  avatarSrc: PropTypes.string,
+  children: PropTypes.element,
+  onLogout: PropTypes.func
+};
 
 /** @component */
 export default MobileNav;

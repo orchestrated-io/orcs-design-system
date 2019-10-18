@@ -11,14 +11,20 @@ const styleLink = LinkComponent => styled(LinkComponent)`
   font-weight: ${props => (props.bold ? 600 : 300)};
 
   color: ${props =>
-    props.active ? colours.primary : props.white ? colours.white : colours.primary};
+    props.active
+      ? colours.primary
+      : props.white
+      ? colours.white
+      : colours.primary};
 
   margin-bottom: ${props =>
     props.marginBottomDouble
       ? variables.defaultSpacingDouble
       : props.marginBottomHalf
-        ? variables.defaultSpacingHalf
-        : props.marginBottom ? variables.defaultSpacing : 0};
+      ? variables.defaultSpacingHalf
+      : props.marginBottom
+      ? variables.defaultSpacing
+      : 0};
 
   &:hover,
   &:focus {

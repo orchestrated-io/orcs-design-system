@@ -6,7 +6,12 @@ const StatusDot = styled.div`
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: ${props => props.on ? colours.success : props.warning ? colours.warning : colours.danger};
+  background-color: ${props =>
+    props.on
+      ? colours.success
+      : props.warning
+      ? colours.warning
+      : colours.danger};
 `;
 
 StatusDot.propTypes = {

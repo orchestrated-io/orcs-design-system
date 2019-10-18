@@ -16,7 +16,7 @@ const Tab = styled.button`
   font-weight: 400;
   height: 40px;
   text-transform: uppercase;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 100%;
   transition: ${variables.defaultTransition};
   border: 0;
@@ -30,12 +30,14 @@ const Tab = styled.button`
   }
 
   &:hover {
-    background: ${props => (props.active ? colours.white : colours.greyLighter)};
+    background: ${props =>
+      props.active ? colours.white : colours.greyLighter};
   }
 
   &:focus {
     outline: 0;
-    background: ${props => (props.active ? colours.white : colours.greyLighter)};
+    background: ${props =>
+      props.active ? colours.white : colours.greyLighter};
   }
 `;
 

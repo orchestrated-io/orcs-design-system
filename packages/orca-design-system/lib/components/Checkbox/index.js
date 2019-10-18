@@ -147,11 +147,25 @@ const Text = styled.div`
 
 class Checkbox extends React.Component {
   render() {
-    const { name, label, colour, disabled, checked, onClick, onChange } = this.props;
+    const {
+      name,
+      label,
+      colour,
+      disabled,
+      checked,
+      onClick,
+      onChange
+    } = this.props;
     return (
       <Item colour={colour}>
         <Label disabled={disabled}>
-          <Control name={name} colour={colour} disabled={disabled} checked={checked} onChange={onChange} />
+          <Control
+            name={name}
+            colour={colour}
+            disabled={disabled}
+            checked={checked}
+            onChange={onChange}
+          />
           <Box colour={colour} onClick={onClick}>
             <Check />
           </Box>
@@ -171,7 +185,9 @@ Checkbox.propTypes = {
   /** Input name attr (should be unique id) */
   name: PropTypes.string,
   /** On checkbox input change handler */
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  label: PropTypes.string,
+  onClick: PropTypes.string
 };
 
 /** @component */
