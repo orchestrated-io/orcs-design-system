@@ -1,4 +1,4 @@
-name: Chromatic CI
+name: Pull Request Checks
 
 on:
   push:
@@ -26,7 +26,7 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm ci
-          npm test
+          npm test --passWithNoTests
           npm run chromatic --if-present --exit-zero-on-changes
         env:
           CI: true
