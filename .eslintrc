@@ -14,5 +14,28 @@
   "env": {
     "browser": true,
     "es6": true
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "react/prop-types": 1,
+    "react/forbid-prop-types": 0,
+    "react/display-name": 1,
+    "react/jsx-filename-extension": 0,
+    "react/jsx-boolean-value": 0,
+    "react/jsx-props-no-spreading": 0, // TEMP, We really should fix this, it's done in so many places so will need time to refactor
+    "import/first": 1,
+    "import/prefer-default-export": 1,
+    "import/no-named-as-default": 0,
+    "react/require-default-props": 0,
+    "react/no-typos": 1,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-nested-ternary": 0, // TEMP, We really should fix this, it's done in so many places so will need time to refactor
+    "no-useless-rename": 0, // TEMP, react-scripts using latest eslint which is buggy: https://github.com/eslint/eslint/issues/12335
+    "no-return-assign": 0,
+    "no-restricted-globals": 0,
+    "no-underscore-dangle": 0, // graphql __typename is valid case
+    "jsx-curly-brace-presence": 0, // TEMP, getting a property substring of undefined error when lint runs,
+    "react/jsx-key": "warn"
   }
 }

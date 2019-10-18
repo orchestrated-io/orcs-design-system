@@ -126,7 +126,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "prettier --write lib/**/*.js* && npm run lint"
     }
   }
 }
