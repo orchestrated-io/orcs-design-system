@@ -5,6 +5,7 @@ import { ThemeProvider } from "styled-components";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
+import { withA11y } from '@storybook/addon-a11y';
 import colours from "../lib/colours";
 import GlobalStyles from "../lib/globalStyles";
 import "storybook-chromatic";
