@@ -15,4 +15,6 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: npm run deploy-storybook
+      - run: npm run deploy-storybook -- --ci
+        env:
+          CI: true
