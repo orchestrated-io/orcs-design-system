@@ -14,8 +14,8 @@
     "module": "BABEL_ENV=es babel lib -d es",
     "deploy-stack": "serverless deploy",
     "deploy-client": "serverless client deploy  --no-confirm",
-    "chromatic": "CHROMATIC_APP_CODE=cyep0hs2cr4 chromatic",
-    "chromatic:ci": "CHROMATIC_APP_CODE=cyep0hs2cr4 chromatic --exit-zero-on-changes"
+    "chromatic": "chromatic",
+    "chromatic:ci": "chromatic --exit-zero-on-changes"
   },
   "dependencies": {
     "@babel/runtime": "^7.6.0",
