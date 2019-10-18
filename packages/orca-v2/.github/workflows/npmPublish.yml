@@ -1,11 +1,11 @@
-name: Node.js Package
+name: Publish NPM package
 
 on:
   release:
     types: [created]
 
 jobs:
-  # TODO: Enble when we have lint and tests
+  # TODO: Enable when we have lint and tests
   # build:
   #   runs-on: ubuntu-latest
   #   steps:
@@ -17,7 +17,7 @@ jobs:
   #     - run: npm test
 
   publish-npm:
-    needs: build
+    # needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
