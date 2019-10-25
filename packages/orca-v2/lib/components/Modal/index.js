@@ -39,6 +39,8 @@ const Container = styled.div`
   background: ${colours.white};
   width: ${props => (props.width ? props.width : "300px")};
   border-radius: ${variables.borderRadius};
+  max-height: 90vh;
+  overflow-y: auto;
 `;
 
 const Actions = styled.div`
