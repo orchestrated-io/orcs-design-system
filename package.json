@@ -26,6 +26,7 @@
     "polished": "^3.3.0",
     "prop-types": "^15.6.2",
     "react-dates": "^20.1.0",
+    "react-number-format": "^4.3.1",
     "react-router": "^4.3.1",
     "react-select": "^1.2.1",
     "styled-is": "^1.1.3"

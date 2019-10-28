@@ -6,7 +6,7 @@
     "eslint:recommended",
     "plugin:react/recommended"
   ],
-  "plugins": ["react", "prettier", "react-hooks"],
+  "plugins": ["react", "jsx-a11y", "import", "prettier", "react-hooks"],
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": 2019
@@ -19,7 +19,7 @@
     "prettier/prettier": "error",
     "react/prop-types": 1,
     "react/forbid-prop-types": 0,
-    "react/display-name": 1,
+    "react/display-name": 0,
     "react/jsx-filename-extension": 0,
     "react/jsx-boolean-value": 0,
     "react/jsx-props-no-spreading": 0, // TEMP, We really should fix this, it's done in so many places so will need time to refactor
