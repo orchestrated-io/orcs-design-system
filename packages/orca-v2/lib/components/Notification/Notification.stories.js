@@ -14,16 +14,28 @@ export default {
 };
 
 export const colours = () => [
-  <Notification icon={["fas", "share-square"]}>
+  <Notification key="notification-1" icon={["fas", "share-square"]}>
     Default notification
   </Notification>,
-  <Notification colour="success" icon={["fas", "check-circle"]}>
+  <Notification
+    key="notification-2"
+    colour="success"
+    icon={["fas", "check-circle"]}
+  >
     Green notification
   </Notification>,
-  <Notification colour="warning" icon={["fas", "exclamation-triangle"]}>
+  <Notification
+    key="notification-3"
+    colour="warning"
+    icon={["fas", "exclamation-triangle"]}
+  >
     Yellow notification
   </Notification>,
-  <Notification colour="danger" icon={["fas", "exclamation-circle"]}>
+  <Notification
+    key="notification-4"
+    colour="danger"
+    icon={["fas", "exclamation-circle"]}
+  >
     Red notification
   </Notification>
 ];

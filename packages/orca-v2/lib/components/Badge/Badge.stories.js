@@ -14,7 +14,7 @@ export default {
 };
 
 export const standard = () => [
-  <Layout padding>
+  <Layout key="standard" padding>
     <Badge>Default</Badge>
     <Badge colour="success">Success</Badge>
     <Badge colour="warning">Warning</Badge>
@@ -29,7 +29,7 @@ standard.story = {
 };
 
 export const inverted = () => [
-  <Layout padding backgroundDark>
+  <Layout key="inverted" padding backgroundDark>
     <Badge inverted>Default</Badge>
     <Badge inverted colour="success">
       Success
