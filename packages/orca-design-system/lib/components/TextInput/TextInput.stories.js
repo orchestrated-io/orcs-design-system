@@ -1,6 +1,7 @@
 import React from "react";
-import TextInput from ".";
+
 import Layout from "../Layout";
+import TextInput from ".";
 
 export default {
   title: "DESIGN SYSTEM|TextInput",
@@ -16,12 +17,14 @@ export default {
 export const standard = () => [
   <TextInput
     id="textInput1"
+    key="textInput1"
     type="text"
     label="Full name"
     placeholder="E.g. John Smith"
   />,
   <TextInput
     id="textInput2"
+    key="textInput2"
     type="text"
     label="Full name"
     placeholder="E.g. John Smith"
@@ -29,6 +32,7 @@ export const standard = () => [
   />,
   <TextInput
     id="textInput3"
+    key="textInput3"
     type="text"
     label="Full name"
     placeholder="E.g. John Smith"
@@ -36,6 +40,7 @@ export const standard = () => [
   />,
   <TextInput
     id="textInput4"
+    key="textInput4"
     type="text"
     label="Full name"
     placeholder="E.g. John Smith"
@@ -46,9 +51,28 @@ standard.story = {
   name: "Standard"
 };
 
+const numberProps = {
+  decimalScale: 2,
+  prefix: "$"
+};
+
+export const number = () => [
+  <TextInput
+    id="numInput1"
+    key="numInput1"
+    numberProps={numberProps}
+    label="Currency"
+    value="345345.55"
+  />
+];
+number.story = {
+  name: "Number type"
+};
+
 export const floatingLabel = () => [
   <TextInput
     id="textInput5"
+    key="textInput5"
     type="text"
     label="Full name"
     placeholder="E.g. John Smith"
@@ -56,6 +80,7 @@ export const floatingLabel = () => [
   />,
   <TextInput
     id="textInput6"
+    key="textInput6"
     type="text"
     label="Full name"
     placeholder="E.g. John Smith"
@@ -64,6 +89,7 @@ export const floatingLabel = () => [
   />,
   <TextInput
     id="textInput7"
+    key="textInput7"
     type="text"
     label="Full name"
     placeholder="E.g. John Smith"
@@ -72,6 +98,7 @@ export const floatingLabel = () => [
   />,
   <TextInput
     id="textInput8"
+    key="textInput8"
     type="text"
     label="Full name"
     placeholder="E.g. John Smith"
@@ -86,6 +113,7 @@ floatingLabel.story = {
 export const withIcons = () => [
   <TextInput
     id="textInput9"
+    key="textInput9"
     type="text"
     label="Phone number"
     placeholder="E.g. (03) 9451 1786"
@@ -93,6 +121,7 @@ export const withIcons = () => [
   />,
   <TextInput
     id="textInput10"
+    key="textInput10"
     type="text"
     label="Phone number"
     placeholder="E.g. (03) 9451 1786"
@@ -102,6 +131,7 @@ export const withIcons = () => [
   <TextInput
     fullWidth
     id="textInput11"
+    key="textInput11"
     type="text"
     label="What are you looking for?"
     placeholder="E.g. agile teams"
@@ -110,6 +140,7 @@ export const withIcons = () => [
   <TextInput
     fullWidth
     id="textInput12"
+    key="textInput12"
     type="text"
     label="What are you looking for?"
     placeholder="E.g. agile teams"
