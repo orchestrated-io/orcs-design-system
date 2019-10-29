@@ -94,24 +94,33 @@ class Modal extends React.Component {
   }
 
   handleOk() {
-    const { confirmAction } = this.props;
+    const { confirmAction, onConfirm } = this.props;
+    if (!confirmAction) {
+      onConfirm();
+      return;
+    }
+
     const result = confirmAction();
     if (result && result.then) {
       // we have been given a promise
-      result.then(result => {
-        if (result) {
-          this.closeDialogue();
+      result.then(r => {
+        if (r) {
+          onConfirm();
         }
       });
     } else if (result) {
-      this.closeDialogue();
+      onConfirm();
     }
   }
 
   handleCancel() {
-    const { cancelAction } = this.props;
-    this.closeDialogue();
-    cancelAction && cancelAction();
+    const { cancelAction, onCancel } = this.props;
+    if (cancelAction) {
+      cancelAction();
+    }
+
+    // Canel Modal Dlg
+    onCancel();
   }
 
   render() {
@@ -162,11 +171,15 @@ Modal.propTypes = {
   cancelText: PropTypes.string,
   /** Specifies the function to run on clicking cancel button. (Note, dialogue is closed automatically) */
   onCancel: PropTypes.func,
+  /** Specifies an action when confirm button is clicked or Enter key pressed. Can return a promise */
   confirmAction: PropTypes.func,
+  /** Specifies an action when cancel button is clicked or ESC key pressed */
   cancelAction: PropTypes.func,
   /** Specifies the button disabled state */
   disabledConfirm: PropTypes.bool,
+  /** Specifies the button disabled state */
   disabledCancel: PropTypes.bool,
+  /** Specifies whether to hide the foot or not. Default: true - Show footer*/
   isDisplayFooter: PropTypes.bool
 };
 
