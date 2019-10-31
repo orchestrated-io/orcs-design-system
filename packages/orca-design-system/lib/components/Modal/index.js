@@ -42,6 +42,7 @@ const Container = styled.div`
   border-radius: ${variables.borderRadius};
   max-height: 90vh;
   overflow-y: auto;
+  ${props => (props.overflowVisible ? "overflow: visible" : "")}
 `;
 
 const Actions = styled.div`
@@ -136,12 +137,17 @@ class Modal extends React.Component {
       visible,
       onConfirm,
       onCancel,
-      isDisplayFooter = true
+      isDisplayFooter = true,
+      overflowVisible = false
     } = this.props;
 
     return (
       <Overlay visible={visible}>
-        <Container width={width} height={height}>
+        <Container
+          width={width}
+          height={height}
+          overflowVisible={overflowVisible}
+        >
           <Content>{children}</Content>
           {isDisplayFooter && (
             <Actions>
@@ -184,7 +190,9 @@ Modal.propTypes = {
   /** Specifies the button disabled state */
   disabledCancel: PropTypes.bool,
   /** Specifies whether to hide the foot or not. Default: true - Show footer*/
-  isDisplayFooter: PropTypes.bool
+  isDisplayFooter: PropTypes.bool,
+  /** Specifies whether the Dialogue overflow is visible or not - Default: false. If height is not enough, verticle scroll bar will be displayed (overflow-y: auto) */
+  overflowVisible: PropTypes.bool
 };
 
 /** @component */
