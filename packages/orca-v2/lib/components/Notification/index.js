@@ -124,7 +124,10 @@ class Notification extends React.Component {
 }
 
 Notification.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
+  ]),
   /** Applies an icon to notification with specified name. */
   icon: PropTypes.array,
   /** Specifies notification colour */

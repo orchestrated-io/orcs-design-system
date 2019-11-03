@@ -181,7 +181,10 @@ class MobileNav extends React.Component {
 MobileNav.propTypes = {
   userName: PropTypes.string,
   avatarSrc: PropTypes.string,
-  children: PropTypes.element,
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
+  ]),
   onLogout: PropTypes.func
 };
 
