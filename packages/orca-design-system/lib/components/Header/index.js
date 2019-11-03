@@ -155,8 +155,11 @@ class Navbar extends React.Component {
 }
 
 Navbar.propTypes = {
-  appName: PropTypes.string,
-  children: PropTypes.element,
+  appName: PropTypes.node,
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
+  ]),
   rightAlignedChildren: PropTypes.element
 };
 

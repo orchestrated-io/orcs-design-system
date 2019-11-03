@@ -159,7 +159,7 @@ Popover.propTypes = {
   children: PropTypes.element,
   /** Specifies the direction of the popover */
   direction: PropTypes.oneOf(["top", "right", "bottom", "left"]),
-  text: PropTypes.string,
+  text: PropTypes.node,
   /** Specifies the direction of the popover */
   textAlign: PropTypes.oneOf(["left", "right", "center"]),
   /** Specifies the width of the popover (you need to specify units, e.g. pixels, %) */

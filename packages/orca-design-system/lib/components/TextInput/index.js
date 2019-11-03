@@ -221,13 +221,15 @@ const TextInput = forwardRef((props, ref) => {
     id,
     label,
     invalid,
-    numberProps,
     valid,
     fullWidth,
     mandatory,
     iconLeft,
     iconRight
   } = props;
+
+  // Strip numberProps from props for Input
+  const { numberProps, ...rest } = props;
 
   return (
     <Group fullWidth={fullWidth}>
@@ -243,9 +245,9 @@ const TextInput = forwardRef((props, ref) => {
         </Label>
       ) : null}
       {numberProps ? (
-        <NumberInput ref={ref} {...props} {...numberProps} />
+        <NumberInput ref={ref} {...rest} {...numberProps} />
       ) : (
-        <Input ref={ref} {...props} />
+        <Input ref={ref} {...rest} />
       )}
       {label && floating ? (
         <Label
