@@ -177,7 +177,7 @@ Card.propTypes = {
   width: PropTypes.string,
   colour: PropTypes.string,
   changeIcon: PropTypes.bool,
-  changeValue: PropTypes.bool,
+  changeValue: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)
