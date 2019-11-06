@@ -82,7 +82,10 @@ class Dialogue extends React.Component {
 }
 
 Dialogue.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
+  ]),
   /** Specifies the width of the Dialogue in pixels */
   width: PropTypes.string,
   /** Specifies the text for the button that triggers the dialogue */
