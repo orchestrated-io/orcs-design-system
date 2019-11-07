@@ -2,10 +2,10 @@ name: Pull Request Checks
 
 on:
   push:
-    branches:    
-      - '*'         # matches every branch
-      - '*/*'       # matches every branch containing a single '/'
-      - '!master'   # excludes master
+    branches:
+      - "*" # matches every branch
+      - "*/*" # matches every branch containing a single '/'
+      - "!master" # excludes master
   pull_request:
     types: [assigned, opened]
 
@@ -23,6 +23,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      - name: run security audit of npm packages
+        run: |
+          npx audit-ci -m
       - name: npm install, build, and test
         run: |
           npm ci
