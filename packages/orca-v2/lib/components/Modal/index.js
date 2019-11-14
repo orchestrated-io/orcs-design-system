@@ -98,7 +98,9 @@ class Modal extends React.Component {
   handleOk() {
     const { confirmAction, onConfirm } = this.props;
     if (!confirmAction) {
-      onConfirm();
+      if (onConfirm) {
+        onConfirm();
+      }
       return;
     }
 
@@ -122,7 +124,9 @@ class Modal extends React.Component {
     }
 
     // Canel Modal Dlg
-    onCancel();
+    if (onCancel) {
+      onCancel();
+    }
   }
 
   render() {
