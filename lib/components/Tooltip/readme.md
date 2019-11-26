@@ -1,10 +1,10 @@
-This tooltip component supports customisation of direction and width. This is so that you can ensure that the tooltip doesn't run off the screen, and that the width suits the amount of text in the tooltip. 
+This tooltip component supports customisation of direction and width. This is so that you can ensure that the tooltip doesn't run off the screen, and that the width suits the amount of text in the tooltip.
 
 If you don't specify a width, 200px is the default, but as a general guide try and keep widths somewhere between 150-250 if you are modifying. The width is set in pixels within the component, so no need to add px units to your props.
 
 ```js
 <Layout padding childVerticalSpacing>
-  
+
     <Tooltip direction="top">
       Top tooltip example description
     </Tooltip>
@@ -24,7 +24,7 @@ If you don't specify a width, 200px is the default, but as a general guide try a
 </Layout>
 
 <Layout backgroundDark padding childVerticalSpacing>
-  
+
     <Tooltip direction="top" width="170" inverted>
       Top longer tooltip content that wraps onto next line
     </Tooltip>
@@ -42,4 +42,4 @@ If you don't specify a width, 200px is the default, but as a general guide try a
     </Tooltip>
 
 </Layout>
-``` 
+```
