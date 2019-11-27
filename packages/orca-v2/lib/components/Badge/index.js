@@ -1,10 +1,11 @@
+import React from "react";
 import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 import colours from "../../colours";
 import variables from "../../variables";
 import { darken, rgba } from "polished";
 
-const Badge = styled.div`
+const Item = styled.div`
   font-size: 1.2rem;
   font-weight: 600;
   margin: 3px;
@@ -44,9 +45,22 @@ const Badge = styled.div`
         `
       : css``}
 `;
+/**
+ * Badges should be used for things like status, indicators, or other additional information that you want to highlight but not make interactive/clickable.
+ */
+class Badge extends React.Component {
+  render() {
+    const { colour, inverted, children } = this.props;
+    return (
+      <Item inverted={inverted} colour={colour}>
+        {children}
+      </Item>
+    );
+  }
+}
 
 Badge.propTypes = {
-  /** Specifies badge colour */
+  /** Specifies badge colour. Colours are taken from the standard design system colours. */
   colour: PropTypes.oneOf([
     "success",
     "warning",
@@ -56,7 +70,9 @@ Badge.propTypes = {
     "primaryDarkest"
   ]),
   /** Changes colours to suit a dark background */
-  inverted: PropTypes.bool
+  inverted: PropTypes.bool,
+  /** The label text on the badge is passed as a child element. */
+  children: PropTypes.node
 };
 
 /** @component */
