@@ -42,7 +42,7 @@ direction.story = {
 };
 export const inverted = () => [
   <Flex full center>
-    <Layout key="inverted" padding backgroundDark width="400px">
+    <Layout key="inverted" padding backgroundDark width="500px">
       <Tooltip inverted>Inverted example description</Tooltip>
     </Layout>
   </Flex>
