@@ -1,9 +1,16 @@
+import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import colours from "../../colours";
 import { rgba } from "polished";
 
-const Divider = styled.div`
+/**
+ * The divider component should be used as a horizontal rule to break up content into meaningful sections.
+ *
+ * As a general rule, the default divider with no props set should be used in most cases, however a thicker one can be used to emphasize a greater separation between content sections, and a light divider can be used to separate similar repeating items within a section, like a list of people/teams etc.
+ */
+
+const Item = styled.div`
   display: block;
   width: 100%;
   background: ${props =>
@@ -16,6 +23,19 @@ const Divider = styled.div`
   grid-column: ${props => (props.spanGrid ? "1 / -1" : "auto")};
 `;
 
+class Divider extends React.Component {
+  render() {
+    const { light, thick, inverted, spanGrid } = this.props;
+    return (
+      <Item
+        light={light}
+        thick={thick}
+        inverted={inverted}
+        spanGrid={spanGrid}
+      />
+    );
+  }
+}
 Divider.propTypes = {
   /** Divider will use a lighter grey colour */
   light: PropTypes.bool,

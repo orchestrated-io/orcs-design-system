@@ -23,30 +23,35 @@ export default {
     component: Tooltip
   }
 };
-export const direction = () => [
-  <Tooltip key="tooltip-1" direction="top">
-    Top tooltip example description
-  </Tooltip>,
-  <Tooltip key="tooltip-2" direction="right">
-    Right tooltip example description
-  </Tooltip>,
-  <Tooltip key="tooltip-3" direction="left">
-    Left tooltip example description
-  </Tooltip>,
-  <Tooltip key="tooltip-4" direction="bottom">
-    Bottom tooltip example description
-  </Tooltip>
-];
+export const direction = () => (
+  <>
+    <Tooltip key="tooltip-1" direction="top">
+      Top tooltip example description
+    </Tooltip>
+    <Tooltip key="tooltip-2" direction="right">
+      Right tooltip example description
+    </Tooltip>
+    <Tooltip key="tooltip-3" direction="left">
+      Left tooltip example description
+    </Tooltip>
+    <Tooltip key="tooltip-4" direction="bottom">
+      Bottom tooltip example description
+    </Tooltip>
+  </>
+);
 direction.story = {
   name: "Direction"
 };
-export const inverted = () => [
-  <Flex full center>
-    <Layout key="inverted" padding backgroundDark width="500px">
-      <Tooltip inverted>Inverted example description</Tooltip>
-    </Layout>
-  </Flex>
-];
+export const inverted = () => (
+  <>
+    {" "}
+    <Flex full center>
+      <Layout key="inverted" padding backgroundDark width="500px">
+        <Tooltip inverted>Inverted example description</Tooltip>
+      </Layout>
+    </Flex>
+  </>
+);
 inverted.story = {
   name: "Inverted"
 };
