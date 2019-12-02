@@ -138,7 +138,7 @@ const Hamburger = styled.span`
   }
 `;
 
-class Navbar extends React.Component {
+class Header extends React.Component {
   render() {
     const { appName, children, rightAlignedChildren } = this.props;
     return (
@@ -154,14 +154,24 @@ class Navbar extends React.Component {
   }
 }
 
-Navbar.propTypes = {
+/**
+ * Header component for app layout. Supports app name, username and avatar as props. Ad links as children.
+ *
+ * At screen sizes less than 1100px the links are instead moved into a mobile menu toggled by a burger icon button to play nice with smaller devices.
+ */
+Header.propTypes = {
+  /** Text for page title or app name. */
   appName: PropTypes.node,
+  /** Navigation elements to be rendered after the app name. */
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)
   ]),
+  /** Right aligned elements that are not navigation menu items, eg Account or Settings elements. */
   rightAlignedChildren: PropTypes.element
 };
 
+export { Avatar, LoggedInAs, UserName, Tenant };
+
 /** @component */
-export default { Navbar, Avatar, LoggedInAs, UserName, Tenant };
+export default Header;

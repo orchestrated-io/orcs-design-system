@@ -11,17 +11,17 @@ export default {
 };
 
 export const basicDivider = () => <Divider />;
-basicDivider.stories = {
+basicDivider.story = {
   name: "Basic"
 };
 
 export const thickDivider = () => <Divider thick />;
-thickDivider.stories = {
+thickDivider.story = {
   name: "Thick"
 };
 
 export const lightDivider = () => <Divider light />;
-lightDivider.stories = {
+lightDivider.story = {
   name: "Light"
 };
 
@@ -32,11 +32,11 @@ export const invertedDivider = () => (
     </Layout>
   </>
 );
-invertedDivider.stories = {
+invertedDivider.story = {
   name: "Inverted"
 };
 
 export const fullWidthDivider = () => <Divider spanGrid />;
-fullWidthDivider.stories = {
+fullWidthDivider.story = {
   name: "Full-width"
 };
