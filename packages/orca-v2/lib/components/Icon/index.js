@@ -30,26 +30,31 @@ class Icon extends React.Component {
       spin,
       symbol,
       transform,
-      color
+      color,
+      className,
+      onClick
     } = this.props;
     return (
-      <FontAwesomeIcon
-        border={border}
-        color={color}
-        mask={mask}
-        fixedWidth={fixedWidth}
-        inverse={inverse}
-        flip={flip}
-        listitem={listitem}
-        pull={pull}
-        rotation={rotation}
-        icon={icon}
-        pulse={pulse}
-        size={size}
-        spin={spin}
-        symbol={symbol}
-        transform={transform}
-      />
+      <div className={className} onClick={onClick}>
+        <FontAwesomeIcon
+          border={border}
+          color={color}
+          mask={mask}
+          fixedWidth={fixedWidth}
+          inverse={inverse}
+          flip={flip}
+          listitem={listitem}
+          pull={pull}
+          rotation={rotation}
+          icon={icon}
+          pulse={pulse}
+          size={size}
+          spin={spin}
+          symbol={symbol}
+          transform={transform}
+          className={className}
+        />
+      </div>
     );
   }
 }
@@ -68,7 +73,7 @@ Icon.propTypes = {
   /** Flip horizontally, vertically, or both */
   flip: PropTypes.oneOf(["horizontal", "vertical", "both"]),
   /** Set the icon and the Font Awesome style */
-  icon: PropTypes.string,
+  icon: PropTypes.array,
   /** Set icon to render in the style of a list bullet */
   listitem: PropTypes.bool,
   /** Pull an icon to float to the left or right of the element's other contents */
@@ -84,7 +89,11 @@ Icon.propTypes = {
   /** Set an icon as a symbol to use with the SVG Sprites technique */
   symbol: PropTypes.any,
   /** Power transforms to scale and position the icon */
-  transform: PropTypes.any
+  transform: PropTypes.string,
+  /** CSS class to attach to icon */
+  className: PropTypes.string,
+  /** On click event */
+  onClick: PropTypes.func
 };
 
 /** @component */

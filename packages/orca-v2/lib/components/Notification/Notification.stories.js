@@ -10,35 +10,37 @@ export default {
         {storyFn()}
       </Layout>
     )
-  ]
+  ],
+  parameters: {
+    component: Notification
+  }
 };
 
-export const colours = () => [
-  <Notification key="notification-1" icon={["fas", "share-square"]}>
+export const basicNotification = () => (
+  <Notification icon={["fas", "share-square"]} closable={true}>
     Default notification
-  </Notification>,
-  <Notification
-    key="notification-2"
-    colour="success"
-    icon={["fas", "check-circle"]}
-  >
-    Green notification
-  </Notification>,
-  <Notification
-    key="notification-3"
-    colour="warning"
-    icon={["fas", "exclamation-triangle"]}
-  >
-    Yellow notification
-  </Notification>,
-  <Notification
-    key="notification-4"
-    colour="danger"
-    icon={["fas", "exclamation-circle"]}
-  >
-    Red notification
   </Notification>
-];
-colours.story = {
+);
+basicNotification.story = {
+  name: "Basic"
+};
+
+export const colourNotification = () => (
+  <>
+    <Notification colour="success" icon={["fas", "check-circle"]}>
+      Green notification for good/successful notifications, e.g. Details updated
+      successfully!
+    </Notification>
+
+    <Notification colour="warning" icon={["fas", "exclamation-triangle"]}>
+      Warning notification e.g. This may take a few minutes to update.
+    </Notification>
+
+    <Notification colour="danger" icon={["fas", "exclamation-circle"]}>
+      Error notification e.g. Update failed! Please try again.
+    </Notification>
+  </>
+);
+colourNotification.story = {
   name: "Colours"
 };
