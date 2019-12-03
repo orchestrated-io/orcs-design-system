@@ -146,6 +146,10 @@ const Text = styled.div`
   padding-left: 8px;
 `;
 
+/**
+ * The default radio button (or inverted if on dark background) should be used for the majority of the UI; however, the coloured ones should be used sparingly if required to indicate a particular state or meaning, e.g. If you had two radio buttons for upvote or downvote they could be coloured green and red.
+ */
+
 class RadioButton extends React.Component {
   render() {
     const {
@@ -179,14 +183,19 @@ class RadioButton extends React.Component {
 }
 
 RadioButton.propTypes = {
+  /** Sets a name to define the radio button group */
   name: PropTypes.string,
+  /** Sets the value of the radio button */
   value: PropTypes.string,
+  /** Sets the label of the radio button */
   label: PropTypes.string,
+  /** Sets radio button colour. Default is greyDarker. Use white for inverted styling */
   colour: PropTypes.oneOf(["success", "warning", "danger", "primary", "white"]),
   /** Applies disabled attribute and styling */
   disabled: PropTypes.bool,
   /** Applies checked attribute and styling */
   checked: PropTypes.bool,
+  /** Function to call when checked */
   onChange: PropTypes.func
 };
 
