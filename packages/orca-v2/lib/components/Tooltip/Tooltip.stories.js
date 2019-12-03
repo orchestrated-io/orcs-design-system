@@ -25,18 +25,10 @@ export default {
 };
 export const direction = () => (
   <>
-    <Tooltip key="tooltip-1" direction="top">
-      Top tooltip example description
-    </Tooltip>
-    <Tooltip key="tooltip-2" direction="right">
-      Right tooltip example description
-    </Tooltip>
-    <Tooltip key="tooltip-3" direction="left">
-      Left tooltip example description
-    </Tooltip>
-    <Tooltip key="tooltip-4" direction="bottom">
-      Bottom tooltip example description
-    </Tooltip>
+    <Tooltip direction="top">Top tooltip example description</Tooltip>
+    <Tooltip direction="right">Right tooltip example description</Tooltip>
+    <Tooltip direction="left">Left tooltip example description</Tooltip>
+    <Tooltip direction="bottom">Bottom tooltip example description</Tooltip>
   </>
 );
 direction.story = {
