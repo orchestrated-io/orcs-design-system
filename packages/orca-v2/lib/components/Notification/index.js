@@ -50,7 +50,7 @@ const Item = styled.div`
   svg:first-of-type {
     margin-right: 12px;
   }
-  .close-button {
+  svg.close-button {
     margin-left: auto;
     cursor: pointer;
     opacity: 0.6;
@@ -66,6 +66,7 @@ const Item = styled.div`
 class Notification extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = { dismissed: false };
     this.handleDismiss = this.handleDismiss.bind(this);
   }
@@ -91,8 +92,7 @@ class Notification extends React.Component {
       bottom,
       left,
       centered,
-      closable = true,
-      onDismiss
+      closable = true
     } = this.props;
     const { dismissed } = this.state;
     return (
@@ -105,19 +105,17 @@ class Notification extends React.Component {
           bottom={bottom}
           left={left}
           centered={centered}
-          onDismiss={onDismiss}
         >
           {icon && <Icon icon={icon} color="white" />}
           <span>{children}</span>
           {closable && (
-
-              <Icon
-                className="close-button"
-                icon={["fas", "times"]}
-                color="white"
-                tabIndex="0"
-                onClick={this.handleDismiss}
-              />
+            <Icon
+              className="close-button"
+              icon={["fas", "times"]}
+              color="white"
+              tabIndex="0"
+              onClick={this.handleDismiss}
+            />
           )}
         </Item>
       )
