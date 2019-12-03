@@ -134,6 +134,12 @@ const Text = styled.div`
       : css``};
 `;
 
+/**
+ * This popover component is intended to be used to supplement buttons (or other elements) that require some helper text. It supports customisation of direction and width. This is so that you can ensure that the popover doesn't run off the screen, and that the width suits the amount of text in the popover.
+ *
+ * If you don't specify a width, 200px is the default, but as a general guide try and keep widths somewhere between 150-250 if you are modifying. Make sure if setting width you include the unit you want it to use, e.g. pixels, %.
+ */
+
 class Popover extends React.Component {
   render() {
     const {
@@ -156,13 +162,15 @@ class Popover extends React.Component {
 }
 
 Popover.propTypes = {
+  /** The element that requires the popover helper text. */
   children: PropTypes.element,
-  /** Specifies the direction of the popover */
+  /** Specifies the direction of the popover. Defaults to right if not specified */
   direction: PropTypes.oneOf(["top", "right", "bottom", "left"]),
+  /** The text contained in the popover element */
   text: PropTypes.node,
-  /** Specifies the direction of the popover */
+  /** Specifies the alignment of the text inside the popover */
   textAlign: PropTypes.oneOf(["left", "right", "center"]),
-  /** Specifies the width of the popover (you need to specify units, e.g. pixels, %) */
+  /** Specifies the width of the popover (you need to specify units, e.g. pixels, %). If you use % it will be a percentage of the width of the Popover container */
   width: PropTypes.string,
   /** Sets display property of popover tooltip to inline-block */
   inlineBlock: PropTypes.bool
