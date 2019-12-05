@@ -1,5 +1,5 @@
 import NumberFormat from "react-number-format";
-import React, { forwardRef } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 
@@ -213,72 +213,89 @@ const Label = styled.label`
         `
       : css``};
 `;
+/**
+ * The TextInput component can be used as default text inputs with separate label and input like top row examples; these should be used most of the time.
+ *
+ * For extra flair, a `floating` prop can be added to display the label floating inside the input which animates on click; these should be used for stand out or important forms such as sign in/sign up, subscribe or contact us forms.
+ *
+ * Examples also include three validation states: `default`, `invalid`, `valid`.
+ *
+ * Ensure to use a unique `id` for each input, and helpful placeholder text which shows an example of what should be input is very useful to users.
+ */
+class TextInput extends React.Component {
+  render() {
+    const {
+      inverted,
+      floating,
+      id,
+      label,
+      invalid,
+      valid,
+      fullWidth,
+      mandatory,
+      iconLeft,
+      iconRight
+    } = this.props;
 
-const TextInput = forwardRef((props, ref) => {
-  const {
-    inverted,
-    floating,
-    id,
-    label,
-    invalid,
-    valid,
-    fullWidth,
-    mandatory,
-    iconLeft,
-    iconRight
-  } = props;
+    // Strip numberProps from props for Input
+    const { numberProps, ...rest } = this.props;
 
-  // Strip numberProps from props for Input
-  const { numberProps, ...rest } = props;
-
-  return (
-    <Group fullWidth={fullWidth}>
-      {label && !floating ? (
-        <Label
-          inverted={inverted}
-          invalid={invalid}
-          valid={valid}
-          htmlFor={id}
-          mandatory={mandatory}
-        >
-          {label}
-        </Label>
-      ) : null}
-      {numberProps ? (
-        <NumberInput ref={ref} {...rest} {...numberProps} />
-      ) : (
-        <Input ref={ref} {...rest} />
-      )}
-      {label && floating ? (
-        <Label
-          floating={floating}
-          invalid={invalid}
-          valid={valid}
-          htmlFor={id}
-          mandatory={mandatory}
-          iconRight={iconRight}
-          iconLeft={iconLeft}
-        >
-          {label}
-        </Label>
-      ) : null}
-      {iconLeft ? (
-        <div>
-          <IconWrapper htmlFor={id} iconLeft={iconLeft} floating={floating}>
-            <Icon icon={iconLeft} htmlFor={id} color="black" />
-          </IconWrapper>
-        </div>
-      ) : null}
-      {iconRight ? (
-        <div>
-          <IconWrapper htmlFor={id} iconRight={iconRight} floating={floating}>
-            <Icon icon={iconRight} htmlFor={id} color="#black" />
-          </IconWrapper>
-        </div>
-      ) : null}
-    </Group>
-  );
-});
+    const NumberInputForward = React.forwardRef((props, ref) => (
+      <NumberInput ref={ref} {...rest} {...numberProps} />
+    ));
+    const InputForward = React.forwardRef((props, ref) => (
+      <Input ref={ref} {...rest} />
+    ));
+    const ref = React.createRef();
+    return (
+      <Group fullWidth={fullWidth}>
+        {label && !floating ? (
+          <Label
+            inverted={inverted}
+            invalid={invalid}
+            valid={valid}
+            htmlFor={id}
+            mandatory={mandatory}
+          >
+            {label}
+          </Label>
+        ) : null}
+        {numberProps ? (
+          <NumberInputForward ref={ref} {...rest} {...numberProps} />
+        ) : (
+          <InputForward ref={ref} {...rest} />
+        )}
+        {label && floating ? (
+          <Label
+            floating={floating}
+            invalid={invalid}
+            valid={valid}
+            htmlFor={id}
+            mandatory={mandatory}
+            iconRight={iconRight}
+            iconLeft={iconLeft}
+          >
+            {label}
+          </Label>
+        ) : null}
+        {iconLeft ? (
+          <div>
+            <IconWrapper htmlFor={id} iconLeft={iconLeft} floating={floating}>
+              <Icon icon={iconLeft} htmlFor={id} color="black" />
+            </IconWrapper>
+          </div>
+        ) : null}
+        {iconRight ? (
+          <div>
+            <IconWrapper htmlFor={id} iconRight={iconRight} floating={floating}>
+              <Icon icon={iconRight} htmlFor={id} color="#black" />
+            </IconWrapper>
+          </div>
+        ) : null}
+      </Group>
+    );
+  }
+}
 
 TextInput.propTypes = {
   /** Must be used to specify a unique ID. */
@@ -304,7 +321,9 @@ TextInput.propTypes = {
   /** Applies an icon to the right of the text box with specified name. */
   iconRight: PropTypes.array,
   /** Number format props, to render a number input textbox */
-  numberProps: PropTypes.object
+  numberProps: PropTypes.object,
+  /** Set inverted styling for dark backgrounds */
+  inverted: PropTypes.bool
 };
 
 /** @component */
