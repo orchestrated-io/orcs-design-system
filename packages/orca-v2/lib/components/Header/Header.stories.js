@@ -24,15 +24,15 @@ export const exampleHeader = () => (
         </React.Fragment>
       }
     >
-      <StyledLink.Hyperlink href="#" white bold active>
+      <StyledLink href="#" white bold active>
         Test 1
-      </StyledLink.Hyperlink>
-      <StyledLink.Hyperlink href="#" white bold>
+      </StyledLink>
+      <StyledLink href="#" white bold>
         Test 2
-      </StyledLink.Hyperlink>
-      <StyledLink.Hyperlink href="#" white bold>
+      </StyledLink>
+      <StyledLink href="#" white bold>
         Test 3
-      </StyledLink.Hyperlink>
+      </StyledLink>
     </Header>
   </>
 );
