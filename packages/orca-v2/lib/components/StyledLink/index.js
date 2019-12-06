@@ -1,8 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 import variables from "../../variables";
 import colours from "../../colours";
+import PropTypes from "prop-types";
+import React from "react";
+import { Link } from "react-router-dom";
 
 const styleLink = LinkComponent => styled(LinkComponent)`
   display: ${props => (props.block ? "block" : "inline-block")};
@@ -35,7 +36,9 @@ const styleLink = LinkComponent => styled(LinkComponent)`
   }
 `;
 
-const Hyperlink = styleLink(styled.a``);
+export const Hyperlink = styleLink(styled.a``);
+
+export const HeaderLink = styleLink(Link);
 
 /**
  * This `StyledLink` component supports both standard html hyperlinks and react Link components (if using react router for example).
@@ -59,30 +62,9 @@ const Hyperlink = styleLink(styled.a``);
  *        Dashboard
  *      </HeaderLink>
  */
-class StyledLink extends React.Component {
-  render() {
-    const {
-      children,
-      active,
-      white,
-      bold,
-      marginBottomDouble,
-      marginBottomHalf,
-      marginBottom
-    } = this.props;
-    return (
-      <Hyperlink
-        active={active}
-        white={white}
-        bold={bold}
-        marginBottomDouble={marginBottomDouble}
-        marginBottomHalf={marginBottomHalf}
-        marginBottom={marginBottom}
-      >
-        {children}
-      </Hyperlink>
-    );
-  }
+
+export default function StyledLink({ ...props }) {
+  return <Hyperlink {...props} />;
 }
 
 StyledLink.propTypes = {
@@ -101,7 +83,3 @@ StyledLink.propTypes = {
   /** Renders the link's bottom margin with default spacing */
   marginBottom: PropTypes.bool
 };
-
-export { styleLink, Hyperlink };
-/** @component */
-export default StyledLink;
