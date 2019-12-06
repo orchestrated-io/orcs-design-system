@@ -5,16 +5,14 @@ import Flex from "../Flex";
 
 export default {
   title: "DESIGN SYSTEM|Tag",
+  component: Tag,
   decorators: [
     storyFn => (
       <Layout padding childChildHorizontalSpacing>
         <Flex center>{storyFn()}</Flex>
       </Layout>
     )
-  ],
-  parameters: {
-    component: Tag
-  }
+  ]
 };
 
 export const basicTag = () => <Tag>Basic Tag</Tag>;
