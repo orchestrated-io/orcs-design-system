@@ -100,19 +100,23 @@ const Label = styled.label`
   font-size: ${props => (props.small ? "1.4rem" : "1.6rem")};
 `;
 
-class Toggle extends React.Component {
-  render() {
-    const { inverted, id, label, small } = this.props;
-    return (
-      <Group inverted={inverted}>
-        <Input {...this.props} />
-        <Item htmlFor={id} small={small} />
-        <Label htmlFor={id} small={small}>
-          {label}
-        </Label>
-      </Group>
-    );
-  }
+/**
+ * `Toggle` should be used for when functionality is required to turn something off/on, hide/show or disable/enable. Default is off (left/grey), this works like a checkbox, so clicking or applying a checked attribute with javascript will turn it on (right/green).
+ *
+ * As a general rule, the small version should be used in any layout components like `Header`, `Sidebar`, `MobileNav`; whereas the larger one can be used within the page content when required.
+ */
+
+export default function Toggle({ ...props }) {
+  const { inverted, small, id, label } = props;
+  return (
+    <Group inverted={inverted}>
+      <Input {...props} />
+      <Item htmlFor={id} small={small} />
+      <Label htmlFor={id} small={small}>
+        {label}
+      </Label>
+    </Group>
+  );
 }
 
 Toggle.propTypes = {
@@ -126,5 +130,7 @@ Toggle.propTypes = {
   small: PropTypes.bool
 };
 
-/** @component */
-export default Toggle;
+Toggle.defaultProps = {
+  inverted: false,
+  small: false
+};
