@@ -5,18 +5,24 @@ import Flex from "../Flex";
 
 export default {
   title: "DESIGN SYSTEM|Tooltip",
+  component: Tooltip,
   decorators: [
     storyFn => (
-      <Layout paddingDouble childVerticalSpacing inlineBlock>
-        {storyFn()}
+      <Layout paddingDouble childChildHorizontalSpacing>
+        <Flex center>{storyFn()}</Flex>
       </Layout>
     )
-  ],
-  parameters: {
-    component: Tooltip
-  }
+  ]
 };
-export const direction = () => (
+
+export const basicTooltip = () => (
+  <Tooltip>Basic tooltip example description</Tooltip>
+);
+basicTooltip.story = {
+  name: "Basic"
+};
+
+export const directionTooltip = () => (
   <>
     <Tooltip direction="top">Top tooltip example description</Tooltip>
     <Tooltip direction="right">Right tooltip example description</Tooltip>
@@ -24,17 +30,14 @@ export const direction = () => (
     <Tooltip direction="bottom">Bottom tooltip example description</Tooltip>
   </>
 );
-direction.story = {
+directionTooltip.story = {
   name: "Direction"
 };
 export const inverted = () => (
   <>
-    {" "}
-    <Flex full center>
-      <Layout key="inverted" padding backgroundDark width="500px">
-        <Tooltip inverted>Inverted example description</Tooltip>
-      </Layout>
-    </Flex>
+    <Layout paddingDouble backgroundDark width="100%">
+      <Tooltip inverted>Inverted example description</Tooltip>
+    </Layout>
   </>
 );
 inverted.story = {
