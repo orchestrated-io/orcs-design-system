@@ -31,3 +31,8 @@ StatusDot.propTypes = {
   /** Specifies that this has a warning (yellow) state */
   warning: PropTypes.bool
 };
+
+StatusDot.defaultProps = {
+  on: false,
+  warning: false
+};
