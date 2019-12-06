@@ -5,16 +5,14 @@ import Flex from "../Flex";
 
 export default {
   title: "DESIGN SYSTEM|TextArea",
+  component: TextArea,
   decorators: [
     storyFn => (
       <Layout padding childChildHorizontalSpacing>
         <Flex center>{storyFn()}</Flex>
       </Layout>
     )
-  ],
-  parameters: {
-    component: TextArea
-  }
+  ]
 };
 
 export const basicTextArea = () => <TextArea id="TextArea01" label="Message" />;
