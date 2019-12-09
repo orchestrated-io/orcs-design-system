@@ -222,79 +222,77 @@ const Label = styled.label`
  *
  * Ensure to use a unique `id` for each input, and helpful placeholder text which shows an example of what should be input is very useful to users.
  */
-class TextInput extends React.Component {
-  render() {
-    const {
-      inverted,
-      floating,
-      id,
-      label,
-      invalid,
-      valid,
-      fullWidth,
-      mandatory,
-      iconLeft,
-      iconRight
-    } = this.props;
+export default function TextInput({ ...props }) {
+  const {
+    inverted,
+    floating,
+    id,
+    label,
+    invalid,
+    valid,
+    fullWidth,
+    mandatory,
+    iconLeft,
+    iconRight
+  } = props;
 
-    // Strip numberProps from props for Input
-    const { numberProps, ...rest } = this.props;
+  // Strip numberProps from props for Input
+  const { numberProps, ...rest } = props;
 
-    const NumberInputForward = React.forwardRef((props, ref) => (
-      <NumberInput ref={ref} {...rest} {...numberProps} />
-    ));
-    const InputForward = React.forwardRef((props, ref) => (
-      <Input ref={ref} {...rest} />
-    ));
-    const ref = React.createRef();
-    return (
-      <Group fullWidth={fullWidth}>
-        {label && !floating ? (
-          <Label
-            inverted={inverted}
-            invalid={invalid}
-            valid={valid}
-            htmlFor={id}
-            mandatory={mandatory}
-          >
-            {label}
-          </Label>
-        ) : null}
-        {numberProps ? (
-          <NumberInputForward ref={ref} {...rest} {...numberProps} />
-        ) : (
-          <InputForward ref={ref} {...rest} />
-        )}
-        {label && floating ? (
-          <Label
-            floating={floating}
-            invalid={invalid}
-            valid={valid}
-            htmlFor={id}
-            mandatory={mandatory}
-            iconRight={iconRight}
-            iconLeft={iconLeft}
-          >
-            {label}
-          </Label>
-        ) : null}
-        {iconLeft ? (
-          <div>
-            <IconWrapper htmlFor={id} iconLeft={iconLeft} floating={floating}>
-              <Icon icon={iconLeft} htmlFor={id} color="black" />
-            </IconWrapper>
-          </div>
-        ) : null}
-        {iconRight ? (
-          <div>
-            <IconWrapper htmlFor={id} iconRight={iconRight} floating={floating}>
-              <Icon icon={iconRight} htmlFor={id} color="#black" />
-            </IconWrapper>
-          </div>
-        ) : null}
-      </Group>
-    );
-  }
+  const NumberInputForward = React.forwardRef((props, ref) => (
+    <NumberInput ref={ref} {...rest} {...numberProps} />
+  ));
+  const InputForward = React.forwardRef((props, ref) => (
+    <Input ref={ref} {...rest} />
+  ));
+  const ref = React.createRef();
+  return (
+    <Group fullWidth={fullWidth}>
+      {label && !floating ? (
+        <Label
+          inverted={inverted}
+          invalid={invalid}
+          valid={valid}
+          htmlFor={id}
+          mandatory={mandatory}
+        >
+          {label}
+        </Label>
+      ) : null}
+      {numberProps ? (
+        <NumberInputForward ref={ref} {...rest} {...numberProps} />
+      ) : (
+        <InputForward ref={ref} {...rest} />
+      )}
+      {label && floating ? (
+        <Label
+          floating={floating}
+          invalid={invalid}
+          valid={valid}
+          htmlFor={id}
+          mandatory={mandatory}
+          iconRight={iconRight}
+          iconLeft={iconLeft}
+        >
+          {label}
+        </Label>
+      ) : null}
+      {iconLeft ? (
+        <div>
+          <IconWrapper htmlFor={id} iconLeft={iconLeft} floating={floating}>
+            <Icon icon={iconLeft} htmlFor={id} color="black" />
+          </IconWrapper>
+        </div>
+      ) : null}
+      {iconRight ? (
+        <div>
+          <IconWrapper htmlFor={id} iconRight={iconRight} floating={floating}>
+            <Icon icon={iconRight} htmlFor={id} color="#black" />
+          </IconWrapper>
+        </div>
+      ) : null}
+    </Group>
+  );
 }
 
 TextInput.propTypes = {
@@ -325,6 +323,3 @@ TextInput.propTypes = {
   /** Set inverted styling for dark backgrounds */
   inverted: PropTypes.bool
 };
-
-/** @component */
-export default TextInput;
