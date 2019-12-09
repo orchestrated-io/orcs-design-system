@@ -53,6 +53,7 @@
     "@storybook/addon-viewport": "^5.2.8",
     "@storybook/addons": "^5.2.8",
     "@storybook/react": "^5.2.8",
+    "audit-ci": "^2.4.2",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^8.2.5",
     "babel-loader": "^7.1.5",
@@ -127,6 +128,7 @@
   },
   "husky": {
     "hooks": {
+      "pre-push": "./installGitSecrets.sh &&  git secrets --register-aws && git-secrets --scan -r && npm run audit-ci",
       "pre-commit": "prettier --write lib/**/*.js* && npm run lint"
     }
   }
