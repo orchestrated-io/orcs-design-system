@@ -6,6 +6,7 @@
   "module": "es/index.js",
   "sideEffects": false,
   "scripts": {
+    "audit-ci": "audit-ci -m",
     "lint": "eslint lib/",
     "start": "styleguidist server",
     "test": "node scripts/test.js --env=jsdom",
