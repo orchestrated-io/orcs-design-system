@@ -48,15 +48,12 @@ const Item = styled.div`
 /**
  * Badges should be used for things like status, indicators, or other additional information that you want to highlight but not make interactive/clickable.
  */
-class Badge extends React.Component {
-  render() {
-    const { colour, inverted, children } = this.props;
-    return (
-      <Item inverted={inverted} colour={colour}>
-        {children}
-      </Item>
-    );
-  }
+export default function Badge({ colour, inverted, children }) {
+  return (
+    <Item inverted={inverted} colour={colour}>
+      {children}
+    </Item>
+  );
 }
 
 Badge.propTypes = {
@@ -74,6 +71,3 @@ Badge.propTypes = {
   /** The label text on the badge is passed as a child element. */
   children: PropTypes.node
 };
-
-/** @component */
-export default Badge;
