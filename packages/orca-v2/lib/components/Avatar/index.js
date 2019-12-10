@@ -73,7 +73,17 @@ const Default = styled.div`
 `;
 
 /**
- * The `Avatar` component is where all your avatars come to play.
+ * Avatars can come in a few different options. Firstly regular or small size (using a `H2` or `H5` respectively).
+ *
+ * Next, depending on what is available it can preferably contain an image file/source, if no image, then show initials as fall back, if no name/initials, then fall back to an icon.
+ *
+ * Thirdly the title/name can be a link or just plain text.
+ *
+ * Lastly you can specify whether it is being rendered on a dark background and the colours will change to suit this case.
+ *
+ * Also, if no title/subtitle is specified then it will only show the circle avatar part.
+ *
+ * Follow example code below to achieve desired option.
  */
 class Avatar extends React.Component {
   render() {

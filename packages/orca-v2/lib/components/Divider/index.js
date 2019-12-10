@@ -23,19 +23,12 @@ const Item = styled.div`
   grid-column: ${props => (props.spanGrid ? "1 / -1" : "auto")};
 `;
 
-class Divider extends React.Component {
-  render() {
-    const { light, thick, inverted, spanGrid } = this.props;
-    return (
-      <Item
-        light={light}
-        thick={thick}
-        inverted={inverted}
-        spanGrid={spanGrid}
-      />
-    );
-  }
+export default function Divider({ light, thick, inverted, spanGrid }) {
+  return (
+    <Item light={light} thick={thick} inverted={inverted} spanGrid={spanGrid} />
+  );
 }
+
 Divider.propTypes = {
   /** Divider will use a lighter grey colour */
   light: PropTypes.bool,
@@ -46,6 +39,3 @@ Divider.propTypes = {
   /** Divider will span all columns when in a grid so it can be used as a row divider */
   spanGrid: PropTypes.bool
 };
-
-/** @component */
-export default Divider;

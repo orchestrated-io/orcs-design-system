@@ -140,7 +140,7 @@ const Item = styled.button`
 `;
 
 /**
- * Buttons should be used for prompting a user interaction that causes an event/action to trigger within the UI. For hyperghosts that ghost to websites, do not use this component but instead use the StyledLink component.
+ * Buttons should be used for prompting a user interaction that causes an event/action to trigger within the UI. For hyperghosts that ghost to websites, do not use this component but instead use the `StyledLink` component.
  *
  * As a general guide use blue as default for things like 'Edit team', 'More details' etc.
  *
@@ -152,38 +152,35 @@ const Item = styled.button`
  *
  * Make use of icons when they help enhance or support the text or aesthetic of the UI, but don't use frequently. Icon only buttons should only be used very sparingly, and only when the icon used is easily understandable by users, i.e. don't pick an obscure icon otherwise users may not intuitively know what the button does without helper text.
  */
-class Button extends React.Component {
-  render() {
-    const {
-      large,
-      small,
-      ghost,
-      fullWidth,
-      disabled,
-      isLoading,
-      iconLeft,
-      iconRight,
-      iconOnly,
-      colour,
-      children
-    } = this.props;
-    return (
-      <Item
-        large={large}
-        small={small}
-        ghost={ghost}
-        fullWidth={fullWidth}
-        disabled={disabled}
-        isLoading={isLoading}
-        iconLeft={iconLeft}
-        iconRight={iconRight}
-        iconOnly={iconOnly}
-        colour={colour}
-      >
-        {children}
-      </Item>
-    );
-  }
+export default function Button({
+  large,
+  small,
+  ghost,
+  fullWidth,
+  disabled,
+  isLoading,
+  iconLeft,
+  iconRight,
+  iconOnly,
+  colour,
+  children
+}) {
+  return (
+    <Item
+      large={large}
+      small={small}
+      ghost={ghost}
+      fullWidth={fullWidth}
+      disabled={disabled}
+      isLoading={isLoading}
+      iconLeft={iconLeft}
+      iconRight={iconRight}
+      iconOnly={iconOnly}
+      colour={colour}
+    >
+      {children}
+    </Item>
+  );
 }
 
 Button.propTypes = {
@@ -210,6 +207,3 @@ Button.propTypes = {
   /** The text label on the button is passed as a child. Keep this text short and descriptive. Use an action word or confirmation if possible. */
   children: PropTypes.node
 };
-
-/** @component */
-export default Button;
