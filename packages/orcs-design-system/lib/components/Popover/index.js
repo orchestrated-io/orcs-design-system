@@ -140,25 +140,22 @@ const Text = styled.div`
  * If you don't specify a width, 200px is the default, but as a general guide try and keep widths somewhere between 150-250 if you are modifying. Make sure if setting width you include the unit you want it to use, e.g. pixels, %.
  */
 
-class Popover extends React.Component {
-  render() {
-    const {
-      children,
-      direction,
-      width,
-      textAlign,
-      text,
-      inlineBlock
-    } = this.props;
-    return (
-      <Container inlineBlock={inlineBlock}>
-        <Text textAlign={textAlign} direction={direction} width={width}>
-          {text}
-        </Text>
-        {children}
-      </Container>
-    );
-  }
+export default function Popover({
+  children,
+  direction,
+  width,
+  textAlign,
+  text,
+  inlineBlock
+}) {
+  return (
+    <Container inlineBlock={inlineBlock}>
+      <Text textAlign={textAlign} direction={direction} width={width}>
+        {text}
+      </Text>
+      {children}
+    </Container>
+  );
 }
 
 Popover.propTypes = {
@@ -175,6 +172,3 @@ Popover.propTypes = {
   /** Sets display property of popover tooltip to inline-block */
   inlineBlock: PropTypes.bool
 };
-
-/** @component */
-export default Popover;

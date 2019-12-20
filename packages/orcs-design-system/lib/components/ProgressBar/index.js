@@ -48,19 +48,21 @@ const Fill = styled.div`
  * A percentage width of the fill (coloured element) can be specified using the fillWidth prop. On page load the fill will animate from 0 to set value, and on change of the fillWidth prop value the fill will automatically animate to the new width value.
  */
 
-class ProgressBar extends React.Component {
-  render() {
-    const { containerWidth, fillWidth, gradient, inverted } = this.props;
-    return (
-      <Background inverted={inverted} style={{ width: containerWidth + "%" }}>
-        <Fill
-          gradient={gradient}
-          inverted={inverted}
-          style={{ width: fillWidth + "%" }}
-        />
-      </Background>
-    );
-  }
+export default function ProgressBar({
+  containerWidth,
+  fillWidth,
+  gradient,
+  inverted
+}) {
+  return (
+    <Background inverted={inverted} style={{ width: containerWidth + "%" }}>
+      <Fill
+        gradient={gradient}
+        inverted={inverted}
+        style={{ width: fillWidth + "%" }}
+      />
+    </Background>
+  );
 }
 
 ProgressBar.propTypes = {
@@ -73,6 +75,3 @@ ProgressBar.propTypes = {
   /** Changes appearance to suit dark backgrounds */
   inverted: PropTypes.bool
 };
-
-/** @component */
-export default ProgressBar;
