@@ -1,7 +1,33 @@
 {
-  "name": "root",
-  "private": true,
+  "name": "orchestrated-design-system",
+  "scripts": {
+    "audit-ci": "audit-ci -m",
+    "bootstrap": "lerna bootstrap",
+    "lint": "lerna run lint",
+    "start": "lerna run start",
+    "build": "lerna run build",
+    "lerna:audit": "node ./lernaAudit.js",
+    "chromatic:ci": "lerna run chromatic:ci"
+  },
+  "lint-staged": {
+    "packages/*/{src,lib}/**/*.{js,jsx,json,css}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "skipCI": false,
+    "hooks": {
+      "pre-push": "npm run lerna:audit",
+      "pre-commit": "lint-staged"
+    }
+  },
   "devDependencies": {
-    "lerna": "^3.19.0"
+    "audit-ci": "^2.4.2",
+    "husky": "^3.1.0",
+    "lerna": "^3.19.0",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1"
   }
 }
