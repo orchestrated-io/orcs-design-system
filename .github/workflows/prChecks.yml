@@ -23,15 +23,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: run security audit of npm packages
-        run: |
-          npx audit-ci -m
       - name: npm install, build, and test
         run: |
-          npm ci
-          # TODO: introduce lint/test
-          # npm run lint
-          # npm test
+          npm run bootstrap
+          npm run lint
           npm run chromatic:ci --if-present
         env:
           CI: true

@@ -5,17 +5,6 @@ on:
     types: [created]
 
 jobs:
-  # TODO: Enable when we have lint and tests
-  # build:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v1
-  #     - uses: actions/setup-node@v1
-  #       with:
-  #         node-version: 12
-  #     - run: npm ci
-  #     - run: npm test
-
   publish-npm:
     # needs: build
     runs-on: ubuntu-latest
@@ -26,7 +15,10 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: npm ci
+        working-directory: ./packages/orca-design-system
       - run: npm run dist
+        working-directory: ./packages/orca-design-system
       - run: npm publish
+        working-directory: ./packages/orca-design-system
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
