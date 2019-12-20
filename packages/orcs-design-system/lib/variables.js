@@ -1,0 +1,20 @@
+const variables = {
+  /* Spacing */
+  defaultSpacing: "20px",
+  defaultSpacingQuarter: "5px",
+  defaultSpacingHalf: "10px",
+  defaultSpacingDouble: "40px",
+  /* Breakpoints */
+  screenTiny: "450px",
+  screenSmall: "675px",
+  screenNormal: "900px",
+  screenMedium: "1100px",
+  screenLarge: "1400px",
+  /* Borders */
+  borderRadius: "6px",
+  borderRadiusSmall: "2px",
+  /* Animation */
+  defaultTransition: "all 200ms ease-in-out"
+};
+
+export default variables;
