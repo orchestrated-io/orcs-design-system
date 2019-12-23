@@ -13,45 +13,43 @@ import PropTypes from "prop-types";
  *
  * To get started you can import the icons into Font Awesome library. Alternatively if you want to use their full icon set you need to purchase a PRO plan from Font awesome, and can install the full pro icon packages in your app. See the readme here for more details on how to use and install PRO: <https://github.com/orchestrated-io/orca-design-system>
  */
-class Icon extends React.Component {
-  render() {
-    const {
-      border,
-      mask,
-      fixedWidth,
-      inverse,
-      flip,
-      icon,
-      listitem,
-      pull,
-      pulse,
-      rotation,
-      size,
-      spin,
-      symbol,
-      transform,
-      color
-    } = this.props;
-    return (
-      <FontAwesomeIcon
-        border={border}
-        color={color}
-        mask={mask}
-        fixedWidth={fixedWidth}
-        inverse={inverse}
-        flip={flip}
-        listitem={listitem}
-        pull={pull}
-        rotation={rotation}
-        icon={icon}
-        pulse={pulse}
-        size={size}
-        spin={spin}
-        symbol={symbol}
-        transform={transform}
-      />
-    );
-  }
+
+export default function Icon({
+  border,
+  mask,
+  fixedWidth,
+  inverse,
+  flip,
+  icon,
+  listitem,
+  pull,
+  pulse,
+  rotation,
+  size,
+  spin,
+  symbol,
+  transform,
+  color
+}) {
+  return (
+    <FontAwesomeIcon
+      border={border}
+      color={color}
+      mask={mask}
+      fixedWidth={fixedWidth}
+      inverse={inverse}
+      flip={flip}
+      listitem={listitem}
+      pull={pull}
+      rotation={rotation}
+      icon={icon}
+      pulse={pulse}
+      size={size}
+      spin={spin}
+      symbol={symbol}
+      transform={transform}
+    />
+  );
 }
 
 Icon.propTypes = {
@@ -86,6 +84,3 @@ Icon.propTypes = {
   /** Power transforms to scale and position the icon */
   transform: PropTypes.any
 };
-
-/** @component */
-export default Icon;

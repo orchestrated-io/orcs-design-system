@@ -150,36 +150,33 @@ const Text = styled.div`
  * The default radio button (or inverted if on dark background) should be used for the majority of the UI; however, the coloured ones should be used sparingly if required to indicate a particular state or meaning, e.g. If you had two radio buttons for upvote or downvote they could be coloured green and red.
  */
 
-class RadioButton extends React.Component {
-  render() {
-    const {
-      name,
-      value,
-      label,
-      colour,
-      disabled,
-      checked,
-      onChange
-    } = this.props;
-    return (
-      <Item colour={colour}>
-        <Label disabled={disabled}>
-          <Control
-            name={name}
-            value={value}
-            colour={colour}
-            disabled={disabled}
-            checked={checked}
-            onChange={onChange}
-          />
-          <Circle colour={colour}>
-            <Check />
-          </Circle>
-          <Text>{label}</Text>
-        </Label>
-      </Item>
-    );
-  }
+export default function RadioButton({
+  name,
+  value,
+  label,
+  colour,
+  disabled,
+  checked,
+  onChange
+}) {
+  return (
+    <Item colour={colour}>
+      <Label disabled={disabled}>
+        <Control
+          name={name}
+          value={value}
+          colour={colour}
+          disabled={disabled}
+          checked={checked}
+          onChange={onChange}
+        />
+        <Circle colour={colour}>
+          <Check />
+        </Circle>
+        <Text>{label}</Text>
+      </Label>
+    </Item>
+  );
 }
 
 RadioButton.propTypes = {
@@ -198,6 +195,3 @@ RadioButton.propTypes = {
   /** Function to call when checked */
   onChange: PropTypes.func
 };
-
-/** @component */
-export default RadioButton;

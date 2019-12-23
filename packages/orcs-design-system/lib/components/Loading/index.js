@@ -41,11 +41,8 @@ const Item = styled.div`
 /**
  * As a general guide, use the large prop for when whole pages or sections are loading, and the default (small) loading for smaller elements.
  */
-class Loading extends React.Component {
-  render() {
-    const { large, centered, inverted } = this.props;
-    return <Item large={large} centered={centered} inverted={inverted} />;
-  }
+export default function Loading({ large, centered, inverted }) {
+  return <Item large={large} centered={centered} inverted={inverted} />;
 }
 
 Loading.propTypes = {
@@ -56,6 +53,3 @@ Loading.propTypes = {
   /** Changes colours to work on dark background */
   inverted: PropTypes.bool
 };
-
-/** @component */
-export default Loading;

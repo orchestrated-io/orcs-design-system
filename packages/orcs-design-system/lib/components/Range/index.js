@@ -144,16 +144,13 @@ const Output = styled.output`
 /**
  * Range component is pretty self explanatory, used to select a number out of a range, make sure to set a min, max and default value.
  */
-class Range extends React.Component {
-  render() {
-    const { min, max, inverted, defaultValue } = this.props;
-    return (
-      <Wrapper min={min} max={max} inverted={inverted}>
-        <Input {...this.props} />
-        <Output>{defaultValue}</Output>
-      </Wrapper>
-    );
-  }
+export default function Range({ min, max, inverted, defaultValue, ...props }) {
+  return (
+    <Wrapper min={min} max={max} inverted={inverted}>
+      <Input {...props} />
+      <Output>{defaultValue}</Output>
+    </Wrapper>
+  );
 }
 
 Range.propTypes = {
@@ -166,6 +163,3 @@ Range.propTypes = {
   /** Changes appearance to suit dark backgrounds */
   inverted: PropTypes.bool
 };
-
-/** @component */
-export default Range;
