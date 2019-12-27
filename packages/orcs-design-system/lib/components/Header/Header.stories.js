@@ -15,13 +15,13 @@ export const exampleHeader = () => (
     <Header
       appName="My App"
       rightAlignedChildren={
-        <React.Fragment>
+        <>
           <Avatar src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg" />
           <LoggedInAs>
             <UserName>John Smith</UserName>
             <Tenant>orchestrated</Tenant>
           </LoggedInAs>
-        </React.Fragment>
+        </>
       }
     >
       <StyledLink href="#" white bold active>

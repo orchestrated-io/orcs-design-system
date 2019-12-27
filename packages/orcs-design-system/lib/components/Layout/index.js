@@ -2,8 +2,9 @@ import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 import colours from "../../colours";
 import variables from "../../variables";
+import React from "react";
 
-const Layout = styled.div`
+const Item = styled.div`
   display: ${props => (props.inlineBlock ? "inline-block" : "block")};
   width: ${props => (props.width ? props.width : "auto")};
   height: ${props => (props.height ? props.height : "auto")};
@@ -189,7 +190,23 @@ const Layout = styled.div`
   }
 `;
 
+/**
+ * To aid in the layout of components you can use this with any combination of the following props: margins, paddings, backgrounds and borders.
+ *
+ * See the props & methods for this component to see a full list as the examples don't cover all combinations.
+ *
+ * Of particular note should be the child... props as these will provide equal spacing between child elements without having to wrap each child element in their own layouts.
+ *
+ * Try not to nest layouts in the UI as this will then create too much duplicate spacing between components.
+ */
+
+export default function Layout({ children, ...props }) {
+  return <Item {...props}>{children}</Item>;
+}
+
 Layout.propTypes = {
+  /** The contents of the Layout component are defined as a child element */
+  children: PropTypes.node,
   /** Can specify a width in pixels or percentages (make sure you specify units) */
   width: PropTypes.string,
   /** Can specify a height in pixels or percentages (make sure you specify units) */
@@ -275,6 +292,3 @@ Layout.propTypes = {
   /** Adds horizontal margin of 5px between all direct childrens elements direct children */
   childChildHorizontalSpacingQuarter: PropTypes.bool
 };
-
-/** @component */
-export default Layout;
