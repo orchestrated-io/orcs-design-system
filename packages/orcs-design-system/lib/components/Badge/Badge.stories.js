@@ -4,13 +4,6 @@ import Layout from "../Layout";
 
 export default {
   title: "DESIGN SYSTEM|Badge",
-  decorators: [
-    storyFn => (
-      <Layout padding childVerticalSpacing>
-        {storyFn()}
-      </Layout>
-    )
-  ],
   parameters: {
     component: Badge
   }
@@ -22,21 +15,21 @@ defaultBadge.story = {
 };
 
 export const colour = () => (
-  <Layout paddingDouble>
+  <>
     <Badge colour="success">Success</Badge>
     <Badge colour="warning">Warning</Badge>
     <Badge colour="danger">Danger</Badge>
     <Badge colour="primaryLight">Low priority</Badge>
     <Badge colour="primaryDark">Medium priority</Badge>
     <Badge colour="primaryDarkest">High priority</Badge>
-  </Layout>
+  </>
 );
 colour.story = {
   name: "Colour"
 };
 
 export const inverted = () => (
-  <Layout paddingDouble backgroundDark>
+  <Layout padding backgroundDark>
     <Badge inverted>Default</Badge>
     <Badge inverted colour="success">
       Success
