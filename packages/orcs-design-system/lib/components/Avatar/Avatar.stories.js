@@ -10,7 +10,11 @@ export default {
   }
 };
 
-export const withInitial = () => (
+export const defaultAvatar = () => (
+  <Avatar title="Ayden Lundgre" subtitle="Senior Business Analyst" />
+);
+
+export const withInitials = () => (
   <Avatar
     title="Ayden Lundgre"
     subtitle="Senior Business Analyst"
@@ -27,7 +31,7 @@ export const withImage = () => (
   />
 );
 
-export const withTitleAsLink = () => (
+export const withNameAsLink = () => (
   <Avatar
     title={<StyledLink href="#">Ayden Lundgre</StyledLink>}
     subtitle="Senior Business Analyst"
@@ -36,52 +40,15 @@ export const withTitleAsLink = () => (
   />
 );
 
-export const inverted = () => (
-  <>
-    <Layout backgroundDark paddingHalf>
-      <Avatar
-        inverted
-        title="Ayden Lundgre"
-        subtitle="Senior Business Analyst"
-        initials="AL"
-        image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
-      />
-    </Layout>
-    <Layout backgroundDark paddingHalf>
-      <Avatar
-        inverted
-        small
-        title="Ayden Lundgre"
-        subtitle="Senior Business Analyst"
-        initials="AL"
-        image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
-      />
-    </Layout>
-
-    <Layout backgroundDark paddingHalf>
-      <Avatar
-        inverted
-        small
-        title={<StyledLink href="#">Ayden Lundgre</StyledLink>}
-        subtitle="Senior Business Analyst"
-        initials="AL"
-        image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
-      />
-    </Layout>
-  </>
-);
-
 export const small = () => (
-  <>
+  <Layout childVerticalSpacing>
     <Avatar small title="Ayden Lundgre" subtitle="Senior Business Analyst" />
-
     <Avatar
       small
       title="Ayden Lundgre"
       subtitle="Senior Business Analyst"
       initials="AL"
     />
-
     <Avatar
       small
       title="Ayden Lundgre"
@@ -89,7 +56,6 @@ export const small = () => (
       initials="AL"
       image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
     />
-
     <Avatar
       small
       title={<StyledLink href="#">Ayden Lundgre</StyledLink>}
@@ -97,5 +63,40 @@ export const small = () => (
       initials="AL"
       image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
     />
-  </>
+  </Layout>
+);
+
+export const inverted = () => (
+  <Layout backgroundDark padding childVerticalSpacing>
+    <Avatar
+      inverted
+      title="Ayden Lundgre"
+      subtitle="Senior Business Analyst"
+      initials="AL"
+      image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+    />
+    <Avatar
+      inverted
+      title={<StyledLink href="#">Ayden Lundgre</StyledLink>}
+      subtitle="Senior Business Analyst"
+      initials="AL"
+      image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+    />
+    <Avatar
+      inverted
+      small
+      title="Ayden Lundgre"
+      subtitle="Senior Business Analyst"
+      initials="AL"
+      image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+    />
+    <Avatar
+      inverted
+      small
+      title={<StyledLink href="#">Ayden Lundgre</StyledLink>}
+      subtitle="Senior Business Analyst"
+      initials="AL"
+      image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+    />
+  </Layout>
 );
