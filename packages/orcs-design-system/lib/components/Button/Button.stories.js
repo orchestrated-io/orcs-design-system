@@ -1,19 +1,12 @@
 import React from "react";
 import { action } from "@storybook/addon-actions";
 import Button from ".";
-import Flex from "../Flex";
 import Icon from "../Icon";
 import Layout from "../Layout";
 
 export default {
   title: "DESIGN SYSTEM|Button",
-  decorators: [
-    storyFn => (
-      <Layout padding childVerticalSpacing childChildHorizontalSpacing>
-        {storyFn()}
-      </Layout>
-    )
-  ],
+  decorators: [storyFn => <Layout childVerticalSpacing>{storyFn()}</Layout>],
   parameters: {
     component: Button
   }
@@ -79,9 +72,19 @@ disabledButton.story = {
   name: "Disabled"
 };
 
-export const loadingButton = () => <Button isLoading>Loading . . .</Button>;
-loadingButton.story = {
-  name: "Loading"
+export const waitingButton = () => (
+  <>
+    <Button isLoading>Loading...</Button>
+    <Button isLoading colour="success">
+      Saving...
+    </Button>
+    <Button isLoading colour="danger">
+      Deleting...
+    </Button>
+  </>
+);
+waitingButton.story = {
+  name: "Waiting state"
 };
 
 export const iconButton = () => (
@@ -102,17 +105,15 @@ iconButton.story = {
 
 export const iconOnlyButton = () => (
   <>
-    <Flex alignStart>
-      <Button small iconOnly>
-        <Icon icon={["far", "calendar-alt"]} />
-      </Button>
-      <Button iconOnly>
-        <Icon icon={["far", "calendar-alt"]} />
-      </Button>
-      <Button large iconOnly>
-        <Icon icon={["far", "calendar-alt"]} />
-      </Button>
-    </Flex>
+    <Button small iconOnly>
+      <Icon icon={["far", "calendar-alt"]} />
+    </Button>
+    <Button iconOnly>
+      <Icon icon={["far", "calendar-alt"]} />
+    </Button>
+    <Button large iconOnly>
+      <Icon icon={["far", "calendar-alt"]} />
+    </Button>
   </>
 );
 iconOnlyButton.story = {
