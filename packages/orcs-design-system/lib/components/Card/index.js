@@ -122,7 +122,7 @@ const ChangeValue = styled.small`
 `;
 
 /**
- * Example of basic and alternative cards. Child elements can be anything, plain text, graphs, or other components. Subtitles and icons are optional, not mandatory.
+ * Example of basic, alternative and complex cards. Child elements can be anything, plain text, graphs, or other components. Subtitles, icons, change values, coloured borders are all optional, not mandatory.
  *
  * If your UI is split into different areas or sections you can also choose to colour code your cards to match, by applying a colour prop which adds the corresponding colour as a top border.
  */

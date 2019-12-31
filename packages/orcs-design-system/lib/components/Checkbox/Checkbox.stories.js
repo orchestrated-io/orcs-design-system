@@ -4,13 +4,7 @@ import Layout from "../Layout";
 
 export default {
   title: "Design System|Checkbox",
-  decorators: [
-    storyFn => (
-      <Layout padding childVerticalSpacing childHorizontalSpacing>
-        {storyFn()}
-      </Layout>
-    )
-  ],
+  decorators: [storyFn => <Layout childVerticalSpacing>{storyFn()}</Layout>],
   parameters: {
     component: Checkbox
   }
@@ -22,19 +16,22 @@ defaultCheckbox.story = {
 };
 
 export const colouredVariants = () => (
-  <Layout childVerticalSpacing>
+  <>
     <Checkbox label="Primary colour checkbox" colour="primary" />
     <Checkbox label="Success colour checkbox" colour="success" />
     <Checkbox label="Warning colour checkbox" colour="warning" />
     <Checkbox label="Danger colour checkbox" colour="danger" />
-  </Layout>
+  </>
 );
 colouredVariants.story = {
   name: "Colours"
 };
 
 export const disabledCheckbox = () => (
-  <Checkbox disabled label="Disabled checkbox" />
+  <>
+    <Checkbox disabled label="Disabled checkbox" />
+    <Checkbox checked disabled label="Disabled ticked checkbox" />
+  </>
 );
 disabledCheckbox.story = {
   name: "Disabled"
@@ -46,7 +43,7 @@ checkedBox.story = {
 };
 
 export const invertedCheckbox = () => (
-  <Layout paddingDouble backgroundDark>
+  <Layout padding backgroundDark>
     <Checkbox colour="white" label="Inverted checkbox" />
   </Layout>
 );
