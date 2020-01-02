@@ -4,7 +4,6 @@ import Loading from ".";
 
 export default {
   title: "Design System|Loading",
-  decorators: [storyFn => <Layout padding>{storyFn()}</Layout>],
   parameters: {
     component: Loading
   }
@@ -12,7 +11,7 @@ export default {
 
 export const basicLoading = () => <Loading />;
 basicLoading.story = {
-  name: "Basic"
+  name: "Default"
 };
 
 export const largeLoading = () => <Loading large />;
@@ -20,18 +19,21 @@ largeLoading.story = {
   name: "Large"
 };
 
-export const centeredLoading = () => <Loading large centered />;
+export const centeredLoading = () => (
+  <Layout childVerticalSpacing>
+    <Loading centered />
+    <Loading large centered />
+  </Layout>
+);
 centeredLoading.story = {
   name: "Centered"
 };
 
 export const invertedLoading = () => (
-  <>
-    <Layout backgroundDark paddingDouble childVerticalSpacing>
-      <Loading inverted />
-      <Loading large inverted />
-    </Layout>
-  </>
+  <Layout backgroundDark padding childVerticalSpacing>
+    <Loading inverted />
+    <Loading large inverted />
+  </Layout>
 );
 invertedLoading.story = {
   name: "Inverted"
