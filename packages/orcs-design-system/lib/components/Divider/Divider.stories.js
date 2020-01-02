@@ -44,6 +44,5 @@ invertedDivider.story = {
 
 export const spanGridDivider = () => <Divider spanGrid />;
 spanGridDivider.story = {
-  name: "Span grid columns",
-  desc: "bwekfahewfhk"
+  name: "Span grid columns"
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import Expandable from ".";
+import Typography from "../Typography";
 
 export default {
   title: "Design System|Expandable",
@@ -10,11 +11,13 @@ export default {
 
 export const basicExpandable = () => (
   <Expandable title="Details">
-    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-    veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
-    ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-    consequuntur magni dolores eos qui ratione voluptatem.
+    <Typography.P>
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+      doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+      inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+      fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+    </Typography.P>
   </Expandable>
 );
 basicExpandable.story = {
@@ -23,11 +26,13 @@ basicExpandable.story = {
 
 export const openExpandable = () => (
   <Expandable isOpen title="Details">
-    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-    veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
-    ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-    consequuntur magni dolores eos qui ratione voluptatem.
+    <Typography.P>
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+      doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+      inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+      fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+    </Typography.P>
   </Expandable>
 );
 openExpandable.story = {
@@ -36,11 +41,13 @@ openExpandable.story = {
 
 export const withSubtitle = () => (
   <Expandable title="Complex example" subtitle="Subtitle">
-    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-    veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
-    ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-    consequuntur magni dolores eos qui ratione voluptatem.
+    <Typography.P>
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+      doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+      inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+      fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+    </Typography.P>
   </Expandable>
 );
 withSubtitle.story = {
@@ -49,11 +56,13 @@ withSubtitle.story = {
 
 export const withBadge = () => (
   <Expandable title="Complex example" badge="status" badgeColour="primaryDark">
-    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-    veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
-    ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-    consequuntur magni dolores eos qui ratione voluptatem.
+    <Typography.P>
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+      doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+      inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+      fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+    </Typography.P>
   </Expandable>
 );
 withBadge.story = {

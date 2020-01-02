@@ -37,9 +37,9 @@ basicIcon.story = {
 
 export const colouredIcon = () => (
   <>
-    <Icon icon={["fas", "angle-down"]} color={colours.primary} />
-    <Icon icon={["fas", "plus"]} color={colours.warning} />
-    <Icon icon={["far", "user"]} color={colours.danger} />
+    <Icon icon={["fas", "angle-down"]} color={colours.primaryDark} />
+    <Icon icon={["fas", "plus"]} color={colours.successDark} />
+    <Icon icon={["far", "user"]} color={colours.dangerDark} />
   </>
 );
 colouredIcon.story = {
