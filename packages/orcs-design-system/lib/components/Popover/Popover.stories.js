@@ -57,7 +57,7 @@ directionPopover.story = {
 
 export const widthPopover = () => (
   <>
-    <Popover text="Text description of what this button does" width="400px">
+    <Popover text="Text description of what this button does" width="100px">
       <Button>Hover Me</Button>
     </Popover>
   </>
@@ -67,7 +67,7 @@ widthPopover.story = {
 };
 
 export const alignPopover = () => (
-  <Popover textAlign="right" text="Text description of what this button does">
+  <Popover textAlign="center" text="Text description of what this button does">
     <Button>Hover Me</Button>
   </Popover>
 );
@@ -76,25 +76,23 @@ alignPopover.story = {
 };
 
 export const inlinePopover = () => (
-  <>
-    <Layout childVerticalSpacing childHorizontalSpacing>
-      <Popover text="Text description of what this button does" inlineBlock>
-        <Button>Inline Block Set</Button>
-      </Popover>
+  <Layout childVerticalSpacing childHorizontalSpacing>
+    <Popover text="Text description of what this button does" inlineBlock>
+      <Button>Inline Block Set</Button>
+    </Popover>
 
-      <Popover text="Text description of what this button does" inlineBlock>
-        <Button>Inline Block Set</Button>
-      </Popover>
+    <Popover text="Text description of what this button does" inlineBlock>
+      <Button>Inline Block Set</Button>
+    </Popover>
 
-      <Popover text="Centered description of what this button does">
-        <Button>Not Inline</Button>
-      </Popover>
+    <Popover text="Centered description of what this button does">
+      <Button>Not Inline</Button>
+    </Popover>
 
-      <Popover direction="top" text="Text description of what this button does">
-        <Button>Not Inline</Button>
-      </Popover>
-    </Layout>
-  </>
+    <Popover direction="top" text="Text description of what this button does">
+      <Button>Not Inline</Button>
+    </Popover>
+  </Layout>
 );
 inlinePopover.story = {
   name: "Inline"

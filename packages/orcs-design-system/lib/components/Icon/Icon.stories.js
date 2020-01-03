@@ -12,7 +12,7 @@ export default {
   title: "Design System|Icon",
   decorators: [
     storyFn => (
-      <Layout paddingDouble childVerticalSpacing>
+      <Layout padding>
         <Flex alignCenter justifyAround>
           {storyFn()}
         </Flex>
@@ -48,9 +48,10 @@ colouredIcon.story = {
 
 export const sizedIcon = () => (
   <>
-    <Icon icon={["fas", "angle-down"]} size="2x" />
+    <Icon icon={["fas", "plus"]} size="sm" />
+    <Icon icon={["fas", "plus"]} size="rg" />
     <Icon icon={["fas", "plus"]} size="lg" />
-    <Icon icon={["far", "user"]} size="3x" />
+    <Icon icon={["fas", "plus"]} size="2x" />
   </>
 );
 sizedIcon.story = {
