@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import React from "react";
-import colours from "../../colours";
 import { rgba } from "polished";
 
 const Item = styled.div`
@@ -16,25 +15,31 @@ const Item = styled.div`
   margin: ${props => (props.centered ? "0 auto" : "0")};
 
   border: ${props => {
-    let border = "2px solid";
+    let borderStyle = "2px solid";
     if (props.large) {
-      border = "4px solid";
+      borderStyle = "4px solid";
     }
-    return border;
+    return borderStyle;
   }};
   border-color: ${props => {
-    let border = rgba(0, 0, 0, 0.3);
-    if (props.inverted) {
-      border = colours.greyDark;
+    let borderColour = rgba(0, 0, 0, 0.3);
+    if (props.large) {
+      borderColour = rgba(0, 0, 0, 0.2);
     }
-    return border;
+    if (props.inverted) {
+      borderColour = rgba(255, 255, 255, 0.4);
+    }
+    return borderColour;
   }};
   border-right-color: ${props => {
-    let border = rgba(0, 0, 0, 0.7);
-    if (props.inverted) {
-      border = rgba(255, 255, 255, 0.8);
+    let borderRightColour = rgba(0, 0, 0, 0.7);
+    if (props.large) {
+      borderRightColour = rgba(0, 0, 0, 0.7);
     }
-    return border;
+    if (props.inverted) {
+      borderRightColour = rgba(255, 255, 255, 0.9);
+    }
+    return borderRightColour;
   }};
 `;
 

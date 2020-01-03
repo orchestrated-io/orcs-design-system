@@ -47,26 +47,28 @@ const Item = styled.div`
   span {
     margin-right: 12px;
   }
-svg + span {
-    margin-left: 12px;
-  }
+  svg + span {
+      margin-left: 12px;
+    }
   }
 `;
 
 const Close = styled.button`
-background: transparent;
-border: none;
-margin-left: auto;
-cursor: pointer;
-opacity: 0.6;
-transition: ${variables.defaultTransition};
-  color: ${colours.white};
-    &:hover,
-    &:focus {
-      outline: 0;
-      opacity: 1;
-    }
-}
+  appearance: none;
+  background: transparent;
+  padding: 0;
+  border: none;
+  margin-left: auto;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: ${variables.defaultTransition};
+    color: ${colours.white};
+      &:hover,
+      &:focus {
+        outline: 0;
+        opacity: 1;
+      }
+  }
 `;
 
 /**
