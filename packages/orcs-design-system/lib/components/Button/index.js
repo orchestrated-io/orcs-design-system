@@ -16,6 +16,7 @@ const Item = styled.button`
   text-decoration: none;
   text-align: center;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
   border-radius: ${variables.borderRadius};
   transition: ${variables.defaultTransition};
   cursor: ${props => (props.disabled ? "not-allowed" : "pointer")};

@@ -14,6 +14,7 @@ const TagWrapper = styled.button`
   display: block;
   border-radius: 13px;
   font-size: 1.4rem;
+  font-weight: 600;
   margin: 3px;
   white-space: nowrap;
   position: relative;

@@ -9,6 +9,7 @@ import { rgba } from "polished";
 const Item = styled.div`
   position: relative;
   font-size: 1.4rem;
+  font-weight: 600;
   position: relative;
   padding: 10px 12px;
   cursor: default;
