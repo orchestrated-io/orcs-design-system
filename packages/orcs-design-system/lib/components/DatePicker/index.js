@@ -1,12 +1,88 @@
 import React from "react";
 import PropTypes from "prop-types";
+import momentPropTypes from "react-moment-proptypes";
+import moment from "moment";
+import omit from "lodash/omit";
+
+import "react-dates/lib/css/_datepicker.css";
+import "react-dates/initialize";
+
+import { DateRangePicker, SingleDatePicker } from "react-dates";
 import styled from "styled-components";
 import colours from "../../colours";
 import variables from "../../variables";
-import "react-dates/lib/css/_datepicker.css";
-import "react-dates/initialize";
-import { DateRangePicker, SingleDatePicker } from "react-dates";
 import { rgba } from "polished";
+
+import { DateRangePickerPhrases } from "react-dates/lib/defaultPhrases";
+import DateRangePickerShape from "react-dates/lib/shapes/DateRangePickerShape";
+import {
+  START_DATE,
+  END_DATE,
+  HORIZONTAL_ORIENTATION,
+  ANCHOR_LEFT,
+  NAV_POSITION_TOP
+} from "react-dates/lib/constants";
+import isInclusivelyAfterDay from "react-dates/lib/utils/isInclusivelyAfterDay";
+
+const defaultProps = {
+  autoFocus: false,
+  autoFocusEndDate: false,
+  initialStartDate: null,
+  initialEndDate: null,
+
+  // input related props
+  startDateId: START_DATE,
+  startDatePlaceholderText: "Start Date",
+  endDateId: END_DATE,
+  endDatePlaceholderText: "End Date",
+  disabled: false,
+  required: false,
+  screenReaderInputMessage: "",
+  showClearDates: false,
+  showDefaultInputIcon: false,
+  customInputIcon: null,
+  customArrowIcon: null,
+  customCloseIcon: null,
+  block: false,
+  small: false,
+  regular: false,
+
+  // calendar presentation and interaction related props
+  renderMonthText: null,
+  orientation: HORIZONTAL_ORIENTATION,
+  anchorDirection: ANCHOR_LEFT,
+  horizontalMargin: 0,
+  withPortal: false,
+  withFullScreenPortal: false,
+  initialVisibleMonth: null,
+  numberOfMonths: 2,
+  keepOpenOnDateSelect: false,
+  reopenPickerOnClearDates: false,
+  isRTL: false,
+
+  // navigation related props
+  navPosition: NAV_POSITION_TOP,
+  navPrev: null,
+  navNext: null,
+  onPrevMonthClick() {},
+  onNextMonthClick() {},
+  onClose() {},
+
+  // day presentation and interaction related props
+  renderCalendarDay: undefined,
+  renderDayContents: null,
+  minimumNights: 1,
+  enableOutsideDays: false,
+  isDayBlocked: () => false,
+  isOutsideRange: day => !isInclusivelyAfterDay(day, moment()),
+  isDayHighlighted: () => false,
+
+  displayFormat: () => moment.localeData().longDateFormat("L"),
+  monthFormat: "MMMM YYYY",
+  phrases: DateRangePickerPhrases,
+
+  stateDateWrapper: date => date
+};
 
 const DatePickerContainer = styled.div`
   .SingleDatePickerInput,
@@ -99,36 +175,111 @@ const DatePickerContainer = styled.div`
   .DayPickerKeyboardShortcuts_show__topRight:hover:before {
     border-right: 33px solid ${colours.primaryDark};
   }
+
   .CalendarDay__selected_span,
-  .CalendarDay__hovered_span {
-    background: ${colours.primaryLightest};
-    border: 1px solid ${colours.primaryLightest};
-    color: #fff;
-  }
-  .CalendarDay__selected_span:active,
-  .CalendarDay__selected_span:hover {
+  .CalendarDay__hovered_span,
+  .CalendarDay__hovered_span:active {
     background: ${colours.primaryLight};
     border: 1px solid ${colours.primaryLight};
+    color: ${colours.white};
+  }
+  /*  .CalendarDay__hovered_span, */
+  .CalendarDay__hovered_span:hover {
+    background: ${colours.primary};
+    border: 1px double ${colours.primary};
+    color: ${colours.white};
+  }
+
+  .CalendarDay__selected_span:active,
+  .CalendarDay__selected_span:hover {
+    background: ${colours.primaryDarker};
+    border: 1px solid ${colours.primaryDarker};
   }
   .DateInput_fang {
     margin-top: 1px;
   }
 `;
 
+/**
+ *
+ * Datepicker uses airbnb's react datepicker under the hood. This is just a wrapper to override styles, the only props you need to specify is either single or range. For all functionality and additional required props refer to documentation here: <https://github.com/airbnb/react-dates>
+ */
+
 class DatePicker extends React.Component {
+  constructor(props) {
+    super(props);
+
+    let focusedInput = null;
+    if (props.autoFocus) {
+      focusedInput = START_DATE;
+    } else if (props.autoFocusEndDate) {
+      focusedInput = END_DATE;
+    }
+
+    this.state = {
+      focusedInput,
+      startDate: props.initialStartDate,
+      endDate: props.initialEndDate
+    };
+
+    this.onDatesChange = this.onDatesChange.bind(this);
+    this.onFocusChange = this.onFocusChange.bind(this);
+  }
+
+  onDatesChange({ startDate, endDate }) {
+    const { stateDateWrapper } = this.props;
+    this.setState({
+      startDate: startDate && stateDateWrapper(startDate),
+      endDate: endDate && stateDateWrapper(endDate)
+    });
+  }
+
+  onFocusChange(focusedInput) {
+    this.setState({ focusedInput });
+  }
+
   render() {
-    const { single, range, ...pickerProps } = this.props;
+    const { focusedInput, startDate, endDate } = this.state;
+    const { single, range } = this.props;
+
+    // autoFocus, autoFocusEndDate, initialStartDate and initialEndDate are helper props for the
+    // example wrapper but are not props on the SingleDatePicker itself and
+    const props = omit(this.props, [
+      "autoFocus",
+      "autoFocusEndDate",
+      "initialStartDate",
+      "initialEndDate",
+      "stateDateWrapper"
+    ]);
+    /*    const { single, range } = this.props; */
+
     return (
       <DatePickerContainer>
         {single ? (
-          <SingleDatePicker {...pickerProps} />
+          <SingleDatePicker
+            {...props}
+            date={this.state.date} // momentPropTypes.momentObj or null
+            onDateChange={date => this.setState({ date })} // PropTypes.func.isRequired
+            focused={this.state.focused} // PropTypes.bool
+            onFocusChange={({ focused }) => this.setState({ focused })} // PropTypes.func.isRequired
+            id="your_unique_id" // PropTypes.string.isRequired,
+          />
         ) : range ? (
-          <DateRangePicker {...pickerProps} />
+          <DateRangePicker
+            {...props}
+            onDatesChange={this.onDatesChange}
+            onFocusChange={this.onFocusChange}
+            focusedInput={focusedInput}
+            startDate={startDate}
+            endDate={endDate}
+          />
         ) : null}
       </DatePickerContainer>
     );
   }
 }
+
+DatePicker.defaultProps = defaultProps;
 
 DatePicker.propTypes = {
   /** Specifies a single date picker */
@@ -136,8 +287,28 @@ DatePicker.propTypes = {
   /** Specifies a range date picker */
   range: PropTypes.bool,
   /** Specifies that datepicker is on a dark background */
-  inverted: PropTypes.bool
+  inverted: PropTypes.bool,
+  /**
+   * Should not be visible
+   * @ignore
+   */
+  autoFocus: PropTypes.bool,
+  autoFocusEndDate: PropTypes.bool,
+  stateDateWrapper: PropTypes.func,
+  initialStartDate: momentPropTypes.momentObj,
+  initialEndDate: momentPropTypes.momentObj,
+  displayFormat: PropTypes.string,
+
+  ...omit(DateRangePickerShape, [
+    "startDate",
+    "endDate",
+    "onDatesChange",
+    "focusedInput",
+    "onFocusChange"
+  ])
 };
 
-/** @component */
+/**
+ * Test description
+ */
 export default DatePicker;
