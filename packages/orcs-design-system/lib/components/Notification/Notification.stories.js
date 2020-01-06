@@ -20,7 +20,7 @@ export default {
 
 export const basicNotification = () => (
   <Notification icon={["fas", "share-square"]}>
-    Default notification message for messages that aren't super important, e.g.
+    Default notification message for messages that are not super important, e.g.
     Link shared.
   </Notification>
 );
@@ -57,7 +57,8 @@ textNotification.story = {
 
 export const closeDisabled = () => (
   <Notification closable={false}>
-    Closing this notification is disabled, this should be used for persistant notifications e.g. Stage 1 is now locked and is read-only.
+    Closing this notification is disabled, this should be used for persistant
+    notifications e.g. Stage 1 is now locked and is read-only.
   </Notification>
 );
 closeDisabled.story = {

@@ -3,7 +3,7 @@ import Divider from ".";
 import Layout from "../Layout";
 
 export default {
-  title: "Design System|Divider",
+  title: "Divider",
   decorators: [storyFn => <Layout padding>{storyFn()}</Layout>],
   parameters: {
     component: Divider
