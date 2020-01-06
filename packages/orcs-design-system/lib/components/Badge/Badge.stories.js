@@ -3,7 +3,7 @@ import Badge from ".";
 import Layout from "../Layout";
 
 export default {
-  title: "DESIGN SYSTEM|Badge",
+  title: "Badge",
   parameters: {
     component: Badge
   }

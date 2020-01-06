@@ -5,7 +5,7 @@ import Loading from "../Loading";
 import Flex from "../Flex";
 
 export default {
-  title: "DESIGN SYSTEM|Notification",
+  title: "Notification",
   decorators: [
     storyFn => (
       <Layout padding childVerticalSpacing>

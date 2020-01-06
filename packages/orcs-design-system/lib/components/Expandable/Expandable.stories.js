@@ -3,7 +3,7 @@ import Expandable from ".";
 import Typography from "../Typography";
 
 export default {
-  title: "Design System|Expandable",
+  title: "Expandable",
   parameters: {
     component: Expandable
   }

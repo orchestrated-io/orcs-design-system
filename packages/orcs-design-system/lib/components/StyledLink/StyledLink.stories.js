@@ -5,7 +5,7 @@ import Flex from "../Flex";
 import { BrowserRouter } from "react-router-dom";
 
 export default {
-  title: "DESIGN SYSTEM|StyledLink",
+  title: "StyledLink",
   decorators: [
     storyFn => (
       <Layout padding childChildHorizontalSpacing>

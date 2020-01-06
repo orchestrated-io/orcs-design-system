@@ -4,7 +4,7 @@ import StyledLink from "../StyledLink";
 import { Avatar, LoggedInAs, Tenant, UserName } from ".";
 
 export default {
-  title: "Design System|Header",
+  title: "Header",
   parameters: {
     component: Header
   }

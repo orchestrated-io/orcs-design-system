@@ -3,7 +3,7 @@ import Layout from "../Layout";
 import Loading from ".";
 
 export default {
-  title: "Design System|Loading",
+  title: "Loading",
   parameters: {
     component: Loading
   }

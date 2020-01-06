@@ -9,7 +9,7 @@ import StyledLink from "../StyledLink";
 import colours from "../../colours";
 
 export default {
-  title: "Design System|Card",
+  title: "Card",
   decorators: [
     storyFn => (
       <Layout background paddingDouble childVerticalSpacing>
