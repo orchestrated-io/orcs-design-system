@@ -4,7 +4,7 @@ import Layout from "../Layout";
 import Flex from "../Flex";
 
 export default {
-  title: "DESIGN SYSTEM|TextArea",
+  title: "TextArea",
   component: TextArea,
   decorators: [
     storyFn => (

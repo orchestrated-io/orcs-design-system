@@ -2,7 +2,7 @@ import React from "react";
 import Layout from ".";
 
 export default {
-  title: "Design System|Layout",
+  title: "Layout",
   decorators: [storyFn => <Layout childVerticalSpacing>{storyFn()}</Layout>],
   parameters: {
     component: Layout

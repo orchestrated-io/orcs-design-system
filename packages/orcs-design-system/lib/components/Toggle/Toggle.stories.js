@@ -4,7 +4,7 @@ import Layout from "../Layout";
 import Flex from "../Flex";
 
 export default {
-  title: "DESIGN SYSTEM|Toggle",
+  title: "Toggle",
   component: Toggle,
   decorators: [
     storyFn => (

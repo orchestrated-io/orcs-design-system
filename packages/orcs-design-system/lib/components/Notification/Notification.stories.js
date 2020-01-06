@@ -3,7 +3,7 @@ import Notification from ".";
 import Layout from "../Layout";
 
 export default {
-  title: "DESIGN SYSTEM|Notification",
+  title: "Notification",
   decorators: [
     storyFn => (
       <Layout padding childVerticalSpacing>

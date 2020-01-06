@@ -5,7 +5,7 @@ import Icon from "../Icon";
 import Layout from "../Layout";
 
 export default {
-  title: "DESIGN SYSTEM|Button",
+  title: "Button",
   decorators: [storyFn => <Layout childVerticalSpacing>{storyFn()}</Layout>],
   parameters: {
     component: Button

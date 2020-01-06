@@ -4,7 +4,7 @@ import Layout from "../Layout";
 import TextInput from ".";
 
 export default {
-  title: "DESIGN SYSTEM|TextInput",
+  title: "TextInput",
   component: TextInput,
   decorators: [
     storyFn => (

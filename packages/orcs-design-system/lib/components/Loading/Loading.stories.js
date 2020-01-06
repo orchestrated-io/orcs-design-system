@@ -3,7 +3,7 @@ import Layout from "../Layout";
 import Loading from ".";
 
 export default {
-  title: "Design System|Loading",
+  title: "Loading",
   decorators: [storyFn => <Layout padding>{storyFn()}</Layout>],
   parameters: {
     component: Loading

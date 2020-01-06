@@ -2,7 +2,7 @@ import React from "react";
 import Expandable from ".";
 
 export default {
-  title: "Design System|Expandable",
+  title: "Expandable",
   parameters: {
     component: Expandable
   }

@@ -5,7 +5,7 @@ import Layout from "../Layout";
 import Flex from "../Flex";
 
 export default {
-  title: "DESIGN SYSTEM|Popover",
+  title: "Popover",
   decorators: [
     storyFn => (
       <Layout padding childChildHorizontalSpacing>

@@ -4,7 +4,7 @@ import Layout from "../Layout";
 import Flex from "../Flex";
 
 export default {
-  title: "DESIGN SYSTEM|Tag",
+  title: "Tag",
   component: Tag,
   decorators: [
     storyFn => (
