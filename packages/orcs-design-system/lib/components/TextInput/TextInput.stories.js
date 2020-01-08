@@ -4,7 +4,7 @@ import Layout from "../Layout";
 import TextInput from ".";
 
 export default {
-  title: "DESIGN SYSTEM|TextInput",
+  title: "TextInput",
   component: TextInput,
   decorators: [
     storyFn => (
@@ -48,16 +48,13 @@ export const standard = () => [
     mandatory
   />
 ];
-standard.story = {
-  name: "Standard"
-};
 
 const numberProps = {
   decimalScale: 2,
   prefix: "$"
 };
 
-export const number = () => [
+export const numberType = () => [
   <TextInput
     id="numInput1"
     key="numInput1"
@@ -66,9 +63,6 @@ export const number = () => [
     value="345345.55"
   />
 ];
-number.story = {
-  name: "Number type"
-};
 
 export const floatingLabel = () => [
   <TextInput
@@ -107,9 +101,6 @@ export const floatingLabel = () => [
     mandatory
   />
 ];
-floatingLabel.story = {
-  name: "Floating label"
-};
 
 export const withIcons = () => [
   <TextInput
@@ -149,6 +140,3 @@ export const withIcons = () => [
     iconRight={["fas", "search"]}
   />
 ];
-withIcons.story = {
-  name: "With icons"
-};

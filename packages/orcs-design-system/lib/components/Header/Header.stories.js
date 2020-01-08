@@ -4,24 +4,24 @@ import StyledLink from "../StyledLink";
 import { Avatar, LoggedInAs, Tenant, UserName } from ".";
 
 export default {
-  title: "Design System|Header",
+  title: "Header",
   parameters: {
     component: Header
   }
 };
 
-export const exampleHeader = () => (
+export const standard = () => (
   <>
     <Header
       appName="My App"
       rightAlignedChildren={
-        <React.Fragment>
+        <>
           <Avatar src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg" />
           <LoggedInAs>
             <UserName>John Smith</UserName>
             <Tenant>orchestrated</Tenant>
           </LoggedInAs>
-        </React.Fragment>
+        </>
       }
     >
       <StyledLink href="#" white bold active>
@@ -36,6 +36,3 @@ export const exampleHeader = () => (
     </Header>
   </>
 );
-exampleHeader.story = {
-  name: "Standard"
-};

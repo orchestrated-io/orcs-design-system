@@ -3,7 +3,7 @@ import Checkbox from ".";
 import Layout from "../Layout";
 
 export default {
-  title: "Design System|Checkbox",
+  title: "Checkbox",
   decorators: [storyFn => <Layout childVerticalSpacing>{storyFn()}</Layout>],
   parameters: {
     component: Checkbox
@@ -15,7 +15,7 @@ defaultCheckbox.story = {
   name: "Default"
 };
 
-export const colouredVariants = () => (
+export const colours = () => (
   <>
     <Checkbox label="Primary colour checkbox" colour="primary" />
     <Checkbox label="Success colour checkbox" colour="success" />
@@ -23,30 +23,17 @@ export const colouredVariants = () => (
     <Checkbox label="Danger colour checkbox" colour="danger" />
   </>
 );
-colouredVariants.story = {
-  name: "Colours"
-};
 
-export const disabledCheckbox = () => (
+export const disabled = () => (
   <>
     <Checkbox disabled label="Disabled checkbox" />
     <Checkbox checked disabled label="Disabled ticked checkbox" />
   </>
 );
-disabledCheckbox.story = {
-  name: "Disabled"
-};
+export const checked = () => <Checkbox checked label="Ticked checkbox" />;
 
-export const checkedBox = () => <Checkbox checked label="Ticked checkbox" />;
-checkedBox.story = {
-  name: "Ticked"
-};
-
-export const invertedCheckbox = () => (
+export const onDarkBackground = () => (
   <Layout padding backgroundDark>
     <Checkbox colour="white" label="Inverted checkbox" />
   </Layout>
 );
-invertedCheckbox.story = {
-  name: "Inverted"
-};

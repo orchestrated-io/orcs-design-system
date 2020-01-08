@@ -5,7 +5,7 @@ import Icon from "../Icon";
 import Layout from "../Layout";
 
 export default {
-  title: "DESIGN SYSTEM|Button",
+  title: "Button",
   decorators: [storyFn => <Layout childVerticalSpacing>{storyFn()}</Layout>],
   parameters: {
     component: Button
@@ -27,9 +27,7 @@ export const size = () => (
     </Button>
   </>
 );
-size.story = {
-  name: "Size"
-};
+
 export const alternateColours = () => (
   <>
     <Button colour="success" onClick={action("clicked")}>
@@ -40,10 +38,8 @@ export const alternateColours = () => (
     </Button>
   </>
 );
-alternateColours.story = {
-  name: "Alternate colours"
-};
-export const alternateStyle = () => (
+
+export const ghostStyle = () => (
   <>
     <Button small ghost onClick={action("clicked")}>
       Small ghost button
@@ -56,23 +52,12 @@ export const alternateStyle = () => (
     </Button>
   </>
 );
-alternateStyle.story = {
-  name: "Ghost style"
-};
 
-export const fullWidthButton = () => (
-  <Button fullWidth>Full width button</Button>
-);
-fullWidthButton.story = {
-  name: "Full-width"
-};
+export const fullWidth = () => <Button fullWidth>Full width button</Button>;
 
-export const disabledButton = () => <Button disabled>Disabled buttons</Button>;
-disabledButton.story = {
-  name: "Disabled"
-};
+export const disabled = () => <Button disabled>Disabled buttons</Button>;
 
-export const waitingButton = () => (
+export const loadingState = () => (
   <>
     <Button isLoading>Loading...</Button>
     <Button isLoading colour="success">
@@ -83,11 +68,8 @@ export const waitingButton = () => (
     </Button>
   </>
 );
-waitingButton.story = {
-  name: "Waiting state"
-};
 
-export const iconButton = () => (
+export const withIcon = () => (
   <>
     <Button iconLeft>
       <Icon icon={["fas", "user-plus"]} />
@@ -99,11 +81,8 @@ export const iconButton = () => (
     </Button>
   </>
 );
-iconButton.story = {
-  name: "With Icons"
-};
 
-export const iconOnlyButton = () => (
+export const iconOnly = () => (
   <>
     <Button small iconOnly>
       <Icon icon={["far", "calendar-alt"]} />
@@ -116,6 +95,3 @@ export const iconOnlyButton = () => (
     </Button>
   </>
 );
-iconOnlyButton.story = {
-  name: "Icon Only"
-};

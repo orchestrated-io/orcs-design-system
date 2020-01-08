@@ -5,7 +5,7 @@ import Layout from "../Layout";
 import Flex from "../Flex";
 
 export default {
-  title: "DESIGN SYSTEM|Popover",
+  title: "Popover",
   decorators: [
     storyFn => (
       <Layout padding childChildHorizontalSpacing>
@@ -18,18 +18,15 @@ export default {
   }
 };
 
-export const standardPopover = () => (
+export const basic = () => (
   <>
     <Popover text="Text description of what this button does">
       <Button>Hover Me!</Button>
     </Popover>
   </>
 );
-standardPopover.story = {
-  name: "Basic"
-};
 
-export const directionPopover = () => (
+export const direction = () => (
   <>
     <Popover direction="right" text="Text description of what this button does">
       <Button>Right Hover</Button>
@@ -51,31 +48,22 @@ export const directionPopover = () => (
     </Popover>
   </>
 );
-directionPopover.story = {
-  name: "Direction"
-};
 
-export const widthPopover = () => (
+export const specifiedWidth = () => (
   <>
     <Popover text="Text description of what this button does" width="100px">
       <Button>Hover Me</Button>
     </Popover>
   </>
 );
-widthPopover.story = {
-  name: "Width"
-};
 
-export const alignPopover = () => (
+export const textAlignment = () => (
   <Popover textAlign="center" text="Text description of what this button does">
     <Button>Hover Me</Button>
   </Popover>
 );
-alignPopover.story = {
-  name: "Text Alignment"
-};
 
-export const inlinePopover = () => (
+export const inline = () => (
   <Layout childVerticalSpacing childHorizontalSpacing>
     <Popover text="Text description of what this button does" inlineBlock>
       <Button>Inline Block Set</Button>
@@ -94,6 +82,3 @@ export const inlinePopover = () => (
     </Popover>
   </Layout>
 );
-inlinePopover.story = {
-  name: "Inline"
-};

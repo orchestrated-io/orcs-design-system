@@ -9,7 +9,7 @@ import StyledLink from "../StyledLink";
 import colours from "../../colours";
 
 export default {
-  title: "Design System|Card",
+  title: "Card",
   decorators: [
     storyFn => (
       <Layout background paddingDouble childVerticalSpacing>
@@ -35,9 +35,6 @@ export const basic = () => (
     </StyledLink>
   </Card>
 );
-basic.story = {
-  name: "Basic"
-};
 
 export const alternate = () => (
   <Card alternate title="Card title" subtitle="18">
@@ -47,20 +44,14 @@ export const alternate = () => (
     </Typography.P>
   </Card>
 );
-alternate.story = {
-  name: "Alternate"
-};
 
 export const centered = () => (
   <Card center title="Card heading" subtitle="Subtitle">
     <Typography.P>This is an example of a centered card.</Typography.P>
   </Card>
 );
-centered.story = {
-  name: "Centered"
-};
 
-export const colour = () => (
+export const colouredBorder = () => (
   <>
     <Card title="Blue border card" colour="primary">
       <Typography.P>
@@ -94,11 +85,8 @@ export const colour = () => (
     </Card>
   </>
 );
-colour.story = {
-  name: "Coloured Border"
-};
 
-export const icon = () => (
+export const iconInHeading = () => (
   <Card alternate icon={["fas", "map-marker-alt"]} title="Heading with Icon">
     <Typography.P>
       This is an alternate style card that supports a Font Awesome icon in the
@@ -106,11 +94,8 @@ export const icon = () => (
     </Typography.P>
   </Card>
 );
-icon.story = {
-  name: "Icon"
-};
 
-export const fluid = () => (
+export const fluidWidth = () => (
   <Card fluid title="Full-width card">
     <Typography.P>
       This is an example of a fluid card. It will stretch to 100% width and
@@ -118,11 +103,8 @@ export const fluid = () => (
     </Typography.P>
   </Card>
 );
-fluid.story = {
-  name: "Fluid"
-};
 
-export const specifyWidth = () => (
+export const specifiedWidth = () => (
   <Layout childVerticalSpacing childChildHorizontalSpacing>
     <Flex center>
       <Card width="300px" title="300px Card">
@@ -136,9 +118,6 @@ export const specifyWidth = () => (
     </Flex>
   </Layout>
 );
-specifyWidth.story = {
-  name: "Specific Width"
-};
 
 export const changeInValue = () => (
   <>
@@ -160,9 +139,6 @@ export const changeInValue = () => (
     </Card>
   </>
 );
-changeInValue.story = {
-  name: "Change in Value"
-};
 
 export const complexExample1 = () => (
   <>
@@ -229,9 +205,6 @@ export const complexExample1 = () => (
     </Card>
   </>
 );
-complexExample1.story = {
-  name: "Complex Example 1"
-};
 
 export const complexExample2 = () => (
   <Layout childVerticalSpacing childChildHorizontalSpacing>
@@ -259,6 +232,3 @@ export const complexExample2 = () => (
     </Flex>
   </Layout>
 );
-complexExample2.story = {
-  name: "Complex Example 2"
-};

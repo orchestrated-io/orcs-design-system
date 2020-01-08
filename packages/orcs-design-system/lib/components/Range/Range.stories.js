@@ -3,25 +3,19 @@ import Range from ".";
 import Layout from "../Layout";
 
 export default {
-  title: "DESIGN SYSTEM|Range",
+  title: "Range",
   decorators: [storyFn => <Layout padding>{storyFn()}</Layout>],
   parameters: {
     component: Range
   }
 };
 
-export const basicRange = () => <Range min={0} max={20} defaultValue={10} />;
-basicRange.story = {
-  name: "Basic"
-};
+export const basic = () => <Range min={0} max={20} defaultValue={10} />;
 
-export const invertedRange = () => (
+export const onDarkBackground = () => (
   <>
     <Layout backgroundDark paddingDouble>
       <Range min={0} max={20} defaultValue={10} inverted />
     </Layout>
   </>
 );
-invertedRange.story = {
-  name: "Inverted"
-};

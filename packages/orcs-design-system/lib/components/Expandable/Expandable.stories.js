@@ -3,13 +3,13 @@ import Expandable from ".";
 import Typography from "../Typography";
 
 export default {
-  title: "Design System|Expandable",
+  title: "Expandable",
   parameters: {
     component: Expandable
   }
 };
 
-export const basicExpandable = () => (
+export const basic = () => (
   <Expandable title="Details">
     <Typography.P>
       Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
@@ -20,11 +20,8 @@ export const basicExpandable = () => (
     </Typography.P>
   </Expandable>
 );
-basicExpandable.story = {
-  name: "Basic"
-};
 
-export const openExpandable = () => (
+export const open = () => (
   <Expandable isOpen title="Details">
     <Typography.P>
       Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
@@ -35,9 +32,6 @@ export const openExpandable = () => (
     </Typography.P>
   </Expandable>
 );
-openExpandable.story = {
-  name: "Open"
-};
 
 export const withSubtitle = () => (
   <Expandable title="Complex example" subtitle="Subtitle">
@@ -50,9 +44,6 @@ export const withSubtitle = () => (
     </Typography.P>
   </Expandable>
 );
-withSubtitle.story = {
-  name: "With Subtitle"
-};
 
 export const withBadge = () => (
   <Expandable title="Complex example" badge="status" badgeColour="primaryDark">
@@ -65,6 +56,3 @@ export const withBadge = () => (
     </Typography.P>
   </Expandable>
 );
-withBadge.story = {
-  name: "With Badge"
-};

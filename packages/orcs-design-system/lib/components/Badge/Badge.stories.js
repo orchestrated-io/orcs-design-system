@@ -3,16 +3,13 @@ import Badge from ".";
 import Layout from "../Layout";
 
 export default {
-  title: "DESIGN SYSTEM|Badge",
+  title: "Badge",
   parameters: {
     component: Badge
   }
 };
 
-export const defaultBadge = () => <Badge>Default</Badge>;
-defaultBadge.story = {
-  name: "Default"
-};
+export const basic = () => <Badge>Default</Badge>;
 
 export const colour = () => (
   <>
@@ -24,11 +21,8 @@ export const colour = () => (
     <Badge colour="primaryDarkest">High priority</Badge>
   </>
 );
-colour.story = {
-  name: "Colour"
-};
 
-export const inverted = () => (
+export const onDarkBackground = () => (
   <Layout padding backgroundDark>
     <Badge inverted>Default</Badge>
     <Badge inverted colour="success">
@@ -51,6 +45,3 @@ export const inverted = () => (
     </Badge>
   </Layout>
 );
-inverted.story = {
-  name: "Inverted"
-};

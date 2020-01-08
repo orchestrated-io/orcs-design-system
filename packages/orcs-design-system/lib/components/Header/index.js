@@ -139,24 +139,21 @@ const Hamburger = styled.span`
 `;
 
 /**
- * Header component for app layout. Supports app name, username and avatar as props. Add links as children.
+ * Header component for app layout. Supports app name, username and avatar as props. Ad links as children.
  *
- * At screen sizes less than 1100px the links are moved into a mobile menu toggled by a burger icon button to play nice with smaller devices.
+ * At screen sizes less than 1100px the links are instead moved into a mobile menu toggled by a burger icon button to play nice with smaller devices.
  */
-class Header extends React.Component {
-  render() {
-    const { appName, children, rightAlignedChildren } = this.props;
-    return (
-      <Bar>
-        <AppName>{appName}</AppName>
-        {children}
-        <RightAlignedChildren>{rightAlignedChildren}</RightAlignedChildren>
-        <MobileMenuToggle htmlFor="mobileMenuToggle">
-          <Hamburger />
-        </MobileMenuToggle>
-      </Bar>
-    );
-  }
+export default function Header({ appName, children, rightAlignedChildren }) {
+  return (
+    <Bar>
+      <AppName>{appName}</AppName>
+      {children}
+      <RightAlignedChildren>{rightAlignedChildren}</RightAlignedChildren>
+      <MobileMenuToggle htmlFor="mobileMenuToggle">
+        <Hamburger />
+      </MobileMenuToggle>
+    </Bar>
+  );
 }
 
 Header.propTypes = {
@@ -172,6 +169,3 @@ Header.propTypes = {
 };
 
 export { Avatar, LoggedInAs, UserName, Tenant };
-
-/** @component */
-export default Header;

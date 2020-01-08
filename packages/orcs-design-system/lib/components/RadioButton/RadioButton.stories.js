@@ -3,7 +3,7 @@ import RadioButton from ".";
 import Layout from "../Layout";
 
 export default {
-  title: "DESIGN SYSTEM|RadioButton",
+  title: "RadioButton",
   decorators: [storyFn => <Layout childVerticalSpacing>{storyFn()}</Layout>],
   parameters: {
     component: RadioButton
@@ -20,14 +20,11 @@ defaultRadioButton.story = {
   name: "Default"
 };
 
-export const checkedRadioButton = () => (
+export const checked = () => (
   <RadioButton name="RadioButtons02" label="Default checked radio" checked />
 );
-checkedRadioButton.story = {
-  name: "Checked"
-};
 
-export const disabledRadioButton = () => (
+export const disabled = () => (
   <>
     <RadioButton
       name="RadioButtons03"
@@ -43,11 +40,8 @@ export const disabledRadioButton = () => (
     />
   </>
 );
-disabledRadioButton.story = {
-  name: "Disabled"
-};
 
-export const colourRadioButton = () => (
+export const coloured = () => (
   <>
     <RadioButton
       name="RadioButtons"
@@ -74,11 +68,8 @@ export const colourRadioButton = () => (
     />
   </>
 );
-colourRadioButton.story = {
-  name: "Colour"
-};
 
-export const invertedRadioButton = () => (
+export const onDarkBackground = () => (
   <>
     <Layout padding backgroundDark>
       <RadioButton
@@ -89,6 +80,3 @@ export const invertedRadioButton = () => (
     </Layout>
   </>
 );
-invertedRadioButton.story = {
-  name: "Inverted"
-};
