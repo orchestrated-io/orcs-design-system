@@ -15,14 +15,9 @@ export default {
   ]
 };
 
-export const basicTooltip = () => (
-  <Tooltip>Basic tooltip example description</Tooltip>
-);
-basicTooltip.story = {
-  name: "Basic"
-};
+export const basic = () => <Tooltip>Basic tooltip example description</Tooltip>;
 
-export const directionTooltip = () => (
+export const direction = () => (
   <>
     <Tooltip direction="top">Top tooltip example description</Tooltip>
     <Tooltip direction="right">Right tooltip example description</Tooltip>
@@ -30,16 +25,11 @@ export const directionTooltip = () => (
     <Tooltip direction="bottom">Bottom tooltip example description</Tooltip>
   </>
 );
-directionTooltip.story = {
-  name: "Direction"
-};
-export const inverted = () => (
+
+export const onDarkBackground = () => (
   <>
     <Layout paddingDouble backgroundDark width="100%">
       <Tooltip inverted>Inverted example description</Tooltip>
     </Layout>
   </>
 );
-inverted.story = {
-  name: "Inverted"
-};

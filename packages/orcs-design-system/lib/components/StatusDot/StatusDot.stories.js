@@ -16,12 +16,9 @@ export default {
   ]
 };
 
-export const basicDot = () => <StatusDot />;
-basicDot.story = {
-  name: "Basic"
-};
+export const basic = () => <StatusDot />;
 
-export const complexDots = () => (
+export const complexExamples = () => (
   <>
     <Popover
       direction="top"
@@ -31,6 +28,7 @@ export const complexDots = () => (
     >
       <StatusDot on />
     </Popover>
+
     <Popover
       direction="top"
       text="Team has a dedicated Engineering Lead. STATUS: Not met"
@@ -39,14 +37,7 @@ export const complexDots = () => (
     >
       <StatusDot />
     </Popover>
-    <Popover
-      direction="top"
-      text="Team has less than 13 members. STATUS: Not met"
-      textAlign="left"
-      width="250px"
-    >
-      <StatusDot />
-    </Popover>
+
     <Popover
       direction="top"
       text="Team members should share no more than 4 line managers. STATUS: Met"
@@ -55,6 +46,7 @@ export const complexDots = () => (
     >
       <StatusDot on />
     </Popover>
+
     <Popover
       direction="top"
       text="Team members are in less than 3 locations. STATUS: Not enough data"
@@ -65,6 +57,3 @@ export const complexDots = () => (
     </Popover>
   </>
 );
-complexDots.story = {
-  name: "Complex"
-};

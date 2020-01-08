@@ -18,15 +18,12 @@ export default {
   }
 };
 
-export const basicNotification = () => (
+export const basic = () => (
   <Notification icon={["fas", "share-square"]}>
     Default notification message for messages that are not super important, e.g.
     Link shared.
   </Notification>
 );
-basicNotification.story = {
-  name: "Basic"
-};
 
 export const colours = () => (
   <>
@@ -44,16 +41,10 @@ export const colours = () => (
     </Notification>
   </>
 );
-colours.story = {
-  name: "Colours"
-};
 
-export const textNotification = () => (
+export const textOnly = () => (
   <Notification>Text-only notification</Notification>
 );
-textNotification.story = {
-  name: "Text Only"
-};
 
 export const closeDisabled = () => (
   <Notification closable={false}>
@@ -61,9 +52,6 @@ export const closeDisabled = () => (
     notifications e.g. Stage 1 is now locked and is read-only.
   </Notification>
 );
-closeDisabled.story = {
-  name: "Close Disabled"
-};
 
 export const inProgress = () => (
   <Notification closable={false}>
@@ -77,15 +65,9 @@ export const inProgress = () => (
     </Layout>
   </Notification>
 );
-inProgress.story = {
-  name: "In Progress"
-};
 
 export const floatingNotification = () => (
   <Notification floating bottom="20px" right="20px" icon={["fas", "bell"]}>
     Floating notification.
   </Notification>
 );
-floatingNotification.story = {
-  name: "Floating Notification"
-};

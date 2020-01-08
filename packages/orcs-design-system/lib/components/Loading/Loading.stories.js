@@ -14,27 +14,18 @@ basicLoading.story = {
   name: "Default"
 };
 
-export const largeLoading = () => <Loading large />;
-largeLoading.story = {
-  name: "Large"
-};
+export const large = () => <Loading large />;
 
-export const centeredLoading = () => (
+export const centered = () => (
   <Layout childVerticalSpacing>
     <Loading centered />
     <Loading large centered />
   </Layout>
 );
-centeredLoading.story = {
-  name: "Centered"
-};
 
-export const invertedLoading = () => (
+export const onDarkBackground = () => (
   <Layout backgroundDark padding childVerticalSpacing>
     <Loading inverted />
     <Loading large inverted />
   </Layout>
 );
-invertedLoading.story = {
-  name: "Inverted"
-};

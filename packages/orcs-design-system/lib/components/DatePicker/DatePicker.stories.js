@@ -7,9 +7,15 @@ import "react-dates/initialize";
 
 export default {
   title: "DatePicker",
-  decorators: [storyFn => <Layout height="300px">{storyFn()}</Layout>],
+  decorators: [storyFn => <Layout height="400px">{storyFn()}</Layout>],
   component: DatePicker
 };
 
-export const singleDatePicker = () => <DatePicker single />;
-export const rangeDatePicker = () => <DatePicker range />;
+export const singleDate = () => <DatePicker single />;
+export const dateRange = () => <DatePicker range />;
+export const withDarkBackground = () => (
+  <Layout paddingDouble height="100%" backgroundDark childVerticalSpacing>
+    <DatePicker single inverted />
+    <DatePicker range inverted />
+  </Layout>
+);

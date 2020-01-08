@@ -9,40 +9,31 @@ export default {
   }
 };
 
-export const basicLayout = () => (
+export const basic = () => (
   <>
     <Layout>
       <p>This is an example of the basic layout box.</p>
     </Layout>
   </>
 );
-basicLayout.story = {
-  name: "Basic"
-};
 
-export const borderLayout = () => (
+export const border = () => (
   <>
     <Layout padding margin border>
       <p>This is an example of a layout with padding, margin, and border.</p>
     </Layout>
   </>
 );
-borderLayout.story = {
-  name: "Border"
-};
 
-export const backgroundLayout = () => (
+export const background = () => (
   <>
     <Layout padding margin background>
       This is an example of a layout box that has a background.
     </Layout>
   </>
 );
-backgroundLayout.story = {
-  name: "Background"
-};
 
-export const miscLayout = () => (
+export const miscellaneousExamples = () => (
   <>
     <Layout padding margin border background>
       This is an example of a layout box that has both border and background.
@@ -70,6 +61,3 @@ export const miscLayout = () => (
     </Layout>
   </>
 );
-miscLayout.story = {
-  name: "Miscellaneous"
-};

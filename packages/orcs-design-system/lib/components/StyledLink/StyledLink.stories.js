@@ -18,30 +18,21 @@ export default {
   }
 };
 
-export const basicLink = () => <StyledLink href="#">Styled Link</StyledLink>;
-basicLink.story = {
-  name: "Basic"
-};
+export const basic = () => <StyledLink href="#">Styled Link</StyledLink>;
 
-export const activeLink = () => (
+export const active = () => (
   <StyledLink href="#" active>
     Active Link
   </StyledLink>
 );
-activeLink.story = {
-  name: "Active"
-};
 
-export const boldLink = () => (
+export const bold = () => (
   <StyledLink href="#" bold>
     Active Link
   </StyledLink>
 );
-boldLink.story = {
-  name: "Bold"
-};
 
-export const invertedLink = () => (
+export const onDarkBackground = () => (
   <>
     <Layout backgroundDark paddingDouble childChildHorizontalSpacing>
       <Flex center>
@@ -60,9 +51,6 @@ export const invertedLink = () => (
     </Layout>
   </>
 );
-invertedLink.story = {
-  name: "Inverted"
-};
 
 export const customLink = () => (
   <>

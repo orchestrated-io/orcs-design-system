@@ -15,22 +15,13 @@ defaultDivider.story = {
   name: "Default"
 };
 
-export const lightDivider = () => <Divider light />;
-lightDivider.story = {
-  name: "Light"
-};
+export const light = () => <Divider light />;
 
-export const thickDivider = () => <Divider thick />;
-thickDivider.story = {
-  name: "Thick"
-};
+export const thick = () => <Divider thick />;
 
-export const lightThickDivider = () => <Divider light thick />;
-lightThickDivider.story = {
-  name: "Light and Thick"
-};
+export const lightAndThick = () => <Divider light thick />;
 
-export const invertedDivider = () => (
+export const onDarkBackground = () => (
   <>
     <Layout backgroundDark padding childVerticalSpacing>
       <Divider inverted />
@@ -38,11 +29,5 @@ export const invertedDivider = () => (
     </Layout>
   </>
 );
-invertedDivider.story = {
-  name: "Inverted"
-};
 
-export const spanGridDivider = () => <Divider spanGrid />;
-spanGridDivider.story = {
-  name: "Span grid columns"
-};
+export const spanGridColumns = () => <Divider spanGrid />;

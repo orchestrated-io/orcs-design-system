@@ -15,19 +15,11 @@ export default {
   ]
 };
 
-export const basicToggle = () => <Toggle id="autosave" label="Auto save" />;
-basicToggle.story = {
-  name: "Basic"
-};
+export const basic = () => <Toggle id="autosave" label="Auto save" />;
 
-export const smallToggle = () => (
-  <Toggle id="autosave" label="Auto save" small />
-);
-smallToggle.story = {
-  name: "Small"
-};
+export const small = () => <Toggle id="autosave" label="Auto save" small />;
 
-export const invertedToggle = () => (
+export const onDarkBackground = () => (
   <>
     <Layout padding childVerticalSpacing backgroundDark width="100%">
       <Toggle id="autosave4" label="Auto save" inverted small />
@@ -36,6 +28,3 @@ export const invertedToggle = () => (
     </Layout>
   </>
 );
-invertedToggle.story = {
-  name: "Inverted"
-};

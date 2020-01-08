@@ -15,12 +15,9 @@ export default {
   ]
 };
 
-export const basicTag = () => <Tag>Basic Tag</Tag>;
-basicTag.story = {
-  name: "Basic"
-};
+export const basic = () => <Tag>Basic Tag</Tag>;
 
-export const selectedTag = () => (
+export const selected = () => (
   <>
     <Tag selected>devops</Tag>
     <Tag selected>software engineering</Tag>
@@ -28,11 +25,8 @@ export const selectedTag = () => (
     <Tag>digital transformation</Tag>
   </>
 );
-selectedTag.story = {
-  name: "Selected"
-};
 
-export const hideCrossTag = () => (
+export const noCross = () => (
   <>
     <Tag selected hideCross>
       devops
@@ -44,11 +38,8 @@ export const hideCrossTag = () => (
     <Tag>digital transformation</Tag>
   </>
 );
-hideCrossTag.story = {
-  name: "No Cross"
-};
 
-export const disabledTag = () => (
+export const disabled = () => (
   <>
     <Tag disabled>devops</Tag>
     <Tag disabled>software engineering</Tag>
@@ -56,6 +47,3 @@ export const disabledTag = () => (
     <Tag disabled>digital transformation</Tag>
   </>
 );
-disabledTag.story = {
-  name: "Disabled"
-};

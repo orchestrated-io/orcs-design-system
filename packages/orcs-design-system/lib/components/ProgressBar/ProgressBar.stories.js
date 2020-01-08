@@ -10,24 +10,18 @@ export default {
   }
 };
 
-export const basicProgress = () => (
+export const basic = () => (
   <>
     <ProgressBar containerWidth={100} fillWidth={40} />
     <ProgressBar containerWidth={50} fillWidth={70} />
   </>
 );
-basicProgress.story = {
-  name: "Basic"
-};
 
-export const gradientProgress = () => (
+export const gradient = () => (
   <ProgressBar containerWidth={100} fillWidth={40} />
 );
-gradientProgress.story = {
-  name: "Gradient"
-};
 
-export const invertedProgress = () => (
+export const onDarkBackground = () => (
   <>
     <Layout paddingDouble childVerticalSpacing backgroundDark>
       <ProgressBar containerWidth={100} fillWidth={40} inverted />
@@ -35,6 +29,3 @@ export const invertedProgress = () => (
     </Layout>
   </>
 );
-invertedProgress.story = {
-  name: "Inverted"
-};

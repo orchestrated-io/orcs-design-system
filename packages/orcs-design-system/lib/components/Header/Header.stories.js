@@ -10,7 +10,7 @@ export default {
   }
 };
 
-export const exampleHeader = () => (
+export const standard = () => (
   <>
     <Header
       appName="My App"
@@ -36,6 +36,3 @@ export const exampleHeader = () => (
     </Header>
   </>
 );
-exampleHeader.story = {
-  name: "Standard"
-};

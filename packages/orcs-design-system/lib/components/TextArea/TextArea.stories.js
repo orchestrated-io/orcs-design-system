@@ -15,46 +15,26 @@ export default {
   ]
 };
 
-export const basicTextArea = () => <TextArea id="TextArea01" label="Message" />;
-basicTextArea.story = {
-  name: "Basic"
-};
+export const basic = () => <TextArea id="TextArea01" label="Message" />;
 
-export const sizeTextArea = () => (
+export const size = () => (
   <TextArea id="TextArea02" label="Message" cols="50" rows="5" />
 );
-sizeTextArea.story = {
-  name: "Size"
-};
 
-export const invalidTextArea = () => (
+export const invalid = () => (
   <TextArea id="TextArea03" label="Message" invalid />
 );
-invalidTextArea.story = {
-  name: "Invalid"
-};
 
-export const validTextArea = () => (
-  <TextArea id="TextArea04" label="Message" valid />
-);
-validTextArea.story = {
-  name: "Valid"
-};
+export const valid = () => <TextArea id="TextArea04" label="Message" valid />;
 
-export const fullWidthTextArea = () => (
+export const fullWidth = () => (
   <TextArea id="TextArea05" label="Message" fullWidth />
 );
-fullWidthTextArea.story = {
-  name: "Full-Width"
-};
 
-export const invertedTextArea = () => (
+export const onDarkBackground = () => (
   <>
     <Layout backgroundDark paddingDouble width="100%">
       <TextArea id="TextArea05" label="Message" inverted />
     </Layout>
   </>
 );
-invertedTextArea.story = {
-  name: "inverted"
-};
