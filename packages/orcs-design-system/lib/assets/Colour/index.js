@@ -2,8 +2,8 @@ import styled from "styled-components";
 import colours from "../../colours";
 
 const Colour = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
 
   background: ${props =>
     props.black
