@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import colours from "../../colours";
 import { default as ReactSelect } from "react-select";
+import { rgba } from "polished";
 
 const Wrapper = styled.div`
   display: inline-block;
@@ -18,29 +19,130 @@ const Wrapper = styled.div`
  *       const options = [
  *       { value: 'chocolate', label: 'Chocolate' },
  *       { value: 'strawberry', label: 'Strawberry' },
- *       { value: 'vanilla', label: 'Vanilla' }
+ *       { value: 'vanilla', label: 'Vanilla' },
+ *      { value: 'hazelnut', label: 'Hazelnut' },
+ *      { value: 'rocky road', label: 'Rocky Road' }
  *     ]
  * For a full list of the changes, see <https://react-select.com/upgrade-guide>.
  *
- * We are using the default styling of React Select, lightly skinned using the design system colours.
  */
-const Select = forwardRef((props, ref) => {
+const Select = forwardRef((props, ref, inverted) => {
+  const customStyles = {
+    menu: (provided, state) => ({
+      ...provided,
+      borderColor: state.isSelected
+        ? colours.warning
+        : state.isFocused
+        ? colours.primary
+        : null,
+      backgroundColor: props.inverted ? colours.greyDarker : colours.white,
+      color: props.inverted ? colours.white : colours.greyDarkest
+    }),
+    control: (provided, state) => ({
+      ...provided,
+      boxShadow: !state.isFocused
+        ? 0
+        : props.inverted
+        ? `0 0 0 1px ${rgba(colours.primaryLightest, 0.8)}`
+        : `0 0 0 3px ${rgba(colours.primary, 0.4)}`,
+      "&:hover": {
+        borderColor: state.isFocused ? colours.primary : colours.primary
+      },
+      borderColor: state.isFocused ? colours.primary : colours.grey,
+      outline: state.isFocused ? colours.primary : colours.grey,
+      backgroundColor: props.inverted ? colours.greyDarker : colours.white,
+      color: props.inverted ? colours.white : colours.greyDarkest,
+      borderRadius: "6px"
+    }),
+    clearIndicator: (provided, state) => ({
+      ...provided,
+      color:
+        !state.isFocused && !props.inverted
+          ? colours.greyDark
+          : state.isFocused && !props.inverted
+          ? colours.primary
+          : !state.isFocused && props.inverted
+          ? colours.white
+          : colours.primaryLight,
+      "&:hover": {
+        color:
+          !state.isFocused && !props.inverted
+            ? colours.primary
+            : state.isFocused && !props.inverted
+            ? colours.primaryDarkest
+            : !state.isFocused && props.inverted
+            ? colours.primary
+            : colours.white
+      }
+    }),
+    container: provided => ({
+      ...provided,
+      color: props.inverted ? colours.white : colours.grey,
+      backgroundColor: props.inverted ? colours.greyDarker : colours.white
+    }),
+    dropdownIndicator: (provided, state) => ({
+      ...provided,
+      color:
+        !state.isFocused && !props.inverted
+          ? colours.greyDark
+          : state.isFocused && !props.inverted
+          ? colours.primary
+          : !state.isFocused && props.inverted
+          ? colours.white
+          : colours.primaryLight,
+      "&:hover": {
+        color:
+          !state.isFocused && !props.inverted
+            ? colours.primary
+            : state.isFocused && !props.inverted
+            ? colours.primaryDarkest
+            : !state.isFocused && props.inverted
+            ? colours.primary
+            : colours.white
+      }
+    }),
+    multiValue: provided => ({
+      ...provided,
+      backgroundColor: props.inverted ? colours.primaryDark : colours.primary,
+      color: colours.white,
+      borderRadius: "6px"
+    }),
+    multiValueLabel: provided => ({
+      ...provided,
+      backgroundColor: props.inverted ? colours.primaryDark : colours.primary,
+      color: colours.white,
+      borderRadius: "6px"
+    }),
+    multiValueRemove: provided => ({
+      ...provided,
+      backgroundColor: props.inverted ? colours.primaryDark : colours.primary,
+      color: colours.white,
+      borderRadius: "6px",
+      "&:hover": {
+        backgroundColor: colours.primaryDarkest,
+        color: colours.white
+      }
+    }),
+    option: (provided, state) => ({
+      ...provided,
+      backgroundColor:
+        !state.isFocused && !props.inverted
+          ? colours.white
+          : state.isFocused && !props.inverted
+          ? colours.primaryLightest
+          : !state.isFocused && props.inverted
+          ? colours.greyDarker
+          : colours.primaryDark
+    }),
+    placeholder: provided => ({
+      ...provided,
+      color: props.inverted ? colours.white : colours.greyDarkest
+    })
+  };
   return (
     <>
-      <Wrapper>
-        <ReactSelect
-          ref={ref}
-          {...props}
-          theme={theme => ({
-            ...theme,
-            borderRadius: 4,
-            colors: {
-              ...theme.colors,
-              primary25: colours.primaryLightest,
-              primary: colours.primary
-            }
-          })}
-        />
+      <Wrapper inverted={inverted}>
+        <ReactSelect ref={ref} {...props} styles={customStyles} />
       </Wrapper>
     </>
   );
@@ -48,7 +150,9 @@ const Select = forwardRef((props, ref) => {
 
 Select.propTypes = {
   /** Points to options object, see example code above */
-  options: PropTypes.array
+  options: PropTypes.array,
+  /** Styling for dark backgrounds. */
+  inverted: PropTypes.bool
 };
 
 /** @component */
