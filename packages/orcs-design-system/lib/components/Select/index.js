@@ -1,6 +1,7 @@
 import React, { forwardRef } from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { withTheme } from "styled-components";
+import { spacepx, radiuspx } from "../../systemtheme";
 import colours from "../../colours";
 import { default as ReactSelect } from "react-select";
 import { rgba } from "polished";
@@ -43,16 +44,16 @@ const Select = forwardRef((props, ref, inverted) => {
       boxShadow: !state.isFocused
         ? 0
         : props.inverted
-        ? `0 0 0 1px ${rgba(colours.primaryLightest, 0.8)}`
-        : `0 0 0 3px ${rgba(colours.primary, 0.4)}`,
+        ? `0 0 0 ${radiuspx.px1} ${rgba(colours.primaryLightest, 0.8)}`
+        : `0 0 0 ${radiuspx.px1} ${rgba(colours.primary, 0.4)}`,
       "&:hover": {
-        borderColor: state.isFocused ? colours.primary : colours.primary
+        borderColor: colours.primary
       },
       borderColor: state.isFocused ? colours.primary : colours.grey,
       outline: state.isFocused ? colours.primary : colours.grey,
       backgroundColor: props.inverted ? colours.greyDarker : colours.white,
       color: props.inverted ? colours.white : colours.greyDarkest,
-      borderRadius: "6px"
+      borderRadius: radiuspx.px2
     }),
     clearIndicator: (provided, state) => ({
       ...provided,
@@ -105,19 +106,20 @@ const Select = forwardRef((props, ref, inverted) => {
       ...provided,
       backgroundColor: props.inverted ? colours.primaryDark : colours.primary,
       color: colours.white,
-      borderRadius: "6px"
+      borderRadius: radiuspx.px2
     }),
     multiValueLabel: provided => ({
       ...provided,
       backgroundColor: props.inverted ? colours.primaryDark : colours.primary,
       color: colours.white,
-      borderRadius: "6px"
+      borderRadius: radiuspx.px2,
+      padding: spacepx.px2
     }),
     multiValueRemove: provided => ({
       ...provided,
       backgroundColor: props.inverted ? colours.primaryDark : colours.primary,
       color: colours.white,
-      borderRadius: "6px",
+      borderRadius: radiuspx.px2,
       "&:hover": {
         backgroundColor: colours.primaryDarkest,
         color: colours.white
@@ -156,4 +158,4 @@ Select.propTypes = {
 };
 
 /** @component */
-export default Select;
+export default withTheme(Select);
