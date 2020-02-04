@@ -286,8 +286,6 @@ DatePicker.propTypes = {
   single: PropTypes.bool,
   /** Specifies a range date picker */
   range: PropTypes.bool,
-  /** Specifies that datepicker is on a dark background */
-  inverted: PropTypes.bool,
   /**
    * Should not be visible
    * @ignore

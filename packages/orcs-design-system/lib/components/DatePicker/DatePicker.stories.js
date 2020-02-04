@@ -11,11 +11,5 @@ export default {
   component: DatePicker
 };
 
-export const singleDate = () => <DatePicker single />;
+export const singleDate = () => <DatePicker single numberOfMonths="1" />;
 export const dateRange = () => <DatePicker range />;
-export const withDarkBackground = () => (
-  <Layout paddingDouble height="100%" backgroundDark childVerticalSpacing>
-    <DatePicker single inverted />
-    <DatePicker range inverted />
-  </Layout>
-);

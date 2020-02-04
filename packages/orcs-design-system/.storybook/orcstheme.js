@@ -11,7 +11,7 @@ export default create({
   // UI
   appBg: colours.greyLightest,
   appContentBg: colours.white,
-  appBorderColor: colours.primaryLightest,
+  appBorderColor: colours.primary,
   appBorderRadius: 4,
 
   // Typography
