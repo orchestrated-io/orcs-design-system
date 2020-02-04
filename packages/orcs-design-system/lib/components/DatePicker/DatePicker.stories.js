@@ -11,5 +11,5 @@ export default {
   component: DatePicker
 };
 
-export const singleDate = () => <DatePicker single numberOfMonths="1" />;
+export const singleDate = () => <DatePicker single numberOfMonths={1} />;
 export const dateRange = () => <DatePicker range />;

@@ -34,6 +34,10 @@ const styleLink = LinkComponent => styled(LinkComponent)`
     outline: 0;
     text-decoration: underline;
   }
+
+  svg {
+    margin-right: ${variables.defaultSpacingQuarter};
+  }
 `;
 
 const Hyperlink = styleLink(styled.a``);

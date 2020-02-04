@@ -65,8 +65,8 @@ Icon.propTypes = {
   inverse: PropTypes.bool,
   /** Flip horizontally, vertically, or both */
   flip: PropTypes.oneOf(["horizontal", "vertical", "both"]),
-  /** Set the icon and the Font Awesome style */
-  icon: PropTypes.string,
+  /** Set the Font Awesome style/weight, and icon */
+  icon: PropTypes.array,
   /** Set icon to render in the style of a list bullet */
   listitem: PropTypes.bool,
   /** Pull an icon to float to the left or right of the element's other contents */

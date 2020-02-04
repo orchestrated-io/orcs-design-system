@@ -30,7 +30,7 @@ export const size = () => (
 
 export const alternateColours = () => (
   <>
-    <Button colour="success" onClick={action("clicked")}>
+    <Button colour="successDark" onClick={action("clicked")}>
       Success/green button
     </Button>
     <Button colour="danger" onClick={action("clicked")}>
@@ -60,7 +60,7 @@ export const disabled = () => <Button disabled>Disabled buttons</Button>;
 export const loadingState = () => (
   <>
     <Button isLoading>Loading...</Button>
-    <Button isLoading colour="success">
+    <Button isLoading colour="successDark">
       Saving...
     </Button>
     <Button isLoading colour="danger">
