@@ -72,7 +72,8 @@ export function StyledLink({
   bold,
   marginBottomDouble,
   marginBottomHalf,
-  marginBottom
+  marginBottom,
+  ...props
 }) {
   return (
     <Hyperlink
@@ -82,6 +83,7 @@ export function StyledLink({
       marginBottomDouble={marginBottomDouble}
       marginBottomHalf={marginBottomHalf}
       marginBottom={marginBottom}
+      {...props}
     >
       {children}
     </Hyperlink>

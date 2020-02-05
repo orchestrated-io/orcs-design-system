@@ -270,12 +270,12 @@ export default function Header({
           >
             <Avatar inverted small title={userName} image={avatarSource} />
           </Popover>
-          {logoutFunction ? (
+          {logoutFunction && (
             <StyledLink white bold onClick={logoutFunction}>
               <Icon icon={["fas", "lock"]} colour="white" />
               Logout
             </StyledLink>
-          ) : null}
+          )}
         </RightAlignedChildren>
 
         <MobileMenuToggle htmlFor="mobileMenuToggle">
@@ -287,12 +287,12 @@ export default function Header({
         <Avatar inverted small title={userName} image={avatarSource} />
         {children}
         {rightAlignedLink}
-        {logoutFunction ? (
+        {logoutFunction && (
           <StyledLink white bold onClick={logoutFunction}>
             <Icon icon={["fas", "lock"]} colour="white" />
             Logout
           </StyledLink>
-        ) : null}
+        )}
       </MobileNavMenu>
       <Overlay htmlFor="mobileMenuToggle" />
     </>
