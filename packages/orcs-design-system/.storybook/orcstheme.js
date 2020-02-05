@@ -1,6 +1,5 @@
 import { create } from "@storybook/theming/create";
 import colours from "../lib/colours";
-import orcsLogo from '../lib/assets/Images/orcs.png';
 
 export default create({
   base: "light",
@@ -33,7 +32,7 @@ export default create({
   inputTextColor: "black",
   inputBorderRadius: 4,
 
-  brandTitle: "Orcs Design System",
-  brandUrl: "#",
-  brandImage: orcsLogo
+  brandTitle: "Orca Design System - version Orcs",
+  brandUrl: "https://orchestrated-io.github.io/orca-design-system",
+  brandImage: "https://orchestrated.io/images/logo__orcsdesignsystem.png"
 });
