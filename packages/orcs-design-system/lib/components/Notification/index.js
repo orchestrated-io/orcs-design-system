@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import Icon from "../Icon";
@@ -80,64 +80,47 @@ const Close = styled.button`
  * If you want your notification to be closable, you must use the onDismiss prop to correctly unmount the component. If you do not do this, clicking the close button will hide the notification visually using CSS and this will not be able to be shown again, even if the event that triggers the notification occurs again.
  */
 
-class Notification extends React.Component {
-  constructor(props) {
-    super(props);
+export default function Notification({
+  icon,
+  colour,
+  floating,
+  children,
+  top,
+  right,
+  bottom,
+  left,
+  centered,
+  closable,
+  onDismiss
+}) {
+  const [dismissed, handleDismiss] = useState(false);
+  const onToggle = () => {
+    if (!dismissed) handleDismiss(true);
+    else handleDismiss(false);
+  };
 
-    this.state = { dismissed: false };
-    this.handleDismiss = this.handleDismiss.bind(this);
-  }
-
-  handleDismiss() {
-    this.setState({
-      dismissed: true
-    });
-
-    if (this.props.onDismiss) {
-      this.props.onDismiss();
-    }
-  }
-
-  render() {
-    const {
-      icon,
-      colour,
-      floating,
-      children,
-      top,
-      right,
-      bottom,
-      left,
-      centered,
-      closable = true
-    } = this.props;
-    const { dismissed } = this.state;
-    return (
-      !dismissed && (
-        <Item
-          colour={colour}
-          floating={floating}
-          top={top}
-          right={right}
-          bottom={bottom}
-          left={left}
-          centered={centered}
-        >
-          {icon && <Icon icon={icon} color="white" />}
-          <span>{children}</span>
-          {closable && (
-            <Close
-              className="close-button"
-              tabIndex="0"
-              onClick={this.handleDismiss}
-            >
-              <Icon color={colours.white} icon={["fas", "times"]} size="lg" />
-            </Close>
-          )}
-        </Item>
-      )
-    );
-  }
+  return (
+    !dismissed && (
+      <Item
+        colour={colour}
+        floating={floating}
+        top={top}
+        right={right}
+        bottom={bottom}
+        left={left}
+        centered={centered}
+        onDismiss={onDismiss}
+      >
+        {icon && <Icon icon={icon} color="white" />}
+        <span>{children}</span>
+        {closable && (
+          <Close className="close-button" tabIndex="0" onClick={onToggle}>
+            <Icon color={colours.white} icon={["fas", "times"]} size="lg" />
+          </Close>
+        )}
+      </Item>
+    )
+  );
 }
 
 Notification.propTypes = {
@@ -167,5 +150,6 @@ Notification.propTypes = {
   closable: PropTypes.bool
 };
 
-/** @component */
-export default Notification;
+Notification.defaultProps = {
+  closable: true
+};
