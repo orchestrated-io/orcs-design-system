@@ -1,0 +1,83 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import Grid, { GridItem } from ".";
+
+<Meta title="Grid" component={Grid} />
+
+# Grid
+
+Grid component using the built-in Styled System Grid Layout through its `grid` function.
+
+Note that to use `Grid` you also need to import the subcomponent `GridItem`.
+
+<Preview>
+<Story name="Basic">
+  <Grid>
+    <GridItem>1</GridItem>
+    <GridItem>2</GridItem>
+    <GridItem>3</GridItem>
+    <GridItem>4</GridItem>
+    <GridItem>5</GridItem>
+    <GridItem>6</GridItem>
+  </Grid>
+</Story>
+</Preview>
+
+## Properties
+
+  You can pass `space`, `layout`, `color` and `grid` props to `Grid`. You can pass `space`, `layout`, and `color` props to `GridItem`.
+
+### For reference, see:
+- [space on Styled-System](https://styled-system.com/table#space)
+- [layout on Styled-System](https://styled-system.com/table#layout)
+- [color on Styled-System](https://styled-system.com/table#color)
+- [grid on Styled-System](https://styled-system.com/table#space)
+- [CSS Grid Properties](https://css-tricks.com/snippets/css/complete-guide-grid)
+
+By default, we've set certain values on both `Grid` and `GridItem` as documented in the table below.
+
+<Props of={Grid} />
+
+## Examples
+### With Colours
+<Preview>
+<Story name="With Colours">
+  <Grid>
+    <GridItem bg="grey">1</GridItem>
+    <GridItem bg="primary" color="white">2</GridItem>
+    <GridItem bg="greyLight">3</GridItem>
+    <GridItem bg="greyDark">4</GridItem>
+    <GridItem bg="success">5</GridItem>
+    <GridItem bg="warning">6</GridItem>
+  </Grid>
+</Story>
+</Preview>
+
+### Template Columns and Rows
+<Preview>
+<Story name="Template Columns and Rows">
+  <Grid gridTemplateColumns="repeat(3, 1fr)" gridTemplateRows="repeat(2, 1fr)" bg="greyLightest">
+    <GridItem>This Grid uses repeat and fr to specify the grid structure.</GridItem>
+    <GridItem>Fusce sit amet lorem lectus.</GridItem>
+    <GridItem>Nullam lobortis porta iaculis. </GridItem>
+    <GridItem>Pellentesque fermentum elementum elit non blandit.</GridItem>
+    <GridItem>Etiam rhoncus ultricies lorem nec imperdiet.</GridItem>
+    <GridItem>Pellentesque. </GridItem>
+  </Grid>
+</Story>
+</Preview>
+
+### Width-based Columns and Rows
+<Preview>
+<Story name="Width-based Columns and Rows">
+  <Grid gridTemplateColumns="25% 200px auto" gridTemplateRows="25% 100px auto" bg="greyLighter">
+    <GridItem>This Grid uses widths and percentages to specify the grid structure.</GridItem>
+    <GridItem>Fusce sit amet lorem lectus.</GridItem>
+    <GridItem>Nullam lobortis porta iaculis. </GridItem>
+    <GridItem>Pellentesque fermentum elementum elit non blandit.</GridItem>
+    <GridItem>Etiam rhoncus ultricies lorem nec imperdiet.</GridItem>
+    <GridItem>Pellentesque. </GridItem>
+    <GridItem>Each GridItem goes down the columns first and then goes through the rows.</GridItem>
+    <GridItem>To change this, change the value of the gridAutoFlow property. The default value is columns.</GridItem>
+  </Grid>
+</Story>
+</Preview>
