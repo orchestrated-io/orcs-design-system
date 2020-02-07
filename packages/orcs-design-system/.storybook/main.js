@@ -8,7 +8,6 @@ module.exports = {
     "@storybook/addon-links/",
     "@storybook/addon-viewport/",
     "@storybook/addon-knobs/",
-    "@storybook/addon-storysource/",
     "@storybook/addon-a11y/"
   ]
 };
