@@ -20,13 +20,6 @@ ${color}
   min-width: 0;
 `;
 
-/**
- * Grid component using the built-in Styled System Grid Layout through its `grid` function.
- *
- * Note that to use `Grid` you also need to import the subcomponent `GridItem`. You can pass `space`, `layout`, and `color` props to `GridItem`. You can pass `space`, `layout`, and `grid` props to `Grid`.
- *
- */
-
 export default function Grid({ children, ...props }) {
   return <GridWrapper {...props}>{children}</GridWrapper>;
 }
