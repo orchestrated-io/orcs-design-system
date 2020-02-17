@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import variables from "../../variables";
@@ -14,6 +14,10 @@ class Dialogue extends React.Component {
   constructor(props) {
     super(props);
     this.state = { visible: false };
+    this.showDialogue = this.showDialogue.bind(this);
+    this.closeDialogue = this.closeDialogue.bind(this);
+    this.handleOk = this.handleOk.bind(this);
+    this.handleCancel = this.handleCancel.bind(this);
   }
 
   showDialogue() {
@@ -30,23 +34,26 @@ class Dialogue extends React.Component {
 
   handleOk() {
     const { confirmAction } = this.props;
-    const result = confirmAction();
-    if (result && result.then) {
-      // we have been given a promise
-      result.then(result => {
+    const confirmationResponse = confirmAction();
+    const isPromise = confirmationResponse && confirmationResponse.then;
+    if (isPromise) {
+      confirmationResponse.then(result => {
         if (result) {
           this.closeDialogue();
         }
       });
-    } else if (result) {
+    } else if (confirmationResponse) {
       this.closeDialogue();
     }
   }
 
   handleCancel() {
     const { cancelAction } = this.props;
+    if (cancelAction) {
+      cancelAction();
+    }
+
     this.closeDialogue();
-    cancelAction && cancelAction();
   }
 
   render() {
@@ -60,14 +67,16 @@ class Dialogue extends React.Component {
       ...props
     } = this.props;
 
+    const { visible } = this.state;
+
     return (
-      <Fragment>
+      <>
         <Button {...props} onClick={this.showDialogue}>
           {icon ? <CustomIcon icon={icon} /> : null}
           {buttonText}
         </Button>
         <Modal
-          visible={this.state.visible}
+          visible={visible}
           width={width}
           confirmText={confirmText}
           cancelText={cancelText}
@@ -76,7 +85,7 @@ class Dialogue extends React.Component {
         >
           {children}
         </Modal>
-      </Fragment>
+      </>
     );
   }
 }
