@@ -13,9 +13,9 @@ export const spacepx = {
   px9: "512px"
 };
 
-export const radius = [0, 2, 6];
+export const radii = [0, 2, 6];
 
-export const radiuspx = {
+export const radiipx = {
   px0: "0",
   px1: "2px",
   px2: "6px"

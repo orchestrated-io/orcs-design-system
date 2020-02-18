@@ -30,15 +30,12 @@ Grid.propTypes = {
   /** Auto flow direction and rules */
   gridAutoFlow: PropTypes.oneOf(["row", "column", "row dense", "column dense"]),
   /** Defines the spacings between columns and rows. Takes the nth value from [Orcs design system spacing](./?path=/docs/spacing--page).  */
-  gridGap: PropTypes.number,
-  /** **`GridItem` property**. Takes the nth value from [Orcs design system spacing](./?path=/docs/spacing--page). */
-  padding: PropTypes.number
+  gridGap: PropTypes.number
 };
 
 Grid.defaultProps = {
   gridAutoFlow: "column",
-  gridGap: 4,
-  padding: 4
+  gridGap: 4
 };
 
 GridItem.defaultProps = {

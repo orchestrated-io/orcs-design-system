@@ -1,0 +1,133 @@
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import Box from ".";
+
+<Meta title="Box" component={Box} />
+
+# Box
+
+[Properties](#properties) | [Variants](#variants) | [Examples](#examples) | [Upgrading](#upgrading)
+
+Component to contain elements within a simple box. If your `Box` needs to contain several items and you want to control the item spacing and positioning, it's highly recommended to use `Grid` or `Flex` instead.
+
+<Preview>
+  <Story name="Basic">
+    <Box>
+      <p>
+        This is an example of the basic Box with no properties applied to it.
+      </p>
+    </Box>
+  </Story>
+</Preview>
+
+## Properties
+
+You can use `space`, `layout`, `border`, and `color` properties with `Box`.
+### For reference, see:
+
+- [space on Styled-System](https://styled-system.com/table#space)
+- [layout on Styled-System](https://styled-system.com/table#layout)
+- [border on Styled-System](https://styled-system.com/table#border)
+- [color on Styled-System](https://styled-system.com/table#color)
+- [CSS Grid Properties](https://css-tricks.com/snippets/css/complete-guide-grid)
+- [systemtheme.js](https://github.com/orchestrated-io/orca-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js) (our arrays and scales for design system values)
+
+By default, we've set certain values on `Box` properties as documented in the table below.
+
+<Props of={Box} />
+
+## Variants
+
+Variants are pre-defined sets of properties for the `Box` component. Whenever possible, use a variant; if you require additional
+
+### Border
+
+<Preview>
+  <Story name="Border">
+    <Box variant="borderbox">
+      <p>This is a variant of a Box with a border.</p>
+    </Box>
+  </Story>
+</Preview>
+
+### Shadow
+
+<Preview>
+  <Story name="Shadow">
+    <Box variant="shadowbox">
+      <p>This is a variant of a Box with a slight shadow.</p>
+    </Box>
+  </Story>
+</Preview>
+
+### Border and shadow
+
+<Preview>
+  <Story name="Border and Shadow">
+    <Box variant="bordershadowbox">
+      <p>This is a variant of a Box with a border and shadow.</p>
+    </Box>
+  </Story>
+</Preview>
+
+## Examples
+
+### Background Colour
+<Preview>
+  <Story name="Background Colour">
+    <Box bg="greyLightest">
+      <p>This is a Box that has background colour set to <code>greyLightest</code>.</p>
+    </Box>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Background Colour with Variant">
+    <Box variant="bordershadowbox" bg="greyLightest">
+      <p>This is a bordered, shadowed Box variant with a background colour.</p>
+    </Box>
+  </Story>
+</Preview>
+
+### Padding
+
+<Preview>
+  <Story name="Padding - Increase">
+    <Box variant="borderbox" padding={6}>
+      <p>This is a bordered Box variant with specified padding that overrides the default padding value.</p>
+    </Box>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Padding - Set to zero">
+    <Box variant="borderbox" padding={0}>
+      <p>This is a bordered Box variant with padding set to 0.</p>
+    </Box>
+  </Story>
+</Preview>
+
+### Border Radius
+
+<Preview>
+  <Story name="Border Radius">
+    <Box variant="borderbox" borderRadius={2}>
+      <p>This is a bordered Box variant with rounded corners. <code>borderRadius</code> is taken from the <code>radii</code> array in <code>systemtheme.js</code>.</p>
+    </Box>
+  </Story>
+</Preview>
+
+## Upgrading
+
+This component is a **breaking change** that replaces the [deprecated Layout component](https://styleguide.orchestrated.io/#layout). Use the following table as a guide to convert from `Layout` properties to `Box` properties. Refer to [systemtheme.js](https://github.com/orchestrated-io/orca-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js) for values.
+
+| **Layout**        | **Box**               |
+| ----------------- | --------------------- |
+| `width`           | `width`               |
+| `height`          | `height`              |
+| `padding` | applied by default [`padding={4}`] |
+| `paddingDouble`   | `padding={5}`   |
+| `paddingHalf` | `padding={3}` |
+| `background`        | `bg="greyLightest"`      |
+| `backgroundDark`        | `bg="greyDark"`        |
+| `backgroundWhite` | `bg="white"` |
+| `roundedCorners` | `borderRadius={2}` |

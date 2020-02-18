@@ -1,0 +1,126 @@
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import Flex, { FlexItem } from ".";
+import Button from "../Button";
+import Icon from "../Icon";
+
+<Meta title="Flex" component={Flex} />
+
+# Flex
+
+[Properties](#properties) | [Examples](#examples) | [Upgrading](#upgrading)
+
+`Flex` is a component to layout, align, and arrange items dynamically within a container. This component should be used to display items where a grid structure is not needed, for instance a horizontal menu bar of buttons or links.
+
+To use `FlexItem` you must also `import { FlexItem } from "orca-design-system"`.
+
+<Preview>
+  <Story name="Basic">
+    <Flex>
+      <FlexItem>
+        <Button>Button 1</Button>
+      </FlexItem>
+      <FlexItem>
+        <Button>Button 2</Button>
+      </FlexItem>
+      <FlexItem>
+        <Button>Button 3</Button>
+      </FlexItem>
+      <FlexItem>
+        <Button>Button 4</Button>
+      </FlexItem>
+      <FlexItem>
+        <Button>Button 5</Button>
+      </FlexItem>
+      <FlexItem>
+        <Button>Button 6</Button>
+      </FlexItem>
+    </Flex>
+  </Story>
+</Preview>
+
+## Properties
+
+You can use `space`, `layout`, and `flexbox` properties with `Flex` and `FlexItem`.
+
+### For reference, see:
+
+- [space on Styled-System](https://styled-system.com/table#space)
+- [layout on Styled-System](https://styled-system.com/table#layout)
+- [flexbox on Styled-System](https://styled-system.com/table#flexbox)
+- [CSS Flexbox reference](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [systemtheme.js](https://github.com/orchestrated-io/orca-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js) (our arrays for design system values)
+
+By default, we've set certain values on `Flex` properties as documented in the table below.
+
+<Props of={Flex} />
+
+## Examples
+
+### Using `FlexItem`
+
+You don't necessarily need to use `<FlexItem>` as the direct child elements to `<Flex>` unless you need to apply specific `flexbox` properties to the item. In most cases, once you set the desired properties on `<Flex>` it will layout the child elements as intended, whether these be `<FlexItem>` or any other component like `<Box>` or even standard HTML like a `<div>` or `<span>`. However, if you want to use the specific CSS properties for items within the container, like `flex` or `align-self`, you will need to use `FlexItem`.
+
+<Preview>
+  <Story name="Using FlexItem">
+    <Flex height="200px">
+      <FlexItem>
+        <Button iconRight>
+          Right aligned icon
+          <Icon icon={["fas", "download"]} />
+        </Button>
+      </FlexItem>
+      <FlexItem>
+        <Button>Default button</Button>
+      </FlexItem>
+      <FlexItem>
+        <Button ghost>Ghost button</Button>
+      </FlexItem>
+      <FlexItem alignSelf="flex-start">
+        <Button disabled>Disabled button</Button>
+      </FlexItem>
+    </Flex>
+  </Story>
+</Preview>
+
+## Upgrading
+
+This component is a **breaking change** that replaces the [previous Flex component](https://www.npmjs.com/package/styled-flex-component). Use the following table as a guide to convert from the old properties to new `Flex` properties. Refer to [systemtheme.js](https://github.com/orchestrated-io/orca-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js) for values.
+
+### `Flex` properties
+
+| **Old**           | **New**                                             |
+| ----------------- | --------------------------------------------------- |
+| `full`            | `width="100%"`, `height=100%`, `flex-basis=100%`    |
+| `inline`          | `display="inline-flex"`                             |
+| `center`          | `justifyContent="center"`, `alignItems="center"`    |
+| `rowReverse`      | `flexDirection="row-reverse"`                       |
+| `column`          | `flexDirection="column"`                            |
+| `columnReverse`   | `flexDirection="column-reverse"`                    |
+| `wrap`            | `flexWrap="wrap"`                                   |
+| `wrapReverse`     | `flexWrap='wrap-reverse'`                           |
+| `justifyStart`    | `justifyContent="flex-start"`                       |
+| `justifyEnd`      | `justifyContent="flex-end"`                         |
+| `justifyCenter`   | `justifyContent="center"`                           |
+| `justifyBetween`  | `justifyContent="space-between"`                    |
+| `justifyAround`   | `justifyContent="space-around"`                     |
+| `justifyEvenly`   | `justifyContent="space-evenly"` (default behaviour) |
+| `alignCenter`     | `alignItems="center"`                               |
+| `alignStart`      | `alignItems="flex-start"`                           |
+| `alignEnd`        | `alignItems="flex-end"`                             |
+| `alignBaseline`   | `alignItems="baseline"`                             |
+| `alignStretch`    | `alignItems="stretch"`                              |
+| `contentCenter`   | `alignContent="center"`                             |
+| `contentStart`    | `alignContent="flex-start"`                         |
+| `contentEnd`      | `alignContent="flex-end"`                           |
+| `contentBaseline` | `alignContent="baseline"`                           |
+| `contentStretch`  | `alignContent="stretch"`                            |
+
+### `FlexItem` properties
+
+| **Old**    | **New**          |
+| ---------- | ---------------- |
+| `order`    | `order`          |
+| `basis`    | `flexBasis`      |
+| `grow`     | `flexGrow`       |
+| `shrink`   | `flexShrink`     |
+| `noShrink` | `flexShrink="0"` |
