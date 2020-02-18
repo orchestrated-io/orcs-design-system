@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "module": "es/index.js",
   "sideEffects": false,
+  "private": true,
   "scripts": {
     "audit-ci": "audit-ci -m",
     "lint": "eslint lib/",
