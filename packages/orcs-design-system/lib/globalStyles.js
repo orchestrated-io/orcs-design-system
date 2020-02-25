@@ -20,7 +20,7 @@ body {
 }
 
 /* Import custom fonts */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i');
 
 body {
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -32,7 +32,7 @@ body.fontLoaded {
 }
 
 /* set rem text size and styling */
-html { font-size: 62.5%; } 
+html { font-size: 62.5%; }
 body { font-size: 16px; font-size: 1.6rem; }
 
 main {

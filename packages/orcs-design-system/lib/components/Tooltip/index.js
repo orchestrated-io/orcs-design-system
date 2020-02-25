@@ -43,7 +43,7 @@ const QuestionMark = styled.span`
   width: 20px;
   height: 20px;
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 600;
   text-indent: 1px;
   line-height: 18px;
 `;
