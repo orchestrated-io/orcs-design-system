@@ -55,16 +55,17 @@ All library files are located inside `/lib`
 
 then at top of file add `import styled from 'styled-components';`
 
-- Ensure the colours and theme provider is included in your application like below:
+- Ensure the global styles and theme provider are included in your application like below:
 
 ```
-  import { colours } from "orca-design-system";
+  import { systemtheme, GlobalStyles } from "orca-design-system";
   import {ThemeProvider} from "styled-components";
 
+  <GlobalStyles />
   ...
 
-  <ThemeProvider theme={colours}>
-    <App/>
+  <ThemeProvider theme={systemtheme}>
+    <App />
   </ThemeProvider>
 ```
 
