@@ -5,7 +5,7 @@ import Icon from "../Icon";
 import StyledLink from "../StyledLink";
 
 export default {
-  title: "Header",
+  title: "Components/Header",
   parameters: {
     component: Header
   }

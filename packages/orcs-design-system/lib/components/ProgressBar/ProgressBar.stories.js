@@ -3,7 +3,7 @@ import ProgressBar from ".";
 import Layout from "../Layout";
 
 export default {
-  title: "ProgressBar",
+  title: "Components/ProgressBar",
   decorators: [storyFn => <Layout childVerticalSpacing>{storyFn()}</Layout>],
   parameters: {
     component: ProgressBar

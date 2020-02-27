@@ -3,7 +3,7 @@ import React from "react";
 import Layout from "../Layout";
 
 export default {
-  title: "Select",
+  title: "Components/Select",
   decorators: [storyFn => <Layout height="250px">{storyFn()}</Layout>],
   parameters: {
     component: Select

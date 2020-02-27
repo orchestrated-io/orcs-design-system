@@ -6,7 +6,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { withA11y } from "@storybook/addon-a11y";
-import GlobalStyles from "../lib/globalStyles";
+import { GlobalStyles } from "../lib/systemtheme";
 import * as systemtheme from "../lib/systemtheme";
 
 library.add(far, fas);
@@ -26,6 +26,9 @@ addDecorator(withA11y);
 addDecorator(ThemeDecorator);
 
 addParameters({
+  options: {
+    showRoots: true
+  },
   docs: {
     container: DocsContainer,
     page: DocsPage
