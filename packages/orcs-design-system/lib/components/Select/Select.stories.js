@@ -1,10 +1,10 @@
 import Select from ".";
 import React from "react";
-import Layout from "../Layout";
+import Box from "../Box";
 
 export default {
   title: "Components/Select",
-  decorators: [storyFn => <Layout height="250px">{storyFn()}</Layout>],
+  decorators: [storyFn => <Box height="250px">{storyFn()}</Box>],
   parameters: {
     component: Select
   }
@@ -24,8 +24,8 @@ export const multiSelect = () => <Select options={options} isMulti />;
 
 export const invertedMultiSelect = () => (
   <>
-    <Layout backgroundDark width="100%" height="100%" padding>
+    <Box bg="greyDarkest" width="100%" height="100%" padding={4}>
       <Select options={options} inverted isMulti />
-    </Layout>
+    </Box>
   </>
 );
