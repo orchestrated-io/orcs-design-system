@@ -30,7 +30,20 @@ export { default as TextInput } from "./components/TextInput";
 export { default as TextArea } from "./components/TextArea";
 export { default as Toggle } from "./components/Toggle";
 export { default as Tooltip } from "./components/Tooltip";
-export { default as Typography } from "./components/Typography";
+export {
+  default as Typography,
+  H1,
+  H2,
+  H3,
+  H4,
+  H5,
+  H6,
+  P,
+  Text,
+  Strong,
+  Quote,
+  Code
+} from "./components/Typography";
 export { default as DatePicker } from "./components/DatePicker";
 export { default as Avatar } from "./components/Avatar";
 export { default as StatusDot } from "./components/StatusDot";

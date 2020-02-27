@@ -1,147 +1,237 @@
 import styled from "styled-components";
-import variables from "../../variables";
-import colours from "../../colours";
+import { typography, color, space, variant } from "styled-system";
+import * as systemtheme from "../../systemtheme";
 import { rgba } from "polished";
 
-const marginBottom = props =>
-  props.marginBottomDouble
-    ? variables.defaultSpacingDouble
-    : props.marginBottomHalf
-    ? variables.defaultSpacingHalf
-    : props.marginBottom
-    ? variables.defaultSpacing
-    : 0;
-
-const colour = props =>
-  props.grey
-    ? colours.grey
-    : props.success
-    ? colours.success
-    : props.warning
-    ? colours.warning
-    : props.danger
-    ? colours.danger
-    : props.white
-    ? colours.white
-    : colours.greyDarkest;
-
-const textAlign = props =>
-  props.center
-    ? "center"
-    : props.right
-    ? "right"
-    : props.left
-    ? "left"
-    : "inherit";
-
-const bold = props => (props.bold ? 600 : 300);
-
-const H1 = styled.h1`
-  font-size: 2.6rem;
-  margin: 0;
-  margin-bottom: ${marginBottom};
-  font-weight: ${bold};
-  color: ${colour};
-  text-align: ${textAlign};
+export const H1 = styled.h1`
+  ${typography}
+  ${color}
+  ${space}
+  ${variant({
+    variants: {
+      light: {
+        fontWeight: systemtheme.fontWeights[0]
+      },
+      bold: {
+        fontWeight: systemtheme.fontWeights[2]
+      },
+      small: {
+        fontSize: systemtheme.fontSizes[7]
+      },
+      large: {
+        fontSize: systemtheme.fontSizes[9]
+      }
+    }
+  })}
 `;
 
-const H2 = styled.h2`
-  font-size: 2.2rem;
-  margin: 0;
-  margin-bottom: ${marginBottom};
-  font-weight: ${bold};
-  color: ${colour};
-  text-align: ${textAlign};
+export const H2 = styled.h2`
+  ${typography}
+  ${color}
+  ${space}
+  ${variant({
+    variants: {
+      light: {
+        fontWeight: systemtheme.fontWeights[0]
+      },
+      bold: {
+        fontWeight: systemtheme.fontWeights[2]
+      },
+      small: {
+        fontSize: systemtheme.fontSizes[6]
+      },
+      large: {
+        fontSize: systemtheme.fontSizes[8]
+      }
+    }
+  })}
 `;
 
-const H3 = styled.h3`
-  font-size: 2rem;
-  margin: 0;
-  margin-bottom: ${marginBottom};
-  font-weight: ${bold};
-  color: ${colour};
-  text-align: ${textAlign};
+export const H3 = styled.h3`
+  ${typography}
+  ${color}
+  ${space}
+  ${variant({
+    variants: {
+      light: {
+        fontWeight: systemtheme.fontWeights[0]
+      },
+      bold: {
+        fontWeight: systemtheme.fontWeights[2]
+      },
+      small: {
+        fontSize: systemtheme.fontSizes[5]
+      },
+      large: {
+        fontSize: systemtheme.fontSizes[7]
+      }
+    }
+  })}
 `;
 
-const H4 = styled.h4`
-  font-size: 1.8rem;
-  margin: 0;
-  margin-bottom: ${marginBottom};
-  font-weight: ${bold};
-  color: ${colour};
-  text-align: ${textAlign};
+export const H4 = styled.h4`
+  ${typography}
+  ${color}
+  ${space}
+  ${variant({
+    variants: {
+      light: {
+        fontWeight: systemtheme.fontWeights[0]
+      },
+      bold: {
+        fontWeight: systemtheme.fontWeights[2]
+      },
+      small: {
+        fontSize: systemtheme.fontSizes[4]
+      },
+      large: {
+        fontSize: systemtheme.fontSizes[6]
+      }
+    }
+  })}
 `;
 
-const H5 = styled.h5`
-  font-size: 1.6rem;
-  margin: 0;
-  margin-bottom: ${marginBottom};
-  font-weight: ${bold};
-  color: ${colour};
-  text-align: ${textAlign};
+export const H5 = styled.h5`
+  ${typography}
+  ${color}
+  ${space}
+  ${variant({
+    variants: {
+      light: {
+        fontWeight: systemtheme.fontWeights[0]
+      },
+      bold: {
+        fontWeight: systemtheme.fontWeights[2]
+      },
+      small: {
+        fontSize: systemtheme.fontSizes[3]
+      },
+      large: {
+        fontSize: systemtheme.fontSizes[5]
+      }
+    }
+  })}
 `;
 
-const H6 = styled.h6`
-  font-size: 1.4rem;
-  margin: 0;
-  margin-bottom: ${marginBottom};
-  font-weight: ${bold};
-  color: ${colour};
-  text-align: ${textAlign};
+export const H6 = styled.h6`
+  ${typography}
+  ${color}
+  ${space}
+  ${variant({
+    variants: {
+      light: {
+        fontWeight: systemtheme.fontWeights[1]
+      },
+      bold: {
+        fontWeight: systemtheme.fontWeights[2]
+      },
+      small: {
+        fontSize: systemtheme.fontSizes[2]
+      },
+      large: {
+        fontSize: systemtheme.fontSizes[4]
+      }
+    }
+  })}
 `;
 
-const P = styled.p`
-  margin-bottom: ${marginBottom};
-  font-weight: ${bold};
-  color: ${colour};
-  text-align: ${textAlign};
-  line-height: 2rem;
+export const P = styled.p`
+${typography}
+${color}
+${space}
+${variant({
+  variants: {
+    light: {
+      fontWeight: systemtheme.fontWeights[1]
+    },
+    bold: {
+      fontWeight: systemtheme.fontWeights[2]
+    },
+    small: {
+      fontSize: systemtheme.fontSizes[1]
+    },
+    large: {
+      fontSize: systemtheme.fontSizes[3]
+    }
+  }
+})}
+  line-height: ${systemtheme.lineHeights[1]};
 `;
 
-const Small = styled.small`
+export const Text = styled.span`
+${typography}
+${color}
+${space}
+`;
+
+export const Strong = styled.span`
+  ${typography}
+  font-weight: ${systemtheme.fontWeights[2]};
+`;
+
+export const Quote = styled.blockquote`
+  ${typography}
+  ${space}
   display: block;
-  font-size: 80%;
-  margin-bottom: ${marginBottom};
-  font-weight: ${bold};
-  color: ${colour};
-  text-align: ${textAlign};
-  text-transform: ${props => (props.uppercase ? `uppercase` : `none`)};
-`;
-
-const Large = styled.h2`
-  font-size: 5rem;
-  margin-bottom: ${marginBottom};
-  font-weight: ${bold};
-  color: ${colour};
-  text-align: ${textAlign};
-`;
-
-const Quote = styled.blockquote`
-  display: block;
-  margin-bottom: ${marginBottom};
-  text-align: ${textAlign};
-  font-size: 1.8rem;
-  font-weight: 300;
-  line-height: 2rem;
-  padding: ${variables.defaultSpacingHalf} ${variables.defaultSpacing};
-  margin: ${variables.defaultSpacing};
-  border-left: solid 3px ${colours.greyDark};
+  font-size: ${systemtheme.fontSizes[4]}px;
+  line-height: ${systemtheme.lineHeights[1]};
+  border-left: solid ${systemtheme.space[2]}px ${systemtheme.colors.greyDark};
+  padding: ${systemtheme.space[3]}px ${systemtheme.space[4]}px;
   em {
     display: block;
     font-style: italic;
-    font-size: 1.4rem;
-    color: ${colours.greyDark};
-    margin-top: ${variables.defaultSpacingQuarter};
+    font-size: ${systemtheme.fontSizes[3]}px;
+    color: ${systemtheme.colors.grey};
   }
 `;
 
-const Code = styled.code`
-  margin-bottom: ${marginBottom};
-  text-align: ${textAlign};
-  line-height: 2rem;
-  background: ${rgba(colours.warningLightest, 0.4)};
-  padding: ${variables.defaultSpacingQuarter};
+export const Code = styled.code`
+${typography}
+${space}
+  line-height: ${systemtheme.lineHeights[1]};
+  background: ${rgba(systemtheme.colors.warningLightest, 0.4)};
+  padding: ${systemtheme.space[3]}px;
 `;
 
-/** @component */
-export default { H1, H2, H3, H4, H5, H6, P, Small, Large, Quote, Code };
+export default { H1, H2, H3, H4, H5, H6, P, Text, Strong, Quote, Code };
+
+H1.defaultProps = {
+  fontSize: systemtheme.fontSizes[8],
+  fontWeight: systemtheme.fontWeights[1]
+};
+
+H2.defaultProps = {
+  fontSize: systemtheme.fontSizes[7],
+  fontWeight: systemtheme.fontWeights[1]
+};
+
+H3.defaultProps = {
+  fontSize: systemtheme.fontSizes[6],
+  fontWeight: systemtheme.fontWeights[1]
+};
+
+H4.defaultProps = {
+  fontSize: systemtheme.fontSizes[5],
+  fontWeight: systemtheme.fontWeights[1]
+};
+
+H5.defaultProps = {
+  fontSize: systemtheme.fontSizes[4],
+  fontWeight: systemtheme.fontWeights[1]
+};
+
+H6.defaultProps = {
+  fontSize: systemtheme.fontSizes[3],
+  fontWeight: systemtheme.fontWeights[1]
+};
+
+P.defaultProps = {
+  fontSize: systemtheme.fontSizes[2],
+  fontWeight: systemtheme.fontWeights[1]
+};
+
+Text.defaultProps = {
+  fontSize: systemtheme.fontSizes[2],
+  fontWeight: systemtheme.fontWeights[1],
+  lineHeight: systemtheme.lineHeights[1]
+};
