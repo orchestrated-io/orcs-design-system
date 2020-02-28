@@ -4,7 +4,7 @@ import Layout from "../Layout";
 import StyledLink from "../StyledLink";
 
 export default {
-  title: "Avatar",
+  title: "Components/Avatar",
   parameters: {
     component: Avatar
   }

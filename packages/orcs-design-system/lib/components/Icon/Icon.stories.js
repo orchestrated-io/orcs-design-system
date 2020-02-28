@@ -9,7 +9,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 library.add(far, fas);
 
 export default {
-  title: "Icon",
+  title: "Components/Icon",
   decorators: [
     storyFn => (
       <Layout padding>

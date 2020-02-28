@@ -29,3 +29,4 @@ es
 
 # deploy-storybook
 packages/orc*-design-system/out*
+packages/orcs-design-system/storybook-static

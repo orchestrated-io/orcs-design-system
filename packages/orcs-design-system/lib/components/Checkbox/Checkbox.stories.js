@@ -3,7 +3,7 @@ import Checkbox from ".";
 import Layout from "../Layout";
 
 export default {
-  title: "Checkbox",
+  title: "Components/Checkbox",
   decorators: [storyFn => <Layout childVerticalSpacing>{storyFn()}</Layout>],
   parameters: {
     component: Checkbox

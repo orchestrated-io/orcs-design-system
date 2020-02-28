@@ -22,7 +22,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: run security audit of npm packages
         run: |
-          npx audit-ci -m
+          npx audit-ci -m --config ./audit-ci.json
       - name: scan for exposed aws secrets
         run: |
           git clone https://github.com/awslabs/git-secrets.git

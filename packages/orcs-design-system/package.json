@@ -7,7 +7,7 @@
   "sideEffects": false,
   "private": true,
   "scripts": {
-    "audit-ci": "audit-ci -m",
+    "audit-ci": "audit-ci -m --config ./audit-ci.json",
     "lint": "eslint lib/",
     "test": "node scripts/test.js --env=jsdom",
     "test-coverage": "node scripts/test.js --env=jsdom --coverage",

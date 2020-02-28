@@ -3,7 +3,7 @@ import Range from ".";
 import Layout from "../Layout";
 
 export default {
-  title: "Range",
+  title: "Components/Range",
   decorators: [storyFn => <Layout padding>{storyFn()}</Layout>],
   parameters: {
     component: Range

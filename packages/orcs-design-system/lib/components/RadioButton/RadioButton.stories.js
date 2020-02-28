@@ -3,7 +3,7 @@ import RadioButton from ".";
 import Layout from "../Layout";
 
 export default {
-  title: "RadioButton",
+  title: "Components/RadioButton",
   decorators: [storyFn => <Layout childVerticalSpacing>{storyFn()}</Layout>],
   parameters: {
     component: RadioButton

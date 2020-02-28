@@ -5,7 +5,7 @@ import Flex from "../Flex";
 import Popover from "../Popover";
 
 export default {
-  title: "StatusDot",
+  title: "Components/StatusDot",
   component: StatusDot,
   decorators: [
     storyFn => (

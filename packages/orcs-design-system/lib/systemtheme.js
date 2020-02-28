@@ -1,25 +1,17 @@
-export const space = [0, 2, 4, 8, 16, 32, 64, 128, 256, 512];
+import { createGlobalStyle } from "styled-components";
 
-export const spacepx = {
-  px0: "0",
-  px1: "2px",
-  px2: "4px",
-  px3: "8px",
-  px4: "16px",
-  px5: "32px",
-  px6: "64px",
-  px7: "128px",
-  px8: "256px",
-  px9: "512px"
+export const fonts = {
+  main: '"Open Sans", -apple-system, BlinkMacSystemFont, Roboto, sans-serif'
 };
 
-export const radii = [0, 2, 6];
+export const font = fonts.main;
+export const fontFamilies = fonts;
 
-export const radiipx = {
-  px0: "0",
-  px1: "2px",
-  px2: "6px"
-};
+export const fontSizes = [12, 14, 16, 20, 24, 28, 32, 36, 48, 64];
+
+export const lineHeights = [1, 1.5, 2];
+
+export const fontWeights = [300, 400, 600];
 
 export const colors = {
   /* Greyscale */
@@ -83,4 +75,208 @@ export const colors = {
     "#E5547C" /* Lighter version of brand danger/error colour - Mainly used to indicate error, at risk or over due states */,
   dangerLightest:
     "#F2ABBE" /* Lightest version of brand danger/error colour - Mainly used to indicate error, at risk or over due states */
+};
+
+export const GlobalStyles = createGlobalStyle`
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    line-height: 1.15; /* 1 */
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+/* Import custom fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i');
+
+body {
+    font-family: ${fonts.main};
+    color: ${colors.greyDarkest};
+}
+
+/* set rem text size and styling */
+html { font-size: 62.5%; }
+body { font-size: 16px; font-size: 1.6rem; }
+
+main {
+  display: flex;
+	align-items: stretch;
+	align-content: stretch;
+	width: 100%;
+}
+
+section {
+    height: calc(100vh - 60px);
+    width: 100%;
+	overflow-y: scroll;
+}
+
+img {
+    border-style: none;
+}
+
+small {
+    font-size: 80%;
+}
+
+p {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: ${fontWeights[1]};
+  font-family: ${fonts.main};
+  margin: 0;
+}
+
+/* Animations */
+@keyframes checkboxOn {
+  0% {
+    box-shadow:
+      0 0 0 10px,
+      10px -10px 0 10px,
+      32px 0px 0 20px,
+      0px 32px 0 20px,
+      -5px 5px 0 10px,
+      15px 2px 0 11px;
+  }
+  50% {
+    box-shadow:
+      0 0 0 10px,
+      10px -10px 0 10px,
+      32px 0px 0 20px,
+      0px 32px 0 20px,
+      -5px 5px 0 10px,
+      20px 2px 0 11px;
+  }
+  100% {
+    box-shadow:
+      0 0 0 10px,
+      10px -10px 0 10px,
+      32px 0px 0 20px,
+      0px 32px 0 20px,
+      -5px 5px 0 10px,
+      20px -12px 0 11px;
+  }
+}
+@keyframes checkboxOff {
+  0% {
+    box-shadow:
+      0 0 0 10px,
+      10px -10px 0 10px,
+      32px 0px 0 20px,
+      0px 32px 0 20px,
+      -5px 5px 0 10px,
+      20px -12px 0 11px,
+      0 0 0 0 inset;
+  }
+
+  25% {
+    box-shadow:
+      0 0 0 10px,
+      10px -10px 0 10px,
+      32px 0px 0 20px,
+      0px 32px 0 20px,
+      -5px 5px 0 10px,
+      20px -12px 0 11px,
+      0 0 0 0 inset;
+  }
+  50% {
+    transform: rotate(45deg);
+    margin-top: -4px;
+    margin-left: 6px;
+    width: 0px;
+    height: 0px;
+    box-shadow:
+      0 0 0 10px,
+      10px -10px 0 10px,
+      32px 0px 0 20px,
+      0px 32px 0 20px,
+      -5px 5px 0 10px,
+      15px 2px 0 11px,
+      0 0 0 0 inset;
+  }
+  51% {
+    transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    box-shadow:
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0px 0 10px inset;
+  }
+  100% {
+    transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    box-shadow:
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0px 0 0px inset;
+  }
+}
+@keyframes rippleOn {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(13,13);
+  }
+}
+@keyframes rippleOff {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(13,13);
+  }
+}
+@keyframes loadingSpin {
+  to {
+      transform: rotate(1turn);
+  }
+}
+@keyframes expandWidth {
+   0% { width: 0; }
+}
+`;
+
+export const space = [0, 2, 4, 8, 16, 32, 64, 128, 256, 512];
+
+export const radii = [0, 2, 6];
+
+export default {
+  GlobalStyles,
+  fonts,
+  font,
+  fontFamilies,
+  fontSizes,
+  fontWeights,
+  lineHeights,
+  radii,
+  space,
+  colors
 };

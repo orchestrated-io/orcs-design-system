@@ -1,13 +1,13 @@
 import React from "react";
 import DatePicker from ".";
-import Layout from "../Layout";
+import Box from "../Box";
 
 import "react-dates/lib/css/_datepicker.css";
 import "react-dates/initialize";
 
 export default {
-  title: "DatePicker",
-  decorators: [storyFn => <Layout height="400px">{storyFn()}</Layout>],
+  title: "Components/DatePicker",
+  decorators: [storyFn => <Box height="400px">{storyFn()}</Box>],
   component: DatePicker
 };
 

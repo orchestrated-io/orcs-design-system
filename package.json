@@ -1,7 +1,7 @@
 {
   "name": "orchestrated-design-system",
   "scripts": {
-    "audit-ci": "audit-ci -m",
+    "audit-ci": "audit-ci -m --config ./audit-ci.json",
     "bootstrap": "lerna bootstrap",
     "lint": "lerna run lint",
     "start": "lerna run start",

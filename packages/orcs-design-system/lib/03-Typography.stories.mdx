@@ -1,10 +1,134 @@
-import { Meta } from '@storybook/addon-docs/blocks';
+import { ThemeProvider } from "styled-components";
+import * as systemtheme from "../lib/systemtheme";
+import { Meta, Typeset, Preview, Story } from "@storybook/addon-docs/blocks";
+import { H1, H2, H3, H4, H5, H6, P, Text, Strong, Quote, Code } from "./components/Typography";
+import Box from "./components/Box";
 
-<Meta title="Typography" />
+<Meta title="System/Typography" />
 
-WIP
+# Typography
 
-- Headings and other type elements
-- Typographic scale
-- Display styles
-- Emphasis styles
+[Usage](#usage) | [Font families](#font-families) | [Headings](#headings) | [Body text](#body-text) | [Text styling](#text-styling) | [Miscellaneous](#miscellaneous)
+
+## Usage
+
+The typography system requires you to import each subcomponent you want to use, for example:
+
+```
+import Typography from "orca-design-system";
+import { H1, H2, H3, H4, H5, H6, P, Em, Strong, Code, Caption } from "orca-design-system";
+```
+
+## Font families
+
+By default, the design system uses **Open Sans**: https://fonts.google.com/specimen/Open+Sans with other sans serif families as fallback. The default font weight is 400, and the system also uses 600 for bold or emphasised text and 300 for light weights (to be used sparingly).
+
+Font defaults can be changed via [systemtheme.js](https://github.com/orchestrated-io/orca-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js).
+
+<Typeset fontSizes={systemtheme.fontSizes} fontFamily={systemtheme.font} />
+
+## Headings
+These use `<H1>` to `<H6>` tags. For semantic and accessibility usage guidelines, refer to [the W3C headings guide](https://www.w3.org/WAI/tutorials/page-structure/headings/) and its related WCAG resources.
+
+<Preview>
+<Story name="Headings/H1 to H6">
+<>
+<H1>Standard H1</H1>
+<H1 variant="light">Light version</H1>
+<H1 variant="bold">Bold version</H1>
+<br />
+<H2>Standard H2</H2>
+<H2 variant="light">Light version</H2>
+<H2 variant="bold">Bold version</H2>
+<br />
+<H3>Standard H3</H3>
+<H3 variant="light">Light version</H3>
+<H3 variant="bold">Bold version</H3>
+<br />
+<H4>Standard H4</H4>
+<H4 variant="light">Light version</H4>
+<H4 variant="bold">Bold version</H4>
+<br />
+<H5>Standard H5</H5>
+<H5 variant="light">Light version</H5>
+<H5 variant="bold">Bold version</H5>
+<br />
+<H6>Standard H6</H6>
+<H6 variant="light">Light version</H6>
+<H6 variant="bold">Bold version</H6>
+</>
+</Story>
+</Preview>
+
+## Body text
+
+<Preview>
+<Story name="Body text/Paragraph">
+<>
+<P>Regular paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet at elit sit amet iaculis. Cras eget sapien et ligula mollis placerat non venenatis dolor. Fusce id mi risus. Ut sit amet diam in dui maximus sagittis a at dolor. Cras volutpat est nec arcu interdum pulvinar in vitae erat.</P>
+<P textAlign="center">Centered paragraph text.</P>
+<P textAlign="right">Right-aligned paragraph text.</P>
+</>
+</Story>
+</Preview>
+
+To render text in a `span` HTML element without the paragraph formatting, use the `Text` component. This is the preferred usage for short text.
+
+<Preview>
+<Story name="Body text/Text">
+<Text>Hello world</Text>
+</Story>
+</Preview>
+
+## Text styling
+
+### Size and emphasis
+
+To render type smaller or larger, use `variant="small"` or `variant="large"`, or if needed (for example if you are already using a variant) you can use `fontSize` property as demonstrated below. Unless it is for a very specific purpose, strongly recommend minimising the resizing of text and simply using the appropriate type element the next size up (or down) on the design system scale.
+
+<Preview>
+<Story name="Styling/Sizing">
+<>
+<H5 variant="small">Small variant of H5</H5>
+<H5 variant="large">Large variant of H5</H5>
+<H3 fontSize={4}>Smaller H3, scaled down two steps in the fontSize array</H3>
+</>
+</Story>
+</Preview>
+
+To render type with emphasis, use `variant="bold"` or wrap the type in a `<Strong>` tag.
+
+<Preview>
+<P variant="bold">Bold paragraph text lorem ipsum dolor sit amet</P>
+<P>Only <Strong>partially bolded</Strong> paragraph</P>
+</Preview>
+
+### Colours
+
+To apply colour to text, use the `color` property in the `Text` component. Usage should be limited to the colours in the example below except in very specific design cases.
+
+<Preview>
+<Story name="Styling/Colours">
+<>
+<Text color="success">Success-coloured text</Text>
+<br />
+<Text color="warning">Warning-coloured text</Text>
+<br />
+<Text color="danger">Danger-coloured text</Text>
+<br />
+<Box bg="black">
+<Text color="white">White text for dark backgrounds</Text>
+</Box>
+</>
+</Story>
+</Preview>
+
+## Miscellaneous
+
+<Preview>
+<Quote>"Used to display block quotes lorem ipsum dolor sit amet" <em> - Adam, 2018</em></Quote>
+</Preview>
+
+<Preview>
+<Code>&lt;html&gt; &lt;head&gt; &lt;body&gt; Hello I am a code block &lt;/body&gt; &lt;/head&gt; &lt;/html&gt;</Code>
+</Preview>
