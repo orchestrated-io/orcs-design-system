@@ -195,43 +195,12 @@ ${space}
 
 export default { H1, H2, H3, H4, H5, H6, P, Text, Strong, Quote, Code };
 
-H1.defaultProps = {
-  fontSize: systemtheme.fontSizes[8],
-  fontWeight: systemtheme.fontWeights[1]
-};
-
-H2.defaultProps = {
-  fontSize: systemtheme.fontSizes[7],
-  fontWeight: systemtheme.fontWeights[1]
-};
-
-H3.defaultProps = {
-  fontSize: systemtheme.fontSizes[6],
-  fontWeight: systemtheme.fontWeights[1]
-};
-
-H4.defaultProps = {
-  fontSize: systemtheme.fontSizes[5],
-  fontWeight: systemtheme.fontWeights[1]
-};
-
-H5.defaultProps = {
-  fontSize: systemtheme.fontSizes[4],
-  fontWeight: systemtheme.fontWeights[1]
-};
-
-H6.defaultProps = {
-  fontSize: systemtheme.fontSizes[3],
-  fontWeight: systemtheme.fontWeights[1]
-};
-
 P.defaultProps = {
   fontSize: systemtheme.fontSizes[2],
   fontWeight: systemtheme.fontWeights[1]
 };
 
 Text.defaultProps = {
-  fontSize: systemtheme.fontSizes[2],
   fontWeight: systemtheme.fontWeights[1],
   lineHeight: systemtheme.lineHeights[1]
 };
