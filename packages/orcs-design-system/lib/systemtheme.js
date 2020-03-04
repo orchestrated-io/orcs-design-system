@@ -268,6 +268,8 @@ export const space = [0, 2, 4, 8, 16, 32, 64, 128, 256, 512];
 
 export const radii = [0, 2, 6];
 
+export const transition = "all 200ms ease-in-out";
+
 export default {
   GlobalStyles,
   fonts,
@@ -278,5 +280,6 @@ export default {
   lineHeights,
   radii,
   space,
-  colors
+  colors,
+  transition
 };

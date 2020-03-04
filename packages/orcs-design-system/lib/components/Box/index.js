@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { space, layout, color, border, variant } from "styled-system";
+import { space, layout, color, border, variant, width } from "styled-system";
 import PropTypes from "prop-types";
 
 const BoxWrapper = styled.div`
@@ -8,6 +8,7 @@ ${space}
 ${layout}
 ${color}
 ${border}
+${width}
   box-sizing: border-box;
   ${variant({
     variants: {
@@ -55,12 +56,15 @@ Box.propTypes = {
   /** Sets the outer margin on all four sides. Takes values from the `space` array in `systemtheme.js`. */
   margin: PropTypes.number,
   /** Sets the background colour of the box. */
-  bg: PropTypes.oneOf(["white", "greyLightest", "greyDark"])
+  bg: PropTypes.oneOf(["white", "greyLightest", "greyDark"]),
+  /** Sets the width of the box. */
+  width: PropTypes.string
 };
 
 Box.defaultProps = {
+  width: "100%",
   display: "block",
-  overflow: "hidden",
+  overflow: "visible",
   border: "none",
   margin: 0,
   padding: 4,

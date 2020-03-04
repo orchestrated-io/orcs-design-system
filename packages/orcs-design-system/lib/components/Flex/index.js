@@ -58,7 +58,7 @@ Flex.defaultProps = {
   display: "flex",
   flexDirection: "row",
   flexWrap: "nowrap",
-  justifyContent: "space-evenly",
+  justifyContent: "flex-start",
   alignItems: "center"
 };
 
