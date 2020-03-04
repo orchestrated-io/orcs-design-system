@@ -11,7 +11,7 @@ const styleLink = LinkComponent => styled(LinkComponent)`
   text-decoration: none;
   cursor: pointer;
   transition: ${variables.defaultTransition};
-  font-weight: ${props => (props.bold ? 600 : 300)};
+  font-weight: ${props => (props.bold ? 600 : 400)};
 
   color: ${props =>
     props.active
