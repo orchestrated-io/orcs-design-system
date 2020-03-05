@@ -1,12 +1,11 @@
 import styled from "styled-components";
-import { typography, color, space, variant } from "styled-system";
+import { typography, color, variant } from "styled-system";
 import * as systemtheme from "../../systemtheme";
 import { rgba } from "polished";
 
 export const H1 = styled.h1`
   ${typography}
   ${color}
-  ${space}
   ${variant({
     prop: "weight",
     variants: {
@@ -34,7 +33,6 @@ export const H1 = styled.h1`
 export const H2 = styled.h2`
   ${typography}
   ${color}
-  ${space}
   ${variant({
     prop: "weight",
     variants: {
@@ -62,7 +60,6 @@ export const H2 = styled.h2`
 export const H3 = styled.h3`
   ${typography}
   ${color}
-  ${space}
   ${variant({
     prop: "weight",
     variants: {
@@ -90,7 +87,6 @@ export const H3 = styled.h3`
 export const H4 = styled.h4`
   ${typography}
   ${color}
-  ${space}
   ${variant({
     prop: "weight",
     variants: {
@@ -117,7 +113,6 @@ export const H4 = styled.h4`
 export const H5 = styled.h5`
   ${typography}
   ${color}
-  ${space}
   ${variant({
     prop: "weight",
     variants: {
@@ -145,7 +140,6 @@ export const H5 = styled.h5`
 export const H6 = styled.h6`
   ${typography}
   ${color}
-  ${space}
   ${variant({
     prop: "weight",
     variants: {
@@ -173,7 +167,6 @@ export const H6 = styled.h6`
 export const P = styled.p`
 ${typography}
 ${color}
-${space}
 ${variant({
   prop: "weight",
   variants: {
@@ -202,7 +195,6 @@ ${variant({
 export const Text = styled.span`
 ${typography}
 ${color}
-${space}
 `;
 
 export const Strong = styled.span`
@@ -212,7 +204,6 @@ export const Strong = styled.span`
 
 export const Quote = styled.blockquote`
   ${typography}
-  ${space}
   display: block;
   font-size: ${systemtheme.fontSizes[4]}px;
   line-height: ${systemtheme.lineHeights[1]};
@@ -228,7 +219,6 @@ export const Quote = styled.blockquote`
 
 export const Code = styled.code`
 ${typography}
-${space}
   line-height: ${systemtheme.lineHeights[1]};
   background: ${rgba(systemtheme.colors.warningLightest, 0.4)};
   padding: ${systemtheme.space[3]}px;
