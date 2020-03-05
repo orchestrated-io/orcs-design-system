@@ -11,6 +11,10 @@ export default {
   }
 };
 
+// Header component for app layout. Supports app name, username and avatar as props. And links as children.
+
+// At screen sizes less than 1100px the links are instead moved into a mobile menu toggled by a burger icon button to play nice with smaller devices.
+
 export const defaultHeader = () => {
   return (
     <>
