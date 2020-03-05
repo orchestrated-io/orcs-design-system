@@ -7,46 +7,47 @@ import Avatar from "../Avatar/";
 import Icon from "../Icon";
 import StyledLink from "../StyledLink/";
 import Popover from "../Popover/";
+import * as systemtheme from "../../systemtheme";
 import { rgba } from "polished";
 
 const Bar = styled.header`
   width: 100%;
-  height: 60px;
+  height: ${"calc(" + systemtheme.space[5] + "px * 2)"};
   position: relative;
   z-index: 2;
   position: sticky;
   top: 0;
   display: flex;
   align-items: center;
-  padding: 0 ${variables.defaultSpacing};
-  background: ${colours.greyDarkest};
+  padding: 0 ${systemtheme.space[4]}px;
+  background: ${systemtheme.colors.greyDarkest};
 
   > a {
     display: none;
-    @media (min-width: ${variables.screenMedium}) {
+    ${systemtheme.mediaQueries.screenL} {
       display: block;
     }
   }
 
   > div {
     display: none;
-    @media (min-width: ${variables.screenMedium}) {
+    ${systemtheme.mediaQueries.screenL} {
       display: flex;
     }
   }
 
   > * + * {
-    margin-left: ${variables.defaultSpacing};
+    margin-left: ${systemtheme.space[4]}px;
   }
 `;
 
 const AppName = styled.div`
   display: flex !important;
   align-items: center;
-  font-size: 2rem;
-  line-height: 60px;
-  height: 60px;
-  padding-right: ${variables.defaultSpacing};
+  font-size: ${systemtheme.fontSizes[3]}px;
+  line-height: 50px;
+  height: 50px;
+  padding-right: ${systemtheme.space[4]}px;
   color: ${colours.white};
   border-right: solid 1px ${rgba(colours.white, 0.2)};
 `;
@@ -57,7 +58,7 @@ const RightAlignedChildren = styled.div`
   margin-left: auto;
 
   > * + * {
-    margin-left: ${variables.defaultSpacing};
+    margin-left: ${systemtheme.space[4]}px;
   }
 `;
 
@@ -71,7 +72,7 @@ const MobileMenuToggle = styled.label`
   display: block;
   margin-left: auto;
 
-  @media (min-width: ${variables.screenMedium}) {
+  ${systemtheme.mediaQueries.screenL} {
     display: none;
   }
 
@@ -134,7 +135,7 @@ const MobileNavToggle = styled.input`
   ~ header,
   ~ div,
   ~ main {
-    transition: ${variables.defaultTransition};
+    transition: ${systemtheme.transition};
   }
   &:checked {
     + div > a {
@@ -199,14 +200,14 @@ const MobileNavMenu = styled.div`
   width: 250px;
   background: #333;
   z-index: 5;
-  transition: ${variables.defaultTransition};
+  transition: ${systemtheme.transition};
 
   > div {
     display: flex;
     align-items: center;
     margin-left: auto;
-    padding: ${variables.defaultSpacing};
-    margin-bottom: ${variables.defaultSpacingHalf};
+    padding: ${systemtheme.space[4]}px;
+    margin-bottom: ${systemtheme.space[3]}px;
     border-bottom: solid 1px rgba(255, 255, 255, 0.2);
     img {
       display: block;
@@ -222,7 +223,7 @@ const MobileNavMenu = styled.div`
     padding: ${variables.defaultSpacingHalf} ${variables.defaultSpacing};
     opacity: 0;
     transform: translateX(100px);
-    transition: ${variables.defaultTransition};
+    transition: ${systemtheme.transition};
   }
 `;
 
@@ -235,7 +236,7 @@ const Overlay = styled.label`
   background: rgba(0, 0, 0, 0.5);
   z-index: -1;
   opacity: 0;
-  transition: ${variables.defaultTransition};
+  transition: ${systemtheme.transition};
 `;
 
 const RightAlignedLink = styled(StyledLink)``;
@@ -268,7 +269,12 @@ export default function Header({
             textAlign="center"
             text={clientInfo}
           >
-            <Avatar inverted small title={userName} image={avatarSource} />
+            <Avatar
+              color="white"
+              size="small"
+              title={userName}
+              image={avatarSource}
+            />
           </Popover>
           {logoutFunction && (
             <StyledLink white bold onClick={logoutFunction}>
@@ -284,7 +290,12 @@ export default function Header({
       </Bar>
       <MobileNavToggle type="checkbox" id="mobileMenuToggle" />
       <MobileNavMenu>
-        <Avatar inverted small title={userName} image={avatarSource} />
+        <Avatar
+          color="white"
+          size="small"
+          title={userName}
+          image={avatarSource}
+        />
         {children}
         {rightAlignedLink}
         {logoutFunction && (

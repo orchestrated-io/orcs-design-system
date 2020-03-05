@@ -32,7 +32,7 @@ export const Tab = styled(Link)`
   color: ${props =>
     props.active ? systemtheme.colors.white : systemtheme.colors.grey};
   + a {
-    margin-left: ${systemtheme.space[3]}px;
+    margin-left: ${systemtheme.space[2]}px;
   }
   &:focus {
     outline: 0;
@@ -53,8 +53,8 @@ const notificationStyle = notification => css`
   :after {
     content: "${notification}";
     position: absolute;
-    top: -6px;
-    right: -8px;
+    top: -8px;
+    right: -6px;
     display: flex;
     justify-content: center;
     align-items: center;

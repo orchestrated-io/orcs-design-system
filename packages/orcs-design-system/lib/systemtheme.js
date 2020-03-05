@@ -19,6 +19,16 @@ export const radii = [0, 2, 6];
 
 export const transition = "all 200ms ease-in-out";
 
+export const breakpoints = ["450px", "675px", "900px", "1100px", "1400px"];
+
+export const mediaQueries = {
+  screenXS: `@media screen and (min-width: ${breakpoints[0]})`,
+  screenS: `@media screen and (min-width: ${breakpoints[1]})`,
+  screenM: `@media screen and (min-width: ${breakpoints[2]})`,
+  screenL: `@media screen and (min-width: ${breakpoints[3]})`,
+  screenXL: `@media screen and (min-width: ${breakpoints[4]})`
+};
+
 export const colors = {
   /* Greyscale */
   black: "#000000" /* Base black */,
