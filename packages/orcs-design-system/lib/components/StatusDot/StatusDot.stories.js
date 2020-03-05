@@ -1,6 +1,6 @@
 import React from "react";
 import StatusDot from ".";
-import Layout from "../Layout";
+import Box from "../Box";
 import Flex from "../Flex";
 import Popover from "../Popover";
 
@@ -9,9 +9,11 @@ export default {
   component: StatusDot,
   decorators: [
     storyFn => (
-      <Layout padding childChildHorizontalSpacing>
-        <Flex center>{storyFn()}</Flex>
-      </Layout>
+      <Box padding={4}>
+        <Flex alignItems="center" justifyContent="center">
+          {storyFn()}
+        </Flex>
+      </Box>
     )
   ]
 };

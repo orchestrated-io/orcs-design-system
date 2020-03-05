@@ -37,7 +37,7 @@ const Input = styled.input.attrs({
   z-index: -1;
   width: 0;
   height: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   pointer-events: none;
 
   &:focus {
