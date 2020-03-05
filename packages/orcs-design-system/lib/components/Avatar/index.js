@@ -1,128 +1,172 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import { space, layout, variant } from "styled-system";
 import PropTypes from "prop-types";
-import colours from "../../colours";
-import variables from "../../variables";
-import Typography from "../Typography";
+import { H5, Text } from "../Typography";
+import * as systemtheme from "../../systemtheme";
 
-const Container = styled.div`
+const AvatarWrapper = styled.div`
+  ${space}
+  ${layout}
+  box-sizing: border-box;
   display: flex;
   align-items: center;
-  > * + * {
-    margin-left: ${variables.defaultSpacingHalf};
-  }
+  ${variant({
+    prop: "size",
+    variants: {
+      small: {
+        fontSize: 1
+      },
+      default: {}
+    }
+  })}
 `;
 
-const Text = styled.div`
+const TextContent = styled.div`
+  ${space}
+  ${layout}
   > * + * {
-    margin-top: ${variables.defaultSpacingQuarter};
+    margin-top: ${systemtheme.space[2]}px;
   }
-  ${props =>
-    props.inverted
-      ? css`
-          h2,
-          h4,
-          small {
-            color: ${colours.white};
-          }
-        `
-      : css``};
+  margin-left: ${systemtheme.space[3]}px;
+  ${variant({
+    prop: "size",
+    variants: {
+      small: {
+        fontSize: 1,
+        marginLeft: systemtheme.space[1]
+      },
+      default: {}
+    }
+  })}
 `;
 
 const Image = styled.img`
-  width: ${props => (props.small ? "38px" : "50px")};
-  height: ${props => (props.small ? "38px" : "50px")};
-  background-color: ${colours.greyLighter};
+  ${space}
+  ${layout}
+  background-color: ${systemtheme.colors.greyLighter};
   border-radius: 50%;
   border: 0;
   display: block;
+  width: ${systemtheme.space[7]}px;
+  height: ${systemtheme.space[7]}px;
+  ${variant({
+    prop: "size",
+    variants: {
+      small: {
+        width: systemtheme.space[6],
+        height: systemtheme.space[6]
+      },
+      default: {}
+    }
+  })}
 `;
 
-const Default = styled.div`
-  width: ${props => (props.small ? "38px" : "50px")};
-  height: ${props => (props.small ? "38px" : "50px")};
+const Circle = styled.div`
+  ${space}
+  ${layout}
   border-radius: 50%;
-  background: ${colours.greyLighter};
+  background-color: ${systemtheme.colors.greyLighter};
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: normal;
-  font-size: ${props => (props.small ? "1.6rem" : "2rem")};
   text-align: center;
   text-transform: uppercase;
-  font-family: "Arial", sans-serif;
-  letter-spacing: normal;
-  line-height: normal;
-  color: ${colours.white};
-  ${props =>
-    !props.initials
-      ? css`
-          &:before {
-            content: "";
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' version='1.1'%3E%3Cg transform='translate(-502.000000, -201.000000)' fill='%23FFFFFF'%3E%3Cpath d='M505 206C505 203.2 507.2 201 510 201 512.8 201 515 203.2 515 206 515 208.8 512.8 211 510 211 507.2 211 505 208.8 505 206ZM514.5 212L513.6 212C511.4 213.3 508.6 213.3 506.4 212L505.5 212C503.6 212 502 213.6 502 215.5L502 216.3C502 216.7 502.3 217 502.8 217L517.3 217C517.7 217 518 216.7 518 216.3L518 215.5C518 213.6 516.4 212 514.5 212Z'/%3E%3C/g%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: ${props =>
-              props.small ? "16px 16px" : "22px 22px"};
-            position: relative;
-            width: 100%;
-            height: 100%;
-          }
-        `
-      : css``};
+  font-weight: ${systemtheme.fontWeights[2]};
+  width: ${systemtheme.space[7]}px;
+  height: ${systemtheme.space[7]}px;
+  ${variant({
+    prop: "size",
+    variants: {
+      small: {
+        width: systemtheme.space[6],
+        height: systemtheme.space[6]
+      },
+      default: {}
+    }
+  })}
+  ${variant({
+    prop: "color",
+    variants: {
+      white: {
+        backgroundColor: systemtheme.colors.greyDark,
+        color: systemtheme.colors.white
+      },
+      default: {}
+    }
+  })}
 `;
 
-/**
- * Avatars can come in a few different options. Firstly regular or small size (using a `H2` or `H5` respectively).
- *
- * Next, depending on what is available it can preferably contain an image file/source, if no image, then show initials as fall back, if no name/initials, then fall back to an icon.
- *
- * Thirdly the title/name can be a link or just plain text.
- *
- * Lastly you can specify whether it is being rendered on a dark background and the colours will change to suit this case.
- *
- * Also, if no title/subtitle is specified then it will only show the circle avatar part.
- *
- * Follow example code below to achieve desired option.
- */
-export function Avatar({ image, initials, small, inverted, title, subtitle }) {
+const Title = styled(H5)`
+  ${variant({
+    prop: "size",
+    variants: {
+      small: {
+        fontSize: systemtheme.fontSizes[3]
+      },
+      default: {}
+    }
+  })}
+  ${variant({
+    prop: "color",
+    variants: {
+      white: {
+        color: systemtheme.colors.white
+      },
+      default: {}
+    }
+  })}
+`;
+
+const Subtitle = styled(Text)`
+  color: ${systemtheme.colors.grey};
+  ${variant({
+    prop: "size",
+    variants: {
+      small: {
+        fontSize: systemtheme.fontSizes[1]
+      },
+      default: {}
+    }
+  })}
+  ${variant({
+    prop: "color",
+    variants: {
+      white: {
+        color: systemtheme.colors.white
+      },
+      default: {}
+    }
+  })}
+`;
+
+export default function Avatar({ image, initials, title, subtitle, ...props }) {
   return (
-    <Container>
+    <AvatarWrapper {...props}>
       {image ? (
-        <Image src={image} small={small} />
+        <Image src={image} {...props} />
       ) : (
-        <Default small={small} initials={initials}>
-          {initials}
-        </Default>
+        <Circle {...props}>{initials}</Circle>
       )}
-      <Text inverted={inverted}>
-        {title ? (
-          small ? (
-            <Typography.H4>{title}</Typography.H4>
-          ) : (
-            <Typography.H2>{title}</Typography.H2>
-          )
-        ) : null}
-        {subtitle ? <Typography.Small grey>{subtitle}</Typography.Small> : null}
-      </Text>
-    </Container>
+      <TextContent {...props}>
+        <Title {...props}>{title}</Title>
+        {subtitle ? <Subtitle {...props}>{subtitle}</Subtitle> : null}
+      </TextContent>
+    </AvatarWrapper>
   );
 }
 
 Avatar.propTypes = {
-  /** Specifies to use small avatar instead of regular size */
-  small: PropTypes.bool,
-  /** Specifies to use inverted styling if on dark background */
-  inverted: PropTypes.bool,
+  /** Changes the size of the Avatar component */
+  size: PropTypes.oneOfType(["small", "default"]),
+  /** Changes the text colour; use `color="white"` for dark backgrounds */
+  color: PropTypes.oneOfType(["white", "default"]),
   /** Specifies a source path for an image */
   image: PropTypes.string,
   /** Specifies initials of person if available */
   initials: PropTypes.string,
   /** Specifies title / name as just plain text, or an element like a hyperlink or react router link */
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  /** Specifies subtitle **/
+  /** Specifies subtitle / role */
   subtitle: PropTypes.string
 };
-
-/** @component */
-export default Avatar;

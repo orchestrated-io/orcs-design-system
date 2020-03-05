@@ -144,6 +144,30 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+h1 {
+  font-size: ${fontSizes[8]}px
+}
+
+h2 {
+  font-size: ${fontSizes[7]}px
+}
+
+h3 {
+  font-size: ${fontSizes[6]}px
+}
+
+h4 {
+  font-size: ${fontSizes[5]}px
+}
+
+h5 {
+  font-size: ${fontSizes[4]}px
+}
+
+h6 {
+  font-size: ${fontSizes[3]}px
+}
+
 /* Animations */
 @keyframes checkboxOn {
   0% {

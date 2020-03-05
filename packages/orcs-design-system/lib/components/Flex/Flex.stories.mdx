@@ -11,7 +11,8 @@ import Icon from "../Icon";
 
 `Flex` is a component to layout, align, and arrange items dynamically within a container. This component should be used to display items where a grid structure is not needed, for instance a horizontal menu bar of buttons or links.
 
-To use `FlexItem` you must also `import { FlexItem } from "orca-design-system"`.
+To use `FlexItem` to control the spacing between children of `Flex` you must also import it:
+  `import { FlexItem } from "orca-design-system"`.
 
 <Preview>
   <Story name="Basic">
@@ -58,7 +59,7 @@ By default, we've set certain values on `Flex` properties as documented in the t
 
 ### Using `FlexItem`
 
-You don't necessarily need to use `<FlexItem>` as the direct child elements to `<Flex>` unless you need to apply specific `flexbox` properties to the item. In most cases, once you set the desired properties on `<Flex>` it will layout the child elements as intended, whether these be `<FlexItem>` or any other component like `<Box>` or even standard HTML like a `<div>` or `<span>`. However, if you want to use the specific CSS properties for items within the container, like `flex` or `align-self`, you will need to use `FlexItem`.
+You don't necessarily need to use `<FlexItem>` as the direct child element to `<Flex>` unless you need to apply specific `flexbox` properties to the item. In most cases, once you set the desired properties on `<Flex>` it will layout the child elements as intended, whether these be `<FlexItem>` or any other component like `<Box>` or even standard HTML like a `<div>` or `<span>`. However, if you want to use the flex-specific CSS properties for items within the container, like `flex` or `align-self`, you will need to use `FlexItem` to apply these properties.
 
 <Preview>
   <Story name="Using FlexItem">
