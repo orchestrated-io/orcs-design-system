@@ -1,0 +1,107 @@
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import Spacer from ".";
+import Button from "../Button";
+import Icon from "../Icon";
+import { H3 } from "../Typography";
+import Box from "../Box";
+import Flex from "../Flex";
+
+<Meta title="Components/Spacer" component={Spacer} />
+
+# Spacer
+
+[Properties](#properties) | [Examples](#examples) | [Upgrading](#upgrading)
+
+`Spacer` applies `layout` and `space` components to its children without being rendered as a wrapper component. This is particularly useful in conjunction with components like `Box` or `Flex`, where you may want to specify `padding` and `margin` for all children without having to do so individually for each child.
+
+This replaces the `Layout` functionality for `childVerticalSpacing` and similar properties.
+
+## Properties
+
+`Spacer` can use all `layout` and `space` properties. Note that these will override the values set for the child's properties.
+
+<Props of={Spacer} />
+
+### For reference, see:
+
+- [space on Styled-System](https://styled-system.com/table#space)
+- [layout on Styled-System](https://styled-system.com/table#layout)
+- [systemtheme.js](https://github.com/orchestrated-io/orca-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js) (our arrays for design system values)
+
+## Examples
+
+### Default
+
+By default, `Spacer` sets a margin of `8px` on all sides of its children.
+
+<Preview>
+  <Story name="Default">
+    <Flex height="200px">
+      <Spacer>
+        <Button iconRight>
+          Right aligned icon
+          <Icon icon={["fas", "download"]} />
+        </Button>
+        <Button>Default button</Button>
+        <Button ghost>Ghost button</Button>
+        <Button disabled>Disabled button</Button>
+        <H3>Test test</H3>
+      </Spacer>
+    </Flex>
+  </Story>
+</Preview>
+
+### Margin
+
+<Preview>
+  <Story name="Margin">
+    <Flex height="200px">
+      <Spacer margin="30px">
+        <Button iconRight>
+          Right aligned icon
+          <Icon icon={["fas", "download"]} />
+        </Button>
+        <Button>Default button</Button>
+        <Button ghost>Ghost button</Button>
+        <Button disabled>Disabled button</Button>
+        <H3>Test test</H3>
+      </Spacer>
+    </Flex>
+  </Story>
+</Preview>
+
+### Padding
+
+<Preview>
+  <Story name="Padding">
+    <Flex height="200px">
+      <Spacer padding={5}>
+        <Button iconRight>
+          Right aligned icon
+          <Icon icon={["fas", "download"]} />
+        </Button>
+        <Button>Default button</Button>
+        <Button ghost>Ghost button</Button>
+        <Button disabled>Disabled button</Button>
+        <H3>Test test</H3>
+      </Spacer>
+    </Flex>
+  </Story>
+</Preview>
+
+## Upgrading
+
+This component is a **breaking change** that replaces the [previous Layout component](./?path=/docs/layout--page)'s `childSpacing` properties. Use the following table as a guide to convert from the old properties to new `Spacer` properties. Refer to [systemtheme.js](https://github.com/orchestrated-io/orca-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js) for values.
+
+For `childChildSpacing` properties, wrap `<Spacer>` directly around the items you want to target.
+
+### `Spacer` properties
+
+| **Layout**                      | **Spacer**         |
+| ------------------------------- | ------------------ |
+| `childVerticalSpacing`          | `my={3}` (default) |
+| `childVerticalSpacingHalf`      | `my={2}`           |
+| `childVerticalSpacingQuarter`   | `my={1}`           |
+| `childHorizontalSpacing`        | `mx={3}` (default) |
+| `childHorizontalSpacingHalf`    | `mx={2}`           |
+| `childHorizontalSpacingQuarter` | `mx={1}`           |
