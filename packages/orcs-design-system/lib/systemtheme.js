@@ -6,12 +6,18 @@ export const fonts = {
 
 export const font = fonts.main;
 export const fontFamilies = fonts;
-
 export const fontSizes = [12, 14, 16, 20, 24, 28, 32, 36, 48, 64];
+export const fontWeights = [300, 400, 600];
 
 export const lineHeights = [1, 1.5, 2];
 
-export const fontWeights = [300, 400, 600];
+export const zIndex = [-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+export const space = [0, 2, 4, 8, 16, 24, 32, 64, 128, 256, 512];
+
+export const radii = [0, 2, 6];
+
+export const transition = "all 200ms ease-in-out";
 
 export const colors = {
   /* Greyscale */
@@ -263,12 +269,6 @@ h1, h2, h3, h4, h5, h6 {
    0% { width: 0; }
 }
 `;
-
-export const space = [0, 2, 4, 8, 16, 32, 64, 128, 256, 512];
-
-export const radii = [0, 2, 6];
-
-export const transition = "all 200ms ease-in-out";
 
 export default {
   GlobalStyles,

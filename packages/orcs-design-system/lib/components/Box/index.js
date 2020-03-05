@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { space, layout, color, border, variant, width } from "styled-system";
+import { space, layout, color, border, variant } from "styled-system";
 import PropTypes from "prop-types";
 
 const BoxWrapper = styled.div`
@@ -8,7 +8,6 @@ ${space}
 ${layout}
 ${color}
 ${border}
-${width}
   box-sizing: border-box;
   ${variant({
     variants: {

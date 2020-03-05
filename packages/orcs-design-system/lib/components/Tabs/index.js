@@ -21,6 +21,7 @@ export const Tab = styled(Link)`
   text-align: center;
   text-transform: uppercase;
   font-size: 1.4rem;
+  letter-spacing: 0.5px;
   font-weight: 600;
   padding: ${systemtheme.space[3]}px ${systemtheme.space[4]}px;
   border-radius: ${systemtheme.radii[2]}px ${systemtheme.radii[2]}px 0 0;
@@ -31,7 +32,7 @@ export const Tab = styled(Link)`
   color: ${props =>
     props.active ? systemtheme.colors.white : systemtheme.colors.grey};
   + a {
-    margin-left: ${systemtheme.space[2]}px;
+    margin-left: ${systemtheme.space[3]}px;
   }
   &:focus {
     outline: 0;
@@ -52,17 +53,17 @@ const notificationStyle = notification => css`
   :after {
     content: "${notification}";
     position: absolute;
-    top: -5px;
-    right: -4px;
+    top: -6px;
+    right: -8px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 2;
-    width: 20px;
-    height: 20px;
+    width: ${systemtheme.space[5]}px;
+    height: ${systemtheme.space[5]}px;
     border-radius: 100%;
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: ${systemtheme.fontSizes[0]};
+    font-weight: ${systemtheme.fontWeights[2]};
     color: ${systemtheme.colors.white};
     background-color: ${systemtheme.colors.danger};
   }
