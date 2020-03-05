@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@storybook/preset-create-react-app": "^1.5.2",
+    "@styled-system/css": "^5.1.5",
     "@styled-system/prop-types": "^5.1.4",
     "polished": "^3.4.4",
     "prop-types": "^15.6.2",
