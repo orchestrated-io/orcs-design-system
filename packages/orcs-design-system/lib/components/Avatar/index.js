@@ -34,7 +34,7 @@ const TextContent = styled.div`
     variants: {
       small: {
         fontSize: 1,
-        marginLeft: systemtheme.space[2]
+        marginLeft: systemtheme.space[1]
       },
       default: {}
     }
@@ -48,14 +48,14 @@ const Image = styled.img`
   border-radius: 50%;
   border: 0;
   display: block;
-  width: ${systemtheme.space[6]}px;
-  height: ${systemtheme.space[6]}px;
+  width: ${systemtheme.space[7]}px;
+  height: ${systemtheme.space[7]}px;
   ${variant({
     prop: "size",
     variants: {
       small: {
-        width: systemtheme.space[5],
-        height: systemtheme.space[5]
+        width: systemtheme.space[6],
+        height: systemtheme.space[6]
       },
       default: {}
     }
@@ -73,14 +73,14 @@ const Circle = styled.div`
   text-align: center;
   text-transform: uppercase;
   font-weight: ${systemtheme.fontWeights[2]};
-  width: ${systemtheme.space[6]}px;
-  height: ${systemtheme.space[6]}px;
+  width: ${systemtheme.space[7]}px;
+  height: ${systemtheme.space[7]}px;
   ${variant({
     prop: "size",
     variants: {
       small: {
-        width: systemtheme.space[5],
-        height: systemtheme.space[5]
+        width: systemtheme.space[6],
+        height: systemtheme.space[6]
       },
       default: {}
     }
