@@ -33,28 +33,28 @@ These use `<H1>` to `<H6>` tags. For semantic and accessibility usage guidelines
 <Story name="Headings/H1 to H6">
 <>
 <H1>Standard H1</H1>
-<H1 variant="light">Light version</H1>
-<H1 variant="bold">Bold version</H1>
+<H1 weight="light">Light version</H1>
+<H1 weight="bold">Bold version</H1>
 <br />
 <H2>Standard H2</H2>
-<H2 variant="light">Light version</H2>
-<H2 variant="bold">Bold version</H2>
+<H2 weight="light">Light version</H2>
+<H2 weight="bold">Bold version</H2>
 <br />
 <H3>Standard H3</H3>
-<H3 variant="light">Light version</H3>
-<H3 variant="bold">Bold version</H3>
+<H3 weight="light">Light version</H3>
+<H3 weight="bold">Bold version</H3>
 <br />
 <H4>Standard H4</H4>
-<H4 variant="light">Light version</H4>
-<H4 variant="bold">Bold version</H4>
+<H4 weight="light">Light version</H4>
+<H4 weight="bold">Bold version</H4>
 <br />
 <H5>Standard H5</H5>
-<H5 variant="light">Light version</H5>
-<H5 variant="bold">Bold version</H5>
+<H5 weight="light">Light version</H5>
+<H5 weight="bold">Bold version</H5>
 <br />
 <H6>Standard H6</H6>
-<H6 variant="light">Light version</H6>
-<H6 variant="bold">Bold version</H6>
+<H6 weight="light">Light version</H6>
+<H6 weight="bold">Bold version</H6>
 </>
 </Story>
 </Preview>
@@ -83,23 +83,23 @@ To render text in a `span` HTML element without the paragraph formatting, use th
 
 ### Size and emphasis
 
-To render type smaller or larger, use `variant="small"` or `variant="large"`, or if needed (for example if you are already using a variant) you can use `fontSize` property as demonstrated below. Unless it is for a very specific purpose, strongly recommend minimising the resizing of text and simply using the appropriate type element the next size up (or down) on the design system scale.
+To render type smaller or larger, use `size="small"` or `size="large"`, or if needed (for example if you are already using a variant) you can use `fontSize` property as demonstrated below. Unless it is for a very specific purpose, strongly recommend minimising the resizing of text and simply using the appropriate type element the next size up (or down) on the design system scale.
 
 <Preview>
 <Story name="Styling/Sizing">
 <>
-<H5 variant="small">Small variant of H5</H5>
-<H5 variant="large">Large variant of H5</H5>
+<H5 size="small">Small variant of H5</H5>
+<H5 size="large">Large variant of H5</H5>
 <H3 fontSize={4}>Smaller H3, scaled down two steps in the fontSize array</H3>
 <Text fontSize="10px">Very small text using a specific fontSize value</Text>
 </>
 </Story>
 </Preview>
 
-To render type with emphasis, use `variant="bold"` or wrap the type in a `<Strong>` tag.
+To render type with emphasis, use `weight="bold"` or wrap the type in a `<Strong>` tag.
 
 <Preview>
-<P variant="bold">Bold paragraph text lorem ipsum dolor sit amet</P>
+<P weight="bold">Bold paragraph text lorem ipsum dolor sit amet</P>
 <P>Only <Strong>partially bolded</Strong> paragraph</P>
 </Preview>
 
