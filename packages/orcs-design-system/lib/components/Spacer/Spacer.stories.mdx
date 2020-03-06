@@ -1,8 +1,7 @@
 import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
 import Spacer from ".";
+import Avatar from "../Avatar";
 import Button from "../Button";
-import Icon from "../Icon";
-import { H3 } from "../Typography";
 import Box from "../Box";
 import Flex from "../Flex";
 
@@ -12,13 +11,15 @@ import Flex from "../Flex";
 
 [Properties](#properties) | [Examples](#examples) | [Upgrading](#upgrading)
 
-`Spacer` applies `layout` and `space` components to its children without being rendered as a wrapper component. This is particularly useful in conjunction with components like `Box` or `Flex`, where you may want to specify `padding` and `margin` for all children without having to do so individually for each child.
+`Spacer` is a component that applies `layout` and `space` properties to its children. This can be useful in conjunction with components like `Box` or `Flex`, where you may want to specify `padding` and `margin` for all children without having to do so individually for each child.
 
 This replaces the `Layout` functionality for `childVerticalSpacing` and similar properties.
 
+Generally, `Spacer` should be used only when there is a need to specify precise spacing between items. In most such cases, `Grid` may be more semantically correct so it is recommended to investigate that option first and to use this component sparingly.
+
 ## Properties
 
-`Spacer` can use all `layout` and `space` properties. Note that these will override the values set for the child's properties.
+`Spacer` can use all `layout` and `space` properties. Note that these will override the values set for the child's properties, if any.
 
 <Props of={Spacer} />
 
@@ -36,37 +37,57 @@ By default, `Spacer` sets a margin of `8px` on all sides of its children.
 
 <Preview>
   <Story name="Default">
-    <Flex height="200px">
       <Spacer>
-        <Button iconRight>
-          Right aligned icon
-          <Icon icon={["fas", "download"]} />
-        </Button>
-        <Button>Default button</Button>
-        <Button ghost>Ghost button</Button>
-        <Button disabled>Disabled button</Button>
-        <H3>Test test</H3>
+      <Avatar
+        title="Ayden Lundgre"
+        subtitle="Senior Business Analyst"
+        initials="AL"
+        image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+      />
+      <Avatar
+        title="Ayden Lundgre"
+        subtitle="Senior Business Analyst"
+        initials="AL"
+        />
+      <Avatar
+        title={<StyledLink href="#">Ayden Lundgre</StyledLink>}
+        subtitle="Senior Business Analyst"
+        initials="AL"
+        image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+      />
+      <Avatar
+        sizing="small"
+        title="Ayden Lundgre"
+        subtitle="Senior Business Analyst"
+        initials="AL"
+        image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+      />
+      <Avatar
+        sizing="small"
+        title={<StyledLink href="#">Ayden Lundgre</StyledLink>}
+        subtitle="Senior Business Analyst"
+        initials="AL"
+        image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+      />
       </Spacer>
-    </Flex>
-  </Story>
+</Story>
 </Preview>
 
 ### Margin
 
 <Preview>
   <Story name="Margin">
-    <Flex height="200px">
-      <Spacer margin="30px">
-        <Button iconRight>
-          Right aligned icon
-          <Icon icon={["fas", "download"]} />
-        </Button>
-        <Button>Default button</Button>
-        <Button ghost>Ghost button</Button>
-        <Button disabled>Disabled button</Button>
-        <H3>Test test</H3>
-      </Spacer>
-    </Flex>
+    <Spacer margin="30px">
+      <Button small ghost>
+        Small ghost button
+      </Button>
+      <Button ghost>
+        Regular ghost button
+      </Button>
+      <Button large ghost>
+        Large ghost button
+      </Button>
+    </Spacer>
   </Story>
 </Preview>
 
@@ -74,18 +95,39 @@ By default, `Spacer` sets a margin of `8px` on all sides of its children.
 
 <Preview>
   <Story name="Padding">
-    <Flex height="200px">
-      <Spacer padding={5}>
-        <Button iconRight>
-          Right aligned icon
-          <Icon icon={["fas", "download"]} />
-        </Button>
-        <Button>Default button</Button>
-        <Button ghost>Ghost button</Button>
-        <Button disabled>Disabled button</Button>
-        <H3>Test test</H3>
+      <Spacer padding={3}>
+      <Avatar
+        title="Ayden Lundgre"
+        subtitle="Senior Business Analyst"
+        initials="AL"
+        image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+      />
+      <Avatar
+        title="Ayden Lundgre"
+        subtitle="Senior Business Analyst"
+        initials="AL"
+        />
+      <Avatar
+        title={<StyledLink href="#">Ayden Lundgre</StyledLink>}
+        subtitle="Senior Business Analyst"
+        initials="AL"
+        image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+      />
+      <Avatar
+        sizing="small"
+        title="Ayden Lundgre"
+        subtitle="Senior Business Analyst"
+        initials="AL"
+        image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+      />
+      <Avatar
+        sizing="small"
+        title={<StyledLink href="#">Ayden Lundgre</StyledLink>}
+        subtitle="Senior Business Analyst"
+        initials="AL"
+        image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+      />
       </Spacer>
-    </Flex>
   </Story>
 </Preview>
 

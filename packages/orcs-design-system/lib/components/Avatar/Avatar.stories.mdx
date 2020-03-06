@@ -1,5 +1,6 @@
 import Avatar from ".";
 import Box from "../Box";
+import Spacer from "../Spacer";
 import StyledLink from "../StyledLink";
 import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
 
@@ -9,13 +10,13 @@ import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
 
 [Properties](#properties) | [Examples](#examples) | [Upgrading](#upgrading)
 
-Avatars can come in a few different options. Firstly regular or small size (using a H2 or H5 respectively).
+Avatars can come in a few different options. Firstly regular or small size.
 
 Next, depending on what is available it can preferably contain an image file/source, if no image, then show initials as fall back, if no name/initials, then fall back to an icon.
 
 Thirdly the title/name can be a link or just plain text.
 
-Lastly you can specify whether it is being rendered on a dark background and the colors will change to suit this case.
+Lastly you can specify whether it is being rendered on a dark background and the colours will change to suit this case.
 
 Also, if no title/subtitle is specified then it will only show the circle avatar part.
 
@@ -29,7 +30,7 @@ Follow example code below to achieve desired option.
 
 ## Properties
 
-You can use `space` and `layout` Styled-System properties with `Avatar`, as well as two custom props: `size` and `color`.
+You can use `space` and `layout` Styled-System properties with `Avatar`, as well as two custom props: `sizing` and `color`.
 
 ### For reference, see:
 
@@ -75,44 +76,36 @@ By default, we've set certain values on `Avatar` properties as documented in the
 ## Size
   <Preview>
     <Story name="Small">
-    <>
-    <Box>
-    <Avatar size="small" title="Ayden Lundgre" subtitle="Senior Business Analyst" />
-    </Box>
-    <Box>
+    <Spacer>
+    <Avatar sizing="small" title="Ayden Lundgre" subtitle="Senior Business Analyst" />
     <Avatar
-      size="small"
+      sizing="small"
       title="Ayden Lundgre"
       subtitle="Senior Business Analyst"
       initials="AL"
     />
-    </Box>
-    <Box>
     <Avatar
-      size="small"
+      sizing="small"
       title="Ayden Lundgre"
       subtitle="Senior Business Analyst"
       initials="AL"
       image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
     />
-    </Box>
-    <Box>
     <Avatar
-      size="small"
+      sizing="small"
       title={<StyledLink href="#">Ayden Lundgre</StyledLink>}
       subtitle="Senior Business Analyst"
       initials="AL"
       image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
     />
-    </Box>
-    </>
+    </Spacer>
     </Story>
 </Preview>
 
 <Preview>
 <Story name="Inverted">
-<>
     <Box bg="greyDarkest">
+    <Spacer>
     <Avatar
       color="white"
       title="Ayden Lundgre"
@@ -120,16 +113,12 @@ By default, we've set certain values on `Avatar` properties as documented in the
       initials="AL"
       image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
     />
-    </Box>
-    <Box bg="greyDarkest">
     <Avatar
       color="white"
       title="Ayden Lundgre"
       subtitle="Senior Business Analyst"
       initials="AL"
       />
-    </Box>
-    <Box bg="greyDarkest">
     <Avatar
       color="white"
       title={<StyledLink href="#">Ayden Lundgre</StyledLink>}
@@ -137,27 +126,23 @@ By default, we've set certain values on `Avatar` properties as documented in the
       initials="AL"
       image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
     />
-    </Box>
-    <Box bg="greyDarkest">
     <Avatar
       color="white"
-      size="small"
+      sizing="small"
       title="Ayden Lundgre"
       subtitle="Senior Business Analyst"
       initials="AL"
       image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
     />
-    </Box>
-    <Box bg="greyDarkest">
     <Avatar
       color="white"
-      size="small"
+      sizing="small"
       title={<StyledLink href="#">Ayden Lundgre</StyledLink>}
       subtitle="Senior Business Analyst"
       initials="AL"
       image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
     />
+    </Spacer>
     </Box>
-    </>
   </Story>
   </Preview>
