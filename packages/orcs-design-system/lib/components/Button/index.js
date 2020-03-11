@@ -4,8 +4,11 @@ import PropTypes from "prop-types";
 import colours from "../../colours";
 import variables from "../../variables";
 import { rgba, darken } from "polished";
+import { space, layout } from "styled-system";
 
 const Item = styled.button`
+  ${space}
+  ${layout}
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,7 +167,8 @@ export default function Button({
   iconRight,
   iconOnly,
   colour,
-  children
+  children,
+  ...props
 }) {
   return (
     <Item
@@ -178,6 +182,7 @@ export default function Button({
       iconRight={iconRight}
       iconOnly={iconOnly}
       colour={colour}
+      {...props}
     >
       {children}
     </Item>

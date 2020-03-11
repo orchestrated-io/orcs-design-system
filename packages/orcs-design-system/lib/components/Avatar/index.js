@@ -12,7 +12,7 @@ const AvatarWrapper = styled.div`
   display: flex;
   align-items: center;
   ${variant({
-    prop: "size",
+    prop: "sizing",
     variants: {
       small: {
         fontSize: 1
@@ -23,14 +23,12 @@ const AvatarWrapper = styled.div`
 `;
 
 const TextContent = styled.div`
-  ${space}
-  ${layout}
   > * + * {
     margin-top: ${systemtheme.space[2]}px;
   }
   margin-left: ${systemtheme.space[3]}px;
   ${variant({
-    prop: "size",
+    prop: "sizing",
     variants: {
       small: {
         fontSize: 1,
@@ -42,20 +40,18 @@ const TextContent = styled.div`
 `;
 
 const Image = styled.img`
-  ${space}
-  ${layout}
   background-color: ${systemtheme.colors.greyLighter};
   border-radius: 50%;
   border: 0;
   display: block;
-  width: ${systemtheme.space[7]}px;
-  height: ${systemtheme.space[7]}px;
+  width: calc(${systemtheme.space[5]}px * 2.25);
+  height: calc(${systemtheme.space[5]}px * 2.25);
   ${variant({
-    prop: "size",
+    prop: "sizing",
     variants: {
       small: {
-        width: systemtheme.space[6],
-        height: systemtheme.space[6]
+        height: "calc(" + systemtheme.space[4] + "px * 2.5)",
+        width: "calc(" + systemtheme.space[4] + "px * 2.5)"
       },
       default: {}
     }
@@ -63,8 +59,6 @@ const Image = styled.img`
 `;
 
 const Circle = styled.div`
-  ${space}
-  ${layout}
   border-radius: 50%;
   background-color: ${systemtheme.colors.greyLighter};
   display: flex;
@@ -73,14 +67,14 @@ const Circle = styled.div`
   text-align: center;
   text-transform: uppercase;
   font-weight: ${systemtheme.fontWeights[2]};
-  width: ${systemtheme.space[7]}px;
-  height: ${systemtheme.space[7]}px;
+  width: calc(${systemtheme.space[5]}px * 2.25);
+  height: calc(${systemtheme.space[5]}px * 2.25);
   ${variant({
-    prop: "size",
+    prop: "sizing",
     variants: {
       small: {
-        width: systemtheme.space[6],
-        height: systemtheme.space[6]
+        height: "calc(" + systemtheme.space[4] + "px * 2.5)",
+        width: "calc(" + systemtheme.space[4] + "px * 2.5)"
       },
       default: {}
     }
@@ -99,7 +93,7 @@ const Circle = styled.div`
 
 const Title = styled(H5)`
   ${variant({
-    prop: "size",
+    prop: "sizing",
     variants: {
       small: {
         fontSize: systemtheme.fontSizes[3]
@@ -121,7 +115,7 @@ const Title = styled(H5)`
 const Subtitle = styled(Text)`
   color: ${systemtheme.colors.grey};
   ${variant({
-    prop: "size",
+    prop: "sizing",
     variants: {
       small: {
         fontSize: systemtheme.fontSizes[1]
@@ -157,8 +151,8 @@ export default function Avatar({ image, initials, title, subtitle, ...props }) {
 }
 
 Avatar.propTypes = {
-  /** Changes the size of the Avatar component */
-  size: PropTypes.oneOfType(["small", "default"]),
+  /** Changes the sizing of the Avatar component */
+  sizing: PropTypes.oneOfType(["small", "default"]),
   /** Changes the text colour; use `color="white"` for dark backgrounds */
   color: PropTypes.oneOfType(["white", "default"]),
   /** Specifies a source path for an image */
