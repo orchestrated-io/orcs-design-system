@@ -138,5 +138,6 @@
       "pre-push": "./installGitSecrets.sh &&  git secrets --register-aws && git-secrets --scan -r && npm run audit-ci",
       "pre-commit": "prettier --write lib/**/*.js* && npm run lint"
     }
-  }
+  },
+  "gitHead": "69f16f52a88aa7700b72e66285fec7ea49a516f8"
 }
