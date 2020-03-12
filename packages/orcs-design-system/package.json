@@ -1,11 +1,11 @@
 {
-  "name": "orca-v2",
-  "version": "0.0.1-alpha.0",
-  "description": "Orchestrated Frontend React NPM library for Brand designs",
+  "name": "orcs-design-system",
+  "version": "0.9.1",
+  "description": "Orchestrated Design System: ORCS",
   "main": "dist/index.js",
   "module": "es/index.js",
   "sideEffects": false,
-  "private": true,
+  "private": false,
   "scripts": {
     "audit-ci": "audit-ci -m --config ./audit-ci.json",
     "lint": "eslint lib/",
