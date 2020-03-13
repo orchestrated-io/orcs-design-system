@@ -193,8 +193,8 @@ ${variant({
 `;
 
 export const Text = styled.span`
-${typography}
-${color}
+  ${typography}
+  ${color}
 `;
 
 export const Strong = styled.span`
