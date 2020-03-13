@@ -1,8 +1,11 @@
 import styled, { css } from "styled-components";
 import * as systemtheme from "../../systemtheme";
 import { Link } from "react-router-dom";
+import { space, layout } from "styled-system";
 
 export const TabsContainer = styled.div`
+  ${space}
+  ${layout}
   width: 100%;
   display: flex;
   align-items: center;
