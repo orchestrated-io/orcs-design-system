@@ -2,6 +2,7 @@
 export { default as systemtheme } from "./systemtheme";
 export { default as variables } from "./variables";
 export { default as colours } from "./colours";
+export { GlobalStyles } from "./systemtheme";
 
 export { default as Avatar } from "./components/Avatar";
 export { default as Badge } from "./components/Badge";
