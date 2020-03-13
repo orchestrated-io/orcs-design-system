@@ -1,7 +1,8 @@
 // Import CSS reset and Global Styles
-export { default as GlobalStyles } from "./globalStyles";
+export { default as systemtheme } from "./systemtheme";
 
 export { default as Badge } from "./components/Badge";
+export { default as Box } from "./components/Box";
 export { default as Button } from "./components/Button";
 export { default as Card } from "./components/Card";
 export { default as Checkbox } from "./components/Checkbox";
@@ -22,6 +23,7 @@ export { default as RadioButton } from "./components/RadioButton";
 export { default as Range } from "./components/Range";
 export { default as Select } from "./components/Select";
 export { default as Sidebar } from "./components/Sidebar";
+export { default as Spacing } from "./components/Spacing";
 export { default as StyledLink } from "./components/StyledLink";
 export { default as ContentTabs } from "./components/ContentTabs";
 export { default as LayoutTabs } from "./components/LayoutTabs";
