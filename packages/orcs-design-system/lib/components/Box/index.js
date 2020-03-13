@@ -66,6 +66,6 @@ Box.defaultProps = {
   overflow: "visible",
   border: "none",
   m: 0,
-  p: 3,
+  p: 4,
   bg: "transparent"
 };

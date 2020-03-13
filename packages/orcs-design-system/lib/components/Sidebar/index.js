@@ -1,9 +1,12 @@
 import styled, { css } from "styled-components";
 import colours from "../../colours";
 import variables from "../../variables";
-import { darken } from "polished";
+import { color } from "styled-system";
+import * as systemtheme from "../../systemtheme";
 
 const Container = styled.div`
+  ${color}
+  background: ${systemtheme.colors.greyDarker};
   max-width: 360px;
   min-height: calc(100vh - 60px);
   height: 100%;
@@ -15,6 +18,7 @@ const Container = styled.div`
 `;
 
 const Tabs = styled.div`
+  ${color}
   min-width: 60px;
   display: flex;
   flex-direction: column;
@@ -23,7 +27,6 @@ const Tabs = styled.div`
   justify-content: flex-start;
   min-height: calc(100vh - 60px);
   height: 100%;
-  background: ${colours.greyDark};
 `;
 
 const Tab = styled.label`
@@ -33,10 +36,9 @@ const Tab = styled.label`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: solid 1px ${darken(0.2, colours.grey)};
   width: 100%;
   transition: ${variables.defaultTransition};
-  color: ${props => (props.active ? colours.primary : colours.greyLight)};
+  color: ${props => (props.active ? colours.primary : colours.greyLightest)};
   background: ${props => (props.active ? colours.greyDarker : "transparent")};
   cursor: ${props => (props.active ? "default" : "pointer")};
   &:hover,

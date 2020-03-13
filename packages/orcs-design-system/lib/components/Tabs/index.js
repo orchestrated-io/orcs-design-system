@@ -31,7 +31,9 @@ export const Tab = styled(Link)`
   transition: ${systemtheme.transition};
   cursor: ${props => (props.active ? "default" : "pointer")};
   background: ${props =>
-    props.active ? systemtheme.colors.grey : systemtheme.colors.greyLighter};
+    props.active
+      ? systemtheme.colors.greyDark
+      : systemtheme.colors.greyLighter};
   color: ${props =>
     props.active ? systemtheme.colors.white : systemtheme.colors.grey};
   + a {
@@ -47,7 +49,7 @@ export const Tab = styled(Link)`
 const inactiveStyle = css`
   &:hover,
   &:focus {
-    color: ${systemtheme.colors.greyDark};
+    color: ${systemtheme.colors.greyDarker};
     background: ${systemtheme.colors.greyLighter};
   }
 `;
