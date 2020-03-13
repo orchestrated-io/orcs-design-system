@@ -31,7 +31,7 @@ export { default as Sidebar } from "./components/Sidebar";
 export { default as Spacer } from "./components/Spacer";
 export { default as StatusDot } from "./components/StatusDot";
 export { default as StyledLink } from "./components/StyledLink";
-export { default as Tab, TabsContainer } from "./components/Tabs";
+export { Tab, TabsContainer } from "./components/Tabs";
 export { default as Tag } from "./components/Tag";
 export { default as TextInput } from "./components/TextInput";
 export { default as TextArea } from "./components/TextArea";
