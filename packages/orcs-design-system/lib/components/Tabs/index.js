@@ -68,3 +68,5 @@ const notificationStyle = notification => css`
     background-color: ${systemtheme.colors.danger};
   }
 `;
+
+export default { Tab, TabsContainer };
