@@ -4,8 +4,11 @@ import PropTypes from "prop-types";
 import Icon from "../Icon/";
 import colours from "../../colours";
 import variables from "../../variables";
+import { space, layout } from "styled-system";
 
 const Item = styled.div`
+  ${space}
+  ${layout}
   word-wrap: break-word;
   width: ${props =>
     props.width ? props.width : props.fluid ? "100%" : "auto"};
@@ -66,8 +69,9 @@ const Item = styled.div`
             justify-content: flex-start;
             align-items: center;
           }
-          h4 {
+          span {
             margin-left: auto;
+            float: right;
           }
         `
       : css``};
@@ -80,11 +84,11 @@ const Header = styled.div`
   }
 `;
 
-const Title = styled.h3`
+const Title = styled.h6``;
+
+const Subtitle = styled.span`
   font-weight: 400;
 `;
-
-const Subtitle = styled.h4``;
 
 const Content = styled.div``;
 
@@ -139,7 +143,7 @@ export default function Card({
   fluid,
   width,
   center,
-  ...restProps
+  ...props
 }) {
   return (
     <Item
@@ -148,7 +152,7 @@ export default function Card({
       fluid={fluid}
       width={width}
       center={center}
-      {...restProps}
+      {...props}
     >
       {!icon & !title & !subtitle ? null : (
         <Header>

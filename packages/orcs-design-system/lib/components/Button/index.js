@@ -5,6 +5,7 @@ import colours from "../../colours";
 import variables from "../../variables";
 import { rgba, darken } from "polished";
 import { space, layout } from "styled-system";
+import * as systemtheme from "../../systemtheme";
 
 const Item = styled.button`
   ${space}
@@ -20,6 +21,7 @@ const Item = styled.button`
   text-align: center;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 600;
+  margin: ${systemtheme.space[3]}px;
   border-radius: ${variables.borderRadius};
   transition: ${variables.defaultTransition};
   cursor: ${props => (props.disabled ? "not-allowed" : "pointer")};

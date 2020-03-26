@@ -35,7 +35,7 @@ export const Tab = styled(Link)`
       ? systemtheme.colors.greyDark
       : systemtheme.colors.greyLighter};
   color: ${props =>
-    props.active ? systemtheme.colors.white : systemtheme.colors.grey};
+    props.active ? systemtheme.colors.white : systemtheme.colors.greyDark};
   + a {
     margin-left: ${systemtheme.space[2]}px;
   }
