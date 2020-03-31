@@ -1,10 +1,11 @@
+import React from "react";
 import styled, { css } from "styled-components";
 import colours from "../../colours";
 import variables from "../../variables";
 import { color } from "styled-system";
 import * as systemtheme from "../../systemtheme";
 
-const Container = styled.div`
+const SidebarWrapper = styled.div`
   ${color}
   background: ${systemtheme.colors.greyDarker};
   max-width: 360px;
@@ -119,12 +120,7 @@ const Footer = styled.footer`
 `;
 
 /** @component */
-export default {
-  Container,
-  Tabs,
-  Tab,
-  Panels,
-  Panel,
-  Footer,
-  Close
-};
+export default function Sidebar({ children, ...props }) {
+  return <SidebarWrapper {...props}>{children}</SidebarWrapper>;
+}
+export { Tabs, Tab, Panels, Panel, Footer, Close };
