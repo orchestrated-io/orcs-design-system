@@ -18,7 +18,7 @@ const SidebarWrapper = styled.div`
   width: auto;
 `;
 
-const Tabs = styled.div`
+const SidebarTabs = styled.div`
   ${color}
   min-width: 60px;
   display: flex;
@@ -30,7 +30,7 @@ const Tabs = styled.div`
   height: 100%;
 `;
 
-const Tab = styled.label`
+const SidebarTab = styled.label`
   position: relative;
   min-width: 60px;
   height: 60px;
@@ -70,11 +70,11 @@ const Tab = styled.label`
       : css``};
 `;
 
-const Panels = styled.div`
+const SidebarPanels = styled.div`
   position: relative;
 `;
 
-const Panel = styled.div`
+const SidebarPanel = styled.div`
   display: ${props => (props.active ? "block" : "none")};
   min-width: 300px;
   height: calc(100vh - (60px + 72px));
@@ -82,7 +82,7 @@ const Panel = styled.div`
   background: ${colours.greyDarker};
 `;
 
-const Close = styled.label`
+const SidebarClose = styled.label`
   position: absolute;
   right: -10px;
   top: 50%;
@@ -97,7 +97,7 @@ const Close = styled.label`
   background: ${colours.greyDarker};
 `;
 
-const Footer = styled.footer`
+const SidebarFooter = styled.footer`
   z-index: 5;
   padding: 10px 20px;
   position: relative;
@@ -123,4 +123,11 @@ const Footer = styled.footer`
 export default function Sidebar({ children, ...props }) {
   return <SidebarWrapper {...props}>{children}</SidebarWrapper>;
 }
-export { Tabs, Tab, Panels, Panel, Footer, Close };
+export {
+  SidebarTabs,
+  SidebarTab,
+  SidebarPanels,
+  SidebarPanel,
+  SidebarFooter,
+  SidebarClose
+};

@@ -1,4 +1,4 @@
-import Sidebar, { Tabs, Tab, Panels, Panel, Footer } from ".";
+import Sidebar, { SidebarTabs, SidebarTab, SidebarPanels, SidebarPanel, SidebarFooter } from ".";
 import Icon from "../Icon";
 import Box from "../Box";
 import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
@@ -14,34 +14,34 @@ Ensure to use an appropriate icon for each tab so that the intent of that tab se
 <Preview>
   <Story name="Default">
     <Sidebar>
-      <Tabs>
-        <Tab active badge="3">
+      <SidebarTabs>
+        <SidebarTab active badge="3">
           <Icon icon={["fas", "filter"]} size="lg" />
-        </Tab>
-        <Tab>
+        </SidebarTab>
+        <SidebarTab>
           <Icon icon={["fas", "info-circle"]} size="lg" />
-        </Tab>
-        <Tab>
+        </SidebarTab>
+        <SidebarTab>
           <Icon icon={["fas", "cog"]} size="lg" />
-        </Tab>
-      </Tabs>
-      <Panels>
-        <Panel active>
+        </SidebarTab>
+      </SidebarTabs>
+      <SidebarPanels>
+        <SidebarPanel active>
           <Box>
             Sidebar content tab one blah blah lorem ipsum dolor sit amet.
           </Box>
-        </Panel>
-        <Panel>
+        </SidebarPanel>
+        <SidebarPanel>
           <Box>
             Sidebar content tab two blah blah lorem ipsum dolor sit amet.
           </Box>
-        </Panel>
-        <Panel>
+        </SidebarPanel>
+        <SidebarPanel>
           <Box>
             Sidebar content tab three blah blah lorem ipsum dolor sit amet.
           </Box>
-        </Panel>
-        <Footer>
+        </SidebarPanel>
+        <SidebarFooter>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="250"
@@ -73,8 +73,8 @@ Ensure to use an appropriate icon for each tab so that the intent of that tab se
               Privacy Policy
             </a>
           </small>
-        </Footer>
-      </Panels>
+        </SidebarFooter>
+      </SidebarPanels>
     </Sidebar>
   </Story>
 </Preview>
