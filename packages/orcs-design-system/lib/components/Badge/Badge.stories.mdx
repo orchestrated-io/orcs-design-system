@@ -1,0 +1,74 @@
+import Badge from ".";
+import Box from "../Box";
+import Spacer from "../Spacer";
+
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+
+<Meta title="Components/Badge" component={Badge} />
+
+# Badge
+
+[Properties](#properties) | [Examples](#examples)
+
+Badges should be used for things like status, indicators, or other additional information that you want to highlight but not make interactive/clickable.
+
+<Preview>
+  <Story name="Basic">
+    <Badge>Default</Badge>
+  </Story>
+</Preview>
+
+## Properties
+
+You can use `space` and `layout` Styled-System properties with `Badge`.
+
+### For reference, see:
+
+- [space on Styled-System](https://styled-system.com/table#space)
+- [layout on Styled-System](https://styled-system.com/table#layout)
+- [systemtheme.js](https://github.com/orchestrated-io/orca-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js) (our arrays for design system values)
+
+<Props of={Badge} />
+
+## Examples
+
+<Preview>
+  <Story name="Colours">
+  <Spacer>
+    <Badge colour="success">Success</Badge>
+    <Badge colour="warning">Warning</Badge>
+    <Badge colour="danger">Danger</Badge>
+    <Badge colour="primaryLight">Low priority</Badge>
+    <Badge colour="primaryDark">Medium priority</Badge>
+    <Badge colour="primaryDarkest">High priority</Badge>
+  </Spacer>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="On Dark Background">
+    <Box bg="black">
+      <Spacer>
+        <Badge inverted>Default</Badge>
+        <Badge inverted colour="success">
+          Success
+        </Badge>
+        <Badge inverted colour="warning">
+          Warning
+        </Badge>
+        <Badge inverted colour="danger">
+          Danger
+        </Badge>
+        <Badge inverted colour="primaryLight">
+          Low priority
+        </Badge>
+        <Badge inverted colour="primaryDark">
+          Medium priority
+        </Badge>
+        <Badge inverted colour="primaryDarkest">
+          High priority
+        </Badge>
+      </Spacer>
+    </Box>
+  </Story>
+</Preview>

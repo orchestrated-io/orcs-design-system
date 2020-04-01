@@ -1,9 +1,13 @@
+import React from "react";
 import styled, { css } from "styled-components";
 import colours from "../../colours";
 import variables from "../../variables";
-import { darken } from "polished";
+import { color } from "styled-system";
+import * as systemtheme from "../../systemtheme";
 
-const Container = styled.div`
+const SidebarWrapper = styled.div`
+  ${color}
+  background: ${systemtheme.colors.greyDarker};
   max-width: 360px;
   min-height: calc(100vh - 60px);
   height: 100%;
@@ -14,7 +18,8 @@ const Container = styled.div`
   width: auto;
 `;
 
-const Tabs = styled.div`
+const SidebarTabs = styled.div`
+  ${color}
   min-width: 60px;
   display: flex;
   flex-direction: column;
@@ -23,20 +28,18 @@ const Tabs = styled.div`
   justify-content: flex-start;
   min-height: calc(100vh - 60px);
   height: 100%;
-  background: ${colours.greyDark};
 `;
 
-const Tab = styled.label`
+const SidebarTab = styled.label`
   position: relative;
   min-width: 60px;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: solid 1px ${darken(0.2, colours.grey)};
   width: 100%;
   transition: ${variables.defaultTransition};
-  color: ${props => (props.active ? colours.primary : colours.greyLight)};
+  color: ${props => (props.active ? colours.primary : colours.greyLightest)};
   background: ${props => (props.active ? colours.greyDarker : "transparent")};
   cursor: ${props => (props.active ? "default" : "pointer")};
   &:hover,
@@ -67,11 +70,11 @@ const Tab = styled.label`
       : css``};
 `;
 
-const Panels = styled.div`
+const SidebarPanels = styled.div`
   position: relative;
 `;
 
-const Panel = styled.div`
+const SidebarPanel = styled.div`
   display: ${props => (props.active ? "block" : "none")};
   min-width: 300px;
   height: calc(100vh - (60px + 72px));
@@ -79,7 +82,7 @@ const Panel = styled.div`
   background: ${colours.greyDarker};
 `;
 
-const Close = styled.label`
+const SidebarClose = styled.label`
   position: absolute;
   right: -10px;
   top: 50%;
@@ -94,7 +97,7 @@ const Close = styled.label`
   background: ${colours.greyDarker};
 `;
 
-const Footer = styled.footer`
+const SidebarFooter = styled.footer`
   z-index: 5;
   padding: 10px 20px;
   position: relative;
@@ -117,12 +120,14 @@ const Footer = styled.footer`
 `;
 
 /** @component */
-export default {
-  Container,
-  Tabs,
-  Tab,
-  Panels,
-  Panel,
-  Footer,
-  Close
+export default function Sidebar({ children, ...props }) {
+  return <SidebarWrapper {...props}>{children}</SidebarWrapper>;
+}
+export {
+  SidebarTabs,
+  SidebarTab,
+  SidebarPanels,
+  SidebarPanel,
+  SidebarFooter,
+  SidebarClose
 };

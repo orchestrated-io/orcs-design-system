@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { typography, color, variant } from "styled-system";
+import { typography, color, space, variant } from "styled-system";
 import * as systemtheme from "../../systemtheme";
 import { rgba } from "polished";
 
@@ -167,6 +167,7 @@ export const H6 = styled.h6`
 export const P = styled.p`
 ${typography}
 ${color}
+${space}
 ${variant({
   prop: "weight",
   variants: {

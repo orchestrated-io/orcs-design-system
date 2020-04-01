@@ -22,7 +22,7 @@ Spacer.propTypes = {
 
 Spacer.defaultProps = {
   /** Adds margins around each child item. */
-  margin: 3
+  m: 3
 };
 
 export default Spacer;

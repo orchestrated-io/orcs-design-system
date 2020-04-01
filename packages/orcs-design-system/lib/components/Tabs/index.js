@@ -1,8 +1,11 @@
 import styled, { css } from "styled-components";
 import * as systemtheme from "../../systemtheme";
 import { Link } from "react-router-dom";
+import { space, layout } from "styled-system";
 
 export const TabsContainer = styled.div`
+  ${space}
+  ${layout}
   width: 100%;
   display: flex;
   align-items: center;
@@ -28,9 +31,11 @@ export const Tab = styled(Link)`
   transition: ${systemtheme.transition};
   cursor: ${props => (props.active ? "default" : "pointer")};
   background: ${props =>
-    props.active ? systemtheme.colors.grey : systemtheme.colors.greyLighter};
+    props.active
+      ? systemtheme.colors.greyDark
+      : systemtheme.colors.greyLighter};
   color: ${props =>
-    props.active ? systemtheme.colors.white : systemtheme.colors.grey};
+    props.active ? systemtheme.colors.white : systemtheme.colors.greyDark};
   + a {
     margin-left: ${systemtheme.space[2]}px;
   }
@@ -44,7 +49,7 @@ export const Tab = styled(Link)`
 const inactiveStyle = css`
   &:hover,
   &:focus {
-    color: ${systemtheme.colors.greyDark};
+    color: ${systemtheme.colors.greyDarker};
     background: ${systemtheme.colors.greyLighter};
   }
 `;
@@ -68,3 +73,5 @@ const notificationStyle = notification => css`
     background-color: ${systemtheme.colors.danger};
   }
 `;
+
+export default { Tab, TabsContainer };

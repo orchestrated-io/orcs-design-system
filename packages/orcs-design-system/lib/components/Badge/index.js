@@ -4,11 +4,14 @@ import PropTypes from "prop-types";
 import colours from "../../colours";
 import variables from "../../variables";
 import { darken, rgba } from "polished";
+import { space, layout } from "styled-system";
 
 const Item = styled.div`
+  margin: 3px;
+  ${space}
+  ${layout}
   font-size: 1.2rem;
   font-weight: 600;
-  margin: 3px;
   display: inline-block;
   text-align: center;
   white-space: nowrap;
@@ -45,12 +48,10 @@ const Item = styled.div`
         `
       : css``}
 `;
-/**
- * Badges should be used for things like status, indicators, or other additional information that you want to highlight but not make interactive/clickable.
- */
-export default function Badge({ colour, inverted, children }) {
+
+export default function Badge({ colour, inverted, children, ...props }) {
   return (
-    <Item inverted={inverted} colour={colour}>
+    <Item inverted={inverted} colour={colour} {...props}>
       {children}
     </Item>
   );
