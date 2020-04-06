@@ -16,5 +16,6 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm ci
       - run: npm run deploy-storybook -- --ci
+        working-directory: ./packages/orca-design-system
         env:
           CI: true
