@@ -6,7 +6,6 @@
     "lint": "lerna run lint",
     "start": "lerna run start",
     "build": "lerna run build",
-    "lerna:audit": "node ./lernaAudit.js",
     "chromatic:ci": "lerna run chromatic:ci"
   },
   "lint-staged": {
@@ -19,7 +18,6 @@
   "husky": {
     "skipCI": false,
     "hooks": {
-      "pre-push": "npm run lerna:audit",
       "pre-commit": "lint-staged"
     }
   },
