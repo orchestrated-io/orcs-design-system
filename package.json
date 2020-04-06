@@ -5,8 +5,7 @@
     "bootstrap": "lerna bootstrap",
     "lint": "lerna run lint",
     "start": "lerna run start",
-    "build": "lerna run build",
-    "chromatic:ci": "lerna run chromatic:ci"
+    "build": "lerna run build"
   },
   "lint-staged": {
     "packages/*/{src,lib}/**/*.{js,jsx,json,css}": [
