@@ -5,9 +5,7 @@
     "bootstrap": "lerna bootstrap",
     "lint": "lerna run lint",
     "start": "lerna run start",
-    "build": "lerna run build",
-    "lerna:audit": "node ./lernaAudit.js",
-    "chromatic:ci": "lerna run chromatic:ci"
+    "build": "lerna run build"
   },
   "lint-staged": {
     "packages/*/{src,lib}/**/*.{js,jsx,json,css}": [
@@ -19,7 +17,6 @@
   "husky": {
     "skipCI": false,
     "hooks": {
-      "pre-push": "npm run lerna:audit",
       "pre-commit": "lint-staged"
     }
   },
