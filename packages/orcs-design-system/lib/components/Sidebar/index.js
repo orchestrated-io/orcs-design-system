@@ -1,11 +1,10 @@
-import React from "react";
 import styled, { css } from "styled-components";
 import colours from "../../colours";
 import variables from "../../variables";
 import { color } from "styled-system";
 import * as systemtheme from "../../systemtheme";
 
-const SidebarWrapper = styled.div`
+const Sidebar = styled.div`
   ${color}
   background: ${systemtheme.colors.greyDarker};
   max-width: 360px;
@@ -18,7 +17,7 @@ const SidebarWrapper = styled.div`
   width: auto;
 `;
 
-const SidebarTabs = styled.div`
+export const SidebarTabs = styled.div`
   ${color}
   min-width: 60px;
   display: flex;
@@ -30,7 +29,7 @@ const SidebarTabs = styled.div`
   height: 100%;
 `;
 
-const SidebarTab = styled.label`
+export const SidebarTab = styled.label`
   position: relative;
   min-width: 60px;
   height: 60px;
@@ -70,11 +69,11 @@ const SidebarTab = styled.label`
       : css``};
 `;
 
-const SidebarPanels = styled.div`
+export const SidebarPanels = styled.div`
   position: relative;
 `;
 
-const SidebarPanel = styled.div`
+export const SidebarPanel = styled.div`
   display: ${props => (props.active ? "block" : "none")};
   min-width: 300px;
   height: calc(100vh - (60px + 72px));
@@ -82,7 +81,7 @@ const SidebarPanel = styled.div`
   background: ${colours.greyDarker};
 `;
 
-const SidebarClose = styled.label`
+export const SidebarClose = styled.label`
   position: absolute;
   right: -10px;
   top: 50%;
@@ -97,7 +96,7 @@ const SidebarClose = styled.label`
   background: ${colours.greyDarker};
 `;
 
-const SidebarFooter = styled.footer`
+export const SidebarFooter = styled.footer`
   z-index: 5;
   padding: 10px 20px;
   position: relative;
@@ -120,14 +119,4 @@ const SidebarFooter = styled.footer`
 `;
 
 /** @component */
-export default function Sidebar({ children, ...props }) {
-  return <SidebarWrapper {...props}>{children}</SidebarWrapper>;
-}
-export {
-  SidebarTabs,
-  SidebarTab,
-  SidebarPanels,
-  SidebarPanel,
-  SidebarFooter,
-  SidebarClose
-};
+export default Sidebar;

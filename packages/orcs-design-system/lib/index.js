@@ -1,8 +1,7 @@
 // Import CSS reset and Global Styles
-export { default as systemtheme } from "./systemtheme";
+export { default as systemtheme, GlobalStyles } from "./systemtheme";
 export { default as variables } from "./variables";
 export { default as colours } from "./colours";
-export { GlobalStyles } from "./systemtheme";
 
 export { default as Avatar } from "./components/Avatar";
 export { default as Badge } from "./components/Badge";
@@ -28,7 +27,15 @@ export { default as ProgressBar } from "./components/ProgressBar";
 export { default as RadioButton } from "./components/RadioButton";
 export { default as Range } from "./components/Range";
 export { default as Select } from "./components/Select";
-export { default as Sidebar } from "./components/Sidebar";
+export {
+  default as Sidebar,
+  SidebarTabs,
+  SidebarTab,
+  SidebarPanels,
+  SidebarPanel,
+  SidebarFooter,
+  SidebarClose
+} from "./components/Sidebar";
 export { default as Spacer } from "./components/Spacer";
 export { default as StatusDot } from "./components/StatusDot";
 export { default as StyledLink } from "./components/StyledLink";

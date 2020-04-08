@@ -305,7 +305,6 @@ h6 {
 `;
 
 export default {
-  GlobalStyles,
   fonts,
   font,
   fontFamilies,
