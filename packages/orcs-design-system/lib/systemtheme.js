@@ -129,8 +129,8 @@ body {
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i');
 
 body {
-    font-family: ${fonts.main};
-    color: ${colors.greyDarkest};
+    font-family: ${systemtheme.fonts.main};
+    color: ${systemtheme.colors.greyDarkest};
 }
 
 /* set rem text size and styling */
@@ -163,8 +163,8 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: ${fontWeights[1]};
-  font-family: ${fonts.main};
+  font-weight: ${systemtheme.fontWeights[1]};
+  font-family: ${systemtheme.fonts.main};
   margin: 0;
 }
 
