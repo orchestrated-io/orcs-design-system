@@ -318,15 +318,4 @@ h6 {
 }
 `;
 
-export default {
-  fonts,
-  font,
-  fontFamilies,
-  fontSizes,
-  fontWeights,
-  lineHeights,
-  radii,
-  space,
-  colors,
-  transition
-};
+export default systemtheme;
