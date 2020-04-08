@@ -1,5 +1,4 @@
 import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { TabsContainer, Tab } from ".";
 
 <Meta title="Components/Tabs" component={TabsContainer} />
@@ -10,16 +9,16 @@ Tabs are intended to provide a way to navigate between distinct sections within 
 
 <Preview>
   <Story name="Basic">
-    <Router>
-      <TabsContainer>
-        <Tab to="/details">Details</Tab>
-        <Tab active to="/info">
-          Additional information
-        </Tab>
-        <Tab notification="2" to="/Planning">
-          Planning
-        </Tab>
-      </TabsContainer>
-    </Router>
+    <TabsContainer>
+      <Tab>
+        <a href="#">Details</a>
+      </Tab>
+      <Tab active>
+        <a href="#">Additional information</a>
+      </Tab>
+      <Tab notification="2">
+        <a href="#">Planning</a>
+      </Tab>
+    </TabsContainer>
   </Story>
 </Preview>

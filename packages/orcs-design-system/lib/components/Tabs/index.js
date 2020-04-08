@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 import * as systemtheme from "../../systemtheme";
-import { Link } from "react-router-dom";
 import { space, layout } from "styled-system";
 
 export const TabsContainer = styled.div`
@@ -13,34 +12,35 @@ export const TabsContainer = styled.div`
   background: transparent;
 `;
 
-export const Tab = styled(Link)`
-  white-space: nowrap;
+export const Tab = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
   border: 0;
   position: relative;
-  text-decoration: none;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  letter-spacing: 0.5px;
-  font-weight: 600;
   padding: ${systemtheme.space[3]}px ${systemtheme.space[4]}px;
   border-radius: ${systemtheme.radii[2]}px ${systemtheme.radii[2]}px 0 0;
-  transition: ${systemtheme.transition};
-  cursor: ${props => (props.active ? "default" : "pointer")};
+
   background: ${props =>
     props.active
       ? systemtheme.colors.greyDark
       : systemtheme.colors.greyLighter};
-  color: ${props =>
-    props.active ? systemtheme.colors.white : systemtheme.colors.greyDark};
-  + a {
-    margin-left: ${systemtheme.space[2]}px;
-  }
-  &:focus {
-    outline: 0;
+  margin-left: ${systemtheme.space[2]}px;
+  a {
+    transition: ${systemtheme.transition};
+    cursor: ${props => (props.active ? "default" : "pointer")};
+    white-space: nowrap;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    &:focus {
+      outline: 0;
+    }
+    color: ${props =>
+      props.active ? systemtheme.colors.white : systemtheme.colors.greyDark};
   }
   ${props => !props.active && inactiveStyle}
   ${props => props.notification && notificationStyle(props.notification)}
@@ -73,5 +73,3 @@ const notificationStyle = notification => css`
     background-color: ${systemtheme.colors.danger};
   }
 `;
-
-export default { Tab, TabsContainer };
