@@ -1,19 +1,39 @@
 import styled from "styled-components";
-import { typography, color, space, variant } from "styled-system";
-import * as systemtheme from "../../systemtheme";
+import {
+  typography,
+  color,
+  space,
+  layout,
+  variant,
+  compose
+} from "styled-system";
+import css from "@styled-system/css";
 import { rgba } from "polished";
+import { themeGet } from "@styled-system/theme-get";
+import { systemtheme } from "../../systemtheme";
 
-export const H1 = styled.h1`
-  ${typography}
-  ${color}
-  ${variant({
-    prop: "weight",
+const typeStyles = compose(typography, space, color);
+
+export const H1 = styled("h1")(
+  css({
+    fontFamily: "main",
+    fontSize: 8,
+    fontWeight: 1
+  }),
+  variant({
+    scale: "variantsH1",
     variants: {
       light: {
-        fontWeight: systemtheme.fontWeights[0]
+        fontWeight: 0
       },
       bold: {
-        fontWeight: systemtheme.fontWeights[2]
+        fontWeight: 2
+      },
+      large: {
+        fontSize: 9
+      },
+      small: {
+        fontSize: 7
       }
     }
   })}
@@ -30,17 +50,26 @@ export const H1 = styled.h1`
     })}
 `;
 
-export const H2 = styled.h2`
-  ${typography}
-  ${color}
-  ${variant({
-    prop: "weight",
+export const H2 = styled("h2")(
+  css({
+    fontFamily: "main",
+    fontSize: 7,
+    fontWeight: 1
+  }),
+  variant({
+    scale: "variantsH2",
     variants: {
       light: {
-        fontWeight: systemtheme.fontWeights[0]
+        fontWeight: 0
       },
       bold: {
-        fontWeight: systemtheme.fontWeights[2]
+        fontWeight: 2
+      },
+      large: {
+        fontSize: 8
+      },
+      small: {
+        fontSize: 6
       }
     }
   })}
@@ -57,17 +86,26 @@ export const H2 = styled.h2`
     })}
 `;
 
-export const H3 = styled.h3`
-  ${typography}
-  ${color}
-  ${variant({
-    prop: "weight",
+export const H3 = styled("h3")(
+  css({
+    fontFamily: "main",
+    fontSize: 6,
+    fontWeight: 1
+  }),
+  variant({
+    scale: "variantsH3",
     variants: {
       light: {
-        fontWeight: systemtheme.fontWeights[0]
+        fontWeight: 0
       },
       bold: {
-        fontWeight: systemtheme.fontWeights[2]
+        fontWeight: 2
+      },
+      large: {
+        fontSize: 7
+      },
+      small: {
+        fontSize: 5
       }
     }
   })}
@@ -84,17 +122,26 @@ export const H3 = styled.h3`
     })}
 `;
 
-export const H4 = styled.h4`
-  ${typography}
-  ${color}
-  ${variant({
-    prop: "weight",
+export const H4 = styled("h4")(
+  css({
+    fontFamily: "main",
+    fontSize: 5,
+    fontWeight: 1
+  }),
+  variant({
+    scale: "variantsH4",
     variants: {
       light: {
-        fontWeight: systemtheme.fontWeights[0]
+        fontWeight: 0
       },
       bold: {
-        fontWeight: systemtheme.fontWeights[2]
+        fontWeight: 2
+      },
+      large: {
+        fontSize: 6
+      },
+      small: {
+        fontSize: 4
       }
     }
   })}
@@ -117,10 +164,16 @@ export const H5 = styled.h5`
     prop: "weight",
     variants: {
       light: {
-        fontWeight: systemtheme.fontWeights[0]
+        fontWeight: 0
       },
       bold: {
-        fontWeight: systemtheme.fontWeights[2]
+        fontWeight: 2
+      },
+      large: {
+        fontSize: 5
+      },
+      small: {
+        fontSize: 3
       }
     }
   })}
@@ -137,17 +190,26 @@ export const H5 = styled.h5`
     })}
 `;
 
-export const H6 = styled.h6`
-  ${typography}
-  ${color}
-  ${variant({
-    prop: "weight",
+export const H6 = styled("h6")(
+  css({
+    fontFamily: "main",
+    fontSize: 3,
+    fontWeight: 1
+  }),
+  variant({
+    scale: "variantsH6",
     variants: {
       light: {
-        fontWeight: systemtheme.fontWeights[0]
+        fontWeight: 0
       },
       bold: {
-        fontWeight: systemtheme.fontWeights[2]
+        fontWeight: 2
+      },
+      large: {
+        fontSize: 4
+      },
+      small: {
+        fontSize: 2
       }
     }
   })}
@@ -164,75 +226,66 @@ export const H6 = styled.h6`
     })}
 `;
 
-export const P = styled.p`
-${typography}
-${color}
-${space}
-${variant({
-  prop: "weight",
-  variants: {
-    light: {
-      fontWeight: systemtheme.fontWeights[1]
-    },
-    bold: {
-      fontWeight: systemtheme.fontWeights[2]
-    }
-  }
-})}
-  ${variant({
-    prop: "size",
+export const P = styled("p")(
+  css({
+    fontFamily: "main",
+    fontSize: 2,
+    lineHeight: 1
+  }),
+  variant({
+    scale: "variantsP",
     variants: {
-      small: {
-        fontSize: systemtheme.fontSizes[1]
-      },
       large: {
-        fontSize: systemtheme.fontSizes[3]
+        fontSize: 3
+      },
+      small: {
+        fontSize: 1
+      },
+      light: {
+        fontWeight: 0
+      },
+      bold: {
+        fontWeight: 2
       }
     }
-  })}
-  line-height: ${systemtheme.lineHeights[1]};
-`;
+  }),
+  typeStyles
+);
 
-export const Text = styled.span`
-  ${typography}
-  ${color}
-`;
-
-export const Strong = styled.span`
-  ${typography}
-  font-weight: ${systemtheme.fontWeights[2]};
-`;
+export const Text = styled("span")(
+  css({
+    fontFamily: "main"
+  }),
+  typeStyles
+);
 
 export const Quote = styled.blockquote`
-  ${typography}
   display: block;
-  font-size: ${systemtheme.fontSizes[4]}px;
+  font-size: ${systemtheme.fontSizes[3]};
+  font-family: ${systemtheme.fonts.main};
   line-height: ${systemtheme.lineHeights[1]};
-  border-left: solid ${systemtheme.space[2]}px ${systemtheme.colors.greyDark};
-  padding: ${systemtheme.space[3]}px ${systemtheme.space[4]}px;
+  padding: ${systemtheme.space[3]} ${systemtheme.space[4]};
+  border-left: ${systemtheme.space[2]} solid ${systemtheme.colors.greyDark};
   em {
     display: block;
     font-style: italic;
-    font-size: ${systemtheme.fontSizes[3]}px;
-    color: ${systemtheme.colors.grey};
-  }
+    font-size: ${systemtheme.fontSizes[2]};
+    color: ${systemtheme.colors.greyDark};
+  };
+  ${typography}
+  ${space}
+  ${color}
 `;
 
 export const Code = styled.code`
-${typography}
-  line-height: ${systemtheme.lineHeights[1]};
   background: ${rgba(systemtheme.colors.warningLightest, 0.4)};
-  padding: ${systemtheme.space[3]}px;
+  ${css({
+    lineHeight: 1,
+    padding: 3
+  })},
+  ${typography}
+  ${color}
+  ${space}
 `;
 
-export default { H1, H2, H3, H4, H5, H6, P, Text, Strong, Quote, Code };
-
-P.defaultProps = {
-  fontSize: systemtheme.fontSizes[2],
-  fontWeight: systemtheme.fontWeights[1]
-};
-
-Text.defaultProps = {
-  fontWeight: systemtheme.fontWeights[1],
-  lineHeight: systemtheme.lineHeights[1]
-};
+export default { H1, H2, H3, H4, H5, H6, P, Text, Quote, Code };
