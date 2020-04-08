@@ -7,7 +7,7 @@ import Avatar from "../Avatar/";
 import Icon from "../Icon";
 import StyledLink from "../StyledLink/";
 import Popover from "../Popover/";
-import * as systemtheme from "../../systemtheme";
+import * as systemtheme from "../../oldtheme";
 import { rgba } from "polished";
 
 const Bar = styled.header`

@@ -24,9 +24,9 @@ const AvatarWrapper = styled.div`
 
 const TextContent = styled.div`
   > * + * {
-    margin-top: ${systemtheme.space[2]}px;
+    margin-top: ${themeGet(space[2])}px;
   }
-  margin-left: ${systemtheme.space[3]}px;
+  margin-left: ${themeGet(space[3])}px;
   ${variant({
     prop: "sizing",
     variants: {

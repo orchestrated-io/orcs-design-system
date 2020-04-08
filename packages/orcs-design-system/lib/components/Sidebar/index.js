@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import colours from "../../colours";
 import variables from "../../variables";
 import { color } from "styled-system";
-import * as systemtheme from "../../systemtheme";
+import * as systemtheme from "../../oldtheme";
 
 const Sidebar = styled.div`
   ${color}
