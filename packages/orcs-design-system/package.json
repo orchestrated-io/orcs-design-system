@@ -27,6 +27,7 @@
     "@storybook/react": "^6.0.0-alpha.5",
     "@styled-system/css": "^5.1.5",
     "@styled-system/prop-types": "^5.1.5",
+    "@styled-system/theme-get": "^5.1.2",
     "polished": "^3.4.4",
     "prop-types": "^15.6.2",
     "react-dates": "^20.3.0",

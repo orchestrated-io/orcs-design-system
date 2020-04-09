@@ -1,10 +1,7 @@
 import styled, { css } from "styled-components";
-import * as systemtheme from "../../systemtheme";
-import { space, layout } from "styled-system";
+import { themeGet } from "@styled-system/theme-get";
 
 export const TabsContainer = styled.div`
-  ${space}
-  ${layout}
   width: 100%;
   display: flex;
   align-items: center;
@@ -12,45 +9,47 @@ export const TabsContainer = styled.div`
   background: transparent;
 `;
 
-export const Tab = styled.span`
+export const Tab = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 0;
+  margin-right: ${themeGet("space.3")}px;
   position: relative;
-  padding: ${systemtheme.space[3]}px ${systemtheme.space[4]}px;
-  border-radius: ${systemtheme.radii[2]}px ${systemtheme.radii[2]}px 0 0;
-
-  background: ${props =>
-    props.active
-      ? systemtheme.colors.greyDark
-      : systemtheme.colors.greyLighter};
-  margin-left: ${systemtheme.space[2]}px;
   a {
-    transition: ${systemtheme.transition};
+    display: block;
+    position: relative;
+    border-radius: ${themeGet("radii.2")}px;
+    background: ${props =>
+      props.active ? themeGet("colors.white") : themeGet("colors.greyLighter")};
+    transition: ${themeGet("transition")};
+    padding: ${themeGet("space.3")}px ${themeGet("space.4")}px;
+    transition: ${themeGet("transition")};
     cursor: ${props => (props.active ? "default" : "pointer")};
     white-space: nowrap;
     text-decoration: none;
     text-align: center;
     text-transform: uppercase;
-    font-size: 1.4rem;
-    letter-spacing: 0.5px;
-    font-weight: 600;
+    font-size: ${themeGet("fontSizes.1")}px;
+    letter-spacing: 0.25px;
+    font-weight: ${themeGet("fontWeights.2")};
+    color: ${props =>
+      props.active ? themeGet("colors.primary") : themeGet("colors.grey")};
+    ${props => !props.active && inactiveStyle}
+    ${props =>
+      props.notification && notificationStyle(props.notification)}
     &:focus {
       outline: 0;
     }
-    color: ${props =>
-      props.active ? systemtheme.colors.white : systemtheme.colors.greyDark};
   }
-  ${props => !props.active && inactiveStyle}
-  ${props => props.notification && notificationStyle(props.notification)}
 `;
 
 const inactiveStyle = css`
   &:hover,
   &:focus {
-    color: ${systemtheme.colors.greyDarker};
-    background: ${systemtheme.colors.greyLighter};
+    background: ${themeGet("colors.greyLight")};
+    color: ${themeGet("colors.greyDark")};
+    outline: 0;
+    }
   }
 `;
 
@@ -64,12 +63,12 @@ const notificationStyle = notification => css`
     justify-content: center;
     align-items: center;
     z-index: 2;
-    width: ${systemtheme.space[5]}px;
-    height: ${systemtheme.space[5]}px;
+    width: ${themeGet("space.5")}px;
+    height: ${themeGet("space.5")}px;
     border-radius: 100%;
-    font-size: ${systemtheme.fontSizes[0]};
-    font-weight: ${systemtheme.fontWeights[2]};
-    color: ${systemtheme.colors.white};
-    background-color: ${systemtheme.colors.danger};
+    font-size: ${themeGet("fontSizes.0")}px;
+    font-weight: ${themeGet("fontWeights.2")};
+    color: ${themeGet("colors.white")};
+    background-color: ${themeGet("colors.danger")};
   }
 `;
