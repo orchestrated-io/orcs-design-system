@@ -12,7 +12,7 @@ import { rgba } from "polished";
 import { themeGet } from "@styled-system/theme-get";
 import { systemtheme } from "../../systemtheme";
 
-const typeStyles = compose(typography, space, color);
+const typeStyles = compose(typography, color);
 
 export const H1 = styled("h1")(
   css({
