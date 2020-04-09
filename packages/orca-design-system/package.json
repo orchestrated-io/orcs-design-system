@@ -6,6 +6,7 @@
   "module": "es/index.js",
   "sideEffects": false,
   "scripts": {
+    "audit-ci": "audit-ci -m --config ./audit-ci.json",
     "lint": "eslint lib/",
     "start": "styleguidist server",
     "test": "node scripts/test.js --env=jsdom",
@@ -53,6 +54,7 @@
     "@storybook/addon-viewport": "^5.2.4",
     "@storybook/addons": "^5.2.4",
     "@storybook/react": "^5.2.4",
+    "audit-ci": "^2.5.1",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^8.2.5",
     "babel-loader": "^7.1.5",

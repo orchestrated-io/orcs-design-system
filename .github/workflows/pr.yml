@@ -28,10 +28,22 @@ jobs:
           npm i
           npm run bootstrap
           npm run lint
+      - name: run security audit of npm packages
+        run: |
+          npm run audit-ci
+      - name: scan for exposed aws secrets
+        run: |
+          git clone https://github.com/awslabs/git-secrets.git
+          cd ./git-secrets
+          sudo make install
+          cd ../
+          rm -rf git-secrets
+          git secrets --register-aws
+          git-secrets --scan -r
         # - name: run chromatic on orca
         #   run: |
         #     npm run chromatic:ci --if-present
         #   working-directory: ./packages/orca-design-system
         env:
           CI: true
-          CHROMATIC_APP_CODE: ${{secrets.chromatic_app}}
+          # CHROMATIC_APP_CODE: ${{secrets.chromatic_app}}

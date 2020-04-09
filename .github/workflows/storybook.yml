@@ -1,4 +1,4 @@
-name: orcs:npm:ci
+name: Deploy Storybook to github page
 
 on:
   push:
@@ -8,17 +8,17 @@ on:
       - packages/orcs-design-system/**
 
 jobs:
-  build:
+  deploy-storybook:
+    # needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@master
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: npm ci
+      - run: npm run deploy-storybook -- --ci
         working-directory: ./packages/orcs-design-system
-      - run: npm run lint
-        working-directory: ./packages/orcs-design-system
-      - run: npm run test
-        working-directory: ./packages/orcs-design-system
+        env:
+          CI: true

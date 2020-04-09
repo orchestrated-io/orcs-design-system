@@ -1,11 +1,10 @@
-name: Security Audit
+name: orca:npm:ci
 
 on:
   push:
     branches:
-      - "*" # matches every branch
-      - "*/*" # matches every branch containing a single '/'
-      - "!master" # excludes master
+      - master
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,9 +19,14 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      - name: npm install, build, and test
+        run: |
+          npm i
+          npm run bootstrap
+          npm run lint
       - name: run security audit of npm packages
         run: |
-          npx audit-ci -m --config ./audit-ci.json
+          npm run audit-ci
       - name: scan for exposed aws secrets
         run: |
           git clone https://github.com/awslabs/git-secrets.git
@@ -32,5 +36,13 @@ jobs:
           rm -rf git-secrets
           git secrets --register-aws
           git-secrets --scan -r
+      - name: publish updated packages to npm registry with next tag
+        run: |
+          npm run publish:next
+        env:
+          CI: true
+      - name: publish packages where the latest version is not present in the registry
+        run: |
+          npm run publish:next
         env:
           CI: true

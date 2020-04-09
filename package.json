@@ -1,11 +1,13 @@
 {
   "name": "orchestrated-design-system",
   "scripts": {
-    "audit-ci": "audit-ci -m --config ./audit-ci.json",
+    "audit-ci": "lerna run audit-ci",
     "bootstrap": "lerna bootstrap",
     "lint": "lerna run lint",
     "start": "lerna run start",
-    "build": "lerna run build"
+    "build": "lerna run build",
+    "publish:next": "lerna publish --dist-tag next",
+    "publish": "lerna publish from-package"
   },
   "lint-staged": {
     "packages/*/{src,lib}/**/*.{js,jsx,json,css}": [
