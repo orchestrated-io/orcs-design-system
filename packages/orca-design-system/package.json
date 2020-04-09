@@ -23,7 +23,7 @@
     "deploy-storybook": "storybook-to-ghpages"
   },
   "dependencies": {
-    "@storybook/storybook-deployer": "^2.8.1",
+    "@storybook/storybook-deployer": "^2.8.5",
     "polished": "^3.3.0",
     "prop-types": "^15.6.2",
     "react-dates": "^20.1.0",
@@ -71,11 +71,11 @@
     "eslint-plugin-react": "^7.10.0",
     "eslint-plugin-react-hooks": "^2.1.2",
     "husky": "^3.0.9",
-    "jest": "^24.9.0",
+    "jest": "^25.3.0",
     "prettier": "^1.18.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-styleguidist": "^9.1.16",
+    "react-styleguidist": "^11.0.5",
     "serverless": "^1.55.1",
     "serverless-finch": "^2.4.3",
     "storybook-chromatic": "^3.5.2",
