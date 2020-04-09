@@ -19,7 +19,8 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm ci
         working-directory: ./packages/orcs-design-system
-      - run: npm run deploy-storybook -- --ci
+      - run: npm run deploy-storybook -- --ci --host-token-env-variable=GITHUB_TOKEN
         working-directory: ./packages/orcs-design-system
         env:
           CI: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

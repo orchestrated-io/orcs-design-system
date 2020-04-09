@@ -19,6 +19,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+          registry-url: https://registry.npmjs.org/
       - name: npm install, build, and test
         run: |
           npm i
@@ -40,12 +41,10 @@ jobs:
         run: |
           npm run publish:package
         env:
-          CI: true
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-      - name: publish updated packages to npm registry with next tag
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      - name: publish updated packages to npm registry with canary tag
         run: |
           npm run publish:canary
         env:
-          CI: true
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
   
