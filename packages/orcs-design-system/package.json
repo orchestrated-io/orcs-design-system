@@ -8,7 +8,7 @@
   "private": false,
   "scripts": {
     "audit-ci": "audit-ci -m --config ./audit-ci.json",
-    "lint": "eslint lib/",
+    "lint": "CI=true eslint --max-warnings=0 lib/",
     "test": "node scripts/test.js --env=jsdom",
     "test-coverage": "node scripts/test.js --env=jsdom --coverage",
     "build": "styleguidist build",

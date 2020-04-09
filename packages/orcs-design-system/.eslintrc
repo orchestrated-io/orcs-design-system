@@ -37,5 +37,10 @@
     "no-underscore-dangle": 0, // graphql __typename is valid case
     "jsx-curly-brace-presence": 0, // TEMP, getting a property substring of undefined error when lint runs,
     "react/jsx-key": "warn"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }
