@@ -38,11 +38,11 @@ jobs:
           git-secrets --scan -r
       - name: publish updated packages to npm registry with next tag
         run: |
-          npm run publish:next
+          npm run publish:canary
         env:
           CI: true
       - name: publish packages where the latest version is not present in the registry
         run: |
-          npm run publish:next
+          npm run publish:package
         env:
           CI: true
