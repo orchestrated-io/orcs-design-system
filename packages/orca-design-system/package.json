@@ -78,7 +78,7 @@
     "react-styleguidist": "^9.1.16",
     "serverless": "^1.55.1",
     "serverless-finch": "^2.4.3",
-    "storybook-chromatic": "^3.0.3",
+    "storybook-chromatic": "^3.5.2",
     "style-loader": "^1.0.0",
     "styled-components": "^5.0.1",
     "webpack": "^4.40.0",
