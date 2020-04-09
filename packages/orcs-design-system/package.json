@@ -58,7 +58,7 @@
     "@storybook/addon-notes": "^5.3.14",
     "@storybook/addon-viewport": "^5.3.14",
     "@storybook/addons": "^5.3.14",
-    "@storybook/storybook-deployer": "^2.8.3",
+    "@storybook/storybook-deployer": "^2.8.5",
     "audit-ci": "^2.5.1",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^8.2.5",
