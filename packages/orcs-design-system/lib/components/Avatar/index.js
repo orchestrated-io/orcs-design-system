@@ -134,27 +134,43 @@ const Subtitle = styled(Text)`
   })}
 `;
 
-export default function Avatar({ image, initials, title, subtitle, ...props }) {
+const Avatar = ({
+  color,
+  sizing,
+  image,
+  initials,
+  title,
+  subtitle,
+  ...props
+}) => {
   return (
-    <AvatarWrapper {...props}>
+    <AvatarWrapper {...props} sizing={sizing}>
       {image ? (
-        <Image src={image} {...props} />
+        <Image src={image} sizing={sizing} />
       ) : (
-        <Circle {...props}>{initials}</Circle>
+        <Circle color={color} sizing={sizing}>
+          {initials}
+        </Circle>
       )}
-      <TextContent {...props}>
-        <Title {...props}>{title}</Title>
-        {subtitle ? <Subtitle {...props}>{subtitle}</Subtitle> : null}
+      <TextContent sizing={sizing}>
+        <Title color={color} sizing={sizing}>
+          {title}
+        </Title>
+        {subtitle ? (
+          <Subtitle color={color} sizing={sizing}>
+            {subtitle}
+          </Subtitle>
+        ) : null}
       </TextContent>
     </AvatarWrapper>
   );
-}
+};
 
 Avatar.propTypes = {
   /** Changes the sizing of the Avatar component */
-  sizing: PropTypes.oneOfType(["small", "default"]),
+  sizing: PropTypes.oneOf(["small", "default"]),
   /** Changes the text colour; use `color="white"` for dark backgrounds */
-  color: PropTypes.oneOfType(["white", "default"]),
+  color: PropTypes.oneOf(["white", "default"]),
   /** Specifies a source path for an image */
   image: PropTypes.string,
   /** Specifies initials of person if available */
@@ -164,3 +180,5 @@ Avatar.propTypes = {
   /** Specifies subtitle / role */
   subtitle: PropTypes.string
 };
+
+export default Avatar;
