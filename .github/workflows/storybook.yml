@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - master
-    # paths:
-    #   - packages/orcs-design-system/**
+    paths:
+      - packages/orcs-design-system/**
 
 jobs:
   deploy-storybook:
