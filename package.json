@@ -7,7 +7,7 @@
     "start": "lerna run start",
     "build": "lerna run build",
     "publish:canary": "lerna publish --canary --yes",
-    "publish:package": "lerna publish from-package"
+    "publish:package": "lerna publish from-package --yes"
   },
   "lint-staged": {
     "packages/*/{src,lib}/**/*.{js,jsx,json,css}": [
