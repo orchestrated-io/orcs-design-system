@@ -18,6 +18,7 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: npm ci
+        working-directory: ./packages/orcs-design-system
       - run: npm run deploy-storybook -- --ci
         working-directory: ./packages/orcs-design-system
         env:
