@@ -259,33 +259,38 @@ export const Text = styled("span")(
   typeStyles
 );
 
-export const Quote = styled.blockquote`
-  display: block;
-  font-size: ${systemtheme.fontSizes[3]};
-  font-family: ${systemtheme.fonts.main};
-  line-height: ${systemtheme.lineHeights[1]};
-  padding: ${systemtheme.space[3]} ${systemtheme.space[4]};
-  border-left: ${systemtheme.space[2]} solid ${systemtheme.colors.greyDark};
-  em {
-    display: block;
-    font-style: italic;
-    font-size: ${systemtheme.fontSizes[2]};
-    color: ${systemtheme.colors.greyDark};
-  };
-  ${typography}
-  ${space}
-  ${color}
-`;
-
-export const Code = styled.code`
-  background: ${rgba(systemtheme.colors.warningLightest, 0.4)};
-  ${css({
+export const Quote = styled("blockquote")(
+  props => ({
+    borderLeftWidth: themeGet("space.2")(props)
+  }),
+  css({
+    display: "block",
+    fontSize: 3,
+    fontFamily: "main",
     lineHeight: 1,
-    padding: 3
-  })},
-  ${typography}
-  ${color}
-  ${space}
-`;
+    py: 4,
+    px: 3,
+    borderLeftStyle: "solid",
+    borderLeftColor: "greyDark",
+    em: {
+      display: "block",
+      fontStyle: "italic",
+      fontSize: 2,
+      color: "greyDark"
+    }
+  }),
+  typeStyles
+);
+
+export const Code = styled("code")(
+  props => ({
+    backgroundColor: rgba(themeGet("colors.warningLightest")(props), 0.4)
+  }),
+  css({
+    padding: 3,
+    lineHeight: 1,
+    fontFamily: "monospace"
+  })
+)
 
 export default { H1, H2, H3, H4, H5, H6, P, Text, Quote, Code };
