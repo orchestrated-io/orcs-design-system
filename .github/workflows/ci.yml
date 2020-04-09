@@ -36,15 +36,16 @@ jobs:
           rm -rf git-secrets
           git secrets --register-aws
           git-secrets --scan -r
-      - name: publish updated packages to npm registry with next tag
-        run: |
-          npm run publish:canary
-        env:
-          CI: true
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
       - name: publish packages where the latest version is not present in the registry
         run: |
           npm run publish:package
         env:
           CI: true
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+      - name: publish updated packages to npm registry with next tag
+        run: |
+          npm run publish:canary
+        env:
+          CI: true
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+  
