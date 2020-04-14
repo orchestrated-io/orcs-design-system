@@ -271,7 +271,7 @@ export default function Header({
           >
             <Avatar
               color="white"
-              size="small"
+              sizing="small"
               title={userName}
               image={avatarSource}
             />

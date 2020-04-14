@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { space, layout, variant } from "styled-system";
 import PropTypes from "prop-types";
-import { H5, Text } from "../Typography";
+import { H3, Text } from "../Typography";
 import * as systemtheme from "../../systemtheme";
 
 const AvatarWrapper = styled.div`
@@ -32,7 +32,7 @@ const TextContent = styled.div`
     variants: {
       small: {
         fontSize: 1,
-        marginLeft: systemtheme.space[1]
+        marginLeft: `${systemtheme.space[3]}px`
       },
       default: {}
     }
@@ -44,14 +44,14 @@ const Image = styled.img`
   border-radius: 50%;
   border: 0;
   display: block;
-  width: calc(${systemtheme.space[5]}px * 2.25);
-  height: calc(${systemtheme.space[5]}px * 2.25);
+  width: calc(${systemtheme.space[5]}px * 2);
+  height: calc(${systemtheme.space[5]}px * 2);
   ${variant({
     prop: "sizing",
     variants: {
       small: {
-        height: "calc(" + systemtheme.space[4] + "px * 2.5)",
-        width: "calc(" + systemtheme.space[4] + "px * 2.5)"
+        height: "calc(" + systemtheme.space[4] + "px * 2.25)",
+        width: "calc(" + systemtheme.space[4] + "px * 2.25)"
       },
       default: {}
     }
@@ -67,14 +67,14 @@ const Circle = styled.div`
   text-align: center;
   text-transform: uppercase;
   font-weight: ${systemtheme.fontWeights[2]};
-  width: calc(${systemtheme.space[5]}px * 2.25);
-  height: calc(${systemtheme.space[5]}px * 2.25);
+  width: calc(${systemtheme.space[5]}px * 2);
+  height: calc(${systemtheme.space[5]}px * 2);
   ${variant({
     prop: "sizing",
     variants: {
       small: {
-        height: "calc(" + systemtheme.space[4] + "px * 2.5)",
-        width: "calc(" + systemtheme.space[4] + "px * 2.5)"
+        height: "calc(" + systemtheme.space[4] + "px * 2.25)",
+        width: "calc(" + systemtheme.space[4] + "px * 2.25)"
       },
       default: {}
     }
@@ -91,12 +91,12 @@ const Circle = styled.div`
   })}
 `;
 
-const Title = styled(H5)`
+const Title = styled(H3)`
   ${variant({
     prop: "sizing",
     variants: {
       small: {
-        fontSize: systemtheme.fontSizes[3]
+        fontSize: systemtheme.fontSizes[2]
       },
       default: {}
     }
@@ -118,7 +118,8 @@ const Subtitle = styled(Text)`
     prop: "sizing",
     variants: {
       small: {
-        fontSize: systemtheme.fontSizes[1]
+        fontSize: systemtheme.fontSizes[1],
+        fontWeight: systemtheme.fontWeights[0]
       },
       default: {}
     }

@@ -8,7 +8,7 @@ import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
 
 # Avatar
 
-[Properties](#properties) | [Examples](#examples) | [Upgrading](#upgrading)
+[Examples](#default) | [Properties](#properties)
 
 Avatars can come in a few different options. Firstly regular or small size.
 
@@ -22,48 +22,34 @@ Also, if no title/subtitle is specified then it will only show the circle avatar
 
 Follow example code below to achieve desired option.
 
+## Default
+
 <Preview>
-  <Story name="Basic">
-      <Avatar title="Ayden Lundgre" subtitle="Senior Business Analyst" />
+  <Story name="Default">
+      <Avatar title="Ayden Lundgre" initials="AL" subtitle="Senior Business Analyst" image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg" />
   </Story>
 </Preview>
 
-## Properties
+## No image source
 
-You can use `space` and `layout` Styled-System properties with `Avatar`, as well as two custom props: `sizing` and `color`.
-
-### For reference, see:
-
-- [space on Styled-System](https://styled-system.com/table#space)
-- [layout on Styled-System](https://styled-system.com/table#layout)
-- [systemtheme.js](https://github.com/orchestrated-io/orca-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js) (our arrays for design system values)
-
-By default, we've set certain values on `Avatar` properties as documented in the table below. If these properties are not specified they will take on the default values.
-
-<Props of={Avatar} />
-
-## Examples
+In cases where an image is not accessible, fall back is to show initials
 
 <Preview>
-  <Story name="With Initials">
+  <Story name="No image">
   <Avatar
     title="Ayden Lundgre"
     subtitle="Senior Business Analyst"
     initials="AL"
   />
   </Story>
-    <Story name="With Image">
-  <Avatar
-    title="Ayden Lundgre"
-    subtitle="Senior Business Analyst"
-    initials="AL"
-    image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
-  />
-  </Story>
-  </Preview>
+</Preview>
 
-  <Preview>
-    <Story name="With Name as Link">
+## Name as link
+
+This component can support a link for the name
+
+<Preview>
+    <Story name="Name as Link">
   <Avatar
     title={<StyledLink href="#">Ayden Lundgre</StyledLink>}
     subtitle="Senior Business Analyst"
@@ -71,9 +57,9 @@ By default, we've set certain values on `Avatar` properties as documented in the
     image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
   />
   </Story>
-  </Preview>
+</Preview>
 
-## Size
+## Small Size
   <Preview>
     <Story name="Small">
     <Spacer>
@@ -101,6 +87,10 @@ By default, we've set certain values on `Avatar` properties as documented in the
     </Spacer>
     </Story>
 </Preview>
+
+## Inverted style
+
+For when Avatar is used on a dark background
 
 <Preview>
 <Story name="Inverted">
@@ -146,3 +136,17 @@ By default, we've set certain values on `Avatar` properties as documented in the
     </Box>
   </Story>
   </Preview>
+
+## Properties
+
+You can use `space` and `layout` Styled-System properties with `Avatar`, as well as two custom props: `sizing` and `color`.
+
+### For reference, see:
+
+- [space on Styled-System](https://styled-system.com/table#space)
+- [layout on Styled-System](https://styled-system.com/table#layout)
+- [systemtheme.js](https://github.com/orchestrated-io/orca-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js) (our arrays for design system values)
+
+By default, we've set certain values on `Avatar` properties as documented in the table below. If these properties are not specified they will take on the default values.
+
+<Props of={Avatar} />
