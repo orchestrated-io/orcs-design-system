@@ -1,26 +1,30 @@
 import { createGlobalStyle } from "styled-components";
+import { rgba, lighten, darken } from "polished";
 
+// FONTS
 export const fonts = {
   main: '"Open Sans", -apple-system, BlinkMacSystemFont, Roboto, sans-serif'
 };
-
 export const font = fonts.main;
 export const fontFamilies = fonts;
 export const fontSizes = [12, 14, 16, 20, 24, 28, 32, 36, 48, 64];
 export const fontWeights = [300, 400, 600];
-
 export const lineHeights = [1, 1.5, 2];
 
+// Z-AXIS spec
 export const zIndex = [-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+// SPACING
 export const space = [0, 2, 4, 8, 16, 24, 32, 64, 128, 256, 512];
 
+// BORDERS
 export const radii = [0, 2, 6];
 
+// ANIMATION
 export const transition = "all 200ms ease-in-out";
 
+// RESPONSIVE MEDIA BREAKPOINTS
 export const breakpoints = ["450px", "675px", "900px", "1100px", "1400px"];
-
 export const mediaQueries = {
   screenXS: `@media screen and (min-width: ${breakpoints[0]})`,
   screenS: `@media screen and (min-width: ${breakpoints[1]})`,
@@ -29,68 +33,75 @@ export const mediaQueries = {
   screenXL: `@media screen and (min-width: ${breakpoints[4]})`
 };
 
+// COLOUR PALETTE
+const black ="#000";
+const white ="#fff";
+const grey = "#90979A"; // Base grey - Mainly used for UI elements like backgrounds, muted text, icons, dividers or borders
+const primary = "#30ABD6"; // Base primary brand colour (blue) - Mainly used for buttons, links and selected states
+// const secondary = "purple"; Introduce new secondary colour maybe purple when we re-design our colour palette
+// const tertiary = "orange"; Introduce new tertiary colour maybe orange when we re-design our colour palette
+const success = "#ACD036"; // Base brand success colour (green) - Mainly used to indicate success, status=good, valid, add, or save states
+const warning = "#EDC652"; // Base brand warning colour - Mainly used to indicate warnings, slipping or near due states
+const danger = "#D42A59"; // Base brand danger/error colour - Mainly used to indicate error, status=bad, at risk or over due states
+
 export const colors = {
   /* Greyscale */
-  black: "#000000" /* Base black */,
-  greyDarkest:
-    "#111212" /* Usually used for main body text or dark backgrounds */,
-  greyDarker:
-    "#2F3234" /* Usually used for UI elements like backgrounds, muted text, icons, dividers or borders */,
-  greyDark:
-    "#52595D" /* Usually used for UI elements like backgrounds, muted text, icons, dividers or borders */,
-  grey:
-    "#90979A" /* Usually used for UI elements like backgrounds, muted text, icons, dividers or borders */,
-  greyLight:
-    "#B5BBBE" /* Usually used for UI elements like backgrounds, muted text, icons, dividers or borders */,
-  greyLighter:
-    "#D7DDDF" /* Usually used for UI elements like backgrounds, muted text, icons, dividers or borders */,
-  greyLightest:
-    "#F2F5F5" /* Usually used for UI elements like backgrounds, muted text, icons, dividers or borders */,
-  white: "#FFFFFF" /* Base white */,
-  /* Blue */
-  primaryDarkest:
-    "#0A6889" /* Darkest version of main brand colour - Mainly used for status/priority/icon indicators */,
-  primaryDark:
-    "#1A89B0" /* Darker version of main brand colour - Mainly used for status/priority/icon indicators */,
-  primary:
-    "#30ABD6" /* Main brand colour - Mainly used for buttons, links and selected states */,
-  primaryLight:
-    "#55BCE1" /* Lighter version of main brand colour - Mainly used for status/priority/icon indicators */,
-  primaryLightest:
-    "#9CE0F8" /* Lightest version of main brand colour - Mainly used for status/priority/icon indicators */,
-  /* Green */
-  successDarkest:
-    "#7EA012" /* Darkest version of secondary brand colour - Mainly used to indicate success, valid, add, or save states */,
-  successDark:
-    "#96B922" /* Darker version of secondary brand colour - Mainly used to indicate success, valid, add, or save states */,
-  success:
-    "#ACD036" /* secondary brand colour - Mainly used to indicate success, valid, add, or save states */,
-  successLight:
-    "#C0E152" /* Lighter version of secondary brand colour - Mainly used to indicate success, valid, add, or save states */,
-  successLightest:
-    "#D7F37C" /* Lightest version of secondary brand colour - Mainly used to indicate success, valid, add, or save states */,
-  /* Amber */
-  warningDarkest:
-    "#CEA219" /* Darkest version of brand warning colour - Mainly used to indicate warnings, slipping or near due states */,
-  warningDark:
-    "#E3B937" /* Darker version of brand warning colour - Mainly used to indicate warnings, slipping or near due states */,
-  warning:
-    "#EDC652" /* brand warning colour - Mainly used to indicate warnings, slipping or near due states */,
-  warningLight:
-    "#F3D373" /* Lighter version of brand warning colour - Mainly used to indicate warnings, slipping or near due states */,
-  warningLightest:
-    "#F9E197" /* Lightest version of brand warning colour - Mainly used to indicate warnings, slipping or near due states */,
-  /* Crimson */
-  dangerDarkest:
-    "#9A052E" /* Darkest version of brand danger/error colour - Mainly used to indicate error, at risk or over due states */,
-  dangerDark:
-    "#BF1A47" /* Darker version of brand danger/error colour - Mainly used to indicate error, at risk or over due states */,
-  danger:
-    "#D42A59" /* brand danger/error colour - Mainly used to indicate error, at risk or over due states */,
-  dangerLight:
-    "#E5547C" /* Lighter version of brand danger/error colour - Mainly used to indicate error, at risk or over due states */,
-  dangerLightest:
-    "#F2ABBE" /* Lightest version of brand danger/error colour - Mainly used to indicate error, at risk or over due states */
+  black,
+  black90: rgba(black, 0.9),
+  black80: rgba(black, 0.8),
+  black70: rgba(black, 0.7),
+  black60: rgba(black, 0.6),
+  black50: rgba(black, 0.5),
+  black40: rgba(black, 0.4),
+  black30: rgba(black, 0.3),
+  black20: rgba(black, 0.2),
+  black10: rgba(black, 0.1),
+  white,
+  white90: rgba(white, 0.9),
+  white80: rgba(white, 0.8),
+  white70: rgba(white, 0.7),
+  white60: rgba(white, 0.6),
+  white50: rgba(white, 0.5),
+  white40: rgba(white, 0.4),
+  white30: rgba(white, 0.3),
+  white20: rgba(white, 0.2),
+  white10: rgba(white, 0.1),
+  grey,
+  greyLight: lighten(0.2, grey),
+  greyLighter: lighten(0.4, grey),
+  greyLightest: lighten(0.6, grey),
+  greyDark: darken(0.2, grey),
+  greyDarker: darken(0.4, grey),
+  greyDarkest: darken(0.6, grey),
+  /* Colours */
+  primary,
+  primaryLight: lighten(0.2, primary),
+  primaryLighter: lighten(0.4, primary),
+  primaryLightest: lighten(0.6, primary),
+  primaryDark: darken(0.2, primary),
+  primaryDarker: darken(0.4, primary),
+  primaryDarkest: darken(0.6, primary),
+  success,
+  successLight: lighten(0.2, success),
+  successLighter: lighten(0.4, success),
+  successLightest: lighten(0.6, success),
+  successDark: darken(0.2, success),
+  successDarker: darken(0.4, success),
+  successDarkest: darken(0.6, success),
+  warning,
+  warningLight: lighten(0.2, warning),
+  warningLighter: lighten(0.4, warning),
+  warningLightest: lighten(0.6, warning),
+  warningDark: darken(0.2, warning),
+  warningDarker: darken(0.4, warning),
+  warningDarkest: darken(0.6, warning),
+  danger,
+  dangerLight: lighten(0.2, danger),
+  dangerLighter: lighten(0.4, danger),
+  dangerLightest: lighten(0.6, danger),
+  dangerDark: darken(0.2, danger),
+  dangerDarker: darken(0.4, danger),
+  dangerDarkest: darken(0.6, danger),
 };
 
 export const GlobalStyles = createGlobalStyle`

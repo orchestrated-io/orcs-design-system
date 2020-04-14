@@ -1,18 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import colours from "../../colours";
-import { rgba } from "polished";
+import { space, layout, color } from "styled-system";
 
 const Item = styled.div`
+  ${space}
+  ${layout}
+  ${color}
   display: block;
   width: 100%;
-  background: ${props =>
-    props.light
-      ? colours.greyLightest
-      : props.inverted
-      ? rgba(colours.greyDark, 0.6)
-      : colours.greyLighter};
   height: ${props => (props.thick ? "3px" : "1px")};
   grid-column: ${props => (props.spanGrid ? "1 / -1" : "auto")};
 `;
@@ -22,9 +18,28 @@ const Item = styled.div`
  *
  * As a general rule, the default divider with no props set should be used in most cases, however a thicker one can be used to emphasize a greater separation between content sections, and a light divider can be used to separate similar repeating items within a section, like a list of people/teams etc.
  */
-export default function Divider({ light, thick, inverted, spanGrid }) {
+export default function Divider({
+  light,
+  thick,
+  inverted,
+  spanGrid,
+  ...props
+}) {
+  const dividerColour = light
+    ? "black10"
+    : inverted
+    ? "white30"
+    : "black20";
+
   return (
-    <Item light={light} thick={thick} inverted={inverted} spanGrid={spanGrid} />
+    <Item
+      backgroundColor={dividerColour}
+      light={light}
+      thick={thick}
+      inverted={inverted}
+      spanGrid={spanGrid}
+      {...props}
+    />
   );
 }
 
