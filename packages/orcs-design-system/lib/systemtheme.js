@@ -14,8 +14,18 @@ export const lineHeights = [1, 1.5, 2];
 // Z-AXIS spec
 export const zIndex = [-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// SPACING
-export const space = [0, 2, 4, 8, 16, 24, 32, 64, 128, 256, 512];
+const spaceScale = [0, 2, 4, 8, 16, 24, 32, 64, 128, 256, 512];
+
+export const space = {
+  ...spaceScale,
+  xxs: spaceScale[1],
+  xs: spaceScale[2],
+  sm: spaceScale[3],
+  md: spaceScale[4],
+  lg: spaceScale[5],
+  xl: spaceScale[6],
+  xxl: spaceScale[7]
+};
 
 // BORDERS
 export const radii = [0, 2, 6];
