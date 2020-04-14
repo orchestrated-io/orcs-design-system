@@ -4,8 +4,9 @@
     "audit-ci": "lerna run audit-ci",
     "bootstrap": "lerna bootstrap",
     "lint": "lerna run lint",
+    "test": "lerna run test-coverage",
     "start": "lerna run start",
-    "build": "lerna run build",
+    "dist": "lerna run dist",
     "publish:canary": "lerna publish --canary --yes",
     "publish:package": "lerna publish from-package --yes"
   },

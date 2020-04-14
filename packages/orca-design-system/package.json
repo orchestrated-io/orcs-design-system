@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@storybook/storybook-deployer": "^2.8.5",
+    "eslint-plugin-jest": "^23.8.2",
     "polished": "^3.3.0",
     "prop-types": "^15.6.2",
     "react-dates": "^20.1.0",
@@ -95,11 +96,11 @@
   ],
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx,mjs}"
+      "lib/**/*.{js,jsx,mjs}"
     ],
     "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
-      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
+      "<rootDir>/lib/**/__tests__/**/*.{js,jsx,mjs}",
+      "<rootDir>/lib/**/?(*.)(spec|test).{js,jsx,mjs}"
     ],
     "testEnvironment": "node",
     "testURL": "http://localhost",

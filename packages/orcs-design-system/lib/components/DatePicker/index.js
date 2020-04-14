@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import momentPropTypes from "react-moment-proptypes";
-import moment from "moment";
 import omit from "lodash/omit";
 
 import "react-dates/lib/css/_datepicker.css";
@@ -22,7 +21,6 @@ import {
   ANCHOR_LEFT,
   NAV_POSITION_TOP
 } from "react-dates/lib/constants";
-import isInclusivelyAfterDay from "react-dates/lib/utils/isInclusivelyAfterDay";
 
 const defaultProps = {
   autoFocus: false,
@@ -74,10 +72,9 @@ const defaultProps = {
   minimumNights: 1,
   enableOutsideDays: false,
   isDayBlocked: () => false,
-  isOutsideRange: day => !isInclusivelyAfterDay(day, moment()),
+  isOutsideRange: () => false,
   isDayHighlighted: () => false,
-
-  displayFormat: () => moment.localeData().longDateFormat("L"),
+  displayFormat: "DD/MM/YYYY",
   monthFormat: "MMMM YYYY",
   phrases: DateRangePickerPhrases,
 
