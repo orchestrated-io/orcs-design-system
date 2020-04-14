@@ -1,11 +1,12 @@
-import { Meta } from '@storybook/addon-docs/blocks';
-import styled from "styled-components"
-import Flex from "./components/Flex"
-import Colour from "./assets/Colour"
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import styled from "styled-components";
+import Flex from "./components/Flex";
+import Colour from "./assets/Colour";
 
-<Meta title="System/Colours" />
+<Meta title="System/Colours" component={Colour} />
 
 # Brand Colours
+
 ## Design system colour palette
 
 These aren't components to be used, they are simply here to show the UI colour palette.
@@ -15,52 +16,73 @@ However, the colour props shown in the view code example below demonstrate how o
 <Props of={Colour} />
 
 ### Greyscale palette
-<Flex>
-  <Colour bg="black" />
-  <Colour bg="greyDarkest" />
-  <Colour bg="greyDarker" />
-  <Colour bg="greyDark" />
-  <Colour bg="grey" />
-  <Colour bg="greyLight" />
-  <Colour bg="greyLighter" />
-  <Colour bg="greyLightest" />
-  <Colour bg="white" />
-</Flex>
 
-### Colour palette
-<Flex>
-  <Colour bg="primaryDarkest" />
-  <Colour bg="primaryDarker" />
-  <Colour bg="primaryDark" />
-  <Colour bg="primary" />
-  <Colour bg="primaryLight" />
-  <Colour bg="primaryLighter" />
-  <Colour bg="primaryLightest" />
-</Flex>
-<Flex>
-  <Colour bg="successDarkest" />
-  <Colour bg="successDarker" />
-  <Colour bg="successDark" />
-  <Colour bg="success" />
-  <Colour bg="successLight" />
-  <Colour bg="successLighter" />
-  <Colour bg="successLightest" />
-</Flex>
-<Flex>
-  <Colour bg="warningDarkest" />
-  <Colour bg="warningDarker" />
-  <Colour bg="warningDark" />
-  <Colour bg="warning" />
-  <Colour bg="warningLight" />
-  <Colour bg="warningLighter" />
-  <Colour bg="warningLightest" />
-</Flex>
-<Flex>
-  <Colour bg="dangerDarkest" />
-  <Colour bg="dangerDarker" />
-  <Colour bg="dangerDark" />
-  <Colour bg="danger" />
-  <Colour bg="dangerLight" />
-  <Colour bg="dangerLighter" />
-  <Colour bg="dangerLightest" />
-</Flex>
+<Story name="Greyscale palette">
+  <Flex>
+    <Colour bg="black" />
+    <Colour bg="greyDarkest" />
+    <Colour bg="greyDarker" />
+    <Colour bg="greyDark" />
+    <Colour bg="grey" />
+    <Colour bg="greyLight" />
+    <Colour bg="greyLighter" />
+    <Colour bg="greyLightest" />
+    <Colour bg="white" />
+  </Flex>
+</Story>
+
+### Primary Colour palette
+
+<Story name="Primary Colour palette">
+  <Flex>
+    <Colour bg="primaryDarkest" />
+    <Colour bg="primaryDarker" />
+    <Colour bg="primaryDark" />
+    <Colour bg="primary" />
+    <Colour bg="primaryLight" />
+    <Colour bg="primaryLighter" />
+    <Colour bg="primaryLightest" />
+  </Flex>
+</Story>
+
+### Success Colour palette
+
+<Story name="Success Colour palette">
+  <Flex>
+    <Colour bg="successDarkest" />
+    <Colour bg="successDarker" />
+    <Colour bg="successDark" />
+    <Colour bg="success" />
+    <Colour bg="successLight" />
+    <Colour bg="successLighter" />
+    <Colour bg="successLightest" />
+  </Flex>
+</Story>
+
+### Warning Colour palette
+
+<Story name="Warning Colour palette">
+  <Flex>
+    <Colour bg="warningDarkest" />
+    <Colour bg="warningDarker" />
+    <Colour bg="warningDark" />
+    <Colour bg="warning" />
+    <Colour bg="warningLight" />
+    <Colour bg="warningLighter" />
+    <Colour bg="warningLightest" />
+  </Flex>
+</Story>
+
+### Danger Colour palette
+
+<Story name="Danger Colour palette">
+  <Flex>
+    <Colour bg="dangerDarkest" />
+    <Colour bg="dangerDarker" />
+    <Colour bg="dangerDark" />
+    <Colour bg="danger" />
+    <Colour bg="dangerLight" />
+    <Colour bg="dangerLighter" />
+    <Colour bg="dangerLightest" />
+  </Flex>
+</Story>
