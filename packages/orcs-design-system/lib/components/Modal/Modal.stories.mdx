@@ -1,0 +1,45 @@
+import { Fragment, useState } from "react";
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import Button from "../Button";
+import Modal from ".";
+
+<Meta title="Components/Modal" component={Modal} />
+
+# Modal
+
+[Properties](#properties)
+
+<Preview>
+  <Story name="Basic">
+    {() => {
+      const [visible, setVisible] = useState(false);
+      const handleOnButtonClick = () => {
+        setVisible(true);
+      };
+      const handleOnCancel = () => {
+        setVisible(false);
+      };
+      const handleOnConfirm = () => {
+        setVisible(false);
+      };
+      return (
+        <Fragment>
+          <Button onClick={handleOnButtonClick}>Open Modal</Button>
+          <Modal
+            visible={visible}
+            onConfirm={handleOnConfirm}
+            onCancel={handleOnCancel}
+          >
+            Content of the modal
+          </Modal>
+        </Fragment>
+      );
+    }}
+  </Story>
+</Preview>
+
+## Properties
+
+By default, we've set certain values on `Modal` properties as documented in the table below.
+
+<Props of={Modal} />

@@ -49,11 +49,11 @@ Box.propTypes = {
   /** Sets behaviour of elements in `Box` that are larger than their container. */
   overflow: PropTypes.oneOf(["visible", "hidden", "scroll", "auto"]),
   /** Sets the border in one declaration: `border-width` `border-style` `border-color` */
-  border: PropTypes.string,
+  border: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   /** Sets the inner padding on all four sides. Takes values from the `space` array in `systemtheme.js`. */
-  padding: PropTypes.number,
+  padding: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   /** Sets the outer margin on all four sides. Takes values from the `space` array in `systemtheme.js`. */
-  margin: PropTypes.number,
+  margin: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   /** Sets the background colour of the box. */
   bg: PropTypes.oneOf(["white", "greyLightest", "greyDark"]),
   /** Sets the width of the box. */
