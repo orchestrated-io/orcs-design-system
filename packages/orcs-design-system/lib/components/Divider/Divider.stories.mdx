@@ -1,0 +1,56 @@
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import Divider from ".";
+import Box from "../Box";
+import Spacer from "../Spacer";
+
+<Meta title="Components/Divider" component={Divider} />
+
+# Divider
+
+The Divider component should be used to separate distinct sections of the UI.
+
+## Props
+
+<Props of={Divider} />
+
+## Examples
+
+### Standard options
+
+To be used throughout most of the app, in most cases purely the default Divider with no props should be used.
+
+<Preview>
+  <Story name="Standard">
+    <Spacer my={4}>
+      <Divider />
+      <Divider light />
+      <Divider thick />
+      <Divider light thick />
+    </Spacer>
+  </Story>
+</Preview>
+
+### Inverted options
+
+The inverted prop should be used if a divider is required on a dark background.
+
+<Preview>
+  <Story name="Inverted">
+    <Box bg="greyDarkest">
+      <Spacer my={4}>
+        <Divider inverted />
+        <Divider inverted thick />
+      </Spacer>
+    </Box>
+  </Story>
+</Preview>
+
+### Span Grid
+
+This prop is to be used when you need to use a divider between rows in a grid, this will allow the divider to span across all columns in the grid.
+
+<Preview>
+  <Story name="Span Grid">
+    <Divider spanGrid />
+  </Story>
+</Preview>
