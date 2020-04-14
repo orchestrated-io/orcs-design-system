@@ -21,60 +21,6 @@ export const H1 = styled.h1`
       prop: "size",
       variants: {
         small: {
-          fontSize: systemtheme.fontSizes[7]
-        },
-        large: {
-          fontSize: systemtheme.fontSizes[9]
-        }
-      }
-    })}
-`;
-
-export const H2 = styled.h2`
-  ${typography}
-  ${color}
-  ${variant({
-    prop: "weight",
-    variants: {
-      light: {
-        fontWeight: systemtheme.fontWeights[0]
-      },
-      bold: {
-        fontWeight: systemtheme.fontWeights[2]
-      }
-    }
-  })}
-    ${variant({
-      prop: "size",
-      variants: {
-        small: {
-          fontSize: systemtheme.fontSizes[6]
-        },
-        large: {
-          fontSize: systemtheme.fontSizes[8]
-        }
-      }
-    })}
-`;
-
-export const H3 = styled.h3`
-  ${typography}
-  ${color}
-  ${variant({
-    prop: "weight",
-    variants: {
-      light: {
-        fontWeight: systemtheme.fontWeights[0]
-      },
-      bold: {
-        fontWeight: systemtheme.fontWeights[2]
-      }
-    }
-  })}
-    ${variant({
-      prop: "size",
-      variants: {
-        small: {
           fontSize: systemtheme.fontSizes[5]
         },
         large: {
@@ -84,7 +30,7 @@ export const H3 = styled.h3`
     })}
 `;
 
-export const H4 = styled.h4`
+export const H2 = styled.h2`
   ${typography}
   ${color}
   ${variant({
@@ -110,7 +56,8 @@ export const H4 = styled.h4`
       }
     })}
 `;
-export const H5 = styled.h5`
+
+export const H3 = styled.h3`
   ${typography}
   ${color}
   ${variant({
@@ -137,7 +84,7 @@ export const H5 = styled.h5`
     })}
 `;
 
-export const H6 = styled.h6`
+export const H4 = styled.h4`
   ${typography}
   ${color}
   ${variant({
@@ -159,6 +106,59 @@ export const H6 = styled.h6`
         },
         large: {
           fontSize: systemtheme.fontSizes[4]
+        }
+      }
+    })}
+`;
+export const H5 = styled.h5`
+  ${typography}
+  ${color}
+  ${variant({
+    prop: "weight",
+    variants: {
+      light: {
+        fontWeight: systemtheme.fontWeights[0]
+      },
+      bold: {
+        fontWeight: systemtheme.fontWeights[2]
+      }
+    }
+  })}
+    ${variant({
+      prop: "size",
+      variants: {
+        small: {
+          fontSize: systemtheme.fontSizes[1]
+        },
+        large: {
+          fontSize: systemtheme.fontSizes[3]
+        }
+      }
+    })}
+`;
+
+export const H6 = styled.h6`
+  ${typography}
+  ${color}
+  ${variant({
+    prop: "weight",
+    variants: {
+      light: {
+        fontWeight: systemtheme.fontWeights[0]
+      },
+      bold: {
+        fontWeight: systemtheme.fontWeights[2]
+      }
+    }
+  })}
+    ${variant({
+      prop: "size",
+      variants: {
+        small: {
+          fontSize: systemtheme.fontSizes[0]
+        },
+        large: {
+          fontSize: systemtheme.fontSizes[2]
         }
       }
     })}

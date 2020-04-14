@@ -7,7 +7,7 @@ export const fonts = {
 };
 export const font = fonts.main;
 export const fontFamilies = fonts;
-export const fontSizes = [12, 14, 16, 20, 24, 28, 32, 36, 48, 64];
+export const fontSizes = [12, 14, 16, 18, 20, 24, 28, 32, 36, 48, 64];
 export const fontWeights = [300, 400, 600];
 export const lineHeights = [1, 1.5, 2];
 
@@ -169,27 +169,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: ${fontSizes[8]}px
-}
-
-h2 {
-  font-size: ${fontSizes[7]}px
-}
-
-h3 {
   font-size: ${fontSizes[6]}px
 }
 
-h4 {
+h2 {
   font-size: ${fontSizes[5]}px
 }
 
-h5 {
+h3 {
   font-size: ${fontSizes[4]}px
 }
 
-h6 {
+h4 {
   font-size: ${fontSizes[3]}px
+}
+
+h5 {
+  font-size: ${fontSizes[2]}px
+}
+
+h6 {
+  font-size: ${fontSizes[1]}px
 }
 
 /* Animations */

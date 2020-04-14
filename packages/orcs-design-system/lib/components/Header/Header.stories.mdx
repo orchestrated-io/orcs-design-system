@@ -1,23 +1,19 @@
-import React from "react";
 import { action } from "@storybook/addon-actions";
 import Header from ".";
 import Icon from "../Icon";
 import StyledLink from "../StyledLink";
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
 
-export default {
-  title: "Components/Header",
-  parameters: {
-    component: Header
-  }
-};
+<Meta title="Components/Header" component={Header} />
 
-// Header component for app layout. Supports app name, username and avatar as props. And links as children.
+# Header
 
-// At screen sizes less than 1100px the links are instead moved into a mobile menu toggled by a burger icon button to play nice with smaller devices.
+Header component for app layout. Supports app name, username and avatar as props. And links as children.
 
-export const defaultHeader = () => {
-  return (
-    <>
+At screen sizes less than 1100px the links are instead moved into a mobile menu toggled by a burger icon button to play nice with smaller devices.
+
+<Preview>
+  <Story name="Default">
       <Header
         appName={`My App`}
         userName={`John Smith`}
@@ -41,6 +37,5 @@ export const defaultHeader = () => {
           Visualisation
         </StyledLink>
       </Header>
-    </>
-  );
-};
+  </Story>
+</Preview>
