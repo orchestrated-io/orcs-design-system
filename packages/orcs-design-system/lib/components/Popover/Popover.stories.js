@@ -19,11 +19,9 @@ export default {
 };
 
 export const basic = () => (
-  <>
-    <Popover text="Text description of what this button does">
-      <Button>Hover Me!</Button>
-    </Popover>
-  </>
+  <Popover text="Text description of what this button does">
+    <Button>Hover Me!</Button>
+  </Popover>
 );
 
 export const direction = () => (
