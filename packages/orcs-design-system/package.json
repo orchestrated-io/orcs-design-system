@@ -60,6 +60,8 @@
     "@storybook/preset-create-react-app": "^1.5.2",
     "@storybook/react": "^6.0.0-alpha.33",
     "@storybook/storybook-deployer": "^2.8.5",
+    "@testing-library/jest-dom": "^5.5.0",
+    "@testing-library/react": "^10.0.2",
     "@types/jest": "^25.2.1",
     "@types/styled-components": "^5.1.0",
     "audit-ci": "^2.5.1",
@@ -80,7 +82,8 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.0",
     "husky": "^3.1.0",
-    "jest": "^24.9.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^25.3.0",
     "prettier": "^1.19.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
@@ -108,29 +111,10 @@
       "<rootDir>/lib/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/lib/**/?(*.)(spec|test).{js,jsx,mjs}"
     ],
-    "testEnvironment": "node",
-    "testURL": "http://localhost",
-    "transform": {
-      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js",
-      "^.+\\.mdx$": "@storybook/addon-docs/jest-transform-mdx"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
-    ],
     "moduleNameMapper": {
-      "^react-native$": "react-native-web"
-    },
-    "moduleFileExtensions": [
-      "web.js",
-      "mjs",
-      "js",
-      "json",
-      "web.jsx",
-      "jsx",
-      "node"
-    ]
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"

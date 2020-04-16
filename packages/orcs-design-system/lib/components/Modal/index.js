@@ -1,7 +1,7 @@
 import React, { useEffect, useCallback } from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import variables from "../../variables";
 import Button from "../Button";
 import Flex from "../Flex";
@@ -17,19 +17,9 @@ const Overlay = styled(Flex)`
   margin: 0;
   opacity: 0;
   transition: all 300ms ease-in-out;
-
-  ${props =>
-    props.visible
-      ? css`
-          opacity: 1;
-          z-index: 900;
-          visibility: visible;
-        `
-      : css`
-          opacity: 0;
-          z-index: -900;
-          visibility: hidden;
-        `};
+  opacity: 1;
+  z-index: 900;
+  visibility: visible;
 `;
 
 const Container = styled(Box)`
@@ -64,10 +54,6 @@ const Modal = props => {
 
   const handleKeypress = useCallback(
     event => {
-      if (!visible) {
-        return;
-      }
-
       var code = event.keyCode || event.which;
       if (code === 13) {
         // 13 is the enter keycode
@@ -79,7 +65,7 @@ const Modal = props => {
         event.preventDefault();
       }
     },
-    [visible, onConfirm, onCancel]
+    [onConfirm, onCancel]
   );
 
   useEffect(() => {
@@ -90,38 +76,36 @@ const Modal = props => {
     };
   }, [handleKeypress]);
 
-  return ReactDOM.createPortal(
-    <Overlay
-      visible={visible}
-      alignItems="center"
-      justifyContent="center"
-      {...restProps}
-    >
-      <Container
-        width={width}
-        height={height}
-        overflow={overflowVisible ? "visible" : "hidden"}
-        borderRadius={variables.borderRadius}
-        bg="white"
-      >
-        <Box padding="sm">{children}</Box>
-        {isDisplayFooter && (
-          <Actions
-            alignItems="center"
-            paddingTop="md"
-            borderTop="solid 1px greyLighter"
-          >
-            <Button disabled={disabledConfirm} onClick={onConfirm}>
-              {confirmText}
-            </Button>
-            <Button disabled={disabledCancel} ghost onClick={onCancel}>
-              {cancelText}
-            </Button>
-          </Actions>
-        )}
-      </Container>
-    </Overlay>,
-    document.body
+  return (
+    visible &&
+    ReactDOM.createPortal(
+      <Overlay alignItems="center" justifyContent="center" {...restProps}>
+        <Container
+          width={width}
+          height={height}
+          overflow={overflowVisible ? "visible" : "hidden"}
+          borderRadius={variables.borderRadius}
+          bg="white"
+        >
+          <Box padding="sm">{children}</Box>
+          {isDisplayFooter && (
+            <Actions
+              alignItems="center"
+              paddingTop="md"
+              borderTop="solid 1px greyLighter"
+            >
+              <Button disabled={disabledConfirm} onClick={onConfirm}>
+                {confirmText}
+              </Button>
+              <Button disabled={disabledCancel} ghost onClick={onCancel}>
+                {cancelText}
+              </Button>
+            </Actions>
+          )}
+        </Container>
+      </Overlay>,
+      document.body
+    )
   );
 };
 
