@@ -1,39 +1,24 @@
 import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
 import Box from ".";
+import { P } from "../Typography";
 
 <Meta title="Components/Box" component={Box} />
 
 # Box
 
-[Properties](#properties) | [Variants](#variants) | [Examples](#examples) | [Upgrading](#upgrading)
+[Variants](#variants) | [Examples](#examples) | [Properties](#properties) | [Upgrading](#upgrading)
 
 Component to contain elements within a simple box. If your `Box` needs to contain several items and you want to control the item spacing and positioning, it's highly recommended to use `Grid` or `Flex` instead.
 
 <Preview>
   <Story name="Basic">
     <Box>
-      <p>
+      <P>
         This is an example of the basic Box with no properties applied to it.
-      </p>
+      </P>
     </Box>
   </Story>
 </Preview>
-
-## Properties
-
-You can use `space`, `layout`, `border`, and `color` properties with `Box`.
-### For reference, see:
-
-- [space on Styled-System](https://styled-system.com/table#space)
-- [layout on Styled-System](https://styled-system.com/table#layout)
-- [border on Styled-System](https://styled-system.com/table#border)
-- [color on Styled-System](https://styled-system.com/table#color)
-- [CSS Grid Properties](https://css-tricks.com/snippets/css/complete-guide-grid)
-- [systemtheme.js](https://github.com/orchestrated-io/orca-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js) (our arrays and scales for design system values)
-
-By default, we've set certain values on `Box` properties as documented in the table below.
-
-<Props of={Box} />
 
 ## Variants
 
@@ -44,7 +29,7 @@ Variants are pre-defined sets of properties for the `Box` component. Whenever po
 <Preview>
   <Story name="Border">
     <Box variant="borderbox">
-      <p>This is a variant of a Box with a border.</p>
+      <P>This is a variant of a Box with a border.</P>
     </Box>
   </Story>
 </Preview>
@@ -54,7 +39,7 @@ Variants are pre-defined sets of properties for the `Box` component. Whenever po
 <Preview>
   <Story name="Shadow">
     <Box variant="shadowbox">
-      <p>This is a variant of a Box with a slight shadow.</p>
+      <P>This is a variant of a Box with a slight shadow.</P>
     </Box>
   </Story>
 </Preview>
@@ -64,7 +49,7 @@ Variants are pre-defined sets of properties for the `Box` component. Whenever po
 <Preview>
   <Story name="Border and Shadow">
     <Box variant="bordershadowbox">
-      <p>This is a variant of a Box with a border and shadow.</p>
+      <P>This is a variant of a Box with a border and shadow.</P>
     </Box>
   </Story>
 </Preview>
@@ -75,7 +60,7 @@ Variants are pre-defined sets of properties for the `Box` component. Whenever po
 <Preview>
   <Story name="Background Colour">
     <Box bg="greyLightest">
-      <p>This is a Box that has background colour set to <code>greyLightest</code>.</p>
+      <P>This is a Box that has background colour set to <code>greyLightest</code>.</P>
     </Box>
   </Story>
 </Preview>
@@ -83,7 +68,7 @@ Variants are pre-defined sets of properties for the `Box` component. Whenever po
 <Preview>
   <Story name="Background Colour with Variant">
     <Box variant="bordershadowbox" bg="greyLightest">
-      <p>This is a bordered, shadowed Box variant with a background colour.</p>
+      <P>This is a bordered, shadowed Box variant with a background colour.</P>
     </Box>
   </Story>
 </Preview>
@@ -93,7 +78,7 @@ Variants are pre-defined sets of properties for the `Box` component. Whenever po
 <Preview>
   <Story name="Padding - Increase">
     <Box variant="borderbox" padding={6}>
-      <p>This is a bordered Box variant with specified padding that overrides the default padding value.</p>
+      <P>This is a bordered Box variant with specified padding that overrides the default padding value.</P>
     </Box>
   </Story>
 </Preview>
@@ -101,7 +86,7 @@ Variants are pre-defined sets of properties for the `Box` component. Whenever po
 <Preview>
   <Story name="Padding - Set to zero">
     <Box variant="borderbox" padding={0}>
-      <p>This is a bordered Box variant with padding set to 0.</p>
+      <P>This is a bordered Box variant with padding set to 0.</P>
     </Box>
   </Story>
 </Preview>
@@ -111,10 +96,26 @@ Variants are pre-defined sets of properties for the `Box` component. Whenever po
 <Preview>
   <Story name="Border Radius">
     <Box variant="borderbox" borderRadius={2}>
-      <p>This is a bordered Box variant with rounded corners. <code>borderRadius</code> is taken from the <code>radii</code> array in <code>systemtheme.js</code>.</p>
+      <P>This is a bordered Box variant with rounded corners. <code>borderRadius</code> is taken from the <code>radii</code> array in <code>systemtheme.js</code>.</P>
     </Box>
   </Story>
 </Preview>
+
+
+## Properties
+
+You can use `space`, `layout`, `border`, and `color` properties with `Box`.
+### For reference, see:
+
+- [space on Styled-System](https://styled-system.com/table#space)
+- [layout on Styled-System](https://styled-system.com/table#layout)
+- [border on Styled-System](https://styled-system.com/table#border)
+- [color on Styled-System](https://styled-system.com/table#color)
+- [systemtheme.js](https://github.com/orchestrated-io/orca-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js) (our arrays and scales for design system values)
+
+By default, we've set certain values on `Box` properties as documented in the table below.
+
+<Props of={Box} />
 
 ## Upgrading
 

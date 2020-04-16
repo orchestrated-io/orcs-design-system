@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { space, layout, color, border, variant } from "styled-system";
 import PropTypes from "prop-types";
+import { themeGet } from "@styled-system/theme-get";
 
 const BoxWrapper = styled.div`
 ${space}
@@ -17,13 +18,13 @@ ${border}
         borderColor: "greyLighter"
       },
       shadowbox: {
-        boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.1)"
+        boxShadow: `0 1px 2px 0 ${themeGet("colors.black10")}`
       },
       bordershadowbox: {
         borderStyle: "solid",
         borderWidth: "1px",
         borderColor: "greyLighter",
-        boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.1)"
+        boxShadow: `0 1px 2px 0 ${themeGet("colors.black10")}`
       }
     }
   })}
@@ -55,7 +56,7 @@ Box.propTypes = {
   /** Sets the outer margin on all four sides. Takes values from the `space` array in `systemtheme.js`. */
   margin: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   /** Sets the background colour of the box. */
-  bg: PropTypes.oneOf(["white", "greyLightest", "greyDark"]),
+  bg: PropTypes.string,
   /** Sets the width of the box. */
   width: PropTypes.string
 };
