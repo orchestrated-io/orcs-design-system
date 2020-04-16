@@ -22,13 +22,13 @@ Component to contain elements within a simple box. If your `Box` needs to contai
 
 ## Variants
 
-Variants are pre-defined sets of properties for the `Box` component. Whenever possible, use a variant; if you require additional
+Variants are pre-defined sets of properties for the `Box` component. Whenever possible, use a variant. `Box` has two custom props: `boxborder` and `shadow`.
 
 ### Border
 
 <Preview>
   <Story name="Border">
-    <Box variant="borderbox">
+    <Box boxborder="light">
       <P>This is a variant of a Box with a border.</P>
     </Box>
   </Story>
@@ -38,7 +38,7 @@ Variants are pre-defined sets of properties for the `Box` component. Whenever po
 
 <Preview>
   <Story name="Shadow">
-    <Box variant="shadowbox">
+    <Box shadow="light">
       <P>This is a variant of a Box with a slight shadow.</P>
     </Box>
   </Story>
@@ -48,7 +48,7 @@ Variants are pre-defined sets of properties for the `Box` component. Whenever po
 
 <Preview>
   <Story name="Border and Shadow">
-    <Box variant="bordershadowbox">
+    <Box shadow="dark" boxborder="dark">
       <P>This is a variant of a Box with a border and shadow.</P>
     </Box>
   </Story>
@@ -67,7 +67,7 @@ Variants are pre-defined sets of properties for the `Box` component. Whenever po
 
 <Preview>
   <Story name="Background Colour with Variant">
-    <Box variant="bordershadowbox" bg="greyLightest">
+    <Box shadow="light" boxborder="dark" bg="greyLightest">
       <P>This is a bordered, shadowed Box variant with a background colour.</P>
     </Box>
   </Story>
@@ -77,7 +77,7 @@ Variants are pre-defined sets of properties for the `Box` component. Whenever po
 
 <Preview>
   <Story name="Padding - Increase">
-    <Box variant="borderbox" padding={6}>
+    <Box boxborder="light" p={6}>
       <P>This is a bordered Box variant with specified padding that overrides the default padding value.</P>
     </Box>
   </Story>
@@ -85,7 +85,7 @@ Variants are pre-defined sets of properties for the `Box` component. Whenever po
 
 <Preview>
   <Story name="Padding - Set to zero">
-    <Box variant="borderbox" padding={0}>
+    <Box boxborder="light" p={0}>
       <P>This is a bordered Box variant with padding set to 0.</P>
     </Box>
   </Story>
@@ -95,7 +95,7 @@ Variants are pre-defined sets of properties for the `Box` component. Whenever po
 
 <Preview>
   <Story name="Border Radius">
-    <Box variant="borderbox" borderRadius={2}>
+    <Box boxborder="light" borderRadius={2}>
       <P>This is a bordered Box variant with rounded corners. <code>borderRadius</code> is taken from the <code>radii</code> array in <code>systemtheme.js</code>.</P>
     </Box>
   </Story>
