@@ -7,25 +7,39 @@ export const fonts = {
 };
 export const font = fonts.main;
 export const fontFamilies = fonts;
-export const fontSizes = [12, 14, 16, 18, 20, 24, 28, 32, 36, 48, 64];
+export const fontSizes = [
+  "12px",
+  "14px",
+  "16px",
+  "18px",
+  "20px",
+  "24px",
+  "28px",
+  "32px",
+  "36px",
+  "48px",
+  "64px"
+];
 export const fontWeights = [300, 400, 600];
 export const lineHeights = [1, 1.5, 2];
 
 // Z-AXIS spec
 export const zIndex = [-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const spaceScale = [0, 2, 4, 8, 16, 24, 32, 64, 128, 256, 512];
-
-export const space = {
-  ...spaceScale,
-  xxs: spaceScale[1],
-  xs: spaceScale[2],
-  sm: spaceScale[3],
-  md: spaceScale[4],
-  lg: spaceScale[5],
-  xl: spaceScale[6],
-  xxl: spaceScale[7]
-};
+// SPACING
+export const space = [
+  0,
+  "2px",
+  "4px",
+  "8px",
+  "16px",
+  "24px",
+  "32px",
+  "64px",
+  "128px",
+  "256px",
+  "512px"
+];
 
 // BORDERS
 export const radii = [0, 2, 6];
@@ -118,7 +132,6 @@ export const colors = {
 // For browser reset, setting global box sizing and font sizing etc.
 
 export const GlobalStyles = createGlobalStyle`
-
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
     box-sizing: border-box;
@@ -127,81 +140,64 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
-
 html,
 body {
     height: 100%;
     width: 100%;
     margin: 0;
 }
-
 /* Import custom fonts */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i');
-
 body {
     font-family: ${fonts.main};
     color: ${colors.greyDarkest};
 }
-
 /* set rem text size and styling */
 html { font-size: 62.5%; }
 body { font-size: 16px; font-size: 1.6rem; }
-
 main {
   display: flex;
 	align-items: stretch;
 	align-content: stretch;
 	width: 100%;
 }
-
 section {
     height: calc(100vh - 60px);
     width: 100%;
 	overflow-y: scroll;
 }
-
 img {
     border-style: none;
 }
-
 small {
     font-size: 80%;
 }
-
 p {
     margin: 0;
 }
-
 h1, h2, h3, h4, h5, h6 {
   font-weight: ${fontWeights[1]};
   font-family: ${fonts.main};
   margin: 0;
 }
-
 h1 {
   font-size: ${fontSizes[6]}px
 }
-
 h2 {
   font-size: ${fontSizes[5]}px
 }
-
 h3 {
   font-size: ${fontSizes[4]}px
 }
-
 h4 {
   font-size: ${fontSizes[3]}px
 }
-
 h5 {
   font-size: ${fontSizes[2]}px
 }
-
 h6 {
   font-size: ${fontSizes[1]}px
 }
-
 /* Animations */
 @keyframes checkboxOn {
   0% {
@@ -243,7 +239,6 @@ h6 {
       20px -12px 0 11px,
       0 0 0 0 inset;
   }
-
   25% {
     box-shadow:
       0 0 0 10px,
