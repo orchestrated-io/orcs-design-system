@@ -1,10 +1,7 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { get } from "lodash";
 import PropTypes from "prop-types";
-import colours from "../../colours";
-import variables from "../../variables";
-import { darken, rgba } from "polished";
 import { space, layout, color } from "styled-system";
 import { themeGet } from "@styled-system/theme-get";
 
@@ -20,7 +17,7 @@ const Item = styled.div`
   position: relative;
   padding: 5px 10px;
   cursor: default;
-  border-radius: ${variables.borderRadiusSmall};
+  border-radius: ${themeGet("radii.1")}px;
 `;
 
 const colourMap = {
