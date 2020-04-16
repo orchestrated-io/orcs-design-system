@@ -6,6 +6,7 @@ import variables from "../../variables";
 import Button from "../Button";
 import Flex from "../Flex";
 import Box from "../Box";
+import Divider from "../Divider";
 
 const Overlay = styled(Flex)`
   position: fixed;
@@ -87,20 +88,19 @@ const Modal = props => {
           borderRadius={variables.borderRadius}
           bg="white"
         >
-          <Box padding="sm">{children}</Box>
+          <Box p="4">{children}</Box>
           {isDisplayFooter && (
-            <Actions
-              alignItems="center"
-              paddingTop="md"
-              borderTop="solid 1px greyLighter"
-            >
-              <Button disabled={disabledConfirm} onClick={onConfirm}>
-                {confirmText}
-              </Button>
-              <Button disabled={disabledCancel} ghost onClick={onCancel}>
-                {cancelText}
-              </Button>
-            </Actions>
+            <>
+              <Divider />
+              <Actions alignItems="center" p="4">
+                <Button disabled={disabledConfirm} onClick={onConfirm}>
+                  {confirmText}
+                </Button>
+                <Button disabled={disabledCancel} ghost onClick={onCancel}>
+                  {cancelText}
+                </Button>
+              </Actions>
+            </>
           )}
         </Container>
       </Overlay>,

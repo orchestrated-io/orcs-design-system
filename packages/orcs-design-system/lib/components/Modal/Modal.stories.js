@@ -26,7 +26,7 @@ export const Basic = () => {
         onConfirm={handleOnConfirm}
         onCancel={handleOnCancel}
       >
-        <p>Content of the modal</p>
+        Content of the modal
       </Modal>
     </>
   );
