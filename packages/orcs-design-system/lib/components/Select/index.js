@@ -27,7 +27,7 @@ const Wrapper = styled.div`
  * For a full list of the changes, see <https://react-select.com/upgrade-guide>.
  *
  */
-const Select = forwardRef((props, ref, inverted) => {
+const Select = forwardRef((props, ref) => {
   const customStyles = {
     menu: (provided, state) => ({
       ...provided,
@@ -143,7 +143,7 @@ const Select = forwardRef((props, ref, inverted) => {
   };
   return (
     <>
-      <Wrapper inverted={inverted}>
+      <Wrapper inverted={props.inverted}>
         <ReactSelect ref={ref} {...props} styles={customStyles} />
       </Wrapper>
     </>
