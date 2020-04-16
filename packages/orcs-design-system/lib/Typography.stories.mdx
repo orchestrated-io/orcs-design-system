@@ -1,7 +1,7 @@
 import { ThemeProvider } from "styled-components";
 import systemtheme from "../lib/systemtheme";
 import { Meta, Typeset, Preview, Story } from "@storybook/addon-docs/blocks";
-import { H1, H2, H3, H4, H5, H6, P, Text, Quote, Code } from "./components/Typography";
+import { H1, H2, H3, H4, H5, H6, P, Text, Quote, Small, Code } from "./components/Typography";
 import Box from "./components/Box";
 
 <Meta title="System/Typography" />
@@ -15,7 +15,7 @@ import Box from "./components/Box";
 The typography system requires you to import each subcomponent you want to use, for example:
 
 ```
-import { H1, H2, H3, H4, H5, H6, P, Em, Code, Caption } from "orca-design-system";
+import { H1, H2, H3, H4, H5, H6, P, Text, Quote, Small, Code } from "orcs-design-system";
 ```
 
 ## Font families
@@ -85,7 +85,7 @@ To render text in a `span` HTML element without the paragraph formatting, use th
 
 ### Size and emphasis
 
-To render type smaller or larger, use `sizing="small"` or `sizing="large"`, or if needed (for example if you are already using a variant) you can use `fontSize` property as demonstrated below. Unless it is for a very specific purpose, strongly recommend minimising the resizing of text and simply using the appropriate type element the next size up (or down) on the design system scale.
+To render type smaller or larger, use `sizing="small"` or `sizing="large"` on a heading, or if needed you can use `fontSize` property or the `Small` element as demonstrated below. Unless it is for a very specific purpose, strongly recommend minimising the resizing of text and simply using the appropriate type element the next size up (or down) on the design system scale.
 
 <Preview>
 <Story name="Styling/Sizing">
@@ -93,7 +93,8 @@ To render type smaller or larger, use `sizing="small"` or `sizing="large"`, or i
 <H5 sizing="small">Small variant of H5</H5>
 <H5 sizing="large">Large variant of H5</H5>
 <H5 fontSize={2}>Even smaller H5, scaled down two steps in the fontSize array</H5>
-<Text fontSize="10px">Very small text using a specific fontSize value</Text>
+<P fontSize="10px">Very small text using a specific fontSize value</P>
+<Small>Small text using the Small component</Small>
 </>
 </Story>
 </Preview>

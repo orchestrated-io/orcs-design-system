@@ -212,14 +212,13 @@ export const P = styled("p")(
     variants: {
       large: {
         fontSize: 3
-      },
-      small: {
-        fontSize: 1
       }
     }
   }),
   typeStyles
 );
+
+export const Small = styled("small")(typeStyles);
 
 export const Text = styled("span")(typeStyles);
 
@@ -251,4 +250,4 @@ export const Code = styled("div")(
   })
 );
 
-export default { H1, H2, H3, H4, H5, H6, P, Text, Quote, Code };
+export default { H1, H2, H3, H4, H5, H6, P, Text, Quote, Small, Code };
