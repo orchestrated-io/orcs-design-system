@@ -34,8 +34,8 @@ export const mediaQueries = {
 };
 
 // COLOUR PALETTE
-const black ="#000";
-const white ="#fff";
+const black = "#000";
+const white = "#fff";
 const grey = "#90979A"; // Base grey - Mainly used for UI elements like backgrounds, muted text, icons, dividers or borders
 const primary = "#30ABD6"; // Base primary brand colour (blue) - Mainly used for buttons, links and selected states
 // const secondary = "purple"; Introduce new secondary colour maybe purple when we re-design our colour palette
@@ -101,7 +101,7 @@ export const colors = {
   dangerLightest: lighten(0.35, danger),
   dangerDark: darken(0.15, danger),
   dangerDarker: darken(0.25, danger),
-  dangerDarkest: darken(0.35, danger),
+  dangerDarkest: darken(0.35, danger)
 };
 
 // GLOBAL STYLES
