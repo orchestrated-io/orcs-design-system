@@ -25,11 +25,7 @@ export default function Divider({
   spanGrid,
   ...props
 }) {
-  const dividerColour = light
-    ? "black10"
-    : inverted
-    ? "white30"
-    : "black20";
+  const dividerColour = light ? "black10" : inverted ? "white30" : "black20";
 
   return (
     <Item

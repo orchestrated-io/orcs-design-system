@@ -57,43 +57,10 @@ const Modal = props => {
     isDisplayFooter,
     overflowVisible,
     visible,
-    confirmAction,
     onConfirm,
-    cancelAction,
     onCancel,
     ...restProps
   } = props;
-
-  const handleOk = useCallback(() => {
-    if (!confirmAction) {
-      if (onConfirm) {
-        onConfirm();
-      }
-      return;
-    }
-
-    const result = confirmAction();
-    if (result && result.then) {
-      // we have been given a promise
-      result.then(r => {
-        if (r) {
-          onConfirm();
-        }
-      });
-    } else if (result) {
-      onConfirm();
-    }
-  }, [confirmAction, onConfirm]);
-
-  const handleCancel = useCallback(() => {
-    if (cancelAction) {
-      cancelAction();
-    }
-    // Canel Modal Dlg
-    if (onCancel) {
-      onCancel();
-    }
-  }, [onCancel, cancelAction]);
 
   const handleKeypress = useCallback(
     event => {
@@ -104,15 +71,15 @@ const Modal = props => {
       var code = event.keyCode || event.which;
       if (code === 13) {
         // 13 is the enter keycode
-        handleOk();
+        onConfirm();
         event.preventDefault();
       } else if (code === 27) {
         // 27 is the escape keycode
-        handleCancel();
+        onCancel();
         event.preventDefault();
       }
     },
-    [visible, handleOk, handleCancel]
+    [visible, onConfirm, onCancel]
   );
 
   useEffect(() => {
@@ -133,7 +100,7 @@ const Modal = props => {
       <Container
         width={width}
         height={height}
-        overflow={overflowVisible ? "visible" : "default"}
+        overflow={overflowVisible ? "visible" : "hidden"}
         borderRadius={variables.borderRadius}
         bg="white"
       >
@@ -169,16 +136,12 @@ Modal.propTypes = {
   /** Specifies the text to use for the confirm button. Recommend using words like OK, Confirm, Yes, Proceed, Add, Save. */
   confirmText: PropTypes.string,
   /** Specifies the function to run on clicking confirm button. Function must return a truthy value or a promise that resolves to a truthy value in order to close the dialogue (see example code) */
-  onConfirm: PropTypes.func,
+  onConfirm: PropTypes.func.isRequired,
   /** Specifies the text to use for the cancel button. Recommend using words like Cancel, Close, No. */
   cancelText: PropTypes.string,
   /** Specifies the function to run on clicking cancel button. (Note, dialogue is closed automatically) */
-  onCancel: PropTypes.func,
+  onCancel: PropTypes.func.isRequired,
   /** Specifies an action when confirm button is clicked or Enter key pressed. Can return a promise */
-  confirmAction: PropTypes.func,
-  /** Specifies an action when cancel button is clicked or ESC key pressed */
-  cancelAction: PropTypes.func,
-  /** Specifies the button disabled state */
   disabledConfirm: PropTypes.bool,
   /** Specifies the button disabled state */
   disabledCancel: PropTypes.bool,
