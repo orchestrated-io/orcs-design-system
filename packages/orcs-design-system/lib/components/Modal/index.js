@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useEffect, useCallback } from "react";
+import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import colours from "../../colours";
 import variables from "../../variables";
 import Button from "../Button";
+import Flex from "../Flex";
+import Box from "../Box";
 
-const Overlay = styled.div`
+const Overlay = styled(Flex)`
   position: fixed;
   background: rgba(0, 0, 0, 0.7);
   top: 0;
@@ -13,9 +15,6 @@ const Overlay = styled.div`
   bottom: 0;
   left: 0;
   margin: 0;
-  align-items: center;
-  justify-content: center;
-  display: flex;
   opacity: 0;
   transition: all 300ms ease-in-out;
 
@@ -33,141 +32,98 @@ const Overlay = styled.div`
         `};
 `;
 
-const Container = styled.div`
+const Container = styled(Box)`
   position: relative;
   z-index: 9001;
-  background: ${colours.white};
-  width: ${props => (props.width ? props.width : "300px")};
-  height: ${props => (props.height ? props.height : "auto")};
-  border-radius: ${variables.borderRadius};
   max-height: 90vh;
   overflow-y: auto;
-  ${props => (props.overflowVisible ? "overflow: visible" : "")}
 `;
 
-const Actions = styled.div`
-  display: flex;
-  align-items: center;
-  padding: ${variables.defaultSpacing};
-  border-top: solid 1px ${colours.greyLighter};
+const Actions = styled(Flex)`
   button + button {
     margin-left: ${variables.defaultSpacingHalf};
   }
 `;
 
-const Content = styled.div`
-  padding: ${variables.defaultSpacing};
-`;
+const Modal = props => {
+  const {
+    disabledConfirm,
+    disabledCancel,
+    children,
+    width,
+    height,
+    confirmText,
+    cancelText,
+    isDisplayFooter,
+    overflowVisible,
+    visible,
+    onConfirm,
+    onCancel,
+    ...restProps
+  } = props;
 
-class Modal extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.handleKeypress = this.handleKeypress.bind(this);
-    this.handleOk = this.handleOk.bind(this);
-    this.handleCancel = this.handleCancel.bind(this);
-  }
-
-  componentDidMount() {
-    document.addEventListener("keydown", this.handleKeypress);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener("keydown", this.handleKeypress);
-  }
-
-  handleKeypress(event) {
-    const { visible } = this.props;
-
-    if (!visible) {
-      return;
-    }
-
-    var code = event.keyCode || event.which;
-    if (code === 13) {
-      // 13 is the enter keycode
-      this.handleOk();
-      event.preventDefault();
-    } else if (code === 27) {
-      // 27 is the escape keycode
-      this.handleCancel();
-      event.preventDefault();
-    }
-  }
-
-  handleOk() {
-    const { confirmAction, onConfirm } = this.props;
-    if (!confirmAction) {
-      if (onConfirm) {
-        onConfirm();
+  const handleKeypress = useCallback(
+    event => {
+      if (!visible) {
+        return;
       }
-      return;
-    }
 
-    const result = confirmAction();
-    if (result && result.then) {
-      // we have been given a promise
-      result.then(r => {
-        if (r) {
-          onConfirm();
-        }
-      });
-    } else if (result) {
-      onConfirm();
-    }
-  }
+      var code = event.keyCode || event.which;
+      if (code === 13) {
+        // 13 is the enter keycode
+        onConfirm();
+        event.preventDefault();
+      } else if (code === 27) {
+        // 27 is the escape keycode
+        onCancel();
+        event.preventDefault();
+      }
+    },
+    [visible, onConfirm, onCancel]
+  );
 
-  handleCancel() {
-    const { cancelAction, onCancel } = this.props;
-    if (cancelAction) {
-      cancelAction();
-    }
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeypress);
 
-    // Canel Modal Dlg
-    if (onCancel) {
-      onCancel();
-    }
-  }
+    return () => {
+      document.removeEventListener("keydown", handleKeypress);
+    };
+  }, [handleKeypress]);
 
-  render() {
-    const {
-      disabledConfirm = false,
-      disabledCancel = false,
-      children,
-      width,
-      height,
-      confirmText,
-      cancelText,
-      visible,
-      onConfirm,
-      onCancel,
-      isDisplayFooter = true,
-      overflowVisible = false
-    } = this.props;
-
-    return (
-      <Overlay visible={visible}>
-        <Container
-          width={width}
-          height={height}
-          overflowVisible={overflowVisible}
-        >
-          <Content>{children}</Content>
-          {isDisplayFooter && (
-            <Actions>
-              <Button disabled={disabledConfirm} onClick={onConfirm}>
-                {confirmText}
-              </Button>
-              <Button disabled={disabledCancel} ghost onClick={onCancel}>
-                {cancelText}
-              </Button>
-            </Actions>
-          )}
-        </Container>
-      </Overlay>
-    );
-  }
-}
+  return ReactDOM.createPortal(
+    <Overlay
+      visible={visible}
+      alignItems="center"
+      justifyContent="center"
+      {...restProps}
+    >
+      <Container
+        width={width}
+        height={height}
+        overflow={overflowVisible ? "visible" : "hidden"}
+        borderRadius={variables.borderRadius}
+        bg="white"
+      >
+        <Box padding="sm">{children}</Box>
+        {isDisplayFooter && (
+          <Actions
+            alignItems="center"
+            paddingTop="md"
+            borderTop="solid 1px greyLighter"
+          >
+            <Button disabled={disabledConfirm} onClick={onConfirm}>
+              {confirmText}
+            </Button>
+            <Button disabled={disabledCancel} ghost onClick={onCancel}>
+              {cancelText}
+            </Button>
+          </Actions>
+        )}
+      </Container>
+    </Overlay>,
+    document.body
+  );
+};
 
 Modal.propTypes = {
   children: PropTypes.element,
@@ -180,16 +136,12 @@ Modal.propTypes = {
   /** Specifies the text to use for the confirm button. Recommend using words like OK, Confirm, Yes, Proceed, Add, Save. */
   confirmText: PropTypes.string,
   /** Specifies the function to run on clicking confirm button. Function must return a truthy value or a promise that resolves to a truthy value in order to close the dialogue (see example code) */
-  onConfirm: PropTypes.func,
+  onConfirm: PropTypes.func.isRequired,
   /** Specifies the text to use for the cancel button. Recommend using words like Cancel, Close, No. */
   cancelText: PropTypes.string,
   /** Specifies the function to run on clicking cancel button. (Note, dialogue is closed automatically) */
-  onCancel: PropTypes.func,
+  onCancel: PropTypes.func.isRequired,
   /** Specifies an action when confirm button is clicked or Enter key pressed. Can return a promise */
-  confirmAction: PropTypes.func,
-  /** Specifies an action when cancel button is clicked or ESC key pressed */
-  cancelAction: PropTypes.func,
-  /** Specifies the button disabled state */
   disabledConfirm: PropTypes.bool,
   /** Specifies the button disabled state */
   disabledCancel: PropTypes.bool,
@@ -197,6 +149,17 @@ Modal.propTypes = {
   isDisplayFooter: PropTypes.bool,
   /** Specifies whether the Dialogue overflow is visible or not - Default: false. If height is not enough, verticle scroll bar will be displayed (overflow-y: auto) */
   overflowVisible: PropTypes.bool
+};
+
+Modal.defaultProps = {
+  disabledConfirm: false,
+  disabledCancel: false,
+  width: "300px",
+  height: "auto",
+  confirmText: "OK",
+  cancelText: "Cancel",
+  isDisplayFooter: true,
+  overflowVisible: false
 };
 
 /** @component */
