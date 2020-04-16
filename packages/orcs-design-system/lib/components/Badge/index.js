@@ -9,7 +9,7 @@ const Item = styled.div`
   ${space}
   ${layout}
   ${color}
-  font-size: ${themeGet("fontSizes.0")}px;
+  font-size: ${themeGet("fontSizes.0")};
   font-weight: ${themeGet("fontWeights.2")};
   display: inline-block;
   text-align: center;
