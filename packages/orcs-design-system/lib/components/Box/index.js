@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { space, layout, color, border, variant } from "styled-system";
 import PropTypes from "prop-types";
 import { themeGet } from "@styled-system/theme-get";
-import { P } from "../Typography";
 
 const BoxWrapper = styled.div`
 ${space}
