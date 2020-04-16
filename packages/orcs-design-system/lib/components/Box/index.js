@@ -1,34 +1,55 @@
 import React from "react";
 import styled from "styled-components";
-import { space, layout, color, border, variant } from "styled-system";
+import { space, layout, color, border, variant, compose } from "styled-system";
 import PropTypes from "prop-types";
 import { themeGet } from "@styled-system/theme-get";
 
-const BoxWrapper = styled.div`
-${space}
-${layout}
-${color}
-${border}
-  box-sizing: border-box;
-  ${variant({
+const boxStyles = compose(space, layout, color, border);
+
+const BoxWrapper = styled("div")(
+  props =>
+    variant({
+      prop: "shadow",
+      variants: {
+        light: {
+          boxShadow:
+            themeGet("space.1")(props) +
+            " " +
+            themeGet("space.1")(props) +
+            " " +
+            themeGet("space.1")(props) +
+            " " +
+            themeGet("colors.black10")(props)
+        },
+        dark: {
+          boxShadow:
+            themeGet("space.1")(props) +
+            " " +
+            themeGet("space.1")(props) +
+            " " +
+            themeGet("space.1")(props) +
+            " " +
+            themeGet("colors.black50")(props)
+        }
+      }
+    }),
+  variant({
+    prop: "boxborder",
     variants: {
-      borderbox: {
+      light: {
         borderStyle: "solid",
-        borderWidth: "1px",
+        borderWidth: 1,
         borderColor: "greyLighter"
       },
-      shadowbox: {
-        boxShadow: `0 1px 2px 0 ${themeGet("colors.black10")}`
-      },
-      bordershadowbox: {
+      dark: {
         borderStyle: "solid",
-        borderWidth: "1px",
-        borderColor: "greyLighter",
-        boxShadow: `0 1px 2px 0 ${themeGet("colors.black10")}`
+        borderWidth: 1,
+        borderColor: "greyDarker"
       }
     }
-  })}
-  `;
+  }),
+  boxStyles
+);
 
 export default function Box({ children, ...props }) {
   return <BoxWrapper {...props}>{children}</BoxWrapper>;
@@ -49,12 +70,10 @@ Box.propTypes = {
   ]),
   /** Sets behaviour of elements in `Box` that are larger than their container. */
   overflow: PropTypes.oneOf(["visible", "hidden", "scroll", "auto"]),
-  /** Sets the border in one declaration: `border-width` `border-style` `border-color` */
-  border: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   /** Sets the inner padding on all four sides. Takes values from the `space` array in `systemtheme.js`. */
-  padding: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  p: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   /** Sets the outer margin on all four sides. Takes values from the `space` array in `systemtheme.js`. */
-  margin: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  m: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   /** Sets the background colour of the box. */
   bg: PropTypes.string,
   /** Sets the width of the box. */
@@ -65,8 +84,7 @@ Box.defaultProps = {
   width: "100%",
   display: "block",
   overflow: "visible",
-  border: "none",
   m: 0,
-  p: 4,
+  p: 0,
   bg: "transparent"
 };

@@ -43,6 +43,7 @@ export const space = [
 
 // BORDERS
 export const radii = [0, 2, 6];
+export const borderWidths = [0, "1px", "2px", "3px"];
 
 // ANIMATION
 export const transition = "all 200ms ease-in-out";
