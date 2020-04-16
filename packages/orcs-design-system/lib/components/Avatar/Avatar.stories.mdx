@@ -94,30 +94,30 @@ For when Avatar is used on a dark background
 
 <Preview>
 <Story name="Inverted">
-    <Box bg="greyDark">
+    <Box bg="greyDarker">
     <Spacer>
     <Avatar
-      color="white"
+      type="inverted"
       title="Ayden Lundgre"
       subtitle="Senior Business Analyst"
       initials="AL"
       image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
     />
     <Avatar
-      color="white"
+      type="inverted"
       title="Ayden Lundgre"
       subtitle="Senior Business Analyst"
       initials="AL"
       />
     <Avatar
-      color="white"
+      type="inverted"
       title={<StyledLink href="#">Ayden Lundgre</StyledLink>}
       subtitle="Senior Business Analyst"
       initials="AL"
       image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
     />
     <Avatar
-      color="white"
+      type="inverted"
       sizing="small"
       title="Ayden Lundgre"
       subtitle="Senior Business Analyst"
@@ -125,7 +125,7 @@ For when Avatar is used on a dark background
       image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
     />
     <Avatar
-      color="white"
+      type="inverted"
       sizing="small"
       title={<StyledLink href="#">Ayden Lundgre</StyledLink>}
       subtitle="Senior Business Analyst"
@@ -139,12 +139,10 @@ For when Avatar is used on a dark background
 
 ## Properties
 
-You can use `space` and `layout` Styled-System properties with `Avatar`, as well as two custom props: `sizing` and `color`.
+You can use two custom props: `sizing` and `type`.
 
 ### For reference, see:
 
-- [space on Styled-System](https://styled-system.com/table#space)
-- [layout on Styled-System](https://styled-system.com/table#layout)
 - [systemtheme.js](https://github.com/orchestrated-io/orca-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js) (our arrays for design system values)
 
 By default, we've set certain values on `Avatar` properties as documented in the table below. If these properties are not specified they will take on the default values.

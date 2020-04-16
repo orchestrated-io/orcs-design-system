@@ -1,7 +1,7 @@
 import { ThemeProvider } from "styled-components";
-import * as systemtheme from "../lib/systemtheme";
+import systemtheme from "../lib/systemtheme";
 import { Meta, Typeset, Preview, Story } from "@storybook/addon-docs/blocks";
-import { H1, H2, H3, H4, H5, H6, P, Text, Strong, Quote, Code } from "./components/Typography";
+import { H1, H2, H3, H4, H5, H6, P, Text, Quote, Small, Code } from "./components/Typography";
 import Box from "./components/Box";
 
 <Meta title="System/Typography" />
@@ -15,7 +15,7 @@ import Box from "./components/Box";
 The typography system requires you to import each subcomponent you want to use, for example:
 
 ```
-import { H1, H2, H3, H4, H5, H6, P, Em, Strong, Code, Caption } from "orca-design-system";
+import { H1, H2, H3, H4, H5, H6, P, Text, Quote, Small, Code } from "orcs-design-system";
 ```
 
 ## Font families
@@ -67,6 +67,8 @@ These use `<H1>` to `<H6>` tags. For semantic and accessibility usage guidelines
 <P>Regular paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet at elit sit amet iaculis. Cras eget sapien et ligula mollis placerat non venenatis dolor. Fusce id mi risus. Ut sit amet diam in dui maximus sagittis a at dolor. Cras volutpat est nec arcu interdum pulvinar in vitae erat.</P>
 <P textAlign="center">Centered paragraph text.</P>
 <P textAlign="right">Right-aligned paragraph text.</P>
+<P weight="light">Light paragraph text</P>
+<P sizing="small">Small paragraph text</P>
 </>
 </Story>
 </Preview>
@@ -83,24 +85,29 @@ To render text in a `span` HTML element without the paragraph formatting, use th
 
 ### Size and emphasis
 
-To render type smaller or larger, use `size="small"` or `size="large"`, or if needed (for example if you are already using a variant) you can use `fontSize` property as demonstrated below. Unless it is for a very specific purpose, strongly recommend minimising the resizing of text and simply using the appropriate type element the next size up (or down) on the design system scale.
+To render type smaller or larger, use `sizing="small"` or `sizing="large"` on a heading, or if needed you can use `fontSize` property or the `Small` element as demonstrated below. Unless it is for a very specific purpose, strongly recommend minimising the resizing of text and simply using the appropriate type element the next size up (or down) on the design system scale.
 
 <Preview>
 <Story name="Styling/Sizing">
 <>
-<H5 size="small">Small variant of H5</H5>
-<H5 size="large">Large variant of H5</H5>
-<H3 fontSize={4}>Smaller H3, scaled down two steps in the fontSize array</H3>
-<Text fontSize="10px">Very small text using a specific fontSize value</Text>
+<H5 sizing="small">Small variant of H5</H5>
+<H5 sizing="large">Large variant of H5</H5>
+<H5 fontSize={2}>Even smaller H5, scaled down two steps in the fontSize array</H5>
+<P fontSize="10px">Very small text using a specific fontSize value</P>
+<Small>Small text using the Small component</Small>
 </>
 </Story>
 </Preview>
 
-To render type with emphasis, use `weight="bold"` or wrap the type in a `<Strong>` tag.
+To render type with emphasis, use `weight="bold"` or wrap the type in a `<strong>` tag.
 
 <Preview>
+<Story name="Styling/Emphasis">
+<>
 <P weight="bold">Bold paragraph text lorem ipsum dolor sit amet</P>
-<P>Only <Strong>partially bolded</Strong> paragraph</P>
+<P>Only <strong>partially bolded</strong> paragraph</P>
+</>
+</Story>
 </Preview>
 
 ### Colours
@@ -116,7 +123,7 @@ To apply colour to text, use the `color` property in the `Text` component. Usage
 <br />
 <Text color="danger">Danger-coloured text</Text>
 <br />
-<Box bg="greyDark">
+<Box bg="greyDarker">
 <Text color="white">White text for dark backgrounds</Text>
 </Box>
 </>
@@ -126,9 +133,13 @@ To apply colour to text, use the `color` property in the `Text` component. Usage
 ## Miscellaneous
 
 <Preview>
+<Story name="Miscellaneous/Blockquote">
 <Quote>"Used to display block quotes lorem ipsum dolor sit amet" <em> - Adam, 2018</em></Quote>
+</Story>
 </Preview>
 
 <Preview>
+<Story name="Miscellaneous/Code">
 <Code>&lt;html&gt; &lt;head&gt; &lt;body&gt; Hello I am a code block &lt;/body&gt; &lt;/head&gt; &lt;/html&gt;</Code>
+</Story>
 </Preview>

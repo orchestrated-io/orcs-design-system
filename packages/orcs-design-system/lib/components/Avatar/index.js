@@ -3,15 +3,18 @@ import styled from "styled-components";
 import { space, layout, variant } from "styled-system";
 import PropTypes from "prop-types";
 import { H3, Text } from "../Typography";
-import * as systemtheme from "../../systemtheme";
+import css from "@styled-system/css";
+import themeGet from "@styled-system/theme-get";
 
-const AvatarWrapper = styled.div`
-  ${space}
-  ${layout}
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  ${variant({
+const AvatarWrapper = styled("div")(
+  layout,
+  space,
+  css({
+    boxSizing: "border-box",
+    display: "flex",
+    alignItems: "center"
+  }),
+  variant({
     prop: "sizing",
     variants: {
       small: {
@@ -19,146 +22,166 @@ const AvatarWrapper = styled.div`
       },
       default: {}
     }
-  })}
-`;
+  }),
+  variant({
+    prop: "type",
+    variants: {
+      inverted: {
+        color: "white"
+      }
+    }
+  })
+);
 
-const TextContent = styled.div`
-  > * + * {
-    margin-top: ${systemtheme.space[2]}px;
-  }
-  margin-left: ${systemtheme.space[3]}px;
-  ${variant({
+const TextContent = styled("div")(
+  props => ({
+    marginLeft: themeGet("space.3")(props)
+  }),
+  variant({
+    prop: "sizing",
+    variants: {
+      small: {
+        fontSize: 1
+      }
+    }
+  }),
+  variant({
+    prop: "type",
+    variants: {
+      inverted: {
+        color: "white"
+      }
+    }
+  })
+);
+
+const Image = styled("img")(
+  props => ({
+    width: "calc(" + themeGet("space.5")(props) + " * 2)",
+    height: "calc(" + themeGet("space.5")(props) + " * 2)"
+  }),
+  css({
+    backgroundColor: "greyLighter",
+    border: "0",
+    display: "block",
+    borderRadius: "50%"
+  }),
+  props =>
+    variant({
+      prop: "sizing",
+      variants: {
+        small: {
+          width: "calc(" + themeGet("space.4")(props) + " * 2.25)",
+          height: "calc(" + themeGet("space.4")(props) + " * 2.25)"
+        }
+      }
+    })
+);
+
+const Circle = styled("div")(
+  props => ({
+    width: "calc(" + themeGet("space.5")(props) + " * 2)",
+    height: "calc(" + themeGet("space.5")(props) + " * 2)",
+    fontWeight: themeGet("fontWeights.2")(props)
+  }),
+  css({
+    backgroundColor: "greyLighter",
+    border: "0",
+    display: "flex",
+    borderRadius: "50%",
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+    textTransform: "uppercase"
+  }),
+  props =>
+    variant({
+      prop: "sizing",
+      variants: {
+        small: {
+          width: "calc(" + themeGet("space.4")(props) + " * 2.25)",
+          height: "calc(" + themeGet("space.4")(props) + " * 2.25)"
+        }
+      }
+    }),
+  variant({
+    prop: "type",
+    variants: {
+      inverted: {
+        backgroundColor: "greyDarker",
+        color: "white"
+      }
+    }
+  })
+);
+
+const Title = styled(H3)(
+  variant({
+    prop: "sizing",
+    variants: {
+      small: {
+        fontSize: 2
+      }
+    }
+  }),
+  variant({
+    prop: "type",
+    variants: {
+      inverted: {
+        color: "white"
+      }
+    }
+  })
+);
+
+const Subtitle = styled(Text)(
+  css({
+    color: "grey"
+  }),
+  variant({
     prop: "sizing",
     variants: {
       small: {
         fontSize: 1,
-        marginLeft: `${systemtheme.space[3]}px`
-      },
-      default: {}
+        fontWeight: 0
+      }
     }
-  })}
-`;
-
-const Image = styled.img`
-  background-color: ${systemtheme.colors.greyLighter};
-  border-radius: 50%;
-  border: 0;
-  display: block;
-  width: calc(${systemtheme.space[5]}px * 2);
-  height: calc(${systemtheme.space[5]}px * 2);
-  ${variant({
-    prop: "sizing",
+  }),
+  variant({
+    prop: "type",
     variants: {
-      small: {
-        height: "calc(" + systemtheme.space[4] + "px * 2.25)",
-        width: "calc(" + systemtheme.space[4] + "px * 2.25)"
+      inverted: {
+        color: "white"
       },
       default: {}
     }
-  })}
-`;
-
-const Circle = styled.div`
-  border-radius: 50%;
-  background-color: ${systemtheme.colors.greyLighter};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: ${systemtheme.fontWeights[2]};
-  width: calc(${systemtheme.space[5]}px * 2);
-  height: calc(${systemtheme.space[5]}px * 2);
-  ${variant({
-    prop: "sizing",
-    variants: {
-      small: {
-        height: "calc(" + systemtheme.space[4] + "px * 2.25)",
-        width: "calc(" + systemtheme.space[4] + "px * 2.25)"
-      },
-      default: {}
-    }
-  })}
-  ${variant({
-    prop: "color",
-    variants: {
-      white: {
-        backgroundColor: systemtheme.colors.greyDark,
-        color: systemtheme.colors.white
-      },
-      default: {}
-    }
-  })}
-`;
-
-const Title = styled(H3)`
-  ${variant({
-    prop: "sizing",
-    variants: {
-      small: {
-        fontSize: systemtheme.fontSizes[2]
-      },
-      default: {}
-    }
-  })}
-  ${variant({
-    prop: "color",
-    variants: {
-      white: {
-        color: systemtheme.colors.white
-      },
-      default: {}
-    }
-  })}
-`;
-
-const Subtitle = styled(Text)`
-  color: ${systemtheme.colors.grey};
-  ${variant({
-    prop: "sizing",
-    variants: {
-      small: {
-        fontSize: systemtheme.fontSizes[1],
-        fontWeight: systemtheme.fontWeights[0]
-      },
-      default: {}
-    }
-  })}
-  ${variant({
-    prop: "color",
-    variants: {
-      white: {
-        color: systemtheme.colors.white
-      },
-      default: {}
-    }
-  })}
-`;
+  })
+);
 
 const Avatar = ({
-  color,
   sizing,
   image,
   initials,
   title,
   subtitle,
+  type,
   ...props
 }) => {
   return (
-    <AvatarWrapper {...props} sizing={sizing}>
+    <AvatarWrapper {...props} type={type} sizing={sizing}>
       {image ? (
         <Image src={image} sizing={sizing} />
       ) : (
-        <Circle color={color} sizing={sizing}>
+        <Circle sizing={sizing} type={type}>
           {initials}
         </Circle>
       )}
-      <TextContent sizing={sizing}>
-        <Title color={color} sizing={sizing}>
+      <TextContent type={type} sizing={sizing}>
+        <Title type={type} sizing={sizing}>
           {title}
         </Title>
         {subtitle ? (
-          <Subtitle color={color} sizing={sizing}>
+          <Subtitle type={type} sizing={sizing}>
             {subtitle}
           </Subtitle>
         ) : null}
@@ -170,8 +193,8 @@ const Avatar = ({
 Avatar.propTypes = {
   /** Changes the sizing of the Avatar component */
   sizing: PropTypes.oneOf(["small", "default"]),
-  /** Changes the text colour; use `color="white"` for dark backgrounds */
-  color: PropTypes.oneOf(["white", "default"]),
+  /** Specifies the inverted type for dark backgrounds */
+  type: PropTypes.oneOf(["inverted", "default"]),
   /** Specifies a source path for an image */
   image: PropTypes.string,
   /** Specifies initials of person if available */
@@ -180,6 +203,11 @@ Avatar.propTypes = {
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   /** Specifies subtitle / role */
   subtitle: PropTypes.string
+};
+
+Avatar.defaultProps = {
+  sizing: "default",
+  type: "default"
 };
 
 export default Avatar;
