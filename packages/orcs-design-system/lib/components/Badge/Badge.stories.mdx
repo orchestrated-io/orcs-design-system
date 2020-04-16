@@ -8,13 +8,48 @@ import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
 
 # Badge
 
-[Properties](#properties) | [Examples](#examples)
+[Colours](#colours) | [Properties](#properties)
 
 Badges should be used for things like status, indicators, or other additional information that you want to highlight but not make interactive/clickable.
 
+Without specifying a variant colour, the default badge will just take a grey colour.
+
 <Preview>
-  <Story name="Basic">
+  <Story name="Default">
     <Badge>Default</Badge>
+  </Story>
+</Preview>
+
+## Colours
+
+The variants can be used on light or dark backgrounds
+
+<Preview>
+  <Story name="Colours">
+    <>
+    <Box>
+      <Spacer m="1">
+        <Badge>Default</Badge>
+        <Badge variant="success">Success</Badge>
+        <Badge variant="warning">Warning</Badge>
+        <Badge variant="danger">Danger</Badge>
+        <Badge variant="primaryLight">Low priority</Badge>
+        <Badge variant="primary">Medium priority</Badge>
+        <Badge variant="primaryDark">High priority</Badge>
+      </Spacer>
+    </Box>
+    <Box bg="greyDarkest">
+      <Spacer m="1">
+        <Badge>Default</Badge>
+        <Badge variant="success">Success</Badge>
+        <Badge variant="warning">Warning</Badge>
+        <Badge variant="danger">Danger</Badge>
+        <Badge variant="primaryLight">Low priority</Badge>
+        <Badge variant="primary">Medium priority</Badge>
+        <Badge variant="primaryDark">High priority</Badge>
+      </Spacer>
+    </Box>
+    </>
   </Story>
 </Preview>
 
@@ -29,46 +64,3 @@ You can use `space` and `layout` Styled-System properties with `Badge`.
 - [systemtheme.js](https://github.com/orchestrated-io/orca-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js) (our arrays for design system values)
 
 <Props of={Badge} />
-
-## Examples
-
-<Preview>
-  <Story name="Colours">
-  <Spacer>
-    <Badge colour="success">Success</Badge>
-    <Badge colour="warning">Warning</Badge>
-    <Badge colour="danger">Danger</Badge>
-    <Badge colour="primaryLight">Low priority</Badge>
-    <Badge colour="primaryDark">Medium priority</Badge>
-    <Badge colour="primaryDarkest">High priority</Badge>
-  </Spacer>
-  </Story>
-</Preview>
-
-<Preview>
-  <Story name="On Dark Background">
-    <Box bg="black">
-      <Spacer>
-        <Badge inverted>Default</Badge>
-        <Badge inverted colour="success">
-          Success
-        </Badge>
-        <Badge inverted colour="warning">
-          Warning
-        </Badge>
-        <Badge inverted colour="danger">
-          Danger
-        </Badge>
-        <Badge inverted colour="primaryLight">
-          Low priority
-        </Badge>
-        <Badge inverted colour="primaryDark">
-          Medium priority
-        </Badge>
-        <Badge inverted colour="primaryDarkest">
-          High priority
-        </Badge>
-      </Spacer>
-    </Box>
-  </Story>
-</Preview>
