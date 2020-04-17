@@ -1,8 +1,6 @@
-import Badge from ".";
-import Box from "../Box";
-import Spacer from "../Spacer";
-
+import * as stories from './Badge.stories.js';
 import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import Badge from ".";
 
 <Meta title="Components/Badge" component={Badge} />
 
@@ -15,9 +13,7 @@ Badges should be used for things like status, indicators, or other additional in
 Without specifying a variant colour, the default badge will just take a grey colour.
 
 <Preview>
-  <Story name="Default">
-    <Badge>Default</Badge>
-  </Story>
+  <Story name="defaultBadge">{stories.defaultBadge()}</Story>
 </Preview>
 
 ## Colours
@@ -25,32 +21,7 @@ Without specifying a variant colour, the default badge will just take a grey col
 The variants can be used on light or dark backgrounds
 
 <Preview>
-  <Story name="Colours">
-    <>
-    <Box p="4">
-      <Spacer m="1">
-        <Badge>Default</Badge>
-        <Badge variant="success">Success</Badge>
-        <Badge variant="warning">Warning</Badge>
-        <Badge variant="danger">Danger</Badge>
-        <Badge variant="primaryLight">Low priority</Badge>
-        <Badge variant="primary">Medium priority</Badge>
-        <Badge variant="primaryDark">High priority</Badge>
-      </Spacer>
-    </Box>
-    <Box p="4" bg="greyDarkest">
-      <Spacer m="1">
-        <Badge>Default</Badge>
-        <Badge variant="success">Success</Badge>
-        <Badge variant="warning">Warning</Badge>
-        <Badge variant="danger">Danger</Badge>
-        <Badge variant="primaryLight">Low priority</Badge>
-        <Badge variant="primary">Medium priority</Badge>
-        <Badge variant="primaryDark">High priority</Badge>
-      </Spacer>
-    </Box>
-    </>
-  </Story>
+  <Story name="colouredBadge">{stories.colouredBadge()}</Story>
 </Preview>
 
 ## Properties

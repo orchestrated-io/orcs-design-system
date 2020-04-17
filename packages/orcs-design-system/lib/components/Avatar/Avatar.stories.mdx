@@ -6,7 +6,7 @@ import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
 
 # Avatar
 
-[Examples](#default) | [Properties](#properties)
+[Default example](#default) | [No image source](#no-image-source) | [Name as link](#name-as-link) | [Small size](#small-size) | [Inverted style](#inverted-style) | [Properties](#properties)
 
 Avatars can come in a few different options. Firstly regular or small size.
 
@@ -31,7 +31,7 @@ Follow example code below to achieve desired option.
 In cases where an image is not available, fall back is to show initials
 
 <Preview>
-  <Story name="No image">{stories.noImage()}</Story>
+  <Story name="noImage">{stories.noImage()}</Story>
 </Preview>
 
 ## Icon only
@@ -39,7 +39,7 @@ In cases where an image is not available, fall back is to show initials
 In cases where neither an image or initials are available, fall back is to show icon
 
 <Preview>
-  <Story name="Icon only">{stories.iconOnly()}</Story>
+  <Story name="iconOnly">{stories.iconOnly()}</Story>
 </Preview>
 
 ## Name as link
@@ -47,13 +47,13 @@ In cases where neither an image or initials are available, fall back is to show 
 This component can support a link for the name
 
 <Preview>
-  <Story name="Name as link">{stories.nameLink()}</Story>
+  <Story name="nameLink">{stories.nameLink()}</Story>
 </Preview>
 
-## Small Size
+## Small size
 
 <Preview>
-  <Story name="Small">{stories.small()}</Story>
+  <Story name="small">{stories.small()}</Story>
 </Preview>
 
 ## Inverted style
@@ -61,7 +61,7 @@ This component can support a link for the name
 For when Avatar is used on a dark background
 
 <Preview>
-  <Story name="On dark background">{stories.inverted()}</Story>
+  <Story name="inverted">{stories.inverted()}</Story>
 </Preview>
 
 ## Properties
