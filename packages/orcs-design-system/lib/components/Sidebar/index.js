@@ -1,12 +1,11 @@
 import styled, { css } from "styled-components";
-import colours from "../../colours";
-import variables from "../../variables";
 import { color } from "styled-system";
-import * as systemtheme from "../../systemtheme";
+import { colors } from "../../systemtheme";
+import variables from "../../variables";
 
 const Sidebar = styled.div`
   ${color}
-  background: ${systemtheme.colors.greyDarker};
+  background: ${colors.greyDarker};
   max-width: 360px;
   min-height: calc(100vh - 60px);
   height: 100%;
@@ -38,13 +37,13 @@ export const SidebarTab = styled.label`
   justify-content: center;
   width: 100%;
   transition: ${variables.defaultTransition};
-  color: ${props => (props.active ? colours.primary : colours.greyLightest)};
-  background: ${props => (props.active ? colours.greyDarker : "transparent")};
+  color: ${props => (props.active ? colors.primary : colors.greyLightest)};
+  background: ${props => (props.active ? colors.greyDarker : "transparent")};
   cursor: ${props => (props.active ? "default" : "pointer")};
   &:hover,
   &:hover {
     background: ${props =>
-      props.active ? colours.greyDarker : "rgba(0, 0, 0, 0.15)"};
+      props.active ? colors.greyDarker : "rgba(0, 0, 0, 0.15)"};
   }
   ${props =>
     props.badge
@@ -62,8 +61,8 @@ export const SidebarTab = styled.label`
           border-radius: 100%;
           font-size: 1.1rem;
           font-weight: 600;
-          color: ${colours.white};
-          background-color: ${colours.danger};
+          color: ${colors.white};
+          background-color: ${colors.danger};
         }
       `
       : css``};
@@ -78,7 +77,7 @@ export const SidebarPanel = styled.div`
   min-width: 300px;
   height: calc(100vh - (60px + 72px));
   overflow-y: auto;
-  background: ${colours.greyDarker};
+  background: ${colors.greyDarker};
 `;
 
 export const SidebarClose = styled.label`
@@ -93,7 +92,7 @@ export const SidebarClose = styled.label`
   margin-top: -11px;
   z-index: 2;
   cursor: w-resize;
-  background: ${colours.greyDarker};
+  background: ${colors.greyDarker};
 `;
 
 export const SidebarFooter = styled.footer`
@@ -103,7 +102,7 @@ export const SidebarFooter = styled.footer`
   bottom: 0;
   left: 0;
   width: 100%;
-  background: ${colours.greyDarker};
+  background: ${colors.greyDarker};
   box-shadow: 0 -1px 0px 0px rgba(0, 0, 0, 0.3);
   svg {
     display: block;

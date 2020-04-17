@@ -7,7 +7,7 @@ import Avatar from "../Avatar/";
 import Icon from "../Icon";
 import StyledLink from "../StyledLink/";
 import Popover from "../Popover/";
-import * as systemtheme from "../../systemtheme";
+import systemtheme, { mediaQueries } from "../../systemtheme";
 import { rgba } from "polished";
 
 const Bar = styled.header`
@@ -24,14 +24,14 @@ const Bar = styled.header`
 
   > a {
     display: none;
-    ${systemtheme.mediaQueries.screenL} {
+    ${mediaQueries.screenL} {
       display: block;
     }
   }
 
   > div {
     display: none;
-    ${systemtheme.mediaQueries.screenL} {
+    ${mediaQueries.screenL} {
       display: flex;
     }
   }
@@ -72,7 +72,7 @@ const MobileMenuToggle = styled.label`
   display: block;
   margin-left: auto;
 
-  ${systemtheme.mediaQueries.screenL} {
+  ${mediaQueries.screenL} {
     display: none;
   }
 
