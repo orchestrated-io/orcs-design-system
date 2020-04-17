@@ -10,7 +10,7 @@ export const TabsContainer = styled.div`
 `;
 
 export const Tab = styled.div`
-  margin-right: ${themeGet("space.3")}px;
+  margin-right: ${themeGet("space.3")};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,9 +20,9 @@ export const Tab = styled.div`
     background: ${props =>
       props.active ? themeGet("colors.white") : themeGet("colors.greyLighter")};
     transition: ${themeGet("transition")};
-    padding: ${themeGet("space.3")}px ${themeGet("space.4")}px;
+    padding: ${themeGet("space.3")} ${themeGet("space.4")};
     transition: ${themeGet("transition")};
-    font-size: ${themeGet("fontSizes.1")}px;
+    font-size: ${themeGet("fontSizes.1")};
     font-weight: ${themeGet("fontWeights.2")};
     color: ${props =>
       props.active ? themeGet("colors.primary") : themeGet("colors.grey")};
@@ -55,9 +55,9 @@ const inactiveStyle = css`
 
 const notificationStyle = notification => css`
   :after {
-    width: ${themeGet("space.5")}px;
-    height: ${themeGet("space.5")}px;
-    font-size: ${themeGet("fontSizes.0")}px;
+    width: ${themeGet("space.5")};
+    height: ${themeGet("space.5")};
+    font-size: ${themeGet("fontSizes.0")};
     font-weight: ${themeGet("fontWeights.2")};
     color: ${themeGet("colors.white")};
     background-color: ${themeGet("colors.danger")};
