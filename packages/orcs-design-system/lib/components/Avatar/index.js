@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { space, layout, variant } from "styled-system";
 import PropTypes from "prop-types";
 import { H3, Text } from "../Typography";
+import Icon from "../Icon";
 import css from "@styled-system/css";
 import themeGet from "@styled-system/theme-get";
 
@@ -173,7 +174,7 @@ const Avatar = ({
         <Image src={image} sizing={sizing} />
       ) : (
         <Circle sizing={sizing} type={type}>
-          {initials}
+          {initials ? initials : <Icon icon={["fas", "user"]} />}
         </Circle>
       )}
       <TextContent type={type} sizing={sizing}>

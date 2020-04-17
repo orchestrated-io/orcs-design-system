@@ -1,7 +1,5 @@
 import Avatar from ".";
-import Box from "../Box";
-import Spacer from "../Spacer";
-import StyledLink from "../StyledLink";
+import * as stories from './Avatar.stories.js';
 import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
 
 <Meta title="Components/Avatar" component={Avatar} />
@@ -25,23 +23,23 @@ Follow example code below to achieve desired option.
 ## Default
 
 <Preview>
-  <Story name="Default">
-      <Avatar title="Ayden Lundgre" initials="AL" subtitle="Senior Business Analyst" image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg" />
-  </Story>
+  <Story name="defaultAvatar">{stories.defaultAvatar()}</Story>
 </Preview>
 
 ## No image source
 
-In cases where an image is not accessible, fall back is to show initials
+In cases where an image is not available, fall back is to show initials
 
 <Preview>
-  <Story name="No image">
-  <Avatar
-    title="Ayden Lundgre"
-    subtitle="Senior Business Analyst"
-    initials="AL"
-  />
-  </Story>
+  <Story name="No image">{stories.noImage()}</Story>
+</Preview>
+
+## Icon only
+
+In cases where neither an image or initials are available, fall back is to show icon
+
+<Preview>
+  <Story name="Icon only">{stories.iconOnly()}</Story>
 </Preview>
 
 ## Name as link
@@ -49,42 +47,13 @@ In cases where an image is not accessible, fall back is to show initials
 This component can support a link for the name
 
 <Preview>
-    <Story name="Name as Link">
-  <Avatar
-    title={<StyledLink href="#">Ayden Lundgre</StyledLink>}
-    subtitle="Senior Business Analyst"
-    initials="AL"
-    image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
-  />
-  </Story>
+  <Story name="Name as link">{stories.nameLink()}</Story>
 </Preview>
 
 ## Small Size
-  <Preview>
-    <Story name="Small">
-    <Spacer>
-      <Avatar
-        sizing="small"
-        title="Ayden Lundgre"
-        subtitle="Senior Business Analyst"
-        initials="AL"
-      />
-      <Avatar
-        sizing="small"
-        title="Ayden Lundgre"
-        subtitle="Senior Business Analyst"
-        initials="AL"
-        image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
-      />
-      <Avatar
-        sizing="small"
-        title={<StyledLink href="#">Ayden Lundgre</StyledLink>}
-        subtitle="Senior Business Analyst"
-        initials="AL"
-        image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
-      />
-    </Spacer>
-    </Story>
+
+<Preview>
+  <Story name="Small">{stories.small()}</Story>
 </Preview>
 
 ## Inverted style
@@ -92,43 +61,8 @@ This component can support a link for the name
 For when Avatar is used on a dark background
 
 <Preview>
-<Story name="Inverted">
-  <Box bg="greyDarkest" p="4">
-    <Spacer>
-      <Avatar
-        type="inverted"
-        title="Ayden Lundgre"
-        subtitle="Senior Business Analyst"
-        initials="AL"
-        image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
-      />
-      <Avatar
-        type="inverted"
-        title={<StyledLink href="#">Ayden Lundgre</StyledLink>}
-        subtitle="Senior Business Analyst"
-        initials="AL"
-        image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
-      />
-      <Avatar
-        type="inverted"
-        sizing="small"
-        title="Ayden Lundgre"
-        subtitle="Senior Business Analyst"
-        initials="AL"
-        image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
-      />
-      <Avatar
-        type="inverted"
-        sizing="small"
-        title={<StyledLink href="#">Ayden Lundgre</StyledLink>}
-        subtitle="Senior Business Analyst"
-        initials="AL"
-        image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
-      />
-      </Spacer>
-    </Box>
-  </Story>
-  </Preview>
+  <Story name="On dark background">{stories.inverted()}</Story>
+</Preview>
 
 ## Properties
 
