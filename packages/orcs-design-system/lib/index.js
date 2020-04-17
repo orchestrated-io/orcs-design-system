@@ -55,7 +55,7 @@ export {
   H6,
   P,
   Text,
-  Strong,
+  Small,
   Quote,
   Code
 } from "./components/Typography";
