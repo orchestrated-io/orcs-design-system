@@ -1,102 +1,55 @@
+import * as stories from "./Box.stories.js";
 import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
 import Box from ".";
-import { P } from "../Typography";
 
 <Meta title="Components/Box" component={Box} />
 
 # Box
 
-[Variants](#variants) | [Examples](#examples) | [Properties](#properties) | [Upgrading](#upgrading)
+[Default Box](#default) | [Border](#border) | [Shadow](#shadow) | [Background colour](#background-colour) | [Padding](#padding) | [Border radius](#border-radius) | [Properties](#properties) | [Upgrading](#upgrading)
 
 Component to contain elements within a simple box. If your `Box` needs to contain several items and you want to control the item spacing and positioning, it's highly recommended to use `Grid` or `Flex` instead.
 
-<Preview>
-  <Story name="Basic">
-    <Box>
-      <P>
-        This is an example of the basic Box with no properties applied to it.
-      </P>
-    </Box>
-  </Story>
-</Preview>
-
-## Variants
-
-Variants are pre-defined sets of properties for the `Box` component. Whenever possible, use a variant. `Box` has two custom props: `boxborder` and `shadow`.
-
-### Border
+## Default
 
 <Preview>
-  <Story name="Border">
-    <Box boxborder="default">
-      <P>This is a variant of a Box with a border.</P>
-    </Box>
-  </Story>
+  <Story name="basicBox">{stories.basicBox()}</Story>
 </Preview>
 
-### Shadow
+## Border
 
 <Preview>
-  <Story name="Shadow">
-    <Box shadow="default">
-      <P>This is a variant of a Box with a slight shadow.</P>
-    </Box>
-  </Story>
+  <Story name="borderBox">{stories.borderBox()}</Story>
 </Preview>
 
-### Border and shadow
+## Shadow
 
 <Preview>
-  <Story name="Border and Shadow">
-    <Box shadow="default" boxborder="default">
-      <P>This is a variant of a Box with a border and shadow.</P>
-    </Box>
-  </Story>
+  <Story name="shadow">{stories.shadow()}</Story>
 </Preview>
 
-## Examples
-
-### Background Colour
-<Preview>
-  <Story name="Background Colour">
-    <Box bg="greyLightest">
-      <P>This is a Box that has background colour set to <code>greyLightest</code>.</P>
-    </Box>
-  </Story>
-</Preview>
+## Background colour
 
 <Preview>
-  <Story name="Background Colour with Variant">
-    <Box shadow="default" boxborder="default" bg="greyLightest">
-      <P>This is a bordered, shadowed Box variant with a background colour.</P>
-    </Box>
-  </Story>
+  <Story name="backgroundColour">{stories.backgroundColour()}</Story>
 </Preview>
 
-### Padding
+## Padding
 
 <Preview>
-  <Story name="Padding - Increase">
-    <Box boxborder="default" p={6}>
-      <P>This is a bordered Box variant with specified padding that overrides the default padding value.</P>
-    </Box>
-  </Story>
+  <Story name="padding">{stories.padding()}</Story>
 </Preview>
 
-### Border Radius
+## Border Radius
 
 <Preview>
-  <Story name="Border Radius">
-    <Box boxborder="default" borderRadius={2}>
-      <P>This is a bordered Box variant with rounded corners. <code>borderRadius</code> is taken from the <code>radii</code> array in <code>systemtheme.js</code>.</P>
-    </Box>
-  </Story>
+  <Story name="borderRadius">{stories.borderRadius()}</Story>
 </Preview>
-
 
 ## Properties
 
 You can use `space`, `layout`, `border`, and `color` properties with `Box`.
+
 ### For reference, see:
 
 - [space on Styled-System](https://styled-system.com/table#space)
@@ -113,14 +66,14 @@ By default, we've set certain values on `Box` properties as documented in the ta
 
 This component is a **breaking change** that replaces the [deprecated Layout component](https://styleguide.orchestrated.io/#layout). Use the following table as a guide to convert from `Layout` properties to `Box` properties. Refer to [systemtheme.js](https://github.com/orchestrated-io/orca-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js) for values.
 
-| **Layout**        | **Box**               |
-| ----------------- | --------------------- |
-| `width`           | `width`               |
-| `height`          | `height`              |
-| `padding` | `p` |
-| `paddingDouble`   | `padding={5}`   |
-| `paddingHalf` | `padding={2}` |
-| `background`        | `bg="greyLightest"`      |
-| `backgroundDark`        | `bg="greyDark"`        |
-| `backgroundWhite` | `bg="white"` |
-| `roundedCorners` | `borderRadius={2}` |
+| **Layout**        | **Box**             |
+| ----------------- | ------------------- |
+| `width`           | `width`             |
+| `height`          | `height`            |
+| `padding`         | `p`                 |
+| `paddingDouble`   | `padding={5}`       |
+| `paddingHalf`     | `padding={2}`       |
+| `background`      | `bg="greyLightest"` |
+| `backgroundDark`  | `bg="greyDark"`     |
+| `backgroundWhite` | `bg="white"`        |
+| `roundedCorners`  | `borderRadius={2}`  |
