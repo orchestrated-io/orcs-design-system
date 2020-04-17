@@ -41,23 +41,6 @@ export const space = [
   "512px"
 ];
 
-// BORDERS
-export const radii = [0, 2, 6];
-export const borderWidths = [0, "1px", "2px", "3px"];
-
-// ANIMATION
-export const transition = "all 200ms ease-in-out";
-
-// RESPONSIVE MEDIA BREAKPOINTS
-export const breakpoints = ["450px", "675px", "900px", "1100px", "1400px"];
-export const mediaQueries = {
-  screenXS: `@media screen and (min-width: ${breakpoints[0]})`,
-  screenS: `@media screen and (min-width: ${breakpoints[1]})`,
-  screenM: `@media screen and (min-width: ${breakpoints[2]})`,
-  screenL: `@media screen and (min-width: ${breakpoints[3]})`,
-  screenXL: `@media screen and (min-width: ${breakpoints[4]})`
-};
-
 // COLOUR PALETTE
 const black = "#000";
 const white = "#fff";
@@ -127,6 +110,26 @@ export const colors = {
   dangerDark: darken(0.15, danger),
   dangerDarker: darken(0.25, danger),
   dangerDarkest: darken(0.35, danger)
+};
+
+// BORDERS
+export const radii = [0, 2, 6];
+export const borderWidths = [0, "1px", "2px", "3px"];
+
+// SHADOWS
+export const shadows = { boxdefault: `0 1px 2px 0 ${colors.black10}` };
+
+// ANIMATION
+export const transition = "all 200ms ease-in-out";
+
+// RESPONSIVE MEDIA BREAKPOINTS
+export const breakpoints = ["450px", "675px", "900px", "1100px", "1400px"];
+export const mediaQueries = {
+  screenXS: `@media screen and (min-width: ${breakpoints[0]})`,
+  screenS: `@media screen and (min-width: ${breakpoints[1]})`,
+  screenM: `@media screen and (min-width: ${breakpoints[2]})`,
+  screenL: `@media screen and (min-width: ${breakpoints[3]})`,
+  screenXL: `@media screen and (min-width: ${breakpoints[4]})`
 };
 
 // GLOBAL STYLES
@@ -333,6 +336,7 @@ export default {
   lineHeights,
   radii,
   space,
+  shadows,
   colors,
   transition
 };

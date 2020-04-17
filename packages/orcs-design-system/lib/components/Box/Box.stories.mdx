@@ -28,7 +28,7 @@ Variants are pre-defined sets of properties for the `Box` component. Whenever po
 
 <Preview>
   <Story name="Border">
-    <Box boxborder="light">
+    <Box boxborder="default">
       <P>This is a variant of a Box with a border.</P>
     </Box>
   </Story>
@@ -38,7 +38,7 @@ Variants are pre-defined sets of properties for the `Box` component. Whenever po
 
 <Preview>
   <Story name="Shadow">
-    <Box shadow="light">
+    <Box shadow="default">
       <P>This is a variant of a Box with a slight shadow.</P>
     </Box>
   </Story>
@@ -48,7 +48,7 @@ Variants are pre-defined sets of properties for the `Box` component. Whenever po
 
 <Preview>
   <Story name="Border and Shadow">
-    <Box shadow="dark" boxborder="dark">
+    <Box shadow="default" boxborder="default">
       <P>This is a variant of a Box with a border and shadow.</P>
     </Box>
   </Story>
@@ -67,7 +67,7 @@ Variants are pre-defined sets of properties for the `Box` component. Whenever po
 
 <Preview>
   <Story name="Background Colour with Variant">
-    <Box shadow="light" boxborder="dark" bg="greyLightest">
+    <Box shadow="default" boxborder="default" bg="greyLightest">
       <P>This is a bordered, shadowed Box variant with a background colour.</P>
     </Box>
   </Story>
@@ -77,16 +77,8 @@ Variants are pre-defined sets of properties for the `Box` component. Whenever po
 
 <Preview>
   <Story name="Padding - Increase">
-    <Box boxborder="light" p={6}>
+    <Box boxborder="default" p={6}>
       <P>This is a bordered Box variant with specified padding that overrides the default padding value.</P>
-    </Box>
-  </Story>
-</Preview>
-
-<Preview>
-  <Story name="Padding - Set to zero">
-    <Box boxborder="light" p={0}>
-      <P>This is a bordered Box variant with padding set to 0.</P>
     </Box>
   </Story>
 </Preview>
@@ -95,7 +87,7 @@ Variants are pre-defined sets of properties for the `Box` component. Whenever po
 
 <Preview>
   <Story name="Border Radius">
-    <Box boxborder="light" borderRadius={2}>
+    <Box boxborder="default" borderRadius={2}>
       <P>This is a bordered Box variant with rounded corners. <code>borderRadius</code> is taken from the <code>radii</code> array in <code>systemtheme.js</code>.</P>
     </Box>
   </Story>
@@ -125,7 +117,7 @@ This component is a **breaking change** that replaces the [deprecated Layout com
 | ----------------- | --------------------- |
 | `width`           | `width`               |
 | `height`          | `height`              |
-| `padding` | applied by default [`padding={3}`] |
+| `padding` | `p` |
 | `paddingDouble`   | `padding={5}`   |
 | `paddingHalf` | `padding={2}` |
 | `background`        | `bg="greyLightest"`      |

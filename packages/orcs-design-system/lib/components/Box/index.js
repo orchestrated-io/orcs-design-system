@@ -2,49 +2,25 @@ import React from "react";
 import styled from "styled-components";
 import { space, layout, color, border, variant, compose } from "styled-system";
 import PropTypes from "prop-types";
-import { themeGet } from "@styled-system/theme-get";
 
 const boxStyles = compose(space, layout, color, border);
 
 const BoxWrapper = styled("div")(
-  props =>
-    variant({
-      prop: "shadow",
-      variants: {
-        light: {
-          boxShadow:
-            themeGet("space.1")(props) +
-            " " +
-            themeGet("space.1")(props) +
-            " " +
-            themeGet("space.1")(props) +
-            " " +
-            themeGet("colors.black10")(props)
-        },
-        dark: {
-          boxShadow:
-            themeGet("space.1")(props) +
-            " " +
-            themeGet("space.1")(props) +
-            " " +
-            themeGet("space.1")(props) +
-            " " +
-            themeGet("colors.black50")(props)
-        }
+  variant({
+    prop: "shadow",
+    variants: {
+      default: {
+        boxShadow: "boxdefault"
       }
-    }),
+    }
+  }),
   variant({
     prop: "boxborder",
     variants: {
-      light: {
+      default: {
         borderStyle: "solid",
         borderWidth: 1,
         borderColor: "greyLighter"
-      },
-      dark: {
-        borderStyle: "solid",
-        borderWidth: 1,
-        borderColor: "greyDarker"
       }
     }
   }),
