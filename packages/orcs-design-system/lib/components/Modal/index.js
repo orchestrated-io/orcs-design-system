@@ -21,6 +21,7 @@ const Overlay = styled(Flex)`
   opacity: 1;
   z-index: 900;
   visibility: visible;
+  animation: 300ms fadeIn ease-in-out;
 `;
 
 const Container = styled(Box)`
@@ -28,6 +29,7 @@ const Container = styled(Box)`
   z-index: 9001;
   max-height: 90vh;
   overflow-y: auto;
+  animation: 300ms fadeIn ease-in-out, 300ms scaleIn ease-in-out;
 `;
 
 const Actions = styled(Flex)`
