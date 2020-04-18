@@ -8,9 +8,9 @@
 
 Clone repo
 
-````
+```
 git clone https://github.com/orchestrated-io/orca-design-system.git
-````
+```
 
 #### Install dependencies
 
@@ -182,16 +182,35 @@ When you use the design system, it will use the particular git hash that has bee
 
 - If you need to create a custom component that is specific for your app, this should be done and styled using the same method as this design system, which uses styled-components. For examples, view this design system's source code (have a look at various components in the /lib/components folder to see how they are constructed) and for documentation see: [https://www.styled-components.com/](https://www.styled-components.com/).
 
-- To keep certain variables and colours consistent across your app, it is advised to use the ones defined in this design system. To view these, see /lib/colours.js and /lib/variables.js. 
+- To keep certain variables and colours consistent across your app, it is advised to use the ones defined in this design system. To view these, see /lib/colours.js and /lib/variables.js.
 
-- To implement these in your app you first need to import colours and variables like so: `import {colours, variables} from "orca-design-system";` and then you can use like so in your styling: 
+- To implement these in your app you first need to import colours and variables like so: `import {colours, variables} from "orca-design-system";` and then you can use like so in your styling:
 
 ```
 const customComponent = styled.div`
   padding: ${variables.defaultSpacing};
   background-color: ${colours.primaryLight};
 `
-``` 
+```
+
+## NPM link issues
+
+If you need to do `npm link` in your local environment you might encounter the following issues:
+
+- https://reactjs.org/warnings/invalid-hook-call-warning.html#duplicate-react
+- https://github.com/styled-components/styled-components/issues/2379
+
+Both react and styled-components cause duplicate instance issue after npm link, to fix that we need to ensure both app project and lib project are sharing the same instance of them. ( \* must follow the order of following commands )
+
+- in orcs-design-system folder,
+
+  - npm link {PATH_APP_REPO}/node_modules/react
+  - npm link {PATH_APP_REPO}/node_modules/styled-components
+  - npn link
+
+- in {PATH_APP_REPO}
+  - npm i orcs-design-system
+  - npm start
 
 ## Browser/device support
 
@@ -200,4 +219,3 @@ This design system is intended to work correctly on all modern desktop and mobil
 ---
 
 > "A design system is a living, funded product with a roadmap and backlog, serving an ecosystem." — Nathan Curtis
-

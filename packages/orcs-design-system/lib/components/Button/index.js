@@ -5,7 +5,7 @@ import colours from "../../colours";
 import variables from "../../variables";
 import { rgba, darken } from "polished";
 import { space, layout } from "styled-system";
-import * as systemtheme from "../../systemtheme";
+import systemtheme from "../../systemtheme";
 
 const Item = styled.button`
   ${space}

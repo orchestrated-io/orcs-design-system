@@ -1,5 +1,6 @@
 // Import CSS reset and Global Styles
-export { default as systemtheme, GlobalStyles } from "./systemtheme";
+export { default as systemtheme } from "./systemtheme";
+export { default as GlobalStyles } from "./GlobalStyles";
 export { default as variables } from "./variables";
 export { default as colours } from "./colours";
 
