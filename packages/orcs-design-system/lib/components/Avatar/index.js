@@ -6,6 +6,7 @@ import { H3, Text } from "../Typography";
 import Icon from "../Icon";
 import css from "@styled-system/css";
 import themeGet from "@styled-system/theme-get";
+import systemtheme from "../../systemtheme";
 
 const AvatarWrapper = styled("div")(
   layout,
@@ -166,23 +167,24 @@ const Avatar = ({
   title,
   subtitle,
   type,
+  theme,
   ...props
 }) => {
   return (
-    <AvatarWrapper {...props} type={type} sizing={sizing}>
+    <AvatarWrapper {...props} type={type} sizing={sizing} theme={theme}>
       {image ? (
-        <Image src={image} sizing={sizing} />
+        <Image src={image} sizing={sizing} theme={theme} />
       ) : (
-        <Circle sizing={sizing} type={type}>
+        <Circle sizing={sizing} type={type} theme={theme}>
           {initials ? initials : <Icon icon={["fas", "user"]} />}
         </Circle>
       )}
-      <TextContent type={type} sizing={sizing}>
-        <Title type={type} sizing={sizing}>
+      <TextContent type={type} sizing={sizing} theme={theme}>
+        <Title type={type} sizing={sizing} theme={theme}>
           {title}
         </Title>
         {subtitle ? (
-          <Subtitle type={type} sizing={sizing}>
+          <Subtitle type={type} sizing={sizing} theme={theme}>
             {subtitle}
           </Subtitle>
         ) : null}
@@ -203,12 +205,15 @@ Avatar.propTypes = {
   /** Specifies title / name as just plain text, or an element like a hyperlink or react router link */
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   /** Specifies subtitle / role */
-  subtitle: PropTypes.string
+  subtitle: PropTypes.string,
+  /** Specifies the colour theme */
+  theme: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
 };
 
 Avatar.defaultProps = {
   sizing: "default",
-  type: "default"
+  type: "default",
+  theme: systemtheme
 };
 
 export default Avatar;
