@@ -116,7 +116,7 @@ export const radii = [0, 2, 6];
 export const borderWidths = [0, "1px", "2px", "3px"];
 
 // SHADOWS
-export const shadows = { boxdefault: `0 1px 2px 0 ${colors.black10}` };
+export const shadows = { boxDefault: `0 2px 5px 0 ${colors.black10}` };
 
 // ANIMATION
 export const transition = "all 200ms ease-in-out";

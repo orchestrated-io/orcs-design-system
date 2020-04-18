@@ -10,12 +10,12 @@ const BoxWrapper = styled("div")(
     prop: "shadow",
     variants: {
       default: {
-        boxShadow: "boxdefault"
+        boxShadow: "boxDefault"
       }
     }
   }),
   variant({
-    prop: "boxborder",
+    prop: "boxBorder",
     variants: {
       default: {
         borderStyle: "solid",
