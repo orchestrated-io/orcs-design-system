@@ -1,47 +1,47 @@
-import styled, { css } from "styled-components";
+import React from "react";
+import styled from "styled-components";
 import { themeGet } from "@styled-system/theme-get";
+import { css } from "@styled-system/css";
+import { space, background } from "styled-system";
+import systemtheme from "../../systemtheme";
 
-export const TabsContainer = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  background: transparent;
-`;
+export const TabsContainerItem = styled("div")(
+  css({
+    width: "100%",
+    display: "flex",
+    alignItems: "center",
+    flexWrap: "wrap",
+    bg: "transparent"
+  }),
+  space
+);
 
-export const Tab = styled.div`
-  margin-right: ${themeGet("space.3")};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  a {
-    border-radius: ${themeGet("radii.2")}px;
-    background: ${props =>
-      props.active ? themeGet("colors.white") : themeGet("colors.greyLighter")};
-    transition: ${themeGet("transition")};
-    padding: ${themeGet("space.3")} ${themeGet("space.4")};
-    transition: ${themeGet("transition")};
-    font-size: ${themeGet("fontSizes.1")};
-    font-weight: ${themeGet("fontWeights.2")};
-    color: ${props =>
-      props.active ? themeGet("colors.primary") : themeGet("colors.grey")};
-    display: block;
-    position: relative;
-    cursor: ${props => (props.active ? "default" : "pointer")};
-    white-space: nowrap;
-    text-decoration: none;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.25px;
-    ${props => !props.active && inactiveStyle}
-    ${props =>
-      props.notification && notificationStyle(props.notification)}
-    &:focus {
-      outline: 0;
+export const TabItem = styled("div")(
+  css({
+    marginRight: 3,
+    a: {
+      borderRadius: 2,
+      bg: "greyLighter",
+      // fix this -> add mapping or conditional
+      transition: "transition",
+      px: 3,
+      py: 4,
+      fontSize: 1,
+      fontWeight: 2,
+      // fix this -> add mapping or conditional
+      color: "primary",
+      display: "block",
+      position: "relative",
+      cursor: "default",
+      whiteSpace: "nowrap",
+      textDecoration: "none",
+      textAlign: "center",
+      textTransform: "uppercase"
     }
-  }
-`;
+  }),
+  space,
+  background
+);
 
 const inactiveStyle = css`
   &:hover,
@@ -72,3 +72,15 @@ const notificationStyle = notification => css`
     border-radius: 100%;
   }
 `;
+
+export const Tab = ({ theme, children }) => {
+  return <TabItem theme={theme}>{children}</TabItem>;
+};
+
+export const TabsContainer = ({ theme, children }) => {
+  return <TabsContainerItem theme={theme}>{children}</TabsContainerItem>;
+};
+
+Tab.defaultProps = {
+  theme: systemtheme
+};
