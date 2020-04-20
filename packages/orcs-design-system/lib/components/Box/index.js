@@ -55,6 +55,8 @@ Box.propTypes = {
   bg: PropTypes.string,
   /** Sets the width of the box. */
   width: PropTypes.string,
+  /** Sets the height of the box. */
+  height: PropTypes.string,
   /** Specifies the colour theme */
   theme: PropTypes.object
 };
