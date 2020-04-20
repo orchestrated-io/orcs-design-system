@@ -135,7 +135,7 @@ const MobileNavToggle = styled.input`
   ~ header,
   ~ div,
   ~ main {
-    transition: ${systemtheme.transition};
+    transition: ${systemtheme.transition.transitionDefault};
   }
   &:checked {
     + div > a {
@@ -200,7 +200,7 @@ const MobileNavMenu = styled.div`
   width: 250px;
   background: #333;
   z-index: 5;
-  transition: ${systemtheme.transition};
+  transition: ${systemtheme.transition.transitionDefault};
 
   > div {
     display: flex;
@@ -223,7 +223,7 @@ const MobileNavMenu = styled.div`
     padding: ${variables.defaultSpacingHalf} ${variables.defaultSpacing};
     opacity: 0;
     transform: translateX(100px);
-    transition: ${systemtheme.transition};
+    transition: ${systemtheme.transition.transitionDefault};
   }
 `;
 
@@ -236,7 +236,7 @@ const Overlay = styled.label`
   background: rgba(0, 0, 0, 0.5);
   z-index: -1;
   opacity: 0;
-  transition: ${systemtheme.transition};
+  transition: ${systemtheme.transition.transitionDefault};
 `;
 
 const RightAlignedLink = styled(StyledLink)``;
