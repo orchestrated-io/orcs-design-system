@@ -32,7 +32,6 @@ export const TabItem = styled("div")(
         color: "greyDark",
         display: "block",
         position: "relative",
-        cursor: "default",
         whiteSpace: "nowrap",
         textDecoration: "none",
         textAlign: "center",
@@ -57,7 +56,10 @@ export const TabItem = styled("div")(
       "&.active": {
         a: {
           color: "primary",
-          bg: "greyLightest"
+          bg: "greyLightest",
+          "&:hover": {
+            cursor: "default"
+          }
         }
       },
       "&.notification": {
