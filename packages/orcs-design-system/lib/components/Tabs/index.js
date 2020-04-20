@@ -56,7 +56,7 @@ export const TabItem = styled("div")(
       "&.active": {
         a: {
           color: "primary",
-          bg: "greyLightest",
+          bg: "white",
           "&:hover": {
             cursor: "default"
           }
@@ -66,8 +66,8 @@ export const TabItem = styled("div")(
         a: {
           "&::after": {
             position: "absolute",
-            top: "calc(" + themeGet("space.3")(props) + " * (-1))",
-            right: "calc(" + themeGet("space.2")(props) + " * (-1))",
+            top: "calc(" + themeGet("space.3")(props) + " * (-1.2))",
+            right: "calc(" + themeGet("space.2")(props) + " * (-1.7))",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
