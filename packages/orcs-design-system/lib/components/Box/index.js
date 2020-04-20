@@ -56,7 +56,7 @@ Box.propTypes = {
   /** Sets the width of the box. */
   width: PropTypes.string,
   /** Specifies the colour theme */
-  theme: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
+  theme: PropTypes.object
 };
 
 Box.defaultProps = {
