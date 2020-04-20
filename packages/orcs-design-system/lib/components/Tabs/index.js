@@ -21,7 +21,7 @@ export const TabsContainerItem = styled("div")(
 export const TabItem = styled("div")(
   props =>
     css({
-      marginRight: 5,
+      marginRight: 3,
       a: {
         borderRadius: 2,
         bg: "greyLighter",
@@ -29,7 +29,7 @@ export const TabItem = styled("div")(
         px: 4,
         py: 3,
         fontSize: 1,
-        fontWeight: 1,
+        fontWeight: 2,
         color: "greyDark",
         display: "block",
         position: "relative",
