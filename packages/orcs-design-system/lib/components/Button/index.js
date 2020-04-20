@@ -1,15 +1,18 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import { get } from "lodash";
 import PropTypes from "prop-types";
 import colours from "../../colours";
 import variables from "../../variables";
 import { rgba, darken } from "polished";
-import { space, layout } from "styled-system";
-import systemtheme from "../../systemtheme";
+import { space, layout, color, border } from "styled-system";
+import { themeGet } from "@styled-system/theme-get";
 
 const Item = styled.button`
   ${space}
   ${layout}
+  ${color}
+  ${border}
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,12 +22,13 @@ const Item = styled.button`
   box-shadow: none;
   text-decoration: none;
   text-align: center;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 600;
-  margin: ${systemtheme.space[3]}px;
-  border-radius: ${variables.borderRadius};
-  transition: ${variables.defaultTransition};
-  cursor: ${props => (props.disabled ? "not-allowed" : "pointer")};
+  font-family: ${themeGet("font")};
+  font-weight: ${themeGet("fontWeights.2")};
+  margin: ${themeGet("space.3")};
+  border-radius: ${themeGet("radii.2")};
+  transition: ${themeGet("transition")};
+  cursor: ${props =>
+    props.disabled ? "not-allowed" : props.isLoading ? "progress" : "pointer"};
   width: ${props => (props.fullWidth ? "100%" : "auto")};
 
   font-size: ${props => {
@@ -47,36 +51,18 @@ const Item = styled.button`
     return size;
   }};
 
-  color: ${props =>
-    props.ghost
-      ? colours.primary
-      : props.disabled
-      ? colours.greyLight
-      : colours.white};
-
-  border: solid 1px
-    ${props =>
-      props.disabled
-        ? colours.greyLighter
-        : props.colour && colours[props.colour]
-        ? colours[props.colour]
-        : props.ghost
-        ? "transparent"
-        : colours.primary};
-
-  background: ${props =>
-    props.disabled
-      ? colours.greyLighter
-      : props.colour && colours[props.colour]
-      ? colours[props.colour]
-      : props.ghost
-      ? rgba(colours.primary, 0.075)
-      : colours.primary};
-
   padding: ${props =>
     props.large ? "14px 24px" : props.small ? "6px 8px" : "10px 16px"};
 
   &:hover {
+    background: ${props =>
+      props.disabled
+        ? colours.greyLighter
+        : props.colour && colours[props.colour]
+        ? darken(0.1, colours[props.colour])
+        : props.ghost
+        ? rgba(colours.primary, 0.2)
+        : darken(0.1, colours.primary)};
     border: solid 1px
       ${props =>
         props.disabled
@@ -86,15 +72,6 @@ const Item = styled.button`
           : props.ghost
           ? "transparent"
           : darken(0.1, colours.primary)};
-
-    background: ${props =>
-      props.disabled
-        ? colours.greyLighter
-        : props.colour && colours[props.colour]
-        ? darken(0.1, colours[props.colour])
-        : props.ghost
-        ? rgba(colours.primary, 0.2)
-        : darken(0.1, colours.primary)};
 
     color: ${props =>
       props.ghost
@@ -145,45 +122,76 @@ const Item = styled.button`
       : css``};
 `;
 
-/**
- * Buttons should be used for prompting a user interaction that causes an event/action to trigger within the UI. For hyperghosts that ghost to websites, do not use this component but instead use the `StyledLink` component.
- *
- * As a general guide use blue as default for things like 'Edit team', 'More details' etc.
- *
- * Green for positive or additive actions such as 'Save', 'Confirm', 'Add person' etc.
- *
- * Red for irreversible things like 'Delete' or 'Remove'.
- *
- * Ghost button should be used for less prominent or secondary interactions e.g. 'Cancel', 'Exit', 'Back' etc.
- *
- * Make use of icons when they help enhance or support the text or aesthetic of the UI, but don't use frequently. Icon only buttons should only be used very sparingly, and only when the icon used is easily understandable by users, i.e. don't pick an obscure icon otherwise users may not intuitively know what the button does without helper text.
- */
+const variantMap = {
+  default: {
+    buttonColour: "primary",
+    buttonColourHover: "primaryDark",
+    textColour: "white",
+    borderColour: "primary"
+  },
+  success: {
+    buttonColour: "successDark",
+    buttonColourHover: "successDarker",
+    textColour: "white",
+    borderColour: "successDark"
+  },
+  danger: {
+    buttonColour: "danger",
+    buttonColourHover: "dangerDark",
+    textColour: "white",
+    borderColour: "danger"
+  },
+  disabled: {
+    buttonColour: "greyLighter",
+    buttonColourHover: "greyLighter",
+    textColour: "greyLight",
+    borderColour: "greyLighter"
+  },
+  ghost: {
+    buttonColour: "primaryLightest",
+    buttonColourHover: "primaryLighter",
+    textColour: "primary",
+    borderColour: "primaryLightest"
+  }
+};
+
 export default function Button({
   large,
   small,
-  ghost,
   fullWidth,
-  disabled,
   isLoading,
   iconLeft,
   iconRight,
   iconOnly,
-  colour,
+  variant = "default",
   children,
   ...props
 }) {
+  const { buttonColour, buttonColourHover, textColour, borderColour } = get(
+    variantMap,
+    variant,
+    {
+      buttonColour: "primary",
+      buttonColourHover: "primaryDark",
+      textColour: "white",
+      borderColour: "primary"
+    }
+  );
   return (
     <Item
       large={large}
       small={small}
-      ghost={ghost}
       fullWidth={fullWidth}
-      disabled={disabled}
       isLoading={isLoading}
       iconLeft={iconLeft}
       iconRight={iconRight}
       iconOnly={iconOnly}
-      colour={colour}
+      bg={buttonColour}
+      bgHover={buttonColourHover}
+      color={textColour}
+      borderColor={borderColour}
+      borderWidth="1px"
+      borderStyle="solid"
       {...props}
     >
       {children}
@@ -197,7 +205,7 @@ Button.propTypes = {
   /** Small button */
   small: PropTypes.bool,
   /** Specifies alternate button colour. Uses system colour scheme for success and danger. */
-  colour: PropTypes.oneOf(["successDark", "danger"]),
+  variant: PropTypes.oneOf(["success", "danger", "disabled", "ghost"]),
   /** Ghost (light-coloured) button */
   ghost: PropTypes.bool,
   /** Full width button that takes up all available space of parent */
