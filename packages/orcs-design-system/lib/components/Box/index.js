@@ -1,12 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import { space, layout, color, border, variant, compose } from "styled-system";
+import { css } from "@styled-system/css";
 import PropTypes from "prop-types";
 import systemtheme from "../../systemtheme";
 
 const boxStyles = compose(space, layout, color, border);
 
 const BoxWrapper = styled("div")(
+  css({
+    boxSizing: "border-box"
+  }),
   variant({
     prop: "shadow",
     variants: {
