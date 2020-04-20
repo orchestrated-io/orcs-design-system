@@ -40,6 +40,21 @@ export const space = [
   "512px"
 ];
 
+// SIZES (for LAYOUT properties)
+export const sizes = [
+  0,
+  "2px",
+  "4px",
+  "8px",
+  "16px",
+  "24px",
+  "32px",
+  "64px",
+  "128px",
+  "256px",
+  "512px"
+];
+
 // COLOUR PALETTE
 const black = "#000";
 const white = "#fff";
@@ -140,6 +155,7 @@ export default {
   lineHeights,
   radii,
   space,
+  sizes,
   shadows,
   colors,
   transition

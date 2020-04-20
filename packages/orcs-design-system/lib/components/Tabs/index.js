@@ -1,8 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import { themeGet } from "@styled-system/theme-get";
 import { css } from "@styled-system/css";
-import { space, background } from "styled-system";
+import { space, color } from "styled-system";
 import systemtheme from "../../systemtheme";
 
 export const TabsContainerItem = styled("div")(
@@ -11,76 +12,127 @@ export const TabsContainerItem = styled("div")(
     display: "flex",
     alignItems: "center",
     flexWrap: "wrap",
-    bg: "transparent"
+    bg: "transparent",
+    pb: 4
   }),
   space
 );
 
 export const TabItem = styled("div")(
-  css({
-    marginRight: 3,
-    a: {
-      borderRadius: 2,
-      bg: "greyLighter",
-      // fix this -> add mapping or conditional
-      transition: "transition",
-      px: 3,
-      py: 4,
-      fontSize: 1,
-      fontWeight: 2,
-      // fix this -> add mapping or conditional
-      color: "primary",
-      display: "block",
-      position: "relative",
-      cursor: "default",
-      whiteSpace: "nowrap",
-      textDecoration: "none",
-      textAlign: "center",
-      textTransform: "uppercase"
-    }
-  }),
+  props =>
+    css({
+      marginRight: 5,
+      a: {
+        borderRadius: 2,
+        bg: "greyLighter",
+        transition: "transitionDefault",
+        px: 4,
+        py: 3,
+        fontSize: 1,
+        fontWeight: 1,
+        color: "greyDark",
+        display: "block",
+        position: "relative",
+        cursor: "default",
+        whiteSpace: "nowrap",
+        textDecoration: "none",
+        textAlign: "center",
+        textTransform: "uppercase"
+      },
+      "&:hover": {
+        a: {
+          cursor: "pointer",
+          bg: "greyLight",
+          color: "greyDarker",
+          outline: "0"
+        }
+      },
+      "&:focus": {
+        a: {
+          cursor: "pointer",
+          bg: "greyLight",
+          color: "greyDarker",
+          outline: "0"
+        }
+      },
+      "&.active": {
+        a: {
+          color: "primary",
+          bg: "greyLightest"
+        }
+      },
+      "&.notification": {
+        a: {
+          "&::after": {
+            position: "absolute",
+            top: "calc(" + themeGet("space.3")(props) + " * (-1))",
+            right: "calc(" + themeGet("space.2")(props) + " * (-1))",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: 5,
+            height: 5,
+            borderRadius: "50%",
+            fontSize: 1,
+            fontWeight: 2,
+            content: `"${props.notification}"`,
+            bg: "danger",
+            color: "white",
+            zIndex: 4
+          }
+        }
+      }
+    }),
   space,
-  background
+  color
 );
 
-const inactiveStyle = css`
-  &:hover,
-  &:focus {
-    background: ${themeGet("colors.greyLight")};
-    color: ${themeGet("colors.greyDark")};
-    outline: 0;
-    }
-  }
-`;
-
-const notificationStyle = notification => css`
-  :after {
-    width: ${themeGet("space.5")};
-    height: ${themeGet("space.5")};
-    font-size: ${themeGet("fontSizes.0")};
-    font-weight: ${themeGet("fontWeights.2")};
-    color: ${themeGet("colors.white")};
-    background-color: ${themeGet("colors.danger")};
-    content: "${notification}";
-    position: absolute;
-    top: -8px;
-    right: -6px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    border-radius: 100%;
-  }
-`;
-
-export const Tab = ({ theme, children }) => {
-  return <TabItem theme={theme}>{children}</TabItem>;
+export const Tab = ({ theme, children, active, notification, ...props }) => {
+  return (
+    <TabItem
+      theme={theme}
+      active={active}
+      notification={notification}
+      className={`${active ? "active" : ""} ${
+        notification ? "notification notification-" + notification : ""
+      }`}
+      {...props}
+    >
+      {children}
+    </TabItem>
+  );
 };
 
-export const TabsContainer = ({ theme, children }) => {
-  return <TabsContainerItem theme={theme}>{children}</TabsContainerItem>;
+export const TabsContainer = ({ theme, children, ...props }) => {
+  return (
+    <TabsContainerItem theme={theme} {...props}>
+      {children}
+    </TabsContainerItem>
+  );
 };
 
 Tab.defaultProps = {
   theme: systemtheme
+};
+
+TabsContainer.defaultProps = {
+  theme: systemtheme
+};
+
+Tab.propTypes = {
+  /** Specifies whether the tab is the active tab */
+  active: PropTypes.bool,
+  /** Specifies any notifications attached to the Tab */
+  notification: PropTypes.string,
+  /** Specifies the colour theme */
+  theme: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  /** The content of the Tab is passed as a child. */
+  children: PropTypes.node
+};
+
+TabsContainer.propTypes = {
+  /** The contents of the TabsContainer are passed as a child. */
+  children: PropTypes.node,
+  /** Specifies the colour theme of the container */
+  theme: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
 };
