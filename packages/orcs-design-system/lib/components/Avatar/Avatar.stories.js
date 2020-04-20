@@ -20,7 +20,7 @@ export const defaultAvatar = () => (
   />
 );
 defaultAvatar.story = {
-  name: "Default"
+  name: "Default avatar"
 };
 
 export const noImage = () => (

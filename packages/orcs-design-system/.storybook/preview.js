@@ -6,8 +6,8 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { withA11y } from "@storybook/addon-a11y";
-import { GlobalStyles } from "../lib/systemtheme";
-import systemtheme from "../lib/systemtheme";
+import { default as GlobalStyles } from "../lib/GlobalStyles";
+import { default as systemtheme } from "../lib/systemtheme";
 
 library.add(far, fas);
 

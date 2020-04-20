@@ -84,35 +84,35 @@ export const colors = {
   primary,
   primaryLight: lighten(0.15, primary),
   primaryLighter: lighten(0.25, primary),
-  primaryLightest: lighten(0.35, primary),
-  primaryDark: darken(0.15, primary),
+  primaryLightest: lighten(0.4, primary),
+  primaryDark: darken(0.1, primary),
   primaryDarker: darken(0.25, primary),
   primaryDarkest: darken(0.35, primary),
   success,
   successLight: lighten(0.15, success),
   successLighter: lighten(0.25, success),
-  successLightest: lighten(0.35, success),
-  successDark: darken(0.15, success),
+  successLightest: lighten(0.4, success),
+  successDark: darken(0.1, success),
   successDarker: darken(0.25, success),
   successDarkest: darken(0.35, success),
   warning,
   warningLight: lighten(0.15, warning),
   warningLighter: lighten(0.25, warning),
   warningLightest: lighten(0.3, warning),
-  warningDark: darken(0.15, warning),
+  warningDark: darken(0.1, warning),
   warningDarker: darken(0.25, warning),
   warningDarkest: darken(0.35, warning),
   danger,
   dangerLight: lighten(0.15, danger),
   dangerLighter: lighten(0.25, danger),
-  dangerLightest: lighten(0.35, danger),
-  dangerDark: darken(0.15, danger),
+  dangerLightest: lighten(0.4, danger),
+  dangerDark: darken(0.1, danger),
   dangerDarker: darken(0.25, danger),
   dangerDarkest: darken(0.35, danger)
 };
 
 // BORDERS
-export const radii = [0, 2, 6];
+export const radii = [0, "2px", "6px"];
 export const borderWidths = [0, "1px", "2px", "3px"];
 
 // SHADOWS
