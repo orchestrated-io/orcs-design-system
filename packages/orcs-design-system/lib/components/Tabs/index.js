@@ -12,8 +12,7 @@ export const TabsContainerItem = styled("div")(
     display: "flex",
     alignItems: "center",
     flexWrap: "wrap",
-    bg: "transparent",
-    pb: 4
+    bg: "transparent"
   }),
   space
 );
