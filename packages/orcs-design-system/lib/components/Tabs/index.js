@@ -16,7 +16,7 @@ export const Tab = styled.div`
   justify-content: center;
   position: relative;
   a {
-    border-radius: ${themeGet("radii.2")}px;
+    border-radius: ${themeGet("radii.2")};
     background: ${props =>
       props.active ? themeGet("colors.white") : themeGet("colors.greyLighter")};
     transition: ${themeGet("transition")};
