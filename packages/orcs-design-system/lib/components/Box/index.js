@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { space, layout, color, border, variant, compose } from "styled-system";
 import PropTypes from "prop-types";
+import systemtheme from "../../systemtheme";
 
 const boxStyles = compose(space, layout, color, border);
 
@@ -53,7 +54,11 @@ Box.propTypes = {
   /** Sets the background colour of the box. */
   bg: PropTypes.string,
   /** Sets the width of the box. */
-  width: PropTypes.string
+  width: PropTypes.string,
+  /** Sets the height of the box. */
+  height: PropTypes.string,
+  /** Specifies the colour theme */
+  theme: PropTypes.object
 };
 
 Box.defaultProps = {
@@ -62,5 +67,6 @@ Box.defaultProps = {
   overflow: "visible",
   m: 0,
   p: 0,
-  bg: "transparent"
+  bg: "transparent",
+  theme: systemtheme
 };

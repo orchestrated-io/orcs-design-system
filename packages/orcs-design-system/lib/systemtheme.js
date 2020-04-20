@@ -40,6 +40,21 @@ export const space = [
   "512px"
 ];
 
+// SIZES (for LAYOUT properties)
+export const sizes = [
+  0,
+  "2px",
+  "4px",
+  "8px",
+  "16px",
+  "24px",
+  "32px",
+  "64px",
+  "128px",
+  "256px",
+  "512px"
+];
+
 // COLOUR PALETTE
 const black = "#000";
 const white = "#fff";
@@ -74,9 +89,9 @@ export const colors = {
   white20: rgba(white, 0.2),
   white10: rgba(white, 0.1),
   grey,
-  greyLight: lighten(0.15, grey),
-  greyLighter: lighten(0.25, grey),
-  greyLightest: lighten(0.35, grey),
+  greyLight: lighten(0.2, grey),
+  greyLighter: lighten(0.3, grey),
+  greyLightest: lighten(0.4, grey),
   greyDark: darken(0.15, grey),
   greyDarker: darken(0.25, grey),
   greyDarkest: darken(0.35, grey),
@@ -119,7 +134,7 @@ export const borderWidths = [0, "1px", "2px", "3px"];
 export const shadows = { boxDefault: `0 2px 5px 0 ${colors.black10}` };
 
 // ANIMATION
-export const transition = "all 200ms ease-in-out";
+export const transition = { transitionDefault: "all 200ms ease-in-out" };
 
 // RESPONSIVE MEDIA BREAKPOINTS
 export const breakpoints = ["450px", "675px", "900px", "1100px", "1400px"];
@@ -140,6 +155,7 @@ export default {
   lineHeights,
   radii,
   space,
+  sizes,
   shadows,
   colors,
   transition

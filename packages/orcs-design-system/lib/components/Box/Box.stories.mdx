@@ -62,6 +62,10 @@ By default, we've set certain values on `Box` properties as documented in the ta
 
 <Props of={Box} />
 
+**Note:** If specific `margin` or `padding` properties fail to override the defaults, specify the overall property and then the specific property. For example, to set a `Box` with a `margin-bottom: 8px`, use
+
+  `<Box m={0} mb={3}>`
+
 ## Upgrading
 
 This component is a **breaking change** that replaces the [deprecated Layout component](https://styleguide.orchestrated.io/#layout). Use the following table as a guide to convert from `Layout` properties to `Box` properties. Refer to [systemtheme.js](https://github.com/orchestrated-io/orca-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js) for values.
@@ -70,9 +74,9 @@ This component is a **breaking change** that replaces the [deprecated Layout com
 | ----------------- | ------------------- |
 | `width`           | `width`             |
 | `height`          | `height`            |
-| `padding`         | `p`                 |
-| `paddingDouble`   | `padding={5}`       |
-| `paddingHalf`     | `padding={2}`       |
+| `padding`         | `p={3}`                 |
+| `paddingDouble`   | `p={5}`       |
+| `paddingHalf`     | `p={2}`       |
 | `background`      | `bg="greyLightest"` |
 | `backgroundDark`  | `bg="greyDark"`     |
 | `backgroundWhite` | `bg="white"`        |
