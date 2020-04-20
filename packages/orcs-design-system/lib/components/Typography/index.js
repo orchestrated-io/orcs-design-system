@@ -194,7 +194,8 @@ export const P = styled("p")(
   css({
     fontFamily: "main",
     fontSize: 2,
-    lineHeight: 1
+    lineHeight: 1,
+    fontWeight: 1
   }),
   variant({
     prop: "weight",
@@ -220,12 +221,19 @@ export const P = styled("p")(
 
 export const Small = styled("small")(typeStyles);
 
-export const Text = styled("span")(typeStyles);
+export const Text = styled("span")(
+  css({
+    fontFamily: "main",
+    fontWeight: 1
+  }),
+  typeStyles
+);
 
 export const Quote = styled("blockquote")(
   css({
     display: "block",
     fontSize: 4,
+    fontWeight: 1,
     lineHeight: 1,
     borderLeftStyle: "solid",
     borderLeftWidth: 2,
