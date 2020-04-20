@@ -125,7 +125,7 @@ Tab.propTypes = {
   /** Specifies any notifications attached to the Tab */
   notification: PropTypes.string,
   /** Specifies the colour theme */
-  theme: PropTypes.node,
+  theme: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   /** The content of the Tab is passed as a child. */
   children: PropTypes.node
 };
@@ -134,5 +134,5 @@ TabsContainer.propTypes = {
   /** The contents of the TabsContainer are passed as a child. */
   children: PropTypes.node,
   /** Specifies the colour theme of the container */
-  theme: PropTypes.node
+  theme: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
 };

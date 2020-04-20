@@ -205,7 +205,7 @@ Avatar.propTypes = {
   /** Specifies subtitle / role */
   subtitle: PropTypes.string,
   /** Specifies the colour theme */
-  theme: PropTypes.node
+  theme: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
 };
 
 Avatar.defaultProps = {
