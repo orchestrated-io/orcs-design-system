@@ -36,9 +36,7 @@ const AvatarWrapper = styled("div")(
 );
 
 const TextContent = styled("div")(
-  props => ({
-    marginLeft: themeGet("space.3")(props)
-  }),
+  css({ marginLeft: 3 }),
   variant({
     prop: "sizing",
     variants: {
