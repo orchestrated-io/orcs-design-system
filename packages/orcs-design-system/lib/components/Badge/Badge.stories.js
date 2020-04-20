@@ -12,10 +12,10 @@ export default {
 
 export const defaultBadge = () => <Badge>Default</Badge>;
 defaultBadge.story = {
-  name: "Default"
+  name: "Default badge"
 };
 
-export const colouredBadge = () => (
+export const colourVariants = () => (
   <>
     <Box p="4">
       <Spacer m="1">
@@ -41,6 +41,6 @@ export const colouredBadge = () => (
     </Box>
   </>
 );
-colouredBadge.story = {
-  name: "Coloured Badges"
+colourVariants.story = {
+  name: "Colour variants"
 };

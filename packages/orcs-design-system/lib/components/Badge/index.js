@@ -17,7 +17,7 @@ const Item = styled.div`
   position: relative;
   padding: 5px 10px;
   cursor: default;
-  border-radius: ${themeGet("radii.1")}px;
+  border-radius: ${themeGet("radii.1")};
 `;
 
 const colourMap = {
