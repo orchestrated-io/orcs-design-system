@@ -62,11 +62,11 @@ Box.propTypes = {
 };
 
 Box.defaultProps = {
-  width: "100%",
+  width: "auto",
   display: "block",
   overflow: "visible",
   m: 0,
   p: 0,
-  bg: "transparent",
+  bg: "none",
   theme: systemtheme
 };
