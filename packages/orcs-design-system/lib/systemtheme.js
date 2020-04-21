@@ -93,8 +93,8 @@ export const colors = {
   greyLighter: lighten(0.3, grey),
   greyLightest: lighten(0.35, grey),
   greyDark: darken(0.15, grey),
-  greyDarker: darken(0.25, grey),
-  greyDarkest: darken(0.35, grey),
+  greyDarker: darken(0.3, grey),
+  greyDarkest: darken(0.4, grey),
   /* Colours */
   primary,
   primaryLight: lighten(0.15, primary),

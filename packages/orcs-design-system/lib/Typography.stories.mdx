@@ -3,6 +3,7 @@ import systemtheme from "../lib/systemtheme";
 import { Meta, Typeset, Preview, Story } from "@storybook/addon-docs/blocks";
 import { H1, H2, H3, H4, H5, H6, P, Text, Quote, Small, Code } from "./components/Typography";
 import Box from "./components/Box";
+import Spacer from "./components/Spacer";
 
 <Meta title="System/Typography" />
 
@@ -31,31 +32,38 @@ These use `<H1>` to `<H6>` tags. For semantic and accessibility usage guidelines
 
 <Preview>
 <Story name="Headings/H1 to H6">
-<>
+<Spacer m={0} my={4}>
+<Box>
 <H1>Standard H1</H1>
 <H1 weight="light">Light version</H1>
 <H1 weight="bold">Bold version</H1>
-<br />
+</Box>
+<Box>
 <H2>Standard H2</H2>
 <H2 weight="light">Light version</H2>
 <H2 weight="bold">Bold version</H2>
-<br />
+</Box>
+<Box>
 <H3>Standard H3</H3>
 <H3 weight="light">Light version</H3>
 <H3 weight="bold">Bold version</H3>
-<br />
+</Box>
+<Box>
 <H4>Standard H4</H4>
 <H4 weight="light">Light version</H4>
 <H4 weight="bold">Bold version</H4>
-<br />
+</Box>
+<Box>
 <H5>Standard H5</H5>
 <H5 weight="light">Light version</H5>
 <H5 weight="bold">Bold version</H5>
-<br />
+</Box>
+<Box>
 <H6>Standard H6</H6>
 <H6 weight="light">Light version</H6>
 <H6 weight="bold">Bold version</H6>
-</>
+</Box>
+</Spacer>
 </Story>
 </Preview>
 
@@ -63,13 +71,13 @@ These use `<H1>` to `<H6>` tags. For semantic and accessibility usage guidelines
 
 <Preview>
 <Story name="Body text/Paragraph">
-<>
+<Spacer m={0} my={3}>
 <P>Regular paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet at elit sit amet iaculis. Cras eget sapien et ligula mollis placerat non venenatis dolor. Fusce id mi risus. Ut sit amet diam in dui maximus sagittis a at dolor. Cras volutpat est nec arcu interdum pulvinar in vitae erat.</P>
 <P textAlign="center">Centered paragraph text.</P>
 <P textAlign="right">Right-aligned paragraph text.</P>
 <P weight="light">Light paragraph text</P>
 <P sizing="small">Small paragraph text</P>
-</>
+</Spacer>
 </Story>
 </Preview>
 
@@ -89,13 +97,13 @@ To render type smaller or larger, use `sizing="small"` or `sizing="large"` on a 
 
 <Preview>
 <Story name="Styling/Sizing">
-<>
+<Spacer m={0} my={3}>
 <H5 sizing="small">Small variant of H5</H5>
 <H5 sizing="large">Large variant of H5</H5>
 <H5 fontSize={2}>Even smaller H5, scaled down two steps in the fontSize array</H5>
 <P fontSize="10px">Very small text using a specific fontSize value</P>
 <Small>Small text using the Small component</Small>
-</>
+</Spacer>
 </Story>
 </Preview>
 
@@ -103,10 +111,10 @@ To render type with emphasis, use `weight="bold"` or wrap the type in a `<strong
 
 <Preview>
 <Story name="Styling/Emphasis">
-<>
+<Spacer m={0} my={3}>
 <P weight="bold">Bold paragraph text lorem ipsum dolor sit amet</P>
 <P>Only <strong>partially bolded</strong> paragraph</P>
-</>
+</Spacer>
 </Story>
 </Preview>
 
@@ -116,17 +124,15 @@ To apply colour to text, use the `color` property in the `Text` component. Usage
 
 <Preview>
 <Story name="Styling/Colours">
-<>
-<Text color="success">Success-coloured text</Text>
-<br />
-<Text color="warning">Warning-coloured text</Text>
-<br />
-<Text color="danger">Danger-coloured text</Text>
-<br />
-<Box bg="greyDarker">
-<Text color="white">White text for dark backgrounds</Text>
+<Spacer m={0} my={2}>
+<P color="grey">Grey-coloured text</P>
+<P color="success">Success-coloured text</P>
+<P color="warning">Warning-coloured text</P>
+<P color="danger">Danger-coloured text</P>
+<Box bg="greyDarker" p={4}>
+    <P color="white">White text for dark backgrounds</P>
 </Box>
-</>
+</Spacer>
 </Story>
 </Preview>
 

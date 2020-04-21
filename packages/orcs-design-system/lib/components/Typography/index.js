@@ -1,8 +1,15 @@
 import styled from "styled-components";
-import { typography, color, variant, compose } from "styled-system";
+import {
+  typography,
+  space,
+  layout,
+  color,
+  variant,
+  compose
+} from "styled-system";
 import css from "@styled-system/css";
 
-const typeStyles = compose(typography, color);
+const typeStyles = compose(typography, color, space, layout);
 
 export const H1 = styled("h1")(
   css({

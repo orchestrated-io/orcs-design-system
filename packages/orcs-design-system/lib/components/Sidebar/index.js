@@ -1,11 +1,10 @@
 import styled, { css } from "styled-components";
 import { color } from "styled-system";
-import { colors } from "../../systemtheme";
-import variables from "../../variables";
+import { colors, transition } from "../../systemtheme";
 
 const Sidebar = styled.div`
   ${color}
-  background: ${colors.greyDarker};
+  background: ${colors.greyDarkest};
   max-width: 360px;
   min-height: calc(100vh - 60px);
   height: 100%;
@@ -36,7 +35,7 @@ export const SidebarTab = styled.label`
   align-items: center;
   justify-content: center;
   width: 100%;
-  transition: ${variables.defaultTransition};
+  transition: ${transition.transitionDefault};
   color: ${props => (props.active ? colors.primary : colors.greyLightest)};
   background: ${props => (props.active ? colors.greyDarker : "transparent")};
   cursor: ${props => (props.active ? "default" : "pointer")};
