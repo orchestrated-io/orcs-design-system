@@ -98,7 +98,7 @@ export const colors = {
   /* Colours */
   primary,
   primaryLight: lighten(0.15, primary),
-  primaryLighter: lighten(0.25, primary),
+  primaryLighter: lighten(0.3, primary),
   primaryLightest: lighten(0.4, primary),
   primaryDark: darken(0.1, primary),
   primaryDarker: darken(0.25, primary),

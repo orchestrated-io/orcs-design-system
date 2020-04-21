@@ -67,7 +67,7 @@ fullWidth.story = {
 };
 
 export const disabled = () => (
-  <Button variant="disabled" disable>
+  <Button variant="disabled" disabled>
     Disabled button
   </Button>
 );

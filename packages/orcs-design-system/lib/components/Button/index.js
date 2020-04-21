@@ -40,7 +40,7 @@ const variantMap = {
     textColour: "primary",
     borderColour: "primaryLightest",
     buttonHoverColour: "primaryLighter",
-    textHoverColour: "primaryDarker"
+    textHoverColour: "primaryDark"
   }
 };
 
@@ -81,6 +81,15 @@ const Item = styled.button`
   cursor: ${props =>
     props.disabled ? "not-allowed" : props.isLoading ? "progress" : "pointer"};
   width: ${props => (props.fullWidth ? "100%" : "auto")};
+  
+  height: ${props =>
+    props.iconOnly && props.small
+      ? "31px"
+      : props.iconOnly && props.large
+      ? "58px"
+      : props.iconOnly
+      ? "40px"
+      : "auto"};
 
   font-size: ${props => {
     let size = "1.6rem";
@@ -103,7 +112,7 @@ const Item = styled.button`
   }};
 
   padding: ${props =>
-    props.large ? "14px 24px" : props.small ? "6px 8px" : "10px 16px"};
+    props.large ? "16px 24px" : props.small ? "5px 9px" : "8px 14px"};
 
   &:hover {
     background-color: ${props => getVariantsColour(props, "buttonHoverColour")};
@@ -141,8 +150,8 @@ const Item = styled.button`
             height: 16px;
             border-radius: 50%;
             margin-left: ${themeGet("space.3")};
-            border: 2px solid rgba(0, 0, 0, 0.2);
-            border-right-color: rgba(255, 255, 255, 0.7);
+            border: 2px solid ${themeGet("colors.black20")};
+            border-right-color: ${themeGet("colors.white70")};
             display: inline-block;
           }
         `
@@ -191,14 +200,10 @@ Button.propTypes = {
   large: PropTypes.bool,
   /** Small button */
   small: PropTypes.bool,
-  /** Specifies alternate button colour. Uses system colour scheme for success and danger. */
+  /** Specifies alternate button colours/styles. */
   variant: PropTypes.oneOf(["success", "danger", "disabled", "ghost"]),
-  /** Ghost (light-coloured) button */
-  ghost: PropTypes.bool,
   /** Full width button that takes up all available space of parent */
   fullWidth: PropTypes.bool,
-  /** Adds disabled attribute and styling to button */
-  disabled: PropTypes.bool,
   /** Adds a spinner animation to indicate loading or processing */
   isLoading: PropTypes.bool,
   /** Styles button to fit an icon on the left of text. Uses Icon component. */
