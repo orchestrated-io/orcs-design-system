@@ -6,9 +6,9 @@ import PropTypes from "prop-types";
 
 const Spacer = ({ children, ...props }) => {
   const spaceProps = compose(space, layout);
-  const clones = React.Children.map(children, child => {
-    return React.cloneElement(child, { spaceProps, ...props });
-  });
+  const clones = React.Children.toArray(children).map(child =>
+    React.cloneElement(child, { ...spaceProps, ...props })
+  );
 
   return <>{clones}</>;
 };
