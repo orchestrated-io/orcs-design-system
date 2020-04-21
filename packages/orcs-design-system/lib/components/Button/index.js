@@ -2,11 +2,61 @@ import React from "react";
 import styled, { css } from "styled-components";
 import { get } from "lodash";
 import PropTypes from "prop-types";
-import colours from "../../colours";
-import variables from "../../variables";
-import { rgba, darken } from "polished";
 import { space, layout, color, border } from "styled-system";
 import { themeGet } from "@styled-system/theme-get";
+
+const variantMap = {
+  default: {
+    buttonColour: "primary",
+    textColour: "white",
+    borderColour: "primary",
+    buttonHoverColour: "primaryDark",
+    textHoverColour: "white"
+  },
+  success: {
+    buttonColour: "successDark",
+    textColour: "white",
+    borderColour: "successDark",
+    buttonHoverColour: "successDarker",
+    textHoverColour: "white"
+  },
+  danger: {
+    buttonColour: "danger",
+    textColour: "white",
+    borderColour: "danger",
+    buttonHoverColour: "dangerDark",
+    textHoverColour: "white"
+  },
+  disabled: {
+    buttonColour: "greyLighter",
+    textColour: "greyLight",
+    borderColour: "greyLighter",
+    buttonHoverColour: "greyLighter",
+    textHoverColour: "greyLight"
+  },
+  ghost: {
+    buttonColour: "primaryLightest",
+    textColour: "primary",
+    borderColour: "primaryLightest",
+    buttonHoverColour: "primaryLighter",
+    textHoverColour: "primaryDarker"
+  }
+};
+
+const getVariantsColours = variant =>
+  get(variantMap, variant, {
+    buttonColour: "primary",
+    textColour: "white",
+    borderColour: "primary",
+    buttonHoverColour: "primaryDark",
+    textHoverColour: "white"
+  });
+
+const getVariantsColour = (props, colourName) => {
+  const variantsColours = getVariantsColours(props.variant);
+  const variantsColour = get(variantsColours, colourName);
+  return get(props, ["theme", "colors", variantsColour]);
+};
 
 const Item = styled.button`
   ${space}
@@ -55,39 +105,14 @@ const Item = styled.button`
     props.large ? "14px 24px" : props.small ? "6px 8px" : "10px 16px"};
 
   &:hover {
-    background: ${props =>
-      props.disabled
-        ? colours.greyLighter
-        : props.colour && colours[props.colour]
-        ? darken(0.1, colours[props.colour])
-        : props.ghost
-        ? rgba(colours.primary, 0.2)
-        : darken(0.1, colours.primary)};
-    border: solid 1px
-      ${props =>
-        props.disabled
-          ? darken(0.05, colours.greyLighter)
-          : props.colour && colours[props.colour]
-          ? darken(0.1, colours[props.colour])
-          : props.ghost
-          ? "transparent"
-          : darken(0.1, colours.primary)};
-
-    color: ${props =>
-      props.ghost
-        ? darken(0.1, colours.primary)
-        : props.disabled
-        ? colours.greyLight
-        : colours.white};
+    background-color: ${props => getVariantsColour(props, "buttonHoverColour")};
+    border: 1px solid ${props => getVariantsColour(props, "buttonHoverColour")};
+    color: ${props => getVariantsColour(props, "textHoverColour")};
   }
 
   &:focus {
     outline: 0;
-    box-shadow: 0 0 0 3px
-      ${props =>
-        props.colour && colours[props.colour]
-          ? rgba(colours[props.colour], 0.4)
-          : rgba(colours.primary, 0.4)};
+    box-shadow: 0 0 0 3px ${props => getVariantsColour(props, "buttonColour")};
   }
 
   svg {
@@ -113,7 +138,7 @@ const Item = styled.button`
             width: 16px;
             height: 16px;
             border-radius: 50%;
-            margin-left: ${variables.defaultSpacingHalf};
+            margin-left: ${themeGet("space.3")};
             border: 2px solid rgba(0, 0, 0, 0.2);
             border-right-color: rgba(255, 255, 255, 0.7);
             display: inline-block;
@@ -121,39 +146,6 @@ const Item = styled.button`
         `
       : css``};
 `;
-
-const variantMap = {
-  default: {
-    buttonColour: "primary",
-    buttonColourHover: "primaryDark",
-    textColour: "white",
-    borderColour: "primary"
-  },
-  success: {
-    buttonColour: "successDark",
-    buttonColourHover: "successDarker",
-    textColour: "white",
-    borderColour: "successDark"
-  },
-  danger: {
-    buttonColour: "danger",
-    buttonColourHover: "dangerDark",
-    textColour: "white",
-    borderColour: "danger"
-  },
-  disabled: {
-    buttonColour: "greyLighter",
-    buttonColourHover: "greyLighter",
-    textColour: "greyLight",
-    borderColour: "greyLighter"
-  },
-  ghost: {
-    buttonColour: "primaryLightest",
-    buttonColourHover: "primaryLighter",
-    textColour: "primary",
-    borderColour: "primaryLightest"
-  }
-};
 
 export default function Button({
   large,
@@ -167,15 +159,8 @@ export default function Button({
   children,
   ...props
 }) {
-  const { buttonColour, buttonColourHover, textColour, borderColour } = get(
-    variantMap,
-    variant,
-    {
-      buttonColour: "primary",
-      buttonColourHover: "primaryDark",
-      textColour: "white",
-      borderColour: "primary"
-    }
+  const { buttonColour, textColour, borderColour } = getVariantsColours(
+    variant
   );
   return (
     <Item
@@ -186,8 +171,8 @@ export default function Button({
       iconLeft={iconLeft}
       iconRight={iconRight}
       iconOnly={iconOnly}
+      variant={variant}
       bg={buttonColour}
-      bgHover={buttonColourHover}
       color={textColour}
       borderColor={borderColour}
       borderWidth="1px"
