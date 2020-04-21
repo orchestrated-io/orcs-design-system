@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 import { get } from "lodash";
 import PropTypes from "prop-types";
 import { space, layout, color, border } from "styled-system";
+import { rgba } from "polished";
 import { themeGet } from "@styled-system/theme-get";
 
 const variantMap = {
@@ -112,7 +113,8 @@ const Item = styled.button`
 
   &:focus {
     outline: 0;
-    box-shadow: 0 0 0 3px ${props => getVariantsColour(props, "buttonColour")};
+    box-shadow: ${props =>
+      `0 0 0 3px ${rgba(getVariantsColour(props, "buttonColour"), 0.4)}`};
   }
 
   svg {
