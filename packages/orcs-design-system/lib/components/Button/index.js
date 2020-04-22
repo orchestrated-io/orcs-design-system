@@ -117,7 +117,7 @@ const Item = styled.button`
   font-weight: ${themeGet("fontWeights.2")};
   margin: ${themeGet("space.3")};
   border-radius: ${themeGet("radii.2")};
-  transition: ${themeGet("transition")};
+  transition: ${themeGet("transition.transitionDefault")};
   cursor: ${props =>
     props.disabled ? "not-allowed" : props.isLoading ? "progress" : "pointer"};
   width: ${props => (props.fullWidth ? "100%" : "auto")};
