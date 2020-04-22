@@ -135,7 +135,8 @@ const Item = styled.button`
   &:focus {
     outline: 0;
     box-shadow: ${props =>
-      `0 0 0 3px ${rgba(getVariantsColour("buttonColour")(props), 0.4)}`};
+      `0 0 0 3px ${rgba(getVariantsColour("buttonColour")(props), 0.4)}`}
+    }};
   }
 
   svg {

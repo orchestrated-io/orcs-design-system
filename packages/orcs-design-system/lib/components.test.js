@@ -4,6 +4,7 @@ test("all components exported", () => {
   expect(Object.keys(components)).toEqual([
     "systemtheme",
     "GlobalStyles",
+    "SystemThemeProvider",
     "variables",
     "colours",
     "Avatar",

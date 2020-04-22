@@ -1,10 +1,15 @@
 import React from "react";
 import { render, fireEvent, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom";
+import SystemThemeProvider from "../../SystemThemeProvider";
 import { Basic } from "./Dialogue.stories";
 
 test("can render, open and close Dialogue", async () => {
-  const { getByText, queryByText } = render(<Basic />);
+  const { getByText, queryByText } = render(
+    <SystemThemeProvider>
+      <Basic />
+    </SystemThemeProvider>
+  );
 
   fireEvent.click(getByText("Delete data"));
 
