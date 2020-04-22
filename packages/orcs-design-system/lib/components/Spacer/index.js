@@ -1,16 +1,20 @@
 import React from "react";
 import { space, layout, compose } from "styled-system";
+import styled from "styled-components";
 import propTypes from "@styled-system/prop-types";
 
 import PropTypes from "prop-types";
 
+const spaceStyles = compose(space, layout);
+
+const Item = styled("div")(spaceStyles);
+
 const Spacer = ({ children, ...props }) => {
-  const spaceProps = compose(space, layout);
   const clones = React.Children.toArray(children).map(child =>
-    React.cloneElement(child, { ...spaceProps, ...props })
+    React.cloneElement(child, { ...props })
   );
 
-  return <>{clones}</>;
+  return <Item>{clones}</Item>;
 };
 
 Spacer.propTypes = {
@@ -18,11 +22,6 @@ Spacer.propTypes = {
   ...propTypes.layout,
   /** Adds margins around each child item. */
   m: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
-};
-
-Spacer.defaultProps = {
-  /** Adds margins around each child item. */
-  m: 3
 };
 
 export default Spacer;

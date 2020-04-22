@@ -1,12 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import { space, layout, color, border, variant, compose } from "styled-system";
+import { css } from "@styled-system/css";
 import PropTypes from "prop-types";
 import systemtheme from "../../systemtheme";
 
 const boxStyles = compose(space, layout, color, border);
 
 const BoxWrapper = styled("div")(
+  css({
+    width: "auto",
+    display: "block",
+    overflow: "visible"
+  }),
   variant({
     prop: "shadow",
     variants: {
@@ -29,13 +35,17 @@ const BoxWrapper = styled("div")(
 );
 
 export default function Box({ children, ...props }) {
-  return <BoxWrapper {...props}>{children}</BoxWrapper>;
+  return (
+    <BoxWrapper {...boxStyles} {...props}>
+      {children}
+    </BoxWrapper>
+  );
 }
 
 Box.propTypes = {
   /** Children of `Box` are taken as node elements */
   children: PropTypes.node,
-  /** Sets `Box` display mode */
+  /** Sets `Box` display mode. Default is `block`. */
   display: PropTypes.oneOf([
     "inline",
     "block",
@@ -45,7 +55,7 @@ Box.propTypes = {
     "initial",
     "inherit"
   ]),
-  /** Sets behaviour of elements in `Box` that are larger than their container. */
+  /** Sets behaviour of elements in `Box` that are larger than their container. Default is `visible`. */
   overflow: PropTypes.oneOf(["visible", "hidden", "scroll", "auto"]),
   /** Sets the inner padding on all four sides. Takes values from the `space` array in `systemtheme.js`. */
   p: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
@@ -55,18 +65,15 @@ Box.propTypes = {
   bg: PropTypes.string,
   /** Sets the width of the box. */
   width: PropTypes.string,
-  /** Sets the height of the box. */
+  /** Sets the height of the box. Default is `auto`. */
   height: PropTypes.string,
-  /** Specifies the colour theme */
+  /** Specifies the colour theme. Default is `systemtheme`. */
   theme: PropTypes.object
 };
 
 Box.defaultProps = {
-  width: "auto",
-  display: "block",
-  overflow: "visible",
-  m: 0,
-  p: 0,
+  m: "0",
+  p: "0",
   bg: "none",
   theme: systemtheme
 };

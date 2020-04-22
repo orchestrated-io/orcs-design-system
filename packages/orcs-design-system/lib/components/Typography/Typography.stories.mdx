@@ -1,9 +1,8 @@
-import { ThemeProvider } from "styled-components";
-import systemtheme from "../lib/systemtheme";
+import systemtheme from "../../systemtheme";
 import { Meta, Typeset, Preview, Story } from "@storybook/addon-docs/blocks";
-import { H1, H2, H3, H4, H5, H6, P, Text, Quote, Small, Code } from "./components/Typography";
-import Box from "./components/Box";
-import Spacer from "./components/Spacer";
+import { H1, H2, H3, H4, H5, H6, P, Text, Quote, Small, Code } from ".";
+import Box from "../Box";
+import Spacer from "../Spacer";
 
 <Meta title="System/Typography" />
 
@@ -32,7 +31,7 @@ These use `<H1>` to `<H6>` tags. For semantic and accessibility usage guidelines
 
 <Preview>
 <Story name="Headings/H1 to H6">
-<Spacer m={0} my={4}>
+<Spacer my={4}>
 <Box>
 <H1>Standard H1</H1>
 <H1 weight="light">Light version</H1>
@@ -71,7 +70,7 @@ These use `<H1>` to `<H6>` tags. For semantic and accessibility usage guidelines
 
 <Preview>
 <Story name="Body text/Paragraph">
-<Spacer m={0} my={3}>
+<Spacer my={3}>
 <P>Regular paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet at elit sit amet iaculis. Cras eget sapien et ligula mollis placerat non venenatis dolor. Fusce id mi risus. Ut sit amet diam in dui maximus sagittis a at dolor. Cras volutpat est nec arcu interdum pulvinar in vitae erat.</P>
 <P textAlign="center">Centered paragraph text.</P>
 <P textAlign="right">Right-aligned paragraph text.</P>
@@ -97,7 +96,7 @@ To render type smaller or larger, use `sizing="small"` or `sizing="large"` on a 
 
 <Preview>
 <Story name="Styling/Sizing">
-<Spacer m={0} my={3}>
+<Spacer my={3}>
 <H5 sizing="small">Small variant of H5</H5>
 <H5 sizing="large">Large variant of H5</H5>
 <H5 fontSize={2}>Even smaller H5, scaled down two steps in the fontSize array</H5>
@@ -111,7 +110,7 @@ To render type with emphasis, use `weight="bold"` or wrap the type in a `<strong
 
 <Preview>
 <Story name="Styling/Emphasis">
-<Spacer m={0} my={3}>
+<Spacer my={3}>
 <P weight="bold">Bold paragraph text lorem ipsum dolor sit amet</P>
 <P>Only <strong>partially bolded</strong> paragraph</P>
 </Spacer>
@@ -124,7 +123,7 @@ To apply colour to text, use the `color` property in the `Text` component. Usage
 
 <Preview>
 <Story name="Styling/Colours">
-<Spacer m={0} my={2}>
+<Spacer my={2}>
 <P color="grey">Grey-coloured text</P>
 <P color="success">Success-coloured text</P>
 <P color="warning">Warning-coloured text</P>
