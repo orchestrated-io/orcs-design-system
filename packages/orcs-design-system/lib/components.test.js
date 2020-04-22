@@ -1,6 +1,6 @@
 import * as components from ".";
 
-test("all componets exported", () => {
+test("all components exported", () => {
   expect(Object.keys(components)).toEqual([
     "systemtheme",
     "GlobalStyles",
@@ -58,7 +58,7 @@ test("all componets exported", () => {
     "H6",
     "P",
     "Text",
-    "Strong",
+    "Small",
     "Quote",
     "Code"
   ]);
