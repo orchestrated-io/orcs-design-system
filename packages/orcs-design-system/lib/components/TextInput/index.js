@@ -65,7 +65,7 @@ const InputStyle = css`
   background: ${colours.white};
   color: ${colours.greyDarkest};
   width: ${props => (props.fullWidth ? `100%` : `auto`)};
-  height: ${props => (props.floating ? `60px` : `40px`)};
+  height: ${props => (props.floating ? `58px` : `40px`)};
   padding: ${props => {
     let left = props.iconLeft ? 40 : 12;
     let right = props.iconRight ? 40 : 12;

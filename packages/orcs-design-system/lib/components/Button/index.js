@@ -1,15 +1,109 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import { get } from "lodash";
 import PropTypes from "prop-types";
-import colours from "../../colours";
-import variables from "../../variables";
-import { rgba, darken } from "polished";
-import { space, layout } from "styled-system";
-import systemtheme from "../../systemtheme";
+import { space, layout, color, border } from "styled-system";
+import { rgba } from "polished";
+import { themeGet } from "@styled-system/theme-get";
+
+const variantMap = {
+  default: {
+    buttonColour: "primary",
+    textColour: "white",
+    borderColour: "primary",
+    buttonHoverColour: "primaryDark",
+    textHoverColour: "white"
+  },
+  success: {
+    buttonColour: "successDark",
+    textColour: "white",
+    borderColour: "successDark",
+    buttonHoverColour: "successDarker",
+    textHoverColour: "white"
+  },
+  danger: {
+    buttonColour: "danger",
+    textColour: "white",
+    borderColour: "danger",
+    buttonHoverColour: "dangerDark",
+    textHoverColour: "white"
+  },
+  disabled: {
+    buttonColour: "greyLighter",
+    textColour: "greyLight",
+    borderColour: "greyLighter",
+    buttonHoverColour: "greyLighter",
+    textHoverColour: "greyLight"
+  },
+  ghost: {
+    buttonColour: "primaryLightest",
+    textColour: "primary",
+    borderColour: "primaryLightest",
+    buttonHoverColour: "primaryLighter",
+    textHoverColour: "primaryDark"
+  }
+};
+
+const getVariantsColours = variant =>
+  get(variantMap, variant, {
+    buttonColour: "primary",
+    textColour: "white",
+    borderColour: "primary",
+    buttonHoverColour: "primaryDark",
+    textHoverColour: "white"
+  });
+
+const getVariantsColour = colourName => props => {
+  const variantsColours = getVariantsColours(props.variant);
+  const variantsColour = get(variantsColours, colourName);
+  return get(props, ["theme", "colors", variantsColour]);
+};
+
+const calculateHeight = ({ iconOnly, small, large }) => {
+  if (iconOnly && small) {
+    return "31px";
+  }
+  if (iconOnly && large) {
+    return "58px";
+  }
+  if (iconOnly) {
+    return "40px";
+  }
+  return "auto";
+};
+
+const calculateFontSize = ({ iconOnly, small, large }) => {
+  if (iconOnly) {
+    if (large) {
+      return "2.2rem";
+    } else if (small) {
+      return "1.4rem";
+    } else {
+      return "1.8rem";
+    }
+  } else if (large) {
+    return "1.8rem";
+  } else if (small) {
+    return "1.4rem";
+  }
+  return "1.6rem";
+};
+
+const calculateSVGMargin = ({ iconLeft, iconRight, small }) => {
+  if (iconLeft) {
+    return small ? "0 6px 0 0" : "0 10px 0 0";
+  }
+  if (iconRight) {
+    return small ? "0 0 0 6px" : "0 0 0 10px";
+  }
+  return "0";
+};
 
 const Item = styled.button`
   ${space}
   ${layout}
+  ${color}
+  ${border}
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,111 +113,33 @@ const Item = styled.button`
   box-shadow: none;
   text-decoration: none;
   text-align: center;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 600;
-  margin: ${systemtheme.space[3]}px;
-  border-radius: ${variables.borderRadius};
-  transition: ${variables.defaultTransition};
-  cursor: ${props => (props.disabled ? "not-allowed" : "pointer")};
+  font-family: ${themeGet("font")};
+  font-weight: ${themeGet("fontWeights.2")};
+  margin: ${themeGet("space.3")};
+  border-radius: ${themeGet("radii.2")};
+  transition: ${themeGet("transition")};
+  cursor: ${props =>
+    props.disabled ? "not-allowed" : props.isLoading ? "progress" : "pointer"};
   width: ${props => (props.fullWidth ? "100%" : "auto")};
-
-  font-size: ${props => {
-    let size = "1.6rem";
-
-    if (props.iconOnly) {
-      if (props.large) {
-        size = "2.2rem";
-      } else if (props.small) {
-        size = "1.4rem";
-      } else {
-        size = "1.8rem";
-      }
-    } else if (props.large) {
-      size = "1.8rem";
-    } else if (props.small) {
-      size = "1.4rem";
-    }
-
-    return size;
-  }};
-
-  color: ${props =>
-    props.ghost
-      ? colours.primary
-      : props.disabled
-      ? colours.greyLight
-      : colours.white};
-
-  border: solid 1px
-    ${props =>
-      props.disabled
-        ? colours.greyLighter
-        : props.colour && colours[props.colour]
-        ? colours[props.colour]
-        : props.ghost
-        ? "transparent"
-        : colours.primary};
-
-  background: ${props =>
-    props.disabled
-      ? colours.greyLighter
-      : props.colour && colours[props.colour]
-      ? colours[props.colour]
-      : props.ghost
-      ? rgba(colours.primary, 0.075)
-      : colours.primary};
-
+  height: ${calculateHeight};
+  font-size: ${calculateFontSize};
   padding: ${props =>
-    props.large ? "14px 24px" : props.small ? "6px 8px" : "10px 16px"};
+    props.large ? "16px 24px" : props.small ? "5px 9px" : "8px 14px"};
 
   &:hover {
-    border: solid 1px
-      ${props =>
-        props.disabled
-          ? darken(0.05, colours.greyLighter)
-          : props.colour && colours[props.colour]
-          ? darken(0.1, colours[props.colour])
-          : props.ghost
-          ? "transparent"
-          : darken(0.1, colours.primary)};
-
-    background: ${props =>
-      props.disabled
-        ? colours.greyLighter
-        : props.colour && colours[props.colour]
-        ? darken(0.1, colours[props.colour])
-        : props.ghost
-        ? rgba(colours.primary, 0.2)
-        : darken(0.1, colours.primary)};
-
-    color: ${props =>
-      props.ghost
-        ? darken(0.1, colours.primary)
-        : props.disabled
-        ? colours.greyLight
-        : colours.white};
+    background-color: ${getVariantsColour("buttonHoverColour")};
+    border: 1px solid ${getVariantsColour("buttonHoverColour")};
+    color: ${getVariantsColour("textHoverColour")};
   }
 
   &:focus {
     outline: 0;
-    box-shadow: 0 0 0 3px
-      ${props =>
-        props.colour && colours[props.colour]
-          ? rgba(colours[props.colour], 0.4)
-          : rgba(colours.primary, 0.4)};
+    box-shadow: ${props =>
+      `0 0 0 3px ${rgba(getVariantsColour("buttonColour")(props), 0.4)}`};
   }
 
   svg {
-    margin: ${props =>
-      props.iconLeft && props.small
-        ? "0 6px 0 0;"
-        : props.iconLeft
-        ? "0 10px 0 0;"
-        : props.iconRight && props.small
-        ? "0 0 0 6px;"
-        : props.iconRight
-        ? "0 0 0 10px;"
-        : "0;"};
+    margin: ${calculateSVGMargin};
   }
 
   ${props =>
@@ -136,54 +152,45 @@ const Item = styled.button`
             width: 16px;
             height: 16px;
             border-radius: 50%;
-            margin-left: ${variables.defaultSpacingHalf};
-            border: 2px solid rgba(0, 0, 0, 0.2);
-            border-right-color: rgba(255, 255, 255, 0.7);
+            margin-left: ${themeGet("space.3")};
+            border: 2px solid ${themeGet("colors.black20")};
+            border-right-color: ${themeGet("colors.white70")};
             display: inline-block;
           }
         `
       : css``};
 `;
 
-/**
- * Buttons should be used for prompting a user interaction that causes an event/action to trigger within the UI. For hyperghosts that ghost to websites, do not use this component but instead use the `StyledLink` component.
- *
- * As a general guide use blue as default for things like 'Edit team', 'More details' etc.
- *
- * Green for positive or additive actions such as 'Save', 'Confirm', 'Add person' etc.
- *
- * Red for irreversible things like 'Delete' or 'Remove'.
- *
- * Ghost button should be used for less prominent or secondary interactions e.g. 'Cancel', 'Exit', 'Back' etc.
- *
- * Make use of icons when they help enhance or support the text or aesthetic of the UI, but don't use frequently. Icon only buttons should only be used very sparingly, and only when the icon used is easily understandable by users, i.e. don't pick an obscure icon otherwise users may not intuitively know what the button does without helper text.
- */
 export default function Button({
   large,
   small,
-  ghost,
   fullWidth,
-  disabled,
   isLoading,
   iconLeft,
   iconRight,
   iconOnly,
-  colour,
+  variant = "default",
   children,
   ...props
 }) {
+  const { buttonColour, textColour, borderColour } = getVariantsColours(
+    variant
+  );
   return (
     <Item
       large={large}
       small={small}
-      ghost={ghost}
       fullWidth={fullWidth}
-      disabled={disabled}
       isLoading={isLoading}
       iconLeft={iconLeft}
       iconRight={iconRight}
       iconOnly={iconOnly}
-      colour={colour}
+      variant={variant}
+      bg={buttonColour}
+      color={textColour}
+      borderColor={borderColour}
+      borderWidth="1px"
+      borderStyle="solid"
       {...props}
     >
       {children}
@@ -196,14 +203,10 @@ Button.propTypes = {
   large: PropTypes.bool,
   /** Small button */
   small: PropTypes.bool,
-  /** Specifies alternate button colour. Uses system colour scheme for success and danger. */
-  colour: PropTypes.oneOf(["successDark", "danger"]),
-  /** Ghost (light-coloured) button */
-  ghost: PropTypes.bool,
+  /** Specifies alternate button colours/styles. */
+  variant: PropTypes.oneOf(["success", "danger", "disabled", "ghost"]),
   /** Full width button that takes up all available space of parent */
   fullWidth: PropTypes.bool,
-  /** Adds disabled attribute and styling to button */
-  disabled: PropTypes.bool,
   /** Adds a spinner animation to indicate loading or processing */
   isLoading: PropTypes.bool,
   /** Styles button to fit an icon on the left of text. Uses Icon component. */
