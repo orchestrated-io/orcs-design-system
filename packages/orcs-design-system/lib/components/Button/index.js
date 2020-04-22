@@ -53,10 +53,50 @@ const getVariantsColours = variant =>
     textHoverColour: "white"
   });
 
-const getVariantsColour = (props, colourName) => {
+const getVariantsColour = colourName => props => {
   const variantsColours = getVariantsColours(props.variant);
   const variantsColour = get(variantsColours, colourName);
   return get(props, ["theme", "colors", variantsColour]);
+};
+
+const calculateHeight = ({ iconOnly, small, large }) => {
+  if (iconOnly && small) {
+    return "31px";
+  }
+  if (iconOnly && large) {
+    return "58px";
+  }
+  if (iconOnly) {
+    return "40px";
+  }
+  return "auto";
+};
+
+const calculateFontSize = ({ iconOnly, small, large }) => {
+  if (iconOnly) {
+    if (large) {
+      return "2.2rem";
+    } else if (small) {
+      return "1.4rem";
+    } else {
+      return "1.8rem";
+    }
+  } else if (large) {
+    return "1.8rem";
+  } else if (small) {
+    return "1.4rem";
+  }
+  return "1.6rem";
+};
+
+const calculateSVGMargin = ({ iconLeft, iconRight, small }) => {
+  if (iconLeft) {
+    return small ? "0 6px 0 0" : "0 10px 0 0";
+  }
+  if (iconRight) {
+    return small ? "0 0 0 6px" : "0 0 0 10px";
+  }
+  return "0";
 };
 
 const Item = styled.button`
@@ -81,62 +121,25 @@ const Item = styled.button`
   cursor: ${props =>
     props.disabled ? "not-allowed" : props.isLoading ? "progress" : "pointer"};
   width: ${props => (props.fullWidth ? "100%" : "auto")};
-  
-  height: ${props =>
-    props.iconOnly && props.small
-      ? "31px"
-      : props.iconOnly && props.large
-      ? "58px"
-      : props.iconOnly
-      ? "40px"
-      : "auto"};
-
-  font-size: ${props => {
-    let size = "1.6rem";
-
-    if (props.iconOnly) {
-      if (props.large) {
-        size = "2.2rem";
-      } else if (props.small) {
-        size = "1.4rem";
-      } else {
-        size = "1.8rem";
-      }
-    } else if (props.large) {
-      size = "1.8rem";
-    } else if (props.small) {
-      size = "1.4rem";
-    }
-
-    return size;
-  }};
-
+  height: ${calculateHeight};
+  font-size: ${calculateFontSize};
   padding: ${props =>
     props.large ? "16px 24px" : props.small ? "5px 9px" : "8px 14px"};
 
   &:hover {
-    background-color: ${props => getVariantsColour(props, "buttonHoverColour")};
-    border: 1px solid ${props => getVariantsColour(props, "buttonHoverColour")};
-    color: ${props => getVariantsColour(props, "textHoverColour")};
+    background-color: ${getVariantsColour("buttonHoverColour")};
+    border: 1px solid ${getVariantsColour("buttonHoverColour")};
+    color: ${getVariantsColour("textHoverColour")};
   }
 
   &:focus {
     outline: 0;
     box-shadow: ${props =>
-      `0 0 0 3px ${rgba(getVariantsColour(props, "buttonColour"), 0.4)}`};
+      `0 0 0 3px ${rgba(getVariantsColour("buttonColour")(props), 0.4)}`};
   }
 
   svg {
-    margin: ${props =>
-      props.iconLeft && props.small
-        ? "0 6px 0 0;"
-        : props.iconLeft
-        ? "0 10px 0 0;"
-        : props.iconRight && props.small
-        ? "0 0 0 6px;"
-        : props.iconRight
-        ? "0 0 0 10px;"
-        : "0;"};
+    margin: ${calculateSVGMargin};
   }
 
   ${props =>
