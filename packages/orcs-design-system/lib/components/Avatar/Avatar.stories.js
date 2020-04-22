@@ -54,7 +54,7 @@ nameLink.story = {
 };
 
 export const small = () => (
-  <Spacer>
+  <Spacer my={3}>
     <Avatar
       sizing="small"
       title="Ayden Lundgre"
@@ -83,7 +83,7 @@ small.story = {
 
 export const inverted = () => (
   <Box bg="greyDarkest" p="4">
-    <Spacer>
+    <Spacer my={3}>
       <Avatar
         type="inverted"
         title="Ayden Lundgre"

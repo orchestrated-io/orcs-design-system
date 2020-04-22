@@ -31,13 +31,11 @@ Generally, `Spacer` should be used only when there is a need to specify precise 
 
 ## Examples
 
-### Default
-
-By default, `Spacer` sets a margin of `8px` on all sides of its children.
+### Margin
 
 <Preview>
-  <Story name="Default">
-      <Spacer>
+  <Story name="Margin">
+      <Spacer my={3}>
       <Avatar
         title="Ayden Lundgre"
         subtitle="Senior Business Analyst"
@@ -71,24 +69,6 @@ By default, `Spacer` sets a margin of `8px` on all sides of its children.
       />
       </Spacer>
 </Story>
-</Preview>
-
-### Margin
-
-<Preview>
-  <Story name="Margin">
-    <Spacer margin="30px">
-      <Button small ghost>
-        Small ghost button
-      </Button>
-      <Button ghost>
-        Regular ghost button
-      </Button>
-      <Button large ghost>
-        Large ghost button
-      </Button>
-    </Spacer>
-  </Story>
 </Preview>
 
 ### Padding
@@ -135,15 +115,15 @@ By default, `Spacer` sets a margin of `8px` on all sides of its children.
 
 This component is a **breaking change** that replaces the [previous Layout component](./?path=/docs/layout--page)'s `childSpacing` properties. Use the following table as a guide to convert from the old properties to new `Spacer` properties. Refer to [systemtheme.js](https://github.com/orchestrated-io/orca-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js) for values.
 
-For `childChildSpacing` properties, wrap `<Spacer>` directly around the items you want to target.
+For `childChildSpacing` properties, wrap `<Spacer>` directly around the items you want to target and specify the desired properties.
 
 ### `Spacer` properties
 
 | **Layout**                      | **Spacer**         |
 | ------------------------------- | ------------------ |
-| `childVerticalSpacing`          | `my={3}` (default) |
+| `childVerticalSpacing`          | `my={3}` |
 | `childVerticalSpacingHalf`      | `my={2}`           |
 | `childVerticalSpacingQuarter`   | `my={1}`           |
-| `childHorizontalSpacing`        | `mx={3}` (default) |
+| `childHorizontalSpacing`        | `mx={3}` |
 | `childHorizontalSpacingHalf`    | `mx={2}`           |
 | `childHorizontalSpacingQuarter` | `mx={1}`           |

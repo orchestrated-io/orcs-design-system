@@ -14,7 +14,7 @@ export default create({
   appBorderRadius: 4,
 
   // Typography
-  fontBase: '"Open Sans", sans-serif',
+  fontBase: '"Open Sans", -apple-system, BlinkMacSystemFont, Roboto, sans-serif',
   fontCode: "monospace",
 
   // Text colors
