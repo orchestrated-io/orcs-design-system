@@ -138,6 +138,7 @@ export const transition = { transitionDefault: "all 200ms ease-in-out" };
 
 // RESPONSIVE MEDIA BREAKPOINTS
 export const breakpoints = ["450px", "675px", "900px", "1100px", "1400px"];
+
 export const mediaQueries = {
   screenXS: `@media screen and (min-width: ${breakpoints[0]})`,
   screenS: `@media screen and (min-width: ${breakpoints[1]})`,
@@ -162,6 +163,7 @@ export default {
   sizes,
   shadows,
   colors,
+  breakpoints,
   transition,
   zIndices,
   appScale
