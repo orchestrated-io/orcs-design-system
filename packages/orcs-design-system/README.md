@@ -206,10 +206,11 @@ Both react and styled-components cause duplicate instance issue after npm link, 
 
   - npm link {PATH_APP_REPO}/node_modules/react
   - npm link {PATH_APP_REPO}/node_modules/styled-components
-  - npn link
+  - npm link
 
 - in {PATH_APP_REPO}
   - npm i orcs-design-system
+  - npm link orcs-design-system
   - npm start
 
 ## Browser/device support
