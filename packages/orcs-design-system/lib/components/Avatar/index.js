@@ -28,9 +28,7 @@ const AvatarWrapper = styled("div")(
   variant({
     prop: "type",
     variants: {
-      inverted: {
-        color: "white"
-      }
+      inverted: {}
     }
   })
 );
@@ -101,7 +99,8 @@ const Circle = styled("div")(
         small: {
           width: "calc(" + themeGet("space.4")(props) + " * 2.25)",
           height: "calc(" + themeGet("space.4")(props) + " * 2.25)"
-        }
+        },
+        default: {}
       }
     }),
   variant({
@@ -110,7 +109,8 @@ const Circle = styled("div")(
       inverted: {
         backgroundColor: "greyDarker",
         color: "white"
-      }
+      },
+      default: {}
     }
   })
 );
@@ -209,8 +209,6 @@ Avatar.propTypes = {
 };
 
 Avatar.defaultProps = {
-  sizing: "default",
-  type: "default",
   theme: systemtheme
 };
 
