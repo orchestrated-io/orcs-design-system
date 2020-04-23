@@ -12,14 +12,14 @@ import { rgba } from "polished";
 
 const Bar = styled.header`
   width: 100%;
-  height: ${"calc(" + systemtheme.space[5] + "px * 2)"};
+  height: ${"calc(" + systemtheme.space[5] + " * 2)"};
   position: relative;
   z-index: 2;
   position: sticky;
   top: 0;
   display: flex;
   align-items: center;
-  padding: 0 ${systemtheme.space[4]}px;
+  padding: 0 ${systemtheme.space[4]};
   background: ${systemtheme.colors.greyDarkest};
 
   > a {
@@ -37,17 +37,17 @@ const Bar = styled.header`
   }
 
   > * + * {
-    margin-left: ${systemtheme.space[4]}px;
+    margin-left: ${systemtheme.space[4]};
   }
 `;
 
 const AppName = styled.div`
   display: flex !important;
   align-items: center;
-  font-size: ${systemtheme.fontSizes[3]}px;
+  font-size: ${systemtheme.fontSizes[3]};
   line-height: 50px;
   height: 50px;
-  padding-right: ${systemtheme.space[4]}px;
+  padding-right: ${systemtheme.space[4]};
   color: ${colours.white};
   border-right: solid 1px ${rgba(colours.white, 0.2)};
 `;
@@ -58,7 +58,7 @@ const RightAlignedChildren = styled.div`
   margin-left: auto;
 
   > * + * {
-    margin-left: ${systemtheme.space[4]}px;
+    margin-left: ${systemtheme.space[4]};
   }
 `;
 
@@ -270,7 +270,7 @@ export default function Header({
             text={clientInfo}
           >
             <Avatar
-              color="white"
+              type="inverted"
               sizing="small"
               title={userName}
               image={avatarSource}
@@ -291,8 +291,8 @@ export default function Header({
       <MobileNavToggle type="checkbox" id="mobileMenuToggle" />
       <MobileNavMenu>
         <Avatar
-          color="white"
-          size="small"
+          type="inverted"
+          sizing="small"
           title={userName}
           image={avatarSource}
         />
