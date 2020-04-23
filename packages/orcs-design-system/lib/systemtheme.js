@@ -23,7 +23,7 @@ export const fontWeights = [300, 400, 600];
 export const lineHeights = [1, 1.5, 2];
 
 // Z-AXIS spec
-export const zIndex = [-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+export const zIndices = [-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // SPACING
 export const space = [
@@ -146,6 +146,10 @@ export const mediaQueries = {
   screenXL: `@media screen and (min-width: ${breakpoints[4]})`
 };
 
+// APP-SPECIFIC DIMENSIONS
+
+export const appScale = { navBarSize: "54px" };
+
 export default {
   fonts,
   font,
@@ -158,5 +162,7 @@ export default {
   sizes,
   shadows,
   colors,
-  transition
+  transition,
+  zIndices,
+  appScale
 };
