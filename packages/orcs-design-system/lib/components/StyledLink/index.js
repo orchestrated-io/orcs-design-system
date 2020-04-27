@@ -1,44 +1,59 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import variables from "../../variables";
-import colours from "../../colours";
 import { Link } from "react-router-dom";
+import { space, layout } from "styled-system";
+import { css } from "@styled-system/css";
 
-const styleLink = LinkComponent => styled(LinkComponent)`
-  display: ${props => (props.block ? "block" : "inline-block")};
-  position: relative;
-  text-decoration: none;
-  cursor: pointer;
-  transition: ${variables.defaultTransition};
-  font-weight: ${props => (props.bold ? 600 : 400)};
-
-  color: ${props =>
-    props.active
-      ? colours.primary
-      : props.white
-      ? colours.white
-      : colours.primary};
-
-  margin-bottom: ${props =>
-    props.marginBottomDouble
-      ? variables.defaultSpacingDouble
-      : props.marginBottomHalf
-      ? variables.defaultSpacingHalf
-      : props.marginBottom
-      ? variables.defaultSpacing
-      : 0};
-
-  &:hover,
-  &:focus {
-    outline: 0;
-    text-decoration: underline;
+const LinkStyles = css({
+  color: "primary",
+  position: "relative",
+  textDecoration: "none",
+  cursor: "pointer",
+  transition: "transitionDefault",
+  "&:hover": {
+    outline: "0",
+    textDecoration: "underline"
+  },
+  "&:focus": {
+    outline: "0",
+    textDecoration: "underline"
+  },
+  svg: {
+    marginRight: 2
   }
+});
 
-  svg {
-    margin-right: ${variables.defaultSpacingQuarter};
-  }
-`;
+const styleLink = LinkComponent =>
+  styled(LinkComponent).withConfig({
+    shouldForwardProp: prop =>
+      ![
+        "m",
+        "ml",
+        "mr",
+        "mx",
+        "my",
+        "mt",
+        "mb",
+        "p",
+        "px",
+        "py",
+        "pt",
+        "pb",
+        "pr",
+        "pl"
+      ].includes(prop)
+  })(
+    LinkStyles,
+    props =>
+      css({
+        display: props.block ? "block" : "inline-block",
+        fontWeight: props.bold ? 2 : "inherit",
+        color: props.active ? "primary" : props.white ? "white" : "primary"
+      }),
+    space,
+    layout
+  );
 
 const Hyperlink = styleLink(styled.a``);
 const HeaderLink = styleLink(Link);
@@ -65,26 +80,9 @@ const HeaderLink = styleLink(Link);
  *        Dashboard
  *      </HeaderLink>
  */
-export function StyledLink({
-  children,
-  active,
-  white,
-  bold,
-  marginBottomDouble,
-  marginBottomHalf,
-  marginBottom,
-  ...props
-}) {
+export function StyledLink({ children, active, white, bold, ...props }) {
   return (
-    <Hyperlink
-      active={active}
-      white={white}
-      bold={bold}
-      marginBottomDouble={marginBottomDouble}
-      marginBottomHalf={marginBottomHalf}
-      marginBottom={marginBottom}
-      {...props}
-    >
+    <Hyperlink active={active} white={white} bold={bold} {...props}>
       {children}
     </Hyperlink>
   );
@@ -98,13 +96,7 @@ StyledLink.propTypes = {
   /** Renders a white link (useful for dark backgrounds) */
   white: PropTypes.bool,
   /** Styles the link text in bold */
-  bold: PropTypes.bool,
-  /** Renders the link's bottom margin with double default spacing */
-  marginBottomDouble: PropTypes.bool,
-  /** Renders the link's bottom margin with half default spacing */
-  marginBottomHalf: PropTypes.bool,
-  /** Renders the link's bottom margin with default spacing */
-  marginBottom: PropTypes.bool
+  bold: PropTypes.bool
 };
 
 export { styleLink, HeaderLink };
