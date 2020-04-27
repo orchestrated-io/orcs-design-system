@@ -43,6 +43,7 @@ test("all components exported", () => {
     "Spacer",
     "StatusDot",
     "StyledLink",
+    "styleLink",
     "Tab",
     "TabsContainer",
     "Tag",
