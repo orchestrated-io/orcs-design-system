@@ -1,66 +1,66 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
-import colours from "../../colours";
+import styled, { ThemeProvider } from "styled-components";
+import { space, layout } from "styled-system";
 import variables from "../../variables";
 import Avatar from "../Avatar/";
 import Icon from "../Icon";
+import Spacer from "../Spacer";
 import StyledLink from "../StyledLink/";
 import Popover from "../Popover/";
+import { css } from "@styled-system/css";
+import themeGet from "@styled-system/theme-get";
 import systemtheme, { mediaQueries } from "../../systemtheme";
-import { rgba } from "polished";
 
-const Bar = styled.header`
-  width: 100%;
-  height: ${"calc(" + systemtheme.space[5] + " * 2)"};
-  position: relative;
-  z-index: 2;
-  position: sticky;
-  top: 0;
-  display: flex;
-  align-items: center;
-  padding: 0 ${systemtheme.space[4]};
-  background: ${systemtheme.colors.greyDarkest};
-
-  > a {
-    display: none;
-    ${mediaQueries.screenL} {
-      display: block;
+const Bar = styled("header")(
+  props => ({ height: themeGet("appScale.navBarSize")(props) }),
+  css({
+    width: "100%",
+    zIndex: 4,
+    position: "sticky",
+    top: "0",
+    display: "flex",
+    alignItems: "center",
+    py: 0,
+    px: 4,
+    bg: "black",
+    "> a": {
+      display: ["none", "none", "none", "block", "block"]
+    },
+    "> div": {
+      display: ["none", "none", "none", "flex", "flex"]
     }
-  }
+  }),
+  space
+);
 
-  > div {
-    display: none;
-    ${mediaQueries.screenL} {
-      display: flex;
-    }
-  }
+const AppName = styled("div")(
+  props => ({
+    height: themeGet("appScale.navBarSize")(props),
+    lineHeight: themeGet("appScale.navBarSize")(props)
+  }),
+  css({
+    display: "flex",
+    alignItems: "center",
+    fontSize: 3,
+    lineHeight: 1,
+    pr: 4,
+    color: "white",
+    borderRightStyle: "solid",
+    borderRightColor: "white20",
+    borderRightWidth: 1
+  }),
+  space
+);
 
-  > * + * {
-    margin-left: ${systemtheme.space[4]};
-  }
-`;
-
-const AppName = styled.div`
-  display: flex !important;
-  align-items: center;
-  font-size: ${systemtheme.fontSizes[3]};
-  line-height: 50px;
-  height: 50px;
-  padding-right: ${systemtheme.space[4]};
-  color: ${colours.white};
-  border-right: solid 1px ${rgba(colours.white, 0.2)};
-`;
-
-const RightAlignedChildren = styled.div`
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-
-  > * + * {
-    margin-left: ${systemtheme.space[4]};
-  }
-`;
+const RightAlignedChildren = styled("div")(
+  css({
+    ml: "auto",
+    alignItems: "center"
+  }),
+  space,
+  layout
+);
 
 const MobileMenuToggle = styled.label`
   z-index: 3;
@@ -239,8 +239,6 @@ const Overlay = styled.label`
   transition: ${systemtheme.transition.transitionDefault};
 `;
 
-const RightAlignedLink = styled(StyledLink)``;
-
 /**
  * Header component for global app navigation.
  *
@@ -253,59 +251,65 @@ export default function Header({
   children,
   clientInfo,
   logoutFunction,
-  rightAlignedLink
+  rightAlignedLink,
+  theme
 }) {
   return (
     <>
-      <Bar>
-        <AppName>{appName}</AppName>
-        {children}
+      <ThemeProvider theme={theme}>
+        <Bar theme={theme}>
+          <AppName>{appName}</AppName>
+          <Spacer ml={4}>{children}</Spacer>
+          <RightAlignedChildren>
+            <Spacer ml={4}>
+              {rightAlignedLink}
+              <Popover
+                direction="bottom"
+                width="160px"
+                textAlign="center"
+                text={clientInfo}
+              >
+                <Avatar
+                  type="inverted"
+                  sizing="small"
+                  title={userName}
+                  image={avatarSource}
+                  theme={theme}
+                />
+              </Popover>
+              {logoutFunction && (
+                <StyledLink white bold onClick={logoutFunction}>
+                  <Icon icon={["fas", "lock"]} colour="white" />
+                  Logout
+                </StyledLink>
+              )}
+            </Spacer>
+          </RightAlignedChildren>
 
-        <RightAlignedChildren>
+          <MobileMenuToggle htmlFor="mobileMenuToggle" theme={theme}>
+            <Hamburger />
+          </MobileMenuToggle>
+        </Bar>
+        <MobileNavToggle type="checkbox" id="mobileMenuToggle" />
+        <MobileNavMenu>
+          <Avatar
+            type="inverted"
+            sizing="small"
+            title={userName}
+            image={avatarSource}
+            theme={theme}
+          />
+          {children}
           {rightAlignedLink}
-          <Popover
-            direction="bottom"
-            width="160px"
-            textAlign="center"
-            text={clientInfo}
-          >
-            <Avatar
-              type="inverted"
-              sizing="small"
-              title={userName}
-              image={avatarSource}
-            />
-          </Popover>
           {logoutFunction && (
             <StyledLink white bold onClick={logoutFunction}>
               <Icon icon={["fas", "lock"]} colour="white" />
               Logout
             </StyledLink>
           )}
-        </RightAlignedChildren>
-
-        <MobileMenuToggle htmlFor="mobileMenuToggle">
-          <Hamburger />
-        </MobileMenuToggle>
-      </Bar>
-      <MobileNavToggle type="checkbox" id="mobileMenuToggle" />
-      <MobileNavMenu>
-        <Avatar
-          type="inverted"
-          sizing="small"
-          title={userName}
-          image={avatarSource}
-        />
-        {children}
-        {rightAlignedLink}
-        {logoutFunction && (
-          <StyledLink white bold onClick={logoutFunction}>
-            <Icon icon={["fas", "lock"]} colour="white" />
-            Logout
-          </StyledLink>
-        )}
-      </MobileNavMenu>
-      <Overlay htmlFor="mobileMenuToggle" />
+        </MobileNavMenu>
+        <Overlay htmlFor="mobileMenuToggle" />
+      </ThemeProvider>
     </>
   );
 }
@@ -323,6 +327,8 @@ Header.propTypes = {
   logoutFunction: PropTypes.func,
   /** Can specify a link that will be rendered on the right side of the header */
   rightAlignedLink: PropTypes.node,
+  /** Applies the chosen theme to the entire header. */
+  theme: PropTypes.object,
   /** Navigation links are rendered as child components. */
   children: PropTypes.oneOfType([
     PropTypes.node,
@@ -330,4 +336,6 @@ Header.propTypes = {
   ])
 };
 
-export { RightAlignedLink };
+Header.defaultProps = {
+  theme: systemtheme
+};
