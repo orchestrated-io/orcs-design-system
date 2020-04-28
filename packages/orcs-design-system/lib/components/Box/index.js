@@ -74,6 +74,6 @@ Box.propTypes = {
 Box.defaultProps = {
   m: "0",
   p: "0",
-  bg: "none",
+  bg: "transparent",
   theme: systemtheme
 };
