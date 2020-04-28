@@ -41,7 +41,10 @@ const styleLink = LinkComponent =>
         "pt",
         "pb",
         "pr",
-        "pl"
+        "pl",
+        "white",
+        "bold",
+        "active"
       ].includes(prop)
   })(
     LinkStyles,
