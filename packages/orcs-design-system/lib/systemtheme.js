@@ -59,9 +59,9 @@ export const sizes = [
 const black = "#000";
 const white = "#fff";
 const grey = "#90979A"; // Base grey - Mainly used for UI elements like backgrounds, muted text, icons, dividers or borders
-const primary = "#30ABD6"; // Base primary brand colour (blue) - Mainly used for buttons, links and selected states
-// const secondary = "purple"; Introduce new secondary colour maybe purple when we re-design our colour palette
-// const tertiary = "orange"; Introduce new tertiary colour maybe orange when we re-design our colour palette
+const primary = "#30ABD6"; // Potential new colour: #2a5ec1. Base primary brand colour (blue) - Mainly used for buttons, links and selected states
+// const secondary = "#7211ED"; // Potential new purple colour. Introduce new secondary colour maybe purple when we re-design our colour palette
+// const tertiary = "orange"; A tertiary colour is maybe not needed. Introduce new tertiary colour maybe orange when we re-design our colour palette
 const success = "#ACD036"; // Base brand success colour (green) - Mainly used to indicate success, status=good, valid, add, or save states
 const warning = "#EDC652"; // Base brand warning colour - Mainly used to indicate warnings, slipping or near due states
 const danger = "#D42A59"; // Base brand danger/error colour - Mainly used to indicate error, status=bad, at risk or over due states
