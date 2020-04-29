@@ -25,28 +25,30 @@ const LinkStyles = css({
 });
 
 const styleLink = LinkComponent =>
-  styled(LinkComponent).withConfig({
-    shouldForwardProp: prop =>
-      ![
-        "m",
-        "ml",
-        "mr",
-        "mx",
-        "my",
-        "mt",
-        "mb",
-        "p",
-        "px",
-        "py",
-        "pt",
-        "pb",
-        "pr",
-        "pl",
-        "white",
-        "bold",
-        "active"
-      ].includes(prop)
-  })(
+  styled(LinkComponent)
+    .withConfig({
+      shouldForwardProp: prop =>
+        ![
+          "m",
+          "ml",
+          "mr",
+          "mx",
+          "my",
+          "mt",
+          "mb",
+          "p",
+          "px",
+          "py",
+          "pt",
+          "pb",
+          "pr",
+          "pl",
+          "white",
+          "bold",
+          "active"
+        ].includes(prop)
+    })
+    .attrs({ className: "StyledLink" })(
     LinkStyles,
     props =>
       css({
