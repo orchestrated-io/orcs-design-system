@@ -149,7 +149,11 @@ export const mediaQueries = {
 
 // APP-SPECIFIC DIMENSIONS
 
-export const appScale = { navBarSize: "54px" };
+export const appScale = {
+  navBarSize: "54px",
+  sidebarMaxWidth: "360px",
+  mobileNavMenuWidth: "250px"
+};
 
 export default {
   fonts,
