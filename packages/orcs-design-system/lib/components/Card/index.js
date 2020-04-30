@@ -2,9 +2,9 @@ import React from "react";
 import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 import Icon from "../Icon/";
-import colours from "../../colours";
-import variables from "../../variables";
+import { H3, H6 } from "../Typography";
 import { space, layout } from "styled-system";
+import { themeGet } from "@styled-system/theme-get";
 
 const Item = styled.div`
   ${space}
@@ -13,36 +13,36 @@ const Item = styled.div`
   width: ${props =>
     props.width ? props.width : props.fluid ? "100%" : "auto"};
   height: ${props => (props.fluid ? "100%" : "auto")};
-  background: ${colours.white};
-  border-radius: ${variables.borderRadius};
-  padding: ${variables.defaultSpacing};
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  background: ${themeGet("colors.white")};
+  border-radius: ${themeGet("radii.2")};
+  padding: ${themeGet("space.4")};
+  box-shadow: ${themeGet("shadows.boxDefault")};
 
   ${({ colour }) =>
     colour === "primary"
       ? css`
-          border-radius: 0 0 ${variables.borderRadius} ${variables.borderRadius};
-          border-top: solid 3px ${colours.primary};
+          border-radius: 0 0 ${themeGet("radii.2")} ${themeGet("radii.2")};
+          border-top: solid 3px ${themeGet("colors.primary")};
         `
       : colour === "success"
       ? css`
-          border-radius: 0 0 ${variables.borderRadius} ${variables.borderRadius};
-          border-top: solid 3px ${colours.success};
+          border-radius: 0 0 ${themeGet("radii.2")} ${themeGet("radii.2")};
+          border-top: solid 3px ${themeGet("colors.success")};
         `
       : colour === "warning"
       ? css`
-          border-radius: 0 0 ${variables.borderRadius} ${variables.borderRadius};
-          border-top: solid 3px ${colours.warning};
+          border-radius: 0 0 ${themeGet("radii.2")} ${themeGet("radii.2")};
+          border-top: solid 3px ${themeGet("colors.warning")};
         `
       : colour === "danger"
       ? css`
-          border-radius: 0 0 ${variables.borderRadius} ${variables.borderRadius};
-          border-top: solid 3px ${colours.danger};
+          border-radius: 0 0 ${themeGet("radii.2")} ${themeGet("radii.2")};
+          border-top: solid 3px ${themeGet("colors.danger")};
         `
       : colour === "greyDark"
       ? css`
-          border-radius: 0 0 ${variables.borderRadius} ${variables.borderRadius};
-          border-top: solid 3px ${colours.greyDark};
+          border-radius: 0 0 ${themeGet("radii.2")} ${themeGet("radii.2")};
+          border-top: solid 3px ${themeGet("colors.greyDarker")};
         `
       : css`
           border-top: 0;
@@ -69,7 +69,7 @@ const Item = styled.div`
             justify-content: flex-start;
             align-items: center;
           }
-          span {
+          h6 {
             margin-left: auto;
             float: right;
           }
@@ -78,16 +78,10 @@ const Item = styled.div`
 `;
 
 const Header = styled.div`
-  margin-bottom: ${variables.defaultSpacing};
+  margin-bottom: ${themeGet("space.4")};
   svg {
-    margin-right: 10px;
+    margin-right: ${themeGet("space.3")};
   }
-`;
-
-const Title = styled.h6``;
-
-const Subtitle = styled.span`
-  font-weight: 400;
 `;
 
 const Content = styled.div``;
@@ -97,8 +91,8 @@ const ChangeIcon = styled.div`
   width: 14px;
   height: 2px;
   background-size: 14px 14px;
-  background-color: ${colours.grey};
-  margin: 0 0 0 ${variables.defaultSpacingHalf};
+  background-color: ${themeGet("colors.grey")};
+  margin: 0 0 0 ${themeGet("space.3")};
   ${props =>
     props.changeIcon === "arrowUp"
       ? css`
@@ -121,8 +115,8 @@ const ChangeValue = styled.small`
   align-items: center;
   font-size: 1.8rem;
   font-weight: 300;
-  color: ${colours.grey};
-  margin: 0 0 0 ${variables.defaultSpacingHalf};
+  color: ${themeGet("colors.grey")};
+  margin: 0 0 0 ${themeGet("space.3")};
 `;
 
 /**
@@ -157,10 +151,10 @@ export default function Card({
       {!icon & !title & !subtitle ? null : (
         <Header>
           {icon ? <Icon icon={icon} size="lg" /> : null}
-          {title ? <Title>{title}</Title> : null}
+          {title ? <H3>{title}</H3> : null}
           {changeIcon ? <ChangeIcon changeIcon={changeIcon} /> : null}
           {changeValue ? <ChangeValue>{changeValue}</ChangeValue> : null}
-          {subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
+          {subtitle ? <H6>{subtitle}</H6> : null}
         </Header>
       )}
       <Content>{children}</Content>
