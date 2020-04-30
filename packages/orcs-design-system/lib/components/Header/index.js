@@ -1,245 +1,245 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
-import colours from "../../colours";
-import variables from "../../variables";
-import Avatar from "../Avatar/";
+import styled, { ThemeProvider } from "styled-components";
+import { space, layout } from "styled-system";
+import Avatar from "../Avatar";
+import Box from "../Box";
 import Icon from "../Icon";
+import Spacer from "../Spacer";
 import StyledLink from "../StyledLink/";
 import Popover from "../Popover/";
-import systemtheme, { mediaQueries } from "../../systemtheme";
-import { rgba } from "polished";
+import { css } from "@styled-system/css";
+import themeGet from "@styled-system/theme-get";
+import systemtheme from "../../systemtheme";
 
-const Bar = styled.header`
-  width: 100%;
-  height: ${"calc(" + systemtheme.space[5] + "px * 2)"};
-  position: relative;
-  z-index: 2;
-  position: sticky;
-  top: 0;
-  display: flex;
-  align-items: center;
-  padding: 0 ${systemtheme.space[4]}px;
-  background: ${systemtheme.colors.greyDarkest};
-
-  > a {
-    display: none;
-    ${mediaQueries.screenL} {
-      display: block;
+const Bar = styled("header")(
+  props => ({ height: themeGet("appScale.navBarSize")(props) }),
+  css({
+    width: "100%",
+    zIndex: 4,
+    position: "sticky",
+    top: "0",
+    display: "flex",
+    alignItems: "center",
+    py: 0,
+    px: 4,
+    bg: "black",
+    "a[class^='StyledLink'], a[class*=' StyledLink']": {
+      display: ["none", "none", "none", "none", "block", "block"]
     }
-  }
+  }),
+  space
+);
 
-  > div {
-    display: none;
-    ${mediaQueries.screenL} {
-      display: flex;
+const AppName = styled("div")(
+  props => ({
+    height: themeGet("appScale.navBarSize")(props),
+    lineHeight: themeGet("appScale.navBarSize")(props)
+  }),
+  css({
+    display: "flex",
+    alignItems: "center",
+    fontSize: 3,
+    lineHeight: 1,
+    pr: 4,
+    color: "white",
+    borderRightStyle: "solid",
+    borderRightColor: "white20",
+    borderRightWidth: 1,
+    "a[class^='StyledLink'], a[class*=' StyledLink']": {
+      display: "block"
     }
-  }
+  }),
+  space
+);
 
-  > * + * {
-    margin-left: ${systemtheme.space[4]}px;
-  }
-`;
+const RightAlignedChildren = styled("div")(
+  css({
+    ml: "auto",
+    display: "flex",
+    alignItems: "center"
+  }),
+  space,
+  layout
+);
 
-const AppName = styled.div`
-  display: flex !important;
-  align-items: center;
-  font-size: ${systemtheme.fontSizes[3]}px;
-  line-height: 50px;
-  height: 50px;
-  padding-right: ${systemtheme.space[4]}px;
-  color: ${colours.white};
-  border-right: solid 1px ${rgba(colours.white, 0.2)};
-`;
+const HeaderAvatar = styled(Avatar)(
+  css({
+    display: ["none", "none", "none", "none", "flex", "flex"]
+  })
+);
 
-const RightAlignedChildren = styled.div`
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-
-  > * + * {
-    margin-left: ${systemtheme.space[4]}px;
-  }
-`;
-
-const MobileMenuToggle = styled.label`
-  z-index: 3;
-  cursor: pointer;
-  user-select: none;
-  background: none;
-  border: none;
-  padding-bottom: 7px;
-  display: block;
-  margin-left: auto;
-
-  ${mediaQueries.screenL} {
-    display: none;
-  }
-
-  &:hover,
-  &:focus {
-    outline: 0;
-    span {
-      background-color: white;
-      &:before,
-      &:after {
-        background-color: white;
+const MobileMenuToggle = styled("label")(
+  css({
+    zIndex: 4,
+    cursor: "pointer",
+    userSelect: "none",
+    background: "none",
+    border: "none",
+    pb: 3,
+    display: ["block", "block", "block", "block", "none", "none"],
+    ml: "auto",
+    "&:hover, &:focus": {
+      outline: "0",
+      span: {
+        bg: "white",
+        "&:before, &:after": {
+          bg: "white"
+        }
       }
     }
-  }
-`;
+  })
+);
 
-const Hamburger = styled.span`
-  display: inline-block;
-  cursor: pointer;
-  user-select: none;
-  transition: all 300ms ease;
-  width: 30px;
-  height: 4px;
-  border-radius: 4px;
-  background-color: white;
-  position: relative;
+const Hamburger = styled("span")(props =>
+  css({
+    "::before": {
+      top: "calc( " + themeGet("space.3")(props) + " * 1.25)",
+      position: "absolute",
+      content: "''",
+      display: "inline-block",
+      width: 6,
+      height: 2,
+      borderRadius: 2,
+      bg: "white",
+      left: 0,
+      transformOrigin: "50% 50%",
+      transition:
+        "top 300ms cubic-bezier(0.165, 0.84, 0.44, 1), transform 300ms cubic-bezier(0.165, 0.84, 0.44, 1), background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1)"
+    },
+    "::after": {
+      position: "absolute",
+      top: "calc( " + themeGet("space.3")(props) + " * (-1.25))",
+      content: "''",
+      display: "inline-block",
+      width: 6,
+      height: 2,
+      borderRadius: 2,
+      bg: "white",
+      left: 0,
+      transformOrigin: "50% 50%",
+      transition:
+        "top 300ms cubic-bezier(0.165, 0.84, 0.44, 1), transform 300ms cubic-bezier(0.165, 0.84, 0.44, 1), background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1)"
+    },
+    display: "inline-block",
+    cursor: "pointer",
+    userSelect: "none",
+    transition: "transitionDefault",
+    width: 6,
+    height: 2,
+    borderRadius: 2,
+    bg: "white",
+    position: "relative"
+  })
+);
 
-  &:before,
-  &:after {
-    content: "";
-    display: inline-block;
-    width: 30px;
-    height: 4px;
-    border-radius: 4px;
-    background-color: white;
-    position: absolute;
-    left: 0;
-    transform-origin: 50% 50%;
-    transition: top 300ms cubic-bezier(0.165, 0.84, 0.44, 1),
-      transform 300ms cubic-bezier(0.165, 0.84, 0.44, 1),
-      background-color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  }
-  &:before {
-    top: 9px;
-  }
-  &:after {
-    top: -9px;
-  }
-`;
-
-const MobileNavToggle = styled.input`
-  opacity: 0;
-  position: absolute;
-  margin: 0;
-  z-index: -1;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-  pointer-events: none;
-  ~ header,
-  ~ div,
-  ~ main {
-    transition: ${systemtheme.transition.transitionDefault};
-  }
-  &:checked {
-    + div > a {
-      opacity: 1;
-      transform: translateX(0);
-      :nth-of-type(1) { transition-delay: 0.10s; }
-      :nth-of-type(2) { transition-delay: 0.20s; }
-      :nth-of-type(3) { transition-delay: 0.30s; }
-      :nth-of-type(4) { transition-delay: 0.40s; }
-      :nth-of-type(5) { transition-delay: 0.50s; }
-      :nth-of-type(6) { transition-delay: 0.60s; }
-      :nth-of-type(7) { transition-delay: 0.70s; }
-      :nth-of-type(8) { transition-delay: 0.80s; }
-      :nth-of-type(9) { transition-delay: 0.90s; }
-      :nth-of-type(10) { transition-delay: 1.0s; }
-      :nth-of-type(11) { transition-delay: 1.1s; }
-      }
-    /* Mobile menu */
-    + div {
-      transform: translateX(-250px);
-    }
-    ~ main {
-      transform: translateX(-250px);
-    }
-    ~ header {
-      transform: translateX(-250px);
+const MobileNavToggle = styled("input")(props =>
+  css({
+    opacity: "0",
+    position: "absolute",
+    margin: 0,
+    zIndex: 0,
+    width: 0,
+    height: 0,
+    overflow: "hidden",
+    pointerEvents: "none",
+    "~ header, ~ div, ~ main": {
+      transition: "transitionDefault"
+    },
+    "&:checked": {
+      "~ [class^='Header__MobileNavMenu'], ~ [class*=' Header__MobileNavMenu']": {
+        "[class^='StyledLink'], [class*=' StyledLink']": {
+          ":nth-of-type(1)": { transitionDelay: "0.10s" },
+          ":nth-of-type(2)": { transitionDelay: "0.20s" },
+          ":nth-of-type(3)": { transitionDelay: "0.30s" },
+          ":nth-of-type(4)": { transitionDelay: "0.40s" },
+          ":nth-of-type(5)": { transitionDelay: "0.50s" },
+          ":nth-of-type(6)": { transitionDelay: "0.60s" },
+          ":nth-of-type(7)": { transitionDelay: "0.70s" },
+          ":nth-of-type(8)": { transitionDelay: "0.80s" },
+          ":nth-of-type(9)": { transitionDelay: "0.90s" },
+          ":nth-of-type(10)": { transitionDelay: "1s" },
+          ":nth-of-type(11)": { transitionDelay: "1.10s" },
+          opacity: "1",
+          transform: "translateX(0px)"
+        },
+        transform:
+          "translateX(-" + themeGet("appScale.mobileNavMenuWidth")(props) + ")"
+      },
+      "~ main": {
+        transform:
+          "translateX(-" + themeGet("appScale.mobileNavMenuWidth")(props) + ")"
+      },
+      "~ header": {
+        transform:
+          "translateX(-" + themeGet("appScale.mobileNavMenuWidth")(props) + ")"
+      },
       /* Hamburger */
-      span {
-        background-color: transparent !important; /* fade away the middle line */
-        &:hover,
-        &:focus {
-          background-color: transparent !important;
+      "~ [class^='Header__Bar'], ~ [class*=' Header__Bar']": {
+        "[class^='Header__Hamburger'], [class*=' Header__Hamburger']": {
+          bg: "transparent" /* fade away the middle line */,
+          "&:hover,&:focus": {
+            bg: "transparent"
+          },
+          "::before": {
+            transition:
+              "top 300ms cubic-bezier(0.165, 0.84, 0.44, 1), transform 300ms cubic-bezier(0.165, 0.84, 0.44, 1)",
+            top: 0,
+            width: 5,
+            transform: "rotate3d(0,0,1,45deg) scale(1.1)"
+          },
+          "::after": {
+            transition:
+              "top 300ms cubic-bezier(0.165, 0.84, 0.44, 1), transform 300ms cubic-bezier(0.165, 0.84, 0.44, 1)",
+            top: 0,
+            width: 5,
+            transform: "rotate3d(0,0,1,-45deg) scale(1.1)"
+          }
         }
-        &:before,
-        &:after {
-          transition: top 300ms cubic-bezier(0.165, 0.84, 0.44, 1), transform 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
-          top: 0;
-          width: 30px;
-        }
-        &:before {
-          transform: rotate3d(0,0,1,45deg) scale(1.1);
-        }
-        &:after {
-          transform: rotate3d(0,0,1,-45deg) scale(1.1);
-        }
+      },
+      /* Overlay */
+      "~ label": {
+        zIndex: 5,
+        opacity: "1"
       }
     }
-    /* Overlay */
-    ~ label {
-      z-index: 4;
-      opacity: 1;
+  })
+);
+
+const MobileNavMenu = styled("div")(props =>
+  css({
+    position: "fixed",
+    height: "100vh",
+    right: "-" + themeGet("appScale.mobileNavMenuWidth")(props),
+    top: 0,
+    width: themeGet("appScale.mobileNavMenuWidth")(props),
+    bg: "#333",
+    zIndex: 6,
+    transition: "transitionDefault",
+    a: {
+      transform: "translateX(100px)",
+      display: "block",
+      py: 3,
+      px: 4,
+      transition: "transitionDefault",
+      opacity: "0"
     }
-  }
-}
-`;
+  })
+);
 
-const MobileNavMenu = styled.div`
-  position: fixed;
-  height: 100vh;
-  right: -250px;
-  top: 0;
-  width: 250px;
-  background: #333;
-  z-index: 5;
-  transition: ${systemtheme.transition.transitionDefault};
-
-  > div {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    padding: ${systemtheme.space[4]}px;
-    margin-bottom: ${systemtheme.space[3]}px;
-    border-bottom: solid 1px rgba(255, 255, 255, 0.2);
-    img {
-      display: block;
-      height: 40px;
-      width: 40px;
-      border-radius: 100%;
-      margin-right: 10px;
-    }
-  }
-
-  a {
-    display: block;
-    padding: ${variables.defaultSpacingHalf} ${variables.defaultSpacing};
-    opacity: 0;
-    transform: translateX(100px);
-    transition: ${systemtheme.transition.transitionDefault};
-  }
-`;
-
-const Overlay = styled.label`
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: -1;
-  opacity: 0;
-  transition: ${systemtheme.transition.transitionDefault};
-`;
-
-const RightAlignedLink = styled(StyledLink)``;
+const Overlay = styled("label")(
+  css({
+    position: "fixed",
+    top: 0,
+    left: 0,
+    height: "100vh",
+    width: "100vw",
+    bg: "black50",
+    zIndex: 0,
+    opacity: "0",
+    transition: "transitionDefault"
+  })
+);
 
 /**
  * Header component for global app navigation.
@@ -253,59 +253,74 @@ export default function Header({
   children,
   clientInfo,
   logoutFunction,
-  rightAlignedLink
+  rightAlignedLink,
+  theme
 }) {
   return (
     <>
-      <Bar>
-        <AppName>{appName}</AppName>
-        {children}
+      <ThemeProvider theme={theme}>
+        <MobileNavToggle type="checkbox" id="mobileMenuToggle" />
+        <Bar theme={theme}>
+          <AppName>{appName}</AppName>
+          <Spacer ml={4}>{children}</Spacer>
+          <RightAlignedChildren>
+            <Spacer ml={4}>
+              {rightAlignedLink}
+              <Popover
+                direction="bottom"
+                width="160px"
+                textAlign="center"
+                text={clientInfo}
+              >
+                <HeaderAvatar
+                  type="inverted"
+                  sizing="small"
+                  title={userName}
+                  image={avatarSource}
+                  theme={theme}
+                />
+              </Popover>
+              {logoutFunction && (
+                <StyledLink white bold onClick={logoutFunction}>
+                  <Icon icon={["fas", "lock"]} colour="white" />
+                  Logout
+                </StyledLink>
+              )}
+            </Spacer>
+          </RightAlignedChildren>
 
-        <RightAlignedChildren>
-          {rightAlignedLink}
-          <Popover
-            direction="bottom"
-            width="160px"
-            textAlign="center"
-            text={clientInfo}
-          >
-            <Avatar
-              color="white"
-              sizing="small"
-              title={userName}
-              image={avatarSource}
-            />
-          </Popover>
-          {logoutFunction && (
-            <StyledLink white bold onClick={logoutFunction}>
-              <Icon icon={["fas", "lock"]} colour="white" />
-              Logout
-            </StyledLink>
-          )}
-        </RightAlignedChildren>
-
-        <MobileMenuToggle htmlFor="mobileMenuToggle">
-          <Hamburger />
-        </MobileMenuToggle>
-      </Bar>
-      <MobileNavToggle type="checkbox" id="mobileMenuToggle" />
-      <MobileNavMenu>
-        <Avatar
-          color="white"
-          size="small"
-          title={userName}
-          image={avatarSource}
-        />
-        {children}
-        {rightAlignedLink}
-        {logoutFunction && (
-          <StyledLink white bold onClick={logoutFunction}>
-            <Icon icon={["fas", "lock"]} colour="white" />
-            Logout
-          </StyledLink>
-        )}
-      </MobileNavMenu>
-      <Overlay htmlFor="mobileMenuToggle" />
+          <MobileMenuToggle htmlFor="mobileMenuToggle" theme={theme}>
+            <Hamburger />
+          </MobileMenuToggle>
+        </Bar>
+        <MobileNavMenu>
+          <Spacer p={4} display="block">
+            <Box
+              borderBottomWidth={1}
+              borderBottomStyle="solid"
+              borderBottomColor="white20"
+              paddingTop={3}
+            >
+              <Avatar
+                type="inverted"
+                sizing="small"
+                title={userName}
+                image={avatarSource}
+                theme={theme}
+              />
+            </Box>
+            {children}
+            {rightAlignedLink}
+            {logoutFunction && (
+              <StyledLink white bold onClick={logoutFunction}>
+                <Icon icon={["fas", "lock"]} colour="white" />
+                Logout
+              </StyledLink>
+            )}
+          </Spacer>
+        </MobileNavMenu>
+        <Overlay htmlFor="mobileMenuToggle" />
+      </ThemeProvider>
     </>
   );
 }
@@ -323,6 +338,8 @@ Header.propTypes = {
   logoutFunction: PropTypes.func,
   /** Can specify a link that will be rendered on the right side of the header */
   rightAlignedLink: PropTypes.node,
+  /** Applies the chosen theme to the entire header. */
+  theme: PropTypes.object,
   /** Navigation links are rendered as child components. */
   children: PropTypes.oneOfType([
     PropTypes.node,
@@ -330,4 +347,6 @@ Header.propTypes = {
   ])
 };
 
-export { RightAlignedLink };
+Header.defaultProps = {
+  theme: systemtheme
+};

@@ -40,7 +40,7 @@ export {
 } from "./components/Sidebar";
 export { default as Spacer } from "./components/Spacer";
 export { default as StatusDot } from "./components/StatusDot";
-export { default as StyledLink } from "./components/StyledLink";
+export { default as StyledLink, styleLink } from "./components/StyledLink";
 export { Tab, TabsContainer } from "./components/Tabs";
 export { default as Tag } from "./components/Tag";
 export { default as TextInput } from "./components/TextInput";

@@ -1,6 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+import { space } from "styled-system";
 
 /**
  * Using 3rd party icons from Font Awesome.
@@ -13,6 +15,8 @@ import PropTypes from "prop-types";
  *
  * To get started you can import the icons into Font Awesome library. Alternatively if you want to use their full icon set you need to purchase a PRO plan from Font awesome, and can install the full pro icon packages in your app. See the readme here for more details on how to use and install PRO: <https://github.com/orchestrated-io/orca-design-system>
  */
+
+const IconWrapper = styled("span")(space);
 
 export default function Icon({
   border,
@@ -29,26 +33,29 @@ export default function Icon({
   spin,
   symbol,
   transform,
-  color
+  color,
+  ...props
 }) {
   return (
-    <FontAwesomeIcon
-      border={border}
-      color={color}
-      mask={mask}
-      fixedWidth={fixedWidth}
-      inverse={inverse}
-      flip={flip}
-      listitem={listitem}
-      pull={pull}
-      rotation={rotation}
-      icon={icon}
-      pulse={pulse}
-      size={size}
-      spin={spin}
-      symbol={symbol}
-      transform={transform}
-    />
+    <IconWrapper {...props}>
+      <FontAwesomeIcon
+        border={border}
+        color={color}
+        mask={mask}
+        fixedWidth={fixedWidth}
+        inverse={inverse}
+        flip={flip}
+        listitem={listitem}
+        pull={pull}
+        rotation={rotation}
+        icon={icon}
+        pulse={pulse}
+        size={size}
+        spin={spin}
+        symbol={symbol}
+        transform={transform}
+      />
+    </IconWrapper>
   );
 }
 

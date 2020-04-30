@@ -3,9 +3,12 @@ import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import colours from "../../colours";
 import variables from "../../variables";
+import { space, layout } from "styled-system";
 import { rgba } from "polished";
 
 const Container = styled.div`
+${space}
+${layout}
   display: ${props =>
     props.inlineBlock ? "inline-block !important" : "block !important"};
   position: relative;
@@ -146,10 +149,11 @@ export default function Popover({
   width,
   textAlign,
   text,
-  inlineBlock
+  inlineBlock,
+  ...props
 }) {
   return (
-    <Container inlineBlock={inlineBlock}>
+    <Container inlineBlock={inlineBlock} {...props}>
       <Text textAlign={textAlign} direction={direction} width={width}>
         {text}
       </Text>

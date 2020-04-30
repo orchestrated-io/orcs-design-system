@@ -23,7 +23,7 @@ export const fontWeights = [300, 400, 600];
 export const lineHeights = [1, 1.5, 2];
 
 // Z-AXIS spec
-export const zIndex = [-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+export const zIndices = [-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // SPACING
 export const space = [
@@ -138,12 +138,21 @@ export const transition = { transitionDefault: "all 200ms ease-in-out" };
 
 // RESPONSIVE MEDIA BREAKPOINTS
 export const breakpoints = ["450px", "675px", "900px", "1100px", "1400px"];
+
 export const mediaQueries = {
   screenXS: `@media screen and (min-width: ${breakpoints[0]})`,
   screenS: `@media screen and (min-width: ${breakpoints[1]})`,
   screenM: `@media screen and (min-width: ${breakpoints[2]})`,
   screenL: `@media screen and (min-width: ${breakpoints[3]})`,
   screenXL: `@media screen and (min-width: ${breakpoints[4]})`
+};
+
+// APP-SPECIFIC DIMENSIONS
+
+export const appScale = {
+  navBarSize: "54px",
+  sidebarMaxWidth: "360px",
+  mobileNavMenuWidth: "250px"
 };
 
 export default {
@@ -158,5 +167,8 @@ export default {
   sizes,
   shadows,
   colors,
-  transition
+  breakpoints,
+  transition,
+  zIndices,
+  appScale
 };
