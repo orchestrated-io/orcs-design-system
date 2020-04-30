@@ -25,7 +25,7 @@ const Bar = styled("header")(
     px: 4,
     bg: "black",
     "a[class^='StyledLink'], a[class*=' StyledLink']": {
-      display: ["none", "none", "none", "block", "block"]
+      display: ["none", "none", "none", "none", "block", "block"]
     }
   }),
   space
@@ -45,7 +45,10 @@ const AppName = styled("div")(
     color: "white",
     borderRightStyle: "solid",
     borderRightColor: "white20",
-    borderRightWidth: 1
+    borderRightWidth: 1,
+    "a[class^='StyledLink'], a[class*=' StyledLink']": {
+      display: "block"
+    }
   }),
   space
 );
@@ -62,7 +65,7 @@ const RightAlignedChildren = styled("div")(
 
 const HeaderAvatar = styled(Avatar)(
   css({
-    display: ["none", "none", "none", "flex", "flex"]
+    display: ["none", "none", "none", "none", "flex", "flex"]
   })
 );
 
@@ -74,7 +77,7 @@ const MobileMenuToggle = styled("label")(
     background: "none",
     border: "none",
     pb: 3,
-    display: ["block", "block", "block", "none", "none"],
+    display: ["block", "block", "block", "block", "none", "none"],
     ml: "auto",
     "&:hover, &:focus": {
       outline: "0",
@@ -144,22 +147,22 @@ const MobileNavToggle = styled("input")(props =>
       transition: "transitionDefault"
     },
     "&:checked": {
-      "+ div > div > a": {
-        opacity: "1",
-        transform: "translateX(0)",
-        ":nth-of-type(1)": { transitionDelay: "0.10s" },
-        ":nth-of-type(2)": { transitionDelay: "0.20s" },
-        ":nth-of-type(3)": { transitionDelay: "0.30s" },
-        ":nth-of-type(4)": { transitionDelay: "0.40s" },
-        ":nth-of-type(5)": { transitionDelay: "0.50s" },
-        ":nth-of-type(6)": { transitionDelay: "0.60s" },
-        ":nth-of-type(7)": { transitionDelay: "0.70s" },
-        ":nth-of-type(8)": { transitionDelay: "0.80s" },
-        ":nth-of-type(9)": { transitionDelay: "0.90s" },
-        ":nth-of-type(10)": { transitionDelay: "1s" },
-        ":nth-of-type(11)": { transitionDelay: "1.10s" }
-      },
-      "+ div": {
+      "~ [class^='Header__MobileNavMenu'], ~ [class*=' Header__MobileNavMenu']": {
+        "[class^='StyledLink'], [class*=' StyledLink']": {
+          ":nth-of-type(1)": { transitionDelay: "0.10s" },
+          ":nth-of-type(2)": { transitionDelay: "0.20s" },
+          ":nth-of-type(3)": { transitionDelay: "0.30s" },
+          ":nth-of-type(4)": { transitionDelay: "0.40s" },
+          ":nth-of-type(5)": { transitionDelay: "0.50s" },
+          ":nth-of-type(6)": { transitionDelay: "0.60s" },
+          ":nth-of-type(7)": { transitionDelay: "0.70s" },
+          ":nth-of-type(8)": { transitionDelay: "0.80s" },
+          ":nth-of-type(9)": { transitionDelay: "0.90s" },
+          ":nth-of-type(10)": { transitionDelay: "1s" },
+          ":nth-of-type(11)": { transitionDelay: "1.10s" },
+          opacity: "1",
+          transform: "translateX(0px)"
+        },
         transform:
           "translateX(-" + themeGet("appScale.mobileNavMenuWidth")(props) + ")"
       },
@@ -168,23 +171,28 @@ const MobileNavToggle = styled("input")(props =>
           "translateX(-" + themeGet("appScale.mobileNavMenuWidth")(props) + ")"
       },
       "~ header": {
-        transform: "translateX(-250px)",
-        /* Hamburger */
-        span: {
+        transform:
+          "translateX(-" + themeGet("appScale.mobileNavMenuWidth")(props) + ")"
+      },
+      /* Hamburger */
+      "~ [class^='Header__Bar'], ~ [class*=' Header__Bar']": {
+        "[class^='Header__Hamburger'], [class*=' Header__Hamburger']": {
           bg: "transparent" /* fade away the middle line */,
           "&:hover,&:focus": {
             bg: "transparent"
           },
-          "::before, ::after": {
+          "::before": {
             transition:
               "top 300ms cubic-bezier(0.165, 0.84, 0.44, 1), transform 300ms cubic-bezier(0.165, 0.84, 0.44, 1)",
             top: 0,
-            width: 5
-          },
-          "::before": {
+            width: 5,
             transform: "rotate3d(0,0,1,45deg) scale(1.1)"
           },
           "::after": {
+            transition:
+              "top 300ms cubic-bezier(0.165, 0.84, 0.44, 1), transform 300ms cubic-bezier(0.165, 0.84, 0.44, 1)",
+            top: 0,
+            width: 5,
             transform: "rotate3d(0,0,1,-45deg) scale(1.1)"
           }
         }
@@ -209,7 +217,7 @@ const MobileNavMenu = styled("div")(props =>
     zIndex: 6,
     transition: "transitionDefault",
     a: {
-      transform: "100px",
+      transform: "translateX(100px)",
       display: "block",
       py: 3,
       px: 4,
@@ -251,6 +259,7 @@ export default function Header({
   return (
     <>
       <ThemeProvider theme={theme}>
+        <MobileNavToggle type="checkbox" id="mobileMenuToggle" />
         <Bar theme={theme}>
           <AppName>{appName}</AppName>
           <Spacer ml={4}>{children}</Spacer>
@@ -284,13 +293,13 @@ export default function Header({
             <Hamburger />
           </MobileMenuToggle>
         </Bar>
-        <MobileNavToggle type="checkbox" id="mobileMenuToggle" />
         <MobileNavMenu>
           <Spacer p={4} display="block">
             <Box
               borderBottomWidth={1}
               borderBottomStyle="solid"
               borderBottomColor="white20"
+              paddingTop={3}
             >
               <Avatar
                 type="inverted"
