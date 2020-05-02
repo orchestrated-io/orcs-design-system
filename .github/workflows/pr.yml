@@ -29,6 +29,8 @@ jobs:
           npm run bootstrap
           npm run lint
           npm run test
+        env:
+          HUSKY_SKIP_INSTALL: 1
       - name: run security audit of npm packages
         run: |
           npm run audit-ci
