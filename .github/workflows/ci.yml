@@ -28,6 +28,7 @@ jobs:
           npm run dist
         env:
           HUSKY_SKIP_INSTALL: 1
+          CI: true
       - name: run security audit of npm packages
         run: |
           npm run audit-ci
