@@ -1,6 +1,7 @@
 import React from "react";
 import RadioButton from ".";
 import Layout from "../Layout";
+import Flex from "../Flex";
 
 export default {
   title: "Components/RadioButton",
@@ -79,4 +80,16 @@ export const onDarkBackground = () => (
       />
     </Layout>
   </>
+);
+
+export const asButton = () => (
+  <Flex>
+    <RadioButton name="RadioButtons" label="Option 1" asButton checked />
+
+    <RadioButton name="RadioButtons" label="Option 2" asButton />
+
+    <RadioButton name="RadioButtons" label="Option 3" asButton />
+
+    <RadioButton name="RadioButtons" label="Option 4" asButton />
+  </Flex>
 );

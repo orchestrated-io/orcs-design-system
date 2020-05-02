@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
+import { rgba } from "polished";
 import colours from "../../colours";
 import variables from "../../variables";
-import { rgba } from "polished";
 
 const Item = styled.div`
   display: block;
@@ -13,7 +14,29 @@ const Item = styled.div`
 `;
 
 const Label = styled.label`
-  display: flex;
+  ${props =>
+    props.asButton
+      ? css`
+          border: 2px solid #444;
+          display: inline-block;
+          margin-top: ${themeGet("space.3")};
+          margin-bottom: ${themeGet("space.3")};
+          transition: ${themeGet("transition.transitionDefault")};
+          font-family: ${themeGet("font")};
+          font-weight: ${themeGet("fontWeights.2")};
+          padding: 8px 14px;
+          -moz-appearance: none;
+          -webkit-appearance: none;
+          appearance: none;
+          box-shadow: none;
+          text-decoration: none;
+          color: ${colours["white"]};
+          background-color: ${props =>
+            props.checked ? colours["white"] : "#5e686d"};
+        `
+      : css`
+          display: flex;
+        `};
   align-items: center;
   cursor: ${props => (props.disabled ? "default" : "pointer")};
   opacity: ${props => (props.disabled ? "0.5" : "1")};
@@ -31,65 +54,79 @@ const Control = styled.input.attrs({
   overflow: hidden;
   pointer-events: none;
 
-  &:focus {
-    + div {
-      border-radius: 10px;
-      box-shadow: 0 0 0 3px
-        ${props =>
-          props.colour && colours[props.colour]
-            ? rgba(colours[props.colour], 0.4)
-            : rgba(colours.greyDarker, 0.4)};
-    }
-  }
+  ${props =>
+    props.asButton
+      ? css`
+          :checked {
+            + div {
+              background-color: ${colours["white"]};
+            }
+            &:before {
+              background-color: ${colours["greyLight"]};
+            }
+          }
+        `
+      : css`
+          &:focus {
+            + div {
+              border-radius: 10px;
+              box-shadow: 0 0 0 3px
+                ${props =>
+                  props.colour && colours[props.colour]
+                    ? rgba(colours[props.colour], 0.4)
+                    : rgba(colours.greyDarker, 0.4)};
+            }
+          }
 
-  /* Targeting circle */
-  + div {
-    transition: ${variables.defaultTransition};
-    &:before {
-      background-color: ${props =>
-        props.colour && colours[props.colour]
-          ? colours[props.colour]
-          : colours.greyDarker};
-    }
-    > div {
-      color: ${props =>
-        props.colour && colours[props.colour]
-          ? colours[props.colour]
-          : colours.greyDarker};
-    }
-  }
+          /* Targeting circle */
+          + div {
+            transition: ${variables.defaultTransition};
+            &:before {
+              background-color: ${props =>
+                props.colour && colours[props.colour]
+                  ? colours[props.colour]
+                  : colours.greyDarker};
+            }
+            > div {
+              color: ${props =>
+                props.colour && colours[props.colour]
+                  ? colours[props.colour]
+                  : colours.greyDarker};
+            }
+          }
 
-  :not(:checked) + div:before {
-    animation: rippleOff 700ms forwards ease-out;
-  }
+          :not(:checked) + div:before {
+            animation: rippleOff 700ms forwards ease-out;
+          }
 
-  :checked + div:before {
-    animation: rippleOn 700ms forwards ease-out;
-  }
+          :checked + div:before {
+            animation: rippleOn 700ms forwards ease-out;
+          }
 
-  /* Targeting Check */
-  :focus + div div:after {
-    opacity: 0.2;
-  }
+          /* Targeting Check */
+          :focus + div div:after {
+            opacity: 0.2;
+          }
 
-  :checked {
-    + div div:before {
-      box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px,
-        0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
-      animation: checkboxOn 300ms forwards ease-out;
-    }
-    + div div:after {
-      animation: rippleOn 700ms forwards ease-out;
-    }
-  }
+          :checked {
+            + div div:before {
+              box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px,
+                0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+              animation: checkboxOn 300ms forwards ease-out;
+            }
+            + div div:after {
+              animation: rippleOn 700ms forwards ease-out;
+            }
+          }
 
-  :not(:checked) + div div:after {
-    animation: rippleOff 700ms forwards ease-out;
-  }
+          :not(:checked) + div div:after {
+            animation: rippleOff 700ms forwards ease-out;
+          }
 
-  + div div:before {
-    animation: checkboxOff 300ms forwards ease-out;
-  }
+          + div div:before {
+            animation: checkboxOff 300ms forwards ease-out;
+          }
+        `}
 `;
 
 const Circle = styled.div`
@@ -157,11 +194,12 @@ export default function RadioButton({
   colour,
   disabled,
   checked,
-  onChange
+  onChange,
+  asButton
 }) {
   return (
     <Item colour={colour}>
-      <Label disabled={disabled}>
+      <Label disabled={disabled} asButton={asButton} checked={checked}>
         <Control
           name={name}
           value={value}
@@ -169,10 +207,13 @@ export default function RadioButton({
           disabled={disabled}
           checked={checked}
           onChange={onChange}
+          asButton={asButton}
         />
-        <Circle colour={colour}>
-          <Check />
-        </Circle>
+        {!asButton && (
+          <Circle colour={colour}>
+            <Check />
+          </Circle>
+        )}
         <Text>{label}</Text>
       </Label>
     </Item>
@@ -193,5 +234,7 @@ RadioButton.propTypes = {
   /** Applies checked attribute and styling */
   checked: PropTypes.bool,
   /** Function to call when checked */
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  /** render radio button as button */
+  asButton: PropTypes.bool
 };
