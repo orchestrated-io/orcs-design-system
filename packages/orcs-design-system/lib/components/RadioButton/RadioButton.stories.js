@@ -84,12 +84,18 @@ export const onDarkBackground = () => (
 
 export const asButton = () => (
   <Flex>
-    <RadioButton name="RadioButtons" label="Option 1" asButton checked />
+    <RadioButton
+      name="RadioButtons"
+      label="Option 1"
+      asButton
+      checked
+      side="left"
+    />
 
     <RadioButton name="RadioButtons" label="Option 2" asButton />
 
     <RadioButton name="RadioButtons" label="Option 3" asButton />
 
-    <RadioButton name="RadioButtons" label="Option 4" asButton />
+    <RadioButton name="RadioButtons" label="Option 4" asButton side="right" />
   </Flex>
 );

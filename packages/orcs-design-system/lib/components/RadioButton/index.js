@@ -13,32 +13,57 @@ const Item = styled.div`
     props.colour === "white" ? colours.white : colours.greyDarkest};
 `;
 
+const getBorderRadius = props => {
+  if (props.side === "right") {
+    return "0 6px 6px 0";
+  }
+  if (props.side === "left") {
+    return "6px 0 0 6px";
+  }
+  return "0";
+};
+
 const Label = styled.label`
   ${props =>
     props.asButton
       ? css`
-          border: 2px solid #444;
-          display: inline-block;
+          height: 33px;
+          border-radius: ${getBorderRadius};
+          border-right: ${props =>
+            props.side === "right"
+              ? `2px solid ${colours["greyDarker"]}`
+              : "none"};
+          border-top: ${`2px solid ${colours["greyDarker"]}`};
+          border-bottom: ${`2px solid ${colours["greyDarker"]}`};
+          border-left: ${`2px solid ${colours["greyDarker"]}`};
+          display: flex;
+          align-items: center;
           margin-top: ${themeGet("space.3")};
           margin-bottom: ${themeGet("space.3")};
           transition: ${themeGet("transition.transitionDefault")};
-          font-family: ${themeGet("font")};
-          font-weight: ${themeGet("fontWeights.2")};
-          padding: 8px 14px;
+          font-weight: ${themeGet("fontWeights.1")};
+          font-size: ${themeGet("fontSizes.1")};
+          padding: 0 ${themeGet("space.3")};
           -moz-appearance: none;
           -webkit-appearance: none;
           appearance: none;
           box-shadow: none;
           text-decoration: none;
-          color: ${colours["white"]};
+          cursor: ${props => (props.checked ? "default" : "pointer")};
           background-color: ${props =>
             props.checked ? colours["white"] : "#5e686d"};
+          color: ${props =>
+            props.checked ? colours["greyDarker"] : colours["white"]};
+          &:hover {
+            background-color: ${props =>
+              props.checked ? colours["white"] : colours["primary"]};
+          }
         `
       : css`
           display: flex;
+          cursor: ${props => (props.disabled ? "default" : "pointer")};
         `};
   align-items: center;
-  cursor: ${props => (props.disabled ? "default" : "pointer")};
   opacity: ${props => (props.disabled ? "0.5" : "1")};
 `;
 
@@ -195,11 +220,17 @@ export default function RadioButton({
   disabled,
   checked,
   onChange,
-  asButton
+  asButton,
+  side
 }) {
   return (
     <Item colour={colour}>
-      <Label disabled={disabled} asButton={asButton} checked={checked}>
+      <Label
+        disabled={disabled}
+        asButton={asButton}
+        checked={checked}
+        side={side}
+      >
         <Control
           name={name}
           value={value}
