@@ -267,5 +267,7 @@ RadioButton.propTypes = {
   /** Function to call when checked */
   onChange: PropTypes.func,
   /** render radio button as button */
-  asButton: PropTypes.bool
+  asButton: PropTypes.bool,
+  /** indicate this side if the radio butoon in a group, left, right or middle (Temporary solution)*/
+  side: PropTypes.string
 };
