@@ -233,7 +233,7 @@ const Overlay = styled("label")(
     top: 0,
     left: 0,
     height: "100vh",
-    width: "100%",
+    width: "auto",
     bg: "black50",
     zIndex: 0,
     opacity: "0",
