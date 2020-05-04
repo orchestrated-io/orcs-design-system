@@ -9,6 +9,10 @@ export { default as Avatar } from "./components/Avatar";
 export { default as Badge } from "./components/Badge";
 export { default as Box } from "./components/Box";
 export { default as Button } from "./components/Button";
+export {
+  ButtonGroupContainer,
+  ButtonGroupItem
+} from "./components/ButtonGroup";
 export { default as Card } from "./components/Card";
 export { default as Checkbox } from "./components/Checkbox";
 export { default as ContentTabs } from "./components/ContentTabs";

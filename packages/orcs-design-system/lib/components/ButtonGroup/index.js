@@ -8,7 +8,7 @@ const ButtonGroupControlLabel = styled.div`
   color: ${themeGet("colors.white")};
   font-size: ${themeGet("fontSizes.1")};
   font-weight: ${themeGet("fontWeights.1")};
-  margin-right: ${themeGet("space.2")};
+  margin-right: ${themeGet("space.3")};
 `;
 
 const ButtonGroupWrapper = styled.div`

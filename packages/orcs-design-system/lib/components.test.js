@@ -11,6 +11,8 @@ test("all components exported", () => {
     "Badge",
     "Box",
     "Button",
+    "ButtonGroupContainer",
+    "ButtonGroupItem",
     "Card",
     "Checkbox",
     "ContentTabs",
