@@ -23,7 +23,7 @@ export const fontWeights = [300, 400, 600];
 export const lineHeights = [1, 1.5, 2];
 
 // Z-AXIS spec
-export const zIndices = [-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+export const zIndices = [-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 50];
 
 // SPACING
 export const space = [

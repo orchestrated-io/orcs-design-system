@@ -16,7 +16,7 @@ const Bar = styled("header")(
   props => ({ height: themeGet("appScale.navBarSize")(props) }),
   css({
     width: "100%",
-    zIndex: 4,
+    zIndex: 12,
     position: "sticky",
     top: "0",
     display: "flex",
