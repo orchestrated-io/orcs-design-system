@@ -19,25 +19,19 @@ const Item = styled("div")(
   spaceStyles
 );
 
-const Spacer = ({ children, display, ...props }) => {
+const Spacer = ({ children, ...props }) => {
   const clones = React.Children.toArray(children).map(child =>
     React.cloneElement(child, { ...props })
   );
 
-  return <Item display={display}>{clones}</Item>;
+  return <Item>{clones}</Item>;
 };
 
 Spacer.propTypes = {
   ...propTypes.space,
   ...propTypes.layout,
-  /** Specifies display properties for Spacer. */
-  display: PropTypes.string,
   /** Adds margins around each child item. */
   m: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
-};
-
-Spacer.defaultProps = {
-  display: "inherit"
 };
 
 export default Spacer;

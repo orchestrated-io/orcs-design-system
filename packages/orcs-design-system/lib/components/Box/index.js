@@ -35,11 +35,7 @@ const BoxWrapper = styled("div")(
 );
 
 export default function Box({ children, ...props }) {
-  return (
-    <BoxWrapper {...boxStyles} {...props}>
-      {children}
-    </BoxWrapper>
-  );
+  return <BoxWrapper {...props}>{children}</BoxWrapper>;
 }
 
 Box.propTypes = {
