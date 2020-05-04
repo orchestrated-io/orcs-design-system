@@ -1,9 +1,11 @@
 import styled, { css } from "styled-components";
-import { color } from "styled-system";
+import { color, space, layout } from "styled-system";
 import { colors, transition, appScale } from "../../systemtheme";
 
 const Sidebar = styled.div`
   ${color}
+  ${layout}
+  ${space}
   background: ${colors.greyDarkest};
   max-width: 360px;
   min-height: calc(100vh - ${appScale.navBarSize});
@@ -17,6 +19,8 @@ const Sidebar = styled.div`
 
 export const SidebarTabs = styled.div`
   ${color}
+  ${layout}
+    ${space}
   min-width: ${appScale.navBarSize};
   display: flex;
   flex-direction: column;
@@ -28,6 +32,8 @@ export const SidebarTabs = styled.div`
 `;
 
 export const SidebarTab = styled.label`
+  ${layout}
+  ${space}
   position: relative;
   min-width: ${appScale.navBarSize};
   height: ${appScale.navBarSize};
@@ -68,10 +74,14 @@ export const SidebarTab = styled.label`
 `;
 
 export const SidebarPanels = styled.div`
+  ${layout}
+  ${space}
   position: relative;
 `;
 
 export const SidebarPanel = styled.div`
+${layout}
+${space}
   display: ${props => (props.active ? "block" : "none")};
   min-width: 300px;
   height: calc(100vh - (${appScale.navBarSize} + 72px));
@@ -80,6 +90,8 @@ export const SidebarPanel = styled.div`
 `;
 
 export const SidebarClose = styled.label`
+  ${layout}
+  ${space}
   position: absolute;
   right: -10px;
   top: 50%;
