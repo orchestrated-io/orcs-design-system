@@ -4,8 +4,6 @@ import { css } from "@styled-system/css";
 import styled from "styled-components";
 import propTypes from "@styled-system/prop-types";
 
-import PropTypes from "prop-types";
-
 const spaceStyles = compose(space, layout);
 
 const Item = styled("div")(
@@ -29,9 +27,7 @@ const Spacer = ({ children, ...props }) => {
 
 Spacer.propTypes = {
   ...propTypes.space,
-  ...propTypes.layout,
-  /** Adds margins around each child item. */
-  m: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+  ...propTypes.layout
 };
 
 export default Spacer;

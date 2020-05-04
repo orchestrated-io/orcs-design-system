@@ -17,7 +17,7 @@ const Sidebar = styled.div`
 
 export const SidebarTabs = styled.div`
   ${color}
-  min-width: 60px;
+  min-width: ${appScale.navBarSize};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,8 +29,8 @@ export const SidebarTabs = styled.div`
 
 export const SidebarTab = styled.label`
   position: relative;
-  min-width: 60px;
-  height: 60px;
+  min-width: ${appScale.navBarSize};
+  height: ${appScale.navBarSize};
   display: flex;
   align-items: center;
   justify-content: center;
