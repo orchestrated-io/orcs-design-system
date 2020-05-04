@@ -237,6 +237,7 @@ const Overlay = styled("label")(
     bg: "black50",
     zIndex: 0,
     opacity: "0",
+    overflow: "hidden",
     transition: "transitionDefault"
   })
 );
