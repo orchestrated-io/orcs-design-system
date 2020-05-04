@@ -18,23 +18,14 @@ export default {
 
 export const defaultButtonGroup = () => (
   <ButtonGroupContainer controlLabel="View:">
+    <ButtonGroupItem name="viewMode" label="Chapters" value="Chapters view" />
     <ButtonGroupItem
-      asButton
-      side="left"
-      name="viewMode"
-      label="Chapters"
-      value="Chapters view"
-    />
-    <ButtonGroupItem
-      asButton
       name="viewMode"
       label="Groups"
       value="Groups view"
       checked={true}
     />
     <ButtonGroupItem
-      asButton
-      side="right"
       name="viewMode"
       label="Constraints"
       value="Constraints view"
