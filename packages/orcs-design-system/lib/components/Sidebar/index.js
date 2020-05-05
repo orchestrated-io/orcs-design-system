@@ -14,7 +14,6 @@ const Sidebar = styled.div`
   display: flex;
   align-items: stretch;
   align-content: stretch;
-  width: auto;
 `;
 
 export const SidebarTabs = styled.div`
