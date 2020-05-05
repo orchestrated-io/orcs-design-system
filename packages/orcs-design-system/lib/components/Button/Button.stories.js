@@ -17,7 +17,7 @@ defaultButton.story = {
 };
 
 export const alternateSize = () => (
-  <Spacer>
+  <Spacer my="3">
     <Button small onClick={action("clicked")}>
       Small button
     </Button>
@@ -31,7 +31,7 @@ alternateSize.story = {
 };
 
 export const alternateColours = () => (
-  <Spacer>
+  <Spacer my="3">
     <Button variant="success" onClick={action("clicked")}>
       Success/green button
     </Button>
@@ -45,7 +45,7 @@ alternateColours.story = {
 };
 
 export const ghost = () => (
-  <Spacer>
+  <Spacer my="3">
     <Button small variant="ghost" onClick={action("clicked")}>
       Small ghost button
     </Button>
@@ -76,7 +76,7 @@ disabled.story = {
 };
 
 export const loading = () => (
-  <Spacer>
+  <Spacer my="3">
     <Button isLoading>Loading...</Button>
     <Button isLoading variant="success">
       Saving...
@@ -91,7 +91,7 @@ loading.story = {
 };
 
 export const withIcon = () => (
-  <Spacer>
+  <Spacer my="3">
     <Button iconLeft>
       <Icon icon={["fas", "user-plus"]} />
       Left aligned icon
@@ -107,7 +107,7 @@ withIcon.story = {
 };
 
 export const iconOnly = () => (
-  <Spacer>
+  <Spacer my="3">
     <Button small iconOnly>
       <Icon icon={["far", "calendar-alt"]} />
     </Button>

@@ -115,7 +115,6 @@ const Item = styled.button`
   text-align: center;
   font-family: ${themeGet("font")};
   font-weight: ${themeGet("fontWeights.2")};
-  margin: ${themeGet("space.3")};
   border-radius: ${themeGet("radii.2")};
   transition: ${themeGet("transition.transitionDefault")};
   cursor: ${props =>
