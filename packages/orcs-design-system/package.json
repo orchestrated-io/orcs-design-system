@@ -1,6 +1,6 @@
 {
   "name": "orcs-design-system",
-  "version": "0.9.31",
+  "version": "0.9.32",
   "description": "Orchestrated Design System: ORCS",
   "main": "es/index.js",
   "module": "es/index.js",
@@ -133,5 +133,5 @@
       "pre-commit": "lint-staged && CI=true npm test"
     }
   },
-  "gitHead": "69f16f52a88aa7700b72e66285fec7ea49a516f8"
+  "gitHead": "c9ce7dec4754041c8e86eb0d39e785a88744b1f5"
 }
