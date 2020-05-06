@@ -210,15 +210,15 @@ h6 {
 @keyframes crossTransform1 {
   0% {
     transform: translate(0, -6px);
-  }
-  25% {
-    transform: translate(0, 0)
+    border-radius: 2px;
   }
   50% {
-    transform: translate(0, 0)
+    transform: translate(0, 0);
+    border-radius: 2px;
   }
   75% {
     transform: rotate(-45deg) translate(0, 0);
+    border-radius: 2px;
   }
   100% {
     transform: rotate(-45deg) translate(0, 0) scaleX(4);
@@ -228,15 +228,15 @@ h6 {
 @keyframes crossTransform2 {
   0% {
     transform: translate(0, 6px);
-  }
-  25% {
-    transform: translate(0, 0)
+    border-radius: 2px;
   }
   50% {
-    transform: translate(0, 0)
+    transform: translate(0, 0);
+    border-radius: 2px;
   }
   75% {
     transform: rotate(45deg) translate(0, 0);
+    border-radius: 2px;
   }
   100% {
     transform: rotate(45deg) translate(0, 0) scaleX(4);
