@@ -5,6 +5,7 @@ export { default as SystemThemeProvider } from "./SystemThemeProvider";
 export { default as variables } from "./variables";
 export { default as colours } from "./colours";
 
+export { default as ActionsMenu } from "./components/ActionsMenu";
 export { default as Avatar } from "./components/Avatar";
 export { default as Badge } from "./components/Badge";
 export { default as Box } from "./components/Box";

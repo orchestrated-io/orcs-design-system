@@ -207,6 +207,42 @@ h6 {
     transform: scale(1);
   }
 }
+@keyframes crossTransform1 {
+  0% {
+    transform: translate(0, -6px);
+  }
+  25% {
+    transform: translate(0, 0)
+  }
+  50% {
+    transform: translate(0, 0)
+  }
+  75% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+  100% {
+    transform: rotate(-45deg) translate(0, 0) scaleX(4);
+    border-radius: 0;
+  }
+}
+@keyframes crossTransform2 {
+  0% {
+    transform: translate(0, 6px);
+  }
+  25% {
+    transform: translate(0, 0)
+  }
+  50% {
+    transform: translate(0, 0)
+  }
+  75% {
+    transform: rotate(45deg) translate(0, 0);
+  }
+  100% {
+    transform: rotate(45deg) translate(0, 0) scaleX(4);
+    border-radius: 0;
+  }
+}
 `;
 
 export default GlobalStyles;

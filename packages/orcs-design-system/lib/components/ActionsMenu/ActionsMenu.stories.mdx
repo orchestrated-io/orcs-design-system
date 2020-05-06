@@ -1,0 +1,21 @@
+import * as stories from './ActionsMenu.stories.js';
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import ActionsMenu from ".";
+
+<Meta title="Components/ActionsMenu" component={ActionsMenu} />
+
+# Actions Menu
+
+[Default actions menu](#default-actions-menu) | [Properties](#properties)
+
+This component should be used when an item in the UI has multiple actions that can be taken on it.
+
+## Default actions menu
+
+<Preview>
+  <Story name="defaultActionsMenu">{stories.defaultActionsMenu()}</Story>
+</Preview>
+
+## Properties
+
+<Props of={ActionsMenu} />
