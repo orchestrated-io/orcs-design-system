@@ -30,12 +30,16 @@ export const TabItem = styled("div")(
         fontSize: 1,
         fontWeight: 2,
         color: "greyDark",
-        display: "block",
+        display: "flex",
+        alignItems: "center",
         position: "relative",
         whiteSpace: "nowrap",
         textDecoration: "none",
         textAlign: "center",
-        textTransform: "uppercase"
+        textTransform: "uppercase",
+        button: {
+          marginLeft: 2
+        }
       },
       "&:hover": {
         a: {

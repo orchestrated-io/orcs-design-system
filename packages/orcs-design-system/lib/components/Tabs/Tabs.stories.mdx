@@ -1,5 +1,6 @@
 import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
 import Box from "../Box";
+import Tooltip from "../Tooltip";
 import { TabsContainer, Tab } from ".";
 
 <Meta title="Components/Tabs" component={TabsContainer} />
@@ -13,10 +14,17 @@ Tabs are intended to provide a way to navigate between distinct sections within 
     <Box bg="greyLightest" p={4}>
       <TabsContainer>
         <Tab>
-          <a href="#">Details</a>
+          <a href="#">
+            Details
+            <Tooltip direction="top">
+              Example with tooltip explaining tab
+            </Tooltip>
+          </a>
         </Tab>
         <Tab active>
-          <a href="#" tabIndex="-1">Additional information</a>
+          <a href="#" tabIndex="-1">
+            Additional information
+          </a>
         </Tab>
         <Tab notification="97">
           <a href="#">Planning</a>
