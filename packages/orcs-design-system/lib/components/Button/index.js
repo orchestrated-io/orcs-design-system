@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import { space, layout, color, border } from "styled-system";
 import { rgba } from "polished";
 import { themeGet } from "@styled-system/theme-get";
+import systemtheme from "../../systemtheme";
 
 const variantMap = {
   default: {
@@ -170,6 +171,7 @@ export default function Button({
   iconRight,
   iconOnly,
   variant = "default",
+  theme,
   children,
   ...props
 }) {
@@ -189,6 +191,7 @@ export default function Button({
       bg={buttonColour}
       color={textColour}
       borderColor={borderColour}
+      theme={theme}
       borderWidth="1px"
       borderStyle="solid"
       {...props}
@@ -216,5 +219,11 @@ Button.propTypes = {
   /** Styles button to suit having only an icon. Uses Icon component. */
   iconOnly: PropTypes.bool,
   /** The text label on the button is passed as a child. Keep this text short and descriptive. Use an action word or confirmation if possible. */
-  children: PropTypes.node
+  children: PropTypes.node,
+  /** Specifies the color theme object. */
+  theme: PropTypes.object
+};
+
+Button.defaultProps = {
+  theme: systemtheme
 };
