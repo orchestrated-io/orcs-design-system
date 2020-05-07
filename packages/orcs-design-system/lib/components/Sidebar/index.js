@@ -56,7 +56,8 @@ export const SidebarTab = styled("label").attrs(props => ({
       bg: props.active ? "greyDarker" : "transparent",
       cursor: props.active ? "default" : "pointer",
       "&:hover": {
-        bg: props.active ? "greyDarker" : "black20"
+        bg: props.active ? "greyDarker" : "black20",
+        color: props.active ? "primary" : "warning"
       },
       "&.Sidebar__Badge": {
         "&::before": {
