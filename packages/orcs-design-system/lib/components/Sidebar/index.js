@@ -176,3 +176,11 @@ Sidebar.propTypes = {
 Sidebar.defaultProps = {
   theme: systemtheme
 };
+
+SidebarTabs.defaultProps = {
+  theme: systemtheme
+};
+
+SidebarTab.defaultProps = {
+  theme: systemtheme
+};
