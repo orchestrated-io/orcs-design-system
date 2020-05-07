@@ -1,131 +1,176 @@
-import styled, { css } from "styled-components";
-import { color, space, layout } from "styled-system";
-import { colors, transition, appScale } from "../../systemtheme";
+import React from "react";
+import styled from "styled-components";
+import { compose, space, layout } from "styled-system";
+import { css } from "@styled-system/css";
+import { themeGet } from "@styled-system/theme-get";
+import systemtheme from "../../systemtheme";
+import PropTypes from "prop-types";
 
-const Sidebar = styled.div`
-  ${color}
-  ${layout}
-  ${space}
-  background: ${colors.greyDarkest};
-  max-width: 360px;
-  min-height: calc(100vh - ${appScale.navBarSize});
-  height: 100%;
-  color: white;
-  display: flex;
-  align-items: stretch;
-  align-content: stretch;
-`;
+const SidebarStyles = compose(space, layout);
 
-export const SidebarTabs = styled.div`
-  ${color}
-  ${layout}
-    ${space}
-  min-width: ${appScale.navBarSize};
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  justify-content: flex-start;
-  min-height: calc(100vh - ${appScale.navBarSize});
-  height: 100%;
-`;
+const SidebarWrapper = styled("div")(
+  props =>
+    css({
+      bg: "greyDarkest",
+      color: "white",
+      minHeight: "calc(100vh - " + themeGet("appScale.navBarSize")(props) + ")",
+      height: "100%",
+      maxWidth: themeGet("appScale.sidebarMaxWidth")(props),
+      fontFamily: "main",
+      display: "flex",
+      alignItems: "stretch",
+      alignContent: "stretch"
+    }),
+  SidebarStyles
+);
 
-export const SidebarTab = styled.label`
-  ${layout}
-  ${space}
-  position: relative;
-  min-width: ${appScale.navBarSize};
-  height: ${appScale.navBarSize};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  transition: ${transition.transitionDefault};
-  color: ${props => (props.active ? colors.primary : colors.greyLightest)};
-  background: ${props => (props.active ? colors.greyDarker : "transparent")};
-  cursor: ${props => (props.active ? "default" : "pointer")};
-  &:hover,
-  &:hover {
-    background: ${props =>
-      props.active ? colors.greyDarker : "rgba(0, 0, 0, 0.15)"};
-  }
-  ${props =>
-    props.badge
-      ? css`
-        :before {
-          content: "${props.badge}";
-          position: absolute;
-          top: 5px;
-          right: 5px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 20px;
-          height: 20px;
-          border-radius: 100%;
-          font-size: 1.1rem;
-          font-weight: 600;
-          color: ${colors.white};
-          background-color: ${colors.danger};
+export const SidebarTabs = styled("div")(
+  props =>
+    css({
+      minWidth: themeGet("appScale.navBarSize")(props),
+      minHeight: "calc(100vh - " + themeGet("appScale.navBarSize")(props) + ")",
+      height: "100%",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "flex-start",
+      textAlign: "center"
+    }),
+  SidebarStyles
+);
+
+export const SidebarTab = styled("label").attrs(props => {
+  props.badge ? "Sidebar__Badge" : "";
+})(
+  props =>
+    css({
+      minWidth: themeGet("appScale.navBarSize")(props),
+      minHeight: themeGet("appScale.navBarSize")(props),
+      position: "relative",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      width: "100%",
+      transition: "transitionDefault",
+      color: props.active ? "primary" : "greyLightest",
+      bg: props.active ? "greyDarker" : "transparent",
+      cursor: props.active ? "default" : "pointer",
+      "&:hover": {
+        bg: props.active ? "greyDarker" : "black20"
+      },
+      "&.Sidebar__Badge": {
+        "&::before": {
+          content: `"${props.badge}"`,
+          position: "absolute",
+          top: 2,
+          right: 2,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: 4,
+          height: 4,
+          borderRadius: "50%",
+          fontSize: 0,
+          fontWeight: 2,
+          color: "white",
+          bg: "danger"
         }
-      `
-      : css``};
-`;
+      }
+    }),
+  SidebarStyles
+);
 
-export const SidebarPanels = styled.div`
-  ${layout}
-  ${space}
-  position: relative;
-`;
+export const SidebarPanels = styled("div")(
+  css({
+    position: "relative"
+  }),
+  SidebarStyles
+);
 
-export const SidebarPanel = styled.div`
-${layout}
-${space}
-  display: ${props => (props.active ? "block" : "none")};
-  min-width: 300px;
-  height: calc(100vh - (${appScale.navBarSize} + 72px));
-  overflow-y: auto;
-  background: ${colors.greyDarker};
-`;
+export const SidebarPanel = styled("div")(
+  props =>
+    css({
+      display: props.active ? "block" : "none",
+      minWidth:
+        "calc(" +
+        themeGet("appScale.sidebarMaxWidth")(props) +
+        " - " +
+        themeGet("appScale.navBarSize")(props) +
+        ")",
+      height:
+        "calc(100vh - ( " +
+        themeGet("appScale.navBarSize")(props) +
+        " + " +
+        themeGet("appScale.sidebarFooter")(props) +
+        "))",
+      overflowY: "auto",
+      bg: "greyDarker"
+    }),
+  SidebarStyles
+);
 
-export const SidebarClose = styled.label`
-  ${layout}
-  ${space}
-  position: absolute;
-  right: -10px;
-  top: 50%;
-  width: 22px;
-  height: 22px;
-  text-align: center;
-  padding-top: 2px;
-  border-radius: 100%;
-  margin-top: -11px;
-  z-index: 2;
-  cursor: w-resize;
-  background: ${colors.greyDarker};
-`;
+export const SidebarClose = styled("label")(
+  props =>
+    css({
+      position: "absolute",
+      right: "calc(-1 * " + themeGet("space.3")(props) + ")",
+      top: "50%",
+      width: 5,
+      height: 5,
+      textAlign: "center",
+      paddingTop: 1,
+      borderRadius: "50%",
+      zIndex: 3,
+      cursor: "w-resize",
+      bg: "greyDarker"
+    }),
+  SidebarStyles
+);
 
-export const SidebarFooter = styled.footer`
-  z-index: 5;
-  padding: 10px 20px;
-  position: relative;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: ${colors.greyDarker};
-  box-shadow: 0 -1px 0px 0px rgba(0, 0, 0, 0.3);
-  svg {
-    display: block;
-    margin-bottom: 10px;
-  }
-  small {
-    display: block;
-    font-size: 1.1rem;
-  }
-  a {
-    color: #fff;
-  }
-`;
+export const SidebarFooter = styled("footer")(
+  css({
+    zIndex: 6,
+    px: 3,
+    py: 4,
+    position: "relative",
+    bottom: 0,
+    left: 0,
+    width: "100%",
+    bg: "greyDarker",
+    boxShadow: "0 -1px 0 0 rgba(0, 0, 0, 0.3)",
+    svg: {
+      display: "block",
+      mb: 3
+    },
+    small: {
+      display: "block",
+      fontSize: 0
+    },
+    a: {
+      color: "white"
+    }
+  }),
+  SidebarStyles
+);
+
+const Sidebar = ({ children, theme, ...props }) => {
+  return (
+    <SidebarWrapper theme={theme} {...props}>
+      {children}
+    </SidebarWrapper>
+  );
+};
 
 /** @component */
 export default Sidebar;
+
+Sidebar.propTypes = {
+  /** Sidebar children are rendered as node elements */
+  children: PropTypes.node,
+  /** Specifies the colour theme */
+  theme: PropTypes.object
+};
+
+Sidebar.defaultProps = {
+  theme: systemtheme
+};
