@@ -39,9 +39,9 @@ export const SidebarTabs = styled("div")(
   SidebarStyles
 );
 
-export const SidebarTab = styled("label").attrs(props => {
-  props.badge ? "Sidebar__Badge" : "";
-})(
+export const SidebarTab = styled("label").attrs(props => ({
+  className: props.badge ? "Sidebar__Badge" : ""
+}))(
   props =>
     css({
       minWidth: themeGet("appScale.navBarSize")(props),
@@ -62,9 +62,10 @@ export const SidebarTab = styled("label").attrs(props => {
         "&::before": {
           content: `"${props.badge}"`,
           position: "absolute",
-          top: 2,
-          right: 2,
+          top: 3,
+          right: 3,
           display: "flex",
+          lineHeight: themeGet("sizes.4")(props),
           alignItems: "center",
           justifyContent: "center",
           width: 4,
