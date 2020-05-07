@@ -1,6 +1,6 @@
 {
   "name": "orcs-design-system",
-  "version": "0.9.36",
+  "version": "0.9.37",
   "description": "Orchestrated Design System: ORCS",
   "main": "es/index.js",
   "module": "es/index.js",
