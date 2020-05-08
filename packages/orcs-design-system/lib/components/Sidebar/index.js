@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { compose, space, layout } from "styled-system";
 import { css } from "@styled-system/css";
 import { themeGet } from "@styled-system/theme-get";
@@ -157,9 +157,9 @@ export const SidebarFooter = styled("footer")(
 
 const Sidebar = ({ children, theme, ...props }) => {
   return (
-    <SidebarWrapper theme={theme} {...props}>
-      {children}
-    </SidebarWrapper>
+    <ThemeProvider theme={theme}>
+      <SidebarWrapper {...props}>{children}</SidebarWrapper>
+    </ThemeProvider>
   );
 };
 
@@ -174,13 +174,5 @@ Sidebar.propTypes = {
 };
 
 Sidebar.defaultProps = {
-  theme: systemtheme
-};
-
-SidebarTabs.defaultProps = {
-  theme: systemtheme
-};
-
-SidebarTab.defaultProps = {
   theme: systemtheme
 };
