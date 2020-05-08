@@ -17,10 +17,11 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: npm ci
-        working-directory: ./packages/orcs-design-system
-      - run: npm run deploy-storybook -- --ci
-        working-directory: ./packages/orcs-design-system
+      - name: npm install and deploy
+        working-directory: packages/orcs-design-system
+        run: |
+          npm ci
+          npm run deploy-storybook -- --ci
         env:
           CI: true
           GH_TOKEN: github-orchestrated:${{ secrets.GITHUB_TOKEN }}
