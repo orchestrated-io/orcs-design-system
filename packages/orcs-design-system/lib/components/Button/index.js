@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled, { css, ThemeProvider } from "styled-components";
 import { get } from "lodash";
 import PropTypes from "prop-types";
 import { space, layout, color, border } from "styled-system";
@@ -179,25 +179,26 @@ export default function Button({
     variant
   );
   return (
-    <Item
-      large={large}
-      small={small}
-      fullWidth={fullWidth}
-      isLoading={isLoading}
-      iconLeft={iconLeft}
-      iconRight={iconRight}
-      iconOnly={iconOnly}
-      variant={variant}
-      bg={buttonColour}
-      color={textColour}
-      borderColor={borderColour}
-      theme={theme}
-      borderWidth="1px"
-      borderStyle="solid"
-      {...props}
-    >
-      {children}
-    </Item>
+    <ThemeProvider theme={theme}>
+      <Item
+        large={large}
+        small={small}
+        fullWidth={fullWidth}
+        isLoading={isLoading}
+        iconLeft={iconLeft}
+        iconRight={iconRight}
+        iconOnly={iconOnly}
+        variant={variant}
+        bg={buttonColour}
+        color={textColour}
+        borderColor={borderColour}
+        borderWidth="1px"
+        borderStyle="solid"
+        {...props}
+      >
+        {children}
+      </Item>
+    </ThemeProvider>
   );
 }
 

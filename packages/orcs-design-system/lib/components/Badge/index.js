@@ -1,9 +1,10 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { get } from "lodash";
 import PropTypes from "prop-types";
 import { space, layout, color } from "styled-system";
 import { themeGet } from "@styled-system/theme-get";
+import systemtheme from "../../systemtheme";
 
 const Item = styled.div`
   ${space}
@@ -33,15 +34,22 @@ const colourMap = {
   primaryDark: { textColour: "primaryDarkest", badgeColour: "primary" }
 };
 
-export default function Badge({ variant = "default", children, ...props }) {
+export default function Badge({
+  variant = "default",
+  children,
+  theme,
+  ...props
+}) {
   const { textColour, badgeColour } = get(colourMap, variant, {
     textColour: "greyDarker",
     badgeColour: "greyLighter"
   });
   return (
-    <Item color={textColour} bg={badgeColour} {...props}>
-      {children}
-    </Item>
+    <ThemeProvider theme={theme}>
+      <Item color={textColour} bg={badgeColour} {...props}>
+        {children}
+      </Item>
+    </ThemeProvider>
   );
 }
 
@@ -56,5 +64,11 @@ Badge.propTypes = {
     "primaryDark"
   ]),
   /** The label text on the badge is passed as a child element. */
-  children: PropTypes.node
+  children: PropTypes.node,
+  /** Specifies the system theme. */
+  theme: PropTypes.object
+};
+
+Badge.defaultProps = {
+  theme: systemtheme
 };
