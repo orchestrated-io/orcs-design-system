@@ -1,11 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import styled, { css, ThemeProvider } from "styled-components";
 import colours from "../../colours";
 import variables from "../../variables";
 import { rgba } from "polished";
+import { space, layout } from "styled-system";
+import systemtheme from "../../systemtheme";
 
 const Group = styled.div`
+  ${space}
+  ${layout}
   position: relative;
   width: ${props => (props.fullWidth ? `100%` : `auto`)};
 `;
@@ -103,24 +107,35 @@ const Label = styled.label`
  */
 
 export default function TextArea({ ...props }) {
-  const { inverted, id, label, invalid, valid, fullWidth, mandatory } = props;
+  const {
+    inverted,
+    id,
+    label,
+    invalid,
+    valid,
+    fullWidth,
+    mandatory,
+    theme
+  } = props;
   const InputForward = React.forwardRef((props, ref) => (
     <Input ref={ref} {...props} />
   ));
   const ref = React.createRef();
   return (
-    <Group fullWidth={fullWidth}>
-      <Label
-        inverted={inverted}
-        invalid={invalid}
-        valid={valid}
-        htmlFor={id}
-        mandatory={mandatory}
-      >
-        {label}
-      </Label>
-      <InputForward ref={ref} {...props} />
-    </Group>
+    <ThemeProvider theme={theme}>
+      <Group fullWidth={fullWidth} {...props}>
+        <Label
+          inverted={inverted}
+          invalid={invalid}
+          valid={valid}
+          htmlFor={id}
+          mandatory={mandatory}
+        >
+          {label}
+        </Label>
+        <InputForward ref={ref} {...props} />
+      </Group>
+    </ThemeProvider>
   );
 }
 
@@ -138,5 +153,11 @@ TextArea.propTypes = {
   /** Shows asterisk to denote a mandatory field */
   mandatory: PropTypes.bool,
   /** Set inverted styling for dark backgrounds */
-  inverted: PropTypes.bool
+  inverted: PropTypes.bool,
+  /** Specifies the design theme object */
+  theme: PropTypes.object
+};
+
+TextArea.defaultProps = {
+  theme: systemtheme
 };

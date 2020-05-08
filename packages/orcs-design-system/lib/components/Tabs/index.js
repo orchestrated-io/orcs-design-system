@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { themeGet } from "@styled-system/theme-get";
 import { css } from "@styled-system/css";
 import { space, color } from "styled-system";
@@ -94,25 +94,26 @@ export const TabItem = styled("div")(
 
 export const Tab = ({ theme, children, active, notification, ...props }) => {
   return (
-    <TabItem
-      theme={theme}
-      active={active}
-      notification={notification}
-      className={`${active ? "active" : ""} ${
-        notification ? "notification notification-" + notification : ""
-      }`}
-      {...props}
-    >
-      {children}
-    </TabItem>
+    <ThemeProvider theme={theme}>
+      <TabItem
+        active={active}
+        notification={notification}
+        className={`${active ? "active" : ""} ${
+          notification ? "notification notification-" + notification : ""
+        }`}
+        {...props}
+      >
+        {children}
+      </TabItem>
+    </ThemeProvider>
   );
 };
 
 export const TabsContainer = ({ theme, children, ...props }) => {
   return (
-    <TabsContainerItem theme={theme} {...props}>
-      {children}
-    </TabsContainerItem>
+    <ThemeProvider theme={theme}>
+      <TabsContainerItem {...props}>{children}</TabsContainerItem>
+    </ThemeProvider>
   );
 };
 

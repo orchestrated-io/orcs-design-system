@@ -1,11 +1,15 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled, { css, ThemeProvider } from "styled-components";
 import PropTypes from "prop-types";
 import colours from "../../colours";
 import variables from "../../variables";
 import { rgba, darken } from "polished";
+import systemtheme from "../../systemtheme";
+import { space, layout } from "styled-system";
 
 const TagWrapper = styled.button`
+  ${space}
+  ${layout}
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -91,8 +95,23 @@ const TagWrapper = styled.button`
  * The bottom row is when you want to show tags that aren't editable.
  */
 
-export default function Tag({ ...props }) {
-  return <TagWrapper {...props} />;
+export default function Tag({
+  selected,
+  disabled,
+  hideCross,
+  theme,
+  ...props
+}) {
+  return (
+    <ThemeProvider theme={theme}>
+      <TagWrapper
+        selected={selected}
+        disabled={disabled}
+        hideCross={hideCross}
+        {...props}
+      />
+    </ThemeProvider>
+  );
 }
 
 Tag.propTypes = {
@@ -101,11 +120,14 @@ Tag.propTypes = {
   /** Adds disabled attribute and styling to tag */
   disabled: PropTypes.bool,
   /** Hides the cross icon */
-  hideCross: PropTypes.bool
+  hideCross: PropTypes.bool,
+  /** Specifies the design theme */
+  theme: PropTypes.object
 };
 
 Tag.defaultProps = {
   selected: true,
   disabled: false,
-  hideCross: false
+  hideCross: false,
+  theme: systemtheme
 };

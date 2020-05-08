@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import styled, { css, ThemeProvider } from "styled-components";
 import colours from "../../colours";
 import variables from "../../variables";
 import { rgba } from "polished";
+import systemtheme from "../../systemtheme";
 
 const Group = styled.div`
   display: flex;
@@ -107,15 +108,17 @@ const Label = styled.label`
  */
 
 export default function Toggle({ ...props }) {
-  const { inverted, small, id, label } = props;
+  const { inverted, small, id, label, theme } = props;
   return (
-    <Group inverted={inverted}>
-      <Input {...props} />
-      <Item htmlFor={id} small={small} />
-      <Label htmlFor={id} small={small}>
-        {label}
-      </Label>
-    </Group>
+    <ThemeProvider theme={theme}>
+      <Group inverted={inverted}>
+        <Input {...props} />
+        <Item htmlFor={id} small={small} />
+        <Label htmlFor={id} small={small}>
+          {label}
+        </Label>
+      </Group>
+    </ThemeProvider>
   );
 }
 
@@ -127,10 +130,13 @@ Toggle.propTypes = {
   /** Changes appearance to suit a dark background. */
   inverted: PropTypes.bool,
   /** Makes toggle and label smaller. */
-  small: PropTypes.bool
+  small: PropTypes.bool,
+  /** Specifies the theme for component design */
+  theme: PropTypes.object
 };
 
 Toggle.defaultProps = {
   inverted: false,
-  small: false
+  small: false,
+  theme: systemtheme
 };
