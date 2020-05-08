@@ -1,10 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import styled, { css, ThemeProvider } from "styled-components";
 import colours from "../../colours";
 import variables from "../../variables";
+import systemtheme from "../../systemtheme";
+import { space, layout } from "styled-system";
 
 const Background = styled.div`
+  ${space}
+  ${layout}
   position: relative;
   background: ${colours.greyLighter};
   background: ${props =>
@@ -52,16 +56,24 @@ export default function ProgressBar({
   containerWidth,
   fillWidth,
   gradient,
-  inverted
+  inverted,
+  theme,
+  ...props
 }) {
   return (
-    <Background inverted={inverted} style={{ width: containerWidth + "%" }}>
-      <Fill
-        gradient={gradient}
+    <ThemeProvider theme={theme}>
+      <Background
         inverted={inverted}
-        style={{ width: fillWidth + "%" }}
-      />
-    </Background>
+        style={{ width: containerWidth + "%" }}
+        {...props}
+      >
+        <Fill
+          gradient={gradient}
+          inverted={inverted}
+          style={{ width: fillWidth + "%" }}
+        />
+      </Background>
+    </ThemeProvider>
   );
 }
 
@@ -73,5 +85,11 @@ ProgressBar.propTypes = {
   /** Changes fill to have a gradient */
   gradient: PropTypes.bool,
   /** Changes appearance to suit dark backgrounds */
-  inverted: PropTypes.bool
+  inverted: PropTypes.bool,
+  /** Specifies the system design theme. */
+  theme: PropTypes.object
+};
+
+ProgressBar.defaultProps = {
+  theme: systemtheme
 };

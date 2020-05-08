@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import colours from "../../colours";
 import variables from "../../variables";
 import { rgba } from "polished";
@@ -154,24 +154,28 @@ export default function Checkbox({
   disabled,
   checked,
   onClick,
-  onChange
+  onChange,
+  theme,
+  ...props
 }) {
   return (
-    <Item colour={colour}>
-      <Label disabled={disabled}>
-        <Control
-          name={name}
-          colour={colour}
-          disabled={disabled}
-          checked={checked}
-          onChange={onChange}
-        />
-        <Box colour={colour} onClick={onClick}>
-          <Check />
-        </Box>
-        <Text>{label}</Text>
-      </Label>
-    </Item>
+    <ThemeProvider theme={theme}>
+      <Item colour={colour} {...props}>
+        <Label disabled={disabled}>
+          <Control
+            name={name}
+            colour={colour}
+            disabled={disabled}
+            checked={checked}
+            onChange={onChange}
+          />
+          <Box colour={colour} onClick={onClick}>
+            <Check />
+          </Box>
+          <Text>{label}</Text>
+        </Label>
+      </Item>
+    </ThemeProvider>
   );
 }
 
@@ -189,5 +193,7 @@ Checkbox.propTypes = {
   /** On checkbox click handler */
   onClick: PropTypes.string,
   /** Text label to display beside the checkbox */
-  label: PropTypes.string
+  label: PropTypes.string,
+  /** Specifies the system design theme. */
+  theme: PropTypes.object
 };

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import styled, { css, ThemeProvider } from "styled-components";
 import Icon from "../Icon";
 import colours from "../../colours";
 import variables from "../../variables";
 import { rgba } from "polished";
+import systemtheme from "../../systemtheme";
 
 const Item = styled.div`
   position: relative;
@@ -91,7 +92,9 @@ export default function Notification({
   left,
   centered,
   closable,
-  onDismiss
+  onDismiss,
+  theme,
+  ...props
 }) {
   const [dismissed, handleDismiss] = useState(false);
   const onToggle = () => {
@@ -101,24 +104,27 @@ export default function Notification({
 
   return (
     !dismissed && (
-      <Item
-        colour={colour}
-        floating={floating}
-        top={top}
-        right={right}
-        bottom={bottom}
-        left={left}
-        centered={centered}
-        onDismiss={onDismiss}
-      >
-        {icon && <Icon icon={icon} color="white" />}
-        <span>{children}</span>
-        {closable && (
-          <Close className="close-button" tabIndex="0" onClick={onToggle}>
-            <Icon color={colours.white} icon={["fas", "times"]} size="lg" />
-          </Close>
-        )}
-      </Item>
+      <ThemeProvider theme={theme}>
+        <Item
+          colour={colour}
+          floating={floating}
+          top={top}
+          right={right}
+          bottom={bottom}
+          left={left}
+          centered={centered}
+          onDismiss={onDismiss}
+          {...props}
+        >
+          {icon && <Icon icon={icon} color="white" />}
+          <span>{children}</span>
+          {closable && (
+            <Close className="close-button" tabIndex="0" onClick={onToggle}>
+              <Icon color={colours.white} icon={["fas", "times"]} size="lg" />
+            </Close>
+          )}
+        </Item>
+      </ThemeProvider>
     )
   );
 }
@@ -147,9 +153,12 @@ Notification.propTypes = {
   /** A callback function for the dismiss operation.*/
   onDismiss: PropTypes.func,
   /** Showing the close button, default to true.*/
-  closable: PropTypes.bool
+  closable: PropTypes.bool,
+  /** Specifies the system design theme. */
+  theme: PropTypes.object
 };
 
 Notification.defaultProps = {
-  closable: true
+  closable: true,
+  theme: systemtheme
 };

@@ -1,12 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import styled, { css, ThemeProvider } from "styled-components";
 import { themeGet } from "@styled-system/theme-get";
 import { rgba } from "polished";
 import colours from "../../colours";
 import variables from "../../variables";
+import systemtheme from "../../systemtheme";
+import { space, layout } from "styled-system";
 
 const Item = styled.div`
+  ${space}
+  ${layout}
   display: block;
   transform: translateZ(0);
   color: ${props =>
@@ -221,33 +225,37 @@ export default function RadioButton({
   checked,
   onChange,
   asButton,
-  side
+  side,
+  theme,
+  ...props
 }) {
   return (
-    <Item colour={colour}>
-      <Label
-        disabled={disabled}
-        asButton={asButton}
-        checked={checked}
-        side={side}
-      >
-        <Control
-          name={name}
-          value={value}
-          colour={colour}
+    <ThemeProvider theme={theme}>
+      <Item colour={colour} {...props}>
+        <Label
           disabled={disabled}
-          checked={checked}
-          onChange={onChange}
           asButton={asButton}
-        />
-        {!asButton && (
-          <Circle colour={colour}>
-            <Check />
-          </Circle>
-        )}
-        <Text>{label}</Text>
-      </Label>
-    </Item>
+          checked={checked}
+          side={side}
+        >
+          <Control
+            name={name}
+            value={value}
+            colour={colour}
+            disabled={disabled}
+            checked={checked}
+            onChange={onChange}
+            asButton={asButton}
+          />
+          {!asButton && (
+            <Circle colour={colour}>
+              <Check />
+            </Circle>
+          )}
+          <Text>{label}</Text>
+        </Label>
+      </Item>
+    </ThemeProvider>
   );
 }
 
@@ -269,5 +277,11 @@ RadioButton.propTypes = {
   /** render radio button as button */
   asButton: PropTypes.bool,
   /** indicate this side if the radio butoon in a group, left, right or middle (Temporary solution)*/
-  side: PropTypes.string
+  side: PropTypes.string,
+  /** Specifies the system design theme. */
+  theme: PropTypes.object
+};
+
+RadioButton.defaultProps = {
+  theme: systemtheme
 };

@@ -1,10 +1,11 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled, { css, ThemeProvider } from "styled-components";
 import PropTypes from "prop-types";
 import Icon from "../Icon/";
 import { H3, H6 } from "../Typography";
 import { space, layout } from "styled-system";
 import { themeGet } from "@styled-system/theme-get";
+import systemtheme from "../../systemtheme";
 
 const Item = styled.div`
   ${space}
@@ -137,28 +138,31 @@ export default function Card({
   fluid,
   width,
   center,
+  theme,
   ...props
 }) {
   return (
-    <Item
-      alternate={alternate}
-      colour={colour}
-      fluid={fluid}
-      width={width}
-      center={center}
-      {...props}
-    >
-      {!icon & !title & !subtitle ? null : (
-        <Header>
-          {icon ? <Icon icon={icon} size="lg" /> : null}
-          {title ? <H3>{title}</H3> : null}
-          {changeIcon ? <ChangeIcon changeIcon={changeIcon} /> : null}
-          {changeValue ? <ChangeValue>{changeValue}</ChangeValue> : null}
-          {subtitle ? <H6>{subtitle}</H6> : null}
-        </Header>
-      )}
-      <Content>{children}</Content>
-    </Item>
+    <ThemeProvider theme={theme}>
+      <Item
+        alternate={alternate}
+        colour={colour}
+        fluid={fluid}
+        width={width}
+        center={center}
+        {...props}
+      >
+        {!icon & !title & !subtitle ? null : (
+          <Header>
+            {icon ? <Icon icon={icon} size="lg" /> : null}
+            {title ? <H3>{title}</H3> : null}
+            {changeIcon ? <ChangeIcon changeIcon={changeIcon} /> : null}
+            {changeValue ? <ChangeValue>{changeValue}</ChangeValue> : null}
+            {subtitle ? <H6>{subtitle}</H6> : null}
+          </Header>
+        )}
+        <Content>{children}</Content>
+      </Item>
+    </ThemeProvider>
   );
 }
 
@@ -187,5 +191,11 @@ Card.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)
-  ])
+  ]),
+  /** Specifies the system design theme. */
+  theme: PropTypes.object
+};
+
+Card.defaultProps = {
+  theme: systemtheme
 };

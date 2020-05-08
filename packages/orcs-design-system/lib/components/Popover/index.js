@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import styled, { css, ThemeProvider } from "styled-components";
 import colours from "../../colours";
 import variables from "../../variables";
 import { space, layout } from "styled-system";
 import { rgba } from "polished";
+import systemtheme from "../../systemtheme";
 
 const Container = styled.div`
 ${space}
@@ -150,15 +151,18 @@ export default function Popover({
   textAlign,
   text,
   inlineBlock,
+  theme,
   ...props
 }) {
   return (
-    <Container inlineBlock={inlineBlock} {...props}>
-      <Text textAlign={textAlign} direction={direction} width={width}>
-        {text}
-      </Text>
-      {children}
-    </Container>
+    <ThemeProvider theme={theme}>
+      <Container inlineBlock={inlineBlock} {...props}>
+        <Text textAlign={textAlign} direction={direction} width={width}>
+          {text}
+        </Text>
+        {children}
+      </Container>
+    </ThemeProvider>
   );
 }
 
@@ -174,5 +178,11 @@ Popover.propTypes = {
   /** Specifies the width of the popover (you need to specify units, e.g. pixels, %). If you use % it will be a percentage of the width of the Popover container */
   width: PropTypes.string,
   /** Sets display property of popover tooltip to inline-block */
-  inlineBlock: PropTypes.bool
+  inlineBlock: PropTypes.bool,
+  /** Specifies the system design theme. */
+  theme: PropTypes.object
+};
+
+Popover.defaultProps = {
+  theme: systemtheme
 };

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { space, layout, flexbox } from "styled-system";
 
 const FlexWrapper = styled.div`
@@ -17,8 +17,12 @@ ${flexbox}
 box-sizing: border-box
 `;
 
-export default function Flex({ children, ...props }) {
-  return <FlexWrapper {...props}>{children}</FlexWrapper>;
+export default function Flex({ children, theme, ...props }) {
+  return (
+    <ThemeProvider theme={theme}>
+      <FlexWrapper {...props}>{children}</FlexWrapper>
+    </ThemeProvider>
+  );
 }
 
 Flex.propTypes = {
@@ -51,7 +55,9 @@ Flex.propTypes = {
     "center",
     "baseline",
     "stretch"
-  ])
+  ]),
+  /** Specifies the system design theme. */
+  theme: PropTypes.object
 };
 
 Flex.defaultProps = {
@@ -59,7 +65,8 @@ Flex.defaultProps = {
   flexDirection: "row",
   flexWrap: "nowrap",
   justifyContent: "flex-start",
-  alignItems: "center"
+  alignItems: "center",
+  theme: "theme"
 };
 
 export { FlexItem };
