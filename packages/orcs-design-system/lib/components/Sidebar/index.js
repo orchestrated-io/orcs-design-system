@@ -55,9 +55,15 @@ export const SidebarTab = styled("label").attrs(props => ({
       color: props.active ? "primary" : "greyLightest",
       bg: props.active ? "greyDarker" : "transparent",
       cursor: props.active ? "default" : "pointer",
+      path: {
+        fill: themeGet("colors.greyLightest")(props)
+      },
       "&:hover": {
         bg: props.active ? "greyDarker" : "black20",
-        color: props.active ? "primary" : "warning"
+        color: props.active ? "primary" : "warning",
+        path: {
+          fill: themeGet("colors.warning")(props)
+        }
       },
       "&.Sidebar__Badge": {
         "&::before": {
