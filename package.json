@@ -2,7 +2,7 @@
   "name": "orchestrated-design-system",
   "scripts": {
     "audit-ci": "lerna run audit-ci",
-    "bootstrap": "lerna bootstrap",
+    "bootstrap": "lerna link && lerna exec npm ci",
     "lint": "lerna run lint",
     "test": "lerna run test-coverage",
     "start": "lerna run start",
@@ -25,14 +25,12 @@
     }
   },
   "devDependencies": {
-    "audit-ci": "^2.5.1",
     "husky": "^4.2.5",
-    "lerna": "^3.20.2",
     "lint-staged": "^10.2.2",
     "prettier": "^1.19.1"
   },
   "dependencies": {
-    "storybook-chromatic": "^3.5.3",
-    "uninstall": "0.0.0"
+    "lerna": "^3.20.2",
+    "audit-ci": "^2.5.1"
   }
 }
