@@ -176,7 +176,7 @@ export default function Tooltip({
 }) {
   return (
     <ThemeProvider theme={theme}>
-      <Container inverted={inverted}>
+      <Container inverted={inverted} {...props}>
         <QuestionMark>?</QuestionMark>
         <Text direction={direction} width={width} inverted={inverted}>
           {children}
