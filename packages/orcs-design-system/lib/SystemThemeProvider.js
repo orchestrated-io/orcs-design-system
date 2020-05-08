@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { ThemeProvider } from "styled-components";
 import { default as GlobalStyles } from "./GlobalStyles";
-import { default as systemtheme } from "./systemtheme";
+import systemtheme from "./systemtheme";
 
 const SystemThemeProvider = ({ children }) => {
   return (
