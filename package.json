@@ -20,14 +20,15 @@
   "husky": {
     "skipCI": false,
     "hooks": {
+      "pre-push": "./installGitSecrets.sh &&  git secrets --register-aws && git-secrets --scan -r && npm run audit-ci",
       "pre-commit": "lint-staged && npm test"
     }
   },
   "devDependencies": {
     "audit-ci": "^2.5.1",
-    "husky": "^3.1.0",
+    "husky": "^4.2.5",
     "lerna": "^3.20.2",
-    "lint-staged": "^9.5.0",
+    "lint-staged": "^10.2.2",
     "prettier": "^1.19.1"
   },
   "dependencies": {

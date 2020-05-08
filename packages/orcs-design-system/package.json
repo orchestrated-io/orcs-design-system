@@ -81,10 +81,8 @@
     "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
-    "husky": "^3.1.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^25.5.4",
-    "lint-staged": "^10.2.2",
     "prettier": "^1.19.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -119,19 +117,5 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  },
-  "lint-staged": {
-    "lib/**/*.{js,jsx,json,css}": [
-      "prettier --write",
-      "eslint --fix",
-      "git add"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "./installGitSecrets.sh &&  git secrets --register-aws && git-secrets --scan -r && npm run audit-ci",
-      "pre-commit": "lint-staged && CI=true npm test"
-    }
-  },
-  "gitHead": "c9ce7dec4754041c8e86eb0d39e785a88744b1f5"
+  }
 }
