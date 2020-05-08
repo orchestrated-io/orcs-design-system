@@ -2,7 +2,7 @@
   "name": "orchestrated-design-system",
   "scripts": {
     "audit-ci": "lerna run audit-ci",
-    "bootstrap": "lerna link && lerna exec npm i --no-optional",
+    "bootstrap": "lerna link && lerna exec npm i -- --no-optional",
     "lint": "lerna run lint",
     "test": "lerna run test-coverage",
     "start": "lerna run start",
