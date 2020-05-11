@@ -30,7 +30,7 @@
     "prettier": "^1.19.1"
   },
   "dependencies": {
-    "lerna": "^3.20.2",
-    "audit-ci": "^2.5.1"
+    "audit-ci": "^2.5.1",
+    "lerna": "^3.20.2"
   }
 }
