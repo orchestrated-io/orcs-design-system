@@ -1,55 +1,67 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { get } from "lodash";
 import PropTypes from "prop-types";
-import { space, layout, color } from "styled-system";
-import { themeGet } from "@styled-system/theme-get";
+import { space, layout, color, compose, variant } from "styled-system";
+import { css } from "@styled-system/css";
 import systemtheme from "../../systemtheme";
 
-const Item = styled.div`
-  ${space}
-  ${layout}
-  ${color}
-  font-size: ${themeGet("fontSizes.0")};
-  font-weight: ${themeGet("fontWeights.2")};
-  display: inline-block;
-  text-align: center;
-  white-space: nowrap;
-  position: relative;
-  padding: 5px 10px;
-  cursor: default;
-  border-radius: ${themeGet("radii.1")};
-`;
+const BadgeStyles = compose(space, layout, color);
 
-const colourMap = {
-  default: { textColour: "greyDarker", badgeColour: "greyLighter" },
-  success: { textColour: "successDarker", badgeColour: "successLighter" },
-  warning: { textColour: "warningDarker", badgeColour: "warningLighter" },
-  danger: { textColour: "dangerDarker", badgeColour: "dangerLighter" },
-  primaryLight: {
-    textColour: "primaryDarker",
-    badgeColour: "primaryLightest"
-  },
-  primary: { textColour: "primaryDarker", badgeColour: "primaryLighter" },
-  primaryDark: { textColour: "primaryDarker", badgeColour: "primaryLight" },
-  secondary: { textColour: "secondary", badgeColour: "secondaryLightest" }
-};
+const Item = styled("div")(
+  css({
+    fontSize: 0,
+    fontWeight: 2,
+    display: "inline-block",
+    textAlign: "center",
+    whiteSpace: "nowrap",
+    position: "relative",
+    py: 2,
+    px: 3,
+    cursor: "default",
+    borderRadius: 1,
+    color: "greyDarker",
+    bg: "greyLighter"
+  }),
+  variant({
+    variants: {
+      default: {},
+      success: {
+        color: "successDarker",
+        bg: "successLighter"
+      },
+      warning: {
+        color: "warningDarker",
+        bg: "warningLighter"
+      },
+      danger: {
+        color: "dangerDarker",
+        bg: "dangerLighter"
+      },
+      primaryLight: {
+        color: "primaryDarker",
+        bg: "primaryLightest"
+      },
+      primary: {
+        color: "primaryDarker",
+        bg: "primaryLighter"
+      },
+      primaryDark: {
+        color: "primaryDarkest",
+        bg: "primary"
+      },
+      secondary: {
+        color: "secondary",
+        bg: "secondaryLightest"
+      }
+    }
+  }),
+  BadgeStyles
+);
 
-export default function Badge({
-  variant = "default",
-  children,
-  theme,
-  ...props
-}) {
-  const { textColour, badgeColour } = get(colourMap, variant, {
-    textColour: "greyDarker",
-    badgeColour: "greyLighter"
-  });
+export default function Badge({ children, theme, ...props }) {
   return (
     <ThemeProvider theme={theme}>
-      <Item color={textColour} bg={badgeColour} {...props}>
-        {children}
-      </Item>
+      <Item {...props}>{children}</Item>
     </ThemeProvider>
   );
 }
