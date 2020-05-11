@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled, { ThemeProvider } from "styled-components";
 import { space, layout, flexbox } from "styled-system";
+import systemtheme from "../../systemtheme";
 
 const FlexWrapper = styled.div`
 ${space}
@@ -66,7 +67,7 @@ Flex.defaultProps = {
   flexWrap: "nowrap",
   justifyContent: "flex-start",
   alignItems: "center",
-  theme: "theme"
+  theme: systemtheme
 };
 
 export { FlexItem };

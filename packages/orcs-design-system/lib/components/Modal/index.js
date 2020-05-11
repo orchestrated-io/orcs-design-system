@@ -1,12 +1,13 @@
 import React, { useEffect, useCallback } from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import variables from "../../variables";
 import Button from "../Button";
 import Flex from "../Flex";
 import Box from "../Box";
 import Divider from "../Divider";
+import systemtheme from "../../systemtheme";
 
 const Overlay = styled(Flex)`
   position: fixed;
@@ -52,6 +53,7 @@ const Modal = props => {
     visible,
     onConfirm,
     onCancel,
+    theme,
     ...restProps
   } = props;
 
@@ -82,37 +84,43 @@ const Modal = props => {
   return (
     visible &&
     ReactDOM.createPortal(
-      <Overlay alignItems="center" justifyContent="center" {...restProps}>
-        <Container
-          width={width}
-          height={height}
-          overflow={overflowVisible ? "visible" : "hidden"}
-          borderRadius={variables.borderRadius}
-          bg="white"
-        >
-          <Box p="4">{children}</Box>
-          {isDisplayFooter && (
-            <>
-              <Divider />
-              <Actions alignItems="center" p="4">
-                <Button disabled={disabledConfirm} onClick={onConfirm}>
-                  {confirmText}
-                </Button>
-                <Button disabled={disabledCancel} ghost onClick={onCancel}>
-                  {cancelText}
-                </Button>
-              </Actions>
-            </>
-          )}
-        </Container>
-      </Overlay>,
+      <ThemeProvider theme={theme}>
+        <Overlay alignItems="center" justifyContent="center" {...restProps}>
+          <Container
+            width={width}
+            height={height}
+            overflow={overflowVisible ? "visible" : "hidden"}
+            borderRadius={variables.borderRadius}
+            bg="white"
+          >
+            <Box p="4">{children}</Box>
+            {isDisplayFooter && (
+              <>
+                <Divider />
+                <Actions alignItems="center" p="4">
+                  <Button disabled={disabledConfirm} onClick={onConfirm}>
+                    {confirmText}
+                  </Button>
+                  <Button disabled={disabledCancel} ghost onClick={onCancel}>
+                    {cancelText}
+                  </Button>
+                </Actions>
+              </>
+            )}
+          </Container>
+        </Overlay>
+      </ThemeProvider>,
       document.body
     )
   );
 };
 
 Modal.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.string,
+    PropTypes.node
+  ]),
   /** Specifies the width of the Dialogue in pixels */
   width: PropTypes.string,
   /** Specifies the height of the Dialogue in pixels */
@@ -145,7 +153,8 @@ Modal.defaultProps = {
   confirmText: "OK",
   cancelText: "Cancel",
   isDisplayFooter: true,
-  overflowVisible: false
+  overflowVisible: false,
+  theme: systemtheme
 };
 
 /** @component */
