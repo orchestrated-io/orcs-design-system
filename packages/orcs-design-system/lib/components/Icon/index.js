@@ -1,8 +1,9 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { space } from "styled-system";
+import systemtheme from "../../systemtheme";
 
 /**
  * Using 3rd party icons from Font Awesome.
@@ -34,28 +35,31 @@ export default function Icon({
   symbol,
   transform,
   color,
+  theme,
   ...props
 }) {
   return (
-    <IconWrapper {...props}>
-      <FontAwesomeIcon
-        border={border}
-        color={color}
-        mask={mask}
-        fixedWidth={fixedWidth}
-        inverse={inverse}
-        flip={flip}
-        listitem={listitem}
-        pull={pull}
-        rotation={rotation}
-        icon={icon}
-        pulse={pulse}
-        size={size}
-        spin={spin}
-        symbol={symbol}
-        transform={transform}
-      />
-    </IconWrapper>
+    <ThemeProvider theme={theme}>
+      <IconWrapper {...props}>
+        <FontAwesomeIcon
+          border={border}
+          color={color}
+          mask={mask}
+          fixedWidth={fixedWidth}
+          inverse={inverse}
+          flip={flip}
+          listitem={listitem}
+          pull={pull}
+          rotation={rotation}
+          icon={icon}
+          pulse={pulse}
+          size={size}
+          spin={spin}
+          symbol={symbol}
+          transform={transform}
+        />
+      </IconWrapper>
+    </ThemeProvider>
   );
 }
 
@@ -89,5 +93,11 @@ Icon.propTypes = {
   /** Set an icon as a symbol to use with the SVG Sprites technique */
   symbol: PropTypes.any,
   /** Power transforms to scale and position the icon */
-  transform: PropTypes.any
+  transform: PropTypes.any,
+  /** Specifies the system design theme. */
+  theme: PropTypes.object
+};
+
+Icon.defaultProps = {
+  theme: systemtheme
 };

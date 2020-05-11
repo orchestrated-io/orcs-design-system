@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import PropTypes from "prop-types";
 import colours from "../../colours";
 import variables from "../../variables";
@@ -7,6 +7,7 @@ import Flex from "../Flex";
 import Typography from "../Typography";
 import Badge from "../Badge";
 import { darken } from "polished";
+import systemtheme from "../../systemtheme";
 
 const Item = styled.div`
   margin: 4px 0;
@@ -89,7 +90,9 @@ export default function Expandable({
   subtitle,
   badge,
   badgeColour,
-  isOpen
+  isOpen,
+  theme,
+  ...props
 }) {
   const [baseState, setBase] = useState(isOpen);
   const [toggleState, setToggle] = useState(false);
@@ -102,12 +105,13 @@ export default function Expandable({
   };
 
   return (
-    <Item>
-      <Button
-        open={baseState}
-        aria-expanded={baseState}
-        onClick={onToggle}
-        /*        onKeyDown={e => {
+    <ThemeProvider theme={theme}>
+      <Item {...props}>
+        <Button
+          open={baseState}
+          aria-expanded={baseState}
+          onClick={onToggle}
+          /*        onKeyDown={e => {
           switch (e.key) {
             case " ":
             case "Enter":
@@ -116,21 +120,22 @@ export default function Expandable({
             default:
           }
         }} */
-      >
-        <Flex justifyBetween alignCenter>
-          <Text>
-            {title ? <Typography.H4>{title}</Typography.H4> : null}
-            {subtitle ? (
-              <Typography.Small grey>{subtitle}</Typography.Small>
-            ) : null}
-          </Text>
-          {badge ? <Badge colour={badgeColour}>{badge}</Badge> : null}
-        </Flex>
-      </Button>
-      <Content open={baseState} expanded={toggleState}>
-        {children}
-      </Content>
-    </Item>
+        >
+          <Flex justifyBetween alignCenter>
+            <Text>
+              {title ? <Typography.H4>{title}</Typography.H4> : null}
+              {subtitle ? (
+                <Typography.Small grey>{subtitle}</Typography.Small>
+              ) : null}
+            </Text>
+            {badge ? <Badge colour={badgeColour}>{badge}</Badge> : null}
+          </Flex>
+        </Button>
+        <Content open={baseState} expanded={toggleState}>
+          {children}
+        </Content>
+      </Item>
+    </ThemeProvider>
   );
 }
 
@@ -161,5 +166,11 @@ Expandable.propTypes = {
     "primaryDarkest"
   ]),
   /** Contents of expandable are rendered as a child element. */
-  children: PropTypes.element
+  children: PropTypes.element,
+  /** Specifies the system design theme. */
+  theme: PropTypes.object
+};
+
+Expandable.defaultProps = {
+  theme: systemtheme
 };

@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import styled, { css, ThemeProvider } from "styled-components";
 import colours from "../../colours";
+import { space, layout } from "styled-system";
+import systemtheme from "../../systemtheme";
 
 const vars = {
   trackHeight: "4px",
@@ -28,6 +30,8 @@ const track = () => `
 `;
 
 const Wrapper = styled.div`
+${space}
+${layout}
     position:relative;
     width: 100%;
     display: flex;
@@ -144,12 +148,21 @@ const Output = styled.output`
 /**
  * Range component is pretty self explanatory, used to select a number out of a range, make sure to set a min, max and default value.
  */
-export default function Range({ min, max, inverted, defaultValue, ...props }) {
+export default function Range({
+  min,
+  max,
+  inverted,
+  defaultValue,
+  theme,
+  ...props
+}) {
   return (
-    <Wrapper min={min} max={max} inverted={inverted}>
-      <Input {...props} />
-      <Output>{defaultValue}</Output>
-    </Wrapper>
+    <ThemeProvider theme={theme}>
+      <Wrapper min={min} max={max} inverted={inverted}>
+        <Input {...props} />
+        <Output>{defaultValue}</Output>
+      </Wrapper>
+    </ThemeProvider>
   );
 }
 
@@ -161,5 +174,11 @@ Range.propTypes = {
   /** Sets the default value for the range */
   defaultValue: PropTypes.number,
   /** Changes appearance to suit dark backgrounds */
-  inverted: PropTypes.bool
+  inverted: PropTypes.bool,
+  /** Specifies the system design theme. */
+  theme: PropTypes.object
+};
+
+Range.defaultProps = {
+  theme: systemtheme
 };

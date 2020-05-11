@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { space, layout, variant } from "styled-system";
 import PropTypes from "prop-types";
 import { H3, Text } from "../Typography";
@@ -170,25 +170,27 @@ const Avatar = ({
   ...props
 }) => {
   return (
-    <AvatarWrapper {...props} type={type} sizing={sizing} theme={theme}>
-      {image ? (
-        <Image src={image} sizing={sizing} theme={theme} />
-      ) : (
-        <Circle sizing={sizing} type={type} theme={theme}>
-          {initials ? initials : <Icon icon={["fas", "user"]} />}
-        </Circle>
-      )}
-      <TextContent type={type} sizing={sizing} theme={theme}>
-        <Title type={type} sizing={sizing} theme={theme}>
-          {title}
-        </Title>
-        {subtitle ? (
-          <Subtitle type={type} sizing={sizing} theme={theme}>
-            {subtitle}
-          </Subtitle>
-        ) : null}
-      </TextContent>
-    </AvatarWrapper>
+    <ThemeProvider theme={theme}>
+      <AvatarWrapper {...props} type={type} sizing={sizing}>
+        {image ? (
+          <Image src={image} sizing={sizing} />
+        ) : (
+          <Circle sizing={sizing} type={type}>
+            {initials ? initials : <Icon icon={["fas", "user"]} />}
+          </Circle>
+        )}
+        <TextContent type={type} sizing={sizing} theme={theme}>
+          <Title type={type} sizing={sizing} theme={theme}>
+            {title}
+          </Title>
+          {subtitle ? (
+            <Subtitle type={type} sizing={sizing}>
+              {subtitle}
+            </Subtitle>
+          ) : null}
+        </TextContent>
+      </AvatarWrapper>
+    </ThemeProvider>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { space, layout, color, border, variant, compose } from "styled-system";
 import { css } from "@styled-system/css";
 import PropTypes from "prop-types";
@@ -34,8 +34,12 @@ const BoxWrapper = styled("div")(
   boxStyles
 );
 
-export default function Box({ children, ...props }) {
-  return <BoxWrapper {...props}>{children}</BoxWrapper>;
+export default function Box({ children, theme, ...props }) {
+  return (
+    <ThemeProvider theme={theme}>
+      <BoxWrapper {...props}>{children}</BoxWrapper>
+    </ThemeProvider>
+  );
 }
 
 Box.propTypes = {

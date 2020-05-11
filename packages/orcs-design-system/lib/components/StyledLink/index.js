@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { space, layout } from "styled-system";
 import { css } from "@styled-system/css";
+import systemtheme from "../../systemtheme";
 
 const LinkStyles = css({
   color: "primary",
@@ -48,7 +49,7 @@ const styleLink = LinkComponent =>
           "active"
         ].includes(prop)
     })
-    .attrs({ className: "StyledLink" })(
+    .attrs(props => ({ className: "StyledLink", theme: props.theme }))(
     LinkStyles,
     props =>
       css({
@@ -85,9 +86,15 @@ const HeaderLink = styleLink(Link);
  *        Dashboard
  *      </HeaderLink>
  */
-export function StyledLink({ children, active, white, bold, ...props }) {
+export function StyledLink({ children, active, white, bold, theme, ...props }) {
   return (
-    <Hyperlink active={active} white={white} bold={bold} {...props}>
+    <Hyperlink
+      theme={theme}
+      active={active}
+      white={white}
+      bold={bold}
+      {...props}
+    >
       {children}
     </Hyperlink>
   );
@@ -101,7 +108,13 @@ StyledLink.propTypes = {
   /** Renders a white link (useful for dark backgrounds) */
   white: PropTypes.bool,
   /** Styles the link text in bold */
-  bold: PropTypes.bool
+  bold: PropTypes.bool,
+  /** Specifies the system design theme. */
+  theme: PropTypes.object
+};
+
+StyledLink.defaultProps = {
+  theme: systemtheme
 };
 
 export { styleLink, HeaderLink };

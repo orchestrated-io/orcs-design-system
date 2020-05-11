@@ -1,11 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import styled, { css, ThemeProvider } from "styled-components";
 import colours from "../../colours";
 import variables from "../../variables";
 import { rgba } from "polished";
+import { space, layout } from "styled-system";
+import systemtheme from "../../systemtheme";
 
 const Container = styled.button`
+  ${space}
+  ${layout}
   position: relative;
   cursor: help;
   width: 20px;
@@ -162,14 +166,23 @@ const Text = styled.div`
  *
  */
 
-export default function Tooltip({ children, direction, width, inverted }) {
+export default function Tooltip({
+  children,
+  direction,
+  width,
+  inverted,
+  theme,
+  ...props
+}) {
   return (
-    <Container inverted={inverted}>
-      <QuestionMark>?</QuestionMark>
-      <Text direction={direction} width={width} inverted={inverted}>
-        {children}
-      </Text>
-    </Container>
+    <ThemeProvider theme={theme}>
+      <Container inverted={inverted} {...props}>
+        <QuestionMark>?</QuestionMark>
+        <Text direction={direction} width={width} inverted={inverted}>
+          {children}
+        </Text>
+      </Container>
+    </ThemeProvider>
   );
 }
 
@@ -181,9 +194,12 @@ Tooltip.propTypes = {
   /** Specifies the width of the tooltip in pixels */
   width: PropTypes.string,
   /** Changes appearance to suit a dark background. */
-  inverted: PropTypes.bool
+  inverted: PropTypes.bool,
+  /** Specifies the theme for component design */
+  theme: PropTypes.object
 };
 
 Tooltip.defaultProps = {
-  width: "200px"
+  width: "200px",
+  theme: systemtheme
 };

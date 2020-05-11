@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
 import React from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { themeGet } from "@styled-system/theme-get";
 import Flex from "../Flex/";
+import systemtheme from "../../systemtheme";
 
 const ButtonGroupControlLabel = styled.div`
   color: ${themeGet("colors.white")};
@@ -54,18 +55,34 @@ const ButtonGroupLabel = styled.label`
   }
 `;
 
-export const ButtonGroupContainer = ({ children, controlLabel }) => {
+/** To do: look at renaming this to ButtonGroup, add a container component that can accept space and layout props */
+
+export const ButtonGroupContainer = ({
+  children,
+  theme,
+  controlLabel,
+  ...props
+}) => {
   return (
-    <Flex alignItems="center">
-      <ButtonGroupControlLabel>{controlLabel}</ButtonGroupControlLabel>
-      <ButtonGroupWrapper>{children}</ButtonGroupWrapper>
-    </Flex>
+    <ThemeProvider theme={theme}>
+      <Flex alignItems="center" {...props}>
+        <ButtonGroupControlLabel>{controlLabel}</ButtonGroupControlLabel>
+        <ButtonGroupWrapper>{children}</ButtonGroupWrapper>
+      </Flex>
+    </ThemeProvider>
   );
 };
 
-export const ButtonGroupItem = ({ label, name, value, checked, onChange }) => {
+export const ButtonGroupItem = ({
+  label,
+  name,
+  value,
+  checked,
+  onChange,
+  theme
+}) => {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <ButtonGroupRadio
         id={label}
         name={name}
@@ -76,18 +93,29 @@ export const ButtonGroupItem = ({ label, name, value, checked, onChange }) => {
       <ButtonGroupLabel checked={checked} for={label}>
         {label}
       </ButtonGroupLabel>
-    </>
+    </ThemeProvider>
   );
 };
 
 ButtonGroupContainer.propTypes = {
   children: PropTypes.node,
-  controlLabel: PropTypes.string
+  controlLabel: PropTypes.string,
+  theme: PropTypes.object
 };
+
 ButtonGroupItem.propTypes = {
   label: PropTypes.string,
   name: PropTypes.string,
   value: PropTypes.string,
   checked: PropTypes.bool,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  theme: PropTypes.object
+};
+
+ButtonGroupContainer.defaultProps = {
+  theme: systemtheme
+};
+
+ButtonGroupItem.defaultProps = {
+  theme: systemtheme
 };
