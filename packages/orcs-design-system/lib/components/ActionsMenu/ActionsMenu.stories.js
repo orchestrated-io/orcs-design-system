@@ -1,6 +1,5 @@
 import React from "react";
 import ActionsMenu from ".";
-import Box from "../Box";
 import Flex from "../Flex";
 
 export default {
