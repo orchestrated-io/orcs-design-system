@@ -1,0 +1,40 @@
+import * as stories from './Checkbox.stories.js';
+import Checkbox from ".";
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+
+<Meta title="Components/Checkbox" component={Checkbox} />
+
+# Checkbox
+
+[Basic checkbox](#basic-checkbox) | [Colour variants](#colour-variants) | [Statuses](#statuses) | [On Dark Background](#on-dark-background) | [Properties](#properties)
+
+The default checkbox (or inverted if on dark background) should be used for the majority of the UI; however, the coloured ones can be used in situations where the colour corresponds with some indication of status, e.g. in a task list, green could denote task completed, red could denote task overdue.
+
+## Basic checkbox
+
+<Preview>
+  <Story name="Basic checkbox">{stories.basicCheckbox()}</Story>
+</Preview>
+
+## Colour variants
+
+Different colours for checkbox.
+
+<Preview>
+  <Story name="Colour variants">{stories.colourVariants()}</Story>
+</Preview>
+
+## Checkbox statuses
+
+<Preview>
+<Story name="Disabled">{stories.disabled()}</Story>
+<Story name="Checked">{stories.checked()}</Story>
+</Preview>
+
+## On dark background
+<Preview>
+<Story name="On dark background">{stories.inverted()}</Story>
+</Preview>
+
+## Properties
+<Props of={Checkbox} />

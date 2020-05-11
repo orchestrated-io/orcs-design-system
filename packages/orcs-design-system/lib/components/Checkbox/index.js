@@ -4,6 +4,8 @@ import styled, { keyframes, ThemeProvider } from "styled-components";
 import colours from "../../colours";
 import variables from "../../variables";
 import { rgba } from "polished";
+import { space, layout } from "styled-system";
+import systemtheme from "../../systemtheme";
 
 /* Animations */
 const checkboxOn = keyframes`
@@ -125,6 +127,8 @@ const rippleOff = keyframes`
 `;
 
 const Item = styled.div`
+  ${space}
+  ${layout}
   display: block;
   transform: translateZ(0);
   color: ${props =>
@@ -315,4 +319,8 @@ Checkbox.propTypes = {
   label: PropTypes.string,
   /** Specifies the system design theme. */
   theme: PropTypes.object
+};
+
+Checkbox.defaultProps = {
+  theme: systemtheme
 };

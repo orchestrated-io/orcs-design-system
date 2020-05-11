@@ -1,39 +1,37 @@
 import React from "react";
 import Checkbox from ".";
-import Layout from "../Layout";
+import Box from "../Box";
+import Spacer from "../Spacer";
 
 export default {
   title: "Components/Checkbox",
-  decorators: [storyFn => <Layout childVerticalSpacing>{storyFn()}</Layout>],
   parameters: {
     component: Checkbox
-  }
+  },
+  includeStories: []
 };
 
-export const defaultCheckbox = () => <Checkbox label="Default checkbox" />;
-defaultCheckbox.story = {
-  name: "Default"
-};
+export const basicCheckbox = () => <Checkbox label="Default checkbox" />;
 
-export const colours = () => (
-  <>
+export const colourVariants = () => (
+  <Spacer m="3">
     <Checkbox label="Primary colour checkbox" colour="primary" />
     <Checkbox label="Success colour checkbox" colour="success" />
     <Checkbox label="Warning colour checkbox" colour="warning" />
     <Checkbox label="Danger colour checkbox" colour="danger" />
-  </>
+  </Spacer>
 );
 
 export const disabled = () => (
-  <>
+  <Spacer m="3">
     <Checkbox disabled label="Disabled checkbox" />
     <Checkbox checked disabled label="Disabled ticked checkbox" />
-  </>
+  </Spacer>
 );
 export const checked = () => <Checkbox checked label="Ticked checkbox" />;
 
-export const onDarkBackground = () => (
-  <Layout padding backgroundDark>
+export const inverted = () => (
+  <Box bg="greyDarker" p={4}>
     <Checkbox colour="white" label="Inverted checkbox" />
-  </Layout>
+  </Box>
 );
