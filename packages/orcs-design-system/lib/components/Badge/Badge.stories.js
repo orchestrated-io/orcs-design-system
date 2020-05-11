@@ -7,7 +7,8 @@ export default {
   title: "Components/Badge",
   parameters: {
     component: Badge
-  }
+  },
+  includeStories: []
 };
 
 export const defaultBadge = () => <Badge>Default</Badge>;

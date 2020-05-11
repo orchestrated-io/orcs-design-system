@@ -6,7 +6,8 @@ export default {
   title: "Components/Box",
   parameters: {
     component: Box
-  }
+  },
+  includeStories: []
 };
 
 export const basicBox = () => (

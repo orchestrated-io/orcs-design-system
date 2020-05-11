@@ -8,7 +8,8 @@ export default {
   decorators: [storyFn => <Box p="20px 20px 80px 20px">{storyFn()}</Box>],
   parameters: {
     component: ActionsMenu
-  }
+  },
+  includeStories: []
 };
 
 export const defaultActionsMenu = () => (

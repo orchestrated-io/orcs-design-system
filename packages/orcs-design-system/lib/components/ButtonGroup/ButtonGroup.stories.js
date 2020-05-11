@@ -13,7 +13,8 @@ export default {
   ],
   parameters: {
     component: ButtonGroupContainer
-  }
+  },
+  includeStories: []
 };
 
 export const defaultButtonGroup = () => (

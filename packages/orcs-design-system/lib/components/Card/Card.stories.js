@@ -20,7 +20,8 @@ export default {
   ],
   parameters: {
     component: Card
-  }
+  },
+  includeStories: []
 };
 
 export const basicCard = () => (

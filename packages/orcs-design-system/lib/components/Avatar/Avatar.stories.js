@@ -8,7 +8,8 @@ export default {
   title: "Components/Avatar",
   parameters: {
     component: Avatar
-  }
+  },
+  includeStories: []
 };
 
 export const defaultAvatar = () => (
