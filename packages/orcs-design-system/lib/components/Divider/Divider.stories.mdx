@@ -8,24 +8,20 @@ import Spacer from "../Spacer";
 
 # Divider
 
+[Single date](#basic-checkbox) | [Date range](#date-range) | [Properties](#properties)
+
 The Divider component should be used to separate distinct sections of the UI.
 
-## Props
-
-<Props of={Divider} />
-
-## Examples
-
-### Standard options
+## Default Divider
 
 To be used throughout most of the app, in most cases purely the default Divider with no props should be used.
 
 <Preview>
-  <Story name="Basic">{stories.basicDivider()}
+  <Story name="Default">{stories.basicDivider()}
   </Story>
 </Preview>
 
-### Inverted options
+## Inverted
 
 The inverted prop should be used if a divider is required on a dark background.
 
@@ -37,7 +33,7 @@ The inverted prop should be used if a divider is required on a dark background.
   </Story>
 </Preview>
 
-### Span Grid
+## Span Grid
 
 This prop is to be used when you need to use a divider between rows in a grid, this will allow the divider to span across all columns in the grid.
 
@@ -46,3 +42,7 @@ This prop is to be used when you need to use a divider between rows in a grid, t
   {stories.spanGrid()}
   </Story>
 </Preview>
+
+## Props
+
+<Props of={Divider} />

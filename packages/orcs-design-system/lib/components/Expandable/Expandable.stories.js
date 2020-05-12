@@ -4,9 +4,7 @@ import Typography from "../Typography";
 
 export default {
   title: "Components/Expandable",
-  parameters: {
-    component: Expandable
-  }
+  includeStories: []
 };
 
 export const basic = () => (
