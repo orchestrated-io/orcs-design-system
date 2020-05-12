@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import styled, { css } from "styled-components";
+import styled, { css, ThemeProvider } from "styled-components";
 import PropTypes from "prop-types";
 import { space, layout } from "styled-system";
+import systemtheme from "../../systemtheme";
 import { themeGet } from "@styled-system/theme-get";
 
 const Wrapper = styled.div`
@@ -89,7 +90,7 @@ const Menu = styled.div`
   overflow: hidden;
   transform-origin: ${props =>
     props.direction == "left" ? "top right" : "top left"};
-  transition: all 400ms;
+  transition: all 300ms;
   transition-timing-function: cubic-bezier(0, 1.4, 1, 1);
   ${props =>
     props.isOpen
@@ -103,6 +104,9 @@ const Menu = styled.div`
   button {
     white-space: nowrap;
     display: block;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
     padding: ${themeGet("space.3")};
     appearance: none;
     background-color: transparent;
@@ -124,7 +128,7 @@ const Menu = styled.div`
   }
 `;
 
-const ActionsMenu = ({ children, direction, isOpen, ...props }) => {
+const ActionsMenu = ({ children, direction, isOpen, theme, ...props }) => {
   const [baseState, setBase] = useState(isOpen);
   const [toggleState, setToggle] = useState(false);
 
@@ -135,14 +139,16 @@ const ActionsMenu = ({ children, direction, isOpen, ...props }) => {
     else setBase(false);
   };
   return (
-    <Wrapper {...props}>
-      <Control onClick={onToggle}>
-        <Icon isOpen={baseState} />
-      </Control>
-      <Menu isOpen={baseState} direction={direction}>
-        {children}
-      </Menu>
-    </Wrapper>
+    <ThemeProvider theme={theme}>
+      <Wrapper {...props}>
+        <Control onClick={onToggle}>
+          <Icon isOpen={baseState} />
+        </Control>
+        <Menu isOpen={baseState} direction={direction}>
+          {children}
+        </Menu>
+      </Wrapper>
+    </ThemeProvider>
   );
 };
 
@@ -152,7 +158,13 @@ ActionsMenu.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)
-  ])
+  ]),
+  /** Specifies the colour theme */
+  theme: PropTypes.object
+};
+
+ActionsMenu.defaultProps = {
+  theme: systemtheme
 };
 
 export default ActionsMenu;
