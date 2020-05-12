@@ -75,7 +75,8 @@ const Icon = styled.div`
 const Menu = styled.div`
   display: inline-block;
   position: absolute;
-  left: 34px;
+  left: ${props => (props.direction == "left" ? "auto" : "34px")};
+  right: ${props => (props.direction == "left" ? "34px" : "auto")};
   top: 0;
   width: auto;
   z-index: 5;
@@ -86,8 +87,9 @@ const Menu = styled.div`
   opacity: 0;
   pointer-events: none;
   overflow: hidden;
-  transform-origin: top left;
-  transition: all 300ms;
+  transform-origin: ${props =>
+    props.direction == "left" ? "top right" : "top left"};
+  transition: all 400ms;
   transition-timing-function: cubic-bezier(0, 1.4, 1, 1);
   ${props =>
     props.isOpen
@@ -99,6 +101,7 @@ const Menu = styled.div`
       : css``};
   a,
   button {
+    white-space: nowrap;
     display: block;
     padding: ${themeGet("space.3")};
     appearance: none;
@@ -121,7 +124,7 @@ const Menu = styled.div`
   }
 `;
 
-const ActionsMenu = ({ children, isOpen, ...props }) => {
+const ActionsMenu = ({ children, direction, isOpen, ...props }) => {
   const [baseState, setBase] = useState(isOpen);
   const [toggleState, setToggle] = useState(false);
 
@@ -136,13 +139,16 @@ const ActionsMenu = ({ children, isOpen, ...props }) => {
       <Control onClick={onToggle}>
         <Icon isOpen={baseState} />
       </Control>
-      <Menu isOpen={baseState}>{children}</Menu>
+      <Menu isOpen={baseState} direction={direction}>
+        {children}
+      </Menu>
     </Wrapper>
   );
 };
 
 ActionsMenu.propTypes = {
   isOpen: PropTypes.bool,
+  direction: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)
