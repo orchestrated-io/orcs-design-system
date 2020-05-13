@@ -1,11 +1,18 @@
 import React from "react";
-import styled, { css, ThemeProvider } from "styled-components";
+import styled, { css, keyframes, ThemeProvider } from "styled-components";
 import { get } from "lodash";
 import PropTypes from "prop-types";
 import { space, layout, color, border } from "styled-system";
 import { rgba } from "polished";
 import { themeGet } from "@styled-system/theme-get";
 import systemtheme from "../../systemtheme";
+
+const loadingSpin = keyframes`
+  to {
+      transform: rotate(1turn);
+  }
+`;
+
 
 const variantMap = {
   default: {
@@ -149,7 +156,7 @@ const Item = styled.button`
           &:after {
             content: "";
             position: relative;
-            animation: loadingSpin 500ms infinite linear;
+            animation: ${loadingSpin} 500ms infinite linear;
             width: 16px;
             height: 16px;
             border-radius: 50%;

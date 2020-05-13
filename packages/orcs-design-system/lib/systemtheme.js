@@ -60,7 +60,7 @@ const black = "#000";
 const white = "#fff";
 const grey = "#90979A"; // Base grey - Mainly used for UI elements like backgrounds, muted text, icons, dividers or borders
 const primary = "#30ABD6"; // Potential new colour: #2a5ec1. Base primary brand colour (blue) - Mainly used for buttons, links and selected states
-// const secondary = "#7211ED"; // Potential new purple colour. Introduce new secondary colour maybe purple when we re-design our colour palette
+const secondary = "#8E41F0"; // Change to #7211ED with new colour palette. Potential new purple colour. Introduce new secondary colour maybe purple when we re-design our colour palette
 // const tertiary = "orange"; A tertiary colour is maybe not needed. Introduce new tertiary colour maybe orange when we re-design our colour palette
 const success = "#ACD036"; // Base brand success colour (green) - Mainly used to indicate success, status=good, valid, add, or save states
 const warning = "#EDC652"; // Base brand warning colour - Mainly used to indicate warnings, slipping or near due states
@@ -103,6 +103,13 @@ export const colors = {
   primaryDark: darken(0.1, primary),
   primaryDarker: darken(0.25, primary),
   primaryDarkest: darken(0.35, primary),
+  secondary,
+  secondaryLight: lighten(0.1, secondary),
+  secondaryLighter: lighten(0.2, secondary),
+  secondaryLightest: lighten(0.3, secondary),
+  secondaryDark: darken(0.1, secondary),
+  secondaryDarker: darken(0.2, secondary),
+  secondaryDarkest: darken(0.3, secondary),
   success,
   successLight: lighten(0.15, success),
   successLighter: lighten(0.25, success),

@@ -32,7 +32,7 @@ const Text = styled.div`
   word-break: break-word;
   left: 100%;
   top: 50%;
-  color: ${colours.greyDarkest};
+  color: ${colours.white};
   outline: 0;
   padding: 8px 10px;
   border-radius: ${variables.borderRadiusSmall};
@@ -40,7 +40,7 @@ const Text = styled.div`
   transition: ${variables.defaultTransition};
   box-shadow: -3px 0px 12px 0 ${rgba(colours.greyDarkest, 0.15)};
   width: ${props => (props.width ? props.width : "200px")};
-  background: ${colours.white};
+  background: ${colours.greyDarker};
   transition: all 300ms ease-in-out;
   opacity: 0;
   z-index: -100;
@@ -54,7 +54,7 @@ const Text = styled.div`
     border-style: solid;
     border-width: 6px 6px 6px 0;
     border-color: transparent;
-    border-right-color: ${colours.white};
+    border-right-color: ${colours.greyDarker};
     left: -6px;
     top: 50%;
     margin-top: -6px;

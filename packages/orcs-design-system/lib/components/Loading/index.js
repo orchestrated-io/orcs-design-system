@@ -1,15 +1,17 @@
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import PropTypes from "prop-types";
 import React from "react";
 import { rgba } from "polished";
 
+const loadingSpin = keyframes`
+  to {
+      transform: rotate(1turn);
+  }
+`;
+
 const Item = styled.div`
   position: relative;
   border-radius: 50%;
-  animation: ${props =>
-    props.large
-      ? "loadingSpin 800ms infinite linear"
-      : "loadingSpin 500ms infinite linear"};
   width: ${props => (props.large ? "50px" : "16px")};
   height: ${props => (props.large ? "50px" : "16px")};
   margin: ${props => (props.centered ? "0 auto" : "0")};
@@ -41,6 +43,14 @@ const Item = styled.div`
     }
     return borderRightColour;
   }};
+  ${props =>
+    props.large
+      ? css`
+          animation: ${loadingSpin} 800ms infinite linear;
+        `
+      : css`
+          animation: ${loadingSpin} 500ms infinite linear;
+        `};
 `;
 
 /**

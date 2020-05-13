@@ -26,6 +26,7 @@ export const colourVariants = () => (
         <Badge variant="primaryLight">Low priority</Badge>
         <Badge variant="primary">Medium priority</Badge>
         <Badge variant="primaryDark">High priority</Badge>
+        <Badge variant="secondary">Secondary</Badge>
       </Spacer>
     </Box>
     <Box p="4" bg="greyDarkest">
@@ -37,6 +38,7 @@ export const colourVariants = () => (
         <Badge variant="primaryLight">Low priority</Badge>
         <Badge variant="primary">Medium priority</Badge>
         <Badge variant="primaryDark">High priority</Badge>
+        <Badge variant="secondary">Secondary</Badge>
       </Spacer>
     </Box>
   </>

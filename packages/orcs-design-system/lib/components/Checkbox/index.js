@@ -1,9 +1,128 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled, { ThemeProvider } from "styled-components";
+import styled, { keyframes, ThemeProvider } from "styled-components";
 import colours from "../../colours";
 import variables from "../../variables";
 import { rgba } from "polished";
+
+/* Animations */
+const checkboxOn = keyframes`
+  0% {
+    box-shadow:
+      0 0 0 10px,
+      10px -10px 0 10px,
+      32px 0px 0 20px,
+      0px 32px 0 20px,
+      -5px 5px 0 10px,
+      15px 2px 0 11px;
+  }
+  50% {
+    box-shadow:
+      0 0 0 10px,
+      10px -10px 0 10px,
+      32px 0px 0 20px,
+      0px 32px 0 20px,
+      -5px 5px 0 10px,
+      20px 2px 0 11px;
+  }
+  100% {
+    box-shadow:
+      0 0 0 10px,
+      10px -10px 0 10px,
+      32px 0px 0 20px,
+      0px 32px 0 20px,
+      -5px 5px 0 10px,
+      20px -12px 0 11px;
+  }
+`;
+
+const checkboxOff = keyframes`
+  0% {
+    box-shadow:
+      0 0 0 10px,
+      10px -10px 0 10px,
+      32px 0px 0 20px,
+      0px 32px 0 20px,
+      -5px 5px 0 10px,
+      20px -12px 0 11px,
+      0 0 0 0 inset;
+  }
+  25% {
+    box-shadow:
+      0 0 0 10px,
+      10px -10px 0 10px,
+      32px 0px 0 20px,
+      0px 32px 0 20px,
+      -5px 5px 0 10px,
+      20px -12px 0 11px,
+      0 0 0 0 inset;
+  }
+  50% {
+    transform: rotate(45deg);
+    margin-top: -4px;
+    margin-left: 6px;
+    width: 0px;
+    height: 0px;
+    box-shadow:
+      0 0 0 10px,
+      10px -10px 0 10px,
+      32px 0px 0 20px,
+      0px 32px 0 20px,
+      -5px 5px 0 10px,
+      15px 2px 0 11px,
+      0 0 0 0 inset;
+  }
+  51% {
+    transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    box-shadow:
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0px 0 10px inset;
+  }
+  100% {
+    transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    box-shadow:
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0px 0 0px inset;
+  }
+`;
+
+const rippleOn = keyframes`
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(13,13);
+  }
+`;
+
+const rippleOff = keyframes`
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(13,13);
+  }
+`;
 
 const Item = styled.div`
   display: block;
@@ -60,11 +179,11 @@ const Control = styled.input.attrs({
   }
 
   :not(:checked) + div:before {
-    animation: rippleOff 700ms forwards ease-out;
+    animation: ${rippleOff} 700ms forwards ease-out;
   }
 
   :checked + div:before {
-    animation: rippleOn 700ms forwards ease-out;
+    animation: ${rippleOn} 700ms forwards ease-out;
   }
 
   /* Targeting Check */
@@ -76,19 +195,19 @@ const Control = styled.input.attrs({
     + div div:before {
       box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px,
         0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
-      animation: checkboxOn 300ms forwards ease-out;
+      animation: ${checkboxOn} 300ms forwards ease-out;
     }
     + div div:after {
-      animation: rippleOn 700ms forwards ease-out;
+      animation: ${rippleOn} 700ms forwards ease-out;
     }
   }
 
   :not(:checked) + div div:after {
-    animation: rippleOff 700ms forwards ease-out;
+    animation: ${rippleOff} 700ms forwards ease-out;
   }
 
   + div div:before {
-    animation: checkboxOff 300ms forwards ease-out;
+    animation: ${checkboxOff} 300ms forwards ease-out;
   }
 `;
 

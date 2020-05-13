@@ -1,10 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled, { css, ThemeProvider } from "styled-components";
+import styled, { css, keyframes, ThemeProvider } from "styled-components";
 import colours from "../../colours";
 import variables from "../../variables";
 import systemtheme from "../../systemtheme";
 import { space, layout } from "styled-system";
+
+const expandWidth = keyframes`
+  0% { width: 0; }
+`;
 
 const Background = styled.div`
   ${space}
@@ -23,7 +27,7 @@ const Fill = styled.div`
   top: 3px;
   height: 10px;
   border-radius: 5px;
-  animation: expandWidth 1000ms ease-in-out 1;
+  animation: ${expandWidth} 1000ms ease-in-out 1;
   transition: ${variables.defaultTransition};
   ${props =>
     props.gradient

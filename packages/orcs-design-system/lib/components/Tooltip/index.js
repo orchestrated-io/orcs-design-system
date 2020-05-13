@@ -19,7 +19,6 @@ const Container = styled.button`
   -webkit-font-smoothing: antialiased;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   border-radius: 10px;
-  display: block;
   color: ${props => (props.inverted ? colours.greyDarkest : colours.white)};
   display: flex;
   align-items: center;
@@ -58,16 +57,14 @@ const Text = styled.div`
   font-size: 1.2rem;
   font-weight: 400;
   text-align: left;
-  left: 34px;
   outline: 0;
   opacity: 0;
   padding: 8px 10px;
   pointer-events: none;
   border-radius: ${variables.borderRadiusSmall};
-  transform: translateX(10px);
   box-shadow: 0 2px 5px ${rgba(colours.greyDarkest, 0.3)};
   transition: ${variables.defaultTransition};
-  width: ${props => (props.width ? props.width + "px" : "200px")};
+  width: ${props => (props.width ? props.width : "200px")};
   background: ${props =>
     props.inverted ? colours.white : colours.greyDarkest};
 
@@ -81,18 +78,12 @@ const Text = styled.div`
     border-color: transparent;
     border-right-color: ${props =>
       props.inverted ? colours.white : colours.greyDarkest};
-    left: -8px;
-    top: 50%;
-    margin-top: -6px;
     position: absolute;
   }
 
   &:after {
     content: "";
-    left: -34px;
     display: block;
-    height: 100%;
-    top: 0;
     position: absolute;
     width: 100%;
   }
@@ -118,7 +109,19 @@ const Text = styled.div`
         `
       : direction === "right"
       ? css`
-          /* No changes as same as default */
+          left: 34px;
+          transform: translateX(10px);
+          &:before {
+            left: -8px;
+            top: 50%;
+            margin-top: -6px;
+          }
+          &:after {
+            content: "";
+            left: -34px;
+            height: 100%;
+            top: 0;
+          }
         `
       : direction === "bottom"
       ? css`
@@ -147,14 +150,34 @@ const Text = styled.div`
           &:before {
             left: auto;
             right: -8px;
+            top: 50%;
+            margin-top: -6px;
             transform: rotate(180deg);
           }
           &:after {
             left: auto;
+            height: 100%;
+            top: 0;
             right: -34px;
           }
         `
-      : css``};
+      : css`
+          left: auto;
+          bottom: 34px;
+          transform: translateX(0) translateY(-10px);
+          &:before {
+            left: 50%;
+            top: auto;
+            margin-top: 0;
+            bottom: -10px;
+            margin-left: -4px;
+            transform: rotate(-90deg);
+          }
+          &:after {
+            left: 0;
+            height: calc(100% + 15px);
+          }
+        `};
 `;
 
 /**
@@ -191,7 +214,7 @@ Tooltip.propTypes = {
   children: PropTypes.node,
   /** Specifies the direction of the tooltip */
   direction: PropTypes.oneOf(["top", "right", "bottom", "left"]),
-  /** Specifies the width of the tooltip in pixels */
+  /** Specifies the width of the tooltip (include unit) */
   width: PropTypes.string,
   /** Changes appearance to suit a dark background. */
   inverted: PropTypes.bool,

@@ -1,73 +1,140 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled, { css, ThemeProvider } from "styled-components";
-import { themeGet } from "@styled-system/theme-get";
-import { rgba } from "polished";
+import styled, { keyframes } from "styled-components";
 import colours from "../../colours";
 import variables from "../../variables";
-import systemtheme from "../../systemtheme";
-import { space, layout } from "styled-system";
+import { rgba } from "polished";
+
+/* Animations */
+const checkboxOn = keyframes`
+  0% {
+    box-shadow:
+      0 0 0 10px,
+      10px -10px 0 10px,
+      32px 0px 0 20px,
+      0px 32px 0 20px,
+      -5px 5px 0 10px,
+      15px 2px 0 11px;
+  }
+  50% {
+    box-shadow:
+      0 0 0 10px,
+      10px -10px 0 10px,
+      32px 0px 0 20px,
+      0px 32px 0 20px,
+      -5px 5px 0 10px,
+      20px 2px 0 11px;
+  }
+  100% {
+    box-shadow:
+      0 0 0 10px,
+      10px -10px 0 10px,
+      32px 0px 0 20px,
+      0px 32px 0 20px,
+      -5px 5px 0 10px,
+      20px -12px 0 11px;
+  }
+`;
+
+const checkboxOff = keyframes`
+  0% {
+    box-shadow:
+      0 0 0 10px,
+      10px -10px 0 10px,
+      32px 0px 0 20px,
+      0px 32px 0 20px,
+      -5px 5px 0 10px,
+      20px -12px 0 11px,
+      0 0 0 0 inset;
+  }
+  25% {
+    box-shadow:
+      0 0 0 10px,
+      10px -10px 0 10px,
+      32px 0px 0 20px,
+      0px 32px 0 20px,
+      -5px 5px 0 10px,
+      20px -12px 0 11px,
+      0 0 0 0 inset;
+  }
+  50% {
+    transform: rotate(45deg);
+    margin-top: -4px;
+    margin-left: 6px;
+    width: 0px;
+    height: 0px;
+    box-shadow:
+      0 0 0 10px,
+      10px -10px 0 10px,
+      32px 0px 0 20px,
+      0px 32px 0 20px,
+      -5px 5px 0 10px,
+      15px 2px 0 11px,
+      0 0 0 0 inset;
+  }
+  51% {
+    transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    box-shadow:
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0px 0 10px inset;
+  }
+  100% {
+    transform: rotate(0deg);
+    margin-top: -2px;
+    margin-left: -2px;
+    width: 20px;
+    height: 20px;
+    box-shadow:
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0 0 0 0,
+      0px 0px 0 0px inset;
+  }
+`;
+
+const rippleOn = keyframes`
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(13,13);
+  }
+`;
+
+const rippleOff = keyframes`
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(13,13);
+  }
+`;
 
 const Item = styled.div`
-  ${space}
-  ${layout}
   display: block;
   transform: translateZ(0);
   color: ${props =>
     props.colour === "white" ? colours.white : colours.greyDarkest};
 `;
 
-const getBorderRadius = props => {
-  if (props.side === "right") {
-    return "0 6px 6px 0";
-  }
-  if (props.side === "left") {
-    return "6px 0 0 6px";
-  }
-  return "0";
-};
-
 const Label = styled.label`
-  ${props =>
-    props.asButton
-      ? css`
-          height: 33px;
-          border-radius: ${getBorderRadius};
-          border-right: ${props =>
-            props.side === "right"
-              ? `2px solid ${colours["greyDarker"]}`
-              : "none"};
-          border-top: ${`2px solid ${colours["greyDarker"]}`};
-          border-bottom: ${`2px solid ${colours["greyDarker"]}`};
-          border-left: ${`2px solid ${colours["greyDarker"]}`};
-          display: flex;
-          align-items: center;
-          margin-top: ${themeGet("space.3")};
-          margin-bottom: ${themeGet("space.3")};
-          transition: ${themeGet("transition.transitionDefault")};
-          font-weight: ${themeGet("fontWeights.1")};
-          font-size: ${themeGet("fontSizes.1")};
-          padding: 0 ${themeGet("space.3")};
-          -moz-appearance: none;
-          -webkit-appearance: none;
-          appearance: none;
-          box-shadow: none;
-          text-decoration: none;
-          cursor: ${props => (props.checked ? "default" : "pointer")};
-          background-color: ${props =>
-            props.checked ? colours["white"] : "#5e686d"};
-          color: ${props =>
-            props.checked ? colours["greyDarker"] : colours["white"]};
-          &:hover {
-            background-color: ${props =>
-              props.checked ? colours["white"] : colours["primary"]};
-          }
-        `
-      : css`
-          display: flex;
-          cursor: ${props => (props.disabled ? "default" : "pointer")};
-        `};
+  display: flex;
   align-items: center;
+  cursor: ${props => (props.disabled ? "default" : "pointer")};
   opacity: ${props => (props.disabled ? "0.5" : "1")};
 `;
 
@@ -83,79 +150,65 @@ const Control = styled.input.attrs({
   overflow: hidden;
   pointer-events: none;
 
-  ${props =>
-    props.asButton
-      ? css`
-          :checked {
-            + div {
-              background-color: ${colours["white"]};
-            }
-            &:before {
-              background-color: ${colours["greyLight"]};
-            }
-          }
-        `
-      : css`
-          &:focus {
-            + div {
-              border-radius: 10px;
-              box-shadow: 0 0 0 3px
-                ${props =>
-                  props.colour && colours[props.colour]
-                    ? rgba(colours[props.colour], 0.4)
-                    : rgba(colours.greyDarker, 0.4)};
-            }
-          }
+  &:focus {
+    + div {
+      border-radius: 10px;
+      box-shadow: 0 0 0 3px
+        ${props =>
+          props.colour && colours[props.colour]
+            ? rgba(colours[props.colour], 0.4)
+            : rgba(colours.greyDarker, 0.4)};
+    }
+  }
 
-          /* Targeting circle */
-          + div {
-            transition: ${variables.defaultTransition};
-            &:before {
-              background-color: ${props =>
-                props.colour && colours[props.colour]
-                  ? colours[props.colour]
-                  : colours.greyDarker};
-            }
-            > div {
-              color: ${props =>
-                props.colour && colours[props.colour]
-                  ? colours[props.colour]
-                  : colours.greyDarker};
-            }
-          }
+  /* Targeting circle */
+  + div {
+    transition: ${variables.defaultTransition};
+    &:before {
+      background-color: ${props =>
+        props.colour && colours[props.colour]
+          ? colours[props.colour]
+          : colours.greyDarker};
+    }
+    > div {
+      color: ${props =>
+        props.colour && colours[props.colour]
+          ? colours[props.colour]
+          : colours.greyDarker};
+    }
+  }
 
-          :not(:checked) + div:before {
-            animation: rippleOff 700ms forwards ease-out;
-          }
+  :not(:checked) + div:before {
+    animation: ${rippleOff} 700ms forwards ease-out;
+  }
 
-          :checked + div:before {
-            animation: rippleOn 700ms forwards ease-out;
-          }
+  :checked + div:before {
+    animation: ${rippleOn} 700ms forwards ease-out;
+  }
 
-          /* Targeting Check */
-          :focus + div div:after {
-            opacity: 0.2;
-          }
+  /* Targeting Check */
+  :focus + div div:after {
+    opacity: 0.2;
+  }
 
-          :checked {
-            + div div:before {
-              box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px,
-                0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
-              animation: checkboxOn 300ms forwards ease-out;
-            }
-            + div div:after {
-              animation: rippleOn 700ms forwards ease-out;
-            }
-          }
+  :checked {
+    + div div:before {
+      box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px,
+        0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+      animation: ${checkboxOn} 300ms forwards ease-out;
+    }
+    + div div:after {
+      animation: ${rippleOn} 700ms forwards ease-out;
+    }
+  }
 
-          :not(:checked) + div div:after {
-            animation: rippleOff 700ms forwards ease-out;
-          }
+  :not(:checked) + div div:after {
+    animation: ${rippleOff} 700ms forwards ease-out;
+  }
 
-          + div div:before {
-            animation: checkboxOff 300ms forwards ease-out;
-          }
-        `}
+  + div div:before {
+    animation: ${checkboxOff} 300ms forwards ease-out;
+  }
 `;
 
 const Circle = styled.div`
@@ -223,39 +276,25 @@ export default function RadioButton({
   colour,
   disabled,
   checked,
-  onChange,
-  asButton,
-  side,
-  theme,
-  ...props
+  onChange
 }) {
   return (
-    <ThemeProvider theme={theme}>
-      <Item colour={colour} {...props}>
-        <Label
+    <Item colour={colour}>
+      <Label disabled={disabled}>
+        <Control
+          name={name}
+          value={value}
+          colour={colour}
           disabled={disabled}
-          asButton={asButton}
           checked={checked}
-          side={side}
-        >
-          <Control
-            name={name}
-            value={value}
-            colour={colour}
-            disabled={disabled}
-            checked={checked}
-            onChange={onChange}
-            asButton={asButton}
-          />
-          {!asButton && (
-            <Circle colour={colour}>
-              <Check />
-            </Circle>
-          )}
-          <Text>{label}</Text>
-        </Label>
-      </Item>
-    </ThemeProvider>
+          onChange={onChange}
+        />
+        <Circle colour={colour}>
+          <Check />
+        </Circle>
+        <Text>{label}</Text>
+      </Label>
+    </Item>
   );
 }
 
@@ -273,15 +312,5 @@ RadioButton.propTypes = {
   /** Applies checked attribute and styling */
   checked: PropTypes.bool,
   /** Function to call when checked */
-  onChange: PropTypes.func,
-  /** render radio button as button */
-  asButton: PropTypes.bool,
-  /** indicate this side if the radio butoon in a group, left, right or middle (Temporary solution)*/
-  side: PropTypes.string,
-  /** Specifies the system design theme. */
-  theme: PropTypes.object
-};
-
-RadioButton.defaultProps = {
-  theme: systemtheme
+  onChange: PropTypes.func
 };

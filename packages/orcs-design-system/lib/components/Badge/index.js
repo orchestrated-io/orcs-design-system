@@ -31,7 +31,8 @@ const colourMap = {
     badgeColour: "primaryLightest"
   },
   primary: { textColour: "primaryDarker", badgeColour: "primaryLighter" },
-  primaryDark: { textColour: "primaryDarkest", badgeColour: "primary" }
+  primaryDark: { textColour: "primaryDarker", badgeColour: "primaryLight" },
+  secondary: { textColour: "secondary", badgeColour: "secondaryLightest" }
 };
 
 export default function Badge({
@@ -61,7 +62,8 @@ Badge.propTypes = {
     "danger",
     "primaryLight",
     "primary",
-    "primaryDark"
+    "primaryDark",
+    "secondary"
   ]),
   /** The label text on the badge is passed as a child element. */
   children: PropTypes.node,

@@ -1,13 +1,31 @@
 import React, { useEffect, useCallback } from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
-import styled, { ThemeProvider } from "styled-components";
+import styled, { keyframes, ThemeProvider } from "styled-components";
 import variables from "../../variables";
 import Button from "../Button";
 import Flex from "../Flex";
 import Box from "../Box";
 import Divider from "../Divider";
 import systemtheme from "../../systemtheme";
+
+const scaleIn = keyframes`
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
 
 const Overlay = styled(Flex)`
   position: fixed;
@@ -22,7 +40,7 @@ const Overlay = styled(Flex)`
   opacity: 1;
   z-index: 900;
   visibility: visible;
-  animation: 300ms fadeIn ease-in-out;
+  animation: 300ms ${fadeIn} ease-in-out;
 `;
 
 const Container = styled(Box)`
@@ -30,7 +48,7 @@ const Container = styled(Box)`
   z-index: 9001;
   max-height: 90vh;
   overflow-y: auto;
-  animation: 300ms fadeIn ease-in-out, 300ms scaleIn ease-in-out;
+  animation: 300ms ${fadeIn} ease-in-out, 300ms ${scaleIn} ease-in-out;
 `;
 
 const Actions = styled(Flex)`

@@ -1,9 +1,48 @@
 import React, { useState } from "react";
-import styled, { css, ThemeProvider } from "styled-components";
+import styled, { css, keyframes, ThemeProvider } from "styled-components";
 import PropTypes from "prop-types";
 import { space, layout } from "styled-system";
 import systemtheme from "../../systemtheme";
 import { themeGet } from "@styled-system/theme-get";
+
+const crossTransform1 = keyframes`
+  0% {
+    transform: translate(0, -6px);
+    border-radius: 2px;
+  }
+  50% {
+    transform: translate(0, 0);
+    border-radius: 2px;
+  }
+  75% {
+    transform: rotate(-45deg) translate(0, 0);
+    border-radius: 2px;
+  }
+  100% {
+    transform: rotate(-45deg) translate(0, 0) scaleX(4);
+    border-radius: 0;
+  }
+`;
+
+const crossTransform2 = keyframes`
+
+  0% {
+    transform: translate(0, 6px);
+    border-radius: 2px;
+  }
+  50% {
+    transform: translate(0, 0);
+    border-radius: 2px;
+  }
+  75% {
+    transform: rotate(45deg) translate(0, 0);
+    border-radius: 2px;
+  }
+  100% {
+    transform: rotate(45deg) translate(0, 0) scaleX(4);
+    border-radius: 0;
+  }
+`;
 
 const Wrapper = styled.div`
   ${space}
@@ -64,10 +103,10 @@ const Icon = styled.div`
     props.isOpen
       ? css`
           &:before {
-            animation: 400ms crossTransform1 ease-in-out forwards;
+            animation: 400ms ${crossTransform1} ease-in-out forwards;
           }
           &:after {
-            animation: 400ms crossTransform2 ease-in-out forwards;
+            animation: 400ms ${crossTransform2} ease-in-out forwards;
           }
         `
       : css``};
