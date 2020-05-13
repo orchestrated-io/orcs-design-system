@@ -1,7 +1,5 @@
 import React from "react";
-import Flex from "../Flex";
 import Icon from ".";
-import Layout from "../Layout";
 import colours from "../../colours";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { far } from "@fortawesome/free-regular-svg-icons";
@@ -10,18 +8,7 @@ library.add(far, fas);
 
 export default {
   title: "Components/Icon",
-  decorators: [
-    storyFn => (
-      <Layout padding>
-        <Flex alignCenter justifyAround>
-          {storyFn()}
-        </Flex>
-      </Layout>
-    )
-  ],
-  parameters: {
-    component: Icon
-  }
+  includeStories: []
 };
 
 export const basic = () => (
@@ -51,13 +38,9 @@ export const size = () => (
 
 export const onDarkBackground = () => (
   <>
-    <Layout backgroundDark padding childChildHorizontalSpacing width="100%">
-      <Flex justifyBetween alignCenter>
-        <Icon icon={["fas", "angle-down"]} inverse />
-        <Icon icon={["fas", "plus"]} inverse />
-        <Icon icon={["far", "user"]} inverse />
-      </Flex>
-    </Layout>
+    <Icon icon={["fas", "angle-down"]} inverse />
+    <Icon icon={["fas", "plus"]} inverse />
+    <Icon icon={["far", "user"]} inverse />
   </>
 );
 
