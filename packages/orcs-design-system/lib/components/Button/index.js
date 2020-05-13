@@ -13,7 +13,6 @@ const loadingSpin = keyframes`
   }
 `;
 
-
 const variantMap = {
   default: {
     buttonColour: "primary",
