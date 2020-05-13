@@ -7,8 +7,7 @@ export default {
   title: "Components/Checkbox",
   parameters: {
     component: Checkbox
-  },
-  includeStories: []
+  }
 };
 
 export const basicCheckbox = () => <Checkbox label="Default checkbox" />;

@@ -8,7 +8,9 @@ library.add(far, fas);
 
 export default {
   title: "Components/Icon",
-  includeStories: []
+  parameters: {
+    component: Icon
+  }
 };
 
 export const basic = () => (

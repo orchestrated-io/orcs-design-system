@@ -4,7 +4,9 @@ import Spacer from "../Spacer";
 
 export default {
   title: "Components/Divider",
-  includeStories: []
+  parameters: {
+    component: Divider
+  }
 };
 
 export const basicDivider = () => (

@@ -4,7 +4,9 @@ import Flex from "../Flex";
 
 export default {
   title: "Components/ActionsMenu",
-  includeStories: []
+  parameters: {
+    component: ActionsMenu
+  }
 };
 
 export const defaultActionsMenu = () => (

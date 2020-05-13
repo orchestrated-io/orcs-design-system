@@ -8,8 +8,7 @@ export default {
   title: "Components/Button",
   parameters: {
     component: Button
-  },
-  includeStories: []
+  }
 };
 
 export const defaultButton = () => <Button>Default button</Button>;
