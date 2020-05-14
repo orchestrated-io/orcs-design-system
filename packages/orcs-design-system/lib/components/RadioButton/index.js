@@ -1,9 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, ThemeProvider } from "styled-components";
 import colours from "../../colours";
 import variables from "../../variables";
 import { rgba } from "polished";
+import { space, layout } from "styled-system";
+import systemtheme from "../../systemtheme";
 
 /* Animations */
 const checkboxOn = keyframes`
@@ -125,6 +127,8 @@ const rippleOff = keyframes`
 `;
 
 const Item = styled.div`
+  ${space}
+  ${layout}
   display: block;
   transform: translateZ(0);
   color: ${props =>
@@ -276,25 +280,29 @@ export default function RadioButton({
   colour,
   disabled,
   checked,
-  onChange
+  onChange,
+  theme,
+  ...props
 }) {
   return (
-    <Item colour={colour}>
-      <Label disabled={disabled}>
-        <Control
-          name={name}
-          value={value}
-          colour={colour}
-          disabled={disabled}
-          checked={checked}
-          onChange={onChange}
-        />
-        <Circle colour={colour}>
-          <Check />
-        </Circle>
-        <Text>{label}</Text>
-      </Label>
-    </Item>
+    <ThemeProvider theme={theme}>
+      <Item colour={colour} {...props}>
+        <Label disabled={disabled}>
+          <Control
+            name={name}
+            value={value}
+            colour={colour}
+            disabled={disabled}
+            checked={checked}
+            onChange={onChange}
+          />
+          <Circle colour={colour}>
+            <Check />
+          </Circle>
+          <Text>{label}</Text>
+        </Label>
+      </Item>
+    </ThemeProvider>
   );
 }
 
@@ -312,5 +320,11 @@ RadioButton.propTypes = {
   /** Applies checked attribute and styling */
   checked: PropTypes.bool,
   /** Function to call when checked */
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  /** Specifies the system design theme */
+  theme: PropTypes.object
+};
+
+RadioButton.defaultProps = {
+  theme: systemtheme
 };

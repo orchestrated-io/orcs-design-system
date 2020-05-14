@@ -1,31 +1,34 @@
 import React from "react";
 import RadioButton from ".";
-import Layout from "../Layout";
+import Box from "../Box";
+import Spacer from "../Spacer";
 
 export default {
   title: "Components/RadioButton",
-  decorators: [storyFn => <Layout childVerticalSpacing>{storyFn()}</Layout>],
   parameters: {
     component: RadioButton
   }
 };
 
 export const defaultRadioButton = () => (
-  <>
+  <Spacer m="r">
     <RadioButton name="RadioButtons01" label="Default radio" />
     <RadioButton name="RadioButtons01" label="Default radio 02" />
-  </>
+  </Spacer>
 );
 defaultRadioButton.story = {
   name: "Default"
 };
 
-export const checked = () => (
+export const checkedRadioButton = () => (
   <RadioButton name="RadioButtons02" label="Default checked radio" checked />
 );
+checkedRadioButton.story = {
+  name: "Checked"
+};
 
-export const disabled = () => (
-  <>
+export const disabledRadioButton = () => (
+  <Spacer m="r">
     <RadioButton
       name="RadioButtons03"
       label="Disabled unchecked radio"
@@ -38,11 +41,14 @@ export const disabled = () => (
       disabled
       checked
     />
-  </>
+  </Spacer>
 );
+disabledRadioButton.story = {
+  name: "Disabled"
+};
 
-export const coloured = () => (
-  <>
+export const colouredRadioButton = () => (
+  <Spacer m="r">
     <RadioButton
       name="RadioButtons"
       label="Primary colour radio"
@@ -66,17 +72,17 @@ export const coloured = () => (
       label="Danger colour radio"
       colour="danger"
     />
-  </>
+  </Spacer>
 );
+colouredRadioButton.story = {
+  name: "Colour"
+};
 
-export const onDarkBackground = () => (
-  <>
-    <Layout padding backgroundDark>
-      <RadioButton
-        name="RadioButtons04"
-        label="Inverted radio"
-        colour="white"
-      />
-    </Layout>
-  </>
+export const invertedRadioButton = () => (
+  <Box p="r" bg="greyDarker">
+    <RadioButton name="RadioButtons04" label="Inverted radio" colour="white" />
+  </Box>
 );
+invertedRadioButton.story = {
+  name: "Inverted"
+};

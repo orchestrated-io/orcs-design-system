@@ -1,0 +1,50 @@
+import * as stories from './RadioButton.stories.js';
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import RadioButton from ".";
+import Box from "../Box";
+
+<Meta title="Components/RadioButton" component={RadioButton} decorators={[storyFn => <Box p="r">{storyFn()}</Box> ]} />
+
+# Radio Button
+
+[Default](#default) | [Colour](#colour) | [Specified width](#specified-width) | [Text alignment](#text-alignment) | [Inline](#inline) | [Properties](#properties)
+
+Progress bar is not intended to be used for loading (that's what the Loading component is for). The intended use is for indicating progress through steps or progress towards a goal.
+
+A percentage width of the container (grey background) can be specified using the containerWidth prop, in most cases this should be 100. If not set the container is rendered without a CSS width property.
+
+A percentage width of the fill (coloured element) can be specified using the fillWidth prop. On page load the fill will animate from 0 to set value, and on change of the fillWidth prop value the fill will automatically animate to the new width value.
+
+## Default
+
+<Preview>
+  <Story name="defaultRadioButton">{stories.defaultRadioButton()}</Story>
+</Preview>
+
+## Colour
+
+<Preview>
+  <Story name="colouredRadioButton">{stories.colouredRadioButton()}</Story>
+</Preview>
+
+## Checked
+
+<Preview>
+  <Story name="checkedRadioButton">{stories.checkedRadioButton()}</Story>
+</Preview>
+
+## Disabled
+
+<Preview>
+  <Story name="disabledRadioButton">{stories.disabledRadioButton()}</Story>
+</Preview>
+
+## Inverted
+
+<Preview>
+  <Story name="invertedRadioButton">{stories.invertedRadioButton()}</Story>
+</Preview>
+
+## Properties
+
+<Props of={RadioButton} />
