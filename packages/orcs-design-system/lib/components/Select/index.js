@@ -45,8 +45,8 @@ const Select = forwardRef((props, ref) => {
       boxShadow: !state.isFocused
         ? 0
         : props.inverted
-        ? `0 0 0 ${radii[1]}px ${rgba(colours.primaryLightest, 0.8)}`
-        : `0 0 0 ${radii[1]}px ${rgba(colours.primary, 0.4)}`,
+        ? `0 0 0 ${radii[1]} ${rgba(colours.primaryLightest, 0.8)}`
+        : `0 0 0 ${radii[1]} ${rgba(colours.primary, 0.4)}`,
       "&:hover": {
         borderColor: colours.primary
       },
@@ -54,7 +54,7 @@ const Select = forwardRef((props, ref) => {
       outline: state.isFocused ? colours.primary : colours.grey,
       backgroundColor: props.inverted ? colours.greyDarker : colours.white,
       color: props.inverted ? colours.white : colours.greyDarkest,
-      borderRadius: `${radii[2]}px`
+      borderRadius: `${radii[2]}`
     }),
     clearIndicator: (provided, state) => ({
       ...provided,
@@ -107,20 +107,20 @@ const Select = forwardRef((props, ref) => {
       ...provided,
       backgroundColor: props.inverted ? colours.primaryDark : colours.primary,
       color: colours.white,
-      borderRadius: `${radii[2]}px`
+      borderRadius: `${radii[2]}`
     }),
     multiValueLabel: provided => ({
       ...provided,
       backgroundColor: props.inverted ? colours.primaryDark : colours.primary,
       color: colours.white,
-      borderRadius: `${radii[2]}px`,
-      padding: `${space[2]}px`
+      borderRadius: `${radii[2]}`,
+      padding: `${space[2]}`
     }),
     multiValueRemove: provided => ({
       ...provided,
       backgroundColor: props.inverted ? colours.primaryDark : colours.primary,
       color: colours.white,
-      borderRadius: `${radii[2]}px`,
+      borderRadius: `${radii[2]}`,
       "&:hover": {
         backgroundColor: colours.primaryDarkest,
         color: colours.white
@@ -143,7 +143,7 @@ const Select = forwardRef((props, ref) => {
     })
   };
   return (
-    <ThemeProvider theme={props.theme}>
+    <ThemeProvider theme={systemtheme}>
       <Wrapper inverted={props.inverted}>
         <ReactSelect ref={ref} {...props} styles={customStyles} />
       </Wrapper>
