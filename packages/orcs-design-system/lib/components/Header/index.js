@@ -295,7 +295,7 @@ export default function Header({
           </MobileMenuToggle>
         </Bar>
         <MobileNavMenu>
-          <Spacer p={4} display="block">
+          <Spacer p="r" display="block">
             <Box
               borderBottomWidth={1}
               borderBottomStyle="solid"

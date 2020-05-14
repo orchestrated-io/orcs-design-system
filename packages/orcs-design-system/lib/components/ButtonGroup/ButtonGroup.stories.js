@@ -6,7 +6,7 @@ export default {
   title: "Components/ButtonGroup",
   decorators: [
     storyFn => (
-      <Box bg="greyDark" p={4}>
+      <Box bg="greyDark" p="r">
         {storyFn()}
       </Box>
     )

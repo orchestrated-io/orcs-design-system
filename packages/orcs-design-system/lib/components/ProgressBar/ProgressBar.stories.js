@@ -1,31 +1,40 @@
 import React from "react";
 import ProgressBar from ".";
-import Layout from "../Layout";
+import Box from "../Box";
+import Spacer from "../Spacer";
 
 export default {
   title: "Components/ProgressBar",
-  decorators: [storyFn => <Layout childVerticalSpacing>{storyFn()}</Layout>],
   parameters: {
     component: ProgressBar
   }
 };
 
-export const basic = () => (
-  <>
+export const defaultProgressBar = () => (
+  <Spacer m="r">
     <ProgressBar containerWidth={100} fillWidth={40} />
     <ProgressBar containerWidth={50} fillWidth={70} />
-  </>
+  </Spacer>
 );
+defaultProgressBar.story = {
+  name: "Default"
+};
 
-export const gradient = () => (
+export const gradientProgressBar = () => (
   <ProgressBar containerWidth={100} fillWidth={40} />
 );
+gradientProgressBar.story = {
+  name: "Gradient"
+};
 
-export const onDarkBackground = () => (
-  <>
-    <Layout paddingDouble childVerticalSpacing backgroundDark>
+export const invertedProgressBar = () => (
+  <Box bg="greyDarker" p="r">
+    <Spacer m="r">
       <ProgressBar containerWidth={100} fillWidth={40} inverted />
       <ProgressBar containerWidth={100} fillWidth={70} gradient inverted />
-    </Layout>
-  </>
+    </Spacer>
+  </Box>
 );
+invertedProgressBar.story = {
+  name: "Inverted"
+};

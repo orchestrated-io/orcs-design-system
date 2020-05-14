@@ -1,0 +1,58 @@
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import Notification from ".";
+import * as stories from "./Notification.stories.js";
+import Box from "../Box";
+
+<Meta title="Components/Notification" decorators={[storyFn => <Box p="r">{storyFn()}</Box>]}/>
+
+# Notification
+
+[Default](#default) | [Colour](#colour) | [Text-only](#text-only) | [Close disabled](#close-disabled) | [In progress](#in-progress) | [Floating](#floating) | [Properties](#properties)
+
+Notifications should be used to present important and contextual information to the user when particular events are triggered, e.g. saving, error etc. Make sure to use an appropriate icon and colour for the specific notification situation.
+
+Default notifications are displayed inline, if a floating notification is required (if something happens that applies to the entire page/view/app for example) then you can add the floating prop, which you can see displayed in an example that is floating and stuck to the bottom right of this screen.
+
+If you want your notification to be closable, you must use the onDismiss prop to correctly unmount the component. If you do not do this, clicking the close button will hide the notification visually using CSS and this will not be able to be shown again, even if the event that triggers the notification occurs again.
+
+## Default
+
+<Preview>
+  <Story name="defaultNotification">{stories.defaultNotification()}</Story>
+</Preview>
+
+## Colour
+
+<Preview>
+  <Story name="colourNotification">{stories.colourNotification()}</Story>
+</Preview>
+
+## Text-only
+
+<Preview>
+  <Story name="textOnlyNotification">{stories.textOnlyNotification()}</Story>
+</Preview>
+
+## Close disabled
+
+<Preview>
+  <Story name="closeDisabledNotification">{stories.closeDisabledNotification()}</Story>
+</Preview>
+
+## In progress
+
+<Preview>
+  <Story name="inProgressNotification">{stories.inProgressNotification()}</Story>
+</Preview>
+
+## Floating
+
+This notification will appear on the bottom right corner of the browser's screen.
+
+<Preview>
+  <Story name="floatingNotification">{stories.floatingNotification()}</Story>
+</Preview>
+
+## Properties
+
+<Props of={Notification} />

@@ -82,7 +82,7 @@ small.story = {
 };
 
 export const inverted = () => (
-  <Box bg="greyDarkest" p="4">
+  <Box bg="greyDarkest" p="r">
     <Spacer my={3}>
       <Avatar
         type="inverted"

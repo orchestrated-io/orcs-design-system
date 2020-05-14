@@ -6,8 +6,11 @@ import colours from "../../colours";
 import variables from "../../variables";
 import { rgba } from "polished";
 import systemtheme from "../../systemtheme";
+import { space, layout } from "styled-system";
 
 const Item = styled.div`
+${space}
+${layout}
   position: relative;
   font-size: 1.4rem;
   font-weight: 600;
@@ -72,14 +75,6 @@ const Close = styled.button`
       }
   }
 `;
-
-/**
- * Notifications should be used to present important and contextual information to the user when particular events are triggered, e.g. saving, error etc. Make sure to use an appropriate icon and colour for the specific notification situation.
- *
- * Default notifications are displayed inline, if a floating notification is required (if something happens that applies to the entire page/view/app for example) then you can add the floating prop, which you can see displayed in an example that is floating and stuck to the bottom right of this screen.
- *
- * If you want your notification to be closable, you must use the onDismiss prop to correctly unmount the component. If you do not do this, clicking the close button will hide the notification visually using CSS and this will not be able to be shown again, even if the event that triggers the notification occurs again.
- */
 
 export default function Notification({
   icon,
