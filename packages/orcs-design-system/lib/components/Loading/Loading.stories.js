@@ -1,6 +1,7 @@
 import React from "react";
-import Layout from "../Layout";
 import Loading from ".";
+import Spacer from "../Spacer";
+import Box from "../Box";
 
 export default {
   title: "Components/Loading",
@@ -9,23 +10,34 @@ export default {
   }
 };
 
-export const basicLoading = () => <Loading />;
-basicLoading.story = {
-  name: "Default"
+export const defaultLoading = () => <Loading />;
+defaultLoading.story = {
+  name: "Default Loading"
 };
 
-export const large = () => <Loading large />;
+export const largeLoading = () => <Loading large />;
+largeLoading.story = {
+  name: "Large"
+};
 
-export const centered = () => (
-  <Layout childVerticalSpacing>
+export const centeredLoading = () => (
+  <Spacer p="r">
     <Loading centered />
     <Loading large centered />
-  </Layout>
+  </Spacer>
 );
+centeredLoading.story = {
+  name: "Centered"
+};
 
-export const onDarkBackground = () => (
-  <Layout backgroundDark padding childVerticalSpacing>
-    <Loading inverted />
-    <Loading large inverted />
-  </Layout>
+export const invertedLoading = () => (
+  <Box bg="greyDarkest" p="r">
+    <Spacer p="r">
+      <Loading inverted />
+      <Loading large inverted />
+    </Spacer>
+  </Box>
 );
+invertedLoading.story = {
+  name: "Inverted"
+};

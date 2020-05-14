@@ -40,6 +40,16 @@ export const space = [
   "512px"
 ];
 
+space.xxs = space[1];
+space.xs = space[2];
+space.s = space[3];
+space.r = space[4];
+space.l = space[5];
+space.xl = space[6];
+space.xxl = space[7];
+space.xxxl = space[8];
+space.xxxxl = space[9];
+
 // SIZES (for LAYOUT properties)
 export const sizes = [
   0,
