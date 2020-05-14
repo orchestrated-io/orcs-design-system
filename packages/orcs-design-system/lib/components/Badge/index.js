@@ -46,8 +46,8 @@ const Item = styled("div")(
         bg: "primaryLighter"
       },
       primaryDark: {
-        color: "primaryDarkest",
-        bg: "primary"
+        color: "primaryDarker",
+        bg: "primaryLight"
       },
       secondary: {
         color: "secondary",
