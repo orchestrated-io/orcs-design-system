@@ -1,10 +1,11 @@
 import React, { forwardRef } from "react";
 import PropTypes from "prop-types";
-import styled, { withTheme } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { space, radii } from "../../systemtheme";
 import colours from "../../colours";
 import { default as ReactSelect } from "react-select";
 import { rgba } from "polished";
+import systemtheme from "../../systemtheme";
 
 const Wrapper = styled.div`
   display: inline-block;
@@ -142,11 +143,11 @@ const Select = forwardRef((props, ref) => {
     })
   };
   return (
-    <>
+    <ThemeProvider theme={props.theme}>
       <Wrapper inverted={props.inverted}>
         <ReactSelect ref={ref} {...props} styles={customStyles} />
       </Wrapper>
-    </>
+    </ThemeProvider>
   );
 });
 
@@ -154,8 +155,10 @@ Select.propTypes = {
   /** Points to options object, see example code above */
   options: PropTypes.array,
   /** Styling for dark backgrounds. */
-  inverted: PropTypes.bool
+  inverted: PropTypes.bool,
+  /** Specifies the system design theme object */
+  theme: systemtheme
 };
 
 /** @component */
-export default withTheme(Select);
+export default Select;
