@@ -1,88 +1,61 @@
-import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
-import styled from "styled-components";
+import { Meta, ColorPalette, ColorItem, Story, Preview } from "@storybook/addon-docs/blocks";
+import { colors } from "./systemtheme";
 import Flex from "./components/Flex";
 import Colour from "./assets/Colour";
+import Box from "./components/Box/"
 
-<Meta title="System/Colours" component={Colour} />
+<Meta title="System/Colour" />
 
-# Brand Colours
+# Colour
 
-## Design system colour palette
+These are the colours used throughout the design system, defined in `systemtheme`. They can be referenced using the `color` prop for components that accept this prop, or through referencing the theme object.
 
-These aren't components to be used, they are simply here to show the UI colour palette.
+## Main palette
+<Preview>
+<ColorPalette>
+<ColorItem title="Greyscale" subtitle="greyscale theme colours" colors={[colors.black, colors.greyDarkest, colors.greyDarker, colors.greyDark, colors.grey, colors.greyLight, colors.greyLighter, colors.greyLightest, colors.white]} />
+<ColorItem title="Primary" subtitle="main theme colour" colors={[colors.primaryDarkest, colors.primaryDarker, colors.primaryDark, colors.primary, colors.primaryLight, colors.primaryLighter, colors.primaryLightest]}  />
+<ColorItem title="Secondary" subtitle="secondary theme colour" colors={[colors.secondaryDarkest, colors.secondaryDarker, colors.secondaryDark, colors.secondary, colors.secondaryLight, colors.secondaryLighter, colors.secondaryLightest]}  />
+<ColorItem title="Success" subtitle="success indicator colour" colors={[colors.successDarkest, colors.successDarker, colors.successDark, colors.success, colors.successLight, colors.successLighter, colors.successLightest]} />
+<ColorItem title="Warning" subtitle="warning indicator colour" colors={[colors.warningDarkest, colors.warningDarker, colors.warningDark, colors.warning, colors.warningLight, colors.warningLighter, colors.warningLightest]} />
+<ColorItem title="Danger" subtitle="danger indicator colour" colors={[colors.dangerDarkest, colors.dangerDarker, colors.dangerDark, colors.danger, colors.dangerLight, colors.dangerLighter, colors.dangerLightest]} />
+</ColorPalette>
+</Preview>
 
-However, the colour props shown in the view code example below demonstrate how our colour variables are named, so if you need to use colour in a custom UI component that isn't part of this design system, you should ensure you at least use one of these colours from the design system palette to keep the UI colours consistent across the app.
+## Monochrome opacities
 
-<Props of={Colour} />
+For black and white colours at different opacities, use the following scales.
 
-### Greyscale palette
+### Black opacity scale
+<Preview>
+<Flex justifyContent="center">
+  <Colour bg="black" />
+  <Colour bg="black90" />
+  <Colour bg="black80" />
+  <Colour bg="black70" />
+  <Colour bg="black60" />
+  <Colour bg="black50" />
+  <Colour bg="black40" />
+  <Colour bg="black30" />
+  <Colour bg="black20" />
+  <Colour bg="black10" />
+</Flex>
+</Preview>
 
-<Story name="Greyscale palette">
-  <Flex>
-    <Colour bg="black" />
-    <Colour bg="greyDarkest" />
-    <Colour bg="greyDarker" />
-    <Colour bg="greyDark" />
-    <Colour bg="grey" />
-    <Colour bg="greyLight" />
-    <Colour bg="greyLighter" />
-    <Colour bg="greyLightest" />
-    <Colour bg="white" />
-  </Flex>
-</Story>
-
-### Primary Colour palette
-
-<Story name="Primary Colour palette">
-  <Flex>
-    <Colour bg="primaryDarkest" />
-    <Colour bg="primaryDarker" />
-    <Colour bg="primaryDark" />
-    <Colour bg="primary" />
-    <Colour bg="primaryLight" />
-    <Colour bg="primaryLighter" />
-    <Colour bg="primaryLightest" />
-  </Flex>
-</Story>
-
-### Success Colour palette
-
-<Story name="Success Colour palette">
-  <Flex>
-    <Colour bg="successDarkest" />
-    <Colour bg="successDarker" />
-    <Colour bg="successDark" />
-    <Colour bg="success" />
-    <Colour bg="successLight" />
-    <Colour bg="successLighter" />
-    <Colour bg="successLightest" />
-  </Flex>
-</Story>
-
-### Warning Colour palette
-
-<Story name="Warning Colour palette">
-  <Flex>
-    <Colour bg="warningDarkest" />
-    <Colour bg="warningDarker" />
-    <Colour bg="warningDark" />
-    <Colour bg="warning" />
-    <Colour bg="warningLight" />
-    <Colour bg="warningLighter" />
-    <Colour bg="warningLightest" />
-  </Flex>
-</Story>
-
-### Danger Colour palette
-
-<Story name="Danger Colour palette">
-  <Flex>
-    <Colour bg="dangerDarkest" />
-    <Colour bg="dangerDarker" />
-    <Colour bg="dangerDark" />
-    <Colour bg="danger" />
-    <Colour bg="dangerLight" />
-    <Colour bg="dangerLighter" />
-    <Colour bg="dangerLightest" />
-  </Flex>
-</Story>
+### White opacity scale
+<Preview>
+<Box bg="greyDarkest" padding="6">
+<Flex justifyContent="center">
+  <Colour bg="white" />
+  <Colour bg="white90" />
+  <Colour bg="white80" />
+  <Colour bg="white70" />
+  <Colour bg="white60" />
+  <Colour bg="white50" />
+  <Colour bg="white40" />
+  <Colour bg="white30" />
+  <Colour bg="white20" />
+  <Colour bg="white10" />
+</Flex>
+</Box>
+</Preview>

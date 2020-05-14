@@ -1,11 +1,9 @@
 import React from "react";
 import ActionsMenu from ".";
-import Box from "../Box";
 import Flex from "../Flex";
 
 export default {
   title: "Components/ActionsMenu",
-  decorators: [storyFn => <Box p="20px 20px 80px 20px">{storyFn()}</Box>],
   parameters: {
     component: ActionsMenu
   }

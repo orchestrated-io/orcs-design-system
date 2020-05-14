@@ -1,56 +1,50 @@
 import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
 import Divider from ".";
+import * as stories from "./Divider.stories.js";
 import Box from "../Box";
 import Spacer from "../Spacer";
 
-<Meta title="Components/Divider" component={Divider} />
+<Meta title="Components/Divider" component={Divider} decorators={[storyFn => <Box p="3">{storyFn()}</Box>]}/>
 
 # Divider
 
-The Divider component should be used to separate distinct sections of the UI.
+[Default](#default) | [Inverted](#inverted) | [Span grid](#span-grid) | [Properties](#properties)
 
-## Props
+The Divider component should be used as a horizontal rule to break up content into meaningful sections.
 
-<Props of={Divider} />
+As a general rule, the default divider with no props set should be used in most cases, however a thicker one can be used to emphasize a greater separation between content sections, and a light divider can be used to separate similar repeating items within a section, like a list of people/teams etc.
 
-## Examples
-
-### Standard options
+## Default
 
 To be used throughout most of the app, in most cases purely the default Divider with no props should be used.
 
 <Preview>
-  <Story name="Standard">
-    <Spacer my={4}>
-      <Divider />
-      <Divider light />
-      <Divider thick />
-      <Divider light thick />
-    </Spacer>
+  <Story name="Default">{stories.basicDivider()}
   </Story>
 </Preview>
 
-### Inverted options
+## Inverted
 
 The inverted prop should be used if a divider is required on a dark background.
 
 <Preview>
   <Story name="Inverted">
-    <Box bg="greyDarkest">
-      <Spacer my={4}>
-        <Divider inverted />
-        <Divider inverted thick />
-      </Spacer>
+    <Box bg="greyDarkest" p="5">
+{stories.invertedDivider()}
     </Box>
   </Story>
 </Preview>
 
-### Span Grid
+## Span grid
 
 This prop is to be used when you need to use a divider between rows in a grid, this will allow the divider to span across all columns in the grid.
 
 <Preview>
   <Story name="Span Grid">
-    <Divider spanGrid />
+  {stories.spanGrid()}
   </Story>
 </Preview>
+
+## Properties
+
+<Props of={Divider} />

@@ -1,0 +1,49 @@
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import Expandable from ".";
+import * as stories from "./Expandable.stories.js";
+import Box from "../Box";
+
+<Meta title="Components/Expandable" component={Expandable} decorators={[storyFn => <Box height="300px">{storyFn()}</Box>]}/>
+
+# Expandable
+
+[Default](#default) | [Open](#open) | [With subtitle](#with-subtitle) | [With badge](#with-badge) | [Properties](#properties)
+
+This component is to be used when there is a lot of content to present on a page that can instead be split into expandable sections to aid in user comprehension and explorability, rather than overwhelming the user with a whole page of content.
+
+A single expandable can also be used, for example if you had some content, but wanted to also have some additional less important subsidiary content hidden away unless the user wants to explore further, e.g. A few paragraphs on a company description, followed by an expandable with the title 'Read more about the history of this company'.
+
+This component supports any child elements, not just text, can be other components or any content you like.
+
+## Default Expandable
+
+<Preview>
+  <Story name="Default">{stories.basic()}
+  </Story>
+</Preview>
+
+## Open
+
+<Preview>
+  <Story name="Open">{stories.open()}
+  </Story>
+</Preview>
+
+## With subtitle
+
+<Preview>
+  <Story name="With subtitle">{stories.withSubtitle()}
+  </Story>
+</Preview>
+
+
+## With badge
+
+<Preview>
+  <Story name="With badge">{stories.withBadge()}
+  </Story>
+</Preview>
+
+## Properties
+
+<Props of={Expandable} />

@@ -1,8 +1,9 @@
 import * as stories from './ActionsMenu.stories.js';
 import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
 import ActionsMenu from ".";
+import Box from "../Box";
 
-<Meta title="Components/ActionsMenu" component={ActionsMenu} />
+<Meta title="Components/ActionsMenu" component={ActionsMenu} decorators={[storyFn => <Box p="20px 20px 80px 20px">{storyFn()}</Box>]} />
 
 # Actions Menu
 
@@ -10,7 +11,7 @@ import ActionsMenu from ".";
 
 This component should be used when an item in the UI has multiple actions that can be taken on it.
 
-## Default actions menu
+## Default Actions Menu
 
 <Preview>
   <Story name="defaultActionsMenu">{stories.defaultActionsMenu()}</Story>
