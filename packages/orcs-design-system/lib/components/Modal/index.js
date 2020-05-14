@@ -111,11 +111,11 @@ const Modal = props => {
             borderRadius={variables.borderRadius}
             bg="white"
           >
-            <Box p="4">{children}</Box>
+            <Box p="r">{children}</Box>
             {isDisplayFooter && (
               <>
                 <Divider />
-                <Actions alignItems="center" p="4">
+                <Actions alignItems="center" p="r">
                   <Button disabled={disabledConfirm} onClick={onConfirm}>
                     {confirmText}
                   </Button>

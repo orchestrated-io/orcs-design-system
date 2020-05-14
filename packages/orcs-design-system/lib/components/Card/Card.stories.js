@@ -13,7 +13,7 @@ export default {
   title: "Components/Card",
   decorators: [
     storyFn => (
-      <Box bg="greyLightest" p={4}>
+      <Box bg="greyLightest" p="r">
         {storyFn()}
       </Box>
     )

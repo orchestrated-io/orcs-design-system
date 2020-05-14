@@ -19,7 +19,7 @@ basicBox.story = {
 };
 
 export const borderBox = () => (
-  <Box boxBorder="default" p={4}>
+  <Box boxBorder="default" p="r">
     <P>This is a variant of a Box with a border.</P>
   </Box>
 );
@@ -28,7 +28,7 @@ borderBox.story = {
 };
 
 export const shadow = () => (
-  <Box shadow="default" p={4}>
+  <Box shadow="default" p="r">
     <P>This is a variant of a Box with a slight drop shadow.</P>
   </Box>
 );
@@ -37,7 +37,7 @@ shadow.story = {
 };
 
 export const backgroundColour = () => (
-  <Box bg="greyLightest" p={4}>
+  <Box bg="greyLightest" p="r">
     <P>
       This is a Box that has background colour set to <code>greyLightest</code>.
     </P>
@@ -65,7 +65,7 @@ export const borderRadius = () => (
     borderRadius={2}
     boxBorder="default"
     shadow="default"
-    p={4}
+    p="r"
   >
     <P>
       This is a bordered Box variant with rounded corners.{" "}

@@ -39,7 +39,7 @@ direction.story = {
 
 export const size = () => (
   <Flex justifyContent="center">
-    <Spacer m="4">
+    <Spacer m="r">
       <Tooltip width="90px">Short tooltip</Tooltip>
       <Tooltip width="250px">Long tooltip to accommodate more text.</Tooltip>
     </Spacer>

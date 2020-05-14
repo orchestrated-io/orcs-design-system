@@ -30,7 +30,7 @@ export const disabled = () => (
 export const checked = () => <Checkbox checked label="Ticked checkbox" />;
 
 export const inverted = () => (
-  <Box bg="greyDarker" p={4}>
+  <Box bg="greyDarker" p="r">
     <Checkbox colour="white" label="Inverted checkbox" />
   </Box>
 );

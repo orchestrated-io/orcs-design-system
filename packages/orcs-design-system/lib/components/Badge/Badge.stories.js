@@ -17,7 +17,7 @@ defaultBadge.story = {
 
 export const colourVariants = () => (
   <>
-    <Box p="4">
+    <Box p="r">
       <Spacer m="1">
         <Badge>Default</Badge>
         <Badge variant="success">Success</Badge>
@@ -29,7 +29,7 @@ export const colourVariants = () => (
         <Badge variant="secondary">Secondary</Badge>
       </Spacer>
     </Box>
-    <Box p="4" bg="greyDarkest">
+    <Box p="r" bg="greyDarkest">
       <Spacer m="1">
         <Badge>Default</Badge>
         <Badge variant="success">Success</Badge>
