@@ -1,13 +1,19 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { css, keyframes, ThemeProvider } from "styled-components";
 import PropTypes from "prop-types";
 import React from "react";
 import { rgba } from "polished";
+import { space, layout, compose } from "styled-system";
+import systemtheme from "../../systemtheme";
+
+const LoadingStyles = compose(space, layout);
 
 const loadingSpin = keyframes`
   to {
       transform: rotate(1turn);
   }
 `;
+
+const LoadingWrapper = styled("div")(LoadingStyles);
 
 const Item = styled.div`
   position: relative;
@@ -56,8 +62,20 @@ const Item = styled.div`
 /**
  * As a general guide, use the large prop for when whole pages or sections are loading, and the default (small) loading for smaller elements.
  */
-export default function Loading({ large, centered, inverted }) {
-  return <Item large={large} centered={centered} inverted={inverted} />;
+export default function Loading({
+  large,
+  centered,
+  inverted,
+  theme,
+  ...props
+}) {
+  return (
+    <ThemeProvider theme={theme}>
+      <LoadingWrapper {...props}>
+        <Item large={large} centered={centered} inverted={inverted} />
+      </LoadingWrapper>
+    </ThemeProvider>
+  );
 }
 
 Loading.propTypes = {
@@ -66,5 +84,11 @@ Loading.propTypes = {
   /** Centered loading spinner */
   centered: PropTypes.bool,
   /** Changes colours to work on dark background */
-  inverted: PropTypes.bool
+  inverted: PropTypes.bool,
+  /** Specifies the system design theme */
+  theme: PropTypes.object
+};
+
+Loading.defaultProps = {
+  theme: systemtheme
 };
