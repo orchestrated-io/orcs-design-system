@@ -1,32 +1,28 @@
 import React from "react";
 import Notification from ".";
-import Layout from "../Layout";
 import Loading from "../Loading";
+import Spacer from "../Spacer";
 import Flex from "../Flex";
 
 export default {
   title: "Components/Notification",
-  decorators: [
-    storyFn => (
-      <Layout padding childVerticalSpacing>
-        {storyFn()}
-      </Layout>
-    )
-  ],
   parameters: {
     component: Notification
   }
 };
 
-export const basic = () => (
+export const defaultNotification = () => (
   <Notification icon={["fas", "share-square"]}>
     Default notification message for messages that are not super important, e.g.
     Link shared.
   </Notification>
 );
+defaultNotification.story = {
+  name: "Default"
+};
 
-export const colours = () => (
-  <>
+export const colourNotification = () => (
+  <Spacer m="r">
     <Notification colour="success" icon={["fas", "check-circle"]}>
       Green notification for good/successful notifications, e.g. Details updated
       successfully!
@@ -39,35 +35,48 @@ export const colours = () => (
     <Notification colour="danger" icon={["fas", "exclamation-circle"]}>
       Red error notification e.g. Update failed! Please try again.
     </Notification>
-  </>
+  </Spacer>
 );
+colourNotification.story = {
+  name: "Colour"
+};
 
-export const textOnly = () => (
+export const textOnlyNotification = () => (
   <Notification>Text-only notification</Notification>
 );
+textOnlyNotification.story = {
+  name: "Text-only"
+};
 
-export const closeDisabled = () => (
+export const closeDisabledNotification = () => (
   <Notification closable={false}>
     Closing this notification is disabled, this should be used for persistant
     notifications e.g. Stage 1 is now locked and is read-only.
   </Notification>
 );
+closeDisabledNotification.story = {
+  name: "Close disabled"
+};
 
-export const inProgress = () => (
+export const inProgressNotification = () => (
   <Notification closable={false}>
-    <Layout childChildHorizontalSpacingHalf>
-      <Flex>
-        <Loading inverted />
-        <span>
-          In progress notification with disabled close. E.g. Importing data...
-        </span>
-      </Flex>
-    </Layout>
+    <Flex>
+      <Loading inverted mr="s" />
+      <span>
+        In progress notification with disabled close. E.g. Importing data...
+      </span>
+    </Flex>
   </Notification>
 );
+inProgressNotification.story = {
+  name: "In progress"
+};
 
 export const floatingNotification = () => (
   <Notification floating bottom="20px" right="20px" icon={["fas", "bell"]}>
     Floating notification.
   </Notification>
 );
+floatingNotification.story = {
+  name: "Floating"
+};
