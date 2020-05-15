@@ -152,4 +152,4 @@ export const withIconsTextInput = () => (
 );
 withIconsTextInput.story = {
   name: "With Icons"
-}
+};
