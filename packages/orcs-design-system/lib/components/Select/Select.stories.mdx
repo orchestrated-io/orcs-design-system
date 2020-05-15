@@ -1,0 +1,46 @@
+import * as stories from './Select.stories.js';
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import Select from ".";
+import Box from "../Box";
+
+<Meta title="Components/Select" component={Select} decorators={[storyFn => <Box p="r" height="250px">{storyFn()}</Box> ]} />
+
+# Select
+
+[Default](#default) | [Multi-select](#multi-select) | [Inverted](#inverted) | [Properties](#properties)
+
+This component uses React Select: <https://react-select.com/home>
+
+Usage of this component has changed since we have upgraded to the latest version of `react-select`. For example, field values are now defined as separate objects. for example:
+
+       const options = [
+      { value: 'chocolate', label: 'Chocolate' },
+      { value: 'strawberry', label: 'Strawberry' },
+      { value: 'vanilla', label: 'Vanilla' },
+      { value: 'hazelnut', label: 'Hazelnut' },
+      { value: 'rocky road', label: 'Rocky Road' }
+     ]
+
+For a full list of the changes, see <https://react-select.com/upgrade-guide>.
+
+## Default
+
+<Preview>
+  <Story name="defaultSelect">{stories.defaultSelect()}</Story>
+</Preview>
+
+## Multi-Select
+
+<Preview>
+  <Story name="multiSelect">{stories.multiSelect()}</Story>
+</Preview>
+
+## Inverted
+
+<Preview>
+  <Story name="invertedSelect">{stories.invertedSelect()}</Story>
+</Preview>
+
+## Properties
+
+<Props of={Select} />
