@@ -1,10 +1,10 @@
+import * as stories from "./Divider.stories.js";
 import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
 import Divider from ".";
-import * as stories from "./Divider.stories.js";
 import Box from "../Box";
 import Spacer from "../Spacer";
 
-<Meta title="Components/Divider" component={Divider} decorators={[storyFn => <Box p="3">{storyFn()}</Box>]}/>
+<Meta title="Components/Divider" component={Divider} />
 
 # Divider
 
@@ -19,7 +19,7 @@ As a general rule, the default divider with no props set should be used in most 
 To be used throughout most of the app, in most cases purely the default Divider with no props should be used.
 
 <Preview>
-  <Story name="Default">{stories.basicDivider()}
+  <Story name="Default Divider">{stories.defaultDivider()}
   </Story>
 </Preview>
 
@@ -28,7 +28,7 @@ To be used throughout most of the app, in most cases purely the default Divider 
 The inverted prop should be used if a divider is required on a dark background.
 
 <Preview>
-  <Story name="Inverted">
+  <Story name="Inverted Divider">
     <Box bg="greyDarkest" p="5">
 {stories.invertedDivider()}
     </Box>

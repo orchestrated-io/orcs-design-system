@@ -9,7 +9,7 @@ export default {
   }
 };
 
-export const basic = () => (
+export const defaultExpandable = () => (
   <Expandable title="Details">
     <Typography.P>
       Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
@@ -21,7 +21,7 @@ export const basic = () => (
   </Expandable>
 );
 
-export const open = () => (
+export const openExpandable = () => (
   <Expandable isOpen title="Details">
     <Typography.P>
       Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
@@ -33,7 +33,7 @@ export const open = () => (
   </Expandable>
 );
 
-export const withSubtitle = () => (
+export const expandableWithSubtitle = () => (
   <Expandable title="Complex example" subtitle="Subtitle">
     <Typography.P>
       Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
@@ -45,7 +45,7 @@ export const withSubtitle = () => (
   </Expandable>
 );
 
-export const withBadge = () => (
+export const expandableWithBadge = () => (
   <Expandable title="Complex example" badge="status" badgeColour="primaryDark">
     <Typography.P>
       Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium

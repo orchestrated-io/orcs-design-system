@@ -9,7 +9,7 @@ export default {
   }
 };
 
-export const basicDivider = () => (
+export const defaultDivider = () => (
   <Spacer my="4">
     <Divider />
     <Divider light />
