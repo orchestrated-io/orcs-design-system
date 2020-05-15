@@ -1,0 +1,20 @@
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import Modal from ".";
+import * as stories from "./Modal.stories.js";
+import Box from "../Box";
+
+<Meta title="Components/Modal" decorators={[storyFn => <Box p="r">{storyFn()}</Box>]}/>
+
+# Modal
+
+[Default](#default) | [Properties](#properties)
+
+## Default
+
+<Preview>
+  <Story name="BasicModal">{stories.BasicModal()}</Story>
+</Preview>
+
+## Properties
+
+<Props of={Modal} />

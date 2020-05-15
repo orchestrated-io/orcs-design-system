@@ -7,7 +7,7 @@ export default {
   component: Modal
 };
 
-export const Basic = () => {
+export const BasicModal = () => {
   const [visible, setVisible] = useState(false);
   const handleOnButtonClick = () => {
     setVisible(true);
@@ -32,6 +32,6 @@ export const Basic = () => {
   );
 };
 
-Basic.story = {
-  name: "Basic"
+BasicModal.story = {
+  name: "Default"
 };

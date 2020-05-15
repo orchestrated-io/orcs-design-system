@@ -2,13 +2,15 @@ import NumberFormat from "react-number-format";
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-
+import { space, layout } from "styled-system";
 import colours from "../../colours";
 import variables from "../../variables";
 import Icon from "../Icon";
 import { rgba } from "polished";
 
 const Group = styled.div`
+  ${space}
+  ${layout}
   position: relative;
   width: ${props => (props.fullWidth ? `100%` : `auto`)};
 `;
@@ -247,7 +249,7 @@ export default function TextInput({ ...props }) {
   ));
   const ref = React.createRef();
   return (
-    <Group fullWidth={fullWidth}>
+    <Group fullWidth={fullWidth} {...props}>
       {label && !floating ? (
         <Label
           inverted={inverted}
