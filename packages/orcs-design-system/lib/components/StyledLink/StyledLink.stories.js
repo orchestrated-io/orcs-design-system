@@ -1,70 +1,70 @@
 import React from "react";
 import { StyledLink, HeaderLink } from ".";
-import Layout from "../Layout";
+import Box from "../Box";
 import Flex from "../Flex";
+import Spacer from "../Spacer";
 import { BrowserRouter } from "react-router-dom";
 
 export default {
   title: "Components/StyledLink",
-  decorators: [
-    storyFn => (
-      <Layout padding childChildHorizontalSpacing>
-        <Flex center>{storyFn()}</Flex>
-      </Layout>
-    )
-  ],
   parameters: {
     component: StyledLink
   }
 };
 
-export const basic = () => <StyledLink href="#">Styled Link</StyledLink>;
+export const defaultStyledLink = () => (
+  <StyledLink href="#">Styled Link</StyledLink>
+);
+defaultStyledLink.story = {
+  name: "Default"
+};
 
-export const active = () => (
+export const activeStyledLink = () => (
   <StyledLink href="#" active>
     Active Link
   </StyledLink>
 );
+activeStyledLink.story = {
+  name: "Active"
+};
 
-export const bold = () => (
+export const boldStyledLink = () => (
   <StyledLink href="#" bold>
     Active Link
   </StyledLink>
 );
+boldStyledLink.story = {
+  name: "Bold"
+};
 
-export const onDarkBackground = () => (
-  <>
-    <Layout backgroundDark paddingDouble childChildHorizontalSpacing>
-      <Flex center>
+export const invertedStyledLink = () => (
+  <Box bg="greyDarker" p="r">
+    <Flex justifyContent="center">
+      <Spacer mx="r">
         <StyledLink href="#" white>
           White navigation link on dark background
         </StyledLink>
 
         <StyledLink href="#" white active bold>
-          Active/selected navigation link
+          Active/selected bold navigation link
         </StyledLink>
 
         <StyledLink href="#" white bold>
           Bold inverted link
         </StyledLink>
-      </Flex>
-    </Layout>
-  </>
+      </Spacer>
+    </Flex>
+  </Box>
 );
+invertedStyledLink.story = {
+  name: "Inverted"
+};
 
 export const customLink = () => (
-  <>
-    <BrowserRouter>
-      <HeaderLink to="about">Custom Link</HeaderLink>
-    </BrowserRouter>
-  </>
+  <BrowserRouter>
+    <HeaderLink to="about">Custom Link</HeaderLink>
+  </BrowserRouter>
 );
 customLink.story = {
-  name: "Using Router",
-  parameters: {
-    docs: {
-      storyDescription:
-        "Custom react-router link using the `HeaderLink` example above"
-    }
-  }
+  name: "Using Router"
 };
