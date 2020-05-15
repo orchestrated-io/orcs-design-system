@@ -25,7 +25,7 @@ Note that currently you must use `theme.colors.NAME`. We are working on a refact
 ## Default
 
 <Preview>
-  <Story name="Default Icon">{stories.basic()}
+  <Story name="Default Icon">{stories.defaultIcon()}
   </Story>
 </Preview>
 
@@ -34,14 +34,14 @@ Note that currently you must use `theme.colors.NAME`. We are working on a refact
 Note that currently you must use `colours.NAME` as specified in the example. We are working on a refactor that will allow you to use the same styled-system props as in other components.
 
 <Preview>
-  <Story name="Colours">{stories.alternateColours()}
+  <Story name="Coloured Icon">{stories.colouredIcon()}
   </Story>
 </Preview>
 
 ## Size
 
 <Preview>
-  <Story name="Size">{stories.size()}
+  <Story name="Icon Size">{stories.iconSize()}
   </Story>
 </Preview>
 
@@ -49,14 +49,16 @@ Note that currently you must use `colours.NAME` as specified in the example. We 
 
 <Preview>
   <Story name="Inverted">
-  <Box bg="greyDarker" p="r" width="100%"><Flex alignItems="center" justifyContent="space-around">{stories.onDarkBackground()}</Flex></Box>
+  <Box bg="greyDarker" p="r" width="100%"><Flex alignItems="center" justifyContent="space-around">
+  {stories.invertedIcons()}
+  </Flex></Box>
   </Story>
 </Preview>
 
 ## Animated
 
 <Preview>
-  <Story name="Animated">{stories.animated()}
+  <Story name="Animated Icons">{stories.animatedIcons()}
   </Story>
 </Preview>
 

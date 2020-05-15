@@ -13,7 +13,7 @@ export default {
   }
 };
 
-export const basic = () => (
+export const defaultIcon = () => (
   <>
     <Icon icon={["fas", "angle-down"]} />
     <Icon icon={["fas", "plus"]} />
@@ -21,7 +21,7 @@ export const basic = () => (
   </>
 );
 
-export const alternateColours = () => (
+export const colouredIcon = () => (
   <>
     <Icon icon={["fas", "angle-down"]} color={colours.primaryDark} />
     <Icon icon={["fas", "plus"]} color={colours.successDark} />
@@ -29,7 +29,7 @@ export const alternateColours = () => (
   </>
 );
 
-export const size = () => (
+export const iconSize = () => (
   <>
     <Icon icon={["fas", "plus"]} size="sm" />
     <Icon icon={["fas", "plus"]} size="rg" />
@@ -38,7 +38,7 @@ export const size = () => (
   </>
 );
 
-export const onDarkBackground = () => (
+export const invertedIcons = () => (
   <>
     <Icon icon={["fas", "angle-down"]} inverse />
     <Icon icon={["fas", "plus"]} inverse />
@@ -46,7 +46,7 @@ export const onDarkBackground = () => (
   </>
 );
 
-export const animated = () => (
+export const animatedIcons = () => (
   <>
     <Icon icon={["fas", "angle-down"]} spin />
     <Icon icon={["fas", "plus"]} pulse />
