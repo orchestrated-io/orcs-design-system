@@ -1,21 +1,26 @@
 import React from "react";
 import Range from ".";
-import Layout from "../Layout";
+import Box from "../Box";
 
 export default {
   title: "Components/Range",
-  decorators: [storyFn => <Layout padding>{storyFn()}</Layout>],
   parameters: {
     component: Range
   }
 };
 
-export const basic = () => <Range min={0} max={20} defaultValue={10} />;
+export const defaultRange = () => <Range min={0} max={20} defaultValue={10} />;
+defaultRange.story = {
+  name: "Default"
+};
 
-export const onDarkBackground = () => (
+export const invertedRange = () => (
   <>
-    <Layout backgroundDark paddingDouble>
+    <Box bg="greyDarker" p="r">
       <Range min={0} max={20} defaultValue={10} inverted />
-    </Layout>
+    </Box>
   </>
 );
+invertedRange.story = {
+  name: "Inverted"
+};

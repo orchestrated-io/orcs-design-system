@@ -1,0 +1,46 @@
+import * as stories from './RadioButton.stories.js';
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import RadioButton from ".";
+import Box from "../Box";
+
+<Meta title="Components/RadioButton" component={RadioButton} decorators={[storyFn => <Box p="r">{storyFn()}</Box> ]} />
+
+# Radio Button
+
+[Default](#default) | [Colour](#colour) | [Checked](#checked) | [Disabled](#disabled) | [Inverted](#inverted) | [Properties](#properties)
+
+The default radio button (or inverted if on dark background) should be used for the majority of the UI; however, the coloured ones should be used sparingly if required to indicate a particular state or meaning, e.g. If you had two radio buttons for upvote or downvote they could be coloured green and red.
+
+## Default
+
+<Preview>
+  <Story name="defaultRadioButton">{stories.defaultRadioButton()}</Story>
+</Preview>
+
+## Colour
+
+<Preview>
+  <Story name="colouredRadioButton">{stories.colouredRadioButton()}</Story>
+</Preview>
+
+## Checked
+
+<Preview>
+  <Story name="checkedRadioButton">{stories.checkedRadioButton()}</Story>
+</Preview>
+
+## Disabled
+
+<Preview>
+  <Story name="disabledRadioButton">{stories.disabledRadioButton()}</Story>
+</Preview>
+
+## Inverted
+
+<Preview>
+  <Story name="invertedRadioButton">{stories.invertedRadioButton()}</Story>
+</Preview>
+
+## Properties
+
+<Props of={RadioButton} />

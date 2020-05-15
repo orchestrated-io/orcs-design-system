@@ -1,0 +1,28 @@
+import * as stories from './Range.stories.js';
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import Range from ".";
+import Box from "../Box";
+
+<Meta title="Components/Range" component={Range} decorators={[storyFn => <Box p="r">{storyFn()}</Box> ]} />
+
+# Range
+
+[Default](#default) | [Inverted](#inverted) | [Properties](#properties)
+
+Range component is pretty self explanatory, used to select a number out of a range, make sure to set a min, max and default value.
+
+## Default
+
+<Preview>
+  <Story name="defaultRange">{stories.defaultRange()}</Story>
+</Preview>
+
+## Inverted
+
+<Preview>
+  <Story name="invertedRange">{stories.invertedRange()}</Story>
+</Preview>
+
+## Properties
+
+<Props of={Range} />

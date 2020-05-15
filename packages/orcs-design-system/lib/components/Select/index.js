@@ -1,13 +1,15 @@
 import React, { forwardRef } from "react";
 import PropTypes from "prop-types";
 import styled, { ThemeProvider } from "styled-components";
-import { space, radii } from "../../systemtheme";
 import colours from "../../colours";
 import { default as ReactSelect } from "react-select";
 import { rgba } from "polished";
 import systemtheme from "../../systemtheme";
+import { space, layout } from "styled-system";
 
 const Wrapper = styled.div`
+  ${space}
+  ${layout}
   display: inline-block;
   width: 100%;
 `;
@@ -45,8 +47,8 @@ const Select = forwardRef((props, ref) => {
       boxShadow: !state.isFocused
         ? 0
         : props.inverted
-        ? `0 0 0 ${radii[1]}px ${rgba(colours.primaryLightest, 0.8)}`
-        : `0 0 0 ${radii[1]}px ${rgba(colours.primary, 0.4)}`,
+        ? `0 0 0 ${systemtheme.radii[1]} ${rgba(colours.primaryLightest, 0.8)}`
+        : `0 0 0 ${systemtheme.radii[1]} ${rgba(colours.primary, 0.4)}`,
       "&:hover": {
         borderColor: colours.primary
       },
@@ -54,7 +56,7 @@ const Select = forwardRef((props, ref) => {
       outline: state.isFocused ? colours.primary : colours.grey,
       backgroundColor: props.inverted ? colours.greyDarker : colours.white,
       color: props.inverted ? colours.white : colours.greyDarkest,
-      borderRadius: `${radii[2]}px`
+      borderRadius: `${systemtheme.radii[2]}`
     }),
     clearIndicator: (provided, state) => ({
       ...provided,
@@ -107,20 +109,20 @@ const Select = forwardRef((props, ref) => {
       ...provided,
       backgroundColor: props.inverted ? colours.primaryDark : colours.primary,
       color: colours.white,
-      borderRadius: `${radii[2]}px`
+      borderRadius: `${systemtheme.radii[2]}`
     }),
     multiValueLabel: provided => ({
       ...provided,
       backgroundColor: props.inverted ? colours.primaryDark : colours.primary,
       color: colours.white,
-      borderRadius: `${radii[2]}px`,
-      padding: `${space[2]}px`
+      borderRadius: `${systemtheme.radii[2]}`,
+      padding: `${systemtheme.space[2]}`
     }),
     multiValueRemove: provided => ({
       ...provided,
       backgroundColor: props.inverted ? colours.primaryDark : colours.primary,
       color: colours.white,
-      borderRadius: `${radii[2]}px`,
+      borderRadius: `${systemtheme.radii[2]}`,
       "&:hover": {
         backgroundColor: colours.primaryDarkest,
         color: colours.white
@@ -143,8 +145,8 @@ const Select = forwardRef((props, ref) => {
     })
   };
   return (
-    <ThemeProvider theme={props.theme}>
-      <Wrapper inverted={props.inverted}>
+    <ThemeProvider theme={systemtheme}>
+      <Wrapper inverted={props.inverted} {...props}>
         <ReactSelect ref={ref} {...props} styles={customStyles} />
       </Wrapper>
     </ThemeProvider>
