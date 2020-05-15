@@ -5,8 +5,11 @@ import colours from "../../colours";
 import variables from "../../variables";
 import { rgba } from "polished";
 import systemtheme from "../../systemtheme";
+import { space, layout } from "styled-system";
 
 const Group = styled.div`
+  ${space}
+  ${layout}
   display: flex;
   align-items: center;
   ${props =>
@@ -111,7 +114,7 @@ export default function Toggle({ ...props }) {
   const { inverted, small, id, label, theme } = props;
   return (
     <ThemeProvider theme={theme}>
-      <Group inverted={inverted}>
+      <Group inverted={inverted} {...props}>
         <Input {...props} />
         <Item htmlFor={id} small={small} />
         <Label htmlFor={id} small={small}>
