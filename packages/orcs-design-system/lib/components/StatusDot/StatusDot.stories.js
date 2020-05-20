@@ -2,60 +2,104 @@ import React from "react";
 import StatusDot from ".";
 import Box from "../Box";
 import Flex from "../Flex";
+import Spacer from "../Spacer";
 import Popover from "../Popover";
 
 export default {
   title: "Components/StatusDot",
-  component: StatusDot,
-  decorators: [
-    storyFn => (
-      <Box padding={4}>
-        <Flex alignItems="center" justifyContent="center">
-          {storyFn()}
-        </Flex>
-      </Box>
-    )
-  ]
+  component: StatusDot
 };
 
-export const basic = () => <StatusDot />;
-
-export const complexExamples = () => (
-  <>
-    <Popover
-      direction="top"
-      text="Team has a dedicated Product Owner. STATUS: Met"
-      textAlign="left"
-      width="250px"
-    >
-      <StatusDot on />
-    </Popover>
-
-    <Popover
-      direction="top"
-      text="Team has a dedicated Engineering Lead. STATUS: Not met"
-      textAlign="left"
-      width="250px"
-    >
-      <StatusDot />
-    </Popover>
-
-    <Popover
-      direction="top"
-      text="Team members should share no more than 4 line managers. STATUS: Met"
-      textAlign="left"
-      width="250px"
-    >
-      <StatusDot on />
-    </Popover>
-
-    <Popover
-      direction="top"
-      text="Team members are in less than 3 locations. STATUS: Not enough data"
-      textAlign="left"
-      width="250px"
-    >
-      <StatusDot warning />
-    </Popover>
-  </>
+export const defaultStatusDot = () => (
+  <Box p="l">
+    <Flex justifyContent="center" alignItems="center">
+      <Popover
+        direction="top"
+        text="New approvals received"
+        textAlign="center"
+        width="170px"
+      >
+        <StatusDot />
+      </Popover>
+    </Flex>
+  </Box>
 );
+defaultStatusDot.story = {
+  name: "Default badge"
+};
+
+export const colourVariants = () => (
+  <Box p="l">
+    <Flex justifyContent="center" alignItems="center">
+      <Spacer m="xxs">
+        <Popover
+          direction="top"
+          text="Team has a dedicated Product Owner. STATUS: Met"
+          textAlign="left"
+          width="250px"
+        >
+          <StatusDot variant="success" />
+        </Popover>
+
+        <Popover
+          direction="top"
+          text="Team members are in less than 3 locations. STATUS: Not enough data"
+          textAlign="left"
+          width="250px"
+        >
+          <StatusDot variant="warning" />
+        </Popover>
+
+        <Popover
+          direction="top"
+          text="Team has a dedicated Engineering Lead. STATUS: Not met"
+          textAlign="left"
+          width="250px"
+        >
+          <StatusDot variant="danger" />
+        </Popover>
+      </Spacer>
+    </Flex>
+  </Box>
+);
+colourVariants.story = {
+  name: "Colour Variants"
+};
+
+export const withIcon = () => (
+  <Box p="l">
+    <Flex justifyContent="center" alignItems="center">
+      <Spacer m="xxs">
+        <Popover
+          direction="top"
+          text="Target met"
+          textAlign="center"
+          width="110px"
+        >
+          <StatusDot variant="success" icon={["fas", "check"]} />
+        </Popover>
+
+        <Popover
+          direction="top"
+          text="Under allocated"
+          textAlign="center"
+          width="110px"
+        >
+          <StatusDot variant="warning" icon={["fas", "exclamation"]} />
+        </Popover>
+
+        <Popover
+          direction="top"
+          text="Over allocated"
+          textAlign="center"
+          width="110px"
+        >
+          <StatusDot variant="danger" icon={["fas", "exclamation"]} />
+        </Popover>
+      </Spacer>
+    </Flex>
+  </Box>
+);
+withIcon.story = {
+  name: "With icon"
+};
