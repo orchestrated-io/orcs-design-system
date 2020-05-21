@@ -32,9 +32,9 @@ main {
 	width: 100%;
 }
 section {
-    height: calc(100vh - 60px);
-    width: 100%;
-	overflow-y: scroll;
+  height: calc(100vh - 56px);
+  width: 100%;
+  overflow-y: scroll;
 }
 img {
     border-style: none;

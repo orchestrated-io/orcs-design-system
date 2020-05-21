@@ -8,121 +8,21 @@ import { space, layout } from "styled-system";
 import systemtheme from "../../systemtheme";
 
 /* Animations */
-const checkboxOn = keyframes`
+const radioOn = keyframes`
   0% {
-    box-shadow:
-      0 0 0 10px,
-      10px -10px 0 10px,
-      32px 0px 0 20px,
-      0px 32px 0 20px,
-      -5px 5px 0 10px,
-      15px 2px 0 11px;
-  }
-  50% {
-    box-shadow:
-      0 0 0 10px,
-      10px -10px 0 10px,
-      32px 0px 0 20px,
-      0px 32px 0 20px,
-      -5px 5px 0 10px,
-      20px 2px 0 11px;
+    transform: scale(0);
   }
   100% {
-    box-shadow:
-      0 0 0 10px,
-      10px -10px 0 10px,
-      32px 0px 0 20px,
-      0px 32px 0 20px,
-      -5px 5px 0 10px,
-      20px -12px 0 11px;
+    transform: scale(1);
   }
 `;
 
-const checkboxOff = keyframes`
+const radioOff = keyframes`
   0% {
-    box-shadow:
-      0 0 0 10px,
-      10px -10px 0 10px,
-      32px 0px 0 20px,
-      0px 32px 0 20px,
-      -5px 5px 0 10px,
-      20px -12px 0 11px,
-      0 0 0 0 inset;
-  }
-  25% {
-    box-shadow:
-      0 0 0 10px,
-      10px -10px 0 10px,
-      32px 0px 0 20px,
-      0px 32px 0 20px,
-      -5px 5px 0 10px,
-      20px -12px 0 11px,
-      0 0 0 0 inset;
-  }
-  50% {
-    transform: rotate(45deg);
-    margin-top: -4px;
-    margin-left: 6px;
-    width: 0px;
-    height: 0px;
-    box-shadow:
-      0 0 0 10px,
-      10px -10px 0 10px,
-      32px 0px 0 20px,
-      0px 32px 0 20px,
-      -5px 5px 0 10px,
-      15px 2px 0 11px,
-      0 0 0 0 inset;
-  }
-  51% {
-    transform: rotate(0deg);
-    margin-top: -2px;
-    margin-left: -2px;
-    width: 20px;
-    height: 20px;
-    box-shadow:
-      0 0 0 0,
-      0 0 0 0,
-      0 0 0 0,
-      0 0 0 0,
-      0 0 0 0,
-      0 0 0 0,
-      0px 0px 0 10px inset;
+    transform: scale(1);
   }
   100% {
-    transform: rotate(0deg);
-    margin-top: -2px;
-    margin-left: -2px;
-    width: 20px;
-    height: 20px;
-    box-shadow:
-      0 0 0 0,
-      0 0 0 0,
-      0 0 0 0,
-      0 0 0 0,
-      0 0 0 0,
-      0 0 0 0,
-      0px 0px 0 0px inset;
-  }
-`;
-
-const rippleOn = keyframes`
-  0% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-    transform: scale(13,13);
-  }
-`;
-
-const rippleOff = keyframes`
-  0% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-    transform: scale(13,13);
+    transform: scale(0);
   }
 `;
 
@@ -130,7 +30,6 @@ const Item = styled.div`
   ${space}
   ${layout}
   display: block;
-  transform: translateZ(0);
   color: ${props =>
     props.colour === "white" ? colours.white : colours.greyDarkest};
 `;
@@ -168,12 +67,6 @@ const Control = styled.input.attrs({
   /* Targeting circle */
   + div {
     transition: ${variables.defaultTransition};
-    &:before {
-      background-color: ${props =>
-        props.colour && colours[props.colour]
-          ? colours[props.colour]
-          : colours.greyDarker};
-    }
     > div {
       color: ${props =>
         props.colour && colours[props.colour]
@@ -182,91 +75,47 @@ const Control = styled.input.attrs({
     }
   }
 
-  :not(:checked) + div:before {
-    animation: ${rippleOff} 700ms forwards ease-out;
-  }
-
-  :checked + div:before {
-    animation: ${rippleOn} 700ms forwards ease-out;
-  }
-
-  /* Targeting Check */
-  :focus + div div:after {
-    opacity: 0.2;
-  }
-
   :checked {
-    + div div:before {
-      box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0px 0 20px,
-        0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
-      animation: ${checkboxOn} 300ms forwards ease-out;
-    }
-    + div div:after {
-      animation: ${rippleOn} 700ms forwards ease-out;
+    + div > div {
+      animation: ${radioOn} 300ms forwards ease-out;
     }
   }
 
-  :not(:checked) + div div:after {
-    animation: ${rippleOff} 700ms forwards ease-out;
-  }
-
-  + div div:before {
-    animation: ${checkboxOff} 300ms forwards ease-out;
+  + div > div {
+    animation: ${radioOff} 300ms forwards ease-out;
   }
 `;
 
 const Circle = styled.div`
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 20px;
   height: 20px;
   border-radius: 10px;
-
-  &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 8px;
-    top: 8px;
-    height: 4px;
-    width: 4px;
-    border-radius: 100%;
-    z-index: 1;
-    opacity: 0;
-    margin: 0;
-    pointer-events: none;
-    /*transform: scale3d(2.3, 2.3, 1);*/
-    background-color: rgba(0, 0, 0, 0.5);
-  }
+  border: solid 2px
+    ${props =>
+      props.colour && colours[props.colour]
+        ? colours[props.colour]
+        : colours.greyDarker};
 `;
 
-const Check = styled.div`
-  position: relative;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  border: 2px solid;
-  overflow: hidden;
-  z-index: 1;
-  color: ${colours.greyDarker};
-
-  :before {
-    content: "";
-    position: absolute;
-    transform: rotate(45deg);
-    display: block;
-    margin-top: -4px;
-    margin-left: 6px;
-    width: 0;
-    height: 0;
-    box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0,
-      0 0 0 0 inset;
-    /*animation: checkboxOff 300ms forwards ease-out;*/
-  }
+const Dot = styled.div`
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 8px;
+  transform: scale(0);
+  background-color: ${props =>
+    props.colour && colours[props.colour]
+      ? colours[props.colour]
+      : colours.greyDarker};
 `;
 
 const Text = styled.div`
-  padding-left: 8px;
+  padding-left: 6px;
 `;
 
 /**
@@ -290,14 +139,14 @@ export default function RadioButton({
         <Label disabled={disabled}>
           <Control
             name={name}
-            value={value}
             colour={colour}
+            value={value}
             disabled={disabled}
             checked={checked}
             onChange={onChange}
           />
           <Circle colour={colour}>
-            <Check />
+            <Dot colour={colour} />
           </Circle>
           <Text>{label}</Text>
         </Label>
