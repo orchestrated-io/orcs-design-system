@@ -1,33 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled, {
-  keyframes,
-  ThemeProvider,
-  css as styledcss
-} from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { themeGet } from "@styled-system/theme-get";
 import { space, layout, compose, variant } from "styled-system";
 import { css } from "@styled-system/css";
 import systemtheme from "../../systemtheme";
-
-/* Animations */
-const radioOn = keyframes`
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-`;
-
-const radioOff = keyframes`
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-`;
 
 const RadioButtonStyles = compose(space, layout);
 
@@ -56,59 +33,53 @@ const RadioButtonLabel = styled("label")(props =>
 );
 
 const RadioButtonControl = styled.input.attrs({ type: "radio" })(
-  css({
-    opacity: "0",
-    position: "absolute",
-    margin: "0",
-    zIndex: "-1",
-    width: "0",
-    height: "0",
-    overflow: "hidden",
-    pointerEvents: "none",
-    "+ div > div": {
-      animation: () =>
-        styledcss`
-          ${radioOff} 300ms forwards ease-out
-        `
-    },
-    "&:checked + div > div": {
-      animation: () =>
-        styledcss`
-          ${radioOn} 300ms forwards ease-out
-        `
-    }
-  }),
+  props =>
+    css({
+      opacity: "0",
+      position: "absolute",
+      margin: "0",
+      zIndex: "-1",
+      width: "0",
+      height: "0",
+      overflow: "hidden",
+      pointerEvents: "none",
+      "+ div > div": {
+        transform: "scale(0)"
+      },
+      "&:checked + div > div": {
+        transform: "scale(1)"
+      },
+      "&:focus + div": {
+        boxShadow: "0 0 0 3px" + themeGet("colors.greyLight")(props)
+      }
+    }),
   props =>
     variant({
       variants: {
-        default: {
-          "&:focus + div": {
-            boxShadow: "0 0 0 3px" + themeGet("colors.greyDarker")(props)
-          }
-        },
+        default: {},
         white: {
           "&:focus + div": {
-            boxShadow: "0 0 0 3px" + themeGet("colors.white")(props)
+            boxShadow: "0 0 0 3px" + themeGet("colors.white10")(props)
           }
         },
         primary: {
           "&:focus + div": {
-            boxShadow: "0 0 0 3px" + themeGet("colors.primary")(props)
+            boxShadow: "0 0 0 3px" + themeGet("colors.primaryLighter")(props)
           }
         },
         success: {
           "&:focus + div": {
-            boxShadow: "0 0 0 3px" + themeGet("colors.success")(props)
+            boxShadow: "0 0 0 3px" + themeGet("colors.successLighter")(props)
           }
         },
         warning: {
           "&:focus + div": {
-            boxShadow: "0 0 0 3px" + themeGet("colors.warning")(props)
+            boxShadow: "0 0 0 3px" + themeGet("colors.warningLighter")(props)
           }
         },
         danger: {
           "&:focus + div": {
-            boxShadow: "0 0 0 3px" + themeGet("colors.danger")(props)
+            boxShadow: "0 0 0 3px" + themeGet("colors.dangerLighter")(props)
           }
         }
       }
@@ -158,7 +129,8 @@ const RadioButtonDot = styled("div")(
     height: "10px",
     borderRadius: "8px",
     transform: "scale(0)",
-    backgroundColor: "greyDarker"
+    backgroundColor: "greyDarker",
+    transition: "transitionDefault"
   }),
   variant({
     variants: {
