@@ -69,6 +69,40 @@ const HeaderAvatar = styled(Avatar)(
   })
 );
 
+const HeaderPopover = ({
+  clientInfo,
+  userName,
+  avatarSource,
+  theme,
+  ...props
+}) =>
+  clientInfo ? (
+    <Popover
+      direction="bottom"
+      width="160px"
+      textAlign="center"
+      text={clientInfo}
+      {...props}
+    >
+      <HeaderAvatar
+        type="inverted"
+        sizing="small"
+        title={userName}
+        image={avatarSource}
+        theme={theme}
+      />
+    </Popover>
+  ) : (
+    <HeaderAvatar
+      type="inverted"
+      sizing="small"
+      title={userName}
+      image={avatarSource}
+      theme={theme}
+      {...props}
+    />
+  );
+
 const MobileMenuToggle = styled("label")(
   css({
     zIndex: 4,
@@ -267,20 +301,12 @@ export default function Header({
           <RightAlignedChildren>
             <Spacer ml={4}>
               {rightAlignedLink}
-              <Popover
-                direction="bottom"
-                width="160px"
-                textAlign="center"
-                text={clientInfo}
-              >
-                <HeaderAvatar
-                  type="inverted"
-                  sizing="small"
-                  title={userName}
-                  image={avatarSource}
-                  theme={theme}
-                />
-              </Popover>
+              <HeaderPopover
+                clientInfo={clientInfo}
+                userName={userName}
+                avatarSource={avatarSource}
+                theme={theme}
+              />
               {logoutFunction && (
                 <StyledLink white bold onClick={logoutFunction}>
                   <Icon icon={["fas", "lock"]} colour="white" />
@@ -346,6 +372,13 @@ Header.propTypes = {
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)
   ])
+};
+
+HeaderPopover.propTypes = {
+  userName: PropTypes.node,
+  avatarSource: PropTypes.node,
+  clientInfo: PropTypes.node,
+  theme: PropTypes.object
 };
 
 Header.defaultProps = {
