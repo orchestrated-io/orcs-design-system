@@ -52,25 +52,25 @@ export const colouredRadioButton = () => (
     <RadioButton
       name="RadioButtons"
       label="Primary colour radio"
-      colour="primary"
+      variant="primary"
     />
 
     <RadioButton
       name="RadioButtons"
       label="Success colour radio"
-      colour="success"
+      variant="success"
     />
 
     <RadioButton
       name="RadioButtons"
       label="Warning colour radio"
-      colour="warning"
+      variant="warning"
     />
 
     <RadioButton
       name="RadioButtons"
       label="Danger colour radio"
-      colour="danger"
+      variant="danger"
     />
   </Spacer>
 );
@@ -80,7 +80,7 @@ colouredRadioButton.story = {
 
 export const invertedRadioButton = () => (
   <Box p="r" bg="greyDarker">
-    <RadioButton name="RadioButtons04" label="Inverted radio" colour="white" />
+    <RadioButton name="RadioButtons04" label="Inverted radio" variant="white" />
   </Box>
 );
 invertedRadioButton.story = {

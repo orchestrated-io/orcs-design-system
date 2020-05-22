@@ -1,10 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled, { keyframes, ThemeProvider } from "styled-components";
-import colours from "../../colours";
-import variables from "../../variables";
-import { rgba } from "polished";
-import { space, layout } from "styled-system";
+import styled, {
+  keyframes,
+  ThemeProvider,
+  css as styledcss
+} from "styled-components";
+import { themeGet } from "@styled-system/theme-get";
+import { space, layout, compose, variant } from "styled-system";
+import { css } from "@styled-system/css";
 import systemtheme from "../../systemtheme";
 
 /* Animations */
@@ -26,107 +29,170 @@ const radioOff = keyframes`
   }
 `;
 
-const Item = styled.div`
-  ${space}
-  ${layout}
-  display: block;
-  color: ${props =>
-    props.colour === "white" ? colours.white : colours.greyDarkest};
-`;
+const RadioButtonStyles = compose(space, layout);
 
-const Label = styled.label`
-  display: flex;
-  align-items: center;
-  cursor: ${props => (props.disabled ? "default" : "pointer")};
-  opacity: ${props => (props.disabled ? "0.5" : "1")};
-`;
-
-const Control = styled.input.attrs({
-  type: "radio"
-})`
-  opacity: 0;
-  position: absolute;
-  margin: 0;
-  z-index: -1;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-  pointer-events: none;
-
-  &:focus {
-    + div {
-      border-radius: 10px;
-      box-shadow: 0 0 0 3px
-        ${props =>
-          props.colour && colours[props.colour]
-            ? rgba(colours[props.colour], 0.4)
-            : rgba(colours.greyDarker, 0.4)};
+const RadioButtonItem = styled("div")(
+  css({
+    color: "greyDarkest"
+  }),
+  variant({
+    variants: {
+      default: {},
+      white: {
+        color: "white"
+      }
     }
-  }
+  }),
+  RadioButtonStyles
+);
 
-  /* Targeting circle */
-  + div {
-    transition: ${variables.defaultTransition};
-    > div {
-      color: ${props =>
-        props.colour && colours[props.colour]
-          ? colours[props.colour]
-          : colours.greyDarker};
+const RadioButtonLabel = styled("label")(props =>
+  css({
+    display: "flex",
+    alignItems: "center",
+    cursor: props.disabled ? "default" : "pointer",
+    opacity: props.disabled ? "0.5" : "1"
+  })
+);
+
+const RadioButtonControl = styled.input.attrs({ type: "radio" })(
+  css({
+    opacity: "0",
+    position: "absolute",
+    margin: "0",
+    zIndex: "-1",
+    width: "0",
+    height: "0",
+    overflow: "hidden",
+    pointerEvents: "none",
+    "+ div > div": {
+      animation: () =>
+        styledcss`
+          ${radioOff} 300ms forwards ease-out
+        `
+    },
+    "&:checked + div > div": {
+      animation: () =>
+        styledcss`
+          ${radioOn} 300ms forwards ease-out
+        `
     }
-  }
+  }),
+  props =>
+    variant({
+      variants: {
+        default: {
+          "&:focus + div": {
+            boxShadow: "0 0 0 3px" + themeGet("colors.greyDarker")(props)
+          }
+        },
+        white: {
+          "&:focus + div": {
+            boxShadow: "0 0 0 3px" + themeGet("colors.white")(props)
+          }
+        },
+        primary: {
+          "&:focus + div": {
+            boxShadow: "0 0 0 3px" + themeGet("colors.primary")(props)
+          }
+        },
+        success: {
+          "&:focus + div": {
+            boxShadow: "0 0 0 3px" + themeGet("colors.success")(props)
+          }
+        },
+        warning: {
+          "&:focus + div": {
+            boxShadow: "0 0 0 3px" + themeGet("colors.warning")(props)
+          }
+        },
+        danger: {
+          "&:focus + div": {
+            boxShadow: "0 0 0 3px" + themeGet("colors.danger")(props)
+          }
+        }
+      }
+    })
+);
 
-  :checked {
-    + div > div {
-      animation: ${radioOn} 300ms forwards ease-out;
+const RadioButtonCircle = styled("div")(
+  css({
+    position: "relative",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "20px",
+    height: "20px",
+    borderRadius: "10px",
+    border: "solid 2px",
+    borderColor: "greyDarker",
+    transition: "transitionDefault"
+  }),
+  variant({
+    variants: {
+      default: {},
+      white: {
+        borderColor: "white"
+      },
+      primary: {
+        borderColor: "primary"
+      },
+      success: {
+        borderColor: "success"
+      },
+      warning: {
+        borderColor: "warning"
+      },
+      danger: {
+        borderColor: "danger"
+      }
     }
-  }
+  })
+);
 
-  + div > div {
-    animation: ${radioOff} 300ms forwards ease-out;
-  }
-`;
+const RadioButtonDot = styled("div")(
+  css({
+    position: "absolute",
+    display: "block",
+    width: "10px",
+    height: "10px",
+    borderRadius: "8px",
+    transform: "scale(0)",
+    backgroundColor: "greyDarker"
+  }),
+  variant({
+    variants: {
+      default: {},
+      white: {
+        backgroundColor: "white"
+      },
+      primary: {
+        backgroundColor: "primary"
+      },
+      success: {
+        backgroundColor: "success"
+      },
+      warning: {
+        backgroundColor: "warning"
+      },
+      danger: {
+        backgroundColor: "danger"
+      }
+    }
+  })
+);
 
-const Circle = styled.div`
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  border: solid 2px
-    ${props =>
-      props.colour && colours[props.colour]
-        ? colours[props.colour]
-        : colours.greyDarker};
-`;
-
-const Dot = styled.div`
-  position: absolute;
-  display: block;
-  width: 10px;
-  height: 10px;
-  border-radius: 8px;
-  transform: scale(0);
-  background-color: ${props =>
-    props.colour && colours[props.colour]
-      ? colours[props.colour]
-      : colours.greyDarker};
-`;
-
-const Text = styled.div`
-  padding-left: 6px;
-`;
-
-/**
- * The default radio button (or inverted if on dark background) should be used for the majority of the UI; however, the coloured ones should be used sparingly if required to indicate a particular state or meaning, e.g. If you had two radio buttons for upvote or downvote they could be coloured green and red.
- */
+const RadioButtonText = styled("div")(
+  css({
+    paddingLeft: "6px"
+  })
+);
 
 export default function RadioButton({
   name,
   value,
   label,
-  colour,
+  variant,
   disabled,
   checked,
   onChange,
@@ -135,22 +201,22 @@ export default function RadioButton({
 }) {
   return (
     <ThemeProvider theme={theme}>
-      <Item colour={colour} {...props}>
-        <Label disabled={disabled}>
-          <Control
+      <RadioButtonItem variant={variant} {...props}>
+        <RadioButtonLabel disabled={disabled}>
+          <RadioButtonControl
             name={name}
-            colour={colour}
+            variant={variant}
             value={value}
             disabled={disabled}
             checked={checked}
             onChange={onChange}
           />
-          <Circle colour={colour}>
-            <Dot colour={colour} />
-          </Circle>
-          <Text>{label}</Text>
-        </Label>
-      </Item>
+          <RadioButtonCircle variant={variant}>
+            <RadioButtonDot variant={variant} />
+          </RadioButtonCircle>
+          <RadioButtonText>{label}</RadioButtonText>
+        </RadioButtonLabel>
+      </RadioButtonItem>
     </ThemeProvider>
   );
 }
@@ -163,7 +229,13 @@ RadioButton.propTypes = {
   /** Sets the label of the radio button */
   label: PropTypes.string,
   /** Sets radio button colour. Default is greyDarker. Use white for inverted styling */
-  colour: PropTypes.oneOf(["success", "warning", "danger", "primary", "white"]),
+  variant: PropTypes.oneOf([
+    "success",
+    "warning",
+    "danger",
+    "primary",
+    "white"
+  ]),
   /** Applies disabled attribute and styling */
   disabled: PropTypes.bool,
   /** Applies checked attribute and styling */
