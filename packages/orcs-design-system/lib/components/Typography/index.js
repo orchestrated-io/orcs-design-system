@@ -226,7 +226,26 @@ export const P = styled("p")(
   typeStyles
 );
 
-export const Small = styled("small")(typeStyles);
+export const Small = styled("small").withConfig({
+  shouldForwardProp: prop =>
+    ![
+      "m",
+      "ml",
+      "mr",
+      "mx",
+      "my",
+      "mt",
+      "mb",
+      "p",
+      "px",
+      "py",
+      "pt",
+      "pb",
+      "pr",
+      "pl",
+      "color"
+    ].includes(prop)
+})(typeStyles);
 
 export const Text = styled("span")(
   css({
