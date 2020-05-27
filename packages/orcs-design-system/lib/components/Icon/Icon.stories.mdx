@@ -4,7 +4,7 @@ import * as stories from "./Icon.stories.js";
 import Box from "../Box";
 import Flex from "../Flex";
 
-<Meta title="Components/Icon" component={Icon} decorators={[storyFn => <Box p="3"><Flex alignItems="center" justifyContent="space-around">{storyFn()}</Flex></Box>]}/>
+<Meta title="Components/Icon" component={Icon} decorators={[storyFn => (<Box p="3"><Flex alignItems="center" justifyContent="space-around">{storyFn()}</Flex></Box>)]} />
 
 # Icon
 
@@ -20,52 +20,47 @@ Note: There are two different icon set weightings available in the Font Awesome 
 
 To get started you can import the icons into Font Awesome library. Alternatively if you want to use their full icon set you need to purchase a PRO plan from Font awesome, and can install the full pro icon packages in your app. See the readme here for more details on how to use and install PRO: <https://github.com/orchestrated-io/orca-design-system>
 
-Note that currently you must use `theme.colors.NAME`. We are working on a refactor that will allow you to use styled system!
-
 ## Default
 
 <Preview>
-  <Story name="Default Icon">{stories.defaultIcon()}
-  </Story>
+  <Story name="Default Icon">{stories.defaultIcon()}</Story>
 </Preview>
 
 ## Colours
 
-Note that currently you must use `colours.NAME` as specified in the example. We are working on a refactor that will allow you to use the same styled-system props as in other components.
-
 <Preview>
-  <Story name="Coloured Icon">{stories.colouredIcon()}
-  </Story>
+  <Story name="Coloured Icon">{stories.colouredIcon()}</Story>
 </Preview>
 
 ## Size
 
 <Preview>
-  <Story name="Icon Size">{stories.iconSize()}
-  </Story>
+  <Story name="Icon Size">{stories.iconSize()}</Story>
 </Preview>
 
 ## Inverted
 
 <Preview>
   <Story name="Inverted">
-  <Box bg="greyDarker" p="r" width="100%"><Flex alignItems="center" justifyContent="space-around">
-  {stories.invertedIcons()}
-  </Flex></Box>
+    <Box bg="greyDarker" p="r" width="100%">
+      <Flex alignItems="center" justifyContent="space-around">
+        {stories.invertedIcons()}
+      </Flex>
+    </Box>
   </Story>
 </Preview>
 
 ## Animated
 
 <Preview>
-  <Story name="Animated Icons">{stories.animatedIcons()}
-  </Story>
+  <Story name="Animated Icons">{stories.animatedIcons()}</Story>
 </Preview>
 
 ## Transforms and rotations
 
 <Preview>
-  <Story name="Transforms and rotations">{stories.transformsAndRotations()}
+  <Story name="Transforms and rotations">
+    {stories.transformsAndRotations()}
   </Story>
 </Preview>
 
