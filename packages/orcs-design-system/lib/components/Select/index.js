@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 import PropTypes from "prop-types";
-import styled, { ThemeProvider } from "styled-components";
+import styled from "styled-components";
 import colours from "../../colours";
 import { default as ReactSelect } from "react-select";
 import { rgba } from "polished";
@@ -30,7 +30,7 @@ const Wrapper = styled.div`
  * For a full list of the changes, see <https://react-select.com/upgrade-guide>.
  *
  */
-const Select = forwardRef((props, ref) => {
+const Select = forwardRef((props, ref, theme) => {
   const customStyles = {
     menu: (provided, state) => ({
       ...provided,
@@ -145,11 +145,9 @@ const Select = forwardRef((props, ref) => {
     })
   };
   return (
-    <ThemeProvider theme={systemtheme}>
-      <Wrapper inverted={props.inverted} {...props}>
-        <ReactSelect ref={ref} {...props} styles={customStyles} />
-      </Wrapper>
-    </ThemeProvider>
+    <Wrapper inverted={props.inverted}>
+      <ReactSelect ref={ref} styles={customStyles} theme={theme} {...props} />
+    </Wrapper>
   );
 });
 
@@ -159,6 +157,10 @@ Select.propTypes = {
   /** Styling for dark backgrounds. */
   inverted: PropTypes.bool,
   /** Specifies the system design theme object */
+  theme: PropTypes.object
+};
+
+Select.defaultProps = {
   theme: systemtheme
 };
 
