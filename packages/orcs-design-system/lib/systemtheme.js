@@ -48,7 +48,6 @@ space.l = space[5];
 space.xl = space[6];
 space.xxl = space[7];
 space.xxxl = space[8];
-space.xxxxl = space[9];
 
 // SIZES (for LAYOUT properties)
 export const sizes = [
@@ -64,6 +63,15 @@ export const sizes = [
   "256px",
   "512px"
 ];
+
+sizes.xxs = sizes[1];
+sizes.xs = sizes[2];
+sizes.s = sizes[3];
+sizes.r = sizes[4];
+sizes.l = sizes[5];
+sizes.xl = sizes[6];
+sizes.xxl = sizes[7];
+sizes.xxxl = sizes[8];
 
 // COLOUR PALETTE
 const black = "#000";
