@@ -46,7 +46,8 @@ const styleLink = LinkComponent =>
           "pl",
           "white",
           "bold",
-          "active"
+          "active",
+          "theme"
         ].includes(prop)
     })
     .attrs(props => ({ className: "StyledLink", theme: props.theme }))(

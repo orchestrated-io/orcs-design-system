@@ -32,24 +32,23 @@ const Bar = styled("header")(
 );
 
 const AppName = styled("div")(
-  props => ({
-    height: themeGet("appScale.navBarSize")(props),
-    lineHeight: themeGet("appScale.navBarSize")(props)
-  }),
-  css({
-    display: "flex",
-    alignItems: "center",
-    fontSize: 3,
-    lineHeight: 1,
-    pr: 4,
-    color: "white",
-    borderRightStyle: "solid",
-    borderRightColor: "white20",
-    borderRightWidth: 1,
-    "a[class^='StyledLink'], a[class*=' StyledLink']": {
-      display: "block"
-    }
-  }),
+  props =>
+    css({
+      height: themeGet("appScale.navBarSize")(props),
+      lineHeight: themeGet("appScale.navBarSize")(props),
+      display: "flex",
+      alignItems: "center",
+      fontSize: 3,
+      pr: 4,
+      color: "white",
+      borderRightStyle: "solid",
+      borderRightColor: "white20",
+      borderRightWidth: 1,
+      "a[class^='StyledLink'], a[class*=' StyledLink']": {
+        display: "flex",
+        alignItems: "center"
+      }
+    }),
   space
 );
 
