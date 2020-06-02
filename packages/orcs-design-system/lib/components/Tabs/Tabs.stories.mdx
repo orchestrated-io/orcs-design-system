@@ -1,36 +1,20 @@
+import * as stories from './Tabs.stories.js';
 import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
-import Box from "../Box";
-import Popover from "../Popover";
 import { TabsContainer, Tab } from ".";
 
 <Meta title="Components/Tabs" component={TabsContainer} />
+
+[Default tabs](#tabs) | [Properties](#properties)
 
 # Tabs
 
 Tabs are intended to provide a way to navigate between distinct sections within the layout without leaving the page or triggering a page refresh.
 
 <Preview>
-  <Story name="Basic">
-    <Box bg="greyLightest" p="xl">
-      <TabsContainer>
-        <Tab>
-          <a href="#">Details</a>
-        </Tab>
-        <Popover
-          direction="top"
-          text="Example with tooltip explaining tab"
-          width="218px"
-        >
-          <Tab active>
-            <a href="#" tabIndex="-1">
-              Additional information
-            </a>
-          </Tab>
-        </Popover>
-        <Tab notification="97">
-          <a href="#">Planning</a>
-        </Tab>
-      </TabsContainer>
-    </Box>
-  </Story>
+  <Story name="defaultTabs">{stories.defaultTabs()}</Story>
 </Preview>
+
+## Properties
+
+<Props of={TabsContainer} />
+<Props of={Tab} />

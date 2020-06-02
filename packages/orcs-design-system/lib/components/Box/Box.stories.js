@@ -60,13 +60,7 @@ padding.story = {
 };
 
 export const borderRadius = () => (
-  <Box
-    boxborder="default"
-    borderRadius={2}
-    boxBorder="default"
-    shadow="default"
-    p="r"
-  >
+  <Box borderRadius={2} boxBorder="default" shadow="default" p="r">
     <P>
       This is a bordered Box variant with rounded corners.{" "}
       <code>borderRadius</code> is taken from the <code>radii</code> array in{" "}
