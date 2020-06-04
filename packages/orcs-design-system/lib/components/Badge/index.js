@@ -12,8 +12,6 @@ const Item = styled("div")(
     fontSize: 0,
     fontWeight: 2,
     display: "inline-block",
-    textAlign: "center",
-    whiteSpace: "nowrap",
     position: "relative",
     py: 2,
     px: 3,

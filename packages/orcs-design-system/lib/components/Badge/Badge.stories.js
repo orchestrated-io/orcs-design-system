@@ -19,7 +19,7 @@ defaultBadge.story = {
 export const colourVariants = () => (
   <>
     <Box p="r">
-      <Flex>
+      <Flex flexWrap="wrap">
         <Spacer m="1">
           <Badge>Default</Badge>
           <Badge variant="success">Success</Badge>
@@ -33,7 +33,7 @@ export const colourVariants = () => (
       </Flex>
     </Box>
     <Box p="r" bg="greyDarkest">
-      <Flex>
+      <Flex flexWrap="wrap">
         <Spacer m="1">
           <Badge>Default</Badge>
           <Badge variant="success">Success</Badge>
