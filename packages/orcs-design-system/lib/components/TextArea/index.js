@@ -106,7 +106,7 @@ const Label = styled.label`
  * Specify size using `cols` and `rows` like shown in the example. adding `fullWidth` prop will override the cols value and make the text input 100% width of parent container.
  */
 
-export default function TextArea({ ...props }) {
+const TextArea = React.forwardRef((props, ref) => {
   const {
     inverted,
     id,
@@ -117,10 +117,6 @@ export default function TextArea({ ...props }) {
     mandatory,
     theme
   } = props;
-  const InputForward = React.forwardRef((props, ref) => (
-    <Input ref={ref} {...props} />
-  ));
-  const ref = React.createRef();
   return (
     <ThemeProvider theme={theme}>
       <Group fullWidth={fullWidth} {...props}>
@@ -133,11 +129,11 @@ export default function TextArea({ ...props }) {
         >
           {label}
         </Label>
-        <InputForward ref={ref} {...props} />
+        <Input ref={ref} {...props} />
       </Group>
     </ThemeProvider>
   );
-}
+});
 
 TextArea.propTypes = {
   /** Must be used to specify a unique ID. */
@@ -161,3 +157,5 @@ TextArea.propTypes = {
 TextArea.defaultProps = {
   theme: systemtheme
 };
+
+export default TextArea;
