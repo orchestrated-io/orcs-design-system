@@ -9,8 +9,8 @@ import systemtheme from "../../systemtheme";
 import { space, layout } from "styled-system";
 
 const Item = styled.div`
-${space}
-${layout}
+  ${space}
+  ${layout}
   position: relative;
   font-size: 1.4rem;
   font-weight: 400;
