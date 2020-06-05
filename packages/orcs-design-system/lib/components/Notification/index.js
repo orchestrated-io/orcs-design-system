@@ -13,7 +13,7 @@ ${space}
 ${layout}
   position: relative;
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 400;
   position: relative;
   padding: 10px 12px;
   cursor: default;
@@ -48,14 +48,11 @@ ${layout}
           right: auto;
         `
       : css``};
+`;
 
-  span {
-    margin-right: 12px;
-  }
-  svg + span {
-      margin-left: 12px;
-    }
-  }
+const NotificationContent = styled.span`
+  margin-left: ${props => (props.icon ? "12px" : "0")};
+  padding-right: 12px;
 `;
 
 const Close = styled.button`
@@ -112,7 +109,7 @@ export default function Notification({
           {...props}
         >
           {icon && <Icon icon={icon} color="white" />}
-          <span>{children}</span>
+          <NotificationContent icon={icon}>{children}</NotificationContent>
           {closable && (
             <Close className="close-button" tabIndex="0" onClick={onToggle}>
               <Icon color={colours.white} icon={["fas", "times"]} size="lg" />
