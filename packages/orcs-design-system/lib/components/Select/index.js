@@ -1,7 +1,6 @@
 import React, { forwardRef } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import colours from "../../colours";
 import { default as ReactSelect } from "react-select";
 import systemtheme from "../../systemtheme";
 import { space, layout, compose } from "styled-system";
@@ -10,7 +9,9 @@ import { themeGet } from "@styled-system/theme-get";
 
 const SelectStyles = compose(space, layout);
 
-const Wrapper = styled("div")(
+const Wrapper = styled("div").attrs(props => ({
+  "data-testid": props.dataTestId
+}))(
   css({
     display: "inline-block",
     width: "100%"
@@ -34,14 +35,14 @@ const Wrapper = styled("div")(
  * For a full list of the changes, see <https://react-select.com/upgrade-guide>.
  *
  */
-const Select = forwardRef((props, ref, theme) => {
+const Select = forwardRef((props, ref) => {
   const customStyles = {
     menu: (provided, state) => ({
       ...provided,
       borderColor: state.isSelected
-        ? colours.warning
+        ? themeGet("colors.warning")(props)
         : state.isFocused
-        ? colours.primary
+        ? themeGet("colors.primary")(props)
         : null,
       backgroundColor: props.inverted
         ? themeGet("colors.greyDarker")(props)
@@ -56,11 +57,11 @@ const Select = forwardRef((props, ref, theme) => {
         ? 0
         : props.inverted
         ? "0 0 0 " +
-          themeGet("radii.1")(props) +
+          themeGet("borderWidths.1")(props) +
           " " +
           themeGet("colors.primaryLight")(props)
         : "0 0 0 " +
-          themeGet("radii.1")(props) +
+          themeGet("borderWidths.1")(props) +
           " " +
           themeGet("colors.primary")(props),
       "&:hover": {
@@ -103,72 +104,89 @@ const Select = forwardRef((props, ref, theme) => {
     }),
     container: provided => ({
       ...provided,
-      color: props.inverted ? colours.white : colours.grey,
-      backgroundColor: props.inverted ? colours.greyDarker : colours.white
+      color: props.inverted
+        ? themeGet("colors.white")
+        : themeGet("colors.grey")(props),
+      backgroundColor: props.inverted
+        ? themeGet("colors.greyDarker")(props)
+        : themeGet("colors.white")(props)
     }),
     dropdownIndicator: (provided, state) => ({
       ...provided,
       color:
         !state.isFocused && !props.inverted
-          ? colours.greyDark
+          ? themeGet("colors.greyDark")(props)
           : state.isFocused && !props.inverted
-          ? colours.primary
+          ? themeGet("colors.primary")(props)
           : !state.isFocused && props.inverted
-          ? colours.white
-          : colours.primaryLight,
+          ? themeGet("colors.white")(props)
+          : themeGet("colors.primaryLight")(props),
       "&:hover": {
         color:
           !state.isFocused && !props.inverted
-            ? colours.primary
+            ? themeGet("colors.primary")(props)
             : state.isFocused && !props.inverted
-            ? colours.primaryDarkest
+            ? themeGet("colors.primaryDarkest")
             : !state.isFocused && props.inverted
-            ? colours.primary
-            : colours.white
+            ? themeGet("colors.primary")(props)
+            : themeGet("colors.white")(props)
       }
     }),
     multiValue: provided => ({
       ...provided,
-      backgroundColor: props.inverted ? colours.primaryDark : colours.primary,
-      color: colours.white,
-      borderRadius: `${systemtheme.radii[2]}`
+      backgroundColor: props.inverted
+        ? themeGet("colors.primaryDark")(props)
+        : themeGet("colors.primary")(props),
+      color: themeGet("colors.white")(props),
+      borderRadius: themeGet("radii.2")(props)
     }),
     multiValueLabel: provided => ({
       ...provided,
-      backgroundColor: props.inverted ? colours.primaryDark : colours.primary,
-      color: colours.white,
-      borderRadius: `${systemtheme.radii[2]}`,
-      padding: `${systemtheme.space[2]}`
+      backgroundColor: props.inverted
+        ? themeGet("colors.primaryDark")(props)
+        : themeGet("colors.primary")(props),
+      color: themeGet("colors.white"),
+      borderRadius: themeGet("radii.2")(props),
+      padding: themeGet("space.2")(props)
     }),
     multiValueRemove: provided => ({
       ...provided,
-      backgroundColor: props.inverted ? colours.primaryDark : colours.primary,
-      color: colours.white,
-      borderRadius: `${systemtheme.radii[2]}`,
+      backgroundColor: props.inverted
+        ? themeGet("colors.primaryDark")(props)
+        : themeGet("colors.primary")(props),
+      color: themeGet("colors.white")(props),
+      borderRadius: themeGet("radii.2")(props),
       "&:hover": {
-        backgroundColor: colours.primaryDarkest,
-        color: colours.white
+        backgroundColor: themeGet("colors.primaryDarkest")(props),
+        color: themeGet("colors.white")(props)
       }
     }),
     option: (provided, state) => ({
       ...provided,
       backgroundColor:
         !state.isFocused && !props.inverted
-          ? colours.white
+          ? themeGet("colors.white")(props)
           : state.isFocused && !props.inverted
-          ? colours.primaryLightest
+          ? themeGet("colors.primaryLightest")(props)
           : !state.isFocused && props.inverted
-          ? colours.greyDarker
-          : colours.primaryDark
+          ? themeGet("colors.greyDarker")(props)
+          : themeGet("colors.primaryDark")(props)
     }),
     placeholder: provided => ({
       ...provided,
-      color: props.inverted ? colours.white : colours.greyDarkest
+      color: props.inverted
+        ? themeGet("colors.white")(props)
+        : themeGet("colors.greyDarkest")(props)
     })
   };
   return (
-    <Wrapper inverted={props.inverted}>
-      <ReactSelect ref={ref} styles={customStyles} theme={theme} {...props} />
+    <Wrapper inverted={props.inverted} {...props}>
+      <ReactSelect
+        ref={ref}
+        styles={customStyles}
+        theme={props.theme}
+        {...props}
+      />
     </Wrapper>
   );
 });

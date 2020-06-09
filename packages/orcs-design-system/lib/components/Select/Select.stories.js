@@ -39,3 +39,10 @@ export const invertedSelect = () => (
 invertedSelect.story = {
   name: "Inverted"
 };
+
+export const withDataIdSelect = () => (
+  <Select options={options} data-testid="test-this-component" />
+);
+withDataIdSelect.story = {
+  name: "With Data ID"
+};
