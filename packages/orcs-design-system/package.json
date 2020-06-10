@@ -23,6 +23,7 @@
   "dependencies": {
     "@styled-system/css": "^5.1.5",
     "@styled-system/prop-types": "^5.1.5",
+    "@styled-system/should-forward-prop": "^5.1.5",
     "@styled-system/theme-get": "^5.1.2",
     "polished": "^3.6.0",
     "prop-types": "^15.6.2",
