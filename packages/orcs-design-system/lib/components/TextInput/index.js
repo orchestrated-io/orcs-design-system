@@ -1,5 +1,5 @@
-import NumberFormat from "react-number-format";
 import React from "react";
+import NumberFormat from "react-number-format";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import { space, layout } from "styled-system";
@@ -224,7 +224,7 @@ const Label = styled.label`
  *
  * Ensure to use a unique `id` for each input, and helpful placeholder text which shows an example of what should be input is very useful to users.
  */
-export default function TextInput({ ...props }) {
+const TextInput = React.forwardRef((props, ref) => {
   const {
     inverted,
     floating,
@@ -241,13 +241,13 @@ export default function TextInput({ ...props }) {
   // Strip numberProps from props for Input
   const { numberProps, ...rest } = props;
 
-  const NumberInputForward = React.forwardRef((props, ref) => (
-    <NumberInput ref={ref} {...rest} {...numberProps} />
-  ));
-  const InputForward = React.forwardRef((props, ref) => (
-    <Input ref={ref} {...rest} />
-  ));
-  const ref = React.createRef();
+  let getNumberInputRef = null;
+  if (numberProps && ref) {
+    getNumberInputRef = node => {
+      ref.current = node;
+    };
+  }
+
   return (
     <Group fullWidth={fullWidth} {...props}>
       {label && !floating ? (
@@ -262,9 +262,13 @@ export default function TextInput({ ...props }) {
         </Label>
       ) : null}
       {numberProps ? (
-        <NumberInputForward ref={ref} {...rest} {...numberProps} />
+        <NumberInput
+          getInputRef={getNumberInputRef}
+          {...rest}
+          {...numberProps}
+        />
       ) : (
-        <InputForward ref={ref} {...rest} />
+        <Input ref={ref} {...rest} />
       )}
       {label && floating ? (
         <Label
@@ -295,7 +299,7 @@ export default function TextInput({ ...props }) {
       ) : null}
     </Group>
   );
-}
+});
 
 TextInput.propTypes = {
   /** Must be used to specify a unique ID. */
@@ -325,3 +329,5 @@ TextInput.propTypes = {
   /** Set inverted styling for dark backgrounds */
   inverted: PropTypes.bool
 };
+
+export default TextInput;
