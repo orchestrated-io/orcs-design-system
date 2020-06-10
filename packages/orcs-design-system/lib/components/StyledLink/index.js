@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import shouldForwardProp from "@styled-system/should-forward-prop";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { space, layout } from "styled-system";
@@ -28,29 +29,12 @@ const LinkStyles = css({
 const styleLink = LinkComponent =>
   styled(LinkComponent)
     .withConfig({
-      shouldForwardProp: prop =>
-        ![
-          "m",
-          "ml",
-          "mr",
-          "mx",
-          "my",
-          "mt",
-          "mb",
-          "p",
-          "px",
-          "py",
-          "pt",
-          "pb",
-          "pr",
-          "pl",
-          "white",
-          "bold",
-          "active",
-          "theme"
-        ].includes(prop)
+      shouldForwardProp
     })
-    .attrs(props => ({ className: "StyledLink", theme: props.theme }))(
+    .attrs(props => ({
+      className: "StyledLink",
+      theme: props.theme
+    }))(
     LinkStyles,
     props =>
       css({
