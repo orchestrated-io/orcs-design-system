@@ -10,9 +10,14 @@ import StyledLink from "../StyledLink/";
 import Popover from "../Popover/";
 import { css } from "@styled-system/css";
 import themeGet from "@styled-system/theme-get";
+import shouldForwardProp from "@styled-system/should-forward-prop";
 import systemtheme from "../../systemtheme";
 
-const Bar = styled("header")(
+const Bar = styled("header")
+  .attrs(props => ({
+    "data-testid": props.dataTestId
+  }))
+  .withConfig({ shouldForwardProp })(
   props => ({ height: themeGet("appScale.navBarSize")(props) }),
   css({
     width: "100%",
@@ -288,13 +293,14 @@ export default function Header({
   clientInfo,
   logoutFunction,
   rightAlignedLink,
+  dataTestId,
   theme
 }) {
   return (
     <>
       <ThemeProvider theme={theme}>
         <MobileNavToggle type="checkbox" id="mobileMenuToggle" />
-        <Bar theme={theme}>
+        <Bar theme={theme} dataTestId={dataTestId}>
           <AppName>{appName}</AppName>
           <Spacer ml={4}>{children}</Spacer>
           <RightAlignedChildren>
@@ -370,7 +376,9 @@ Header.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)
-  ])
+  ]),
+  /** Allows for use of the `data-testid` attribute for testing. */
+  dataTestId: PropTypes.string
 };
 
 HeaderPopover.propTypes = {

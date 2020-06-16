@@ -1,0 +1,18 @@
+import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import Header from "../Header";
+
+# Header
+
+Header component for app layout. Supports app name, username and avatar as props. And links as children.
+
+When using links in the Header, use the `StyledLink` component to ensure mobile-responsiveness and consistency in the UI.
+
+At screen sizes less than 1100px the links are instead moved into a mobile menu toggled by a burger icon button to play nice with smaller devices.
+
+<Preview>
+  <Story id="components-header--default-header" />
+</Preview>
+
+## Properties
+
+<Props of={Header} />
