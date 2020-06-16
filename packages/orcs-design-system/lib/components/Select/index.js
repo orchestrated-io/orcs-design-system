@@ -185,6 +185,7 @@ const Select = forwardRef((props, ref) => {
         ref={ref}
         styles={customStyles}
         theme={props.theme}
+        data-testid={props.dataTestId}
         {...props}
       />
     </Wrapper>
@@ -196,6 +197,8 @@ Select.propTypes = {
   options: PropTypes.array,
   /** Styling for dark backgrounds. */
   inverted: PropTypes.bool,
+  /** Specifies the `data-testid` attribute for testing. */
+  dataTestId: PropTypes.string,
   /** Specifies the system design theme object */
   theme: PropTypes.object
 };

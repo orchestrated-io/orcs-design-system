@@ -2,12 +2,24 @@ import Select from ".";
 import React from "react";
 import Box from "../Box";
 import Spacer from "../Spacer";
+import { getOptionByValue } from "../../utils/selectUtil";
+import mdx from "./Select.mdx";
 
 export default {
-  title: "Units/Select",
+  title: "Components/Select",
   parameters: {
-    component: Select
-  }
+    docs: {
+      page: mdx
+    }
+  },
+  component: Select,
+  decorators: [
+    storyFn => (
+      <Box p="r" height="250px">
+        {storyFn()}
+      </Box>
+    )
+  ]
 };
 
 const options = [
@@ -41,8 +53,16 @@ invertedSelect.story = {
 };
 
 export const withDataIdSelect = () => (
-  <Select options={options} data-testid="test-this-component" />
+  <Select options={options} dataTestId="test-this-component" />
 );
 withDataIdSelect.story = {
   name: "With Data ID"
 };
+
+export const withSelectedValueSelect = () => (
+  <Select
+    options={options}
+    defaultValue={getOptionByValue(options, "chocolate")}
+  />
+);
+withSelectedValueSelect.storyName = "With Selected Value";

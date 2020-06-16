@@ -1,9 +1,5 @@
-import * as stories from './Select.stories.js';
-import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
-import Select from ".";
-import Box from "../Box";
-
-<Meta title="Components/Select" component={Select} decorators={[storyFn => <Box p="r" height="250px">{storyFn()}</Box> ]} />
+import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import Select from "../Select";
 
 # Select
 
@@ -26,25 +22,31 @@ For a full list of the changes, see <https://react-select.com/upgrade-guide>.
 ## Default
 
 <Preview>
-  <Story name="defaultSelect">{stories.defaultSelect()}</Story>
+  <Story id="components-select--default-select" />
 </Preview>
 
 ## Multi-Select
 
 <Preview>
-  <Story name="multiSelect">{stories.multiSelect()}</Story>
+  <Story id="components-select--multi-select" />
 </Preview>
 
 ## Inverted
 
 <Preview>
-  <Story name="invertedSelect">{stories.invertedSelect()}</Story>
+  <Story id="components-select--inverted-select" />
 </Preview>
 
-## With `data-testid`
+## With `data-testid` attribute
 
 <Preview>
-  <Story name="withDataIdSelect">{stories.withDataIdSelect()}</Story>
+  <Story id="components-select--with-data-id-select" />
+</Preview>
+
+## With selected defaultValue
+This uses a custom `util`. To use, add `import { getOptionByValue } from "orcs-design-system"` to your imports.
+<Preview>
+  <Story id="components-select--with-selected-value-select" />
 </Preview>
 
 ## Properties
