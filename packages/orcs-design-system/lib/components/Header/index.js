@@ -9,12 +9,17 @@ import Spacer from "../Spacer";
 import StyledLink from "../StyledLink/";
 import Popover from "../Popover/";
 import { css } from "@styled-system/css";
+import shouldForwardProp from "@styled-system/should-forward-prop";
 import themeGet from "@styled-system/theme-get";
 import systemtheme from "../../systemtheme";
 
-const Bar = styled("header").attrs(props => ({
-  "data-testid": props.dataTestId
-}))(
+const Bar = styled("header")
+  .withConfig({
+    shouldForwardProp
+  })
+  .attrs(props => ({
+    "data-testid": props.dataTestId
+  }))(
   props => ({ height: themeGet("appScale.navBarSize")(props) }),
   css({
     width: "100%",
