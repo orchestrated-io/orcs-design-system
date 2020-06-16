@@ -10,14 +10,11 @@ import StyledLink from "../StyledLink/";
 import Popover from "../Popover/";
 import { css } from "@styled-system/css";
 import themeGet from "@styled-system/theme-get";
-import shouldForwardProp from "@styled-system/should-forward-prop";
 import systemtheme from "../../systemtheme";
 
-const Bar = styled("header")
-  .attrs(props => ({
-    "data-testid": props.dataTestId
-  }))
-  .withConfig({ shouldForwardProp })(
+const Bar = styled("header").attrs(props => ({
+  "data-testid": props.dataTestId
+}))(
   props => ({ height: themeGet("appScale.navBarSize")(props) }),
   css({
     width: "100%",
@@ -257,7 +254,6 @@ const MobileNavMenu = styled("div")(props =>
     a: {
       transform: "translateX(100px)",
       display: "block",
-      py: 3,
       px: 4,
       transition: "transitionDefault",
       opacity: "0"
@@ -326,7 +322,7 @@ export default function Header({
           </MobileMenuToggle>
         </Bar>
         <MobileNavMenu>
-          <Spacer p="r" display="block">
+          <Spacer p="s" display="block">
             <Box
               borderBottomWidth={1}
               borderBottomStyle="solid"

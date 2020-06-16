@@ -25,7 +25,6 @@ export default {
 
 export const defaultHeader = () => (
   <Header
-    dataTestId="test-test"
     appName={`My App`}
     userName={`John Smith`}
     avatarSource="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
