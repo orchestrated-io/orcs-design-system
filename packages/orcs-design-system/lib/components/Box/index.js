@@ -39,10 +39,12 @@ const BoxWrapper = styled("div")
   boxStyles
 );
 
-export const Box = ({ children, theme, ...props }) => {
+export const Box = ({ children, theme, dataTestId, ...props }) => {
   return (
     <ThemeProvider theme={theme}>
-      <BoxWrapper {...props}>{children}</BoxWrapper>
+      <BoxWrapper dataTestId={dataTestId} {...props}>
+        {children}
+      </BoxWrapper>
     </ThemeProvider>
   );
 };
