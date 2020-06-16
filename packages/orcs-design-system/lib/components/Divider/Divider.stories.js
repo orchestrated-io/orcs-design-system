@@ -3,7 +3,7 @@ import Divider from ".";
 import Spacer from "../Spacer";
 
 export default {
-  title: "Components/Divider",
+  title: "Units/Divider",
   parameters: {
     component: Divider
   }

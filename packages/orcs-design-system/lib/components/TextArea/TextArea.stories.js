@@ -3,7 +3,7 @@ import TextArea from ".";
 import Box from "../Box";
 
 export default {
-  title: "Components/TextArea",
+  title: "Units/TextArea",
   component: TextArea
 };
 

@@ -1,12 +1,16 @@
 import React from "react";
 import Box from "../Box";
 import { P } from "../Typography";
+import mdx from "./Box.mdx";
 
 export default {
   title: "Components/Box",
   parameters: {
-    component: Box
-  }
+    docs: {
+      page: mdx
+    }
+  },
+  component: Box
 };
 
 export const basicBox = () => (
@@ -14,9 +18,7 @@ export const basicBox = () => (
     <P>This is an example of the basic Box with no properties applied to it.</P>
   </Box>
 );
-basicBox.story = {
-  name: "Default Box"
-};
+basicBox.storyName = "Default Box";
 
 export const borderBox = () => (
   <Box boxBorder="default" p="r">

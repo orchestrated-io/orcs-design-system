@@ -6,7 +6,7 @@ import Spacer from "../Spacer";
 import { BrowserRouter } from "react-router-dom";
 
 export default {
-  title: "Components/StyledLink",
+  title: "Units/StyledLink",
   parameters: {
     component: StyledLink
   }

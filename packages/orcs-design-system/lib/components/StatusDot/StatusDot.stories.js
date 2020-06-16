@@ -6,7 +6,7 @@ import Spacer from "../Spacer";
 import Popover from "../Popover";
 
 export default {
-  title: "Components/StatusDot",
+  title: "Units/StatusDot",
   component: StatusDot
 };
 

@@ -3,7 +3,7 @@ import Button from "../Button";
 import Modal from ".";
 
 export default {
-  title: "Components/Modal",
+  title: "Units/Modal",
   component: Modal
 };
 

@@ -1,13 +1,18 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { space, layout, color, border, variant, compose } from "styled-system";
+import shouldForwardProp from "@styled-system/should-forward-prop";
 import { css } from "@styled-system/css";
 import PropTypes from "prop-types";
 import systemtheme from "../../systemtheme";
 
 const boxStyles = compose(space, layout, color, border);
 
-const BoxWrapper = styled("div")(
+const BoxWrapper = styled("div")
+  .withConfig({ shouldForwardProp })
+  .attrs(props => ({
+    "data-testid": props.dataTestId
+  }))(
   css({
     width: "auto",
     display: "block",
@@ -34,13 +39,17 @@ const BoxWrapper = styled("div")(
   boxStyles
 );
 
-export default function Box({ children, theme, ...props }) {
+export const Box = ({ children, theme, dataTestId, ...props }) => {
   return (
     <ThemeProvider theme={theme}>
-      <BoxWrapper {...props}>{children}</BoxWrapper>
+      <BoxWrapper dataTestId={dataTestId} {...props}>
+        {children}
+      </BoxWrapper>
     </ThemeProvider>
   );
-}
+};
+
+export default Box;
 
 Box.propTypes = {
   /** Children of `Box` are taken as node elements */
@@ -64,9 +73,11 @@ Box.propTypes = {
   /** Sets the background colour of the box. */
   bg: PropTypes.string,
   /** Sets the width of the box. */
-  width: PropTypes.string,
+  width: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
   /** Sets the height of the box. Default is `auto`. */
-  height: PropTypes.string,
+  height: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
+  /** Specifies the `data-testid` attribute for testing. */
+  dataTestId: PropTypes.string,
   /** Specifies the colour theme. Default is `systemtheme`. */
   theme: PropTypes.object
 };

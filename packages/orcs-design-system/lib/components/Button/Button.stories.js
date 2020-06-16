@@ -5,7 +5,7 @@ import Spacer from "../Spacer";
 import Button from ".";
 
 export default {
-  title: "Components/Button",
+  title: "Units/Button",
   parameters: {
     component: Button
   }

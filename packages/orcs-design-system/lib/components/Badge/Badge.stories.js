@@ -5,7 +5,7 @@ import Flex from "../Flex";
 import Badge from ".";
 
 export default {
-  title: "Components/Badge",
+  title: "Units/Badge",
   parameters: {
     component: Badge
   }

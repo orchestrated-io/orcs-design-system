@@ -1,8 +1,5 @@
-import * as stories from "./Box.stories.js";
-import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
-import Box from ".";
-
-<Meta title="Components/Box" component={Box} />
+import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Box } from "../Box";
 
 # Box
 
@@ -13,37 +10,37 @@ Component to contain elements within a simple box. If your `Box` needs to contai
 ## Default
 
 <Preview>
-  <Story name="basicBox">{stories.basicBox()}</Story>
+  <Story id="components-box--basic-box" />
 </Preview>
 
 ## Border
 
 <Preview>
-  <Story name="borderBox">{stories.borderBox()}</Story>
+  <Story id="components-box--border-box" />
 </Preview>
 
 ## Shadow
 
 <Preview>
-  <Story name="shadow">{stories.shadow()}</Story>
+  <Story id="components-box--shadow" />
 </Preview>
 
 ## Background colour
 
 <Preview>
-  <Story name="backgroundColour">{stories.backgroundColour()}</Story>
+  <Story id="components-box--background-colour" />
 </Preview>
 
 ## Padding
 
 <Preview>
-  <Story name="padding">{stories.padding()}</Story>
+  <Story id="components-box--padding" />
 </Preview>
 
 ## Border Radius
 
 <Preview>
-  <Story name="borderRadius">{stories.borderRadius()}</Story>
+  <Story id="components-box--border-radius" />
 </Preview>
 
 ## Properties
@@ -64,7 +61,7 @@ By default, we've set certain values on `Box` properties as documented in the ta
 
 **Note:** If specific `margin` or `padding` properties fail to override the defaults, specify the overall property and then the specific property. For example, to set a `Box` with a `margin-bottom: 8px`, use
 
-  `<Box m={0} mb={3}>`
+`<Box m={0} mb={3}>`
 
 ## Upgrading
 
@@ -74,9 +71,9 @@ This component is a **breaking change** that replaces the [deprecated Layout com
 | ----------------- | ------------------- |
 | `width`           | `width`             |
 | `height`          | `height`            |
-| `padding`         | `p={3}`                 |
-| `paddingDouble`   | `p={5}`       |
-| `paddingHalf`     | `p={2}`       |
+| `padding`         | `p={3}`             |
+| `paddingDouble`   | `p={5}`             |
+| `paddingHalf`     | `p={2}`             |
 | `background`      | `bg="greyLightest"` |
 | `backgroundDark`  | `bg="greyDark"`     |
 | `backgroundWhite` | `bg="white"`        |

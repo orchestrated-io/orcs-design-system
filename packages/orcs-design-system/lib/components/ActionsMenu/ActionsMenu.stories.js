@@ -3,7 +3,7 @@ import ActionsMenu from ".";
 import Flex from "../Flex";
 
 export default {
-  title: "Components/ActionsMenu",
+  title: "Units/ActionsMenu",
   parameters: {
     component: ActionsMenu
   }

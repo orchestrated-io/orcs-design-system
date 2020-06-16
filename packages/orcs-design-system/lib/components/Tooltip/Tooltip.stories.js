@@ -5,7 +5,7 @@ import Flex from "../Flex";
 import Box from "../Box";
 
 export default {
-  title: "Components/Tooltip",
+  title: "Units/Tooltip",
   component: Tooltip
 };
 

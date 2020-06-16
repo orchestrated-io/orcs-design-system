@@ -64,3 +64,4 @@ export {
   Quote,
   Code
 } from "./components/Typography";
+export { default as getOptionByValue } from "./utils/selectUtil";

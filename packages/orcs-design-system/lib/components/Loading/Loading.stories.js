@@ -4,7 +4,7 @@ import Spacer from "../Spacer";
 import Box from "../Box";
 
 export default {
-  title: "Components/Loading",
+  title: "Units/Loading",
   parameters: {
     component: Loading
   }

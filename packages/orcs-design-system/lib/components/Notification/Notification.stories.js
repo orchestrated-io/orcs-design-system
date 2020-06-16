@@ -5,7 +5,7 @@ import Spacer from "../Spacer";
 import Flex from "../Flex";
 
 export default {
-  title: "Components/Notification",
+  title: "Units/Notification",
   parameters: {
     component: Notification
   }

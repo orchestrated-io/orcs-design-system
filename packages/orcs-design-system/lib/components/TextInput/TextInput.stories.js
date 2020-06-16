@@ -3,7 +3,7 @@ import TextInput from ".";
 import Spacer from "../Spacer";
 
 export default {
-  title: "Components/TextInput",
+  title: "Units/TextInput",
   component: TextInput
 };
 

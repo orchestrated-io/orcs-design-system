@@ -64,6 +64,7 @@ test("all components exported", () => {
     "Text",
     "Small",
     "Quote",
-    "Code"
+    "Code",
+    "getOptionByValue"
   ]);
 });
