@@ -3,7 +3,7 @@ import Range from ".";
 import Box from "../Box";
 
 export default {
-  title: "Components/Range",
+  title: "Units/Range",
   parameters: {
     component: Range
   }

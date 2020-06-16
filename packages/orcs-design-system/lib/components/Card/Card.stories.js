@@ -10,7 +10,7 @@ import Button from "../Button";
 import Card from ".";
 
 export default {
-  title: "Components/Card",
+  title: "Units/Card",
   decorators: [
     storyFn => (
       <Box bg="greyLightest" p="r">

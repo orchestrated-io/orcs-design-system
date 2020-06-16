@@ -5,7 +5,7 @@ import "react-dates/lib/css/_datepicker.css";
 import "react-dates/initialize";
 
 export default {
-  title: "Components/DatePicker"
+  title: "Units/DatePicker"
 };
 
 export const singleDate = () => (

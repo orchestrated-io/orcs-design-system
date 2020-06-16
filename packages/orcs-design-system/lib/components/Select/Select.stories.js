@@ -4,7 +4,7 @@ import Box from "../Box";
 import Spacer from "../Spacer";
 
 export default {
-  title: "Components/Select",
+  title: "Units/Select",
   parameters: {
     component: Select
   }

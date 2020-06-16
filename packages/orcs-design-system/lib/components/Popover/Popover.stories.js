@@ -5,7 +5,7 @@ import Box from "../Box";
 import Flex from "../Flex";
 
 export default {
-  title: "Components/Popover",
+  title: "Units/Popover",
   decorators: [
     storyFn => (
       <Box p="5">

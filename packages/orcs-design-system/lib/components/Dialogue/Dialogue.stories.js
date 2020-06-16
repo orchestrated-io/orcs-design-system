@@ -3,7 +3,7 @@ import Dialogue from ".";
 import { P } from "../Typography";
 
 export default {
-  title: "Components/Dialogue",
+  title: "Units/Dialogue",
   component: Dialogue,
   includeStories: []
 };

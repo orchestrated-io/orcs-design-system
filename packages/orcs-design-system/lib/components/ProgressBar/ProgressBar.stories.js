@@ -4,7 +4,7 @@ import Box from "../Box";
 import Spacer from "../Spacer";
 
 export default {
-  title: "Components/ProgressBar",
+  title: "Units/ProgressBar",
   parameters: {
     component: ProgressBar
   }

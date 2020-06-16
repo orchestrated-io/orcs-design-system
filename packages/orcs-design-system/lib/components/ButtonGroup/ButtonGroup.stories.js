@@ -3,7 +3,7 @@ import Box from "../Box";
 import { ButtonGroupContainer, ButtonGroupItem } from ".";
 
 export default {
-  title: "Components/ButtonGroup",
+  title: "Units/ButtonGroup",
   decorators: [
     storyFn => (
       <Box bg="greyDark" p="r">

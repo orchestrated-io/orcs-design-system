@@ -4,7 +4,7 @@ import Box from "../Box";
 import Spacer from "../Spacer";
 
 export default {
-  title: "Components/RadioButton",
+  title: "Units/RadioButton",
   parameters: {
     component: RadioButton
   }

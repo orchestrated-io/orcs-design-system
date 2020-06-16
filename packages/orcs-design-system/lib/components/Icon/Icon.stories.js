@@ -6,7 +6,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 library.add(far, fas);
 
 export default {
-  title: "Components/Icon",
+  title: "Units/Icon",
   parameters: {
     component: Icon
   }
