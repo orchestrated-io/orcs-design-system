@@ -23,6 +23,16 @@ Install dependencies:
 
 `npm install` or `yarn`
 
+Install dependencies in packages:
+
+```bash
+> cd packages/orca-design-systems
+> npm i
+> cd -
+> cd packages/orcs-design-systems
+> npm i
+```
+
 ## Running the design system storybook
 
 In the monorepo's root:
