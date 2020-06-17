@@ -62,7 +62,9 @@ const AppName = styled("div")(
 
 const SearchContainer = styled("div")(
   css({
-    flex: "1 1 auto"
+    flex: "1 1 auto",
+    maxWidth: "800px",
+    margin: "auto"
   }),
   space,
   layout
