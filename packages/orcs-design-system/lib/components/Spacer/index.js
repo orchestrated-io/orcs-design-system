@@ -9,8 +9,8 @@ const spaceStyles = compose(space, layout);
 const SpacerBox = styled("div")(spaceStyles);
 
 const Spacer = ({ children, theme, ...props }) => {
-  const clones = React.Children.toArray(children).map(child => (
-    <SpacerBox key={child.id} {...props}>
+  const clones = React.Children.toArray(children).map((child, index) => (
+    <SpacerBox key={index} {...props}>
       {React.cloneElement(child)}
     </SpacerBox>
   ));
