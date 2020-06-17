@@ -56,6 +56,7 @@ export const alternativeHeader = () => (
         id="search"
         key="search"
         type="text"
+        ml="s"
         placeholder="Search for..."
         iconRight={["fas", "search"]}
       />
