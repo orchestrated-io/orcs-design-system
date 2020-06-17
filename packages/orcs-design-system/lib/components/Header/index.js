@@ -26,12 +26,13 @@ const Bar = styled("header")
     zIndex: 12,
     position: "sticky",
     top: "0",
+    overflow: "hidden",
     display: "flex",
     alignItems: "center",
     py: 0,
     px: 4,
     bg: "black",
-    "a[class^='StyledLink'], a[class*=' StyledLink']": {
+    "a[class^='StyledLink'], a[class*=' StyledLink'], div[class^='Badge'], div[class*=' Badge']": {
       display: ["none", "none", "none", "none", "block", "block"]
     }
   }),
@@ -57,6 +58,14 @@ const AppName = styled("div")(
       }
     }),
   space
+);
+
+const SearchContainer = styled("div")(
+  css({
+    flex: "1 1 auto"
+  }),
+  space,
+  layout
 );
 
 const RightAlignedChildren = styled("div")(
@@ -188,7 +197,7 @@ const MobileNavToggle = styled("input")(props =>
     },
     "&:checked": {
       "~ [class^='Header__MobileNavMenu'], ~ [class*=' Header__MobileNavMenu']": {
-        "[class^='StyledLink'], [class*=' StyledLink']": {
+        "[class^='Spacer'], [class*=' Spacer']": {
           ":nth-of-type(1)": { transitionDelay: "0.10s" },
           ":nth-of-type(2)": { transitionDelay: "0.20s" },
           ":nth-of-type(3)": { transitionDelay: "0.30s" },
@@ -256,7 +265,7 @@ const MobileNavMenu = styled("div")(props =>
     bg: "#333",
     zIndex: 6,
     transition: "transitionDefault",
-    a: {
+    "[class^='Spacer'], [class*=' Spacer']": {
       transform: "translateX(100px)",
       display: "block",
       px: 4,
@@ -294,6 +303,7 @@ export default function Header({
   clientInfo,
   logoutFunction,
   rightAlignedLink,
+  searchComponent,
   dataTestId,
   theme
 }) {
@@ -304,6 +314,7 @@ export default function Header({
         <Bar theme={theme} dataTestId={dataTestId}>
           <AppName>{appName}</AppName>
           <Spacer ml={4}>{children}</Spacer>
+          <SearchContainer ml={4}>{searchComponent}</SearchContainer>
           <RightAlignedChildren>
             <Spacer ml={4}>
               {rightAlignedLink}
@@ -332,7 +343,8 @@ export default function Header({
               borderBottomWidth={1}
               borderBottomStyle="solid"
               borderBottomColor="white20"
-              paddingTop={3}
+              pt="s"
+              pb="r"
             >
               <Avatar
                 type="inverted"
@@ -371,6 +383,8 @@ Header.propTypes = {
   logoutFunction: PropTypes.func,
   /** Can specify a link that will be rendered on the right side of the header */
   rightAlignedLink: PropTypes.node,
+  /** Can specify a component to be used for searching */
+  searchComponent: PropTypes.node,
   /** Applies the chosen theme to the entire header. */
   theme: PropTypes.object,
   /** Navigation links are rendered as child components. */

@@ -3,7 +3,8 @@ import { action } from "@storybook/addon-actions";
 import Header from "../Header";
 import Icon from "../Icon";
 import StyledLink from "../StyledLink";
-import Box from "../Box";
+import Badge from "../Badge";
+import TextInput from "../TextInput";
 import mdx from "./Header.mdx";
 
 export default {
@@ -13,14 +14,7 @@ export default {
       page: mdx
     }
   },
-  component: Header,
-  decorators: [
-    storyFn => (
-      <Box p="r" height="250px">
-        {storyFn()}
-      </Box>
-    )
-  ]
+  component: Header
 };
 
 export const defaultHeader = () => (
@@ -49,3 +43,25 @@ export const defaultHeader = () => (
   </Header>
 );
 defaultHeader.storyName = "Default Header";
+
+export const alternativeHeader = () => (
+  <Header
+    appName="App Name"
+    userName="John Smith"
+    avatarSource="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+    logoutFunction={action("clicked-logout")}
+    searchComponent={
+      <TextInput
+        fullWidth
+        id="search"
+        key="search"
+        type="text"
+        placeholder="Search for..."
+        iconRight={["fas", "search"]}
+      />
+    }
+  >
+    <Badge>Q4, April - June 2020</Badge>
+  </Header>
+);
+alternativeHeader.storyName = "Alternative Header";
