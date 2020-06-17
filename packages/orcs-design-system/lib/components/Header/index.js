@@ -316,7 +316,7 @@ export default function Header({
         <Bar theme={theme} dataTestId={dataTestId}>
           <AppName>{appName}</AppName>
           <Spacer ml={4}>{children}</Spacer>
-          <SearchContainer ml={4}>{searchComponent}</SearchContainer>
+          <SearchContainer>{searchComponent}</SearchContainer>
           <RightAlignedChildren>
             <Spacer ml={4}>
               {rightAlignedLink}
