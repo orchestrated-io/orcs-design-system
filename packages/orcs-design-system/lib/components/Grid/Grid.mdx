@@ -1,0 +1,86 @@
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import Grid, { GridItem } from ".";
+import Button from "../Button";
+
+# Grid
+
+[Properties](#properties) | [Examples](#examples) | [Upgrading](#upgrading)
+
+Grid component using the built-in Styled System Grid Layout through its `grid` function. Use `Grid` to display layouts that must conform to a specific grid structure (columns and/or rows), or for tabular data and contents. If no grid structure is needed, for example in a horizontal row of buttons, use `Flex` instead.
+
+Importing `GridItem` is recommended for use with `Grid` to retain sizing for the children; see [example](#without-griditem-vs-with-griditem) below.
+
+<Preview>
+  <Story id="components-grid--basic-grid" />
+</Preview>
+
+## Properties
+
+This component uses Styled System props. `Grid` uses `space`, `layout`, `color` and `grid` props. `Grid` uses `space`, `layout`, and `color` props.
+
+### For reference, see:
+
+- [space on Styled-System](https://styled-system.com/table#space)
+- [layout on Styled-System](https://styled-system.com/table#layout)
+- [color on Styled-System](https://styled-system.com/table#color)
+- [grid on Styled-System](https://styled-system.com/table#space)
+- [CSS Grid Properties](https://css-tricks.com/snippets/css/complete-guide-grid)
+- [systemtheme.js](https://github.com/orchestrated-io/orca-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js) (our arrays and scales for design system values)
+
+By default, we've set certain default values on `Grid` as documented in the table below.
+
+<Props of={Grid} />
+
+## Examples
+
+### With Colours
+
+<Preview>
+  <Story id="components-grid--background-colour-grid" />
+</Preview>
+
+### Template Columns and Rows
+
+<Preview>
+<Story id="components-grid--template-columns-and-rows" />
+</Preview>
+
+### Width-based Columns and Rows
+
+<Preview>
+<Story id="components-grid--width-columns-and-rows" />
+</Preview>
+
+### Using `GridItem`
+
+Using `GridItem` to wrap individual children in the grid ensures that the children retain their original dimensions, as not using `GridItem` allows children to take up the full width of their grid cell. This does not affect the behaviour of text content.
+
+#### With `GridItem`
+Note that `GridItem` has default `padding="r"` where `r` refers to the **r**egular alias in the [space array scale](https://github.com/orchestrated-io/orca-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js).
+
+<Preview>
+<Story id="components-grid--with-grid-item" />
+</Preview>
+
+<Preview>
+<Story id="components-grid--text-with-grid-item" />
+</Preview>
+
+#### Without `GridItem`
+
+<Preview>
+<Story id="components-grid--without-grid-item" />
+</Preview>
+
+## Upgrading
+
+This component is a **breaking change** from the [previous version](https://www.npmjs.com/package/styled-grid-component) of `Grid`. Use the following table as a guide to convert from `styled-grid-component` properties to `styled-system` props.
+
+| **styled-grid-component** | **styled-system** |
+|-----------------------|---------------|
+| `width`                 | `width`         |
+| `height`                | `height`        |
+| `templateColumns`       | `gridTemplateColumns`     |
+| `templateRows`          | `gridTemplateRows`     |
+| `rowGap`                | `gridRowGap`       |
+| `autoRows`              | `gridAutoRows`  |
