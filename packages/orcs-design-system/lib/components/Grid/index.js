@@ -8,8 +8,6 @@ import systemtheme from "../../systemtheme";
 
 const GridStyles = compose(space, layout, grid, color);
 
-const GridItemStyles = compose(space, layout, color);
-
 const GridWrapper = styled("div")
   .withConfig({ shouldForwardProp })
   .attrs(props => ({
@@ -31,7 +29,7 @@ const GridItem = styled("div")
     boxSizing: "border-box",
     minWidth: "0"
   }),
-  GridItemStyles
+  GridStyles
 );
 
 export default function Grid({ children, theme, ...props }) {
