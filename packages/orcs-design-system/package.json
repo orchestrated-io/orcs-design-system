@@ -17,7 +17,7 @@
     "deploy-stack": "serverless deploy",
     "deploy-client": "serverless client deploy  --no-confirm",
     "storybook": "start-storybook -s ./lib/assets",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -s .storybook/static",
     "deploy-storybook": "storybook-to-ghpages"
   },
   "dependencies": {
