@@ -61,12 +61,12 @@ Grid.propTypes = {
 
 Grid.defaultProps = {
   gridAutoFlow: "column",
-  gridGap: "r",
+  gridGap: "0",
   theme: systemtheme
 };
 
 GridItem.defaultProps = {
-  padding: "r"
+  padding: "0"
 };
 
 export { GridItem };

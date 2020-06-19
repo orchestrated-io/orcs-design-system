@@ -3,7 +3,6 @@ import { action } from "@storybook/addon-actions";
 import Header from "../Header";
 import Icon from "../Icon";
 import StyledLink from "../StyledLink";
-import Badge from "../Badge";
 import TextInput from "../TextInput";
 import mdx from "./Header.mdx";
 
@@ -44,8 +43,9 @@ export const defaultHeader = () => (
 );
 defaultHeader.storyName = "Default Header";
 
-export const alternativeHeader = () => (
+export const headerWithSearch = () => (
   <Header
+    variant="search"
     appName="App Name"
     userName="John Smith"
     avatarSource="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
@@ -56,13 +56,10 @@ export const alternativeHeader = () => (
         id="search"
         key="search"
         type="text"
-        ml="s"
         placeholder="Search for..."
         iconRight={["fas", "search"]}
       />
     }
-  >
-    <Badge>Q4, April - June 2020</Badge>
-  </Header>
+  />
 );
-alternativeHeader.storyName = "Alternative Header";
+headerWithSearch.storyName = "Alternative Header with search";

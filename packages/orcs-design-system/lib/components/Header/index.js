@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { ThemeProvider } from "styled-components";
-import { space, layout } from "styled-system";
+import { space, layout, variant } from "styled-system";
 import Avatar from "../Avatar";
 import Box from "../Box";
 import Icon from "../Icon";
@@ -36,6 +36,16 @@ const Bar = styled("header")
       display: ["none", "none", "none", "none", "block", "block"]
     }
   }),
+  variant({
+    variants: {
+      default: {},
+      search: {
+        display: "grid",
+        gridGap: "r",
+        gridTemplateColumns: "1fr 1fr 1fr 1fr"
+      }
+    }
+  }),
   space
 );
 
@@ -43,7 +53,6 @@ const AppName = styled("div")(
   props =>
     css({
       height: themeGet("appScale.navBarSize")(props),
-      lineHeight: themeGet("appScale.navBarSize")(props),
       display: "flex",
       alignItems: "center",
       fontSize: 3,
@@ -57,14 +66,21 @@ const AppName = styled("div")(
         alignItems: "center"
       }
     }),
+  variant({
+    variants: {
+      default: {},
+      search: {
+        border: "none",
+        pr: "0"
+      }
+    }
+  }),
   space
 );
 
 const SearchContainer = styled("div")(
   css({
-    flex: "1 1 auto",
-    maxWidth: "800px",
-    margin: "auto"
+    gridColumn: "2 / 4"
   }),
   space,
   layout
@@ -73,8 +89,18 @@ const SearchContainer = styled("div")(
 const RightAlignedChildren = styled("div")(
   css({
     ml: "auto",
-    display: "flex",
-    alignItems: "center"
+    alignItems: "center",
+    display: ["none", "none", "none", "none", "flex", "flex"]
+  }),
+  variant({
+    variants: {
+      default: {},
+      search: {
+        "> div:first-child": {
+          ml: "0"
+        }
+      }
+    }
   }),
   space,
   layout
@@ -307,17 +333,18 @@ export default function Header({
   rightAlignedLink,
   searchComponent,
   dataTestId,
-  theme
+  theme,
+  variant
 }) {
   return (
     <>
       <ThemeProvider theme={theme}>
         <MobileNavToggle type="checkbox" id="mobileMenuToggle" />
-        <Bar theme={theme} dataTestId={dataTestId}>
-          <AppName>{appName}</AppName>
+        <Bar theme={theme} dataTestId={dataTestId} variant={variant}>
+          <AppName variant={variant}>{appName}</AppName>
           <Spacer ml={4}>{children}</Spacer>
           <SearchContainer>{searchComponent}</SearchContainer>
-          <RightAlignedChildren>
+          <RightAlignedChildren variant={variant}>
             <Spacer ml={4}>
               {rightAlignedLink}
               <HeaderPopover
@@ -394,6 +421,8 @@ Header.propTypes = {
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)
   ]),
+  /** Specifies alternate versions of the header */
+  variant: PropTypes.oneOf(["search"]),
   /** Allows for use of the `data-testid` attribute for testing. */
   dataTestId: PropTypes.string
 };
