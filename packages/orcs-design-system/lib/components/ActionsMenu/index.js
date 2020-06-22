@@ -161,7 +161,7 @@ const Menu = styled.div`
       outline: 0;
       background-color: ${themeGet("colors.primaryDark")};
     }
-    &:last-of-type {
+    &:last-child {
       border-bottom: none;
     }
   }
