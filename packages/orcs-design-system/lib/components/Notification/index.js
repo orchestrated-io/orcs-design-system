@@ -50,7 +50,7 @@ const Item = styled.div`
       : css``};
 `;
 
-const NotificationContent = styled.span`
+const NotificationContent = styled.p`
   margin-left: ${props => (props.icon ? "12px" : "0")};
   padding-right: 12px;
 `;
