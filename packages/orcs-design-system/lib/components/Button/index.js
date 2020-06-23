@@ -108,7 +108,9 @@ const calculateSVGMargin = ({ iconLeft, iconRight, small }) => {
   return "0";
 };
 
-const StyledItem = styled.button`
+const StyledItem = styled.button.attrs(props => ({
+  "data-testid": props.dataTestId
+}))`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -177,6 +179,7 @@ export default function Button({
   iconRight,
   iconOnly,
   variant = "default",
+  dataTestId,
   theme,
   children,
   ...props
@@ -198,6 +201,7 @@ export default function Button({
         bg={buttonColour}
         color={textColour}
         borderColor={borderColour}
+        dataTestId={dataTestId}
         borderWidth="1px"
         borderStyle="solid"
         {...props}
@@ -227,6 +231,8 @@ Button.propTypes = {
   iconOnly: PropTypes.bool,
   /** The text label on the button is passed as a child. Keep this text short and descriptive. Use an action word or confirmation if possible. */
   children: PropTypes.node,
+  /** Specifies the `data-testid` attribute for testing. */
+  dataTestId: PropTypes.string,
   /** Specifies the color theme object. */
   theme: PropTypes.object
 };
