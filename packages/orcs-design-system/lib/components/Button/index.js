@@ -108,9 +108,7 @@ const calculateSVGMargin = ({ iconLeft, iconRight, small }) => {
   return "0";
 };
 
-const StyledItem = styled.button.attrs(props => ({
-  "data-testid": props.dataTestId
-}))`
+const StyledItem = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -168,7 +166,9 @@ const StyledItem = styled.button.attrs(props => ({
       : css``};
 `;
 
-const Wrapper = styled(StyledItem)(ButtonStyles);
+const Wrapper = styled(StyledItem).attrs(props => ({
+  "data-testid": props.dataTestId
+}))(ButtonStyles);
 
 export default function Button({
   large,
