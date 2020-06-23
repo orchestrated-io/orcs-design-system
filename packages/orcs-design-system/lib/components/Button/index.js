@@ -108,7 +108,7 @@ const calculateSVGMargin = ({ iconLeft, iconRight, small }) => {
   return "0";
 };
 
-const Item = styled.button`
+const StyledItem = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,8 +164,9 @@ const Item = styled.button`
           }
         `
       : css``};
-      ${ButtonStyles}
 `;
+
+const Wrapper = styled(StyledItem)(ButtonStyles);
 
 export default function Button({
   large,
@@ -185,7 +186,7 @@ export default function Button({
   );
   return (
     <ThemeProvider theme={theme}>
-      <Item
+      <Wrapper
         large={large}
         small={small}
         fullWidth={fullWidth}
@@ -202,7 +203,7 @@ export default function Button({
         {...props}
       >
         {children}
-      </Item>
+      </Wrapper>
     </ThemeProvider>
   );
 }

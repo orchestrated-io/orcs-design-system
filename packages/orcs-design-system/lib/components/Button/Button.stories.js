@@ -24,6 +24,9 @@ export const alternateSize = () => (
     <Button large onClick={action("clicked")}>
       Large button
     </Button>
+    <Button height="xxxl" onClick={action("clicked")}>
+      Specific sized button
+    </Button>
   </Spacer>
 );
 alternateSize.story = {
