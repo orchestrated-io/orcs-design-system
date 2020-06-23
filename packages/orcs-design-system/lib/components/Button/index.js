@@ -2,10 +2,12 @@ import React from "react";
 import styled, { css, keyframes, ThemeProvider } from "styled-components";
 import { get } from "lodash";
 import PropTypes from "prop-types";
-import { space, layout, color, border } from "styled-system";
+import { space, layout, color, border, compose } from "styled-system";
 import { rgba } from "polished";
 import { themeGet } from "@styled-system/theme-get";
 import systemtheme from "../../systemtheme";
+
+const ButtonStyles = compose(space, layout, color, border);
 
 const loadingSpin = keyframes`
   to {
@@ -107,10 +109,6 @@ const calculateSVGMargin = ({ iconLeft, iconRight, small }) => {
 };
 
 const Item = styled.button`
-  ${space}
-  ${layout}
-  ${color}
-  ${border}
   display: flex;
   align-items: center;
   justify-content: center;
@@ -166,6 +164,7 @@ const Item = styled.button`
           }
         `
       : css``};
+      ${ButtonStyles}
 `;
 
 export default function Button({
