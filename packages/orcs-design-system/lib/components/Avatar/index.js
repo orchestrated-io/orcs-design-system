@@ -39,8 +39,7 @@ const TextContent = styled("div")(
     prop: "sizing",
     variants: {
       small: {
-        fontSize: 1,
-        marginLeft: 2
+        fontSize: 1
       }
     }
   }),
