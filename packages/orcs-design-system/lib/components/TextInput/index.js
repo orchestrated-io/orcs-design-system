@@ -162,10 +162,15 @@ const InputStyle = css`
   }
 `;
 
-const Input = styled.input`
+const Input = styled("input").attrs(props => ({
+  "data-testid": props.dataTestId
+}))`
   ${InputStyle}
 `;
-const NumberInput = styled(NumberFormat)`
+
+const NumberInput = styled(NumberFormat).attrs(props => ({
+  "data-testid": props.dataTestId
+}))`
   ${InputStyle}
 `;
 
@@ -235,7 +240,8 @@ const TextInput = React.forwardRef((props, ref) => {
     fullWidth,
     mandatory,
     iconLeft,
-    iconRight
+    iconRight,
+    dataTestId
   } = props;
 
   // Strip numberProps from props for Input
@@ -268,7 +274,7 @@ const TextInput = React.forwardRef((props, ref) => {
           {...numberProps}
         />
       ) : (
-        <Input ref={ref} {...rest} />
+        <Input dataTestId={dataTestId} ref={ref} {...rest} />
       )}
       {label && floating ? (
         <Label
@@ -327,7 +333,9 @@ TextInput.propTypes = {
   /** Number format props, to render a number input textbox */
   numberProps: PropTypes.object,
   /** Set inverted styling for dark backgrounds */
-  inverted: PropTypes.bool
+  inverted: PropTypes.bool,
+  /** Specifies the `data-testid` attribute for testing. */
+  dataTestId: PropTypes.string
 };
 
 export default TextInput;
