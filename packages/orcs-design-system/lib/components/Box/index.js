@@ -12,6 +12,10 @@ const BoxWrapper = styled("div")
   .withConfig({ shouldForwardProp })
   .attrs(props => ({
     "data-testid": props.dataTestId
+      ? props.dataTestId
+      : props["data-testid"]
+      ? props["data-testid"]
+      : null
   }))(
   css({
     width: "auto",

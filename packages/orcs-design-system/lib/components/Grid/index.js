@@ -12,6 +12,10 @@ const GridWrapper = styled("div")
   .withConfig({ shouldForwardProp })
   .attrs(props => ({
     "data-testid": props.dataTestId
+      ? props.dataTestId
+      : props["data-testid"]
+      ? props["data-testid"]
+      : null
   }))(
   css({
     boxSizing: "border-box",
@@ -24,6 +28,10 @@ const GridItem = styled("div")
   .withConfig({ shouldForwardProp })
   .attrs(props => ({
     "data-testid": props.dataTestId
+      ? props.dataTestId
+      : props["data-testid"]
+      ? props["data-testid"]
+      : null
   }))(
   css({
     boxSizing: "border-box",
