@@ -26,7 +26,6 @@ const Bar = styled("header")
     zIndex: 12,
     position: "sticky",
     top: "0",
-    overflow: "hidden",
     display: "flex",
     alignItems: "center",
     py: 0,
