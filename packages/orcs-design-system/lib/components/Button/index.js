@@ -1,176 +1,144 @@
 import React from "react";
-import styled, { css, keyframes, ThemeProvider } from "styled-components";
-import { get } from "lodash";
+import styled, { ThemeProvider } from "styled-components";
 import PropTypes from "prop-types";
-import { space, layout, color, border, compose } from "styled-system";
+import { space, layout, color, border, variant, compose } from "styled-system";
 import { rgba } from "polished";
+import { css } from "@styled-system/css";
 import { themeGet } from "@styled-system/theme-get";
 import systemtheme from "../../systemtheme";
+import Icon from "../Icon";
 
 const ButtonStyles = compose(space, layout, color, border);
 
-const loadingSpin = keyframes`
-  to {
-      transform: rotate(1turn);
-  }
-`;
-
-const variantMap = {
-  default: {
-    buttonColour: "primary",
-    textColour: "white",
-    borderColour: "primary",
-    buttonHoverColour: "primaryDark",
-    textHoverColour: "white"
-  },
-  success: {
-    buttonColour: "successDark",
-    textColour: "white",
-    borderColour: "successDark",
-    buttonHoverColour: "successDarker",
-    textHoverColour: "white"
-  },
-  danger: {
-    buttonColour: "danger",
-    textColour: "white",
-    borderColour: "danger",
-    buttonHoverColour: "dangerDark",
-    textHoverColour: "white"
-  },
-  disabled: {
-    buttonColour: "greyLighter",
-    textColour: "greyLight",
-    borderColour: "greyLighter",
-    buttonHoverColour: "greyLighter",
-    textHoverColour: "greyLight"
-  },
-  ghost: {
-    buttonColour: "primaryLightest",
-    textColour: "primary",
-    borderColour: "primaryLightest",
-    buttonHoverColour: "primaryLighter",
-    textHoverColour: "primaryDark"
-  }
-};
-
-const getVariantsColours = variant =>
-  get(variantMap, variant, {
-    buttonColour: "primary",
-    textColour: "white",
-    borderColour: "primary",
-    buttonHoverColour: "primaryDark",
-    textHoverColour: "white"
-  });
-
-const getVariantsColour = colourName => props => {
-  const variantsColours = getVariantsColours(props.variant);
-  const variantsColour = get(variantsColours, colourName);
-  return get(props, ["theme", "colors", variantsColour]);
-};
-
-const calculateHeight = ({ iconOnly, small, large }) => {
-  if (iconOnly && small) {
-    return "31px";
-  }
-  if (iconOnly && large) {
-    return "58px";
-  }
-  if (iconOnly) {
-    return "40px";
-  }
-  return "auto";
-};
-
-const calculateFontSize = ({ iconOnly, small, large }) => {
-  if (iconOnly) {
-    if (large) {
-      return "2.2rem";
-    } else if (small) {
-      return "1.4rem";
-    } else {
-      return "1.8rem";
-    }
-  } else if (large) {
-    return "1.8rem";
-  } else if (small) {
-    return "1.4rem";
-  }
-  return "1.6rem";
-};
-
-const calculateSVGMargin = ({ iconLeft, iconRight, small }) => {
-  if (iconLeft) {
-    return small ? "0 6px 0 0" : "0 10px 0 0";
-  }
-  if (iconRight) {
-    return small ? "0 0 0 6px" : "0 0 0 10px";
-  }
-  return "0";
-};
-
-const StyledItem = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  box-shadow: none;
-  text-decoration: none;
-  text-align: center;
-  font-family: ${themeGet("font")};
-  font-weight: ${themeGet("fontWeights.2")};
-  border-radius: ${themeGet("radii.2")};
-  transition: ${themeGet("transition.transitionDefault")};
-  cursor: ${props =>
-    props.disabled ? "not-allowed" : props.isLoading ? "progress" : "pointer"};
-  width: ${props => (props.fullWidth ? "100%" : "auto")};
-  height: ${calculateHeight};
-  font-size: ${calculateFontSize};
-  padding: ${props =>
-    props.large ? "16px 24px" : props.small ? "5px 9px" : "8px 14px"};
-
-  &:hover {
-    background-color: ${getVariantsColour("buttonHoverColour")};
-    border: 1px solid ${getVariantsColour("buttonHoverColour")};
-    color: ${getVariantsColour("textHoverColour")};
-  }
-
-  &:focus {
-    outline: 0;
-    box-shadow: ${props =>
-      `0 0 0 3px ${rgba(getVariantsColour("buttonColour")(props), 0.4)}`}
-    }};
-  }
-
-  svg {
-    margin: ${calculateSVGMargin};
-  }
-
-  ${props =>
-    props.isLoading
-      ? css`
-          &:after {
-            content: "";
-            position: relative;
-            animation: ${loadingSpin} 500ms infinite linear;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            margin-left: ${themeGet("space.3")};
-            border: 2px solid ${themeGet("colors.black20")};
-            border-right-color: ${themeGet("colors.white70")};
-            display: inline-block;
-          }
-        `
-      : css``};
-`;
-
-const Wrapper = styled(StyledItem).attrs(props => ({
+const Item = styled("button").attrs(props => ({
   "data-testid": props.dataTestId
-}))(ButtonStyles);
+    ? props.dataTestId
+    : props["data-testid"]
+    ? props["data-testid"]
+    : null
+}))(
+  props =>
+    css({
+      bg: "primary",
+      color: "white",
+      borderColor: "primary",
+      "&:hover": {
+        bg: "primaryDark",
+        borderColor: "primaryDark",
+        borderWidth: "1px",
+        borderStyle: "solid"
+      },
+      "&:focus": {
+        outline: "0",
+        boxShadow: "0 0 0 3px " + rgba(themeGet("colors.primary")(props), 0.4)
+      },
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      appearance: "none",
+      boxShadow: "none",
+      textDecoration: "none",
+      textAlign: "center",
+      fontFamily: "main",
+      fontWeight: "2",
+      borderRadius: "2",
+      transition: "transitionDefault",
+      cursor: props.disabled
+        ? "not-allowed"
+        : props.isLoading
+        ? "progress"
+        : "pointer",
+      width: props.fullWidth ? "100%" : "auto",
+      height: !props.iconOnly
+        ? "auto"
+        : props.iconOnly && props.small
+        ? "l"
+        : props.iconOnly && props.large
+        ? "xxl"
+        : "xl",
+      fontSize:
+        !props.iconOnly && props.small
+          ? "1"
+          : props.iconOnly && props.small
+          ? "1"
+          : props.iconOnly && props.large
+          ? "4"
+          : !props.iconOnly && props.small
+          ? "1"
+          : !props.IconOnly && props.large
+          ? "3"
+          : "2",
+      px: props.large ? "l" : props.small ? "s" : "r",
+      py: props.large ? "r" : props.small ? "xs" : "s",
+      svg: {
+        marginRight: !props.iconLeft ? "" : props.small ? "xs" : "s",
+        marginLeft: !props.iconRight ? "" : props.small ? "xs" : "s"
+      }
+    }),
+  props =>
+    variant({
+      variants: {
+        default: {},
+        success: {
+          bg: "successDark",
+          color: "white",
+          borderColor: "successDark",
+          "&:hover": {
+            bg: "successDarker",
+            borderColor: "successDarker"
+          },
+          "&:focus": {
+            outline: "0",
+            boxShadow:
+              "0 0 0 3px " + rgba(themeGet("colors.successDark")(props), 0.4)
+          }
+        },
+        danger: {
+          bg: "danger",
+          color: "white",
+          borderColor: "danger",
+          "&:hover": {
+            bg: "dangerDark",
+            borderColor: "dangerDark"
+          },
+          "&:focus": {
+            outline: "0",
+            boxShadow:
+              "0 0 0 3px " + rgba(themeGet("colors.dangerDark")(props), 0.4)
+          }
+        },
+        disabled: {
+          bg: "greyLighter",
+          color: "greyLight",
+          borderColor: "greyLighter",
+          "&:hover": {
+            bg: "greyLighter",
+            color: "greyLight",
+            borderColor: "greyLighter"
+          }
+        },
+        ghost: {
+          bg: "primaryLightest",
+          color: "primary",
+          borderColor: "primaryLightest",
+          "&:hover": {
+            bg: "primaryLighter",
+            borderColor: "primaryLighter",
+            color: "primaryDark"
+          },
+          "&:focus": {
+            outline: "0",
+            boxShadow:
+              "0 0 0 3px " +
+              rgba(themeGet("colors.primaryLightest")(props), 0.4)
+          }
+        }
+      }
+    }),
+  ButtonStyles
+);
 
-export default function Button({
+export const Button = ({
   large,
   small,
   fullWidth,
@@ -178,18 +146,14 @@ export default function Button({
   iconLeft,
   iconRight,
   iconOnly,
-  variant = "default",
   dataTestId,
   theme,
   children,
   ...props
-}) {
-  const { buttonColour, textColour, borderColour } = getVariantsColours(
-    variant
-  );
+}) => {
   return (
     <ThemeProvider theme={theme}>
-      <Wrapper
+      <Item
         large={large}
         small={small}
         fullWidth={fullWidth}
@@ -197,20 +161,19 @@ export default function Button({
         iconLeft={iconLeft}
         iconRight={iconRight}
         iconOnly={iconOnly}
-        variant={variant}
-        bg={buttonColour}
-        color={textColour}
-        borderColor={borderColour}
         dataTestId={dataTestId}
         borderWidth="1px"
         borderStyle="solid"
         {...props}
       >
         {children}
-      </Wrapper>
+        {isLoading ? <Icon icon={["fas", "spinner"]} spin ml="s" /> : null}
+      </Item>
     </ThemeProvider>
   );
-}
+};
+
+export default Button;
 
 Button.propTypes = {
   /** Large button */
