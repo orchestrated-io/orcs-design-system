@@ -1,67 +1,14 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { get } from "lodash";
 import PropTypes from "prop-types";
-import { space, layout, color, border, compose } from "styled-system";
+import { space, layout, color, border, variant, compose } from "styled-system";
 import { rgba } from "polished";
 import { css } from "@styled-system/css";
+import { themeGet } from "@styled-system/theme-get";
 import systemtheme from "../../systemtheme";
 import Icon from "../Icon";
 
 const ButtonStyles = compose(space, layout, color, border);
-
-const variantMap = {
-  default: {
-    buttonColour: "primary",
-    textColour: "white",
-    borderColour: "primary",
-    buttonHoverColour: "primaryDark",
-    textHoverColour: "white"
-  },
-  success: {
-    buttonColour: "successDark",
-    textColour: "white",
-    borderColour: "successDark",
-    buttonHoverColour: "successDarker",
-    textHoverColour: "white"
-  },
-  danger: {
-    buttonColour: "danger",
-    textColour: "white",
-    borderColour: "danger",
-    buttonHoverColour: "dangerDark",
-    textHoverColour: "white"
-  },
-  disabled: {
-    buttonColour: "greyLighter",
-    textColour: "greyLight",
-    borderColour: "greyLighter",
-    buttonHoverColour: "greyLighter",
-    textHoverColour: "greyLight"
-  },
-  ghost: {
-    buttonColour: "primaryLightest",
-    textColour: "primary",
-    borderColour: "primaryLightest",
-    buttonHoverColour: "primaryLighter",
-    textHoverColour: "primaryDark"
-  }
-};
-
-const getVariantsColours = variant =>
-  get(variantMap, variant, {
-    buttonColour: "primary",
-    textColour: "white",
-    borderColour: "primary",
-    buttonHoverColour: "primaryDark",
-    textHoverColour: "white"
-  });
-
-const getVariantsColour = colourName => props => {
-  const variantsColours = getVariantsColours(props.variant);
-  const variantsColour = get(variantsColours, colourName);
-  return get(props, ["theme", "colors", variantsColour]);
-};
 
 const Item = styled("button").attrs(props => ({
   "data-testid": props.dataTestId
@@ -72,6 +19,19 @@ const Item = styled("button").attrs(props => ({
 }))(
   props =>
     css({
+      bg: "primary",
+      color: "white",
+      borderColor: "primary",
+      "&:hover": {
+        bg: "primaryDark",
+        borderColor: "primaryDark",
+        borderWidth: "1px",
+        borderStyle: "solid"
+      },
+      "&:focus": {
+        outline: "0",
+        boxShadow: "0 0 0 3px " + rgba(themeGet("colors.primary")(props), 0.4)
+      },
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
@@ -110,21 +70,64 @@ const Item = styled("button").attrs(props => ({
           : "2",
       px: props.large ? "l" : props.small ? "s" : "r",
       py: props.large ? "r" : props.small ? "xs" : "s",
-      "&:hover": {
-        bg: getVariantsColour("buttonHoverColour"),
-        borderColor: getVariantsColour("buttonHoverColour"),
-        borderWidth: "1px",
-        borderStyle: "solid",
-        color: getVariantsColour("textHoverColour")
-      },
-      "&:focus": {
-        outline: "0",
-        boxShadow:
-          "0 0 0 3px " + rgba(getVariantsColour("buttonColour")(props), 0.4)
-      },
       svg: {
         marginRight: !props.iconLeft ? "" : props.small ? "xs" : "s",
         marginLeft: !props.iconRight ? "" : props.small ? "xs" : "s"
+      }
+    }),
+  props =>
+    variant({
+      variants: {
+        default: {},
+        success: {
+          bg: "successDark",
+          color: "white",
+          borderColor: "successDark",
+          "&:hover": {
+            bg: "successDarker",
+            borderColor: "successDarker"
+          },
+          "&:focus": {
+            outline: "0",
+            boxShadow:
+              "0 0 0 3px " + rgba(themeGet("colors.successDark")(props), 0.4)
+          }
+        },
+        danger: {
+          bg: "danger",
+          color: "white",
+          borderColor: "dangerDark",
+          "&:hover": {
+            bg: "dangerDarker",
+            borderColor: "dangerDarker"
+          },
+          "&:focus": {
+            outline: "0",
+            boxShadow:
+              "0 0 0 3px " + rgba(themeGet("colors.dangerDark")(props), 0.4)
+          }
+        },
+        disabled: {
+          bg: "greyLighter",
+          color: "greyLight",
+          borderColor: "greyLighter"
+        },
+        ghost: {
+          bg: "primaryLightest",
+          color: "primary",
+          borderColor: "primaryLightest",
+          "&:hover": {
+            bg: "primaryLighter",
+            borderColor: "primaryLighter",
+            color: "primaryDark"
+          },
+          "&:focus": {
+            outline: "0",
+            boxShadow:
+              "0 0 0 3px " +
+              rgba(themeGet("colors.primaryLightest")(props), 0.4)
+          }
+        }
       }
     }),
   ButtonStyles
@@ -138,15 +141,11 @@ export const Button = ({
   iconLeft,
   iconRight,
   iconOnly,
-  variant = "default",
   dataTestId,
   theme,
   children,
   ...props
 }) => {
-  const { buttonColour, textColour, borderColour } = getVariantsColours(
-    variant
-  );
   return (
     <ThemeProvider theme={theme}>
       <Item
@@ -157,10 +156,6 @@ export const Button = ({
         iconLeft={iconLeft}
         iconRight={iconRight}
         iconOnly={iconOnly}
-        variant={variant}
-        bg={buttonColour}
-        color={textColour}
-        borderColor={borderColour}
         dataTestId={dataTestId}
         borderWidth="1px"
         borderStyle="solid"
