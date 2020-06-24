@@ -96,10 +96,10 @@ const Item = styled("button").attrs(props => ({
         danger: {
           bg: "danger",
           color: "white",
-          borderColor: "dangerDark",
+          borderColor: "danger",
           "&:hover": {
-            bg: "dangerDarker",
-            borderColor: "dangerDarker"
+            bg: "dangerDark",
+            borderColor: "dangerDark"
           },
           "&:focus": {
             outline: "0",
@@ -110,7 +110,12 @@ const Item = styled("button").attrs(props => ({
         disabled: {
           bg: "greyLighter",
           color: "greyLight",
-          borderColor: "greyLighter"
+          borderColor: "greyLighter",
+          "&:hover": {
+            bg: "greyLighter",
+            color: "greyLight",
+            borderColor: "greyLighter"
+          }
         },
         ghost: {
           bg: "primaryLightest",
