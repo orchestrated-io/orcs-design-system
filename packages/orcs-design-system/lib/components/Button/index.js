@@ -1,19 +1,14 @@
 import React from "react";
-import styled, { css, keyframes, ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { get } from "lodash";
 import PropTypes from "prop-types";
 import { space, layout, color, border, compose } from "styled-system";
 import { rgba } from "polished";
-import { themeGet } from "@styled-system/theme-get";
+import { css } from "@styled-system/css";
 import systemtheme from "../../systemtheme";
+import Icon from "../Icon";
 
 const ButtonStyles = compose(space, layout, color, border);
-
-const loadingSpin = keyframes`
-  to {
-      transform: rotate(1turn);
-  }
-`;
 
 const variantMap = {
   default: {
@@ -68,109 +63,74 @@ const getVariantsColour = colourName => props => {
   return get(props, ["theme", "colors", variantsColour]);
 };
 
-const calculateHeight = ({ iconOnly, small, large }) => {
-  if (iconOnly && small) {
-    return "31px";
-  }
-  if (iconOnly && large) {
-    return "58px";
-  }
-  if (iconOnly) {
-    return "40px";
-  }
-  return "auto";
-};
-
-const calculateFontSize = ({ iconOnly, small, large }) => {
-  if (iconOnly) {
-    if (large) {
-      return "2.2rem";
-    } else if (small) {
-      return "1.4rem";
-    } else {
-      return "1.8rem";
-    }
-  } else if (large) {
-    return "1.8rem";
-  } else if (small) {
-    return "1.4rem";
-  }
-  return "1.6rem";
-};
-
-const calculateSVGMargin = ({ iconLeft, iconRight, small }) => {
-  if (iconLeft) {
-    return small ? "0 6px 0 0" : "0 10px 0 0";
-  }
-  if (iconRight) {
-    return small ? "0 0 0 6px" : "0 0 0 10px";
-  }
-  return "0";
-};
-
-const StyledItem = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  box-shadow: none;
-  text-decoration: none;
-  text-align: center;
-  font-family: ${themeGet("font")};
-  font-weight: ${themeGet("fontWeights.2")};
-  border-radius: ${themeGet("radii.2")};
-  transition: ${themeGet("transition.transitionDefault")};
-  cursor: ${props =>
-    props.disabled ? "not-allowed" : props.isLoading ? "progress" : "pointer"};
-  width: ${props => (props.fullWidth ? "100%" : "auto")};
-  height: ${calculateHeight};
-  font-size: ${calculateFontSize};
-  padding: ${props =>
-    props.large ? "16px 24px" : props.small ? "5px 9px" : "8px 14px"};
-
-  &:hover {
-    background-color: ${getVariantsColour("buttonHoverColour")};
-    border: 1px solid ${getVariantsColour("buttonHoverColour")};
-    color: ${getVariantsColour("textHoverColour")};
-  }
-
-  &:focus {
-    outline: 0;
-    box-shadow: ${props =>
-      `0 0 0 3px ${rgba(getVariantsColour("buttonColour")(props), 0.4)}`}
-    }};
-  }
-
-  svg {
-    margin: ${calculateSVGMargin};
-  }
-
-  ${props =>
-    props.isLoading
-      ? css`
-          &:after {
-            content: "";
-            position: relative;
-            animation: ${loadingSpin} 500ms infinite linear;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            margin-left: ${themeGet("space.3")};
-            border: 2px solid ${themeGet("colors.black20")};
-            border-right-color: ${themeGet("colors.white70")};
-            display: inline-block;
-          }
-        `
-      : css``};
-`;
-
-const Wrapper = styled(StyledItem).attrs(props => ({
+const Item = styled("button").attrs(props => ({
   "data-testid": props.dataTestId
-}))(ButtonStyles);
+    ? props.dataTestId
+    : props["data-testid"]
+    ? props["data-testid"]
+    : null
+}))(
+  props =>
+    css({
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      appearance: "none",
+      boxShadow: "none",
+      textDecoration: "none",
+      textAlign: "center",
+      fontFamily: "main",
+      fontWeight: "2",
+      borderRadius: "2",
+      transition: "transitionDefault",
+      cursor: props.disabled
+        ? "not-allowed"
+        : props.isLoading
+        ? "progress"
+        : "pointer",
+      width: props.fullWidth ? "100%" : "auto",
+      height: !props.iconOnly
+        ? "auto"
+        : props.iconOnly && props.small
+        ? "l"
+        : props.iconOnly && props.large
+        ? "xxl"
+        : "xl",
+      fontSize:
+        !props.iconOnly && props.small
+          ? "1"
+          : props.iconOnly && props.small
+          ? "1"
+          : props.iconOnly && props.large
+          ? "4"
+          : !props.iconOnly && props.small
+          ? "1"
+          : !props.IconOnly && props.large
+          ? "3"
+          : "2",
+      px: props.large ? "l" : props.small ? "s" : "r",
+      py: props.large ? "r" : props.small ? "xs" : "s",
+      "&:hover": {
+        bg: getVariantsColour("buttonHoverColour"),
+        borderColor: getVariantsColour("buttonHoverColour"),
+        borderWidth: "1px",
+        borderStyle: "solid",
+        color: getVariantsColour("textHoverColour")
+      },
+      "&:focus": {
+        outline: "0",
+        boxShadow:
+          "0 0 0 3px " + rgba(getVariantsColour("buttonColour")(props), 0.4)
+      },
+      svg: {
+        marginRight: !props.iconLeft ? "" : props.small ? "xs" : "s",
+        marginLeft: !props.iconRight ? "" : props.small ? "xs" : "s"
+      }
+    }),
+  ButtonStyles
+);
 
-export default function Button({
+export const Button = ({
   large,
   small,
   fullWidth,
@@ -183,13 +143,13 @@ export default function Button({
   theme,
   children,
   ...props
-}) {
+}) => {
   const { buttonColour, textColour, borderColour } = getVariantsColours(
     variant
   );
   return (
     <ThemeProvider theme={theme}>
-      <Wrapper
+      <Item
         large={large}
         small={small}
         fullWidth={fullWidth}
@@ -207,10 +167,13 @@ export default function Button({
         {...props}
       >
         {children}
-      </Wrapper>
+        {isLoading ? <Icon icon={["fas", "spinner"]} spin ml="s" /> : null}
+      </Item>
     </ThemeProvider>
   );
-}
+};
+
+export default Button;
 
 Button.propTypes = {
   /** Large button */
