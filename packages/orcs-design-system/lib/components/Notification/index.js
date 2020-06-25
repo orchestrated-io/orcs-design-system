@@ -1,77 +1,113 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import styled, { css, ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import Icon from "../Icon";
-import colours from "../../colours";
-import variables from "../../variables";
-import { rgba } from "polished";
 import systemtheme from "../../systemtheme";
-import { space, layout } from "styled-system";
+import { css } from "@styled-system/css";
+import { shouldForwardProp } from "@styled-system/should-forward-prop";
+import { space, layout, position, variant, compose } from "styled-system";
 
-const Item = styled.div`
-  ${space}
-  ${layout}
-  position: relative;
-  font-size: 1.4rem;
-  font-weight: 400;
-  position: relative;
-  padding: 10px 12px;
-  cursor: default;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  color: ${colours.white};
-  border-radius: ${variables.borderRadiusSmall};
-  background: ${props =>
-    props.colour && colours[props.colour]
-      ? rgba(colours[`${props.colour}Dark`], 0.9)
-      : rgba(colours.primaryDark, 0.9)};
+const NotificationStyles = compose(space, layout, position);
 
-  ${props =>
-    props.floating
-      ? css`
-          z-index: 100;
-          position: fixed;
-        `
-      : css``};
-
-  top: ${props => (props.top ? props.top : "auto")};
-  right: ${props => (props.right ? props.right : "auto")};
-  bottom: ${props => (props.bottom ? props.bottom : "auto")};
-  left: ${props => (props.left ? props.left : "auto")};
-
-  ${props =>
-    props.centered
-      ? css`
-          left: 50%;
-          transform: translateX(-50%);
-          right: auto;
-        `
-      : css``};
-`;
-
-const NotificationContent = styled.p`
-  margin-left: ${props => (props.icon ? "12px" : "0")};
-  padding-right: 12px;
-`;
-
-const Close = styled.button`
-  appearance: none;
-  background: transparent;
-  padding: 0;
-  border: none;
-  margin-left: auto;
-  cursor: pointer;
-  opacity: 0.6;
-  transition: ${variables.defaultTransition};
-    color: ${colours.white};
-      &:hover,
-      &:focus {
-        outline: 0;
-        opacity: 1;
+const Wrapper = styled("div")
+  .withConfig({ shouldForwardProp })
+  .attrs(props => ({
+    className:
+      !props.floating && !props.centered
+        ? ""
+        : props.floating && props.centered
+        ? "floating centered"
+        : !props.floating && props.centered
+        ? "centered"
+        : props.floating && !props.centered
+        ? "floating"
+        : ""
+  }))(
+  css({
+    position: "relative",
+    color: "white",
+    fontSize: "1",
+    fontWeight: "1",
+    px: "s",
+    py: "s",
+    cursor: "default",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "flex-start",
+    borderRadius: "1",
+    bg: "primaryDark",
+    "&.floating": {
+      zIndex: "13",
+      position: "fixed"
+    },
+    "&.centered": {
+      left: "50%",
+      transform: "translateX(-50%)",
+      right: "auto"
+    }
+  }),
+  variant({
+    prop: "colour",
+    variants: {
+      success: {
+        bg: "successDark"
+      },
+      danger: {
+        bg: "warningDark"
+      },
+      warning: {
+        bg: "warningDark"
+      },
+      default: {}
+    }
+  }),
+  variant({
+    variants: {
+      success: {
+        bg: "successDark"
+      },
+      danger: {
+        bg: "warningDark"
+      },
+      warning: {
+        bg: "warningDark"
+      },
+      default: {
+        bg: "primaryDark"
       }
-  }
-`;
+    }
+  }),
+  NotificationStyles
+);
+
+const NotificationContent = styled("p")(props =>
+  css({
+    marginLeft: props.icon ? "s" : "0",
+    pr: "s"
+  })
+);
+
+const Close = styled("button")(
+  css({
+    appearance: "none",
+    bg: "transparent",
+    p: "0",
+    border: "none",
+    ml: "auto",
+    cursor: "pointer",
+    opacity: "0.6",
+    transition: "defaultTransition",
+    color: "white",
+    "&:hover, &:focus": {
+      outline: "0",
+      opacity: "1"
+    }
+  })
+);
+
+const CloseIcon = styled(Icon).withConfig({ shouldForwardProp })({
+  color: "white"
+});
 
 export default function Notification({
   icon,
@@ -97,7 +133,7 @@ export default function Notification({
   return (
     !dismissed && (
       <ThemeProvider theme={theme}>
-        <Item
+        <Wrapper
           colour={colour}
           floating={floating}
           top={top}
@@ -108,14 +144,14 @@ export default function Notification({
           onDismiss={onDismiss}
           {...props}
         >
-          {icon && <Icon icon={icon} color="white" />}
+          {icon && <Icon icon={icon} color="white" fontSize="2" />}
           <NotificationContent icon={icon}>{children}</NotificationContent>
           {closable && (
             <Close className="close-button" tabIndex="0" onClick={onToggle}>
-              <Icon color={colours.white} icon={["fas", "times"]} size="lg" />
+              <CloseIcon icon={["fas", "times"]} size="lg" />
             </Close>
           )}
-        </Item>
+        </Wrapper>
       </ThemeProvider>
     )
   );
