@@ -79,7 +79,10 @@ const AppName = styled("div")(
 
 const SearchContainer = styled("div")(
   css({
-    gridColumn: "2 / 4"
+    gridColumn: "2 / 4",
+    "a[class^='StyledLink'], a[class*=' StyledLink']": {
+      display: "inline-block"
+    }
   }),
   space,
   layout
