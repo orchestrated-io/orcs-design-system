@@ -120,15 +120,17 @@ const TextArea = React.forwardRef((props, ref) => {
   return (
     <ThemeProvider theme={theme}>
       <Group fullWidth={fullWidth} {...props}>
-        <Label
-          inverted={inverted}
-          invalid={invalid}
-          valid={valid}
-          htmlFor={id}
-          mandatory={mandatory}
-        >
-          {label}
-        </Label>
+        {label && (
+          <Label
+            inverted={inverted}
+            invalid={invalid}
+            valid={valid}
+            htmlFor={id}
+            mandatory={mandatory}
+          >
+            {label}
+          </Label>
+        )}
         <Input ref={ref} {...props} />
       </Group>
     </ThemeProvider>
