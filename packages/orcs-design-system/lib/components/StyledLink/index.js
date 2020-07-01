@@ -86,6 +86,7 @@ export function StyledLink({
       active={active}
       white={white}
       bold={bold}
+      to={to}
       {...props}
     >
       {children}
@@ -122,5 +123,6 @@ StyledLink.defaultProps = {
   theme: systemtheme
 };
 
+export { styleLink };
 /** @component */
 export default StyledLink;
