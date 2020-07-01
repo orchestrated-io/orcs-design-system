@@ -3,6 +3,7 @@ import StyledLink from ".";
 import Box from "../Box";
 import Flex from "../Flex";
 import Spacer from "../Spacer";
+import { BrowserRouter } from "react-router-dom";
 import mdx from "./StyledLink.mdx";
 
 export default {
@@ -56,5 +57,9 @@ export const invertedStyledLink = () => (
 );
 invertedStyledLink.storyName = "Inverted";
 
-export const reactLink = () => <StyledLink to="about">Custom Link</StyledLink>;
+export const reactLink = () => (
+  <BrowserRouter>
+    <StyledLink to="about">Custom Link</StyledLink>
+  </BrowserRouter>
+);
 reactLink.storyName = "Using react-router";

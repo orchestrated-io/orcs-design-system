@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { space, layout } from "styled-system";
 import { css } from "@styled-system/css";
 import systemtheme from "../../systemtheme";
-import { BrowserRouter } from "react-router-dom";
 
 const styleLink = LinkComponent =>
   styled(LinkComponent)
@@ -82,17 +81,15 @@ export function StyledLink({
   ...props
 }) {
   return to ? (
-    <BrowserRouter>
-      <ReactLink
-        theme={theme}
-        active={active}
-        white={white}
-        bold={bold}
-        {...props}
-      >
-        {children}
-      </ReactLink>
-    </BrowserRouter>
+    <ReactLink
+      theme={theme}
+      active={active}
+      white={white}
+      bold={bold}
+      {...props}
+    >
+      {children}
+    </ReactLink>
   ) : (
     <Hyperlink
       theme={theme}
