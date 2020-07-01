@@ -1,41 +1,40 @@
 import React from "react";
-import { StyledLink, HeaderLink } from ".";
+import StyledLink from ".";
 import Box from "../Box";
 import Flex from "../Flex";
 import Spacer from "../Spacer";
 import { BrowserRouter } from "react-router-dom";
+import mdx from "./StyledLink.mdx";
 
 export default {
-  title: "Units/StyledLink",
+  title: "Components/StyledLink",
   parameters: {
-    component: StyledLink
-  }
+    docs: {
+      page: mdx
+    }
+  },
+  component: StyledLink,
+  decorators: [storyFn => <Box p="r">{storyFn()}</Box>]
 };
 
 export const defaultStyledLink = () => (
   <StyledLink href="#">Styled Link</StyledLink>
 );
-defaultStyledLink.story = {
-  name: "Default"
-};
+defaultStyledLink.storyName = "Default";
 
 export const activeStyledLink = () => (
   <StyledLink href="#" active>
     Active Link
   </StyledLink>
 );
-activeStyledLink.story = {
-  name: "Active"
-};
+activeStyledLink.storyName = "Active";
 
 export const boldStyledLink = () => (
   <StyledLink href="#" bold>
     Active Link
   </StyledLink>
 );
-boldStyledLink.story = {
-  name: "Bold"
-};
+boldStyledLink.storyName = "Bold";
 
 export const invertedStyledLink = () => (
   <Box bg="greyDarker" p="r">
@@ -56,15 +55,11 @@ export const invertedStyledLink = () => (
     </Flex>
   </Box>
 );
-invertedStyledLink.story = {
-  name: "Inverted"
-};
+invertedStyledLink.storyName = "Inverted";
 
-export const customLink = () => (
+export const reactLink = () => (
   <BrowserRouter>
-    <HeaderLink to="about">Custom Link</HeaderLink>
+    <StyledLink to="about">Custom Link</StyledLink>
   </BrowserRouter>
 );
-customLink.story = {
-  name: "Using Router"
-};
+reactLink.storyName = "Using react-router";

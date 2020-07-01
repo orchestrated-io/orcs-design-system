@@ -3,23 +3,33 @@ import Notification from ".";
 import Loading from "../Loading";
 import Spacer from "../Spacer";
 import Flex from "../Flex";
+import Box from "../Box";
+import mdx from "./Notification.mdx";
 
 export default {
-  title: "Units/Notification",
+  title: "Components/Notification",
   parameters: {
-    component: Notification
-  }
+    docs: {
+      page: mdx
+    }
+  },
+  component: Notification,
+  decorators: [
+    storyFn => (
+      <Box p="r" height="250px">
+        {storyFn()}
+      </Box>
+    )
+  ]
 };
 
-export const defaultNotification = () => (
+export const basicNotification = () => (
   <Notification icon={["fas", "share-square"]}>
     Default notification message for messages that are not super important, e.g.
     Link shared.
   </Notification>
 );
-defaultNotification.story = {
-  name: "Default"
-};
+basicNotification.storyName = "Basic";
 
 export const colourNotification = () => (
   <Spacer m="r">
@@ -37,16 +47,12 @@ export const colourNotification = () => (
     </Notification>
   </Spacer>
 );
-colourNotification.story = {
-  name: "Colour"
-};
+colourNotification.storyName = "Alternate Colours";
 
 export const textOnlyNotification = () => (
   <Notification>Text-only notification</Notification>
 );
-textOnlyNotification.story = {
-  name: "Text-only"
-};
+textOnlyNotification.storyName = "Text-only";
 
 export const closeDisabledNotification = () => (
   <Notification closable={false}>
@@ -54,9 +60,7 @@ export const closeDisabledNotification = () => (
     notifications e.g. Stage 1 is now locked and is read-only.
   </Notification>
 );
-closeDisabledNotification.story = {
-  name: "Close disabled"
-};
+closeDisabledNotification.storyName = "Close Disabled";
 
 export const inProgressNotification = () => (
   <Notification closable={false}>
@@ -68,15 +72,18 @@ export const inProgressNotification = () => (
     </Flex>
   </Notification>
 );
-inProgressNotification.story = {
-  name: "In progress"
-};
+inProgressNotification.storyName = "In Progress/Loading";
 
 export const floatingNotification = () => (
   <Notification floating bottom="20px" right="20px" icon={["fas", "bell"]}>
     Floating notification.
   </Notification>
 );
-floatingNotification.story = {
-  name: "Floating"
-};
+floatingNotification.storyName = "Floating";
+
+export const centeredNotification = () => (
+  <Notification centered floating bottom="20px">
+    Centered notification
+  </Notification>
+);
+centeredNotification.storyName = "Floating and Centered";

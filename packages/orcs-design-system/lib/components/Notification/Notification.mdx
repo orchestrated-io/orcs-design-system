@@ -1,9 +1,5 @@
-import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
 import Notification from ".";
-import * as stories from "./Notification.stories.js";
-import Box from "../Box";
-
-<Meta title="Components/Notification" decorators={[storyFn => <Box p="r">{storyFn()}</Box>]}/>
 
 # Notification
 
@@ -15,34 +11,34 @@ Default notifications are displayed inline, if a floating notification is requir
 
 If you want your notification to be closable, you must use the onDismiss prop to correctly unmount the component. If you do not do this, clicking the close button will hide the notification visually using CSS and this will not be able to be shown again, even if the event that triggers the notification occurs again.
 
-## Default
+## Basic
 
 <Preview>
-  <Story name="defaultNotification">{stories.defaultNotification()}</Story>
+  <Story id="components-notification--basic-notification" />
 </Preview>
 
-## Colour
+## Alternate Colours
 
 <Preview>
-  <Story name="colourNotification">{stories.colourNotification()}</Story>
+  <Story id="components-notification--colour-notification" />
 </Preview>
 
 ## Text-only
 
 <Preview>
-  <Story name="textOnlyNotification">{stories.textOnlyNotification()}</Story>
+  <Story id="components-notification--text-only-notification" />
 </Preview>
 
-## Close disabled
+## Close Disabled
 
 <Preview>
-  <Story name="closeDisabledNotification">{stories.closeDisabledNotification()}</Story>
+  <Story id="components-notification--close-disabled-notification" />
 </Preview>
 
-## In progress
+## In Progress/Loading
 
 <Preview>
-  <Story name="inProgressNotification">{stories.inProgressNotification()}</Story>
+  <Story id="components-notification--in-progress-notification" />
 </Preview>
 
 ## Floating
@@ -50,7 +46,15 @@ If you want your notification to be closable, you must use the onDismiss prop to
 This notification will appear on the bottom right corner of the browser's screen.
 
 <Preview>
-  <Story name="floatingNotification">{stories.floatingNotification()}</Story>
+  <Story id="components-notification--floating-notification" />
+</Preview>
+
+## Floating and Centered
+
+This floating notification will appear in the center bottom of the browser's screen. Note that this behaviour only works if the component also has the `floating` prop. A positioning prop along the vertical axis, eg `top` or `bottom`, will also need to be specified.
+
+<Preview>
+  <Story id="components-notification--centered-notification" />
 </Preview>
 
 ## Properties

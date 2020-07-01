@@ -7,25 +7,6 @@ import { space, layout } from "styled-system";
 import { css } from "@styled-system/css";
 import systemtheme from "../../systemtheme";
 
-const LinkStyles = css({
-  color: "primary",
-  position: "relative",
-  textDecoration: "none",
-  cursor: "pointer",
-  transition: "transitionDefault",
-  "&:hover": {
-    outline: "0",
-    textDecoration: "underline"
-  },
-  "&:focus": {
-    outline: "0",
-    textDecoration: "underline"
-  },
-  svg: {
-    marginRight: 2
-  }
-});
-
 const styleLink = LinkComponent =>
   styled(LinkComponent)
     .withConfig({
@@ -33,21 +14,40 @@ const styleLink = LinkComponent =>
     })
     .attrs(props => ({
       className: "StyledLink",
-      theme: props.theme
+      theme: props.theme,
+      "data-testid": props.dataTestId
+        ? props.dataTestId
+        : props["data-testid"]
+        ? props["data-testid"]
+        : null
     }))(
-    LinkStyles,
     props =>
       css({
         display: props.block ? "block" : "inline-block",
         fontWeight: props.bold ? 2 : "inherit",
-        color: props.active ? "primary" : props.white ? "white" : "primary"
+        color: props.active ? "primary" : props.white ? "white" : "primary",
+        position: "relative",
+        textDecoration: "none",
+        cursor: "pointer",
+        transition: "transitionDefault",
+        "&:hover": {
+          outline: "0",
+          textDecoration: "underline"
+        },
+        "&:focus": {
+          outline: "0",
+          textDecoration: "underline"
+        },
+        svg: {
+          marginRight: "2"
+        }
       }),
     space,
     layout
   );
 
 const Hyperlink = styleLink(styled.a``);
-const HeaderLink = styleLink(Link);
+const ReactLink = styleLink(Link);
 
 /**
  * This `StyledLink` component supports both standard html hyperlinks and react Link components (if using react router for example).
@@ -71,8 +71,27 @@ const HeaderLink = styleLink(Link);
  *        Dashboard
  *      </HeaderLink>
  */
-export function StyledLink({ children, active, white, bold, theme, ...props }) {
-  return (
+export function StyledLink({
+  children,
+  active,
+  white,
+  bold,
+  theme,
+  to,
+  ...props
+}) {
+  return to ? (
+    <ReactLink
+      theme={theme}
+      active={active}
+      white={white}
+      bold={bold}
+      to={to}
+      {...props}
+    >
+      {children}
+    </ReactLink>
+  ) : (
     <Hyperlink
       theme={theme}
       active={active}
@@ -94,6 +113,8 @@ StyledLink.propTypes = {
   white: PropTypes.bool,
   /** Styles the link text in bold */
   bold: PropTypes.bool,
+  /** Specifies the destination of react-router `Link` */
+  to: PropTypes.element,
   /** Specifies the system design theme. */
   theme: PropTypes.object
 };
@@ -102,6 +123,6 @@ StyledLink.defaultProps = {
   theme: systemtheme
 };
 
-export { styleLink, HeaderLink };
+export { styleLink };
 /** @component */
 export default StyledLink;

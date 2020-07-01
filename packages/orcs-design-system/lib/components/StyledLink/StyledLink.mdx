@@ -1,0 +1,44 @@
+import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import StyledLink from ".";
+
+# StyledLink
+
+[Default](#default) | [Active](#active) | [Bold](#bold) | [Inverted](#inverted) | [Using Router](#using-router) | [Properties](#properties)
+
+This `StyledLink` component supports both standard html hyperlinks and react Link components (if using react router for example).
+
+Use `to={DESTINATION}` to use the react-router `Link` instead of the html `<a>`. If doing so, `StyledLink` will need to be enclosed in a `BrowserRouter` or similar.
+
+## Default
+
+<Preview>
+  <Story id="components-styledlink--default-styled-link" />
+</Preview>
+
+## Active
+
+<Preview>
+  <Story id="components-styledlink--active-styled-link" />
+</Preview>
+
+## Bold
+
+<Preview>
+  <Story id="components-styledlink--bold-styled-link" />
+</Preview>
+
+## Inverted
+
+<Preview>
+  <Story id="components-styledlink--inverted-styled-link" />
+</Preview>
+
+## React Link
+
+<Preview>
+  <Story id="components-styledlink--react-link" />
+</Preview>
+
+## Properties
+
+<Props of={StyledLink} />
