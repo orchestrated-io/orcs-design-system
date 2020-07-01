@@ -4,7 +4,7 @@ import styled, { ThemeProvider } from "styled-components";
 import Icon from "../Icon";
 import systemtheme from "../../systemtheme";
 import { css } from "@styled-system/css";
-import { shouldForwardProp } from "@styled-system/should-forward-prop";
+import shouldForwardProp from "@styled-system/should-forward-prop";
 import { space, layout, position, variant, compose } from "styled-system";
 
 const NotificationStyles = compose(space, layout, position);
