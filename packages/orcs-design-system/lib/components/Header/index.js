@@ -41,7 +41,7 @@ const Bar = styled("header")
       search: {
         display: "grid",
         gridGap: "r",
-        gridTemplateColumns: "1fr 1fr 1fr 1fr"
+        gridTemplateColumns: "1fr 1.5fr 1.5fr 1fr"
       }
     }
   }),
