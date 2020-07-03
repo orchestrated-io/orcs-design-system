@@ -2,18 +2,23 @@ import React from "react";
 import NumberFormat from "react-number-format";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { space, layout } from "styled-system";
+import { space, layout, compose } from "styled-system";
+import { css as sscss } from "@styled-system/css";
 import colours from "../../colours";
 import variables from "../../variables";
 import Icon from "../Icon";
 import { rgba } from "polished";
 
-const Group = styled.div`
-  ${space}
-  ${layout}
-  position: relative;
-  width: ${props => (props.fullWidth ? `100%` : `auto`)};
-`;
+const InputStyles = compose(space, layout);
+
+const Group = styled("div")(
+  props =>
+    sscss({
+      position: "relative",
+      width: props.fullWidth ? "100%" : "auto"
+    }),
+  InputStyles
+);
 
 const IconWrapper = styled.label`
   svg {
@@ -241,7 +246,8 @@ const TextInput = React.forwardRef((props, ref) => {
     mandatory,
     iconLeft,
     iconRight,
-    dataTestId
+    dataTestId,
+    ...InputStyles
   } = props;
 
   // Strip numberProps from props for Input
@@ -255,7 +261,7 @@ const TextInput = React.forwardRef((props, ref) => {
   }
 
   return (
-    <Group fullWidth={fullWidth} {...props}>
+    <Group fullWidth={fullWidth} {...InputStyles}>
       {label && !floating ? (
         <Label
           inverted={inverted}
