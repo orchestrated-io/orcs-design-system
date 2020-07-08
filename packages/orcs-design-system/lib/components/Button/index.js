@@ -17,7 +17,8 @@ const Item = styled("button")
       ? props.dataTestId
       : props["data-testid"]
       ? props["data-testid"]
-      : null
+      : null,
+    disabled: props.disabled ? true : null
   }))
   .withConfig({ shouldForwardProp })(
   props =>
@@ -32,6 +33,7 @@ const Item = styled("button")
       boxShadow: "none",
       textDecoration: "none",
       textAlign: "center",
+      verticalAlign: "center",
       fontFamily: "main",
       fontWeight: "2",
       borderRadius: "2",
@@ -42,20 +44,16 @@ const Item = styled("button")
         ? "progress"
         : "pointer",
       width: props.fullWidth ? "100%" : "auto",
-      height: !props.iconOnly
-        ? "xl"
-        : !props.iconOnly && props.small
-        ? "l"
-        : props.iconOnly && props.small
-        ? "l"
-        : props.iconOnly && props.large
-        ? "xxl"
-        : props.iconOnly && !props.small && !props.large
-        ? "xl"
-        : "xl",
-      fontSize: props.small ? "1" : props.large ? "3" : "2",
+      height: "auto",
+      fontSize: props.small
+        ? "1"
+        : props.large && props.iconOnly
+        ? "5"
+        : props.large
+        ? "3"
+        : "2",
+      py: props.small ? "xxs" : props.large ? "s" : "xs",
       px: props.large ? "r" : props.small ? "xs" : "s",
-      py: props.large ? "l" : props.small ? "s" : "r",
       svg: {
         marginRight: !props.iconLeft ? "" : props.small ? "xs" : "s",
         marginLeft: !props.iconRight ? "" : props.small ? "xs" : "s"
@@ -143,6 +141,7 @@ export const Button = ({
   iconRight,
   iconOnly,
   dataTestId,
+  disabled,
   theme,
   children,
   ...props
@@ -160,6 +159,8 @@ export const Button = ({
         dataTestId={dataTestId}
         borderWidth="1px"
         borderStyle="solid"
+        disabled={disabled}
+        variant={disabled ? "disabled" : null}
         {...props}
       >
         {children}
@@ -188,6 +189,8 @@ Button.propTypes = {
   iconRight: PropTypes.bool,
   /** Styles button to suit having only an icon. Uses Icon component. */
   iconOnly: PropTypes.bool,
+  /** Specifies whether the button is disabled. */
+  disabled: PropTypes.bool,
   /** The text label on the button is passed as a child. Keep this text short and descriptive. Use an action word or confirmation if possible. */
   children: PropTypes.node,
   /** Specifies the `data-testid` attribute for testing. */

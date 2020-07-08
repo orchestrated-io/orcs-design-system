@@ -3,18 +3,20 @@ import { action } from "@storybook/addon-actions";
 import Icon from "../Icon";
 import Spacer from "../Spacer";
 import Button from ".";
+import mdx from "./Button.mdx";
 
 export default {
-  title: "Units/Button",
+  title: "Components/Button",
   parameters: {
-    component: Button
-  }
+    docs: {
+      page: mdx
+    }
+  },
+  component: Button
 };
 
 export const defaultButton = () => <Button>Default button</Button>;
-defaultButton.story = {
-  name: "Default button"
-};
+defaultButton.storyName = "Default button";
 
 export const alternateSize = () => (
   <Spacer my="3">
@@ -25,13 +27,14 @@ export const alternateSize = () => (
       Large button
     </Button>
     <Button height="xxxl" onClick={action("clicked")}>
-      Specific sized button
+      Specified height button
+    </Button>
+    <Button onClick={action("clicked")} width="100px">
+      A multiple-line button with specified width
     </Button>
   </Spacer>
 );
-alternateSize.story = {
-  name: "Alternate sizes"
-};
+alternateSize.storyName = "Alternate sizes";
 
 export const alternateColours = () => (
   <Spacer my="3">
@@ -43,9 +46,7 @@ export const alternateColours = () => (
     </Button>
   </Spacer>
 );
-alternateColours.story = {
-  name: "Alternate colours"
-};
+alternateColours.storyName = "Alternate colours";
 
 export const ghost = () => (
   <Spacer my="3">
@@ -60,23 +61,13 @@ export const ghost = () => (
     </Button>
   </Spacer>
 );
-ghost.story = {
-  name: "Ghost style"
-};
+ghost.storyName = "Ghost style";
 
 export const fullWidth = () => <Button fullWidth>Full width button</Button>;
-fullWidth.story = {
-  name: "Full width"
-};
+fullWidth.storyName = "Full width";
 
-export const disabled = () => (
-  <Button variant="disabled" disabled>
-    Disabled button
-  </Button>
-);
-disabled.story = {
-  name: "Disabled state"
-};
+export const disabled = () => <Button disabled>Disabled button</Button>;
+disabled.storyName = "Disabled state";
 
 export const loading = () => (
   <Spacer my="3">
@@ -89,9 +80,7 @@ export const loading = () => (
     </Button>
   </Spacer>
 );
-loading.story = {
-  name: "Loading state"
-};
+loading.storyName = "Loading state";
 
 export const withIcon = () => (
   <Spacer my="3">
@@ -105,9 +94,7 @@ export const withIcon = () => (
     </Button>
   </Spacer>
 );
-withIcon.story = {
-  name: "With icon"
-};
+withIcon.storyName = "With icon";
 
 export const iconOnly = () => (
   <Spacer my="3">
@@ -122,6 +109,4 @@ export const iconOnly = () => (
     </Button>
   </Spacer>
 );
-iconOnly.story = {
-  name: "Icon only"
-};
+iconOnly.storyName = "Icon only";
