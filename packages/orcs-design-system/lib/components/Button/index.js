@@ -17,7 +17,8 @@ const Item = styled("button")
       ? props.dataTestId
       : props["data-testid"]
       ? props["data-testid"]
-      : null
+      : null,
+    disabled: props.disabled ? true : null
   }))
   .withConfig({ shouldForwardProp })(
   props =>
@@ -140,6 +141,7 @@ export const Button = ({
   iconRight,
   iconOnly,
   dataTestId,
+  disabled,
   theme,
   children,
   ...props
@@ -157,6 +159,8 @@ export const Button = ({
         dataTestId={dataTestId}
         borderWidth="1px"
         borderStyle="solid"
+        disabled={disabled}
+        variant={disabled ? "disabled" : null}
         {...props}
       >
         {children}
@@ -185,6 +189,8 @@ Button.propTypes = {
   iconRight: PropTypes.bool,
   /** Styles button to suit having only an icon. Uses Icon component. */
   iconOnly: PropTypes.bool,
+  /** Specifies whether the button is disabled. */
+  disabled: PropTypes.bool,
   /** The text label on the button is passed as a child. Keep this text short and descriptive. Use an action word or confirmation if possible. */
   children: PropTypes.node,
   /** Specifies the `data-testid` attribute for testing. */
