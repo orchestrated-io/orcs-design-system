@@ -66,7 +66,12 @@ ghost.storyName = "Ghost style";
 export const fullWidth = () => <Button fullWidth>Full width button</Button>;
 fullWidth.storyName = "Full width";
 
-export const disabled = () => <Button disabled>Disabled button</Button>;
+export const disabled = () => (
+  <Spacer my="3">
+    <Button disabled>Disabled button</Button>
+    <Button variant="disabled">Also disabled</Button>
+  </Spacer>
+);
 disabled.storyName = "Disabled state";
 
 export const loading = () => (
