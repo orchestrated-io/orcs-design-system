@@ -1,10 +1,7 @@
-import * as stories from './Button.stories.js';
 import Button from ".";
 import Icon from "../Icon";
 import Spacer from "../Spacer";
-import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
-
-<Meta title="Components/Button" component={Button} />
+import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
 
 # Button
 
@@ -25,61 +22,55 @@ Make use of icons when they help enhance or support the text or aesthetic of the
 ## Default button
 
 <Preview>
-  <Story name="defaultButton">{stories.defaultButton()}</Story>
+  <Story id="components-button--default-button" />
 </Preview>
 
 ## Alternate sizes
 
 <Preview>
-  <Story name="alternateSize">{stories.alternateSize()}</Story>
+  <Story id="components-button--alternate-size" />
 </Preview>
 
 ## Alternate colours
 
 <Preview>
-  <Story name="alternateColours">{stories.alternateColours()}</Story>
+  <Story id="components-button--alternate-colours" />
 </Preview>
-
 
 ## Ghost style
 
 <Preview>
-  <Story name="ghost">{stories.ghost()}</Story>
+  <Story id="components-button--ghost" />
 </Preview>
-
 
 ## Full width
 
 <Preview>
-  <Story name="fullWidth">{stories.fullWidth()}</Story>
+  <Story id="components-button--full-width" />
 </Preview>
-
 
 ## Disabled state
 
 <Preview>
-  <Story name="disabled">{stories.disabled()}</Story>
+  <Story id="components-button--disabled" />
 </Preview>
-
 
 ## Loading state
 
 <Preview>
-  <Story name="loading">{stories.loading()}</Story>
+  <Story id="components-button--loading" />
 </Preview>
-
 
 ## With icon
 
 <Preview>
-  <Story name="withIcon">{stories.withIcon()}</Story>
+  <Story id="components-button--with-icon" />
 </Preview>
-
 
 ## Icon only
 
 <Preview>
-  <Story name="iconOnly">{stories.iconOnly()}</Story>
+  <Story id="components-button--icon-only" />
 </Preview>
 
 ## Properties

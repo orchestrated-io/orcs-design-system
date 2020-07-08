@@ -32,6 +32,7 @@ const Item = styled("button")
       boxShadow: "none",
       textDecoration: "none",
       textAlign: "center",
+      verticalAlign: "center",
       fontFamily: "main",
       fontWeight: "2",
       borderRadius: "2",
@@ -42,20 +43,16 @@ const Item = styled("button")
         ? "progress"
         : "pointer",
       width: props.fullWidth ? "100%" : "auto",
-      height: !props.iconOnly
-        ? "xl"
-        : !props.iconOnly && props.small
-        ? "l"
-        : props.iconOnly && props.small
-        ? "l"
-        : props.iconOnly && props.large
-        ? "xxl"
-        : props.iconOnly && !props.small && !props.large
-        ? "xl"
-        : "xl",
-      fontSize: props.small ? "1" : props.large ? "3" : "2",
+      height: "auto",
+      fontSize: props.small
+        ? "1"
+        : props.large && props.iconOnly
+        ? "5"
+        : props.large
+        ? "3"
+        : "2",
+      py: props.small ? "xxs" : props.large ? "s" : "xs",
       px: props.large ? "r" : props.small ? "xs" : "s",
-      py: props.large ? "l" : props.small ? "s" : "r",
       svg: {
         marginRight: !props.iconLeft ? "" : props.small ? "xs" : "s",
         marginLeft: !props.iconRight ? "" : props.small ? "xs" : "s"
