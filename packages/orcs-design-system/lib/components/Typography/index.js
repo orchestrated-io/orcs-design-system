@@ -8,6 +8,7 @@ import {
   compose
 } from "styled-system";
 import css from "@styled-system/css";
+import shouldForwardProp from "@styled-system/should-forward-prop";
 
 const typeStyles = compose(typography, color, space, layout);
 
@@ -226,26 +227,12 @@ export const P = styled("p")(
   typeStyles
 );
 
-export const Small = styled("small").withConfig({
-  shouldForwardProp: prop =>
-    ![
-      "m",
-      "ml",
-      "mr",
-      "mx",
-      "my",
-      "mt",
-      "mb",
-      "p",
-      "px",
-      "py",
-      "pt",
-      "pb",
-      "pr",
-      "pl",
-      "color"
-    ].includes(prop)
-})(typeStyles);
+export const Small = styled("span").withConfig({ shouldForwardProp })(
+  css({
+    fontSize: "1.25rem"
+  }),
+  typeStyles
+);
 
 export const Text = styled("span")(
   css({

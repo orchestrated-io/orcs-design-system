@@ -6,32 +6,25 @@ import { rgba } from "polished";
 import { css } from "@styled-system/css";
 import { themeGet } from "@styled-system/theme-get";
 import systemtheme from "../../systemtheme";
+import shouldForwardProp from "@styled-system/should-forward-prop";
 import Icon from "../Icon";
 
 const ButtonStyles = compose(space, layout, color, border);
 
-const Item = styled("button").attrs(props => ({
-  "data-testid": props.dataTestId
-    ? props.dataTestId
-    : props["data-testid"]
-    ? props["data-testid"]
-    : null
-}))(
+const Item = styled("button")
+  .attrs(props => ({
+    "data-testid": props.dataTestId
+      ? props.dataTestId
+      : props["data-testid"]
+      ? props["data-testid"]
+      : null
+  }))
+  .withConfig({ shouldForwardProp })(
   props =>
     css({
       bg: "primary",
       color: "white",
       borderColor: "primary",
-      "&:hover": {
-        bg: "primaryDark",
-        borderColor: "primaryDark",
-        borderWidth: "1px",
-        borderStyle: "solid"
-      },
-      "&:focus": {
-        outline: "0",
-        boxShadow: "0 0 0 3px " + rgba(themeGet("colors.primary")(props), 0.4)
-      },
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
@@ -50,29 +43,32 @@ const Item = styled("button").attrs(props => ({
         : "pointer",
       width: props.fullWidth ? "100%" : "auto",
       height: !props.iconOnly
-        ? "auto"
+        ? "xl"
+        : !props.iconOnly && props.small
+        ? "l"
         : props.iconOnly && props.small
         ? "l"
         : props.iconOnly && props.large
         ? "xxl"
+        : props.iconOnly && !props.small && !props.large
+        ? "xl"
         : "xl",
-      fontSize:
-        !props.iconOnly && props.small
-          ? "1"
-          : props.iconOnly && props.small
-          ? "1"
-          : props.iconOnly && props.large
-          ? "4"
-          : !props.iconOnly && props.small
-          ? "1"
-          : !props.IconOnly && props.large
-          ? "3"
-          : "2",
-      px: props.large ? "l" : props.small ? "s" : "r",
-      py: props.large ? "r" : props.small ? "xs" : "s",
+      fontSize: props.small ? "1" : props.large ? "3" : "2",
+      px: props.large ? "r" : props.small ? "xs" : "s",
+      py: props.large ? "l" : props.small ? "s" : "r",
       svg: {
         marginRight: !props.iconLeft ? "" : props.small ? "xs" : "s",
         marginLeft: !props.iconRight ? "" : props.small ? "xs" : "s"
+      },
+      "&:hover": {
+        bg: "primaryDark",
+        borderColor: "primaryDark",
+        borderWidth: "1px",
+        borderStyle: "solid"
+      },
+      "&:focus": {
+        outline: "0",
+        boxShadow: "0 0 0 3px " + rgba(themeGet("colors.primary")(props), 0.4)
       }
     }),
   props =>
