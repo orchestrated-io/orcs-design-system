@@ -18,7 +18,7 @@ const Item = styled("button")
       : props["data-testid"]
       ? props["data-testid"]
       : null,
-    disabled: props.disabled ? true : props.variant == "disabled" ? true : null
+    disabled: props.disabled ? true : props.variant == "disabled" ? true : false
   }))
   .withConfig({ shouldForwardProp })(
   props =>
