@@ -14,7 +14,7 @@ const styleLink = LinkComponent =>
     })
     .attrs(props => ({
       className: "StyledLink",
-      theme: props.theme,
+      target: props.target,
       "data-testid": props.dataTestId
         ? props.dataTestId
         : props["data-testid"]
@@ -78,6 +78,7 @@ export function StyledLink({
   bold,
   theme,
   to,
+  target,
   ...props
 }) {
   return to ? (
@@ -87,6 +88,7 @@ export function StyledLink({
       white={white}
       bold={bold}
       to={to}
+      target={target}
       {...props}
     >
       {children}
@@ -97,6 +99,8 @@ export function StyledLink({
       active={active}
       white={white}
       bold={bold}
+      to={to}
+      target={target}
       {...props}
     >
       {children}
@@ -114,7 +118,9 @@ StyledLink.propTypes = {
   /** Styles the link text in bold */
   bold: PropTypes.bool,
   /** Specifies the destination of react-router `Link` */
-  to: PropTypes.element,
+  to: PropTypes.oneOf([PropTypes.element, PropTypes.string]),
+  /** Specifies the link target */
+  target: PropTypes.string,
   /** Specifies the system design theme. */
   theme: PropTypes.object
 };

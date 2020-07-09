@@ -22,6 +22,13 @@ export const defaultStyledLink = () => (
 );
 defaultStyledLink.storyName = "Default";
 
+export const targetStyledLink = () => (
+  <StyledLink href="#" target="_blank">
+    Targeted Link
+  </StyledLink>
+);
+targetStyledLink.storyName = "Targeted";
+
 export const activeStyledLink = () => (
   <StyledLink href="#" active>
     Active Link
