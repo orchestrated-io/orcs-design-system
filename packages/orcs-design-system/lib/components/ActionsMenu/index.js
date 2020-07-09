@@ -171,7 +171,8 @@ const ActionsMenu = ({ children, direction, isOpen, theme, ...props }) => {
   const [baseState, setBase] = useState(isOpen);
   const [toggleState, setToggle] = useState(false);
 
-  const onToggle = () => {
+  const onToggle = e => {
+    e.stopPropagation();
     if (!toggleState) setToggle(true);
     else setToggle(false);
     if (!baseState) setBase(true);
