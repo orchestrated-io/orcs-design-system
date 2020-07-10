@@ -81,7 +81,7 @@ const Modal = props => {
       if (code === 13) {
         // 13 is the enter keycode
         onConfirm();
-        event.preventDefault();
+        // event.preventDefault();
       } else if (code === 27) {
         // 27 is the escape keycode
         onCancel();
