@@ -1,0 +1,377 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/StatusDot colourVariants 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gILfyj"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 jqYIil"
+    display="flex"
+  >
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+    >
+      <div
+        className="Popover__Container-sc-1bwoak-0 fFsabD"
+      >
+        <div
+          className="Popover__Text-sc-1bwoak-1 jaBCFX"
+          direction="top"
+          width="250px"
+        >
+          Team has a dedicated Product Owner. STATUS: Met
+        </div>
+        <div
+          className="StatusDot__StatusDotItem-sc-1esxq7c-0 dQEiKV"
+        />
+      </div>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+    >
+      <div
+        className="Popover__Container-sc-1bwoak-0 fFsabD"
+      >
+        <div
+          className="Popover__Text-sc-1bwoak-1 jaBCFX"
+          direction="top"
+          width="250px"
+        >
+          Team members are in less than 3 locations. STATUS: Not enough data
+        </div>
+        <div
+          className="StatusDot__StatusDotItem-sc-1esxq7c-0 cRoPwx"
+        />
+      </div>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+    >
+      <div
+        className="Popover__Container-sc-1bwoak-0 fFsabD"
+      >
+        <div
+          className="Popover__Text-sc-1bwoak-1 jaBCFX"
+          direction="top"
+          width="250px"
+        >
+          Team has a dedicated Engineering Lead. STATUS: Not met
+        </div>
+        <div
+          className="StatusDot__StatusDotItem-sc-1esxq7c-0 ediouZ"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/StatusDot defaultStatusDot 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gILfyj"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 jqYIil"
+    display="flex"
+  >
+    <div
+      className="Popover__Container-sc-1bwoak-0 fFsabD"
+    >
+      <div
+        className="Popover__Text-sc-1bwoak-1 gmaSeC"
+        direction="top"
+        width="170px"
+      >
+        New approvals received
+      </div>
+      <div
+        className="StatusDot__StatusDotItem-sc-1esxq7c-0 dIsRjm"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/StatusDot withIcon 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gILfyj"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 jqYIil"
+    display="flex"
+  >
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+    >
+      <div
+        className="Popover__Container-sc-1bwoak-0 fFsabD"
+      >
+        <div
+          className="Popover__Text-sc-1bwoak-1 dFOCLM"
+          direction="top"
+          width="110px"
+        >
+          Target met
+        </div>
+        <div
+          className="StatusDot__StatusDotItem-sc-1esxq7c-0 btxbkN"
+        >
+          <span
+            className="Icon__IconWrapper-xeqnbo-0 hrqhCG"
+            color="white"
+          >
+            <svg
+              className="svg-inline--fa fa-undefined"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+    >
+      <div
+        className="Popover__Container-sc-1bwoak-0 fFsabD"
+      >
+        <div
+          className="Popover__Text-sc-1bwoak-1 dFOCLM"
+          direction="top"
+          width="110px"
+        >
+          Under allocated
+        </div>
+        <div
+          className="StatusDot__StatusDotItem-sc-1esxq7c-0 uhHWp"
+        >
+          <span
+            className="Icon__IconWrapper-xeqnbo-0 hrqhCG"
+            color="white"
+          >
+            <svg
+              className="svg-inline--fa fa-undefined"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+    >
+      <div
+        className="Popover__Container-sc-1bwoak-0 fFsabD"
+      >
+        <div
+          className="Popover__Text-sc-1bwoak-1 dFOCLM"
+          direction="top"
+          width="110px"
+        >
+          Over allocated
+        </div>
+        <div
+          className="StatusDot__StatusDotItem-sc-1esxq7c-0 bGbgUR"
+        >
+          <span
+            className="Icon__IconWrapper-xeqnbo-0 hrqhCG"
+            color="white"
+          >
+            <svg
+              className="svg-inline--fa fa-undefined"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/StatusDot Colour Variants 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gILfyj"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 jqYIil"
+    display="flex"
+  >
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+    >
+      <div
+        className="Popover__Container-sc-1bwoak-0 fFsabD"
+      >
+        <div
+          className="Popover__Text-sc-1bwoak-1 jaBCFX"
+          direction="top"
+          width="250px"
+        >
+          Team has a dedicated Product Owner. STATUS: Met
+        </div>
+        <div
+          className="StatusDot__StatusDotItem-sc-1esxq7c-0 dQEiKV"
+        />
+      </div>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+    >
+      <div
+        className="Popover__Container-sc-1bwoak-0 fFsabD"
+      >
+        <div
+          className="Popover__Text-sc-1bwoak-1 jaBCFX"
+          direction="top"
+          width="250px"
+        >
+          Team members are in less than 3 locations. STATUS: Not enough data
+        </div>
+        <div
+          className="StatusDot__StatusDotItem-sc-1esxq7c-0 cRoPwx"
+        />
+      </div>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+    >
+      <div
+        className="Popover__Container-sc-1bwoak-0 fFsabD"
+      >
+        <div
+          className="Popover__Text-sc-1bwoak-1 jaBCFX"
+          direction="top"
+          width="250px"
+        >
+          Team has a dedicated Engineering Lead. STATUS: Not met
+        </div>
+        <div
+          className="StatusDot__StatusDotItem-sc-1esxq7c-0 ediouZ"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/StatusDot Default badge 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gILfyj"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 jqYIil"
+    display="flex"
+  >
+    <div
+      className="Popover__Container-sc-1bwoak-0 fFsabD"
+    >
+      <div
+        className="Popover__Text-sc-1bwoak-1 gmaSeC"
+        direction="top"
+        width="170px"
+      >
+        New approvals received
+      </div>
+      <div
+        className="StatusDot__StatusDotItem-sc-1esxq7c-0 dIsRjm"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/StatusDot With icon 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gILfyj"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 jqYIil"
+    display="flex"
+  >
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+    >
+      <div
+        className="Popover__Container-sc-1bwoak-0 fFsabD"
+      >
+        <div
+          className="Popover__Text-sc-1bwoak-1 dFOCLM"
+          direction="top"
+          width="110px"
+        >
+          Target met
+        </div>
+        <div
+          className="StatusDot__StatusDotItem-sc-1esxq7c-0 btxbkN"
+        >
+          <span
+            className="Icon__IconWrapper-xeqnbo-0 hrqhCG"
+            color="white"
+          >
+            <svg
+              className="svg-inline--fa fa-undefined"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+    >
+      <div
+        className="Popover__Container-sc-1bwoak-0 fFsabD"
+      >
+        <div
+          className="Popover__Text-sc-1bwoak-1 dFOCLM"
+          direction="top"
+          width="110px"
+        >
+          Under allocated
+        </div>
+        <div
+          className="StatusDot__StatusDotItem-sc-1esxq7c-0 uhHWp"
+        >
+          <span
+            className="Icon__IconWrapper-xeqnbo-0 hrqhCG"
+            color="white"
+          >
+            <svg
+              className="svg-inline--fa fa-undefined"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+    >
+      <div
+        className="Popover__Container-sc-1bwoak-0 fFsabD"
+      >
+        <div
+          className="Popover__Text-sc-1bwoak-1 dFOCLM"
+          direction="top"
+          width="110px"
+        >
+          Over allocated
+        </div>
+        <div
+          className="StatusDot__StatusDotItem-sc-1esxq7c-0 bGbgUR"
+        >
+          <span
+            className="Icon__IconWrapper-xeqnbo-0 hrqhCG"
+            color="white"
+          >
+            <svg
+              className="svg-inline--fa fa-undefined"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,289 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/TextArea defaultTextArea 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <div
+    className="TextArea__Group-sc-1oyenoa-0 ckBdU"
+    id="TextArea01"
+    label="Message"
+  >
+    <label
+      className="TextArea__Label-sc-1oyenoa-2 IdVPa"
+      htmlFor="TextArea01"
+    >
+      Message
+    </label>
+    <textarea
+      className="TextArea__Input-sc-1oyenoa-1 hOATHE"
+      id="TextArea01"
+      label="Message"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/TextArea fullWidthTextArea 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <div
+    className="TextArea__Group-sc-1oyenoa-0 fZpjkP"
+    id="TextArea05"
+    label="Message"
+  >
+    <label
+      className="TextArea__Label-sc-1oyenoa-2 IdVPa"
+      htmlFor="TextArea05"
+    >
+      Message
+    </label>
+    <textarea
+      className="TextArea__Input-sc-1oyenoa-1 jwRlDL"
+      id="TextArea05"
+      label="Message"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/TextArea invalidTextArea 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <div
+    className="TextArea__Group-sc-1oyenoa-0 ckBdU"
+    id="TextArea03"
+    label="Message"
+  >
+    <label
+      className="TextArea__Label-sc-1oyenoa-2 kzqjGd"
+      htmlFor="TextArea03"
+    >
+      Message
+    </label>
+    <textarea
+      className="TextArea__Input-sc-1oyenoa-1 btNttT"
+      id="TextArea03"
+      label="Message"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/TextArea invertedTextArea 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <div
+    className="Box__BoxWrapper-jr1api-0 cQxHnQ"
+    data-testid={null}
+  >
+    <div
+      className="TextArea__Group-sc-1oyenoa-0 ckBdU"
+      id="TextArea06"
+      label="Message"
+    >
+      <label
+        className="TextArea__Label-sc-1oyenoa-2 edHlXa"
+        htmlFor="TextArea06"
+      >
+        Message
+      </label>
+      <textarea
+        className="TextArea__Input-sc-1oyenoa-1 hOATHE"
+        id="TextArea06"
+        label="Message"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/TextArea sizeTextArea 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <div
+    className="TextArea__Group-sc-1oyenoa-0 ckBdU"
+    cols="50"
+    id="TextArea02"
+    label="Message"
+    rows="5"
+  >
+    <label
+      className="TextArea__Label-sc-1oyenoa-2 IdVPa"
+      htmlFor="TextArea02"
+    >
+      Message
+    </label>
+    <textarea
+      className="TextArea__Input-sc-1oyenoa-1 hOATHE"
+      cols="50"
+      id="TextArea02"
+      label="Message"
+      rows="5"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/TextArea validTextArea 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <div
+    className="TextArea__Group-sc-1oyenoa-0 ckBdU"
+    id="TextArea04"
+    label="Message"
+  >
+    <label
+      className="TextArea__Label-sc-1oyenoa-2 deSheW"
+      htmlFor="TextArea04"
+    >
+      Message
+    </label>
+    <textarea
+      className="TextArea__Input-sc-1oyenoa-1 bfwuaL"
+      id="TextArea04"
+      label="Message"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/TextArea Default 1`] = `
+<div
+  className="TextArea__Group-sc-1oyenoa-0 ckBdU"
+  id="TextArea01"
+  label="Message"
+>
+  <label
+    className="TextArea__Label-sc-1oyenoa-2 IdVPa"
+    htmlFor="TextArea01"
+  >
+    Message
+  </label>
+  <textarea
+    className="TextArea__Input-sc-1oyenoa-1 hOATHE"
+    id="TextArea01"
+    label="Message"
+  />
+</div>
+`;
+
+exports[`Storyshots Units/TextArea Full-width 1`] = `
+<div
+  className="TextArea__Group-sc-1oyenoa-0 fZpjkP"
+  id="TextArea05"
+  label="Message"
+>
+  <label
+    className="TextArea__Label-sc-1oyenoa-2 IdVPa"
+    htmlFor="TextArea05"
+  >
+    Message
+  </label>
+  <textarea
+    className="TextArea__Input-sc-1oyenoa-1 jwRlDL"
+    id="TextArea05"
+    label="Message"
+  />
+</div>
+`;
+
+exports[`Storyshots Units/TextArea Invalid 1`] = `
+<div
+  className="TextArea__Group-sc-1oyenoa-0 ckBdU"
+  id="TextArea03"
+  label="Message"
+>
+  <label
+    className="TextArea__Label-sc-1oyenoa-2 kzqjGd"
+    htmlFor="TextArea03"
+  >
+    Message
+  </label>
+  <textarea
+    className="TextArea__Input-sc-1oyenoa-1 btNttT"
+    id="TextArea03"
+    label="Message"
+  />
+</div>
+`;
+
+exports[`Storyshots Units/TextArea Inverted 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 cQxHnQ"
+  data-testid={null}
+>
+  <div
+    className="TextArea__Group-sc-1oyenoa-0 ckBdU"
+    id="TextArea06"
+    label="Message"
+  >
+    <label
+      className="TextArea__Label-sc-1oyenoa-2 edHlXa"
+      htmlFor="TextArea06"
+    >
+      Message
+    </label>
+    <textarea
+      className="TextArea__Input-sc-1oyenoa-1 hOATHE"
+      id="TextArea06"
+      label="Message"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/TextArea Size 1`] = `
+<div
+  className="TextArea__Group-sc-1oyenoa-0 ckBdU"
+  cols="50"
+  id="TextArea02"
+  label="Message"
+  rows="5"
+>
+  <label
+    className="TextArea__Label-sc-1oyenoa-2 IdVPa"
+    htmlFor="TextArea02"
+  >
+    Message
+  </label>
+  <textarea
+    className="TextArea__Input-sc-1oyenoa-1 hOATHE"
+    cols="50"
+    id="TextArea02"
+    label="Message"
+    rows="5"
+  />
+</div>
+`;
+
+exports[`Storyshots Units/TextArea Valid 1`] = `
+<div
+  className="TextArea__Group-sc-1oyenoa-0 ckBdU"
+  id="TextArea04"
+  label="Message"
+>
+  <label
+    className="TextArea__Label-sc-1oyenoa-2 deSheW"
+    htmlFor="TextArea04"
+  >
+    Message
+  </label>
+  <textarea
+    className="TextArea__Input-sc-1oyenoa-1 bfwuaL"
+    id="TextArea04"
+    label="Message"
+  />
+</div>
+`;

@@ -1,0 +1,271 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/DatePicker Date Range 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 hDjWvb"
+  data-testid={null}
+>
+  <div
+    className="DatePicker__DatePickerContainer-sc-15292wq-0 ehuBbc"
+  >
+    <div
+      className="DateRangePicker DateRangePicker_1"
+    >
+      <div>
+        <div
+          className="DateRangePickerInput DateRangePickerInput_1 DateRangePickerInput__withBorder DateRangePickerInput__withBorder_2"
+        >
+          <div
+            className="DateInput DateInput_1"
+          >
+            <input
+              aria-describedby="DateInput__screen-reader-message-startDate"
+              aria-label="Start Date"
+              autoComplete="off"
+              className="DateInput_input DateInput_input_1"
+              disabled={false}
+              id="startDate"
+              name="startDate"
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              placeholder="Start Date"
+              readOnly={false}
+              required={false}
+              type="text"
+              value=""
+            />
+            <p
+              className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
+              id="DateInput__screen-reader-message-startDate"
+            >
+              Navigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.
+            </p>
+          </div>
+          <div
+            aria-hidden="true"
+            className="DateRangePickerInput_arrow DateRangePickerInput_arrow_1"
+            role="presentation"
+          >
+            <svg
+              className="DateRangePickerInput_arrow_svg DateRangePickerInput_arrow_svg_1"
+              focusable="false"
+              viewBox="0 0 1000 1000"
+            >
+              <path
+                d="M694 242l249 250c12 11 12 21 1 32L694 773c-5 5-10 7-16 7s-11-2-16-7c-11-11-11-21 0-32l210-210H68c-13 0-23-10-23-23s10-23 23-23h806L662 275c-21-22 11-54 32-33z"
+              />
+            </svg>
+          </div>
+          <div
+            className="DateInput DateInput_1"
+          >
+            <input
+              aria-describedby="DateInput__screen-reader-message-endDate"
+              aria-label="End Date"
+              autoComplete="off"
+              className="DateInput_input DateInput_input_1"
+              disabled={false}
+              id="endDate"
+              name="endDate"
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              placeholder="End Date"
+              readOnly={false}
+              required={false}
+              type="text"
+              value=""
+            />
+            <p
+              className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
+              id="DateInput__screen-reader-message-endDate"
+            >
+              Navigate backward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/DatePicker Single date 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 hDjWvb"
+  data-testid={null}
+>
+  <div
+    className="DatePicker__DatePickerContainer-sc-15292wq-0 ehuBbc"
+  >
+    <div
+      className="SingleDatePicker SingleDatePicker_1"
+    >
+      <div>
+        <div
+          className="SingleDatePickerInput SingleDatePickerInput_1 SingleDatePickerInput__withBorder SingleDatePickerInput__withBorder_2"
+        >
+          <div
+            className="DateInput DateInput_1"
+          >
+            <input
+              aria-describedby="DateInput__screen-reader-message-your_unique_id"
+              aria-label="Date"
+              autoComplete="off"
+              className="DateInput_input DateInput_input_1"
+              disabled={false}
+              id="your_unique_id"
+              name="your_unique_id"
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              placeholder="Date"
+              readOnly={false}
+              required={false}
+              type="text"
+              value=""
+            />
+            <p
+              className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
+              id="DateInput__screen-reader-message-your_unique_id"
+            >
+              Navigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/DatePicker Date Range 1`] = `
+<div
+  className="DatePicker__DatePickerContainer-sc-15292wq-0 ehuBbc"
+>
+  <div
+    className="DateRangePicker DateRangePicker_1"
+  >
+    <div>
+      <div
+        className="DateRangePickerInput DateRangePickerInput_1 DateRangePickerInput__withBorder DateRangePickerInput__withBorder_2"
+      >
+        <div
+          className="DateInput DateInput_1"
+        >
+          <input
+            aria-describedby="DateInput__screen-reader-message-startDate"
+            aria-label="Start Date"
+            autoComplete="off"
+            className="DateInput_input DateInput_input_1"
+            disabled={false}
+            id="startDate"
+            name="startDate"
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            placeholder="Start Date"
+            readOnly={false}
+            required={false}
+            type="text"
+            value=""
+          />
+          <p
+            className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
+            id="DateInput__screen-reader-message-startDate"
+          >
+            Navigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.
+          </p>
+        </div>
+        <div
+          aria-hidden="true"
+          className="DateRangePickerInput_arrow DateRangePickerInput_arrow_1"
+          role="presentation"
+        >
+          <svg
+            className="DateRangePickerInput_arrow_svg DateRangePickerInput_arrow_svg_1"
+            focusable="false"
+            viewBox="0 0 1000 1000"
+          >
+            <path
+              d="M694 242l249 250c12 11 12 21 1 32L694 773c-5 5-10 7-16 7s-11-2-16-7c-11-11-11-21 0-32l210-210H68c-13 0-23-10-23-23s10-23 23-23h806L662 275c-21-22 11-54 32-33z"
+            />
+          </svg>
+        </div>
+        <div
+          className="DateInput DateInput_1"
+        >
+          <input
+            aria-describedby="DateInput__screen-reader-message-endDate"
+            aria-label="End Date"
+            autoComplete="off"
+            className="DateInput_input DateInput_input_1"
+            disabled={false}
+            id="endDate"
+            name="endDate"
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            placeholder="End Date"
+            readOnly={false}
+            required={false}
+            type="text"
+            value=""
+          />
+          <p
+            className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
+            id="DateInput__screen-reader-message-endDate"
+          >
+            Navigate backward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/DatePicker Single Date 1`] = `
+<div
+  className="DatePicker__DatePickerContainer-sc-15292wq-0 ehuBbc"
+>
+  <div
+    className="SingleDatePicker SingleDatePicker_1"
+  >
+    <div>
+      <div
+        className="SingleDatePickerInput SingleDatePickerInput_1 SingleDatePickerInput__withBorder SingleDatePickerInput__withBorder_2"
+      >
+        <div
+          className="DateInput DateInput_1"
+        >
+          <input
+            aria-describedby="DateInput__screen-reader-message-your_unique_id"
+            aria-label="Date"
+            autoComplete="off"
+            className="DateInput_input DateInput_input_1"
+            disabled={false}
+            id="your_unique_id"
+            name="your_unique_id"
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            placeholder="Date"
+            readOnly={false}
+            required={false}
+            type="text"
+            value=""
+          />
+          <p
+            className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
+            id="DateInput__screen-reader-message-your_unique_id"
+          >
+            Navigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

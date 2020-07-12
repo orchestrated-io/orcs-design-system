@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Modal Basic Modal 1`] = `
+<button
+  className="sc-AxirZ jsYNIa"
+  data-testid={null}
+  disabled={false}
+  onClick={[Function]}
+>
+  Open Modal
+</button>
+`;
+
+exports[`Storyshots Components/Modal Link Modal 1`] = `
+<a
+  className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
+  data-testid={null}
+  onClick={[Function]}
+>
+  Function Name Lorem Ipsum &gt; Agile Group &gt; Breadcrumb
+</a>
+`;

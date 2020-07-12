@@ -1,0 +1,355 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Badge colourVariants 1`] = `
+Array [
+  <div
+    className="Box__BoxWrapper-jr1api-0 ezPMxm"
+    data-testid={null}
+  >
+    <div
+      className="Flex__FlexWrapper-sc-1f3kfw7-0 koPQxp"
+      display="flex"
+    >
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 feOvPK"
+        >
+          Default
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 iaagFf"
+        >
+          Success
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 beGUTi"
+        >
+          Warning
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 gsOGRg"
+        >
+          Danger
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 ibszHM"
+        >
+          Low priority
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 cXIqIS"
+        >
+          Medium priority
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 dOFhrC"
+        >
+          High priority
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 brXHRh"
+        >
+          Secondary
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="Box__BoxWrapper-jr1api-0 gsDhqA"
+    data-testid={null}
+  >
+    <div
+      className="Flex__FlexWrapper-sc-1f3kfw7-0 koPQxp"
+      display="flex"
+    >
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 feOvPK"
+        >
+          Default
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 iaagFf"
+        >
+          Success
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 beGUTi"
+        >
+          Warning
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 gsOGRg"
+        >
+          Danger
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 ibszHM"
+        >
+          Low priority
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 cXIqIS"
+        >
+          Medium priority
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 dOFhrC"
+        >
+          High priority
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 brXHRh"
+        >
+          Secondary
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Components/Badge defaultBadge 1`] = `
+<div
+  className="Badge__Item-sc-9r75kj-0 feOvPK"
+>
+  Default
+</div>
+`;
+
+exports[`Storyshots Units/Badge Colour variants 1`] = `
+Array [
+  <div
+    className="Box__BoxWrapper-jr1api-0 ezPMxm"
+    data-testid={null}
+  >
+    <div
+      className="Flex__FlexWrapper-sc-1f3kfw7-0 koPQxp"
+      display="flex"
+    >
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 feOvPK"
+        >
+          Default
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 iaagFf"
+        >
+          Success
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 beGUTi"
+        >
+          Warning
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 gsOGRg"
+        >
+          Danger
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 ibszHM"
+        >
+          Low priority
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 cXIqIS"
+        >
+          Medium priority
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 dOFhrC"
+        >
+          High priority
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 brXHRh"
+        >
+          Secondary
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="Box__BoxWrapper-jr1api-0 gsDhqA"
+    data-testid={null}
+  >
+    <div
+      className="Flex__FlexWrapper-sc-1f3kfw7-0 koPQxp"
+      display="flex"
+    >
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 feOvPK"
+        >
+          Default
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 iaagFf"
+        >
+          Success
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 beGUTi"
+        >
+          Warning
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 gsOGRg"
+        >
+          Danger
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 ibszHM"
+        >
+          Low priority
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 cXIqIS"
+        >
+          Medium priority
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 dOFhrC"
+        >
+          High priority
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <div
+          className="Badge__Item-sc-9r75kj-0 brXHRh"
+        >
+          Secondary
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Units/Badge Default badge 1`] = `
+<div
+  className="Badge__Item-sc-9r75kj-0 feOvPK"
+>
+  Default
+</div>
+`;

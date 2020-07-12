@@ -1,0 +1,541 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Checkbox Basic checkbox 1`] = `
+<div
+  className="Checkbox__Item-p4d19b-0 bvDiDr"
+>
+  <label
+    className="Checkbox__Label-p4d19b-1 kOyQzY"
+  >
+    <input
+      className="Checkbox__Control-p4d19b-2 eYCfEr"
+      type="checkbox"
+    />
+    <div
+      className="Checkbox__Box-p4d19b-3 csKNKp"
+    >
+      <div
+        className="Checkbox__Check-p4d19b-4 eTdZLy"
+      />
+    </div>
+    <div
+      className="Checkbox__Text-p4d19b-5 koOQLU"
+    >
+      Default checkbox
+    </div>
+  </label>
+</div>
+`;
+
+exports[`Storyshots Components/Checkbox Checked 1`] = `
+<div
+  className="Checkbox__Item-p4d19b-0 bvDiDr"
+>
+  <label
+    className="Checkbox__Label-p4d19b-1 kOyQzY"
+  >
+    <input
+      checked={true}
+      className="Checkbox__Control-p4d19b-2 eYCfEr"
+      type="checkbox"
+    />
+    <div
+      className="Checkbox__Box-p4d19b-3 csKNKp"
+    >
+      <div
+        className="Checkbox__Check-p4d19b-4 eTdZLy"
+      />
+    </div>
+    <div
+      className="Checkbox__Text-p4d19b-5 koOQLU"
+    >
+      Ticked checkbox
+    </div>
+  </label>
+</div>
+`;
+
+exports[`Storyshots Components/Checkbox Colour variants 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
+  >
+    <div
+      className="Checkbox__Item-p4d19b-0 bvDiDr"
+    >
+      <label
+        className="Checkbox__Label-p4d19b-1 kOyQzY"
+      >
+        <input
+          className="Checkbox__Control-p4d19b-2 dEruue"
+          type="checkbox"
+        />
+        <div
+          className="Checkbox__Box-p4d19b-3 csKNKp"
+        >
+          <div
+            className="Checkbox__Check-p4d19b-4 eTdZLy"
+          />
+        </div>
+        <div
+          className="Checkbox__Text-p4d19b-5 koOQLU"
+        >
+          Primary colour checkbox
+        </div>
+      </label>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
+  >
+    <div
+      className="Checkbox__Item-p4d19b-0 bvDiDr"
+    >
+      <label
+        className="Checkbox__Label-p4d19b-1 kOyQzY"
+      >
+        <input
+          className="Checkbox__Control-p4d19b-2 ksOOIp"
+          type="checkbox"
+        />
+        <div
+          className="Checkbox__Box-p4d19b-3 csKNKp"
+        >
+          <div
+            className="Checkbox__Check-p4d19b-4 eTdZLy"
+          />
+        </div>
+        <div
+          className="Checkbox__Text-p4d19b-5 koOQLU"
+        >
+          Success colour checkbox
+        </div>
+      </label>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
+  >
+    <div
+      className="Checkbox__Item-p4d19b-0 bvDiDr"
+    >
+      <label
+        className="Checkbox__Label-p4d19b-1 kOyQzY"
+      >
+        <input
+          className="Checkbox__Control-p4d19b-2 hBvgQm"
+          type="checkbox"
+        />
+        <div
+          className="Checkbox__Box-p4d19b-3 csKNKp"
+        >
+          <div
+            className="Checkbox__Check-p4d19b-4 eTdZLy"
+          />
+        </div>
+        <div
+          className="Checkbox__Text-p4d19b-5 koOQLU"
+        >
+          Warning colour checkbox
+        </div>
+      </label>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
+  >
+    <div
+      className="Checkbox__Item-p4d19b-0 bvDiDr"
+    >
+      <label
+        className="Checkbox__Label-p4d19b-1 kOyQzY"
+      >
+        <input
+          className="Checkbox__Control-p4d19b-2 gFMsFc"
+          type="checkbox"
+        />
+        <div
+          className="Checkbox__Box-p4d19b-3 csKNKp"
+        >
+          <div
+            className="Checkbox__Check-p4d19b-4 eTdZLy"
+          />
+        </div>
+        <div
+          className="Checkbox__Text-p4d19b-5 koOQLU"
+        >
+          Danger colour checkbox
+        </div>
+      </label>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Components/Checkbox Disabled 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
+  >
+    <div
+      className="Checkbox__Item-p4d19b-0 bvDiDr"
+    >
+      <label
+        className="Checkbox__Label-p4d19b-1 bMlqJq"
+        disabled={true}
+      >
+        <input
+          className="Checkbox__Control-p4d19b-2 eYCfEr"
+          disabled={true}
+          type="checkbox"
+        />
+        <div
+          className="Checkbox__Box-p4d19b-3 csKNKp"
+        >
+          <div
+            className="Checkbox__Check-p4d19b-4 eTdZLy"
+          />
+        </div>
+        <div
+          className="Checkbox__Text-p4d19b-5 koOQLU"
+        >
+          Disabled checkbox
+        </div>
+      </label>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
+  >
+    <div
+      className="Checkbox__Item-p4d19b-0 bvDiDr"
+    >
+      <label
+        className="Checkbox__Label-p4d19b-1 bMlqJq"
+        disabled={true}
+      >
+        <input
+          checked={true}
+          className="Checkbox__Control-p4d19b-2 eYCfEr"
+          disabled={true}
+          type="checkbox"
+        />
+        <div
+          className="Checkbox__Box-p4d19b-3 csKNKp"
+        >
+          <div
+            className="Checkbox__Check-p4d19b-4 eTdZLy"
+          />
+        </div>
+        <div
+          className="Checkbox__Text-p4d19b-5 koOQLU"
+        >
+          Disabled ticked checkbox
+        </div>
+      </label>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Components/Checkbox Inverted 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 cQxHnQ"
+  data-testid={null}
+>
+  <div
+    className="Checkbox__Item-p4d19b-0 fZqhjr"
+  >
+    <label
+      className="Checkbox__Label-p4d19b-1 kOyQzY"
+    >
+      <input
+        className="Checkbox__Control-p4d19b-2 iShEdo"
+        type="checkbox"
+      />
+      <div
+        className="Checkbox__Box-p4d19b-3 csKNKp"
+      >
+        <div
+          className="Checkbox__Check-p4d19b-4 eTdZLy"
+        />
+      </div>
+      <div
+        className="Checkbox__Text-p4d19b-5 koOQLU"
+      >
+        Inverted checkbox
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Checkbox Basic Checkbox 1`] = `
+<div
+  className="Checkbox__Item-p4d19b-0 bvDiDr"
+>
+  <label
+    className="Checkbox__Label-p4d19b-1 kOyQzY"
+  >
+    <input
+      className="Checkbox__Control-p4d19b-2 eYCfEr"
+      type="checkbox"
+    />
+    <div
+      className="Checkbox__Box-p4d19b-3 csKNKp"
+    >
+      <div
+        className="Checkbox__Check-p4d19b-4 eTdZLy"
+      />
+    </div>
+    <div
+      className="Checkbox__Text-p4d19b-5 koOQLU"
+    >
+      Default checkbox
+    </div>
+  </label>
+</div>
+`;
+
+exports[`Storyshots Units/Checkbox Checked 1`] = `
+<div
+  className="Checkbox__Item-p4d19b-0 bvDiDr"
+>
+  <label
+    className="Checkbox__Label-p4d19b-1 kOyQzY"
+  >
+    <input
+      checked={true}
+      className="Checkbox__Control-p4d19b-2 eYCfEr"
+      type="checkbox"
+    />
+    <div
+      className="Checkbox__Box-p4d19b-3 csKNKp"
+    >
+      <div
+        className="Checkbox__Check-p4d19b-4 eTdZLy"
+      />
+    </div>
+    <div
+      className="Checkbox__Text-p4d19b-5 koOQLU"
+    >
+      Ticked checkbox
+    </div>
+  </label>
+</div>
+`;
+
+exports[`Storyshots Units/Checkbox Colour Variants 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
+  >
+    <div
+      className="Checkbox__Item-p4d19b-0 bvDiDr"
+    >
+      <label
+        className="Checkbox__Label-p4d19b-1 kOyQzY"
+      >
+        <input
+          className="Checkbox__Control-p4d19b-2 dEruue"
+          type="checkbox"
+        />
+        <div
+          className="Checkbox__Box-p4d19b-3 csKNKp"
+        >
+          <div
+            className="Checkbox__Check-p4d19b-4 eTdZLy"
+          />
+        </div>
+        <div
+          className="Checkbox__Text-p4d19b-5 koOQLU"
+        >
+          Primary colour checkbox
+        </div>
+      </label>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
+  >
+    <div
+      className="Checkbox__Item-p4d19b-0 bvDiDr"
+    >
+      <label
+        className="Checkbox__Label-p4d19b-1 kOyQzY"
+      >
+        <input
+          className="Checkbox__Control-p4d19b-2 ksOOIp"
+          type="checkbox"
+        />
+        <div
+          className="Checkbox__Box-p4d19b-3 csKNKp"
+        >
+          <div
+            className="Checkbox__Check-p4d19b-4 eTdZLy"
+          />
+        </div>
+        <div
+          className="Checkbox__Text-p4d19b-5 koOQLU"
+        >
+          Success colour checkbox
+        </div>
+      </label>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
+  >
+    <div
+      className="Checkbox__Item-p4d19b-0 bvDiDr"
+    >
+      <label
+        className="Checkbox__Label-p4d19b-1 kOyQzY"
+      >
+        <input
+          className="Checkbox__Control-p4d19b-2 hBvgQm"
+          type="checkbox"
+        />
+        <div
+          className="Checkbox__Box-p4d19b-3 csKNKp"
+        >
+          <div
+            className="Checkbox__Check-p4d19b-4 eTdZLy"
+          />
+        </div>
+        <div
+          className="Checkbox__Text-p4d19b-5 koOQLU"
+        >
+          Warning colour checkbox
+        </div>
+      </label>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
+  >
+    <div
+      className="Checkbox__Item-p4d19b-0 bvDiDr"
+    >
+      <label
+        className="Checkbox__Label-p4d19b-1 kOyQzY"
+      >
+        <input
+          className="Checkbox__Control-p4d19b-2 gFMsFc"
+          type="checkbox"
+        />
+        <div
+          className="Checkbox__Box-p4d19b-3 csKNKp"
+        >
+          <div
+            className="Checkbox__Check-p4d19b-4 eTdZLy"
+          />
+        </div>
+        <div
+          className="Checkbox__Text-p4d19b-5 koOQLU"
+        >
+          Danger colour checkbox
+        </div>
+      </label>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Units/Checkbox Disabled 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
+  >
+    <div
+      className="Checkbox__Item-p4d19b-0 bvDiDr"
+    >
+      <label
+        className="Checkbox__Label-p4d19b-1 bMlqJq"
+        disabled={true}
+      >
+        <input
+          className="Checkbox__Control-p4d19b-2 eYCfEr"
+          disabled={true}
+          type="checkbox"
+        />
+        <div
+          className="Checkbox__Box-p4d19b-3 csKNKp"
+        >
+          <div
+            className="Checkbox__Check-p4d19b-4 eTdZLy"
+          />
+        </div>
+        <div
+          className="Checkbox__Text-p4d19b-5 koOQLU"
+        >
+          Disabled checkbox
+        </div>
+      </label>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
+  >
+    <div
+      className="Checkbox__Item-p4d19b-0 bvDiDr"
+    >
+      <label
+        className="Checkbox__Label-p4d19b-1 bMlqJq"
+        disabled={true}
+      >
+        <input
+          checked={true}
+          className="Checkbox__Control-p4d19b-2 eYCfEr"
+          disabled={true}
+          type="checkbox"
+        />
+        <div
+          className="Checkbox__Box-p4d19b-3 csKNKp"
+        >
+          <div
+            className="Checkbox__Check-p4d19b-4 eTdZLy"
+          />
+        </div>
+        <div
+          className="Checkbox__Text-p4d19b-5 koOQLU"
+        >
+          Disabled ticked checkbox
+        </div>
+      </label>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Units/Checkbox Inverted 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 cQxHnQ"
+  data-testid={null}
+>
+  <div
+    className="Checkbox__Item-p4d19b-0 fZqhjr"
+  >
+    <label
+      className="Checkbox__Label-p4d19b-1 kOyQzY"
+    >
+      <input
+        className="Checkbox__Control-p4d19b-2 iShEdo"
+        type="checkbox"
+      />
+      <div
+        className="Checkbox__Box-p4d19b-3 csKNKp"
+      >
+        <div
+          className="Checkbox__Check-p4d19b-4 eTdZLy"
+        />
+      </div>
+      <div
+        className="Checkbox__Text-p4d19b-5 koOQLU"
+      >
+        Inverted checkbox
+      </div>
+    </label>
+  </div>
+</div>
+`;

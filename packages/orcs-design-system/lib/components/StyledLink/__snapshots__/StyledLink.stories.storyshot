@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/StyledLink Active 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <a
+    className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
+    data-testid={null}
+    href="#"
+  >
+    Active Link
+  </a>
+</div>
+`;
+
+exports[`Storyshots Components/StyledLink Bold 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <a
+    className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 isqNRL StyledLink"
+    data-testid={null}
+    href="#"
+  >
+    Active Link
+  </a>
+</div>
+`;
+
+exports[`Storyshots Components/StyledLink Default 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <a
+    className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
+    data-testid={null}
+    href="#"
+  >
+    Styled Link
+  </a>
+</div>
+`;
+
+exports[`Storyshots Components/StyledLink Inverted 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <div
+    className="Box__BoxWrapper-jr1api-0 cQxHnQ"
+    data-testid={null}
+  >
+    <div
+      className="Flex__FlexWrapper-sc-1f3kfw7-0 khTwLN"
+      display="flex"
+    >
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 gHANPZ"
+      >
+        <a
+          className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 bDsIQU StyledLink"
+          data-testid={null}
+          href="#"
+        >
+          White navigation link on dark background
+        </a>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 gHANPZ"
+      >
+        <a
+          className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 isqNRL StyledLink"
+          data-testid={null}
+          href="#"
+        >
+          Active/selected bold navigation link
+        </a>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 gHANPZ"
+      >
+        <a
+          className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
+          data-testid={null}
+          href="#"
+        >
+          Bold inverted link
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/StyledLink Targeted 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <a
+    className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
+    data-testid={null}
+    href="#"
+    target="_blank"
+  >
+    Targeted Link
+  </a>
+</div>
+`;
+
+exports[`Storyshots Components/StyledLink Using react-router 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <a
+    className="StyledLink-sc-1beg6q3-0 ggfsdv StyledLink"
+    data-testid={null}
+    href="/about"
+    onClick={[Function]}
+  >
+    Custom Link
+  </a>
+</div>
+`;

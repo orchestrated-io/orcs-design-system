@@ -1,0 +1,317 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Grid Default Grid 1`] = `
+<div
+  className="Grid__GridWrapper-sc-1rlajun-0 kHYecJ"
+  data-testid={null}
+>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    1
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    2
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    3
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    4
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    5
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    6
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Grid Template columns and rows 1`] = `
+<div
+  className="Grid__GridWrapper-sc-1rlajun-0 cqpzbN"
+  data-testid={null}
+>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    This Grid uses repeat and fr to specify the grid structure.
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    Fusce sit amet lorem lectus.
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    Nullam lobortis porta iaculis. 
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    Pellentesque fermentum elementum elit non blandit.
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    Etiam rhoncus ultricies lorem nec imperdiet.
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    Pellentesque. 
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Grid Text with GridItem 1`] = `
+<div
+  className="Grid__GridWrapper-sc-1rlajun-0 fwPkbV"
+  data-testid={null}
+>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    3
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    1
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    4
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    1
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    5
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    9
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Grid Width-based columns and rows 1`] = `
+<div
+  className="Grid__GridWrapper-sc-1rlajun-0 gsXKSS"
+  data-testid={null}
+>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    This Grid uses widths and percentages to specify the grid structure.
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    Fusce sit amet lorem lectus.
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    Nullam lobortis porta iaculis. 
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    Pellentesque fermentum elementum elit non blandit.
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    Etiam rhoncus ultricies lorem nec imperdiet.
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    Pellentesque. 
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    Each GridItem goes down the columns first and then goes through the rows.
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    To change this, change the value of the gridAutoFlow property. The default value is columns.
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Grid With GridItem 1`] = `
+<div
+  className="Grid__GridWrapper-sc-1rlajun-0 dGbirI"
+  data-testid={null}
+>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    <button
+      className="sc-AxirZ jsYNIa"
+      data-testid={null}
+      disabled={false}
+    >
+      Default Button
+    </button>
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    <button
+      className="sc-AxirZ jsYNIa"
+      data-testid={null}
+      disabled={false}
+    >
+      Success
+    </button>
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    <button
+      className="sc-AxirZ fsPZXF"
+      data-testid={null}
+      disabled={false}
+    >
+      Full width button
+    </button>
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    <p>
+      Text-only item
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Grid With background colours 1`] = `
+<div
+  className="Grid__GridWrapper-sc-1rlajun-0 kHYecJ"
+  data-testid={null}
+>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 hDUMXi"
+    data-testid={null}
+  >
+    1
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 iiIXmO"
+    data-testid={null}
+  >
+    2
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 emLPvA"
+    data-testid={null}
+  >
+    3
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 ezgoJv"
+    data-testid={null}
+  >
+    4
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 kVFvky"
+    data-testid={null}
+  >
+    5
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 fcrZRK"
+    data-testid={null}
+  >
+    6
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Grid Without GridItem 1`] = `
+<div
+  className="Grid__GridWrapper-sc-1rlajun-0 dGbirI"
+  data-testid={null}
+>
+  <button
+    className="sc-AxirZ jsYNIa"
+    data-testid={null}
+    disabled={false}
+  >
+    Default Button
+  </button>
+  <button
+    className="sc-AxirZ jsYNIa"
+    data-testid={null}
+    disabled={false}
+  >
+    Success
+  </button>
+  <button
+    className="sc-AxirZ fsPZXF"
+    data-testid={null}
+    disabled={false}
+  >
+    Full width button
+  </button>
+  <p>
+    Text-only item
+  </p>
+</div>
+`;
