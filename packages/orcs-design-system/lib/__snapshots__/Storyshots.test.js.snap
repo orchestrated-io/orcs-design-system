@@ -3439,7 +3439,7 @@ exports[`Storyshots Components/Notification Close Disabled 1`] = `
     className="Notification__Wrapper-sc-1p26rkq-0 dfSdKy"
   >
     <p
-      className="Notification__NotificationContent-sc-1p26rkq-1 fMiIzv"
+      className="Notification__NotificationContent-sc-1p26rkq-1 gRHNOG"
     >
       Closing this notification is disabled, this should be used for persistant notifications e.g. Stage 1 is now locked and is read-only.
     </p>
@@ -3527,7 +3527,7 @@ exports[`Storyshots Components/Notification In Progress/Loading 1`] = `
     className="Notification__Wrapper-sc-1p26rkq-0 dfSdKy"
   >
     <p
-      className="Notification__NotificationContent-sc-1p26rkq-1 fMiIzv"
+      className="Notification__NotificationContent-sc-1p26rkq-1 gRHNOG"
     >
       <div
         className="Flex__FlexWrapper-sc-1f3kfw7-0 xUISQ"

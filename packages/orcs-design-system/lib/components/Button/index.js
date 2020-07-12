@@ -192,7 +192,14 @@ Button.propTypes = {
   /** Small button */
   small: PropTypes.bool,
   /** Specifies alternate button colours/styles. */
-  variant: PropTypes.oneOf(["success", "danger", "disabled", "ghost"]),
+  variant: PropTypes.oneOf([
+    "success",
+    "danger",
+    "disabled",
+    "ghost",
+    "transparent",
+    "default"
+  ]),
   /** Full width button that takes up all available space of parent */
   fullWidth: PropTypes.bool,
   /** Adds a spinner animation to indicate loading or processing */
