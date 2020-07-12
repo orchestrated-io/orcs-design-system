@@ -9,8 +9,8 @@
   "scripts": {
     "audit-ci": "audit-ci -m --config ./audit-ci.json",
     "lint": "CI=true eslint --max-warnings=0 lib/",
-    "test": "node scripts/test.js --env=jsdom",
-    "test-coverage": "node scripts/test.js --env=jsdom --coverage",
+    "test": "jest",
+    "test-coverage": "jest --collectCoverage",
     "build": "styleguidist build",
     "dist": "BABEL_ENV=es babel lib -d es",
     "module": "BABEL_ENV=es babel lib -d es",
