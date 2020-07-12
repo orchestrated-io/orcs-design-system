@@ -3,6 +3,43 @@ import PropTypes from "prop-types";
 import Modal from "../Modal";
 import Button from "../Button";
 import Icon from "../Icon";
+import Divider from "../Divider";
+import Flex from "../Flex";
+import Spacer from "../Spacer";
+
+const CustomModal = ({
+  confirmText,
+  cancelText,
+  children,
+  handleConfirm,
+  handleCancel,
+  visible,
+  handleOnClose,
+  iconConfirm,
+  iconCancel,
+  ...props
+}) => {
+  return (
+    <Modal visible={visible} onClose={handleOnClose} {...props}>
+      <Spacer p="s">
+        {children}
+        <Divider light />
+        <Flex>
+          <Spacer mr="s">
+            <Button onClick={handleConfirm} iconLeft>
+              {iconConfirm ? <Icon icon={iconConfirm} /> : null}
+              {confirmText}
+            </Button>
+            <Button onClick={handleCancel} variant="ghost" iconLeft>
+              {iconCancel ? <Icon icon={iconCancel} /> : null}
+              {cancelText}
+            </Button>
+          </Spacer>
+        </Flex>
+      </Spacer>
+    </Modal>
+  );
+};
 
 const Dialogue = ({
   children,
@@ -13,12 +50,18 @@ const Dialogue = ({
   cancelText,
   confirmAction,
   cancelAction,
+  iconConfirm,
+  iconCancel,
   ...props
 }) => {
-  const [visible, setvisible] = useState(false);
+  const [visible, setVisible] = useState(false);
   const handleOnButtonClick = useCallback(() => {
-    setvisible(true);
-  }, [setvisible]);
+    setVisible(true);
+  }, [setVisible]);
+
+  const handleOnClose = () => {
+    setVisible(false);
+  };
 
   const handleConfirm = useCallback(() => {
     if (confirmAction) {
@@ -27,13 +70,13 @@ const Dialogue = ({
         // we have been given a promise
         return result.then(r => {
           if (r) {
-            setvisible(false);
+            setVisible(false);
           }
         });
       }
     }
-    setvisible(false);
-  }, [confirmAction, setvisible]);
+    setVisible(false);
+  }, [confirmAction, setVisible]);
 
   const handleCancel = useCallback(() => {
     if (cancelAction) {
@@ -42,30 +85,34 @@ const Dialogue = ({
         // we have been given a promise
         return result.then(r => {
           if (r) {
-            setvisible(false);
+            setVisible(false);
           }
         });
       }
     }
-    setvisible(false);
-  }, [cancelAction, setvisible]);
-
+    setVisible(false);
+  }, [cancelAction, setVisible]);
   return (
     <>
       <Button {...props} iconLeft onClick={handleOnButtonClick}>
         {icon && <Icon icon={icon} />}
         {buttonText}
       </Button>
-      <Modal
+      <CustomModal
         visible={visible}
         width={width}
         confirmText={confirmText}
         cancelText={cancelText}
-        onConfirm={handleConfirm}
-        onCancel={handleCancel}
+        confirmAction={confirmAction}
+        cancelAction={cancelAction}
+        handleConfirm={handleConfirm}
+        handleCancel={handleCancel}
+        onClose={handleOnClose}
+        iconConfirm={iconConfirm}
+        iconCancel={iconCancel}
       >
         {children}
-      </Modal>
+      </CustomModal>
     </>
   );
 };
@@ -80,7 +127,30 @@ Dialogue.propTypes = {
   confirmAction: PropTypes.func,
   cancelAction: PropTypes.func,
   onConfirm: PropTypes.func,
-  onCancel: PropTypes.func
+  onCancel: PropTypes.func,
+  /** Set the Font Awesome style/weight and icon for Confirm button */
+  iconConfirm: PropTypes.array,
+  /** Set the Font Awesome style/weight and icon for Cancel button */
+  iconCancel: PropTypes.array
+};
+
+Dialogue.defaultProps = {
+  confirmText: "OK",
+  cancelText: "Cancel"
+};
+
+CustomModal.propTypes = {
+  confirmText: PropTypes.string,
+  cancelText: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.element]),
+  handleConfirm: PropTypes.func,
+  handleCancel: PropTypes.func,
+  visible: PropTypes.bool,
+  handleOnClose: PropTypes.func,
+  /** Set the Font Awesome style/weight and icon for Confirm button */
+  iconConfirm: PropTypes.array,
+  /** Set the Font Awesome style/weight and icon for Cancel button */
+  iconCancel: PropTypes.array
 };
 
 export default Dialogue;
