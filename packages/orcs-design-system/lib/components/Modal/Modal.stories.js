@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../Button";
 import Modal from ".";
 import StyledLink from "../StyledLink";
@@ -18,8 +18,8 @@ export default {
   component: Modal
 };
 
-export const Basic = () => {
-  const [visible, setVisible] = React.useState(false);
+const Basic = () => {
+  const [visible, setVisible] = useState(false);
   const handleOnButtonClick = () => {
     setVisible(true);
   };
@@ -42,9 +42,10 @@ export const Basic = () => {
     </>
   );
 };
+export const basicModal = () => <Basic />;
 
-export const LinkModal = () => {
-  const [visible, setVisible] = React.useState(false);
+const LinkExample = () => {
+  const [visible, setVisible] = useState(false);
   const handleOnButtonClick = () => {
     setVisible(true);
   };
@@ -76,4 +77,4 @@ export const LinkModal = () => {
     </>
   );
 };
-LinkModal.storyName = "Using Link";
+export const linkModal = () => <LinkExample />;
