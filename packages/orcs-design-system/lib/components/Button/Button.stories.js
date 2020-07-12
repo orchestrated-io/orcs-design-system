@@ -44,6 +44,9 @@ export const alternateColours = () => (
     <Button variant="danger" onClick={action("clicked")}>
       Danger/red button
     </Button>
+    <Button variant="transparent" onClick={action("clicked")}>
+      Transparent button for white backgrounds
+    </Button>
   </Spacer>
 );
 alternateColours.storyName = "Alternate colours";

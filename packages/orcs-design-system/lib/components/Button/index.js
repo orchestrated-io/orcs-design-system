@@ -52,7 +52,7 @@ const Item = styled("button")
         : props.large
         ? "3"
         : "2",
-      py: props.small ? "xxs" : props.large ? "s" : "xs",
+      py: props.large ? "s" : props.small ? "xxs" : "xs",
       px: props.large ? "r" : props.small ? "xs" : "s",
       svg: {
         marginRight: !props.iconLeft ? "" : props.small ? "xs" : "s",
@@ -73,6 +73,20 @@ const Item = styled("button")
     variant({
       variants: {
         default: {},
+        transparent: {
+          bg: "transparent",
+          color: "greyDark",
+          borderColor: "transparent",
+          "&:hover": {
+            bg: "greyLighter",
+            borderColor: "greyLighter"
+          },
+          "&:focus": {
+            outline: "0",
+            boxShadow:
+              "0 0 0 3px " + rgba(themeGet("colors.greyLight")(props), 0.4)
+          }
+        },
         success: {
           bg: "successDark",
           color: "white",
