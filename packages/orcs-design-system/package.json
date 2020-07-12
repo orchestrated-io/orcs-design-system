@@ -54,6 +54,7 @@
     "@storybook/addon-docs": "^6.0.0-beta.28",
     "@storybook/addon-knobs": "^6.0.0-beta.28",
     "@storybook/addon-links": "^6.0.0-beta.28",
+    "@storybook/addon-storyshots": "^5.3.19",
     "@storybook/addon-viewport": "^6.0.0-beta.28",
     "@storybook/addons": "^6.0.0-beta.33",
     "@storybook/preset-create-react-app": "^1.5.2",
@@ -86,6 +87,7 @@
     "prettier": "^1.19.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "react-test-renderer": "^16.13.1",
     "serverless": "^1.69.0",
     "serverless-finch": "^2.5.2",
     "style-loader": "^1.2.1",
@@ -112,6 +114,10 @@
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less)$": "identity-obj-proxy"
+    },
+    "transform": {
+      "^.+\\.[tj]sx?$": "babel-jest",
+      "^.+\\.mdx?$": "@storybook/addon-docs/jest-transform-mdx"
     }
   },
   "eslintConfig": {
