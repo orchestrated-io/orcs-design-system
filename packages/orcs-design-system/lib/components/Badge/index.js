@@ -7,7 +7,7 @@ import systemtheme from "../../systemtheme";
 
 const BadgeStyles = compose(space, layout, color);
 
-const Item = styled("div")(
+const Item = styled("span")(
   css({
     fontSize: 0,
     fontWeight: 2,
