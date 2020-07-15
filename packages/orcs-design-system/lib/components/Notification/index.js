@@ -105,10 +105,6 @@ const Close = styled("button")(
   })
 );
 
-const CloseIcon = styled(Icon).withConfig({ shouldForwardProp })({
-  color: "white"
-});
-
 export default function Notification({
   icon,
   colour,
@@ -148,7 +144,7 @@ export default function Notification({
           <NotificationContent icon={icon}>{children}</NotificationContent>
           {closable && (
             <Close className="close-button" tabIndex="0" onClick={onToggle}>
-              <CloseIcon icon={["fas", "times"]} size="lg" />
+              <Icon icon={["fas", "times"]} color="white" size="lg" />
             </Close>
           )}
         </Wrapper>
