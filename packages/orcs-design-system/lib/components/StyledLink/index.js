@@ -119,7 +119,11 @@ StyledLink.propTypes = {
   /** Styles the link text in bold */
   bold: PropTypes.bool,
   /** Specifies the destination of react-router `Link` */
-  to: PropTypes.oneOf([PropTypes.element, PropTypes.string, PropTypes.node]),
+  to: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.string,
+    PropTypes.node
+  ]),
   /** Specifies the link target */
   target: PropTypes.string,
   /** Specifies the system design theme. */
