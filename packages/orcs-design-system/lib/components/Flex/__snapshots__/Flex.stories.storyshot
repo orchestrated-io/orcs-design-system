@@ -9,7 +9,7 @@ exports[`Storyshots Components/Flex Basic Flex 1`] = `
     className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
   >
     <button
-      className="sc-AxiKw EOJpW"
+      className="sc-AxiKw hELyNG"
       data-testid={null}
       disabled={false}
     >
@@ -20,7 +20,7 @@ exports[`Storyshots Components/Flex Basic Flex 1`] = `
     className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
   >
     <button
-      className="sc-AxiKw EOJpW"
+      className="sc-AxiKw hELyNG"
       data-testid={null}
       disabled={false}
     >
@@ -31,7 +31,7 @@ exports[`Storyshots Components/Flex Basic Flex 1`] = `
     className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
   >
     <button
-      className="sc-AxiKw EOJpW"
+      className="sc-AxiKw hELyNG"
       data-testid={null}
       disabled={false}
     >
@@ -42,7 +42,7 @@ exports[`Storyshots Components/Flex Basic Flex 1`] = `
     className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
   >
     <button
-      className="sc-AxiKw EOJpW"
+      className="sc-AxiKw hELyNG"
       data-testid={null}
       disabled={false}
     >
@@ -53,7 +53,7 @@ exports[`Storyshots Components/Flex Basic Flex 1`] = `
     className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
   >
     <button
-      className="sc-AxiKw EOJpW"
+      className="sc-AxiKw hELyNG"
       data-testid={null}
       disabled={false}
     >
@@ -64,7 +64,7 @@ exports[`Storyshots Components/Flex Basic Flex 1`] = `
     className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
   >
     <button
-      className="sc-AxiKw EOJpW"
+      className="sc-AxiKw hELyNG"
       data-testid={null}
       disabled={false}
     >
@@ -83,7 +83,7 @@ exports[`Storyshots Components/Flex Using Flex Item 1`] = `
     className="Flex__FlexItem-sc-1f3kfw7-0 dqPHPl"
   >
     <button
-      className="sc-AxiKw fDjiPb"
+      className="sc-AxiKw iaTMT"
       data-testid={null}
       disabled={false}
     >
@@ -101,7 +101,7 @@ exports[`Storyshots Components/Flex Using Flex Item 1`] = `
     className="Flex__FlexItem-sc-1f3kfw7-0 dqPHPl"
   >
     <button
-      className="sc-AxiKw EOJpW"
+      className="sc-AxiKw hELyNG"
       data-testid={null}
       disabled={false}
     >
@@ -112,7 +112,7 @@ exports[`Storyshots Components/Flex Using Flex Item 1`] = `
     className="Flex__FlexItem-sc-1f3kfw7-0 dqPHPl"
   >
     <button
-      className="sc-AxiKw EOJpW"
+      className="sc-AxiKw hELyNG"
       data-testid={null}
       disabled={false}
     >
@@ -123,7 +123,7 @@ exports[`Storyshots Components/Flex Using Flex Item 1`] = `
     className="Flex__FlexItem-sc-1f3kfw7-0 fVOPqd"
   >
     <button
-      className="sc-AxiKw gFQfQt"
+      className="sc-AxiKw hEWWBp"
       data-testid={null}
       disabled={true}
     >

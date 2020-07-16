@@ -308,7 +308,7 @@ exports[`Storyshots Components/Card complexCard 1`] = `
           Start with a blank slate and add your own data
         </p>
         <button
-          className="sc-AxiKw EOJpW"
+          className="sc-AxiKw hELyNG"
           data-testid={null}
           disabled={false}
         >
@@ -345,7 +345,7 @@ exports[`Storyshots Components/Card complexCard 1`] = `
           Look at pre-populated data to see app in action
         </p>
         <button
-          className="sc-AxiKw EOJpW"
+          className="sc-AxiKw hELyNG"
           data-testid={null}
           disabled={false}
         >
@@ -682,7 +682,7 @@ exports[`Storyshots Units/Card Complex card 1`] = `
             Start with a blank slate and add your own data
           </p>
           <button
-            className="sc-AxiKw EOJpW"
+            className="sc-AxiKw hELyNG"
             data-testid={null}
             disabled={false}
           >
@@ -719,7 +719,7 @@ exports[`Storyshots Units/Card Complex card 1`] = `
             Look at pre-populated data to see app in action
           </p>
           <button
-            className="sc-AxiKw EOJpW"
+            className="sc-AxiKw hELyNG"
             data-testid={null}
             disabled={false}
           >

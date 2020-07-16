@@ -6,7 +6,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxiKw kAfBrj"
+      className="sc-AxiKw bcIcYf"
       data-testid={null}
       disabled={false}
       onClick={[Function]}
@@ -18,7 +18,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxiKw jIlTLa"
+      className="sc-AxiKw jFZIbG"
       data-testid={null}
       disabled={false}
       onClick={[Function]}
@@ -30,7 +30,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxiKw eeczbE"
+      className="sc-AxiKw eRSFxM"
       data-testid={null}
       disabled={false}
       onClick={[Function]}
@@ -47,7 +47,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxiKw fnkftc"
+      className="sc-AxiKw GRQFc"
       data-testid={null}
       disabled={false}
       onClick={[Function]}
@@ -71,7 +71,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxiKw kSeULD"
+      className="sc-AxiKw ddsSzn"
       data-testid={null}
       disabled={false}
       onClick={[Function]}
@@ -83,7 +83,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxiKw jNLtYA"
+      className="sc-AxiKw gukSyY"
       data-testid={null}
       disabled={false}
       onClick={[Function]}
@@ -96,7 +96,7 @@ Array [
 
 exports[`Storyshots Components/Button Default button 1`] = `
 <button
-  className="sc-AxiKw EOJpW"
+  className="sc-AxiKw hELyNG"
   data-testid={null}
   disabled={false}
 >
@@ -110,7 +110,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxiKw gFQfQt"
+      className="sc-AxiKw hEWWBp"
       data-testid={null}
       disabled={true}
     >
@@ -121,7 +121,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxiKw gFQfQt"
+      className="sc-AxiKw hEWWBp"
       data-testid={null}
       disabled={true}
     >
@@ -133,7 +133,7 @@ Array [
 
 exports[`Storyshots Components/Button Full width 1`] = `
 <button
-  className="sc-AxiKw gkTuuN"
+  className="sc-AxiKw dhqUnt"
   data-testid={null}
   disabled={false}
 >
@@ -147,7 +147,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxiKw jrOFLL"
+      className="sc-AxiKw SjNvL"
       data-testid={null}
       disabled={false}
       onClick={[Function]}
@@ -159,7 +159,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxiKw dPMEiB"
+      className="sc-AxiKw jYqJlp"
       data-testid={null}
       disabled={false}
       onClick={[Function]}
@@ -188,7 +188,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxiKw fnkftc"
+      className="sc-AxiKw GRQFc"
       data-testid={null}
       disabled={false}
     >
@@ -205,7 +205,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxiKw EOJpW"
+      className="sc-AxiKw hELyNG"
       data-testid={null}
       disabled={false}
     >
@@ -244,7 +244,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxiKw dsMGsI"
+      className="sc-AxiKw icwXAs"
       data-testid={null}
       disabled={false}
     >
@@ -262,7 +262,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxiKw gqZDgd"
+      className="sc-AxiKw dcKXMJ"
       data-testid={null}
       disabled={false}
     >
@@ -280,7 +280,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxiKw uYRqc"
+      className="sc-AxiKw dssDKY"
       data-testid={null}
       disabled={false}
     >
@@ -303,7 +303,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxiKw fahzXQ"
+      className="sc-AxiKw itmAio"
       data-testid={null}
       disabled={false}
     >
@@ -321,7 +321,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxiKw fDjiPb"
+      className="sc-AxiKw iaTMT"
       data-testid={null}
       disabled={false}
     >
@@ -333,6 +333,24 @@ Array [
           className="svg-inline--fa fa-undefined"
         />
       </span>
+    </button>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <button
+      className="sc-AxiKw hELyNG"
+      data-testid={null}
+      disabled={false}
+    >
+      <span
+        className="Icon__IconWrapper-xeqnbo-0 jCcgAV"
+      >
+        <svg
+          className="svg-inline--fa fa-undefined"
+        />
+      </span>
+      Left icon magic!
     </button>
   </div>,
 ]
