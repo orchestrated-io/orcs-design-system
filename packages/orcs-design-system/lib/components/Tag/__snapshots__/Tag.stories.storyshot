@@ -130,8 +130,8 @@ exports[`Storyshots Units/Tag Default 1`] = `
   overflow="hidden"
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 xUISQ"
-    display="flex"
+    className="sc-AxjAm eFwvwZ"
+    data-testid={null}
   >
     <button
       className="Tag__TagWrapper-sc-1dh2aa8-0 bCioSy"
@@ -151,8 +151,8 @@ exports[`Storyshots Units/Tag Disabled 1`] = `
   overflow="hidden"
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 xUISQ"
-    display="flex"
+    className="sc-AxjAm eFwvwZ"
+    data-testid={null}
   >
     <button
       className="Tag__TagWrapper-sc-1dh2aa8-0 jpSajg"
@@ -193,8 +193,8 @@ exports[`Storyshots Units/Tag No Cross 1`] = `
   overflow="hidden"
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 xUISQ"
-    display="flex"
+    className="sc-AxjAm eFwvwZ"
+    data-testid={null}
   >
     <button
       className="Tag__TagWrapper-sc-1dh2aa8-0 krNWfN"
@@ -235,8 +235,8 @@ exports[`Storyshots Units/Tag Selected 1`] = `
   overflow="hidden"
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 xUISQ"
-    display="flex"
+    className="sc-AxjAm eFwvwZ"
+    data-testid={null}
   >
     <button
       className="Tag__TagWrapper-sc-1dh2aa8-0 cIWlIV"

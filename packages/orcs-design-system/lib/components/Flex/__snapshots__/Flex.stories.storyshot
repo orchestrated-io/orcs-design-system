@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Components/Flex Basic 1`] = `
+exports[`Storyshots Components/Flex Basic Flex 1`] = `
 <div
-  className="Flex__FlexWrapper-sc-1f3kfw7-0 xUISQ"
-  display="flex"
+  className="sc-AxjAm eFwvwZ"
+  data-testid={null}
 >
   <div
-    className="Flex__FlexItem-sc-1f3kfw7-1 evdmwQ"
+    className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
   >
     <button
-      className="sc-AxirZ jsYNIa"
+      className="sc-AxiKw EOJpW"
       data-testid={null}
       disabled={false}
     >
@@ -17,10 +17,10 @@ exports[`Storyshots Components/Flex Basic 1`] = `
     </button>
   </div>
   <div
-    className="Flex__FlexItem-sc-1f3kfw7-1 evdmwQ"
+    className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
   >
     <button
-      className="sc-AxirZ jsYNIa"
+      className="sc-AxiKw EOJpW"
       data-testid={null}
       disabled={false}
     >
@@ -28,10 +28,10 @@ exports[`Storyshots Components/Flex Basic 1`] = `
     </button>
   </div>
   <div
-    className="Flex__FlexItem-sc-1f3kfw7-1 evdmwQ"
+    className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
   >
     <button
-      className="sc-AxirZ jsYNIa"
+      className="sc-AxiKw EOJpW"
       data-testid={null}
       disabled={false}
     >
@@ -39,10 +39,10 @@ exports[`Storyshots Components/Flex Basic 1`] = `
     </button>
   </div>
   <div
-    className="Flex__FlexItem-sc-1f3kfw7-1 evdmwQ"
+    className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
   >
     <button
-      className="sc-AxirZ jsYNIa"
+      className="sc-AxiKw EOJpW"
       data-testid={null}
       disabled={false}
     >
@@ -50,10 +50,10 @@ exports[`Storyshots Components/Flex Basic 1`] = `
     </button>
   </div>
   <div
-    className="Flex__FlexItem-sc-1f3kfw7-1 evdmwQ"
+    className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
   >
     <button
-      className="sc-AxirZ jsYNIa"
+      className="sc-AxiKw EOJpW"
       data-testid={null}
       disabled={false}
     >
@@ -61,10 +61,10 @@ exports[`Storyshots Components/Flex Basic 1`] = `
     </button>
   </div>
   <div
-    className="Flex__FlexItem-sc-1f3kfw7-1 evdmwQ"
+    className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
   >
     <button
-      className="sc-AxirZ jsYNIa"
+      className="sc-AxiKw EOJpW"
       data-testid={null}
       disabled={false}
     >
@@ -74,17 +74,16 @@ exports[`Storyshots Components/Flex Basic 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components/Flex Using FlexItem 1`] = `
+exports[`Storyshots Components/Flex Using Flex Item 1`] = `
 <div
-  className="Flex__FlexWrapper-sc-1f3kfw7-0 cMgYFY"
-  display="flex"
-  height="200px"
+  className="sc-AxjAm eFwvwZ"
+  data-testid={null}
 >
   <div
-    className="Flex__FlexItem-sc-1f3kfw7-1 evdmwQ"
+    className="Flex__FlexItem-sc-1f3kfw7-0 dqPHPl"
   >
     <button
-      className="sc-AxirZ ffHmaH"
+      className="sc-AxiKw fDjiPb"
       data-testid={null}
       disabled={false}
     >
@@ -99,10 +98,10 @@ exports[`Storyshots Components/Flex Using FlexItem 1`] = `
     </button>
   </div>
   <div
-    className="Flex__FlexItem-sc-1f3kfw7-1 evdmwQ"
+    className="Flex__FlexItem-sc-1f3kfw7-0 dqPHPl"
   >
     <button
-      className="sc-AxirZ jsYNIa"
+      className="sc-AxiKw EOJpW"
       data-testid={null}
       disabled={false}
     >
@@ -110,10 +109,10 @@ exports[`Storyshots Components/Flex Using FlexItem 1`] = `
     </button>
   </div>
   <div
-    className="Flex__FlexItem-sc-1f3kfw7-1 evdmwQ"
+    className="Flex__FlexItem-sc-1f3kfw7-0 dqPHPl"
   >
     <button
-      className="sc-AxirZ jsYNIa"
+      className="sc-AxiKw EOJpW"
       data-testid={null}
       disabled={false}
     >
@@ -121,10 +120,10 @@ exports[`Storyshots Components/Flex Using FlexItem 1`] = `
     </button>
   </div>
   <div
-    className="Flex__FlexItem-sc-1f3kfw7-1 hFnhUD"
+    className="Flex__FlexItem-sc-1f3kfw7-0 fVOPqd"
   >
     <button
-      className="sc-AxirZ cZePCF"
+      className="sc-AxiKw gFQfQt"
       data-testid={null}
       disabled={true}
     >

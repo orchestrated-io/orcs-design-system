@@ -55,8 +55,8 @@ exports[`Storyshots Components/StyledLink Inverted 1`] = `
     data-testid={null}
   >
     <div
-      className="Flex__FlexWrapper-sc-1f3kfw7-0 khTwLN"
-      display="flex"
+      className="sc-AxjAm eKMUxE"
+      data-testid={null}
     >
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 gHANPZ"

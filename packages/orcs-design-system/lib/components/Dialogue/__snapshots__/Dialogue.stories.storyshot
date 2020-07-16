@@ -2,7 +2,7 @@
 
 exports[`Storyshots Components/Dialogue Basic 1`] = `
 <button
-  className="sc-AxirZ cuoVoA"
+  className="sc-AxiKw irzLJQ"
   data-testid={null}
   disabled={false}
   onClick={[Function]}

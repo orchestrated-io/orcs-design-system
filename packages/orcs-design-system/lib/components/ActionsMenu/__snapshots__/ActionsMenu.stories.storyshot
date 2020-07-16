@@ -41,8 +41,8 @@ exports[`Storyshots Components/ActionsMenu leftOffsetActionsMenu 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 clzqgD"
-    display="flex"
+    className="sc-AxjAm ldbiDq"
+    data-testid={null}
   >
     <div
       className="ActionsMenu__Wrapper-yvbni2-0 dNblPG"
@@ -117,8 +117,8 @@ exports[`Storyshots Units/ActionsMenu Left offset actions menu 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 clzqgD"
-    display="flex"
+    className="sc-AxjAm ldbiDq"
+    data-testid={null}
   >
     <div
       className="ActionsMenu__Wrapper-yvbni2-0 dNblPG"

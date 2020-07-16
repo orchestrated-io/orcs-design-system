@@ -256,8 +256,8 @@ exports[`Storyshots Components/Notification In Progress/Loading 1`] = `
       className="Notification__NotificationContent-sc-1p26rkq-1 gRHNOG"
     >
       <div
-        className="Flex__FlexWrapper-sc-1f3kfw7-0 xUISQ"
-        display="flex"
+        className="sc-AxjAm eFwvwZ"
+        data-testid={null}
       >
         <div
           className="Loading__LoadingWrapper-sc-195w3kf-0 bMqJvP"

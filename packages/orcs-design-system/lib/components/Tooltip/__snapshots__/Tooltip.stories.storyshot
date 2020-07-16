@@ -6,8 +6,8 @@ exports[`Storyshots Components/Tooltip defaultTooltip 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 khTwLN"
-    display="flex"
+    className="sc-AxjAm eKMUxE"
+    data-testid={null}
   >
     <button
       className="Tooltip__Container-vx1y1f-0 cXJzHd"
@@ -30,8 +30,8 @@ exports[`Storyshots Components/Tooltip defaultTooltip 1`] = `
 
 exports[`Storyshots Components/Tooltip direction 1`] = `
 <div
-  className="Flex__FlexWrapper-sc-1f3kfw7-0 khTwLN"
-  display="flex"
+  className="sc-AxjAm eKMUxE"
+  data-testid={null}
 >
   <div
     className="Spacer__SpacerBox-sc-1acikjz-0 dchEdD"
@@ -122,8 +122,8 @@ exports[`Storyshots Components/Tooltip onDarkBackground 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 khTwLN"
-    display="flex"
+    className="sc-AxjAm eKMUxE"
+    data-testid={null}
   >
     <button
       className="Tooltip__Container-vx1y1f-0 fdqOMp"
@@ -146,8 +146,8 @@ exports[`Storyshots Components/Tooltip onDarkBackground 1`] = `
 
 exports[`Storyshots Components/Tooltip size 1`] = `
 <div
-  className="Flex__FlexWrapper-sc-1f3kfw7-0 khTwLN"
-  display="flex"
+  className="sc-AxjAm eKMUxE"
+  data-testid={null}
 >
   <div
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
@@ -196,8 +196,8 @@ exports[`Storyshots Units/Tooltip Default tooltip 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 khTwLN"
-    display="flex"
+    className="sc-AxjAm eKMUxE"
+    data-testid={null}
   >
     <button
       className="Tooltip__Container-vx1y1f-0 cXJzHd"
@@ -220,8 +220,8 @@ exports[`Storyshots Units/Tooltip Default tooltip 1`] = `
 
 exports[`Storyshots Units/Tooltip Direction 1`] = `
 <div
-  className="Flex__FlexWrapper-sc-1f3kfw7-0 khTwLN"
-  display="flex"
+  className="sc-AxjAm eKMUxE"
+  data-testid={null}
 >
   <div
     className="Spacer__SpacerBox-sc-1acikjz-0 dchEdD"
@@ -312,8 +312,8 @@ exports[`Storyshots Units/Tooltip On dark background 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 khTwLN"
-    display="flex"
+    className="sc-AxjAm eKMUxE"
+    data-testid={null}
   >
     <button
       className="Tooltip__Container-vx1y1f-0 fdqOMp"
@@ -336,8 +336,8 @@ exports[`Storyshots Units/Tooltip On dark background 1`] = `
 
 exports[`Storyshots Units/Tooltip Size 1`] = `
 <div
-  className="Flex__FlexWrapper-sc-1f3kfw7-0 khTwLN"
-  display="flex"
+  className="sc-AxjAm eKMUxE"
+  data-testid={null}
 >
   <div
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"

@@ -6,8 +6,8 @@ exports[`Storyshots Components/StatusDot colourVariants 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 jqYIil"
-    display="flex"
+    className="sc-AxjAm eKMUxE"
+    data-testid={null}
   >
     <div
       className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
@@ -73,8 +73,8 @@ exports[`Storyshots Components/StatusDot defaultStatusDot 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 jqYIil"
-    display="flex"
+    className="sc-AxjAm eKMUxE"
+    data-testid={null}
   >
     <div
       className="Popover__Container-sc-1bwoak-0 fFsabD"
@@ -100,8 +100,8 @@ exports[`Storyshots Components/StatusDot withIcon 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 jqYIil"
-    display="flex"
+    className="sc-AxjAm eKMUxE"
+    data-testid={null}
   >
     <div
       className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
@@ -194,8 +194,8 @@ exports[`Storyshots Units/StatusDot Colour Variants 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 jqYIil"
-    display="flex"
+    className="sc-AxjAm eKMUxE"
+    data-testid={null}
   >
     <div
       className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
@@ -261,8 +261,8 @@ exports[`Storyshots Units/StatusDot Default badge 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 jqYIil"
-    display="flex"
+    className="sc-AxjAm eKMUxE"
+    data-testid={null}
   >
     <div
       className="Popover__Container-sc-1bwoak-0 fFsabD"
@@ -288,8 +288,8 @@ exports[`Storyshots Units/StatusDot With icon 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 jqYIil"
-    display="flex"
+    className="sc-AxjAm eKMUxE"
+    data-testid={null}
   >
     <div
       className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"

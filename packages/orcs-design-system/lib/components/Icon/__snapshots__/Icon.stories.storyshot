@@ -6,8 +6,8 @@ exports[`Storyshots Components/Icon Animated Icons 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 euPaCA"
-    display="flex"
+    className="sc-AxjAm cfcHtF"
+    data-testid={null}
   >
     <span
       className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
@@ -33,8 +33,8 @@ exports[`Storyshots Components/Icon Coloured Icon 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 euPaCA"
-    display="flex"
+    className="sc-AxjAm cfcHtF"
+    data-testid={null}
   >
     <span
       className="Icon__IconWrapper-xeqnbo-0 faAlRc"
@@ -70,8 +70,8 @@ exports[`Storyshots Components/Icon Default Icon 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 euPaCA"
-    display="flex"
+    className="sc-AxjAm cfcHtF"
+    data-testid={null}
   >
     <span
       className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
@@ -104,8 +104,8 @@ exports[`Storyshots Components/Icon Icon Size 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 euPaCA"
-    display="flex"
+    className="sc-AxjAm cfcHtF"
+    data-testid={null}
   >
     <span
       className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
@@ -145,16 +145,16 @@ exports[`Storyshots Components/Icon Inverted 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 euPaCA"
-    display="flex"
+    className="sc-AxjAm cfcHtF"
+    data-testid={null}
   >
     <div
       className="Box__BoxWrapper-jr1api-0 dgvDGD"
       data-testid={null}
     >
       <div
-        className="Flex__FlexWrapper-sc-1f3kfw7-0 euPaCA"
-        display="flex"
+        className="sc-AxjAm cfcHtF"
+        data-testid={null}
       >
         <span
           className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
@@ -189,8 +189,8 @@ exports[`Storyshots Components/Icon Transforms and rotations 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 euPaCA"
-    display="flex"
+    className="sc-AxjAm cfcHtF"
+    data-testid={null}
   >
     <span
       className="Icon__IconWrapper-xeqnbo-0 kzKQCj"

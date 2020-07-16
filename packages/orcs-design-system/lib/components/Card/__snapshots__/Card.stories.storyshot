@@ -277,8 +277,8 @@ Array [
 
 exports[`Storyshots Components/Card complexCard 1`] = `
 <div
-  className="Flex__FlexWrapper-sc-1f3kfw7-0 khTwLN"
-  display="flex"
+  className="sc-AxjAm eKMUxE"
+  data-testid={null}
 >
   <div
     className="Spacer__SpacerBox-sc-1acikjz-0 gHANPZ"
@@ -308,7 +308,7 @@ exports[`Storyshots Components/Card complexCard 1`] = `
           Start with a blank slate and add your own data
         </p>
         <button
-          className="sc-AxirZ jsYNIa"
+          className="sc-AxiKw EOJpW"
           data-testid={null}
           disabled={false}
         >
@@ -345,7 +345,7 @@ exports[`Storyshots Components/Card complexCard 1`] = `
           Look at pre-populated data to see app in action
         </p>
         <button
-          className="sc-AxirZ jsYNIa"
+          className="sc-AxiKw EOJpW"
           data-testid={null}
           disabled={false}
         >
@@ -651,8 +651,8 @@ exports[`Storyshots Units/Card Complex card 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 khTwLN"
-    display="flex"
+    className="sc-AxjAm eKMUxE"
+    data-testid={null}
   >
     <div
       className="Spacer__SpacerBox-sc-1acikjz-0 gHANPZ"
@@ -682,7 +682,7 @@ exports[`Storyshots Units/Card Complex card 1`] = `
             Start with a blank slate and add your own data
           </p>
           <button
-            className="sc-AxirZ jsYNIa"
+            className="sc-AxiKw EOJpW"
             data-testid={null}
             disabled={false}
           >
@@ -719,7 +719,7 @@ exports[`Storyshots Units/Card Complex card 1`] = `
             Look at pre-populated data to see app in action
           </p>
           <button
-            className="sc-AxirZ jsYNIa"
+            className="sc-AxiKw EOJpW"
             data-testid={null}
             disabled={false}
           >

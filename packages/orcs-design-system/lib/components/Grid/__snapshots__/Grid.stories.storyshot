@@ -198,7 +198,7 @@ exports[`Storyshots Components/Grid With GridItem 1`] = `
     data-testid={null}
   >
     <button
-      className="sc-AxirZ jsYNIa"
+      className="sc-AxiKw EOJpW"
       data-testid={null}
       disabled={false}
     >
@@ -210,7 +210,7 @@ exports[`Storyshots Components/Grid With GridItem 1`] = `
     data-testid={null}
   >
     <button
-      className="sc-AxirZ jsYNIa"
+      className="sc-AxiKw EOJpW"
       data-testid={null}
       disabled={false}
     >
@@ -222,7 +222,7 @@ exports[`Storyshots Components/Grid With GridItem 1`] = `
     data-testid={null}
   >
     <button
-      className="sc-AxirZ fsPZXF"
+      className="sc-AxiKw gkTuuN"
       data-testid={null}
       disabled={false}
     >
@@ -290,21 +290,21 @@ exports[`Storyshots Components/Grid Without GridItem 1`] = `
   data-testid={null}
 >
   <button
-    className="sc-AxirZ jsYNIa"
+    className="sc-AxiKw EOJpW"
     data-testid={null}
     disabled={false}
   >
     Default Button
   </button>
   <button
-    className="sc-AxirZ jsYNIa"
+    className="sc-AxiKw EOJpW"
     data-testid={null}
     disabled={false}
   >
     Success
   </button>
   <button
-    className="sc-AxirZ fsPZXF"
+    className="sc-AxiKw gkTuuN"
     data-testid={null}
     disabled={false}
   >

@@ -2,8 +2,8 @@
 
 exports[`Storyshots Components/ButtonGroup defaultButtonGroup 1`] = `
 <div
-  className="Flex__FlexWrapper-sc-1f3kfw7-0 ergpJU"
-  display="flex"
+  className="sc-AxjAm eFwvwZ"
+  data-testid={null}
 >
   <div
     className="ButtonGroup__ButtonGroupControlLabel-g7627n-0 fA-DjJA"
@@ -64,8 +64,8 @@ exports[`Storyshots Units/ButtonGroup Default button group 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 ergpJU"
-    display="flex"
+    className="sc-AxjAm eFwvwZ"
+    data-testid={null}
   >
     <div
       className="ButtonGroup__ButtonGroupControlLabel-g7627n-0 fA-DjJA"

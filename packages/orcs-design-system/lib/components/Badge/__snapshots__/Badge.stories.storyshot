@@ -7,80 +7,80 @@ Array [
     data-testid={null}
   >
     <div
-      className="Flex__FlexWrapper-sc-1f3kfw7-0 koPQxp"
-      display="flex"
+      className="sc-AxjAm fQRoVo"
+      data-testid={null}
     >
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 feOvPK"
         >
           Default
-        </div>
+        </span>
       </div>
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 iaagFf"
         >
           Success
-        </div>
+        </span>
       </div>
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 beGUTi"
         >
           Warning
-        </div>
+        </span>
       </div>
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 gsOGRg"
         >
           Danger
-        </div>
+        </span>
       </div>
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 ibszHM"
         >
           Low priority
-        </div>
+        </span>
       </div>
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 cXIqIS"
         >
           Medium priority
-        </div>
+        </span>
       </div>
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 dOFhrC"
         >
           High priority
-        </div>
+        </span>
       </div>
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 brXHRh"
         >
           Secondary
-        </div>
+        </span>
       </div>
     </div>
   </div>,
@@ -89,80 +89,80 @@ Array [
     data-testid={null}
   >
     <div
-      className="Flex__FlexWrapper-sc-1f3kfw7-0 koPQxp"
-      display="flex"
+      className="sc-AxjAm fQRoVo"
+      data-testid={null}
     >
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 feOvPK"
         >
           Default
-        </div>
+        </span>
       </div>
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 iaagFf"
         >
           Success
-        </div>
+        </span>
       </div>
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 beGUTi"
         >
           Warning
-        </div>
+        </span>
       </div>
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 gsOGRg"
         >
           Danger
-        </div>
+        </span>
       </div>
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 ibszHM"
         >
           Low priority
-        </div>
+        </span>
       </div>
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 cXIqIS"
         >
           Medium priority
-        </div>
+        </span>
       </div>
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 dOFhrC"
         >
           High priority
-        </div>
+        </span>
       </div>
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 brXHRh"
         >
           Secondary
-        </div>
+        </span>
       </div>
     </div>
   </div>,
@@ -170,11 +170,11 @@ Array [
 `;
 
 exports[`Storyshots Components/Badge defaultBadge 1`] = `
-<div
+<span
   className="Badge__Item-sc-9r75kj-0 feOvPK"
 >
   Default
-</div>
+</span>
 `;
 
 exports[`Storyshots Units/Badge Colour variants 1`] = `
@@ -184,80 +184,80 @@ Array [
     data-testid={null}
   >
     <div
-      className="Flex__FlexWrapper-sc-1f3kfw7-0 koPQxp"
-      display="flex"
+      className="sc-AxjAm fQRoVo"
+      data-testid={null}
     >
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 feOvPK"
         >
           Default
-        </div>
+        </span>
       </div>
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 iaagFf"
         >
           Success
-        </div>
+        </span>
       </div>
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 beGUTi"
         >
           Warning
-        </div>
+        </span>
       </div>
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 gsOGRg"
         >
           Danger
-        </div>
+        </span>
       </div>
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 ibszHM"
         >
           Low priority
-        </div>
+        </span>
       </div>
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 cXIqIS"
         >
           Medium priority
-        </div>
+        </span>
       </div>
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 dOFhrC"
         >
           High priority
-        </div>
+        </span>
       </div>
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 brXHRh"
         >
           Secondary
-        </div>
+        </span>
       </div>
     </div>
   </div>,
@@ -266,80 +266,80 @@ Array [
     data-testid={null}
   >
     <div
-      className="Flex__FlexWrapper-sc-1f3kfw7-0 koPQxp"
-      display="flex"
+      className="sc-AxjAm fQRoVo"
+      data-testid={null}
     >
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 feOvPK"
         >
           Default
-        </div>
+        </span>
       </div>
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 iaagFf"
         >
           Success
-        </div>
+        </span>
       </div>
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 beGUTi"
         >
           Warning
-        </div>
+        </span>
       </div>
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 gsOGRg"
         >
           Danger
-        </div>
+        </span>
       </div>
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 ibszHM"
         >
           Low priority
-        </div>
+        </span>
       </div>
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 cXIqIS"
         >
           Medium priority
-        </div>
+        </span>
       </div>
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 dOFhrC"
         >
           High priority
-        </div>
+        </span>
       </div>
       <div
         className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
       >
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 brXHRh"
         >
           Secondary
-        </div>
+        </span>
       </div>
     </div>
   </div>,
@@ -347,9 +347,9 @@ Array [
 `;
 
 exports[`Storyshots Units/Badge Default badge 1`] = `
-<div
+<span
   className="Badge__Item-sc-9r75kj-0 feOvPK"
 >
   Default
-</div>
+</span>
 `;

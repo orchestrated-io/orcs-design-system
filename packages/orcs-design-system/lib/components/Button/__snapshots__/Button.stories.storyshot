@@ -6,7 +6,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxirZ dIyPgr"
+      className="sc-AxiKw kAfBrj"
       data-testid={null}
       disabled={false}
       onClick={[Function]}
@@ -18,7 +18,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxirZ bfmHLm"
+      className="sc-AxiKw jIlTLa"
       data-testid={null}
       disabled={false}
       onClick={[Function]}
@@ -30,7 +30,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxirZ fpaIVQ"
+      className="sc-AxiKw eeczbE"
       data-testid={null}
       disabled={false}
       onClick={[Function]}
@@ -47,7 +47,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxirZ dCHqlE"
+      className="sc-AxiKw fnkftc"
       data-testid={null}
       disabled={false}
       onClick={[Function]}
@@ -59,7 +59,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxirZ bDbGuM"
+      className="sc-AxiKw hoCBFg"
       data-testid={null}
       disabled={false}
       onClick={[Function]}
@@ -71,7 +71,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxirZ fJAQMD"
+      className="sc-AxiKw kSeULD"
       data-testid={null}
       disabled={false}
       onClick={[Function]}
@@ -83,7 +83,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxirZ iUaOdQ"
+      className="sc-AxiKw jNLtYA"
       data-testid={null}
       disabled={false}
       onClick={[Function]}
@@ -96,7 +96,7 @@ Array [
 
 exports[`Storyshots Components/Button Default button 1`] = `
 <button
-  className="sc-AxirZ jsYNIa"
+  className="sc-AxiKw EOJpW"
   data-testid={null}
   disabled={false}
 >
@@ -110,7 +110,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxirZ cZePCF"
+      className="sc-AxiKw gFQfQt"
       data-testid={null}
       disabled={true}
     >
@@ -121,7 +121,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxirZ cZePCF"
+      className="sc-AxiKw gFQfQt"
       data-testid={null}
       disabled={true}
     >
@@ -133,7 +133,7 @@ Array [
 
 exports[`Storyshots Components/Button Full width 1`] = `
 <button
-  className="sc-AxirZ fsPZXF"
+  className="sc-AxiKw gkTuuN"
   data-testid={null}
   disabled={false}
 >
@@ -147,7 +147,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxirZ gIiRMf"
+      className="sc-AxiKw jrOFLL"
       data-testid={null}
       disabled={false}
       onClick={[Function]}
@@ -159,7 +159,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxirZ krVGaV"
+      className="sc-AxiKw dPMEiB"
       data-testid={null}
       disabled={false}
       onClick={[Function]}
@@ -171,7 +171,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxirZ gxmMFv"
+      className="sc-AxiKw kxWTwT"
       data-testid={null}
       disabled={false}
       onClick={[Function]}
@@ -188,7 +188,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxirZ dCHqlE"
+      className="sc-AxiKw fnkftc"
       data-testid={null}
       disabled={false}
     >
@@ -205,7 +205,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxirZ jsYNIa"
+      className="sc-AxiKw EOJpW"
       data-testid={null}
       disabled={false}
     >
@@ -222,7 +222,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxirZ hGgFYH"
+      className="sc-AxiKw gRrYRX"
       data-testid={null}
       disabled={false}
     >
@@ -244,7 +244,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxirZ xPAhY"
+      className="sc-AxiKw dsMGsI"
       data-testid={null}
       disabled={false}
     >
@@ -262,7 +262,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxirZ fuLNqp"
+      className="sc-AxiKw gqZDgd"
       data-testid={null}
       disabled={false}
     >
@@ -280,7 +280,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxirZ jjNXvY"
+      className="sc-AxiKw uYRqc"
       data-testid={null}
       disabled={false}
     >
@@ -303,7 +303,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxirZ bqzexU"
+      className="sc-AxiKw fahzXQ"
       data-testid={null}
       disabled={false}
     >
@@ -321,7 +321,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="sc-AxirZ ffHmaH"
+      className="sc-AxiKw fDjiPb"
       data-testid={null}
       disabled={false}
     >

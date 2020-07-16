@@ -13,8 +13,8 @@ exports[`Storyshots Components/Expandable Default Expandable 1`] = `
       onClick={[Function]}
     >
       <div
-        className="Flex__FlexWrapper-sc-1f3kfw7-0 xUISQ"
-        display="flex"
+        className="sc-AxjAm eFwvwZ"
+        data-testid={null}
       >
         <div
           className="Expandable__Text-na4gdb-2 kgTlSW"
@@ -53,8 +53,8 @@ exports[`Storyshots Components/Expandable Expandable with badge 1`] = `
       onClick={[Function]}
     >
       <div
-        className="Flex__FlexWrapper-sc-1f3kfw7-0 xUISQ"
-        display="flex"
+        className="sc-AxjAm eFwvwZ"
+        data-testid={null}
       >
         <div
           className="Expandable__Text-na4gdb-2 kgTlSW"
@@ -65,11 +65,11 @@ exports[`Storyshots Components/Expandable Expandable with badge 1`] = `
             Complex example
           </h4>
         </div>
-        <div
+        <span
           className="Badge__Item-sc-9r75kj-0 feOvPK"
         >
           status
-        </div>
+        </span>
       </div>
     </button>
     <div
@@ -98,8 +98,8 @@ exports[`Storyshots Components/Expandable Expandable with subtitle 1`] = `
       onClick={[Function]}
     >
       <div
-        className="Flex__FlexWrapper-sc-1f3kfw7-0 xUISQ"
-        display="flex"
+        className="sc-AxjAm eFwvwZ"
+        data-testid={null}
       >
         <div
           className="Expandable__Text-na4gdb-2 kgTlSW"
@@ -110,7 +110,7 @@ exports[`Storyshots Components/Expandable Expandable with subtitle 1`] = `
             Complex example
           </h4>
           <span
-            className="sc-AxjAm wVQLA"
+            className="sc-AxirZ lfuUzL"
           >
             Subtitle
           </span>
@@ -145,8 +145,8 @@ exports[`Storyshots Components/Expandable Open Expandable 1`] = `
       open={true}
     >
       <div
-        className="Flex__FlexWrapper-sc-1f3kfw7-0 xUISQ"
-        display="flex"
+        className="sc-AxjAm eFwvwZ"
+        data-testid={null}
       >
         <div
           className="Expandable__Text-na4gdb-2 kgTlSW"
@@ -182,8 +182,8 @@ exports[`Storyshots Units/Expandable Default Expandable 1`] = `
     onClick={[Function]}
   >
     <div
-      className="Flex__FlexWrapper-sc-1f3kfw7-0 xUISQ"
-      display="flex"
+      className="sc-AxjAm eFwvwZ"
+      data-testid={null}
     >
       <div
         className="Expandable__Text-na4gdb-2 kgTlSW"
@@ -217,8 +217,8 @@ exports[`Storyshots Units/Expandable Expandable With Badge 1`] = `
     onClick={[Function]}
   >
     <div
-      className="Flex__FlexWrapper-sc-1f3kfw7-0 xUISQ"
-      display="flex"
+      className="sc-AxjAm eFwvwZ"
+      data-testid={null}
     >
       <div
         className="Expandable__Text-na4gdb-2 kgTlSW"
@@ -229,11 +229,11 @@ exports[`Storyshots Units/Expandable Expandable With Badge 1`] = `
           Complex example
         </h4>
       </div>
-      <div
+      <span
         className="Badge__Item-sc-9r75kj-0 feOvPK"
       >
         status
-      </div>
+      </span>
     </div>
   </button>
   <div
@@ -257,8 +257,8 @@ exports[`Storyshots Units/Expandable Expandable With Subtitle 1`] = `
     onClick={[Function]}
   >
     <div
-      className="Flex__FlexWrapper-sc-1f3kfw7-0 xUISQ"
-      display="flex"
+      className="sc-AxjAm eFwvwZ"
+      data-testid={null}
     >
       <div
         className="Expandable__Text-na4gdb-2 kgTlSW"
@@ -269,7 +269,7 @@ exports[`Storyshots Units/Expandable Expandable With Subtitle 1`] = `
           Complex example
         </h4>
         <span
-          className="sc-AxjAm wVQLA"
+          className="sc-AxirZ lfuUzL"
         >
           Subtitle
         </span>
@@ -299,8 +299,8 @@ exports[`Storyshots Units/Expandable Open Expandable 1`] = `
     open={true}
   >
     <div
-      className="Flex__FlexWrapper-sc-1f3kfw7-0 xUISQ"
-      display="flex"
+      className="sc-AxjAm eFwvwZ"
+      data-testid={null}
     >
       <div
         className="Expandable__Text-na4gdb-2 kgTlSW"
