@@ -164,7 +164,7 @@ export const Button = ({
         {...props}
       >
         {children}
-        {isLoading ? <Icon icon={["fas", "spinner"]} spin ml="s" /> : null}
+        {isLoading ? <Icon icon={["fas", "circle-notch"]} spin ml="s" /> : null}
       </Item>
     </ThemeProvider>
   );
