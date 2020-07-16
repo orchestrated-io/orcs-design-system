@@ -11,7 +11,7 @@ import Icon from "../Icon";
 
 const ButtonStyles = compose(space, layout, color, border);
 
-const Item = styled("button")
+const StyledButton = styled("button")
   .attrs(props => ({
     "data-testid": props.dataTestId
       ? props.dataTestId
@@ -53,7 +53,7 @@ const Item = styled("button")
         ? "3"
         : "2",
       py: props.large ? "s" : props.small ? "xxs" : "xs",
-      px: props.large ? "r" : props.small ? "xs" : "s",
+      px: props.large ? "r" : props.small ? "s" : "between",
       svg: {
         marginRight: !props.iconLeft ? "" : props.small ? "xs" : "s",
         marginLeft: !props.iconRight ? "" : props.small ? "xs" : "s"
@@ -117,11 +117,11 @@ const Item = styled("button")
         },
         disabled: {
           bg: "greyLighter",
-          color: "greyLight",
+          color: "grey",
           borderColor: "greyLighter",
           "&:hover": {
             bg: "greyLighter",
-            color: "greyLight",
+            color: "grey",
             borderColor: "greyLighter"
           }
         },
@@ -157,16 +157,20 @@ export const Button = ({
   dataTestId,
   disabled,
   theme,
+  leftIcon,
+  rightIcon,
   children,
   ...props
 }) => {
   return (
     <ThemeProvider theme={theme}>
-      <Item
+      <StyledButton
         large={large}
         small={small}
         fullWidth={fullWidth}
         isLoading={isLoading}
+        leftIcon={leftIcon}
+        rightIcon={rightIcon}
         iconLeft={iconLeft}
         iconRight={iconRight}
         iconOnly={iconOnly}
@@ -177,9 +181,11 @@ export const Button = ({
         variant={disabled ? "disabled" : null}
         {...props}
       >
+        {leftIcon && <Icon icon={leftIcon} mr={small ? "xxs" : "xs"} />}
         {children}
-        {isLoading ? <Icon icon={["fas", "circle-notch"]} spin ml="s" /> : null}
-      </Item>
+        {rightIcon && <Icon icon={rightIcon} ml={small ? "xxs" : "xs"} />}
+        {isLoading && <Icon icon={["fas", "circle-notch"]} spin ml="s" />}
+      </StyledButton>
     </ThemeProvider>
   );
 };
@@ -208,6 +214,10 @@ Button.propTypes = {
   iconLeft: PropTypes.bool,
   /** Styles button to fit an icon on the right of text. Uses Icon component. */
   iconRight: PropTypes.bool,
+  /** New functionality to specify an `Icon` on the left side without having to include it as a child. */
+  leftIcon: PropTypes.array,
+  /** New functionality to specify an `Icon` on the right side without having to include it as a child. */
+  rightIcon: PropTypes.array,
   /** Styles button to suit having only an icon. Uses Icon component. */
   iconOnly: PropTypes.bool,
   /** Specifies whether the button is disabled. */

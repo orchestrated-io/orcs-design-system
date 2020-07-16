@@ -100,6 +100,7 @@ export const withIcon = () => (
       Right aligned icon
       <Icon icon={["fas", "download"]} />
     </Button>
+    <Button leftIcon={["fas", "star"]}>Left icon magic!</Button>
   </Spacer>
 );
 withIcon.storyName = "With icon";
