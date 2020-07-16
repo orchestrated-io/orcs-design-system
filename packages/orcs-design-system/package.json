@@ -112,6 +112,7 @@
         "statements": 50
       }
     },
+    "collectCoverage": true,
     "collectCoverageFrom": [
       "lib/**/*.{js,jsx,mjs}"
     ],
