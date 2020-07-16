@@ -1,27 +1,40 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { ThemeProvider } from "styled-components";
-import { space, layout, flexbox } from "styled-system";
+import { space, layout, flexbox, compose } from "styled-system";
+import { css } from "@styled-system/css";
+import shouldForwardProp from "@styled-system/should-forward-prop";
 import systemtheme from "../../systemtheme";
 
-const FlexWrapper = styled.div`
-${space}
-${layout}
-${flexbox}
-box-sizing: border-box
-`;
+const FlexStyles = compose(space, layout, flexbox);
 
-const FlexItem = styled.div`
-${space}
-${layout}
-${flexbox}
-box-sizing: border-box
-`;
+const FlexWrapper = styled("div")
+  .attrs(props => ({
+    "data-testid": props.dataTestId
+      ? props.dataTestId
+      : props["data-testid"]
+      ? props["data-testid"]
+      : null
+  }))
+  .withConfig({ shouldForwardProp })(
+  css({ boxSizing: "border-box" }),
+  FlexStyles
+);
+
+const FlexItem = styled("div")(
+  css({
+    boxSizing: "border-box",
+    display: "flex"
+  }),
+  FlexStyles
+);
 
 export default function Flex({ children, theme, ...props }) {
   return (
     <ThemeProvider theme={theme}>
-      <FlexWrapper {...props}>{children}</FlexWrapper>
+      <FlexWrapper {...FlexStyles} {...props}>
+        {children}
+      </FlexWrapper>
     </ThemeProvider>
   );
 }
