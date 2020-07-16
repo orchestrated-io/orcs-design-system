@@ -1,11 +1,12 @@
-import React, { useState, useCallback } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import Modal from "../Modal";
 import Button from "../Button";
-import Icon from "../Icon";
 import Divider from "../Divider";
 import Flex from "../Flex";
 import Spacer from "../Spacer";
+import { ThemeProvider } from "styled-components";
+import systemtheme from "../../systemtheme";
 
 const CustomModal = ({
   confirmText,
@@ -15,8 +16,8 @@ const CustomModal = ({
   handleCancel,
   visible,
   handleOnClose,
-  iconConfirm,
-  iconCancel,
+  cancelProps,
+  confirmProps,
   ...props
 }) => {
   return (
@@ -26,12 +27,10 @@ const CustomModal = ({
         <Divider light />
         <Flex>
           <Spacer mr="s">
-            <Button onClick={handleConfirm} iconLeft>
-              {iconConfirm && <Icon icon={iconConfirm} />}
+            <Button onClick={handleConfirm} {...confirmProps}>
               {confirmText}
             </Button>
-            <Button onClick={handleCancel} variant="ghost" iconLeft>
-              {iconCancel && <Icon icon={iconCancel} />}
+            <Button onClick={handleCancel} {...cancelProps}>
               {cancelText}
             </Button>
           </Spacer>
@@ -43,63 +42,22 @@ const CustomModal = ({
 
 const Dialogue = ({
   children,
-  buttonText,
   width,
-  icon,
   confirmText,
   cancelText,
   confirmAction,
   cancelAction,
-  iconConfirm,
-  iconCancel,
+  confirmProps,
+  cancelProps,
+  handleConfirm,
+  handleCancel,
+  handleOnClose,
+  theme,
   ...props
 }) => {
-  const [visible, setVisible] = useState(false);
-  const handleOnButtonClick = useCallback(() => {
-    setVisible(true);
-  }, [setVisible]);
-
-  const handleOnClose = () => {
-    setVisible(false);
-  };
-
-  const handleConfirm = useCallback(() => {
-    if (confirmAction) {
-      const result = confirmAction();
-      if (result && result.then) {
-        // we have been given a promise
-        return result.then(r => {
-          if (r) {
-            setVisible(false);
-          }
-        });
-      }
-    }
-    setVisible(false);
-  }, [confirmAction, setVisible]);
-
-  const handleCancel = useCallback(() => {
-    if (cancelAction) {
-      const result = cancelAction();
-      if (result && result.then) {
-        // we have been given a promise
-        return result.then(r => {
-          if (r) {
-            setVisible(false);
-          }
-        });
-      }
-    }
-    setVisible(false);
-  }, [cancelAction, setVisible]);
   return (
-    <>
-      <Button {...props} iconLeft onClick={handleOnButtonClick}>
-        {icon && <Icon icon={icon} />}
-        {buttonText}
-      </Button>
+    <ThemeProvider theme={theme}>
       <CustomModal
-        visible={visible}
         width={width}
         confirmText={confirmText}
         cancelText={cancelText}
@@ -108,35 +66,46 @@ const Dialogue = ({
         handleConfirm={handleConfirm}
         handleCancel={handleCancel}
         onClose={handleOnClose}
-        iconConfirm={iconConfirm}
-        iconCancel={iconCancel}
+        cancelProps={cancelProps}
+        confirmProps={confirmProps}
+        {...props}
       >
         {children}
       </CustomModal>
-    </>
+    </ThemeProvider>
   );
 };
 
 Dialogue.propTypes = {
-  children: PropTypes.element,
-  buttonText: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.node]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  icon: PropTypes.array,
-  confirmText: PropTypes.string,
-  cancelText: PropTypes.string,
+  /** Function to handle onClick for Confirm button  */
+  handleConfirm: PropTypes.func,
+  /** Sets the additional function to run for handleConfirm  */
   confirmAction: PropTypes.func,
+  /** Function to handle onClick for Cancel button  */
+  handleCancel: PropTypes.func,
+  /** Sets the additional function to run for handleCancel  */
   cancelAction: PropTypes.func,
-  onConfirm: PropTypes.func,
-  onCancel: PropTypes.func,
-  /** Set the Font Awesome style/weight and icon for Confirm button */
-  iconConfirm: PropTypes.array,
-  /** Set the Font Awesome style/weight and icon for Cancel button */
-  iconCancel: PropTypes.array
+  /** Sets the function to run on clicking the `X` button on the top right corner */
+  handleOnClose: PropTypes.func,
+  /** Set the text for the Confirm button. */
+  confirmText: PropTypes.string,
+  /** Set the text for the Cancel button. */
+  cancelText: PropTypes.string,
+  /** Set the properties for the Confirm button. See `Button` for accepted props. */
+  confirmProps: PropTypes.object,
+  /** Set the properties for the Cancel button. See `Button` for accepted props. */
+  cancelProps: PropTypes.object,
+  /** Sets the theme object for `Dialogue`. */
+  theme: PropTypes.object
 };
 
 Dialogue.defaultProps = {
   confirmText: "OK",
-  cancelText: "Cancel"
+  cancelText: "Cancel",
+  theme: systemtheme,
+  cancelProps: { variant: "ghost" }
 };
 
 CustomModal.propTypes = {
@@ -147,10 +116,10 @@ CustomModal.propTypes = {
   handleCancel: PropTypes.func,
   visible: PropTypes.bool,
   handleOnClose: PropTypes.func,
-  /** Set the Font Awesome style/weight and icon for Confirm button */
-  iconConfirm: PropTypes.array,
-  /** Set the Font Awesome style/weight and icon for Cancel button */
-  iconCancel: PropTypes.array
+  /** Set the properties for the Cancel button. See `Button` for accepted props. */
+  cancelProps: PropTypes.object,
+  /** Set the properties for the Confirm button. See `Button` for accepted props. */
+  confirmProps: PropTypes.object
 };
 
 export default Dialogue;

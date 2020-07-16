@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState, useCallback } from "react";
+import { action } from "@storybook/addon-actions";
 import Dialogue from ".";
-import { P } from "../Typography";
-import { Spacer } from "../Spacer";
-import { TextInput } from "../TextInput";
-import { TextArea } from "../TextArea";
+import { P, H2 } from "../Typography";
+import Spacer from "../Spacer";
+import TextInput from "../TextInput";
+import TextArea from "../TextArea";
+import Button from "../Button";
 import mdx from "./Dialogue.mdx";
 
 export default {
@@ -16,79 +18,317 @@ export default {
   component: Dialogue
 };
 
-export const Basic = () => (
-  <Dialogue
-    width="320px"
-    buttonText="Delete data"
-    variant="danger"
-    icon={["fas", "trash"]}
-    confirmAction={() => {
-      /* eslint-disable no-console */
-      console.log("You clicked OK");
-      // Must return a truthy value or a promise that resolves to a truthy value in order to close the dialogue
-      //return true;
-      console.log("action starting...");
-      return Promise.resolve().then(() => {
-        console.log("action done");
-        return true;
-        /* eslint-enable no-console */
-      });
-    }}
-    confirmText="OK"
-    cancelAction={() => {
-      /* eslint-disable no-console */
-      console.log("You clicked Cancel");
-      /* eslint-enable no-console */
-    }}
-    cancelText="Cancel"
-    iconConfirm={["fas", "check"]}
-    iconCancel={["fas", "times"]}
-  >
+const Basic = () => {
+  const [visible, setVisible] = useState(false);
+  const handleOnButtonClick = () => {
+    setVisible(true);
+  };
+  const handleOnClose = () => {
+    setVisible(false);
+  };
+  const confirmAction = action("confirmed");
+  const cancelAction = action("cancelled");
+  const handleConfirm = useCallback(() => {
+    if (confirmAction) {
+      const result = confirmAction();
+      if (result && result.then) {
+        // we have been given a promise
+        return result.then(r => {
+          if (r) {
+            setVisible(false);
+          }
+        });
+      }
+    }
+    setVisible(false);
+  }, [confirmAction, setVisible]);
+  const handleCancel = useCallback(() => {
+    if (cancelAction) {
+      const result = cancelAction();
+      if (result && result.then) {
+        // we have been given a promise
+        return result.then(r => {
+          if (r) {
+            setVisible(false);
+          }
+        });
+      }
+    }
+    setVisible(false);
+  }, [cancelAction, setVisible]);
+  return (
     <>
-      <P weight="bold" marginBottom="sm">
-        This will remove all data from the application.
-      </P>
-      <P>Do you wish to continue?</P>
+      <Button
+        variant="danger"
+        onClick={handleOnButtonClick}
+        leftIcon={["fas", "trash"]}
+      >
+        Delete data
+      </Button>
+      <Dialogue
+        visible={visible}
+        confirmAction={confirmAction}
+        cancelAction={cancelAction}
+        handleOnClose={handleOnClose}
+        handleConfirm={handleConfirm}
+        handleCancel={handleCancel}
+        confirmText="OK"
+        cancelText="Cancel"
+      >
+        <>
+          <P weight="bold" marginBottom="sm">
+            This will remove all data from the application.
+          </P>
+          <P>Do you wish to continue?</P>
+        </>
+      </Dialogue>
     </>
-  </Dialogue>
-);
+  );
+};
+export const basicDialogue = () => <Basic />;
+basicDialogue.parameters = {
+  docs: {
+    source: {
+      code: `const [visible, setVisible] = useState(false);
+    const handleOnButtonClick = () => {
+      setVisible(true);
+    };
+    const handleOnClose = () => {
+      setVisible(false);
+    };
+    const confirmAction = action("confirmed");
+    const cancelAction = action("cancelled");
+    const handleConfirm = useCallback(() => {
+      if (confirmAction) {
+        const result = confirmAction();
+        if (result && result.then) {
+          // we have been given a promise
+          return result.then(r => {
+            if (r) {
+              setVisible(false);
+            }
+          });
+        }
+      }
+      setVisible(false);
+    }, [confirmAction, setVisible]);
+    const handleCancel = useCallback(() => {
+      if (cancelAction) {
+        const result = cancelAction();
+        if (result && result.then) {
+          // we have been given a promise
+          return result.then(r => {
+            if (r) {
+              setVisible(false);
+            }
+          });
+        }
+      }
+      setVisible(false);
+    }, [cancelAction, setVisible]);
+    return (
+      <>
+        <Button
+          variant="danger"
+          onClick={handleOnButtonClick}
+          leftIcon={["fas", "trash"]}
+        >
+          Delete data
+        </Button>
+        <Dialogue
+          visible={visible}
+          confirmAction={confirmAction}
+          cancelAction={cancelAction}
+          handleOnClose={handleOnClose}
+          handleConfirm={handleConfirm}
+          handleCancel={handleCancel}
+          confirmText="OK"
+          cancelText="Cancel"
+        >
+          <>
+            <P weight="bold" marginBottom="sm">
+              This will remove all data from the application.
+            </P>
+            <P>Do you wish to continue?</P>
+          </>
+        </Dialogue>
+      </>
+    );
+  `
+    }
+  }
+};
 
-export const EditExample = () => (
-  <Dialogue
-    width="320px"
-    buttonText="Modify"
-    icon={["fas", "pen"]}
-    confirmAction={() => {
-      /* eslint-disable no-console */
-      console.log("You clicked OK");
-      // Must return a truthy value or a promise that resolves to a truthy value in order to close the dialogue
-      //return true;
-      console.log("action starting...");
-      return Promise.resolve().then(() => {
-        console.log("action done");
-        return true;
-        /* eslint-enable no-console */
-      });
-    }}
-    confirmText="Save"
-    cancelAction={() => {
-      /* eslint-disable no-console */
-      console.log("You clicked Cancel");
-      /* eslint-enable no-console */
-    }}
-    cancelText="Cancel"
-    iconConfirm={["fas", "save"]}
-    iconCancel={["fas", "times"]}
-  >
-    <Spacer mb="r">
-      <TextInput
-        id="textInput1"
-        key="textInput1"
-        type="text"
-        label="Name"
-        placeholder="E.g. Awesome Project"
-      />
-      <TextArea id="TextArea01" label="Description" />
-    </Spacer>
-  </Dialogue>
-);
+const Edit = () => {
+  const [visible, setVisible] = useState(false);
+  const handleOnButtonClick = () => {
+    setVisible(true);
+  };
+  const handleOnClose = () => {
+    setVisible(false);
+  };
+
+  const confirmAction = action("confirmed");
+
+  const cancelAction = action("cancelled");
+
+  const handleConfirm = useCallback(() => {
+    if (confirmAction) {
+      const result = confirmAction();
+      if (result && result.then) {
+        // we have been given a promise
+        return result.then(r => {
+          if (r) {
+            setVisible(false);
+          }
+        });
+      }
+    }
+    setVisible(false);
+  }, [confirmAction, setVisible]);
+
+  const handleCancel = useCallback(() => {
+    if (cancelAction) {
+      const result = cancelAction();
+      if (result && result.then) {
+        // we have been given a promise
+        return result.then(r => {
+          if (r) {
+            setVisible(false);
+          }
+        });
+      }
+    }
+    setVisible(false);
+  }, [cancelAction, setVisible]);
+  return (
+    <>
+      <Button onClick={handleOnButtonClick} leftIcon={["fas", "edit"]}>
+        Edit Project
+      </Button>
+      <Dialogue
+        visible={visible}
+        confirmAction={confirmAction}
+        cancelAction={cancelAction}
+        handleOnClose={handleOnClose}
+        handleConfirm={handleConfirm}
+        handleCancel={handleCancel}
+        width="320px"
+        confirmText="Submit"
+        cancelText="Cancel"
+        cancelProps={{
+          variant: "danger",
+          small: true,
+          leftIcon: ["fas", "times"]
+        }}
+        confirmProps={{
+          variant: "success",
+          small: true,
+          leftIcon: ["fas", "check"]
+        }}
+      >
+        <>
+          <Spacer mb="r">
+            <H2>Editing Project</H2>
+            <TextInput
+              id="textInput1"
+              key="textInput1"
+              type="text"
+              label="Name"
+              placeholder="E.g. Awesome Project"
+            />
+            <TextArea id="TextArea01" label="Description" />
+          </Spacer>
+        </>
+      </Dialogue>
+    </>
+  );
+};
+
+export const editDialogue = () => <Edit />;
+editDialogue.parameters = {
+  docs: {
+    source: {
+      code: `const [visible, setVisible] = useState(false);
+        const handleOnButtonClick = () => {
+          setVisible(true);
+        };
+        const handleOnClose = () => {
+          setVisible(false);
+        };
+        const confirmAction = action("confirmed");
+        const cancelAction = action("cancelled");
+        const handleConfirm = useCallback(() => {
+          if (confirmAction) {
+            const result = confirmAction();
+            if (result && result.then) {
+              // we have been given a promise
+              return result.then(r => {
+                if (r) {
+                  setVisible(false);
+                }
+              });
+            }
+          }
+          setVisible(false);
+        }, [confirmAction, setVisible]);
+        const handleCancel = useCallback(() => {
+          if (cancelAction) {
+            const result = cancelAction();
+            if (result && result.then) {
+              // we have been given a promise
+              return result.then(r => {
+                if (r) {
+                  setVisible(false);
+                }
+              });
+            }
+          }
+          setVisible(false);
+        }, [cancelAction, setVisible]);
+        return (
+          <>
+            <Button onClick={handleOnButtonClick} leftIcon={["fas", "edit"]}>
+              Edit Project
+            </Button>
+            <Dialogue
+              visible={visible}
+              confirmAction={confirmAction}
+              cancelAction={cancelAction}
+              handleOnClose={handleOnClose}
+              handleConfirm={handleConfirm}
+              handleCancel={handleCancel}
+              width="320px"
+              confirmText="Submit"
+              cancelText="Cancel"
+              cancelProps={{
+                variant: "danger",
+                small: true,
+                leftIcon: ["fas", "times"]
+              }}
+              confirmProps={{
+                variant: "success",
+                small: true,
+                leftIcon: ["fas", "check"]
+              }}
+            >
+              <>
+                <Spacer mb="r">
+                  <H2>Editing Project</H2>
+                  <TextInput
+                    id="textInput1"
+                    key="textInput1"
+                    type="text"
+                    label="Name"
+                    placeholder="E.g. Awesome Project"
+                  />
+                  <TextArea id="TextArea01" label="Description" />
+                </Spacer>
+              </>
+            </Dialogue>
+          </>
+        );
+        `
+    }
+  }
+};
