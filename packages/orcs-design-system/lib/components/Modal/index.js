@@ -57,7 +57,6 @@ const Modal = ({
   height,
   overflowVisible,
   onClose,
-  onConfirm,
   theme,
   visible,
   ...restProps
@@ -65,17 +64,12 @@ const Modal = ({
   const handleKeypress = useCallback(
     event => {
       var code = event.keyCode || event.which;
-      if (code === 13) {
-        // 13 is the enter keycode
-        onConfirm();
-        // event.preventDefault();
-      } else if (code === 27) {
+      if (code === 27) {
         // 27 is the escape keycode
         onClose();
-        event.preventDefault();
       }
     },
-    [onConfirm, onClose]
+    [onClose]
   );
 
   useEffect(() => {
@@ -100,15 +94,19 @@ const Modal = ({
                 bg="white"
               >
                 <ThemeProvider theme={theme}>
-                  <Box p="s">
+                  <Box p="r">
                     <Flex justifyContent="flex-end">
                       <Button
                         onClick={onClose}
                         small
                         variant="transparent"
-                        fixedWidth
+                        px="6px"
                       >
-                        <Icon icon={["fas", "times"]} color="greyDark" />
+                        <Icon
+                          icon={["fas", "times"]}
+                          color="greyDark"
+                          size="lg"
+                        />
                       </Button>
                     </Flex>
                     {children}

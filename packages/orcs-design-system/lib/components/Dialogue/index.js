@@ -27,11 +27,11 @@ const CustomModal = ({
         <Flex>
           <Spacer mr="s">
             <Button onClick={handleConfirm} iconLeft>
-              {iconConfirm ? <Icon icon={iconConfirm} /> : null}
+              {iconConfirm && <Icon icon={iconConfirm} />}
               {confirmText}
             </Button>
             <Button onClick={handleCancel} variant="ghost" iconLeft>
-              {iconCancel ? <Icon icon={iconCancel} /> : null}
+              {iconCancel && <Icon icon={iconCancel} />}
               {cancelText}
             </Button>
           </Spacer>
