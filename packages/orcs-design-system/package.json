@@ -1,6 +1,6 @@
 {
   "name": "orcs-design-system",
-  "version": "0.9.89",
+  "version": "0.9.90",
   "description": "Orchestrated Design System: ORCS",
   "main": "es/index.js",
   "module": "es/index.js",
@@ -86,7 +86,7 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^25.5.4",
+    "jest": "^25.3.0",
     "prettier": "^1.19.1",
     "react-dom": "^16.13.0",
     "serverless": "^1.69.0",
@@ -112,10 +112,6 @@
         "statements": 50
       }
     },
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "lib/**/*.{js,jsx,mjs}"
-    ],
     "testMatch": [
       "<rootDir>/lib/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/lib/**/?(*.)(spec|test).{js,jsx,mjs}"
