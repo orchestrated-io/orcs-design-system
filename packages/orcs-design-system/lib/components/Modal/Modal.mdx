@@ -1,0 +1,22 @@
+import Modal from ".";
+import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+
+# Modal
+
+[Properties](#properties)
+
+The `Modal` component brings up a popup container upon clicking on a `Button` that changes the `visible` property of the `Modal` to `true`.
+
+This is a blank slate and functions to close the `Modal` and take any action must be specified (including any `Button` elements contained in the popup). The only element included by default is the close icon `X` on the upper right corner, whose `onClose` function **must** be specified. See Properties table below.
+
+For a special case of this that has Confirm and Cancel functionality baked in, see [Dialogue](./?path=/docs/components-dialogue--basic).
+
+## Default
+
+<Preview>
+  <Story id="components-modal--basic-modal" />
+</Preview>
+
+## Properties
+
+<Props of={Modal} />

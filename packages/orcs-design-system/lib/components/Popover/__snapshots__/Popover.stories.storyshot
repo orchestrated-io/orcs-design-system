@@ -1,0 +1,449 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Popover defaultPopover 1`] = `
+<div
+  className="Popover__Container-sc-1bwoak-0 fFsabD"
+>
+  <div
+    className="Popover__Text-sc-1bwoak-1 jwsBmN"
+  >
+    Text description of what this button does
+  </div>
+  <button
+    className="sc-AxiKw hELyNG"
+    data-testid={null}
+    disabled={false}
+  >
+    Hover Me!
+  </button>
+</div>
+`;
+
+exports[`Storyshots Components/Popover direction 1`] = `
+Array [
+  <div
+    className="Popover__Container-sc-1bwoak-0 fFsabD"
+  >
+    <div
+      className="Popover__Text-sc-1bwoak-1 jwsBmN"
+      direction="right"
+    >
+      Text description of what this button does
+    </div>
+    <button
+      className="sc-AxiKw hELyNG"
+      data-testid={null}
+      disabled={false}
+    >
+      Right Hover
+    </button>
+  </div>,
+  <div
+    className="Popover__Container-sc-1bwoak-0 fFsabD"
+  >
+    <div
+      className="Popover__Text-sc-1bwoak-1 eDxeZo"
+      direction="left"
+    >
+      Text description of what this button does
+    </div>
+    <button
+      className="sc-AxiKw hELyNG"
+      data-testid={null}
+      disabled={false}
+    >
+      Left Hover
+    </button>
+  </div>,
+  <div
+    className="Popover__Container-sc-1bwoak-0 fFsabD"
+  >
+    <div
+      className="Popover__Text-sc-1bwoak-1 goQkAT"
+      direction="bottom"
+    >
+      Centered description of what this button does
+    </div>
+    <button
+      className="sc-AxiKw hELyNG"
+      data-testid={null}
+      disabled={false}
+    >
+      Bottom Hover
+    </button>
+  </div>,
+  <div
+    className="Popover__Container-sc-1bwoak-0 fFsabD"
+  >
+    <div
+      className="Popover__Text-sc-1bwoak-1 hPuoUG"
+      direction="top"
+    >
+      Text description of what this button does
+    </div>
+    <button
+      className="sc-AxiKw hELyNG"
+      data-testid={null}
+      disabled={false}
+    >
+      Top Hover
+    </button>
+  </div>,
+]
+`;
+
+exports[`Storyshots Components/Popover inline 1`] = `
+Array [
+  <div
+    className="Popover__Container-sc-1bwoak-0 ialtGL"
+  >
+    <div
+      className="Popover__Text-sc-1bwoak-1 jwsBmN"
+    >
+      Text description of what this button does
+    </div>
+    <button
+      className="sc-AxiKw hELyNG"
+      data-testid={null}
+      disabled={false}
+    >
+      Inline Block Set
+    </button>
+  </div>,
+  <div
+    className="Popover__Container-sc-1bwoak-0 ialtGL"
+  >
+    <div
+      className="Popover__Text-sc-1bwoak-1 jwsBmN"
+    >
+      Text description of what this button does
+    </div>
+    <button
+      className="sc-AxiKw hELyNG"
+      data-testid={null}
+      disabled={false}
+    >
+      Inline Block Set
+    </button>
+  </div>,
+  <div
+    className="Popover__Container-sc-1bwoak-0 fFsabD"
+  >
+    <div
+      className="Popover__Text-sc-1bwoak-1 jwsBmN"
+    >
+      Centered description of what this button does
+    </div>
+    <button
+      className="sc-AxiKw hELyNG"
+      data-testid={null}
+      disabled={false}
+    >
+      Not Inline
+    </button>
+  </div>,
+  <div
+    className="Popover__Container-sc-1bwoak-0 fFsabD"
+  >
+    <div
+      className="Popover__Text-sc-1bwoak-1 hPuoUG"
+      direction="top"
+    >
+      Text description of what this button does
+    </div>
+    <button
+      className="sc-AxiKw hELyNG"
+      data-testid={null}
+      disabled={false}
+    >
+      Not Inline
+    </button>
+  </div>,
+]
+`;
+
+exports[`Storyshots Components/Popover specifiedWidth 1`] = `
+<div
+  className="Popover__Container-sc-1bwoak-0 fFsabD"
+>
+  <div
+    className="Popover__Text-sc-1bwoak-1 jAUnCe"
+    width="100px"
+  >
+    Text description of what this button does
+  </div>
+  <button
+    className="sc-AxiKw hELyNG"
+    data-testid={null}
+    disabled={false}
+  >
+    Hover Me
+  </button>
+</div>
+`;
+
+exports[`Storyshots Components/Popover textAlignment 1`] = `
+<div
+  className="Popover__Container-sc-1bwoak-0 fFsabD"
+>
+  <div
+    className="Popover__Text-sc-1bwoak-1 hCeyYV"
+  >
+    Text description of what this button does
+  </div>
+  <button
+    className="sc-AxiKw hELyNG"
+    data-testid={null}
+    disabled={false}
+  >
+    Hover Me
+  </button>
+</div>
+`;
+
+exports[`Storyshots Units/Popover Default popover 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gILfyj"
+  data-testid={null}
+>
+  <div
+    className="sc-AxjAm cfcHtF"
+    data-testid={null}
+  >
+    <div
+      className="Popover__Container-sc-1bwoak-0 fFsabD"
+    >
+      <div
+        className="Popover__Text-sc-1bwoak-1 jwsBmN"
+      >
+        Text description of what this button does
+      </div>
+      <button
+        className="sc-AxiKw hELyNG"
+        data-testid={null}
+        disabled={false}
+      >
+        Hover Me!
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Popover Direction 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gILfyj"
+  data-testid={null}
+>
+  <div
+    className="sc-AxjAm cfcHtF"
+    data-testid={null}
+  >
+    <div
+      className="Popover__Container-sc-1bwoak-0 fFsabD"
+    >
+      <div
+        className="Popover__Text-sc-1bwoak-1 jwsBmN"
+        direction="right"
+      >
+        Text description of what this button does
+      </div>
+      <button
+        className="sc-AxiKw hELyNG"
+        data-testid={null}
+        disabled={false}
+      >
+        Right Hover
+      </button>
+    </div>
+    <div
+      className="Popover__Container-sc-1bwoak-0 fFsabD"
+    >
+      <div
+        className="Popover__Text-sc-1bwoak-1 eDxeZo"
+        direction="left"
+      >
+        Text description of what this button does
+      </div>
+      <button
+        className="sc-AxiKw hELyNG"
+        data-testid={null}
+        disabled={false}
+      >
+        Left Hover
+      </button>
+    </div>
+    <div
+      className="Popover__Container-sc-1bwoak-0 fFsabD"
+    >
+      <div
+        className="Popover__Text-sc-1bwoak-1 goQkAT"
+        direction="bottom"
+      >
+        Centered description of what this button does
+      </div>
+      <button
+        className="sc-AxiKw hELyNG"
+        data-testid={null}
+        disabled={false}
+      >
+        Bottom Hover
+      </button>
+    </div>
+    <div
+      className="Popover__Container-sc-1bwoak-0 fFsabD"
+    >
+      <div
+        className="Popover__Text-sc-1bwoak-1 hPuoUG"
+        direction="top"
+      >
+        Text description of what this button does
+      </div>
+      <button
+        className="sc-AxiKw hELyNG"
+        data-testid={null}
+        disabled={false}
+      >
+        Top Hover
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Popover Inline 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gILfyj"
+  data-testid={null}
+>
+  <div
+    className="sc-AxjAm cfcHtF"
+    data-testid={null}
+  >
+    <div
+      className="Popover__Container-sc-1bwoak-0 ialtGL"
+    >
+      <div
+        className="Popover__Text-sc-1bwoak-1 jwsBmN"
+      >
+        Text description of what this button does
+      </div>
+      <button
+        className="sc-AxiKw hELyNG"
+        data-testid={null}
+        disabled={false}
+      >
+        Inline Block Set
+      </button>
+    </div>
+    <div
+      className="Popover__Container-sc-1bwoak-0 ialtGL"
+    >
+      <div
+        className="Popover__Text-sc-1bwoak-1 jwsBmN"
+      >
+        Text description of what this button does
+      </div>
+      <button
+        className="sc-AxiKw hELyNG"
+        data-testid={null}
+        disabled={false}
+      >
+        Inline Block Set
+      </button>
+    </div>
+    <div
+      className="Popover__Container-sc-1bwoak-0 fFsabD"
+    >
+      <div
+        className="Popover__Text-sc-1bwoak-1 jwsBmN"
+      >
+        Centered description of what this button does
+      </div>
+      <button
+        className="sc-AxiKw hELyNG"
+        data-testid={null}
+        disabled={false}
+      >
+        Not Inline
+      </button>
+    </div>
+    <div
+      className="Popover__Container-sc-1bwoak-0 fFsabD"
+    >
+      <div
+        className="Popover__Text-sc-1bwoak-1 hPuoUG"
+        direction="top"
+      >
+        Text description of what this button does
+      </div>
+      <button
+        className="sc-AxiKw hELyNG"
+        data-testid={null}
+        disabled={false}
+      >
+        Not Inline
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Popover Specified width 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gILfyj"
+  data-testid={null}
+>
+  <div
+    className="sc-AxjAm cfcHtF"
+    data-testid={null}
+  >
+    <div
+      className="Popover__Container-sc-1bwoak-0 fFsabD"
+    >
+      <div
+        className="Popover__Text-sc-1bwoak-1 jAUnCe"
+        width="100px"
+      >
+        Text description of what this button does
+      </div>
+      <button
+        className="sc-AxiKw hELyNG"
+        data-testid={null}
+        disabled={false}
+      >
+        Hover Me
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Popover Text alignment 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gILfyj"
+  data-testid={null}
+>
+  <div
+    className="sc-AxjAm cfcHtF"
+    data-testid={null}
+  >
+    <div
+      className="Popover__Container-sc-1bwoak-0 fFsabD"
+    >
+      <div
+        className="Popover__Text-sc-1bwoak-1 hCeyYV"
+      >
+        Text description of what this button does
+      </div>
+      <button
+        className="sc-AxiKw hELyNG"
+        data-testid={null}
+        disabled={false}
+      >
+        Hover Me
+      </button>
+    </div>
+  </div>
+</div>
+`;

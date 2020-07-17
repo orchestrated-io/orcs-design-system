@@ -80,9 +80,8 @@ const Wrapper = styled("div")
   NotificationStyles
 );
 
-const NotificationContent = styled("p")(props =>
+const NotificationContent = styled("p")(
   css({
-    marginLeft: props.icon ? "s" : "0",
     pr: "s"
   })
 );
@@ -105,7 +104,7 @@ const Close = styled("button")(
   })
 );
 
-export default function Notification({
+export const Notification = ({
   icon,
   colour,
   floating,
@@ -119,13 +118,12 @@ export default function Notification({
   onDismiss,
   theme,
   ...props
-}) {
+}) => {
   const [dismissed, handleDismiss] = useState(false);
   const onToggle = () => {
     if (!dismissed) handleDismiss(true);
     else handleDismiss(false);
   };
-
   return (
     !dismissed && (
       <ThemeProvider theme={theme}>
@@ -140,18 +138,20 @@ export default function Notification({
           onDismiss={onDismiss}
           {...props}
         >
-          {icon && <Icon icon={icon} color="white" fontSize="2" />}
-          <NotificationContent icon={icon}>{children}</NotificationContent>
+          {icon && (
+            <Icon icon={icon} color="white" fontSize="2" marginRight="s" />
+          )}
+          <NotificationContent>{children}</NotificationContent>
           {closable && (
             <Close className="close-button" tabIndex="0" onClick={onToggle}>
-              <Icon icon={["fas", "times"]} color="white" size="lg" />
+              <Icon icon={["fas", "times"]} size="lg" color="white" />
             </Close>
           )}
         </Wrapper>
       </ThemeProvider>
     )
   );
-}
+};
 
 Notification.propTypes = {
   children: PropTypes.oneOfType([
@@ -186,3 +186,5 @@ Notification.defaultProps = {
   closable: true,
   theme: systemtheme
 };
+
+export default Notification;

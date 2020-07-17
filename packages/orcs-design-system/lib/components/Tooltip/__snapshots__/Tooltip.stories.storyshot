@@ -1,0 +1,381 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Tooltip defaultTooltip 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 jfPVQl"
+  data-testid={null}
+>
+  <div
+    className="sc-AxjAm eKMUxE"
+    data-testid={null}
+  >
+    <button
+      className="Tooltip__Container-vx1y1f-0 cXJzHd"
+    >
+      <span
+        className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
+      >
+        ?
+      </span>
+      <div
+        className="Tooltip__Text-vx1y1f-2 bbWFig"
+        width="200px"
+      >
+        This tooltip helps explain stuff.
+      </div>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Tooltip direction 1`] = `
+<div
+  className="sc-AxjAm eKMUxE"
+  data-testid={null}
+>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 dchEdD"
+  >
+    <button
+      className="Tooltip__Container-vx1y1f-0 cXJzHd"
+    >
+      <span
+        className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
+      >
+        ?
+      </span>
+      <div
+        className="Tooltip__Text-vx1y1f-2 bbWFig"
+        direction="top"
+        width="200px"
+      >
+        Top tooltip example description
+      </div>
+    </button>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 dchEdD"
+  >
+    <button
+      className="Tooltip__Container-vx1y1f-0 cXJzHd"
+    >
+      <span
+        className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
+      >
+        ?
+      </span>
+      <div
+        className="Tooltip__Text-vx1y1f-2 cIeWlV"
+        direction="right"
+        width="200px"
+      >
+        Right tooltip example description
+      </div>
+    </button>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 dchEdD"
+  >
+    <button
+      className="Tooltip__Container-vx1y1f-0 cXJzHd"
+    >
+      <span
+        className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
+      >
+        ?
+      </span>
+      <div
+        className="Tooltip__Text-vx1y1f-2 breOgW"
+        direction="bottom"
+        width="200px"
+      >
+        Bottom tooltip example description
+      </div>
+    </button>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 dchEdD"
+  >
+    <button
+      className="Tooltip__Container-vx1y1f-0 cXJzHd"
+    >
+      <span
+        className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
+      >
+        ?
+      </span>
+      <div
+        className="Tooltip__Text-vx1y1f-2 hTORIs"
+        direction="left"
+        width="200px"
+      >
+        Left tooltip example description
+      </div>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Tooltip onDarkBackground 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 kZDROm"
+  data-testid={null}
+>
+  <div
+    className="sc-AxjAm eKMUxE"
+    data-testid={null}
+  >
+    <button
+      className="Tooltip__Container-vx1y1f-0 fdqOMp"
+    >
+      <span
+        className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
+      >
+        ?
+      </span>
+      <div
+        className="Tooltip__Text-vx1y1f-2 fufIuM"
+        width="200px"
+      >
+        Inverted example description
+      </div>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Tooltip size 1`] = `
+<div
+  className="sc-AxjAm eKMUxE"
+  data-testid={null}
+>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <button
+      className="Tooltip__Container-vx1y1f-0 cXJzHd"
+    >
+      <span
+        className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
+      >
+        ?
+      </span>
+      <div
+        className="Tooltip__Text-vx1y1f-2 fDasZr"
+        width="90px"
+      >
+        Short tooltip
+      </div>
+    </button>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <button
+      className="Tooltip__Container-vx1y1f-0 cXJzHd"
+    >
+      <span
+        className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
+      >
+        ?
+      </span>
+      <div
+        className="Tooltip__Text-vx1y1f-2 jqleph"
+        width="250px"
+      >
+        Long tooltip to accommodate more text.
+      </div>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Tooltip Default tooltip 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 jfPVQl"
+  data-testid={null}
+>
+  <div
+    className="sc-AxjAm eKMUxE"
+    data-testid={null}
+  >
+    <button
+      className="Tooltip__Container-vx1y1f-0 cXJzHd"
+    >
+      <span
+        className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
+      >
+        ?
+      </span>
+      <div
+        className="Tooltip__Text-vx1y1f-2 bbWFig"
+        width="200px"
+      >
+        This tooltip helps explain stuff.
+      </div>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Tooltip Direction 1`] = `
+<div
+  className="sc-AxjAm eKMUxE"
+  data-testid={null}
+>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 dchEdD"
+  >
+    <button
+      className="Tooltip__Container-vx1y1f-0 cXJzHd"
+    >
+      <span
+        className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
+      >
+        ?
+      </span>
+      <div
+        className="Tooltip__Text-vx1y1f-2 bbWFig"
+        direction="top"
+        width="200px"
+      >
+        Top tooltip example description
+      </div>
+    </button>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 dchEdD"
+  >
+    <button
+      className="Tooltip__Container-vx1y1f-0 cXJzHd"
+    >
+      <span
+        className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
+      >
+        ?
+      </span>
+      <div
+        className="Tooltip__Text-vx1y1f-2 cIeWlV"
+        direction="right"
+        width="200px"
+      >
+        Right tooltip example description
+      </div>
+    </button>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 dchEdD"
+  >
+    <button
+      className="Tooltip__Container-vx1y1f-0 cXJzHd"
+    >
+      <span
+        className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
+      >
+        ?
+      </span>
+      <div
+        className="Tooltip__Text-vx1y1f-2 breOgW"
+        direction="bottom"
+        width="200px"
+      >
+        Bottom tooltip example description
+      </div>
+    </button>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 dchEdD"
+  >
+    <button
+      className="Tooltip__Container-vx1y1f-0 cXJzHd"
+    >
+      <span
+        className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
+      >
+        ?
+      </span>
+      <div
+        className="Tooltip__Text-vx1y1f-2 hTORIs"
+        direction="left"
+        width="200px"
+      >
+        Left tooltip example description
+      </div>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Tooltip On dark background 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 kZDROm"
+  data-testid={null}
+>
+  <div
+    className="sc-AxjAm eKMUxE"
+    data-testid={null}
+  >
+    <button
+      className="Tooltip__Container-vx1y1f-0 fdqOMp"
+    >
+      <span
+        className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
+      >
+        ?
+      </span>
+      <div
+        className="Tooltip__Text-vx1y1f-2 fufIuM"
+        width="200px"
+      >
+        Inverted example description
+      </div>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Tooltip Size 1`] = `
+<div
+  className="sc-AxjAm eKMUxE"
+  data-testid={null}
+>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <button
+      className="Tooltip__Container-vx1y1f-0 cXJzHd"
+    >
+      <span
+        className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
+      >
+        ?
+      </span>
+      <div
+        className="Tooltip__Text-vx1y1f-2 fDasZr"
+        width="90px"
+      >
+        Short tooltip
+      </div>
+    </button>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <button
+      className="Tooltip__Container-vx1y1f-0 cXJzHd"
+    >
+      <span
+        className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
+      >
+        ?
+      </span>
+      <div
+        className="Tooltip__Text-vx1y1f-2 jqleph"
+        width="250px"
+      >
+        Long tooltip to accommodate more text.
+      </div>
+    </button>
+  </div>
+</div>
+`;

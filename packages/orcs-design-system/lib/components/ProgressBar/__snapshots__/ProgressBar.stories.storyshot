@@ -1,0 +1,248 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/ProgressBar defaultProgressBar 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="ProgressBar__Background-q9qaaf-0 ctVlUv"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="ProgressBar__Fill-q9qaaf-1 kOCBNh"
+        style={
+          Object {
+            "width": "40%",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="ProgressBar__Background-q9qaaf-0 ctVlUv"
+      style={
+        Object {
+          "width": "50%",
+        }
+      }
+    >
+      <div
+        className="ProgressBar__Fill-q9qaaf-1 kOCBNh"
+        style={
+          Object {
+            "width": "70%",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/ProgressBar gradientProgressBar 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <div
+    className="ProgressBar__Background-q9qaaf-0 ctVlUv"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      className="ProgressBar__Fill-q9qaaf-1 kOCBNh"
+      style={
+        Object {
+          "width": "40%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/ProgressBar invertedProgressBar 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <div
+    className="Box__BoxWrapper-jr1api-0 cQxHnQ"
+    data-testid={null}
+  >
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+    >
+      <div
+        className="ProgressBar__Background-q9qaaf-0 cTuA-DY"
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          className="ProgressBar__Fill-q9qaaf-1 hMAPDb"
+          style={
+            Object {
+              "width": "40%",
+            }
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+    >
+      <div
+        className="ProgressBar__Background-q9qaaf-0 cTuA-DY"
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          className="ProgressBar__Fill-q9qaaf-1 fUMGEw"
+          style={
+            Object {
+              "width": "70%",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/ProgressBar Default 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="ProgressBar__Background-q9qaaf-0 ctVlUv"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="ProgressBar__Fill-q9qaaf-1 kOCBNh"
+        style={
+          Object {
+            "width": "40%",
+          }
+        }
+      />
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="ProgressBar__Background-q9qaaf-0 ctVlUv"
+      style={
+        Object {
+          "width": "50%",
+        }
+      }
+    >
+      <div
+        className="ProgressBar__Fill-q9qaaf-1 kOCBNh"
+        style={
+          Object {
+            "width": "70%",
+          }
+        }
+      />
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Units/ProgressBar Gradient 1`] = `
+<div
+  className="ProgressBar__Background-q9qaaf-0 ctVlUv"
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <div
+    className="ProgressBar__Fill-q9qaaf-1 kOCBNh"
+    style={
+      Object {
+        "width": "40%",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Storyshots Units/ProgressBar Inverted 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 cQxHnQ"
+  data-testid={null}
+>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="ProgressBar__Background-q9qaaf-0 cTuA-DY"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="ProgressBar__Fill-q9qaaf-1 hMAPDb"
+        style={
+          Object {
+            "width": "40%",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="ProgressBar__Background-q9qaaf-0 cTuA-DY"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="ProgressBar__Fill-q9qaaf-1 fUMGEw"
+        style={
+          Object {
+            "width": "70%",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;

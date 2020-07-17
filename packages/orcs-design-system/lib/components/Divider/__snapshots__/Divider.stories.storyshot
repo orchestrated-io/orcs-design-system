@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Divider Default Divider 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Divider__Item-sc-106mlj-0 bFDWQk"
+    />
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Divider__Item-sc-106mlj-0 bVLzUP"
+    />
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Divider__Item-sc-106mlj-0 hCFvIy"
+    />
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Divider__Item-sc-106mlj-0 lgLMcl"
+    />
+  </div>,
+]
+`;
+
+exports[`Storyshots Components/Divider Inverted Divider 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 eDiRrh"
+  data-testid={null}
+>
+  <div
+    className="Divider__Item-sc-106mlj-0 eLdOpL"
+  />
+  <div
+    className="Divider__Item-sc-106mlj-0 bijHol"
+  />
+</div>
+`;
+
+exports[`Storyshots Components/Divider Span Grid 1`] = `
+<div
+  className="Divider__Item-sc-106mlj-0 cVpIJd"
+/>
+`;
+
+exports[`Storyshots Units/Divider Default Divider 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Divider__Item-sc-106mlj-0 bFDWQk"
+    />
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Divider__Item-sc-106mlj-0 bVLzUP"
+    />
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Divider__Item-sc-106mlj-0 hCFvIy"
+    />
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Divider__Item-sc-106mlj-0 lgLMcl"
+    />
+  </div>,
+]
+`;
+
+exports[`Storyshots Units/Divider Inverted Divider 1`] = `
+Array [
+  <div
+    className="Divider__Item-sc-106mlj-0 eLdOpL"
+  />,
+  <div
+    className="Divider__Item-sc-106mlj-0 bijHol"
+  />,
+]
+`;
+
+exports[`Storyshots Units/Divider Span Grid 1`] = `
+<div
+  className="Divider__Item-sc-106mlj-0 cVpIJd"
+/>
+`;

@@ -1,0 +1,271 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Tag defaultTag 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <button
+    className="Tag__TagWrapper-sc-1dh2aa8-0 bCioSy"
+    disabled={false}
+    selected={false}
+  >
+    Default Tag
+  </button>
+</div>
+`;
+
+exports[`Storyshots Components/Tag disabledTag 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <button
+    className="Tag__TagWrapper-sc-1dh2aa8-0 jpSajg"
+    disabled={true}
+    selected={false}
+  >
+    devops
+  </button>
+  <button
+    className="Tag__TagWrapper-sc-1dh2aa8-0 jpSajg"
+    disabled={true}
+    selected={false}
+  >
+    software engineering
+  </button>
+  <button
+    className="Tag__TagWrapper-sc-1dh2aa8-0 jpSajg"
+    disabled={true}
+    selected={false}
+  >
+    product design
+  </button>
+  <button
+    className="Tag__TagWrapper-sc-1dh2aa8-0 jpSajg"
+    disabled={true}
+    selected={false}
+  >
+    digital transformation
+  </button>
+</div>
+`;
+
+exports[`Storyshots Components/Tag noCrossTag 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <button
+    className="Tag__TagWrapper-sc-1dh2aa8-0 krNWfN"
+    disabled={false}
+    selected={true}
+  >
+    devops
+  </button>
+  <button
+    className="Tag__TagWrapper-sc-1dh2aa8-0 krNWfN"
+    disabled={false}
+    selected={true}
+  >
+    software engineering
+  </button>
+  <button
+    className="Tag__TagWrapper-sc-1dh2aa8-0 bCioSy"
+    disabled={false}
+    selected={false}
+  >
+    product design
+  </button>
+  <button
+    className="Tag__TagWrapper-sc-1dh2aa8-0 bCioSy"
+    disabled={false}
+    selected={false}
+  >
+    digital transformation
+  </button>
+</div>
+`;
+
+exports[`Storyshots Components/Tag selectedTag 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <button
+    className="Tag__TagWrapper-sc-1dh2aa8-0 cIWlIV"
+    disabled={false}
+    selected={true}
+  >
+    devops
+  </button>
+  <button
+    className="Tag__TagWrapper-sc-1dh2aa8-0 cIWlIV"
+    disabled={false}
+    selected={true}
+  >
+    software engineering
+  </button>
+  <button
+    className="Tag__TagWrapper-sc-1dh2aa8-0 bCioSy"
+    disabled={false}
+    selected={false}
+  >
+    product design
+  </button>
+  <button
+    className="Tag__TagWrapper-sc-1dh2aa8-0 bCioSy"
+    disabled={false}
+    selected={false}
+  >
+    digital transformation
+  </button>
+</div>
+`;
+
+exports[`Storyshots Units/Tag Default 1`] = `
+<div
+  className="Layout__LayoutWrapper-v8gb7g-0 keuwsA"
+  display="block"
+  overflow="hidden"
+>
+  <div
+    className="sc-AxjAm eFwvwZ"
+    data-testid={null}
+  >
+    <button
+      className="Tag__TagWrapper-sc-1dh2aa8-0 bCioSy"
+      disabled={false}
+      selected={false}
+    >
+      Default Tag
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Tag Disabled 1`] = `
+<div
+  className="Layout__LayoutWrapper-v8gb7g-0 keuwsA"
+  display="block"
+  overflow="hidden"
+>
+  <div
+    className="sc-AxjAm eFwvwZ"
+    data-testid={null}
+  >
+    <button
+      className="Tag__TagWrapper-sc-1dh2aa8-0 jpSajg"
+      disabled={true}
+      selected={false}
+    >
+      devops
+    </button>
+    <button
+      className="Tag__TagWrapper-sc-1dh2aa8-0 jpSajg"
+      disabled={true}
+      selected={false}
+    >
+      software engineering
+    </button>
+    <button
+      className="Tag__TagWrapper-sc-1dh2aa8-0 jpSajg"
+      disabled={true}
+      selected={false}
+    >
+      product design
+    </button>
+    <button
+      className="Tag__TagWrapper-sc-1dh2aa8-0 jpSajg"
+      disabled={true}
+      selected={false}
+    >
+      digital transformation
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Tag No Cross 1`] = `
+<div
+  className="Layout__LayoutWrapper-v8gb7g-0 keuwsA"
+  display="block"
+  overflow="hidden"
+>
+  <div
+    className="sc-AxjAm eFwvwZ"
+    data-testid={null}
+  >
+    <button
+      className="Tag__TagWrapper-sc-1dh2aa8-0 krNWfN"
+      disabled={false}
+      selected={true}
+    >
+      devops
+    </button>
+    <button
+      className="Tag__TagWrapper-sc-1dh2aa8-0 krNWfN"
+      disabled={false}
+      selected={true}
+    >
+      software engineering
+    </button>
+    <button
+      className="Tag__TagWrapper-sc-1dh2aa8-0 bCioSy"
+      disabled={false}
+      selected={false}
+    >
+      product design
+    </button>
+    <button
+      className="Tag__TagWrapper-sc-1dh2aa8-0 bCioSy"
+      disabled={false}
+      selected={false}
+    >
+      digital transformation
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Tag Selected 1`] = `
+<div
+  className="Layout__LayoutWrapper-v8gb7g-0 keuwsA"
+  display="block"
+  overflow="hidden"
+>
+  <div
+    className="sc-AxjAm eFwvwZ"
+    data-testid={null}
+  >
+    <button
+      className="Tag__TagWrapper-sc-1dh2aa8-0 cIWlIV"
+      disabled={false}
+      selected={true}
+    >
+      devops
+    </button>
+    <button
+      className="Tag__TagWrapper-sc-1dh2aa8-0 cIWlIV"
+      disabled={false}
+      selected={true}
+    >
+      software engineering
+    </button>
+    <button
+      className="Tag__TagWrapper-sc-1dh2aa8-0 bCioSy"
+      disabled={false}
+      selected={false}
+    >
+      product design
+    </button>
+    <button
+      className="Tag__TagWrapper-sc-1dh2aa8-0 bCioSy"
+      disabled={false}
+      selected={false}
+    >
+      digital transformation
+    </button>
+  </div>
+</div>
+`;

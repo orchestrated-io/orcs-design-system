@@ -1,0 +1,327 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Expandable Default Expandable 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 bfPdXE"
+  data-testid={null}
+>
+  <div
+    className="Expandable__Item-na4gdb-0 dfSpXr"
+  >
+    <button
+      className="Expandable__Button-na4gdb-1 kkyPOz"
+      onClick={[Function]}
+    >
+      <div
+        className="sc-AxjAm eFwvwZ"
+        data-testid={null}
+      >
+        <div
+          className="Expandable__Text-na4gdb-2 kgTlSW"
+        >
+          <h4
+            className="Typography__H4-sc-1613j99-3 cvPFAr"
+          >
+            Details
+          </h4>
+        </div>
+      </div>
+    </button>
+    <div
+      className="Expandable__Content-na4gdb-3 dNUyVo"
+    >
+      <p
+        className="Typography__P-sc-1613j99-6 cdYHMX"
+      >
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Expandable Expandable with badge 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 bfPdXE"
+  data-testid={null}
+>
+  <div
+    className="Expandable__Item-na4gdb-0 dfSpXr"
+  >
+    <button
+      className="Expandable__Button-na4gdb-1 kkyPOz"
+      onClick={[Function]}
+    >
+      <div
+        className="sc-AxjAm eFwvwZ"
+        data-testid={null}
+      >
+        <div
+          className="Expandable__Text-na4gdb-2 kgTlSW"
+        >
+          <h4
+            className="Typography__H4-sc-1613j99-3 cvPFAr"
+          >
+            Complex example
+          </h4>
+        </div>
+        <span
+          className="Badge__Item-sc-9r75kj-0 feOvPK"
+        >
+          status
+        </span>
+      </div>
+    </button>
+    <div
+      className="Expandable__Content-na4gdb-3 dNUyVo"
+    >
+      <p
+        className="Typography__P-sc-1613j99-6 cdYHMX"
+      >
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Expandable Expandable with subtitle 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 bfPdXE"
+  data-testid={null}
+>
+  <div
+    className="Expandable__Item-na4gdb-0 dfSpXr"
+  >
+    <button
+      className="Expandable__Button-na4gdb-1 kkyPOz"
+      onClick={[Function]}
+    >
+      <div
+        className="sc-AxjAm eFwvwZ"
+        data-testid={null}
+      >
+        <div
+          className="Expandable__Text-na4gdb-2 kgTlSW"
+        >
+          <h4
+            className="Typography__H4-sc-1613j99-3 cvPFAr"
+          >
+            Complex example
+          </h4>
+          <span
+            className="sc-AxirZ lfuUzL"
+          >
+            Subtitle
+          </span>
+        </div>
+      </div>
+    </button>
+    <div
+      className="Expandable__Content-na4gdb-3 dNUyVo"
+    >
+      <p
+        className="Typography__P-sc-1613j99-6 cdYHMX"
+      >
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Expandable Open Expandable 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 bfPdXE"
+  data-testid={null}
+>
+  <div
+    className="Expandable__Item-na4gdb-0 dfSpXr"
+  >
+    <button
+      aria-expanded={true}
+      className="Expandable__Button-na4gdb-1 jXwJcg"
+      onClick={[Function]}
+      open={true}
+    >
+      <div
+        className="sc-AxjAm eFwvwZ"
+        data-testid={null}
+      >
+        <div
+          className="Expandable__Text-na4gdb-2 kgTlSW"
+        >
+          <h4
+            className="Typography__H4-sc-1613j99-3 cvPFAr"
+          >
+            Details
+          </h4>
+        </div>
+      </div>
+    </button>
+    <div
+      className="Expandable__Content-na4gdb-3 hhEXij"
+      open={true}
+    >
+      <p
+        className="Typography__P-sc-1613j99-6 cdYHMX"
+      >
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Expandable Default Expandable 1`] = `
+<div
+  className="Expandable__Item-na4gdb-0 dfSpXr"
+>
+  <button
+    className="Expandable__Button-na4gdb-1 kkyPOz"
+    onClick={[Function]}
+  >
+    <div
+      className="sc-AxjAm eFwvwZ"
+      data-testid={null}
+    >
+      <div
+        className="Expandable__Text-na4gdb-2 kgTlSW"
+      >
+        <h4
+          className="Typography__H4-sc-1613j99-3 cvPFAr"
+        >
+          Details
+        </h4>
+      </div>
+    </div>
+  </button>
+  <div
+    className="Expandable__Content-na4gdb-3 dNUyVo"
+  >
+    <p
+      className="Typography__P-sc-1613j99-6 cdYHMX"
+    >
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Expandable Expandable With Badge 1`] = `
+<div
+  className="Expandable__Item-na4gdb-0 dfSpXr"
+>
+  <button
+    className="Expandable__Button-na4gdb-1 kkyPOz"
+    onClick={[Function]}
+  >
+    <div
+      className="sc-AxjAm eFwvwZ"
+      data-testid={null}
+    >
+      <div
+        className="Expandable__Text-na4gdb-2 kgTlSW"
+      >
+        <h4
+          className="Typography__H4-sc-1613j99-3 cvPFAr"
+        >
+          Complex example
+        </h4>
+      </div>
+      <span
+        className="Badge__Item-sc-9r75kj-0 feOvPK"
+      >
+        status
+      </span>
+    </div>
+  </button>
+  <div
+    className="Expandable__Content-na4gdb-3 dNUyVo"
+  >
+    <p
+      className="Typography__P-sc-1613j99-6 cdYHMX"
+    >
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Expandable Expandable With Subtitle 1`] = `
+<div
+  className="Expandable__Item-na4gdb-0 dfSpXr"
+>
+  <button
+    className="Expandable__Button-na4gdb-1 kkyPOz"
+    onClick={[Function]}
+  >
+    <div
+      className="sc-AxjAm eFwvwZ"
+      data-testid={null}
+    >
+      <div
+        className="Expandable__Text-na4gdb-2 kgTlSW"
+      >
+        <h4
+          className="Typography__H4-sc-1613j99-3 cvPFAr"
+        >
+          Complex example
+        </h4>
+        <span
+          className="sc-AxirZ lfuUzL"
+        >
+          Subtitle
+        </span>
+      </div>
+    </div>
+  </button>
+  <div
+    className="Expandable__Content-na4gdb-3 dNUyVo"
+  >
+    <p
+      className="Typography__P-sc-1613j99-6 cdYHMX"
+    >
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Expandable Open Expandable 1`] = `
+<div
+  className="Expandable__Item-na4gdb-0 dfSpXr"
+>
+  <button
+    aria-expanded={true}
+    className="Expandable__Button-na4gdb-1 jXwJcg"
+    onClick={[Function]}
+    open={true}
+  >
+    <div
+      className="sc-AxjAm eFwvwZ"
+      data-testid={null}
+    >
+      <div
+        className="Expandable__Text-na4gdb-2 kgTlSW"
+      >
+        <h4
+          className="Typography__H4-sc-1613j99-3 cvPFAr"
+        >
+          Details
+        </h4>
+      </div>
+    </div>
+  </button>
+  <div
+    className="Expandable__Content-na4gdb-3 hhEXij"
+    open={true}
+  >
+    <p
+      className="Typography__P-sc-1613j99-6 cdYHMX"
+    >
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+    </p>
+  </div>
+</div>
+`;

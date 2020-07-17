@@ -11,7 +11,7 @@ import Icon from "../Icon";
 
 const ButtonStyles = compose(space, layout, color, border);
 
-const Item = styled("button")
+const StyledButton = styled("button")
   .attrs(props => ({
     "data-testid": props.dataTestId
       ? props.dataTestId
@@ -52,8 +52,8 @@ const Item = styled("button")
         : props.large
         ? "3"
         : "2",
-      py: props.small ? "xxs" : props.large ? "s" : "xs",
-      px: props.large ? "r" : props.small ? "xs" : "s",
+      py: props.large ? "s" : props.small ? "xxs" : "xs",
+      px: props.large ? "r" : props.small ? "s" : "between",
       svg: {
         marginRight: !props.iconLeft ? "" : props.small ? "xs" : "s",
         marginLeft: !props.iconRight ? "" : props.small ? "xs" : "s"
@@ -73,6 +73,20 @@ const Item = styled("button")
     variant({
       variants: {
         default: {},
+        transparent: {
+          bg: "transparent",
+          color: "greyDark",
+          borderColor: "transparent",
+          "&:hover": {
+            bg: "greyLighter",
+            borderColor: "greyLighter"
+          },
+          "&:focus": {
+            outline: "0",
+            boxShadow:
+              "0 0 0 3px " + rgba(themeGet("colors.greyLight")(props), 0.4)
+          }
+        },
         success: {
           bg: "successDark",
           color: "white",
@@ -103,11 +117,11 @@ const Item = styled("button")
         },
         disabled: {
           bg: "greyLighter",
-          color: "greyLight",
+          color: "grey",
           borderColor: "greyLighter",
           "&:hover": {
             bg: "greyLighter",
-            color: "greyLight",
+            color: "grey",
             borderColor: "greyLighter"
           }
         },
@@ -143,16 +157,20 @@ export const Button = ({
   dataTestId,
   disabled,
   theme,
+  leftIcon,
+  rightIcon,
   children,
   ...props
 }) => {
   return (
     <ThemeProvider theme={theme}>
-      <Item
+      <StyledButton
         large={large}
         small={small}
         fullWidth={fullWidth}
         isLoading={isLoading}
+        leftIcon={leftIcon}
+        rightIcon={rightIcon}
         iconLeft={iconLeft}
         iconRight={iconRight}
         iconOnly={iconOnly}
@@ -163,9 +181,11 @@ export const Button = ({
         variant={disabled ? "disabled" : null}
         {...props}
       >
+        {leftIcon && <Icon icon={leftIcon} mr={small ? "xxs" : "xs"} />}
         {children}
-        {isLoading ? <Icon icon={["fas", "circle-notch"]} spin ml="s" /> : null}
-      </Item>
+        {rightIcon && <Icon icon={rightIcon} ml={small ? "xxs" : "xs"} />}
+        {isLoading && <Icon icon={["fas", "circle-notch"]} spin ml="s" />}
+      </StyledButton>
     </ThemeProvider>
   );
 };
@@ -178,7 +198,14 @@ Button.propTypes = {
   /** Small button */
   small: PropTypes.bool,
   /** Specifies alternate button colours/styles. */
-  variant: PropTypes.oneOf(["success", "danger", "disabled", "ghost"]),
+  variant: PropTypes.oneOf([
+    "success",
+    "danger",
+    "disabled",
+    "ghost",
+    "transparent",
+    "default"
+  ]),
   /** Full width button that takes up all available space of parent */
   fullWidth: PropTypes.bool,
   /** Adds a spinner animation to indicate loading or processing */
@@ -187,6 +214,10 @@ Button.propTypes = {
   iconLeft: PropTypes.bool,
   /** Styles button to fit an icon on the right of text. Uses Icon component. */
   iconRight: PropTypes.bool,
+  /** New functionality to specify an `Icon` on the left side without having to include it as a child. */
+  leftIcon: PropTypes.array,
+  /** New functionality to specify an `Icon` on the right side without having to include it as a child. */
+  rightIcon: PropTypes.array,
   /** Styles button to suit having only an icon. Uses Icon component. */
   iconOnly: PropTypes.bool,
   /** Specifies whether the button is disabled. */

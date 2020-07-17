@@ -3,10 +3,10 @@ import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 import styled, { keyframes, ThemeProvider } from "styled-components";
 import variables from "../../variables";
+import Icon from "../Icon";
 import Button from "../Button";
 import Flex from "../Flex";
 import Box from "../Box";
-import Divider from "../Divider";
 import systemtheme from "../../systemtheme";
 
 const scaleIn = keyframes`
@@ -51,44 +51,25 @@ const Container = styled(Box)`
   animation: 300ms ${fadeIn} ease-in-out, 300ms ${scaleIn} ease-in-out;
 `;
 
-const Actions = styled(Flex)`
-  button + button {
-    margin-left: ${variables.defaultSpacingHalf};
-  }
-`;
-
-const Modal = props => {
-  const {
-    disabledConfirm,
-    disabledCancel,
-    children,
-    width,
-    height,
-    confirmText,
-    cancelText,
-    isDisplayFooter,
-    overflowVisible,
-    visible,
-    onConfirm,
-    onCancel,
-    theme,
-    ...restProps
-  } = props;
-
+const Modal = ({
+  children,
+  width,
+  height,
+  overflowVisible,
+  onClose,
+  theme,
+  visible,
+  ...restProps
+}) => {
   const handleKeypress = useCallback(
     event => {
       var code = event.keyCode || event.which;
-      if (code === 13) {
-        // 13 is the enter keycode
-        onConfirm();
-        // event.preventDefault();
-      } else if (code === 27) {
+      if (code === 27) {
         // 27 is the escape keycode
-        onCancel();
-        event.preventDefault();
+        onClose();
       }
     },
-    [onConfirm, onCancel]
+    [onClose]
   );
 
   useEffect(() => {
@@ -100,80 +81,74 @@ const Modal = props => {
   }, [handleKeypress]);
 
   return (
-    visible &&
-    ReactDOM.createPortal(
-      <ThemeProvider theme={theme}>
-        <Overlay alignItems="center" justifyContent="center" {...restProps}>
-          <Container
-            width={width}
-            height={height}
-            overflow={overflowVisible ? "visible" : "hidden"}
-            borderRadius={variables.borderRadius}
-            bg="white"
-          >
-            <Box p="r">{children}</Box>
-            {isDisplayFooter && (
-              <>
-                <Divider />
-                <Actions alignItems="center" p="r">
-                  <Button disabled={disabledConfirm} onClick={onConfirm}>
-                    {confirmText}
-                  </Button>
-                  <Button disabled={disabledCancel} ghost onClick={onCancel}>
-                    {cancelText}
-                  </Button>
-                </Actions>
-              </>
-            )}
-          </Container>
-        </Overlay>
-      </ThemeProvider>,
-      document.body
-    )
+    <ThemeProvider theme={theme}>
+      {visible &&
+        ReactDOM.createPortal(
+          <ThemeProvider theme={theme}>
+            <Overlay alignItems="center" justifyContent="center" {...restProps}>
+              <Container
+                width={width}
+                height={height}
+                overflow={overflowVisible ? "visible" : "hidden"}
+                borderRadius={variables.borderRadius}
+                bg="white"
+              >
+                <ThemeProvider theme={theme}>
+                  <Box p="r">
+                    <Flex justifyContent="flex-end">
+                      <Button
+                        onClick={onClose}
+                        small
+                        variant="transparent"
+                        px="6px"
+                      >
+                        <Icon
+                          icon={["fas", "times"]}
+                          color="greyDark"
+                          size="lg"
+                        />
+                      </Button>
+                    </Flex>
+                    {children}
+                  </Box>
+                </ThemeProvider>
+              </Container>
+            </Overlay>
+          </ThemeProvider>,
+          document.body
+        )}
+    </ThemeProvider>
   );
 };
 
 Modal.propTypes = {
+  /** Specifies the children of the Modal */
   children: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.string,
     PropTypes.node
   ]),
-  /** Specifies the width of the Dialogue in pixels */
+  /** Specifies the width of the Modal in pixels */
   width: PropTypes.string,
-  /** Specifies the height of the Dialogue in pixels */
+  /** Specifies the height of the Modal in pixels */
   height: PropTypes.string,
-  /** Specifies the visibility of the Dialogue */
+  /** Specifies the visibility of the Modal */
   visible: PropTypes.bool,
-  /** Specifies the text to use for the confirm button. Recommend using words like OK, Confirm, Yes, Proceed, Add, Save. */
-  confirmText: PropTypes.string,
   /** Specifies the function to run on clicking confirm button. Function must return a truthy value or a promise that resolves to a truthy value in order to close the dialogue (see example code) */
-  onConfirm: PropTypes.func.isRequired,
-  /** Specifies the text to use for the cancel button. Recommend using words like Cancel, Close, No. */
-  cancelText: PropTypes.string,
-  /** Specifies the function to run on clicking cancel button. (Note, dialogue is closed automatically) */
-  onCancel: PropTypes.func.isRequired,
-  /** Specifies an action when confirm button is clicked or Enter key pressed. Can return a promise */
-  disabledConfirm: PropTypes.bool,
-  /** Specifies the button disabled state */
-  disabledCancel: PropTypes.bool,
-  /** Specifies whether to hide the foot or not. Default: true - Show footer*/
-  isDisplayFooter: PropTypes.bool,
-  /** Specifies whether the Dialogue overflow is visible or not - Default: false. If height is not enough, verticle scroll bar will be displayed (overflow-y: auto) */
-  overflowVisible: PropTypes.bool
+  onConfirm: PropTypes.func,
+  /** Specifies the function to run on clicking X icon. Ensure that this function will close Modal through the `visible` prop */
+  onClose: PropTypes.func.isRequired,
+  /** Specifies whether the Modal overflow is visible or not. If height is not enough, vertical scrollbar will be displayed (`overflow-y: auto`) */
+  overflowVisible: PropTypes.bool,
+  /** Sets the theme for the Modal */
+  theme: PropTypes.object
 };
 
 Modal.defaultProps = {
-  disabledConfirm: false,
-  disabledCancel: false,
   width: "300px",
   height: "auto",
-  confirmText: "OK",
-  cancelText: "Cancel",
-  isDisplayFooter: true,
   overflowVisible: false,
   theme: systemtheme
 };
 
-/** @component */
 export default Modal;

@@ -11,4 +11,12 @@ export default {
 export const singleDate = () => (
   <DatePicker single numberOfMonths={1} displayFormat="DD/MM/YY" />
 );
+singleDate.parameters = {
+  storyshots: { disable: true }
+};
+
 export const dateRange = () => <DatePicker range displayFormat="DD/MM/YY" />;
+
+dateRange.parameters = {
+  storyshots: { disable: true }
+};

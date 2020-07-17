@@ -1,0 +1,733 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Card alternateCard 1`] = `
+<div
+  className="Card__Item-yfq75p-0 gMqXmz"
+>
+  <div
+    className="Card__Header-yfq75p-1 hQcgPp"
+  >
+    <span
+      className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+    >
+      <svg
+        className="svg-inline--fa fa-undefined"
+      />
+    </span>
+    <h3
+      className="Typography__H3-sc-1613j99-2 oYbxO"
+    >
+      Works for
+    </h3>
+    <h6
+      className="Typography__H6-sc-1613j99-5 bRBAKr"
+    >
+      18
+    </h6>
+  </div>
+  <div
+    className="Card__Content-yfq75p-2 goaCw"
+  >
+    <p
+      className="Typography__P-sc-1613j99-6 cdYHMX"
+    >
+      This is an alternate style card that supports an icon and moves the subtitle to the right of the title, rather than underneath it.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Card basicCard 1`] = `
+<div
+  className="Card__Item-yfq75p-0 gTxtqf"
+>
+  <div
+    className="Card__Header-yfq75p-1 hQcgPp"
+  >
+    <h3
+      className="Typography__H3-sc-1613j99-2 oYbxO"
+    >
+      Card title
+    </h3>
+    <h6
+      className="Typography__H6-sc-1613j99-5 bRBAKr"
+    >
+      Subtitle
+    </h6>
+  </div>
+  <div
+    className="Card__Content-yfq75p-2 goaCw"
+  >
+    <p
+      className="Typography__P-sc-1613j99-6 eqWAJp"
+    >
+      Card content lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+    <a
+      className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 isqNRL StyledLink"
+      data-testid={null}
+      href="#"
+    >
+      Learn more
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Card colouredCards 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Card__Item-yfq75p-0 iKBELc"
+    >
+      <div
+        className="Card__Header-yfq75p-1 hQcgPp"
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+        <h3
+          className="Typography__H3-sc-1613j99-2 oYbxO"
+        >
+          Locations
+        </h3>
+        <h6
+          className="Typography__H6-sc-1613j99-5 bRBAKr"
+        >
+          57
+        </h6>
+      </div>
+      <div
+        className="Card__Content-yfq75p-2 goaCw"
+      >
+        <p
+          className="Typography__P-sc-1613j99-6 cdYHMX"
+        >
+          This is an alternate style card that supports a coloured border, an icon and moves the subtitle to the right of the title, rather than underneath it.
+        </p>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Card__Item-yfq75p-0 cHzaXt"
+    >
+      <div
+        className="Card__Header-yfq75p-1 hQcgPp"
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+        <h3
+          className="Typography__H3-sc-1613j99-2 oYbxO"
+        >
+          Roles
+        </h3>
+        <h6
+          className="Typography__H6-sc-1613j99-5 bRBAKr"
+        >
+          Here is a subtitle
+        </h6>
+      </div>
+      <div
+        className="Card__Content-yfq75p-2 goaCw"
+      >
+        <p
+          className="Typography__P-sc-1613j99-6 cdYHMX"
+        >
+          This is an alternate style card that supports a coloured border, an icon and moves the subtitle to the right of the title, rather than underneath it.
+        </p>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Card__Item-yfq75p-0 hOEdXd"
+    >
+      <div
+        className="Card__Header-yfq75p-1 hQcgPp"
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+        <h3
+          className="Typography__H3-sc-1613j99-2 oYbxO"
+        >
+          4,539 People
+        </h3>
+        <small
+          className="Card__ChangeValue-yfq75p-4 cHegKK"
+        >
+          No change
+        </small>
+      </div>
+      <div
+        className="Card__Content-yfq75p-2 goaCw"
+      >
+        <p
+          className="Typography__P-sc-1613j99-6 cdYHMX"
+        >
+          This is an alternate style card that supports a coloured border, an icon and shows a delta change.
+        </p>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Card__Item-yfq75p-0 kQlLJV"
+    >
+      <div
+        className="Card__Header-yfq75p-1 hQcgPp"
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+        <h3
+          className="Typography__H3-sc-1613j99-2 oYbxO"
+        >
+          12 Divisions
+        </h3>
+        <div
+          className="Card__ChangeIcon-yfq75p-3 ibzsKd"
+        />
+        <small
+          className="Card__ChangeValue-yfq75p-4 cHegKK"
+        >
+          2 (-1%)
+        </small>
+      </div>
+      <div
+        className="Card__Content-yfq75p-2 goaCw"
+      >
+        <p
+          className="Typography__P-sc-1613j99-6 cdYHMX"
+        >
+          This is an alternate style card that supports a coloured border, an icon and shows a delta change.
+        </p>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Card__Item-yfq75p-0 dqqKLZ"
+    >
+      <div
+        className="Card__Header-yfq75p-1 hQcgPp"
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+        <h3
+          className="Typography__H3-sc-1613j99-2 oYbxO"
+        >
+          289 Teams
+        </h3>
+        <div
+          className="Card__ChangeIcon-yfq75p-3 pxfpD"
+        />
+        <small
+          className="Card__ChangeValue-yfq75p-4 cHegKK"
+        >
+          9 (+2%)
+        </small>
+      </div>
+      <div
+        className="Card__Content-yfq75p-2 goaCw"
+      >
+        <p
+          className="Typography__P-sc-1613j99-6 cdYHMX"
+        >
+          This is an alternate style card that supports a coloured border, an icon and shows a delta change.
+        </p>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Components/Card complexCard 1`] = `
+<div
+  className="sc-AxjAm eKMUxE"
+  data-testid={null}
+>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 gHANPZ"
+  >
+    <div
+      className="Card__Item-yfq75p-0 kDqDaU"
+    >
+      <div
+        className="Card__Content-yfq75p-2 goaCw"
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kfbvmR"
+          color="greyLight"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+        <h3
+          className="Typography__H3-sc-1613j99-2 oYbxO"
+        >
+          Create new
+        </h3>
+        <p
+          className="Typography__P-sc-1613j99-6 cdYHMX"
+        >
+          Start with a blank slate and add your own data
+        </p>
+        <button
+          className="sc-AxiKw hELyNG"
+          data-testid={null}
+          disabled={false}
+        >
+          Start fresh
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 gHANPZ"
+  >
+    <div
+      className="Card__Item-yfq75p-0 kDqDaU"
+    >
+      <div
+        className="Card__Content-yfq75p-2 goaCw"
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kfbvmR"
+          color="greyLight"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+        <h3
+          className="Typography__H3-sc-1613j99-2 oYbxO"
+        >
+          Explore app
+        </h3>
+        <p
+          className="Typography__P-sc-1613j99-6 cdYHMX"
+        >
+          Look at pre-populated data to see app in action
+        </p>
+        <button
+          className="sc-AxiKw hELyNG"
+          data-testid={null}
+          disabled={false}
+        >
+          View example
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Card Alternate card 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gjygQu"
+  data-testid={null}
+>
+  <div
+    className="Card__Item-yfq75p-0 gMqXmz"
+  >
+    <div
+      className="Card__Header-yfq75p-1 hQcgPp"
+    >
+      <span
+        className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+      >
+        <svg
+          className="svg-inline--fa fa-undefined"
+        />
+      </span>
+      <h3
+        className="Typography__H3-sc-1613j99-2 oYbxO"
+      >
+        Works for
+      </h3>
+      <h6
+        className="Typography__H6-sc-1613j99-5 bRBAKr"
+      >
+        18
+      </h6>
+    </div>
+    <div
+      className="Card__Content-yfq75p-2 goaCw"
+    >
+      <p
+        className="Typography__P-sc-1613j99-6 cdYHMX"
+      >
+        This is an alternate style card that supports an icon and moves the subtitle to the right of the title, rather than underneath it.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Card Basic card 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gjygQu"
+  data-testid={null}
+>
+  <div
+    className="Card__Item-yfq75p-0 gTxtqf"
+  >
+    <div
+      className="Card__Header-yfq75p-1 hQcgPp"
+    >
+      <h3
+        className="Typography__H3-sc-1613j99-2 oYbxO"
+      >
+        Card title
+      </h3>
+      <h6
+        className="Typography__H6-sc-1613j99-5 bRBAKr"
+      >
+        Subtitle
+      </h6>
+    </div>
+    <div
+      className="Card__Content-yfq75p-2 goaCw"
+    >
+      <p
+        className="Typography__P-sc-1613j99-6 eqWAJp"
+      >
+        Card content lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <a
+        className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 isqNRL StyledLink"
+        data-testid={null}
+        href="#"
+      >
+        Learn more
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Card Coloured cards 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gjygQu"
+  data-testid={null}
+>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Card__Item-yfq75p-0 iKBELc"
+    >
+      <div
+        className="Card__Header-yfq75p-1 hQcgPp"
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+        <h3
+          className="Typography__H3-sc-1613j99-2 oYbxO"
+        >
+          Locations
+        </h3>
+        <h6
+          className="Typography__H6-sc-1613j99-5 bRBAKr"
+        >
+          57
+        </h6>
+      </div>
+      <div
+        className="Card__Content-yfq75p-2 goaCw"
+      >
+        <p
+          className="Typography__P-sc-1613j99-6 cdYHMX"
+        >
+          This is an alternate style card that supports a coloured border, an icon and moves the subtitle to the right of the title, rather than underneath it.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Card__Item-yfq75p-0 cHzaXt"
+    >
+      <div
+        className="Card__Header-yfq75p-1 hQcgPp"
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+        <h3
+          className="Typography__H3-sc-1613j99-2 oYbxO"
+        >
+          Roles
+        </h3>
+        <h6
+          className="Typography__H6-sc-1613j99-5 bRBAKr"
+        >
+          Here is a subtitle
+        </h6>
+      </div>
+      <div
+        className="Card__Content-yfq75p-2 goaCw"
+      >
+        <p
+          className="Typography__P-sc-1613j99-6 cdYHMX"
+        >
+          This is an alternate style card that supports a coloured border, an icon and moves the subtitle to the right of the title, rather than underneath it.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Card__Item-yfq75p-0 hOEdXd"
+    >
+      <div
+        className="Card__Header-yfq75p-1 hQcgPp"
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+        <h3
+          className="Typography__H3-sc-1613j99-2 oYbxO"
+        >
+          4,539 People
+        </h3>
+        <small
+          className="Card__ChangeValue-yfq75p-4 cHegKK"
+        >
+          No change
+        </small>
+      </div>
+      <div
+        className="Card__Content-yfq75p-2 goaCw"
+      >
+        <p
+          className="Typography__P-sc-1613j99-6 cdYHMX"
+        >
+          This is an alternate style card that supports a coloured border, an icon and shows a delta change.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Card__Item-yfq75p-0 kQlLJV"
+    >
+      <div
+        className="Card__Header-yfq75p-1 hQcgPp"
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+        <h3
+          className="Typography__H3-sc-1613j99-2 oYbxO"
+        >
+          12 Divisions
+        </h3>
+        <div
+          className="Card__ChangeIcon-yfq75p-3 ibzsKd"
+        />
+        <small
+          className="Card__ChangeValue-yfq75p-4 cHegKK"
+        >
+          2 (-1%)
+        </small>
+      </div>
+      <div
+        className="Card__Content-yfq75p-2 goaCw"
+      >
+        <p
+          className="Typography__P-sc-1613j99-6 cdYHMX"
+        >
+          This is an alternate style card that supports a coloured border, an icon and shows a delta change.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Card__Item-yfq75p-0 dqqKLZ"
+    >
+      <div
+        className="Card__Header-yfq75p-1 hQcgPp"
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+        <h3
+          className="Typography__H3-sc-1613j99-2 oYbxO"
+        >
+          289 Teams
+        </h3>
+        <div
+          className="Card__ChangeIcon-yfq75p-3 pxfpD"
+        />
+        <small
+          className="Card__ChangeValue-yfq75p-4 cHegKK"
+        >
+          9 (+2%)
+        </small>
+      </div>
+      <div
+        className="Card__Content-yfq75p-2 goaCw"
+      >
+        <p
+          className="Typography__P-sc-1613j99-6 cdYHMX"
+        >
+          This is an alternate style card that supports a coloured border, an icon and shows a delta change.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Card Complex card 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gjygQu"
+  data-testid={null}
+>
+  <div
+    className="sc-AxjAm eKMUxE"
+    data-testid={null}
+  >
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 gHANPZ"
+    >
+      <div
+        className="Card__Item-yfq75p-0 kDqDaU"
+      >
+        <div
+          className="Card__Content-yfq75p-2 goaCw"
+        >
+          <span
+            className="Icon__IconWrapper-xeqnbo-0 kfbvmR"
+            color="greyLight"
+          >
+            <svg
+              className="svg-inline--fa fa-undefined"
+            />
+          </span>
+          <h3
+            className="Typography__H3-sc-1613j99-2 oYbxO"
+          >
+            Create new
+          </h3>
+          <p
+            className="Typography__P-sc-1613j99-6 cdYHMX"
+          >
+            Start with a blank slate and add your own data
+          </p>
+          <button
+            className="sc-AxiKw hELyNG"
+            data-testid={null}
+            disabled={false}
+          >
+            Start fresh
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 gHANPZ"
+    >
+      <div
+        className="Card__Item-yfq75p-0 kDqDaU"
+      >
+        <div
+          className="Card__Content-yfq75p-2 goaCw"
+        >
+          <span
+            className="Icon__IconWrapper-xeqnbo-0 kfbvmR"
+            color="greyLight"
+          >
+            <svg
+              className="svg-inline--fa fa-undefined"
+            />
+          </span>
+          <h3
+            className="Typography__H3-sc-1613j99-2 oYbxO"
+          >
+            Explore app
+          </h3>
+          <p
+            className="Typography__P-sc-1613j99-6 cdYHMX"
+          >
+            Look at pre-populated data to see app in action
+          </p>
+          <button
+            className="sc-AxiKw hELyNG"
+            data-testid={null}
+            disabled={false}
+          >
+            View example
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

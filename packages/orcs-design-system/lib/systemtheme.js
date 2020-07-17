@@ -48,6 +48,7 @@ space.l = space[5];
 space.xl = space[6];
 space.xxl = space[7];
 space.xxxl = space[8];
+space.between = "10px";
 
 // SIZES (for LAYOUT properties)
 export const sizes = [

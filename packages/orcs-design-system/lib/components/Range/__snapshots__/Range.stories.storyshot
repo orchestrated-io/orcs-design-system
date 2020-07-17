@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Range defaultRange 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <div
+    className="Range__Wrapper-zb0zps-0 jjvWhp"
+    max={20}
+    min={0}
+  >
+    <input
+      className="Range__Input-zb0zps-1 faEVHp"
+      type="range"
+    />
+    <output
+      className="Range__Output-zb0zps-2 dQbfcl"
+    >
+      10
+    </output>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Range invertedRange 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <div
+    className="Box__BoxWrapper-jr1api-0 cQxHnQ"
+    data-testid={null}
+  >
+    <div
+      className="Range__Wrapper-zb0zps-0 hudaPL"
+      max={20}
+      min={0}
+    >
+      <input
+        className="Range__Input-zb0zps-1 faEVHp"
+        type="range"
+      />
+      <output
+        className="Range__Output-zb0zps-2 dQbfcl"
+      >
+        10
+      </output>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Range Default 1`] = `
+<div
+  className="Range__Wrapper-zb0zps-0 jjvWhp"
+  max={20}
+  min={0}
+>
+  <input
+    className="Range__Input-zb0zps-1 faEVHp"
+    type="range"
+  />
+  <output
+    className="Range__Output-zb0zps-2 dQbfcl"
+  >
+    10
+  </output>
+</div>
+`;
+
+exports[`Storyshots Units/Range Inverted 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 cQxHnQ"
+  data-testid={null}
+>
+  <div
+    className="Range__Wrapper-zb0zps-0 hudaPL"
+    max={20}
+    min={0}
+  >
+    <input
+      className="Range__Input-zb0zps-1 faEVHp"
+      type="range"
+    />
+    <output
+      className="Range__Output-zb0zps-2 dQbfcl"
+    >
+      10
+    </output>
+  </div>
+</div>
+`;

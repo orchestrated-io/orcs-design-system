@@ -1,6 +1,6 @@
 {
   "name": "orcs-design-system",
-  "version": "0.9.87",
+  "version": "0.9.88",
   "description": "Orchestrated Design System: ORCS",
   "main": "es/index.js",
   "module": "es/index.js",
@@ -9,8 +9,8 @@
   "scripts": {
     "audit-ci": "audit-ci -m --config ./audit-ci.json",
     "lint": "CI=true eslint --max-warnings=0 lib/",
-    "test": "node scripts/test.js --env=jsdom",
-    "test-coverage": "node scripts/test.js --env=jsdom --coverage",
+    "test": "jest",
+    "test-coverage": "jest --collectCoverage",
     "build": "styleguidist build",
     "dist": "BABEL_ENV=es babel lib -d es",
     "module": "BABEL_ENV=es babel lib -d es",
@@ -27,12 +27,15 @@
     "@styled-system/theme-get": "^5.1.2",
     "polished": "^3.6.0",
     "prop-types": "^15.6.2",
+    "react": "^16.13.0",
     "react-dates": "^21.8.0",
     "react-docgen": "^5.3.0",
     "react-number-format": "^4.4.1",
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
     "react-select": "^3.0.8",
+    "react-test-renderer": "^16.13.0",
+    "styled-components": "^5.1.0",
     "styled-components-grid": "^2.2.2",
     "styled-is": "^1.3.0",
     "styled-system": "^5.1.5"
@@ -54,6 +57,7 @@
     "@storybook/addon-docs": "^6.0.0-beta.28",
     "@storybook/addon-knobs": "^6.0.0-beta.28",
     "@storybook/addon-links": "^6.0.0-beta.28",
+    "@storybook/addon-storyshots": "^5.3.19",
     "@storybook/addon-viewport": "^6.0.0-beta.28",
     "@storybook/addons": "^6.0.0-beta.33",
     "@storybook/preset-create-react-app": "^1.5.2",
@@ -84,12 +88,10 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^25.5.4",
     "prettier": "^1.19.1",
-    "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "serverless": "^1.69.0",
     "serverless-finch": "^2.5.2",
     "style-loader": "^1.2.1",
-    "styled-components": "^5.1.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
   },
@@ -102,6 +104,15 @@
     "es"
   ],
   "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 50,
+        "functions": 50,
+        "lines": 50,
+        "statements": 50
+      }
+    },
+    "collectCoverage": true,
     "collectCoverageFrom": [
       "lib/**/*.{js,jsx,mjs}"
     ],
@@ -112,6 +123,10 @@
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less)$": "identity-obj-proxy"
+    },
+    "transform": {
+      "^.+\\.[tj]sx?$": "babel-jest",
+      "^.+\\.mdx?$": "@storybook/addon-docs/jest-transform-mdx"
     }
   },
   "eslintConfig": {

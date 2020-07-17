@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Flex Basic Flex 1`] = `
+<div
+  className="sc-AxjAm eFwvwZ"
+  data-testid={null}
+>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
+  >
+    <button
+      className="sc-AxiKw hELyNG"
+      data-testid={null}
+      disabled={false}
+    >
+      Button 1
+    </button>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
+  >
+    <button
+      className="sc-AxiKw hELyNG"
+      data-testid={null}
+      disabled={false}
+    >
+      Button 2
+    </button>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
+  >
+    <button
+      className="sc-AxiKw hELyNG"
+      data-testid={null}
+      disabled={false}
+    >
+      Button 3
+    </button>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
+  >
+    <button
+      className="sc-AxiKw hELyNG"
+      data-testid={null}
+      disabled={false}
+    >
+      Button 4
+    </button>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
+  >
+    <button
+      className="sc-AxiKw hELyNG"
+      data-testid={null}
+      disabled={false}
+    >
+      Button 5
+    </button>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
+  >
+    <button
+      className="sc-AxiKw hELyNG"
+      data-testid={null}
+      disabled={false}
+    >
+      Button 6
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Flex Using Flex Item 1`] = `
+<div
+  className="sc-AxjAm eFwvwZ"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexItem-sc-1f3kfw7-0 dqPHPl"
+  >
+    <button
+      className="sc-AxiKw iaTMT"
+      data-testid={null}
+      disabled={false}
+    >
+      Right aligned icon
+      <span
+        className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+      >
+        <svg
+          className="svg-inline--fa fa-undefined"
+        />
+      </span>
+    </button>
+  </div>
+  <div
+    className="Flex__FlexItem-sc-1f3kfw7-0 dqPHPl"
+  >
+    <button
+      className="sc-AxiKw hELyNG"
+      data-testid={null}
+      disabled={false}
+    >
+      Default button
+    </button>
+  </div>
+  <div
+    className="Flex__FlexItem-sc-1f3kfw7-0 dqPHPl"
+  >
+    <button
+      className="sc-AxiKw hELyNG"
+      data-testid={null}
+      disabled={false}
+    >
+      Ghost button
+    </button>
+  </div>
+  <div
+    className="Flex__FlexItem-sc-1f3kfw7-0 fVOPqd"
+  >
+    <button
+      className="sc-AxiKw hEWWBp"
+      data-testid={null}
+      disabled={true}
+    >
+      Disabled button
+    </button>
+  </div>
+</div>
+`;
