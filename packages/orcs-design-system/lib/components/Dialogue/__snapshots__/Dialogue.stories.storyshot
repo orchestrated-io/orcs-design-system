@@ -32,6 +32,6 @@ exports[`Storyshots Components/Dialogue Edit Dialogue 1`] = `
       className="svg-inline--fa fa-undefined"
     />
   </span>
-  Edit Project
+  Modify Details
 </button>
 `;
