@@ -31,8 +31,8 @@ const Basic = () => {
       <Button onClick={handleOnButtonClick}>Open Modal</Button>
       <Modal
         visible={visible}
-        onConfirm={handleOnConfirm}
-        onClose={handleOnClose}
+        handleOnConfirm={handleOnConfirm}
+        handleOnClose={handleOnClose}
       >
         <Spacer mb="r">
           <H3>Modal Title</H3>
@@ -63,8 +63,8 @@ basicModal.parameters = {
           <Button onClick={handleOnButtonClick}>Open Modal</Button>
           <Modal
             visible={visible}
-            onConfirm={handleOnConfirm}
-            onClose={handleOnClose}
+            handleOnConfirm={handleOnConfirm}
+            handleOnClose={handleOnClose}
           >
             <Spacer mb="r">
               <H3>Modal Title</H3>

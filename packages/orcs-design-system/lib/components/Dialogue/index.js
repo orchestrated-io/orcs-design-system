@@ -15,13 +15,13 @@ const CustomModal = ({
   handleConfirm,
   handleCancel,
   visible,
-  onClose,
+  handleOnClose,
   cancelProps,
   confirmProps,
   ...props
 }) => {
   return (
-    <Modal visible={visible} onClose={onClose} {...props}>
+    <Modal visible={visible} handleOnClose={handleOnClose} {...props}>
       <Spacer p="s">
         {children}
         <Divider light />
@@ -51,7 +51,7 @@ const Dialogue = ({
   cancelProps,
   handleConfirm,
   handleCancel,
-  onClose,
+  handleOnClose,
   theme,
   ...props
 }) => {
@@ -65,7 +65,7 @@ const Dialogue = ({
         cancelAction={cancelAction}
         handleConfirm={handleConfirm}
         handleCancel={handleCancel}
-        onClose={onClose}
+        handleOnClose={handleOnClose}
         cancelProps={cancelProps}
         confirmProps={confirmProps}
         {...props}
@@ -88,7 +88,7 @@ Dialogue.propTypes = {
   /** Sets the additional function to run for handleCancel  */
   cancelAction: PropTypes.func,
   /** Sets the function to run on clicking the `X` button on the top right corner */
-  onClose: PropTypes.func,
+  handleOnClose: PropTypes.func,
   /** Set the text for the Confirm button. */
   confirmText: PropTypes.string,
   /** Set the text for the Cancel button. */
@@ -114,9 +114,8 @@ CustomModal.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.element]),
   handleConfirm: PropTypes.func,
   handleCancel: PropTypes.func,
-  onClose: PropTypes.func,
-  visible: PropTypes.bool,
   handleOnClose: PropTypes.func,
+  visible: PropTypes.bool,
   /** Set the properties for the Cancel button. See `Button` for accepted props. */
   cancelProps: PropTypes.object,
   /** Set the properties for the Confirm button. See `Button` for accepted props. */
