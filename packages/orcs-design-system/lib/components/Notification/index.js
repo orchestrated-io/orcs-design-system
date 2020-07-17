@@ -115,7 +115,6 @@ export const Notification = ({
   left,
   centered,
   closable,
-  onDismiss,
   theme,
   ...props
 }) => {
@@ -135,7 +134,6 @@ export const Notification = ({
           bottom={bottom}
           left={left}
           centered={centered}
-          onDismiss={onDismiss}
           {...props}
         >
           {icon && (
@@ -174,8 +172,6 @@ Notification.propTypes = {
   left: PropTypes.string,
   /** Horizontally centers a floating notification. If you use this, you don't need to specify left or right props, only top or bottom depending on if you want the notification to sit at the top or bottom of the screen */
   centered: PropTypes.bool,
-  /** A callback function for the dismiss operation.*/
-  onDismiss: PropTypes.func,
   /** Showing the close button, default to true.*/
   closable: PropTypes.bool,
   /** Specifies the system design theme. */
