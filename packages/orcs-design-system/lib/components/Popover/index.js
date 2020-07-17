@@ -14,7 +14,7 @@ ${layout}
     props.inlineBlock ? "inline-block !important" : "block !important"};
   position: relative;
   &:hover {
-    > div {
+    .tooltip {
       opacity: 1;
       z-index: 100;
       visibility: visible;
@@ -157,7 +157,12 @@ export default function Popover({
   return (
     <ThemeProvider theme={theme}>
       <Container inlineBlock={inlineBlock} {...props}>
-        <Text textAlign={textAlign} direction={direction} width={width}>
+        <Text
+          className="tooltip"
+          textAlign={textAlign}
+          direction={direction}
+          width={width}
+        >
           {text}
         </Text>
         {children}
