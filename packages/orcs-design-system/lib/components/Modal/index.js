@@ -2,7 +2,7 @@ import React, { useEffect, useCallback } from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 import styled, { keyframes, ThemeProvider } from "styled-components";
-import variables from "../../variables";
+import { css } from "@styled-system/css";
 import Icon from "../Icon";
 import Button from "../Button";
 import Flex from "../Flex";
@@ -51,6 +51,14 @@ const Container = styled(Box)`
   animation: 300ms ${fadeIn} ease-in-out, 300ms ${scaleIn} ease-in-out;
 `;
 
+const CloseButton = styled(Button)(
+  css({
+    position: "absolute",
+    top: "r",
+    right: "r"
+  })
+);
+
 const Modal = ({
   children,
   width,
@@ -90,25 +98,26 @@ const Modal = ({
                 width={width}
                 height={height}
                 overflow={overflowVisible ? "visible" : "hidden"}
-                borderRadius={variables.borderRadius}
+                borderRadius="2"
                 bg="white"
               >
                 <ThemeProvider theme={theme}>
                   <Box p="r">
-                    <Flex justifyContent="flex-end">
-                      <Button
-                        onClick={onClose}
-                        small
-                        variant="transparent"
-                        px="6px"
-                      >
-                        <Icon
-                          icon={["fas", "times"]}
-                          color="greyDark"
-                          size="lg"
-                        />
-                      </Button>
-                    </Flex>
+                    <CloseButton
+                      onClick={onClose}
+                      small
+                      variant="transparent"
+                      px="6px"
+                      position="absolute"
+                      top="0"
+                      right="0"
+                    >
+                      <Icon
+                        icon={["fas", "times"]}
+                        color="greyDark"
+                        size="lg"
+                      />
+                    </CloseButton>
                     {children}
                   </Box>
                 </ThemeProvider>
@@ -135,7 +144,7 @@ Modal.propTypes = {
   /** Specifies the visibility of the Modal */
   visible: PropTypes.bool,
   /** Specifies the function to run on clicking X icon. Ensure that this function will close Modal through the `visible` prop */
-  onClose: PropTypes.func.isRequired,
+  onClose: PropTypes.func,
   /** Specifies whether the Modal overflow is visible or not. If height is not enough, vertical scrollbar will be displayed (`overflow-y: auto`) */
   overflowVisible: PropTypes.bool,
   /** Sets the theme for the Modal */
