@@ -56,7 +56,7 @@ const Modal = ({
   width,
   height,
   overflowVisible,
-  handleOnClose,
+  onClose,
   theme,
   visible,
   ...restProps
@@ -66,10 +66,10 @@ const Modal = ({
       var code = event.keyCode || event.which;
       if (code === 27) {
         // 27 is the escape keycode
-        handleOnClose();
+        onClose();
       }
     },
-    [handleOnClose]
+    [onClose]
   );
 
   useEffect(() => {
@@ -97,7 +97,7 @@ const Modal = ({
                   <Box p="r">
                     <Flex justifyContent="flex-end">
                       <Button
-                        onClick={handleOnClose}
+                        onClick={onClose}
                         small
                         variant="transparent"
                         px="6px"
@@ -135,7 +135,7 @@ Modal.propTypes = {
   /** Specifies the visibility of the Modal */
   visible: PropTypes.bool,
   /** Specifies the function to run on clicking X icon. Ensure that this function will close Modal through the `visible` prop */
-  handleOnClose: PropTypes.func.isRequired,
+  onClose: PropTypes.func.isRequired,
   /** Specifies whether the Modal overflow is visible or not. If height is not enough, vertical scrollbar will be displayed (`overflow-y: auto`) */
   overflowVisible: PropTypes.bool,
   /** Sets the theme for the Modal */
