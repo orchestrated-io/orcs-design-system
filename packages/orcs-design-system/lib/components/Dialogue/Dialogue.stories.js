@@ -204,7 +204,7 @@ const Edit = () => {
   return (
     <>
       <Button onClick={handleOnButtonClick} leftIcon={["fas", "edit"]}>
-        Edit Project
+        Modify Details
       </Button>
       <Dialogue
         visible={visible}
@@ -214,30 +214,29 @@ const Edit = () => {
         handleConfirm={handleConfirm}
         handleCancel={handleCancel}
         width="320px"
-        confirmText="Submit"
+        confirmText="Save"
         cancelText="Cancel"
         cancelProps={{
           variant: "danger",
-          small: true,
           leftIcon: ["fas", "times"]
         }}
         confirmProps={{
           variant: "success",
-          small: true,
-          leftIcon: ["fas", "check"]
+          leftIcon: ["fas", "save"]
         }}
       >
         <>
           <Spacer mb="r">
-            <H2>Editing Project</H2>
+            <H2>Modify Details</H2>
             <TextInput
               id="textInput1"
               key="textInput1"
               type="text"
+              fullWidth
               label="Name"
               placeholder="E.g. Awesome Project"
             />
-            <TextArea id="TextArea01" label="Description" />
+            <TextArea id="TextArea01" label="Description" fullWidth />
           </Spacer>
         </>
       </Dialogue>
