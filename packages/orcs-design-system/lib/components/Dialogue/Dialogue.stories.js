@@ -23,12 +23,12 @@ const Basic = () => {
   const handleOnButtonClick = () => {
     setVisible(true);
   };
-  const handleOnClose = () => {
+  const onClose = () => {
     setVisible(false);
   };
   const confirmAction = action("confirmed");
   const cancelAction = action("cancelled");
-  const handleConfirm = useCallback(() => {
+  const onConfirm = useCallback(() => {
     if (confirmAction) {
       const result = confirmAction();
       if (result && result.then) {
@@ -42,7 +42,7 @@ const Basic = () => {
     }
     setVisible(false);
   }, [confirmAction, setVisible]);
-  const handleCancel = useCallback(() => {
+  const onCancel = useCallback(() => {
     if (cancelAction) {
       const result = cancelAction();
       if (result && result.then) {
@@ -69,9 +69,9 @@ const Basic = () => {
         visible={visible}
         confirmAction={confirmAction}
         cancelAction={cancelAction}
-        handleOnClose={handleOnClose}
-        handleConfirm={handleConfirm}
-        handleCancel={handleCancel}
+        onClose={onClose}
+        onConfirm={onConfirm}
+        onCancel={onCancel}
         confirmText="OK"
         cancelText="Cancel"
       >
@@ -93,12 +93,12 @@ basicDialogue.parameters = {
     const handleOnButtonClick = () => {
       setVisible(true);
     };
-    const handleOnClose = () => {
+    const onClose = () => {
       setVisible(false);
     };
     const confirmAction = action("confirmed");
     const cancelAction = action("cancelled");
-    const handleConfirm = useCallback(() => {
+    const onConfirm = useCallback(() => {
       if (confirmAction) {
         const result = confirmAction();
         if (result && result.then) {
@@ -112,7 +112,7 @@ basicDialogue.parameters = {
       }
       setVisible(false);
     }, [confirmAction, setVisible]);
-    const handleCancel = useCallback(() => {
+    const onCancel = useCallback(() => {
       if (cancelAction) {
         const result = cancelAction();
         if (result && result.then) {
@@ -139,9 +139,9 @@ basicDialogue.parameters = {
           visible={visible}
           confirmAction={confirmAction}
           cancelAction={cancelAction}
-          handleOnClose={handleOnClose}
-          handleConfirm={handleConfirm}
-          handleCancel={handleCancel}
+          onClose={onClose}
+          onConfirm={onConfirm}
+          onCancel={onCancel}
           confirmText="OK"
           cancelText="Cancel"
         >
@@ -164,7 +164,7 @@ const Edit = () => {
   const handleOnButtonClick = () => {
     setVisible(true);
   };
-  const handleOnClose = () => {
+  const onClose = () => {
     setVisible(false);
   };
 
@@ -172,7 +172,7 @@ const Edit = () => {
 
   const cancelAction = action("cancelled");
 
-  const handleConfirm = useCallback(() => {
+  const onConfirm = useCallback(() => {
     if (confirmAction) {
       const result = confirmAction();
       if (result && result.then) {
@@ -187,7 +187,7 @@ const Edit = () => {
     setVisible(false);
   }, [confirmAction, setVisible]);
 
-  const handleCancel = useCallback(() => {
+  const onCancel = useCallback(() => {
     if (cancelAction) {
       const result = cancelAction();
       if (result && result.then) {
@@ -210,9 +210,9 @@ const Edit = () => {
         visible={visible}
         confirmAction={confirmAction}
         cancelAction={cancelAction}
-        handleOnClose={handleOnClose}
-        handleConfirm={handleConfirm}
-        handleCancel={handleCancel}
+        onClose={onClose}
+        onConfirm={onConfirm}
+        onCancel={onCancel}
         width="320px"
         confirmText="Save"
         cancelText="Cancel"
@@ -252,12 +252,12 @@ editDialogue.parameters = {
         const handleOnButtonClick = () => {
           setVisible(true);
         };
-        const handleOnClose = () => {
+        const onClose = () => {
           setVisible(false);
         };
         const confirmAction = action("confirmed");
         const cancelAction = action("cancelled");
-        const handleConfirm = useCallback(() => {
+        const onConfirm = useCallback(() => {
           if (confirmAction) {
             const result = confirmAction();
             if (result && result.then) {
@@ -271,7 +271,7 @@ editDialogue.parameters = {
           }
           setVisible(false);
         }, [confirmAction, setVisible]);
-        const handleCancel = useCallback(() => {
+        const onCancel = useCallback(() => {
           if (cancelAction) {
             const result = cancelAction();
             if (result && result.then) {
@@ -294,9 +294,9 @@ editDialogue.parameters = {
               visible={visible}
               confirmAction={confirmAction}
               cancelAction={cancelAction}
-              handleOnClose={handleOnClose}
-              handleConfirm={handleConfirm}
-              handleCancel={handleCancel}
+              onClose={onClose}
+              onConfirm={onConfirm}
+              onCancel={onCancel}
               width="320px"
               confirmText="Submit"
               cancelText="Cancel"

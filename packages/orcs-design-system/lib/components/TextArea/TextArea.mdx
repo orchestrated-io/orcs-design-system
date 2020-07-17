@@ -1,0 +1,60 @@
+import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import TextArea from ".";
+
+# TextArea
+
+[Default](#default) | [Size](#size) | [Invalid](#invalid) | [Valid](#valid) | [Full-width](#full-width) | [Inverted](#inverted) | [Properties](#properties)
+
+The TextArea component should be used wherever a multi line form entry is required. Some examples of this could be enquiries, descriptions, summaries, questions etc.
+
+Examples include three validation states: default, invalid, valid. The `mandatory` prop should be used to visually indicate that completing this field is required.
+
+Ensure to use a unique id for each text area.
+
+Specify size using `cols` and `rows` like shown in the example. Adding `fullWidth` prop will override the cols value and make the text input 100% width of parent container.
+
+## Default
+
+<Preview>
+  <Story id="components-textarea--default-text-area" />
+</Preview>
+
+## Specified size
+
+<Preview>
+  <Story id="components-textarea--size-text-area" />
+</Preview>
+
+## Full-width
+
+<Preview>
+  <Story id="components-textarea--full-width-text-area" />
+</Preview>
+
+## Bold label
+
+<Preview>
+  <Story id="components-textarea--bold-label-text-area" />
+</Preview>
+
+## Mandatory
+
+<Preview>
+  <Story id="components-textarea--mandatory-text-area" />
+</Preview>
+
+## Invalid and valid states
+
+<Preview>
+  <Story id="components-textarea--states-text-area" />
+</Preview>
+
+## Inverted
+
+<Preview>
+  <Story id="components-textarea--inverted-text-area" />
+</Preview>
+
+## Properties
+
+<Props of={TextArea} />

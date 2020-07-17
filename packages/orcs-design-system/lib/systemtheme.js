@@ -122,6 +122,10 @@ export const colors = {
   primaryDark: darken(0.1, primary),
   primaryDarker: darken(0.25, primary),
   primaryDarkest: darken(0.35, primary),
+  primary20: rgba(primary, 0.2),
+  primary40: rgba(primary, 0.4),
+  primary60: rgba(primary, 0.6),
+  primary80: rgba(primary, 0.8),
   secondary,
   secondaryLight: lighten(0.1, secondary),
   secondaryLighter: lighten(0.2, secondary),
@@ -129,6 +133,10 @@ export const colors = {
   secondaryDark: darken(0.1, secondary),
   secondaryDarker: darken(0.2, secondary),
   secondaryDarkest: darken(0.3, secondary),
+  secondary20: rgba(secondary, 0.2),
+  secondary40: rgba(secondary, 0.4),
+  secondary60: rgba(secondary, 0.6),
+  secondary80: rgba(secondary, 0.8),
   success,
   successLight: lighten(0.15, success),
   successLighter: lighten(0.25, success),
@@ -136,6 +144,10 @@ export const colors = {
   successDark: darken(0.1, success),
   successDarker: darken(0.2, success),
   successDarkest: darken(0.3, success),
+  success20: rgba(success, 0.2),
+  success40: rgba(success, 0.4),
+  success60: rgba(success, 0.6),
+  success80: rgba(success, 0.8),
   warning,
   warningLight: lighten(0.15, warning),
   warningLighter: lighten(0.25, warning),
@@ -143,13 +155,21 @@ export const colors = {
   warningDark: darken(0.1, warning),
   warningDarker: darken(0.25, warning),
   warningDarkest: darken(0.35, warning),
+  warning20: rgba(warning, 0.2),
+  warning40: rgba(warning, 0.4),
+  warning60: rgba(warning, 0.6),
+  warning80: rgba(warning, 0.8),
   danger,
   dangerLight: lighten(0.15, danger),
   dangerLighter: lighten(0.25, danger),
   dangerLightest: lighten(0.4, danger),
   dangerDark: darken(0.1, danger),
   dangerDarker: darken(0.25, danger),
-  dangerDarkest: darken(0.35, danger)
+  dangerDarkest: darken(0.35, danger),
+  danger20: rgba(danger, 0.2),
+  danger40: rgba(danger, 0.4),
+  danger60: rgba(danger, 0.6),
+  danger80: rgba(danger, 0.8)
 };
 
 // BORDERS
@@ -157,7 +177,10 @@ export const radii = [0, "2px", "6px"];
 export const borderWidths = [0, "1px", "2px", "3px"];
 
 // SHADOWS
-export const shadows = { boxDefault: `0 2px 5px 0 ${colors.black10}` };
+export const shadows = {
+  boxDefault: `0 2px 5px 0 ${colors.black10}`,
+  thinOutline: `0 0 0 2px`
+};
 
 // ANIMATION
 export const transition = { transitionDefault: "all 200ms ease-in-out" };
@@ -190,6 +213,7 @@ export default {
   fontWeights,
   lineHeights,
   radii,
+  borderWidths,
   space,
   sizes,
   shadows,

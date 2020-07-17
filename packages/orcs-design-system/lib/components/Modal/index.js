@@ -134,8 +134,6 @@ Modal.propTypes = {
   height: PropTypes.string,
   /** Specifies the visibility of the Modal */
   visible: PropTypes.bool,
-  /** Specifies the function to run on clicking confirm button. Function must return a truthy value or a promise that resolves to a truthy value in order to close the dialogue (see example code) */
-  onConfirm: PropTypes.func,
   /** Specifies the function to run on clicking X icon. Ensure that this function will close Modal through the `visible` prop */
   onClose: PropTypes.func.isRequired,
   /** Specifies whether the Modal overflow is visible or not. If height is not enough, vertical scrollbar will be displayed (`overflow-y: auto`) */

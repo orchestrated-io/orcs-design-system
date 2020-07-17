@@ -1,23 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Components/TextArea defaultTextArea 1`] = `
+exports[`Storyshots Components/TextArea Bold Label 1`] = `
 <div
   className="Box__BoxWrapper-jr1api-0 ezPMxm"
   data-testid={null}
 >
   <div
-    className="TextArea__Group-sc-1oyenoa-0 ckBdU"
-    id="TextArea01"
-    label="Message"
+    className="sc-AxhCb jjzmeM"
   >
     <label
-      className="TextArea__Label-sc-1oyenoa-2 IdVPa"
+      className="sc-AxgMl egyxdi"
+      htmlFor="TextAreaBold"
+    >
+      Message
+       
+    </label>
+    <textarea
+      className="sc-AxhUy bhEZNb"
+      data-testid={null}
+      id="TextAreaBold"
+      label="Message"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/TextArea Default 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <div
+    className="sc-AxhCb jjzmeM"
+  >
+    <label
+      className="sc-AxgMl cgcTfc"
       htmlFor="TextArea01"
     >
       Message
+       
     </label>
     <textarea
-      className="TextArea__Input-sc-1oyenoa-1 hOATHE"
+      className="sc-AxhUy bhEZNb"
+      data-testid="Test-id"
       id="TextArea01"
       label="Message"
     />
@@ -25,24 +50,24 @@ exports[`Storyshots Components/TextArea defaultTextArea 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components/TextArea fullWidthTextArea 1`] = `
+exports[`Storyshots Components/TextArea Full-width 1`] = `
 <div
   className="Box__BoxWrapper-jr1api-0 ezPMxm"
   data-testid={null}
 >
   <div
-    className="TextArea__Group-sc-1oyenoa-0 fZpjkP"
-    id="TextArea05"
-    label="Message"
+    className="sc-AxhCb hzpTdb"
   >
     <label
-      className="TextArea__Label-sc-1oyenoa-2 IdVPa"
+      className="sc-AxgMl cgcTfc"
       htmlFor="TextArea05"
     >
       Message
+       
     </label>
     <textarea
-      className="TextArea__Input-sc-1oyenoa-1 jwRlDL"
+      className="sc-AxhUy dwdIwU"
+      data-testid={null}
       id="TextArea05"
       label="Message"
     />
@@ -50,32 +75,7 @@ exports[`Storyshots Components/TextArea fullWidthTextArea 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components/TextArea invalidTextArea 1`] = `
-<div
-  className="Box__BoxWrapper-jr1api-0 ezPMxm"
-  data-testid={null}
->
-  <div
-    className="TextArea__Group-sc-1oyenoa-0 ckBdU"
-    id="TextArea03"
-    label="Message"
-  >
-    <label
-      className="TextArea__Label-sc-1oyenoa-2 kzqjGd"
-      htmlFor="TextArea03"
-    >
-      Message
-    </label>
-    <textarea
-      className="TextArea__Input-sc-1oyenoa-1 btNttT"
-      id="TextArea03"
-      label="Message"
-    />
-  </div>
-</div>
-`;
-
-exports[`Storyshots Components/TextArea invertedTextArea 1`] = `
+exports[`Storyshots Components/TextArea Inverted 1`] = `
 <div
   className="Box__BoxWrapper-jr1api-0 ezPMxm"
   data-testid={null}
@@ -85,47 +85,119 @@ exports[`Storyshots Components/TextArea invertedTextArea 1`] = `
     data-testid={null}
   >
     <div
-      className="TextArea__Group-sc-1oyenoa-0 ckBdU"
-      id="TextArea06"
-      label="Message"
+      className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
     >
-      <label
-        className="TextArea__Label-sc-1oyenoa-2 edHlXa"
-        htmlFor="TextArea06"
+      <div
+        className="sc-AxhCb jjzmeM"
       >
-        Message
-      </label>
-      <textarea
-        className="TextArea__Input-sc-1oyenoa-1 hOATHE"
-        id="TextArea06"
-        label="Message"
-      />
+        <label
+          className="sc-AxgMl jMJQhB"
+          htmlFor="TextArea06"
+        >
+          Message
+           
+        </label>
+        <textarea
+          className="sc-AxhUy fGfSEI"
+          data-testid={null}
+          id="TextArea06"
+          label="Message"
+        />
+      </div>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+    >
+      <div
+        className="sc-AxhCb jjzmeM"
+      >
+        <label
+          className="sc-AxgMl jMJQhB"
+          htmlFor="TextArea07"
+        >
+          Message
+           
+        </label>
+        <textarea
+          className="sc-AxhUy hohRPI"
+          data-testid={null}
+          id="TextArea07"
+          label="Message"
+        />
+      </div>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+    >
+      <div
+        className="sc-AxhCb jjzmeM"
+      >
+        <label
+          className="sc-AxgMl jMJQhB"
+          htmlFor="TextArea08"
+        >
+          Message
+           
+        </label>
+        <textarea
+          className="sc-AxhUy jQQZnw"
+          data-testid={null}
+          id="TextArea08"
+          label="Message"
+        />
+      </div>
     </div>
   </div>
 </div>
 `;
 
-exports[`Storyshots Components/TextArea sizeTextArea 1`] = `
+exports[`Storyshots Components/TextArea Mandatory 1`] = `
 <div
   className="Box__BoxWrapper-jr1api-0 ezPMxm"
   data-testid={null}
 >
   <div
-    className="TextArea__Group-sc-1oyenoa-0 ckBdU"
-    cols="50"
-    id="TextArea02"
-    label="Message"
-    rows="5"
+    className="sc-AxhCb jjzmeM"
   >
     <label
-      className="TextArea__Label-sc-1oyenoa-2 IdVPa"
+      className="sc-AxgMl cgcTfc"
+      htmlFor="TextAreaMandatory"
+    >
+      Message
+       
+      <span>
+         *
+      </span>
+    </label>
+    <textarea
+      className="sc-AxhUy bhEZNb"
+      data-testid={null}
+      id="TextAreaMandatory"
+      label="Message"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/TextArea Size 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <div
+    className="sc-AxhCb jjzmeM"
+  >
+    <label
+      className="sc-AxgMl cgcTfc"
       htmlFor="TextArea02"
     >
       Message
+       
     </label>
     <textarea
-      className="TextArea__Input-sc-1oyenoa-1 hOATHE"
+      className="sc-AxhUy bhEZNb"
       cols="50"
+      data-testid={null}
       id="TextArea02"
       label="Message"
       rows="5"
@@ -134,156 +206,52 @@ exports[`Storyshots Components/TextArea sizeTextArea 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components/TextArea validTextArea 1`] = `
+exports[`Storyshots Components/TextArea States 1`] = `
 <div
   className="Box__BoxWrapper-jr1api-0 ezPMxm"
   data-testid={null}
 >
   <div
-    className="TextArea__Group-sc-1oyenoa-0 ckBdU"
-    id="TextArea04"
-    label="Message"
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
   >
-    <label
-      className="TextArea__Label-sc-1oyenoa-2 deSheW"
-      htmlFor="TextArea04"
+    <div
+      className="sc-AxhCb jjzmeM"
     >
-      Message
-    </label>
-    <textarea
-      className="TextArea__Input-sc-1oyenoa-1 bfwuaL"
-      id="TextArea04"
-      label="Message"
-    />
+      <label
+        className="sc-AxgMl bhHUUc"
+        htmlFor="TextArea03"
+      >
+        Message
+         
+      </label>
+      <textarea
+        className="sc-AxhUy lienIj"
+        data-testid={null}
+        id="TextArea03"
+        label="Message"
+      />
+    </div>
   </div>
-</div>
-`;
-
-exports[`Storyshots Units/TextArea Default 1`] = `
-<div
-  className="TextArea__Group-sc-1oyenoa-0 ckBdU"
-  id="TextArea01"
-  label="Message"
->
-  <label
-    className="TextArea__Label-sc-1oyenoa-2 IdVPa"
-    htmlFor="TextArea01"
-  >
-    Message
-  </label>
-  <textarea
-    className="TextArea__Input-sc-1oyenoa-1 hOATHE"
-    id="TextArea01"
-    label="Message"
-  />
-</div>
-`;
-
-exports[`Storyshots Units/TextArea Full-width 1`] = `
-<div
-  className="TextArea__Group-sc-1oyenoa-0 fZpjkP"
-  id="TextArea05"
-  label="Message"
->
-  <label
-    className="TextArea__Label-sc-1oyenoa-2 IdVPa"
-    htmlFor="TextArea05"
-  >
-    Message
-  </label>
-  <textarea
-    className="TextArea__Input-sc-1oyenoa-1 jwRlDL"
-    id="TextArea05"
-    label="Message"
-  />
-</div>
-`;
-
-exports[`Storyshots Units/TextArea Invalid 1`] = `
-<div
-  className="TextArea__Group-sc-1oyenoa-0 ckBdU"
-  id="TextArea03"
-  label="Message"
->
-  <label
-    className="TextArea__Label-sc-1oyenoa-2 kzqjGd"
-    htmlFor="TextArea03"
-  >
-    Message
-  </label>
-  <textarea
-    className="TextArea__Input-sc-1oyenoa-1 btNttT"
-    id="TextArea03"
-    label="Message"
-  />
-</div>
-`;
-
-exports[`Storyshots Units/TextArea Inverted 1`] = `
-<div
-  className="Box__BoxWrapper-jr1api-0 cQxHnQ"
-  data-testid={null}
->
   <div
-    className="TextArea__Group-sc-1oyenoa-0 ckBdU"
-    id="TextArea06"
-    label="Message"
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
   >
-    <label
-      className="TextArea__Label-sc-1oyenoa-2 edHlXa"
-      htmlFor="TextArea06"
+    <div
+      className="sc-AxhCb jjzmeM"
     >
-      Message
-    </label>
-    <textarea
-      className="TextArea__Input-sc-1oyenoa-1 hOATHE"
-      id="TextArea06"
-      label="Message"
-    />
+      <label
+        className="sc-AxgMl fZtnNx"
+        htmlFor="TextArea04"
+      >
+        Message
+         
+      </label>
+      <textarea
+        className="sc-AxhUy CAJa-D"
+        data-testid={null}
+        id="TextArea04"
+        label="Message"
+      />
+    </div>
   </div>
-</div>
-`;
-
-exports[`Storyshots Units/TextArea Size 1`] = `
-<div
-  className="TextArea__Group-sc-1oyenoa-0 ckBdU"
-  cols="50"
-  id="TextArea02"
-  label="Message"
-  rows="5"
->
-  <label
-    className="TextArea__Label-sc-1oyenoa-2 IdVPa"
-    htmlFor="TextArea02"
-  >
-    Message
-  </label>
-  <textarea
-    className="TextArea__Input-sc-1oyenoa-1 hOATHE"
-    cols="50"
-    id="TextArea02"
-    label="Message"
-    rows="5"
-  />
-</div>
-`;
-
-exports[`Storyshots Units/TextArea Valid 1`] = `
-<div
-  className="TextArea__Group-sc-1oyenoa-0 ckBdU"
-  id="TextArea04"
-  label="Message"
->
-  <label
-    className="TextArea__Label-sc-1oyenoa-2 deSheW"
-    htmlFor="TextArea04"
-  >
-    Message
-  </label>
-  <textarea
-    className="TextArea__Input-sc-1oyenoa-1 bfwuaL"
-    id="TextArea04"
-    label="Message"
-  />
 </div>
 `;

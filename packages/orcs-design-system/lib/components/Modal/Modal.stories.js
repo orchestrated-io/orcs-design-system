@@ -20,7 +20,7 @@ const Basic = () => {
   const handleOnButtonClick = () => {
     setVisible(true);
   };
-  const handleOnClose = () => {
+  const onClose = () => {
     setVisible(false);
   };
   const handleOnConfirm = () => {
@@ -31,8 +31,8 @@ const Basic = () => {
       <Button onClick={handleOnButtonClick}>Open Modal</Button>
       <Modal
         visible={visible}
-        onConfirm={handleOnConfirm}
-        onClose={handleOnClose}
+        handleOnConfirm={handleOnConfirm}
+        onClose={onClose}
       >
         <Spacer mb="r">
           <H3>Modal Title</H3>
@@ -52,7 +52,7 @@ basicModal.parameters = {
       const handleOnButtonClick = () => {
         setVisible(true);
       };
-      const handleOnClose = () => {
+      const onClose = () => {
         setVisible(false);
       };
       const handleOnConfirm = () => {
@@ -63,8 +63,8 @@ basicModal.parameters = {
           <Button onClick={handleOnButtonClick}>Open Modal</Button>
           <Modal
             visible={visible}
-            onConfirm={handleOnConfirm}
-            onClose={handleOnClose}
+            handleOnConfirm={handleOnConfirm}
+            onClose={onClose}
           >
             <Spacer mb="r">
               <H3>Modal Title</H3>
