@@ -22,8 +22,7 @@ const FlexWrapper = styled("div")
 
 const FlexItem = styled("div")(
   css({
-    boxSizing: "border-box",
-    display: "flex"
+    boxSizing: "border-box"
   }),
   FlexStyles
 );
