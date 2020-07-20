@@ -32,9 +32,7 @@ const FlexItem = styled("div")(
 export default function Flex({ children, theme, ...props }) {
   return (
     <ThemeProvider theme={theme}>
-      <FlexWrapper {...FlexStyles} {...props}>
-        {children}
-      </FlexWrapper>
+      <FlexWrapper {...props}>{children}</FlexWrapper>
     </ThemeProvider>
   );
 }
