@@ -1369,22 +1369,22 @@ exports[`Storyshots Components/Notification Alternate Colours 1`] = `
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="sc-AxhUy fqoilm"
+      className="Notification__NotificationWrapper-sc-1p26rkq-0 cXyPVF"
     >
       <span
-        className="Icon__IconWrapper-xeqnbo-0 kzKQCj Notification__NotificationIcon-sc-1p26rkq-2 ggytus"
+        className="Icon__IconWrapper-xeqnbo-0 kzKQCj Notification__NotificationIcon-sc-1p26rkq-3 lgvPzp"
       >
         <svg
           className="svg-inline--fa fa-undefined"
         />
       </span>
       <p
-        className="Notification__NotificationContent-sc-1p26rkq-0 gniSqr"
+        className="Notification__NotificationContent-sc-1p26rkq-1 gRHNOG"
       >
         Green notification for good/successful notifications, e.g. Details updated successfully!
       </p>
       <button
-        className="Notification__Close-sc-1p26rkq-1 bHtdrL close-button"
+        className="Notification__Close-sc-1p26rkq-2 iOUGRU close-button"
         onClick={[Function]}
         tabIndex="0"
       >
@@ -1403,22 +1403,22 @@ exports[`Storyshots Components/Notification Alternate Colours 1`] = `
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="sc-AxhUy erkGwC"
+      className="Notification__NotificationWrapper-sc-1p26rkq-0 kIKRQV"
     >
       <span
-        className="Icon__IconWrapper-xeqnbo-0 kzKQCj Notification__NotificationIcon-sc-1p26rkq-2 ggytus"
+        className="Icon__IconWrapper-xeqnbo-0 kzKQCj Notification__NotificationIcon-sc-1p26rkq-3 lgvPzp"
       >
         <svg
           className="svg-inline--fa fa-undefined"
         />
       </span>
       <p
-        className="Notification__NotificationContent-sc-1p26rkq-0 gniSqr"
+        className="Notification__NotificationContent-sc-1p26rkq-1 gRHNOG"
       >
         Yellow warning notification e.g. This may take a few minutes to update.
       </p>
       <button
-        className="Notification__Close-sc-1p26rkq-1 bHtdrL close-button"
+        className="Notification__Close-sc-1p26rkq-2 iOUGRU close-button"
         onClick={[Function]}
         tabIndex="0"
       >
@@ -1437,22 +1437,22 @@ exports[`Storyshots Components/Notification Alternate Colours 1`] = `
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="sc-AxhUy erkGwC"
+      className="Notification__NotificationWrapper-sc-1p26rkq-0 kIKRQV"
     >
       <span
-        className="Icon__IconWrapper-xeqnbo-0 kzKQCj Notification__NotificationIcon-sc-1p26rkq-2 ggytus"
+        className="Icon__IconWrapper-xeqnbo-0 kzKQCj Notification__NotificationIcon-sc-1p26rkq-3 lgvPzp"
       >
         <svg
           className="svg-inline--fa fa-undefined"
         />
       </span>
       <p
-        className="Notification__NotificationContent-sc-1p26rkq-0 gniSqr"
+        className="Notification__NotificationContent-sc-1p26rkq-1 gRHNOG"
       >
         Red error notification e.g. Update failed! Please try again.
       </p>
       <button
-        className="Notification__Close-sc-1p26rkq-1 bHtdrL close-button"
+        className="Notification__Close-sc-1p26rkq-2 iOUGRU close-button"
         onClick={[Function]}
         tabIndex="0"
       >
@@ -1476,22 +1476,22 @@ exports[`Storyshots Components/Notification Basic 1`] = `
   data-testid={null}
 >
   <div
-    className="sc-AxhUy lcKzbc"
+    className="Notification__NotificationWrapper-sc-1p26rkq-0 jgjGoD"
   >
     <span
-      className="Icon__IconWrapper-xeqnbo-0 kzKQCj Notification__NotificationIcon-sc-1p26rkq-2 ggytus"
+      className="Icon__IconWrapper-xeqnbo-0 kzKQCj Notification__NotificationIcon-sc-1p26rkq-3 lgvPzp"
     >
       <svg
         className="svg-inline--fa fa-undefined"
       />
     </span>
     <p
-      className="Notification__NotificationContent-sc-1p26rkq-0 gniSqr"
+      className="Notification__NotificationContent-sc-1p26rkq-1 gRHNOG"
     >
       Default notification message for messages that are not super important, e.g. Link shared.
     </p>
     <button
-      className="Notification__Close-sc-1p26rkq-1 bHtdrL close-button"
+      className="Notification__Close-sc-1p26rkq-2 iOUGRU close-button"
       onClick={[Function]}
       tabIndex="0"
     >
@@ -1514,10 +1514,10 @@ exports[`Storyshots Components/Notification Close Disabled 1`] = `
   data-testid={null}
 >
   <div
-    className="sc-AxhUy lcKzbc"
+    className="Notification__NotificationWrapper-sc-1p26rkq-0 jgjGoD"
   >
     <p
-      className="Notification__NotificationContent-sc-1p26rkq-0 gniSqr"
+      className="Notification__NotificationContent-sc-1p26rkq-1 gRHNOG"
     >
       Closing this notification is disabled, this should be used for persistent notifications e.g. Stage 1 is now locked and is read-only.
     </p>
@@ -1531,22 +1531,22 @@ exports[`Storyshots Components/Notification Floating 1`] = `
   data-testid={null}
 >
   <div
-    className="sc-AxhUy hqYrob floating"
+    className="Notification__NotificationWrapper-sc-1p26rkq-0 jwQrpE floating"
   >
     <span
-      className="Icon__IconWrapper-xeqnbo-0 kzKQCj Notification__NotificationIcon-sc-1p26rkq-2 ggytus"
+      className="Icon__IconWrapper-xeqnbo-0 kzKQCj Notification__NotificationIcon-sc-1p26rkq-3 lgvPzp"
     >
       <svg
         className="svg-inline--fa fa-undefined"
       />
     </span>
     <p
-      className="Notification__NotificationContent-sc-1p26rkq-0 gniSqr"
+      className="Notification__NotificationContent-sc-1p26rkq-1 gRHNOG"
     >
       Floating notification.
     </p>
     <button
-      className="Notification__Close-sc-1p26rkq-1 bHtdrL close-button"
+      className="Notification__Close-sc-1p26rkq-2 iOUGRU close-button"
       onClick={[Function]}
       tabIndex="0"
     >
@@ -1569,15 +1569,15 @@ exports[`Storyshots Components/Notification Floating and Centered 1`] = `
   data-testid={null}
 >
   <div
-    className="sc-AxhUy ehFSaI floating"
+    className="Notification__NotificationWrapper-sc-1p26rkq-0 cNYndf floating centered"
   >
     <p
-      className="Notification__NotificationContent-sc-1p26rkq-0 gniSqr"
+      className="Notification__NotificationContent-sc-1p26rkq-1 gRHNOG"
     >
       Centered notification
     </p>
     <button
-      className="Notification__Close-sc-1p26rkq-1 bHtdrL close-button"
+      className="Notification__Close-sc-1p26rkq-2 iOUGRU close-button"
       onClick={[Function]}
       tabIndex="0"
     >
@@ -1603,7 +1603,7 @@ exports[`Storyshots Components/Notification Loading 1`] = `
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="sc-AxhUy lcKzbc"
+      className="Notification__NotificationWrapper-sc-1p26rkq-0 jgjGoD"
       loading={true}
     >
       <span
@@ -1616,7 +1616,7 @@ exports[`Storyshots Components/Notification Loading 1`] = `
         />
       </span>
       <p
-        className="Notification__NotificationContent-sc-1p26rkq-0 gniSqr"
+        className="Notification__NotificationContent-sc-1p26rkq-1 gRHNOG"
       >
         In progress notification with disabled close. E.g. Importing data...
       </p>
@@ -1626,7 +1626,7 @@ exports[`Storyshots Components/Notification Loading 1`] = `
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="sc-AxhUy erkGwC"
+      className="Notification__NotificationWrapper-sc-1p26rkq-0 kIKRQV"
       loading={true}
     >
       <span
@@ -1639,12 +1639,12 @@ exports[`Storyshots Components/Notification Loading 1`] = `
         />
       </span>
       <p
-        className="Notification__NotificationContent-sc-1p26rkq-0 gniSqr"
+        className="Notification__NotificationContent-sc-1p26rkq-1 gRHNOG"
       >
         In progress notification with enabled close and specified colour.
       </p>
       <button
-        className="Notification__Close-sc-1p26rkq-1 bHtdrL close-button"
+        className="Notification__Close-sc-1p26rkq-2 iOUGRU close-button"
         onClick={[Function]}
         tabIndex="0"
       >
@@ -1668,15 +1668,15 @@ exports[`Storyshots Components/Notification Text-only 1`] = `
   data-testid={null}
 >
   <div
-    className="sc-AxhUy lcKzbc"
+    className="Notification__NotificationWrapper-sc-1p26rkq-0 jgjGoD"
   >
     <p
-      className="Notification__NotificationContent-sc-1p26rkq-0 gniSqr"
+      className="Notification__NotificationContent-sc-1p26rkq-1 gRHNOG"
     >
       Text-only notification
     </p>
     <button
-      className="Notification__Close-sc-1p26rkq-1 bHtdrL close-button"
+      className="Notification__Close-sc-1p26rkq-2 iOUGRU close-button"
       onClick={[Function]}
       tabIndex="0"
     >
@@ -1699,10 +1699,10 @@ exports[`Storyshots Components/Notification With Icon 1`] = `
   data-testid={null}
 >
   <div
-    className="sc-AxhUy erkGwC"
+    className="Notification__NotificationWrapper-sc-1p26rkq-0 kIKRQV"
   >
     <span
-      className="Icon__IconWrapper-xeqnbo-0 dUeENi Notification__NotificationIcon-sc-1p26rkq-2 ggytus"
+      className="Icon__IconWrapper-xeqnbo-0 dUeENi Notification__NotificationIcon-sc-1p26rkq-3 lgvPzp"
       color="primary"
     >
       <svg
@@ -1710,12 +1710,12 @@ exports[`Storyshots Components/Notification With Icon 1`] = `
       />
     </span>
     <p
-      className="Notification__NotificationContent-sc-1p26rkq-0 gniSqr"
+      className="Notification__NotificationContent-sc-1p26rkq-1 gRHNOG"
     >
       Notification with icon and iconProps specified
     </p>
     <button
-      className="Notification__Close-sc-1p26rkq-1 bHtdrL close-button"
+      className="Notification__Close-sc-1p26rkq-2 iOUGRU close-button"
       onClick={[Function]}
       tabIndex="0"
     >
