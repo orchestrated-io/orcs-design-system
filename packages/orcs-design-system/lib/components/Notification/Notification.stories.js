@@ -1,8 +1,6 @@
 import React from "react";
 import Notification from ".";
-import Loading from "../Loading";
 import Spacer from "../Spacer";
-import Flex from "../Flex";
 import Box from "../Box";
 import mdx from "./Notification.mdx";
 
@@ -49,6 +47,17 @@ export const colourNotification = () => (
 );
 colourNotification.storyName = "Alternate Colours";
 
+export const iconNotification = () => (
+  <Notification
+    colour="warning"
+    icon={["fas", "sync"]}
+    iconProps={{ spin: true, color: "primary" }}
+  >
+    Notification with icon and iconProps specified
+  </Notification>
+);
+iconNotification.storyName = "With Icon";
+
 export const textOnlyNotification = () => (
   <Notification>Text-only notification</Notification>
 );
@@ -56,23 +65,24 @@ textOnlyNotification.storyName = "Text-only";
 
 export const closeDisabledNotification = () => (
   <Notification closable={false}>
-    Closing this notification is disabled, this should be used for persistant
+    Closing this notification is disabled, this should be used for persistent
     notifications e.g. Stage 1 is now locked and is read-only.
   </Notification>
 );
 closeDisabledNotification.storyName = "Close Disabled";
 
-export const inProgressNotification = () => (
-  <Notification closable={false}>
-    <Flex>
-      <Loading inverted mr="s" />
-      <span>
-        In progress notification with disabled close. E.g. Importing data...
-      </span>
-    </Flex>
-  </Notification>
+export const loadingNotification = () => (
+  <Spacer m="r">
+    <Notification loading closable={false}>
+      In progress notification with disabled close. E.g. Importing data...
+    </Notification>
+
+    <Notification loading colour="warning">
+      In progress notification with enabled close and specified colour.
+    </Notification>
+  </Spacer>
 );
-inProgressNotification.storyName = "In Progress/Loading";
+loadingNotification.storyName = "Loading";
 
 export const floatingNotification = () => (
   <Notification floating bottom="20px" right="20px" icon={["fas", "bell"]}>

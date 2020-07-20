@@ -9,19 +9,12 @@ import { space, layout, position, variant, compose } from "styled-system";
 
 const NotificationStyles = compose(space, layout, position);
 
-const Wrapper = styled("div")
-  .withConfig({ shouldForwardProp })
+const NotificationWrapper = styled("div")
+  .withConfig({
+    shouldForwardProp
+  })
   .attrs(props => ({
-    className:
-      !props.floating && !props.centered
-        ? ""
-        : props.floating && props.centered
-        ? "floating centered"
-        : !props.floating && props.centered
-        ? "centered"
-        : props.floating && !props.centered
-        ? "floating"
-        : ""
+    className: props.notifClass
   }))(
   css({
     position: "relative",
@@ -104,7 +97,31 @@ const Close = styled("button")(
   })
 );
 
-export const Notification = ({
+const NotificationIcon = styled(Icon)(
+  css({
+    color: "white",
+    fontSize: "2",
+    mr: "s"
+  })
+);
+
+const LoadingIcon = () => {
+  return (
+    <Icon
+      icon={["fas", "circle-notch"]}
+      color="white"
+      marginRight="s"
+      fontSize="2"
+      spin
+    />
+  );
+};
+
+const CloseIcon = () => {
+  return <Icon icon={["fas", "times"]} size="lg" color="white" />;
+};
+
+export default function Notification({
   icon,
   colour,
   floating,
@@ -117,17 +134,25 @@ export const Notification = ({
   closable,
   onDismiss,
   theme,
+  iconProps,
+  loading,
   ...props
-}) => {
+}) {
   const [dismissed, handleDismiss] = useState(false);
   const onToggle = () => {
     if (!dismissed) handleDismiss(true);
     else handleDismiss(false);
   };
+  var notifClass;
+  if (floating) {
+    if (centered) {
+      notifClass = "floating centered";
+    } else notifClass = "floating";
+  } else notifClass = "";
   return (
     !dismissed && (
       <ThemeProvider theme={theme}>
-        <Wrapper
+        <NotificationWrapper
           colour={colour}
           floating={floating}
           top={top}
@@ -136,22 +161,24 @@ export const Notification = ({
           left={left}
           centered={centered}
           onDismiss={onDismiss}
+          iconProps={iconProps}
+          loading={loading}
+          notifClass={notifClass}
           {...props}
         >
-          {icon && (
-            <Icon icon={icon} color="white" fontSize="2" marginRight="s" />
-          )}
+          {icon && <NotificationIcon icon={icon} {...iconProps} />}
+          {loading && <LoadingIcon />}
           <NotificationContent>{children}</NotificationContent>
           {closable && (
             <Close className="close-button" tabIndex="0" onClick={onToggle}>
-              <Icon icon={["fas", "times"]} size="lg" color="white" />
+              <CloseIcon />
             </Close>
           )}
-        </Wrapper>
+        </NotificationWrapper>
       </ThemeProvider>
     )
   );
-};
+}
 
 Notification.propTypes = {
   children: PropTypes.oneOfType([
@@ -160,8 +187,12 @@ Notification.propTypes = {
   ]),
   /** Applies an icon to notification with specified name. */
   icon: PropTypes.array,
+  /** Specifies the props of the icon -- see `Icon` component for accepted props */
+  iconProps: PropTypes.object,
   /** Specifies notification colour */
   colour: PropTypes.oneOf(["success", "warning", "danger", "primary"]),
+  /** Specifies if the `Icon` should show the loading style. */
+  loading: PropTypes.bool,
   /** Positions notification floating over content, instead of inline. Must be combined with top, right, bottom, left or centered props to correctly position in your desired location */
   floating: PropTypes.bool,
   /** Specifies the position of a floating notification from top of browser window (units must be specified) */
@@ -186,5 +217,3 @@ Notification.defaultProps = {
   closable: true,
   theme: systemtheme
 };
-
-export default Notification;
