@@ -1,0 +1,6350 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Box Background colour 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gjygQu"
+  data-testid={null}
+>
+  <p
+    className="Typography__P-sc-1613j99-6 cdYHMX"
+  >
+    This is a Box that has background colour set to 
+    <code>
+      greyLightest
+    </code>
+    .
+  </p>
+</div>
+`;
+
+exports[`Storyshots Components/Box Border Box 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 bSlncV"
+  data-testid={null}
+>
+  <p
+    className="Typography__P-sc-1613j99-6 cdYHMX"
+  >
+    This is a variant of a Box with a border.
+  </p>
+</div>
+`;
+
+exports[`Storyshots Components/Box Default Box 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 kEyhLZ"
+  data-testid={null}
+>
+  <p
+    className="Typography__P-sc-1613j99-6 cdYHMX"
+  >
+    This is an example of the basic Box with no properties applied to it.
+  </p>
+</div>
+`;
+
+exports[`Storyshots Components/Box Drop shadow 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 bfcBxi"
+  data-testid={null}
+>
+  <p
+    className="Typography__P-sc-1613j99-6 cdYHMX"
+  >
+    This is a variant of a Box with a slight drop shadow.
+  </p>
+</div>
+`;
+
+exports[`Storyshots Components/Box Padding 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ekPEiH"
+  data-testid={null}
+>
+  <p
+    className="Typography__P-sc-1613j99-6 cdYHMX"
+  >
+    This is a bordered Box variant with specified padding that overrides the default padding value.
+  </p>
+</div>
+`;
+
+exports[`Storyshots Components/Box Rounded corners 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 koCKa-D"
+  data-testid={null}
+>
+  <p
+    className="Typography__P-sc-1613j99-6 cdYHMX"
+  >
+    This is a bordered Box variant with rounded corners.
+     
+    <code>
+      borderRadius
+    </code>
+     is taken from the 
+    <code>
+      radii
+    </code>
+     array in
+     
+    <code>
+      systemtheme.js
+    </code>
+    .
+  </p>
+</div>
+`;
+
+exports[`Storyshots Components/Button Alternate colours 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 JzNtk"
+      data-testid={null}
+      disabled={false}
+      onClick={[Function]}
+    >
+      Success/green button
+    </button>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 kBbUFJ"
+      data-testid={null}
+      disabled={false}
+      onClick={[Function]}
+    >
+      Danger/red button
+    </button>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 cqdHsH"
+      data-testid={null}
+      disabled={false}
+      onClick={[Function]}
+    >
+      Transparent button for white backgrounds
+    </button>
+  </div>,
+]
+`;
+
+exports[`Storyshots Components/Button Alternate sizes 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 fFQkav"
+      data-testid={null}
+      disabled={false}
+      onClick={[Function]}
+    >
+      Small button
+    </button>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 kYYsuP"
+      data-testid={null}
+      disabled={false}
+      onClick={[Function]}
+    >
+      Large button
+    </button>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 hixPBU"
+      data-testid={null}
+      disabled={false}
+      onClick={[Function]}
+    >
+      Specified height button
+    </button>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 fkyQnL"
+      data-testid={null}
+      disabled={false}
+      onClick={[Function]}
+    >
+      A multiple-line button with specified width
+    </button>
+  </div>,
+]
+`;
+
+exports[`Storyshots Components/Button Default button 1`] = `
+<button
+  className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+  data-testid={null}
+  disabled={false}
+>
+  Default button
+</button>
+`;
+
+exports[`Storyshots Components/Button Disabled state 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 kfmDZK"
+      data-testid={null}
+      disabled={true}
+    >
+      Disabled button
+    </button>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 kfmDZK"
+      data-testid={null}
+      disabled={true}
+    >
+      Also disabled
+    </button>
+  </div>,
+]
+`;
+
+exports[`Storyshots Components/Button Full width 1`] = `
+<button
+  className="Button__StyledButton-sc-10uojnk-0 hiHMYe"
+  data-testid={null}
+  disabled={false}
+>
+  Full width button
+</button>
+`;
+
+exports[`Storyshots Components/Button Ghost style 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 grNQWc"
+      data-testid={null}
+      disabled={false}
+      onClick={[Function]}
+    >
+      Small ghost button
+    </button>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 fTbKTC"
+      data-testid={null}
+      disabled={false}
+      onClick={[Function]}
+    >
+      Regular ghost button
+    </button>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 fonkow"
+      data-testid={null}
+      disabled={false}
+      onClick={[Function]}
+    >
+      Large ghost button
+    </button>
+  </div>,
+]
+`;
+
+exports[`Storyshots Components/Button Icon only 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 fFQkav"
+      data-testid={null}
+      disabled={false}
+    >
+      <span
+        className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+      >
+        <svg
+          className="svg-inline--fa fa-undefined"
+        />
+      </span>
+    </button>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+      data-testid={null}
+      disabled={false}
+    >
+      <span
+        className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+      >
+        <svg
+          className="svg-inline--fa fa-undefined"
+        />
+      </span>
+    </button>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 kYLAEE"
+      data-testid={null}
+      disabled={false}
+    >
+      <span
+        className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+      >
+        <svg
+          className="svg-inline--fa fa-undefined"
+        />
+      </span>
+    </button>
+  </div>,
+]
+`;
+
+exports[`Storyshots Components/Button Loading state 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 fvvpPn"
+      data-testid={null}
+      disabled={false}
+    >
+      Loading...
+      <span
+        className="Icon__IconWrapper-xeqnbo-0 cSOlIO"
+      >
+        <svg
+          className="svg-inline--fa fa-undefined"
+        />
+      </span>
+    </button>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 ioCevm"
+      data-testid={null}
+      disabled={false}
+    >
+      Saving...
+      <span
+        className="Icon__IconWrapper-xeqnbo-0 cSOlIO"
+      >
+        <svg
+          className="svg-inline--fa fa-undefined"
+        />
+      </span>
+    </button>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 eVmRGz"
+      data-testid={null}
+      disabled={false}
+    >
+      Deleting...
+      <span
+        className="Icon__IconWrapper-xeqnbo-0 cSOlIO"
+      >
+        <svg
+          className="svg-inline--fa fa-undefined"
+        />
+      </span>
+    </button>
+  </div>,
+]
+`;
+
+exports[`Storyshots Components/Button With icon 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 dMwfxz"
+      data-testid={null}
+      disabled={false}
+    >
+      <span
+        className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+      >
+        <svg
+          className="svg-inline--fa fa-undefined"
+        />
+      </span>
+      Left aligned icon
+    </button>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 cYJods"
+      data-testid={null}
+      disabled={false}
+    >
+      Right aligned icon
+      <span
+        className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+      >
+        <svg
+          className="svg-inline--fa fa-undefined"
+        />
+      </span>
+    </button>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+      data-testid={null}
+      disabled={false}
+    >
+      <span
+        className="Icon__IconWrapper-xeqnbo-0 jCcgAV"
+      >
+        <svg
+          className="svg-inline--fa fa-undefined"
+        />
+      </span>
+      Left icon magic!
+    </button>
+  </div>,
+]
+`;
+
+exports[`Storyshots Components/Dialogue Basic Dialogue 1`] = `
+<button
+  className="Button__StyledButton-sc-10uojnk-0 kBbUFJ"
+  data-testid={null}
+  disabled={false}
+  onClick={[Function]}
+>
+  <span
+    className="Icon__IconWrapper-xeqnbo-0 jCcgAV"
+  >
+    <svg
+      className="svg-inline--fa fa-undefined"
+    />
+  </span>
+  Delete data
+</button>
+`;
+
+exports[`Storyshots Components/Dialogue Edit Dialogue 1`] = `
+<button
+  className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+  data-testid={null}
+  disabled={false}
+  onClick={[Function]}
+>
+  <span
+    className="Icon__IconWrapper-xeqnbo-0 jCcgAV"
+  >
+    <svg
+      className="svg-inline--fa fa-undefined"
+    />
+  </span>
+  Modify Details
+</button>
+`;
+
+exports[`Storyshots Components/Flex Basic Flex 1`] = `
+<div
+  className="Flex__FlexWrapper-sc-1f3kfw7-0 cThWPn"
+  data-testid={null}
+>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+      data-testid={null}
+      disabled={false}
+    >
+      Button 1
+    </button>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+      data-testid={null}
+      disabled={false}
+    >
+      Button 2
+    </button>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+      data-testid={null}
+      disabled={false}
+    >
+      Button 3
+    </button>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+      data-testid={null}
+      disabled={false}
+    >
+      Button 4
+    </button>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+      data-testid={null}
+      disabled={false}
+    >
+      Button 5
+    </button>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+      data-testid={null}
+      disabled={false}
+    >
+      Button 6
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Flex Using Flex Item 1`] = `
+<div
+  className="Flex__FlexWrapper-sc-1f3kfw7-0 jGRLSf"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexItem-sc-1f3kfw7-1 IqzNM"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 cYJods"
+      data-testid={null}
+      disabled={false}
+    >
+      Right aligned icon
+      <span
+        className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+      >
+        <svg
+          className="svg-inline--fa fa-undefined"
+        />
+      </span>
+    </button>
+  </div>
+  <div
+    className="Flex__FlexItem-sc-1f3kfw7-1 IqzNM"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+      data-testid={null}
+      disabled={false}
+    >
+      Default button
+    </button>
+  </div>
+  <div
+    className="Flex__FlexItem-sc-1f3kfw7-1 IqzNM"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+      data-testid={null}
+      disabled={false}
+    >
+      Ghost button
+    </button>
+  </div>
+  <div
+    className="Flex__FlexItem-sc-1f3kfw7-1 zLAMg"
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 kfmDZK"
+      data-testid={null}
+      disabled={true}
+    >
+      Disabled button
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Grid Default Grid 1`] = `
+<div
+  className="Grid__GridWrapper-sc-1rlajun-0 kHYecJ"
+  data-testid={null}
+>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    1
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    2
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    3
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    4
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    5
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    6
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Grid Template columns and rows 1`] = `
+<div
+  className="Grid__GridWrapper-sc-1rlajun-0 cqpzbN"
+  data-testid={null}
+>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    This Grid uses repeat and fr to specify the grid structure.
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    Fusce sit amet lorem lectus.
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    Nullam lobortis porta iaculis. 
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    Pellentesque fermentum elementum elit non blandit.
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    Etiam rhoncus ultricies lorem nec imperdiet.
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    Pellentesque. 
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Grid Text with GridItem 1`] = `
+<div
+  className="Grid__GridWrapper-sc-1rlajun-0 fwPkbV"
+  data-testid={null}
+>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    3
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    1
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    4
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    1
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    5
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    9
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Grid Width-based columns and rows 1`] = `
+<div
+  className="Grid__GridWrapper-sc-1rlajun-0 gsXKSS"
+  data-testid={null}
+>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    This Grid uses widths and percentages to specify the grid structure.
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    Fusce sit amet lorem lectus.
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    Nullam lobortis porta iaculis. 
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    Pellentesque fermentum elementum elit non blandit.
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    Etiam rhoncus ultricies lorem nec imperdiet.
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    Pellentesque. 
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    Each GridItem goes down the columns first and then goes through the rows.
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    To change this, change the value of the gridAutoFlow property. The default value is columns.
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Grid With GridItem 1`] = `
+<div
+  className="Grid__GridWrapper-sc-1rlajun-0 dGbirI"
+  data-testid={null}
+>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+      data-testid={null}
+      disabled={false}
+    >
+      Default Button
+    </button>
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+      data-testid={null}
+      disabled={false}
+    >
+      Success
+    </button>
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    <button
+      className="Button__StyledButton-sc-10uojnk-0 hiHMYe"
+      data-testid={null}
+      disabled={false}
+    >
+      Full width button
+    </button>
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 cYjUpt"
+    data-testid={null}
+  >
+    <p>
+      Text-only item
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Grid With background colours 1`] = `
+<div
+  className="Grid__GridWrapper-sc-1rlajun-0 kHYecJ"
+  data-testid={null}
+>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 hDUMXi"
+    data-testid={null}
+  >
+    1
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 iiIXmO"
+    data-testid={null}
+  >
+    2
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 emLPvA"
+    data-testid={null}
+  >
+    3
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 ezgoJv"
+    data-testid={null}
+  >
+    4
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 kVFvky"
+    data-testid={null}
+  >
+    5
+  </div>
+  <div
+    className="Grid__GridItem-sc-1rlajun-1 fcrZRK"
+    data-testid={null}
+  >
+    6
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Grid Without GridItem 1`] = `
+<div
+  className="Grid__GridWrapper-sc-1rlajun-0 dGbirI"
+  data-testid={null}
+>
+  <button
+    className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+    data-testid={null}
+    disabled={false}
+  >
+    Default Button
+  </button>
+  <button
+    className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+    data-testid={null}
+    disabled={false}
+  >
+    Success
+  </button>
+  <button
+    className="Button__StyledButton-sc-10uojnk-0 hiHMYe"
+    data-testid={null}
+    disabled={false}
+  >
+    Full width button
+  </button>
+  <p>
+    Text-only item
+  </p>
+</div>
+`;
+
+exports[`Storyshots Components/Header Alternative Header with search 1`] = `
+Array [
+  <input
+    className="Header__MobileNavToggle-yf04b-7 iLTPBU"
+    id="mobileMenuToggle"
+    type="checkbox"
+  />,
+  <header
+    className="Header__Bar-yf04b-0 dztHbG"
+  >
+    <div
+      className="Header__AppName-yf04b-1 koOxbq"
+    >
+      App Name
+    </div>
+    <div
+      className="Header__SearchContainer-yf04b-2 gTnCUW"
+    >
+      <div
+        className="TextInput__Group-shde0o-0 eQdUQs"
+        placeholder="Search for..."
+        type="text"
+      >
+        <input
+          className="TextInput__Input-shde0o-2 bjiVAr"
+          id="search"
+          placeholder="Search for..."
+          type="text"
+        />
+        <div>
+          <label
+            className="TextInput__IconWrapper-shde0o-1 jnpZQG"
+            htmlFor="search"
+          >
+            <span
+              className="Icon__IconWrapper-xeqnbo-0 cOFzCH"
+              color="#black"
+              htmlFor="search"
+            >
+              <svg
+                className="svg-inline--fa fa-undefined"
+              />
+            </span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div
+      className="Header__RightAlignedChildren-yf04b-3 jcJKCM"
+    >
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 iGoMbw"
+      >
+        <div
+          className="Avatar__AvatarWrapper-sc-1wtet2j-0 jrXiJY Header__HeaderAvatar-yf04b-4 dXdcux"
+          type="inverted"
+        >
+          <img
+            className="Avatar__Image-sc-1wtet2j-2 eEfKKB"
+            src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+          />
+          <div
+            className="Avatar__TextContent-sc-1wtet2j-1 irScUB"
+            type="inverted"
+          >
+            <h3
+              className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 exCJCn"
+              type="inverted"
+            >
+              John
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 iGoMbw"
+      >
+        <a
+          className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
+          data-testid={null}
+          onClick={[Function]}
+        >
+          <span
+            className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+          >
+            <svg
+              className="svg-inline--fa fa-undefined"
+            />
+          </span>
+          Logout
+        </a>
+      </div>
+    </div>
+    <label
+      className="Header__MobileMenuToggle-yf04b-5 MDzZl"
+      htmlFor="mobileMenuToggle"
+    >
+      <span
+        className="Header__Hamburger-yf04b-6 bcNnmy"
+      />
+    </label>
+  </header>,
+  <div
+    className="Header__MobileNavMenu-yf04b-8 ijOPuP"
+  >
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 dlnFhc"
+      display="block"
+    >
+      <div
+        className="Box__BoxWrapper-jr1api-0 hQZuIR"
+        data-testid={null}
+      >
+        <div
+          className="Avatar__AvatarWrapper-sc-1wtet2j-0 jrXiJY"
+          type="inverted"
+        >
+          <img
+            className="Avatar__Image-sc-1wtet2j-2 eEfKKB"
+            src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+          />
+          <div
+            className="Avatar__TextContent-sc-1wtet2j-1 irScUB"
+            type="inverted"
+          >
+            <h3
+              className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 exCJCn"
+              type="inverted"
+            >
+              John
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 dlnFhc"
+      display="block"
+    >
+      <a
+        className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
+        data-testid={null}
+        onClick={[Function]}
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+        Logout
+      </a>
+    </div>
+  </div>,
+  <label
+    className="Header__Overlay-yf04b-9 hDHdJu"
+    htmlFor="mobileMenuToggle"
+  />,
+]
+`;
+
+exports[`Storyshots Components/Header Default Header 1`] = `
+Array [
+  <input
+    className="Header__MobileNavToggle-yf04b-7 iLTPBU"
+    id="mobileMenuToggle"
+    type="checkbox"
+  />,
+  <header
+    className="Header__Bar-yf04b-0 hHaPQo"
+  >
+    <div
+      className="Header__AppName-yf04b-1 hDhBAM"
+    >
+      App Name
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 iGoMbw"
+    >
+      <a
+        className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 isqNRL StyledLink"
+        data-testid={null}
+        href="#"
+      >
+        Summary
+      </a>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 iGoMbw"
+    >
+      <a
+        className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
+        data-testid={null}
+        href="#"
+      >
+        Find
+      </a>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 iGoMbw"
+    >
+      <a
+        className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
+        data-testid={null}
+        href="#"
+      >
+        Visualisation
+      </a>
+    </div>
+    <div
+      className="Header__SearchContainer-yf04b-2 gTnCUW"
+    />
+    <div
+      className="Header__RightAlignedChildren-yf04b-3 buPGJV"
+    >
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 iGoMbw"
+      >
+        <a
+          className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
+          data-testid={null}
+          href="#"
+        >
+          <span
+            className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+          >
+            <svg
+              className="svg-inline--fa fa-undefined"
+            />
+          </span>
+          Settings
+        </a>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 iGoMbw"
+      >
+        <div
+          className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+        >
+          <div
+            className="Popover__Text-sc-1bwoak-1 eREcMi tooltip"
+            direction="bottom"
+            width="160px"
+          >
+            Tenant: ci2153 Workspace: 20k-v5 [lb5ctx]  UI_Version: 8c315c2 [4412] Backend_Version: dabc261 [3578]
+          </div>
+          <div
+            className="Avatar__AvatarWrapper-sc-1wtet2j-0 jrXiJY Header__HeaderAvatar-yf04b-4 dXdcux"
+            type="inverted"
+          >
+            <img
+              className="Avatar__Image-sc-1wtet2j-2 eEfKKB"
+              src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+            />
+            <div
+              className="Avatar__TextContent-sc-1wtet2j-1 irScUB"
+              type="inverted"
+            >
+              <h3
+                className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 exCJCn"
+                type="inverted"
+              >
+                John
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 iGoMbw"
+      >
+        <a
+          className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
+          data-testid={null}
+          onClick={[Function]}
+        >
+          <span
+            className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+          >
+            <svg
+              className="svg-inline--fa fa-undefined"
+            />
+          </span>
+          Logout
+        </a>
+      </div>
+    </div>
+    <label
+      className="Header__MobileMenuToggle-yf04b-5 MDzZl"
+      htmlFor="mobileMenuToggle"
+    >
+      <span
+        className="Header__Hamburger-yf04b-6 bcNnmy"
+      />
+    </label>
+  </header>,
+  <div
+    className="Header__MobileNavMenu-yf04b-8 ijOPuP"
+  >
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 dlnFhc"
+      display="block"
+    >
+      <div
+        className="Box__BoxWrapper-jr1api-0 hQZuIR"
+        data-testid={null}
+      >
+        <div
+          className="Avatar__AvatarWrapper-sc-1wtet2j-0 jrXiJY"
+          type="inverted"
+        >
+          <img
+            className="Avatar__Image-sc-1wtet2j-2 eEfKKB"
+            src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+          />
+          <div
+            className="Avatar__TextContent-sc-1wtet2j-1 irScUB"
+            type="inverted"
+          >
+            <h3
+              className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 exCJCn"
+              type="inverted"
+            >
+              John
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 dlnFhc"
+      display="block"
+    >
+      <a
+        className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 isqNRL StyledLink"
+        data-testid={null}
+        href="#"
+      >
+        Summary
+      </a>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 dlnFhc"
+      display="block"
+    >
+      <a
+        className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
+        data-testid={null}
+        href="#"
+      >
+        Find
+      </a>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 dlnFhc"
+      display="block"
+    >
+      <a
+        className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
+        data-testid={null}
+        href="#"
+      >
+        Visualisation
+      </a>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 dlnFhc"
+      display="block"
+    >
+      <a
+        className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
+        data-testid={null}
+        href="#"
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+        Settings
+      </a>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 dlnFhc"
+      display="block"
+    >
+      <a
+        className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
+        data-testid={null}
+        onClick={[Function]}
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+        Logout
+      </a>
+    </div>
+  </div>,
+  <label
+    className="Header__Overlay-yf04b-9 hDHdJu"
+    htmlFor="mobileMenuToggle"
+  />,
+]
+`;
+
+exports[`Storyshots Components/Modal Basic Modal 1`] = `
+<button
+  className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+  data-testid={null}
+  disabled={false}
+  onClick={[Function]}
+>
+  Open Modal
+</button>
+`;
+
+exports[`Storyshots Components/Notification Alternate Colours 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 iUnXLf"
+  data-testid={null}
+>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="Notification__NotificationWrapper-sc-1p26rkq-0 cXyPVF"
+    >
+      <span
+        className="Icon__IconWrapper-xeqnbo-0 kzKQCj Notification__NotificationIcon-sc-1p26rkq-3 lgvPzp"
+      >
+        <svg
+          className="svg-inline--fa fa-undefined"
+        />
+      </span>
+      <p
+        className="Notification__NotificationContent-sc-1p26rkq-1 gRHNOG"
+      >
+        Green notification for good/successful notifications, e.g. Details updated successfully!
+      </p>
+      <button
+        className="Notification__Close-sc-1p26rkq-2 iOUGRU close-button"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 hrqhCG"
+          color="white"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+      </button>
+    </div>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="Notification__NotificationWrapper-sc-1p26rkq-0 kIKRQV"
+    >
+      <span
+        className="Icon__IconWrapper-xeqnbo-0 kzKQCj Notification__NotificationIcon-sc-1p26rkq-3 lgvPzp"
+      >
+        <svg
+          className="svg-inline--fa fa-undefined"
+        />
+      </span>
+      <p
+        className="Notification__NotificationContent-sc-1p26rkq-1 gRHNOG"
+      >
+        Yellow warning notification e.g. This may take a few minutes to update.
+      </p>
+      <button
+        className="Notification__Close-sc-1p26rkq-2 iOUGRU close-button"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 hrqhCG"
+          color="white"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+      </button>
+    </div>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="Notification__NotificationWrapper-sc-1p26rkq-0 kIKRQV"
+    >
+      <span
+        className="Icon__IconWrapper-xeqnbo-0 kzKQCj Notification__NotificationIcon-sc-1p26rkq-3 lgvPzp"
+      >
+        <svg
+          className="svg-inline--fa fa-undefined"
+        />
+      </span>
+      <p
+        className="Notification__NotificationContent-sc-1p26rkq-1 gRHNOG"
+      >
+        Red error notification e.g. Update failed! Please try again.
+      </p>
+      <button
+        className="Notification__Close-sc-1p26rkq-2 iOUGRU close-button"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 hrqhCG"
+          color="white"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Notification Basic 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 iUnXLf"
+  data-testid={null}
+>
+  <div
+    className="Notification__NotificationWrapper-sc-1p26rkq-0 jgjGoD"
+  >
+    <span
+      className="Icon__IconWrapper-xeqnbo-0 kzKQCj Notification__NotificationIcon-sc-1p26rkq-3 lgvPzp"
+    >
+      <svg
+        className="svg-inline--fa fa-undefined"
+      />
+    </span>
+    <p
+      className="Notification__NotificationContent-sc-1p26rkq-1 gRHNOG"
+    >
+      Default notification message for messages that are not super important, e.g. Link shared.
+    </p>
+    <button
+      className="Notification__Close-sc-1p26rkq-2 iOUGRU close-button"
+      onClick={[Function]}
+      tabIndex="0"
+    >
+      <span
+        className="Icon__IconWrapper-xeqnbo-0 hrqhCG"
+        color="white"
+      >
+        <svg
+          className="svg-inline--fa fa-undefined"
+        />
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Notification Close Disabled 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 iUnXLf"
+  data-testid={null}
+>
+  <div
+    className="Notification__NotificationWrapper-sc-1p26rkq-0 jgjGoD"
+  >
+    <p
+      className="Notification__NotificationContent-sc-1p26rkq-1 gRHNOG"
+    >
+      Closing this notification is disabled, this should be used for persistent notifications e.g. Stage 1 is now locked and is read-only.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Notification Floating 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 iUnXLf"
+  data-testid={null}
+>
+  <div
+    className="Notification__NotificationWrapper-sc-1p26rkq-0 jwQrpE floating"
+  >
+    <span
+      className="Icon__IconWrapper-xeqnbo-0 kzKQCj Notification__NotificationIcon-sc-1p26rkq-3 lgvPzp"
+    >
+      <svg
+        className="svg-inline--fa fa-undefined"
+      />
+    </span>
+    <p
+      className="Notification__NotificationContent-sc-1p26rkq-1 gRHNOG"
+    >
+      Floating notification.
+    </p>
+    <button
+      className="Notification__Close-sc-1p26rkq-2 iOUGRU close-button"
+      onClick={[Function]}
+      tabIndex="0"
+    >
+      <span
+        className="Icon__IconWrapper-xeqnbo-0 hrqhCG"
+        color="white"
+      >
+        <svg
+          className="svg-inline--fa fa-undefined"
+        />
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Notification Floating and Centered 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 iUnXLf"
+  data-testid={null}
+>
+  <div
+    className="Notification__NotificationWrapper-sc-1p26rkq-0 cNYndf floating centered"
+  >
+    <p
+      className="Notification__NotificationContent-sc-1p26rkq-1 gRHNOG"
+    >
+      Centered notification
+    </p>
+    <button
+      className="Notification__Close-sc-1p26rkq-2 iOUGRU close-button"
+      onClick={[Function]}
+      tabIndex="0"
+    >
+      <span
+        className="Icon__IconWrapper-xeqnbo-0 hrqhCG"
+        color="white"
+      >
+        <svg
+          className="svg-inline--fa fa-undefined"
+        />
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Notification Loading 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 iUnXLf"
+  data-testid={null}
+>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="Notification__NotificationWrapper-sc-1p26rkq-0 jgjGoD"
+      loading={true}
+    >
+      <span
+        className="Icon__IconWrapper-xeqnbo-0 iDyTBl"
+        color="white"
+        fontSize="2"
+      >
+        <svg
+          className="svg-inline--fa fa-undefined"
+        />
+      </span>
+      <p
+        className="Notification__NotificationContent-sc-1p26rkq-1 gRHNOG"
+      >
+        In progress notification with disabled close. E.g. Importing data...
+      </p>
+    </div>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="Notification__NotificationWrapper-sc-1p26rkq-0 kIKRQV"
+      loading={true}
+    >
+      <span
+        className="Icon__IconWrapper-xeqnbo-0 iDyTBl"
+        color="white"
+        fontSize="2"
+      >
+        <svg
+          className="svg-inline--fa fa-undefined"
+        />
+      </span>
+      <p
+        className="Notification__NotificationContent-sc-1p26rkq-1 gRHNOG"
+      >
+        In progress notification with enabled close and specified colour.
+      </p>
+      <button
+        className="Notification__Close-sc-1p26rkq-2 iOUGRU close-button"
+        onClick={[Function]}
+        tabIndex="0"
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 hrqhCG"
+          color="white"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Notification Text-only 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 iUnXLf"
+  data-testid={null}
+>
+  <div
+    className="Notification__NotificationWrapper-sc-1p26rkq-0 jgjGoD"
+  >
+    <p
+      className="Notification__NotificationContent-sc-1p26rkq-1 gRHNOG"
+    >
+      Text-only notification
+    </p>
+    <button
+      className="Notification__Close-sc-1p26rkq-2 iOUGRU close-button"
+      onClick={[Function]}
+      tabIndex="0"
+    >
+      <span
+        className="Icon__IconWrapper-xeqnbo-0 hrqhCG"
+        color="white"
+      >
+        <svg
+          className="svg-inline--fa fa-undefined"
+        />
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Notification With Icon 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 iUnXLf"
+  data-testid={null}
+>
+  <div
+    className="Notification__NotificationWrapper-sc-1p26rkq-0 kIKRQV"
+  >
+    <span
+      className="Icon__IconWrapper-xeqnbo-0 dUeENi Notification__NotificationIcon-sc-1p26rkq-3 lgvPzp"
+      color="primary"
+    >
+      <svg
+        className="svg-inline--fa fa-undefined"
+      />
+    </span>
+    <p
+      className="Notification__NotificationContent-sc-1p26rkq-1 gRHNOG"
+    >
+      Notification with icon and iconProps specified
+    </p>
+    <button
+      className="Notification__Close-sc-1p26rkq-2 iOUGRU close-button"
+      onClick={[Function]}
+      tabIndex="0"
+    >
+      <span
+        className="Icon__IconWrapper-xeqnbo-0 hrqhCG"
+        color="white"
+      >
+        <svg
+          className="svg-inline--fa fa-undefined"
+        />
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Select Default 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 iUnXLf"
+  data-testid={null}
+>
+  <div
+    className="Select__Wrapper-bfi43f-0 gYlKKw"
+  >
+    <div
+      className=" css-1vkcoju-container"
+      onKeyDown={[Function]}
+    >
+      <div
+        className=" css-1htyj3l-control"
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+      >
+        <div
+          className=" css-1hwfws3"
+        >
+          <div
+            className=" css-1j591rh-placeholder"
+          >
+            Select...
+          </div>
+          <div
+            className="css-b4vfs2-Component"
+          >
+            <div
+              className=""
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <input
+                aria-autocomplete="list"
+                autoCapitalize="none"
+                autoComplete="off"
+                autoCorrect="off"
+                disabled={false}
+                id="react-select-2-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                spellCheck="false"
+                style={
+                  Object {
+                    "background": 0,
+                    "border": 0,
+                    "boxSizing": "content-box",
+                    "color": "inherit",
+                    "fontSize": "inherit",
+                    "label": "input",
+                    "opacity": 1,
+                    "outline": 0,
+                    "padding": 0,
+                    "width": "1px",
+                  }
+                }
+                tabIndex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style={
+                  Object {
+                    "height": 0,
+                    "left": 0,
+                    "overflow": "scroll",
+                    "position": "absolute",
+                    "top": 0,
+                    "visibility": "hidden",
+                    "whiteSpace": "pre",
+                  }
+                }
+              >
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className=" css-ny0e4k-Component"
+        >
+          <span
+            className=" css-bqiiy2-indicatorSeparator"
+          />
+          <div
+            aria-hidden="true"
+            className=" css-169sjxl-indicatorContainer"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+          >
+            <svg
+              aria-hidden="true"
+              className="css-7ezgaa-Component"
+              focusable="false"
+              height={20}
+              viewBox="0 0 20 20"
+              width={20}
+            >
+              <path
+                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Select Inverted 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 iUnXLf"
+  data-testid={null}
+>
+  <div
+    className="Box__BoxWrapper-jr1api-0 QqLhx"
+    data-testid={null}
+  >
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+    >
+      <div
+        className="Select__Wrapper-bfi43f-0 gYlKKw"
+      >
+        <div
+          className=" css-r5uqf3-container"
+          onKeyDown={[Function]}
+        >
+          <div
+            className=" css-ft2imt-control"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+          >
+            <div
+              className=" css-1hwfws3"
+            >
+              <div
+                className=" css-rbsjjc-placeholder"
+              >
+                Select...
+              </div>
+              <div
+                className="css-b4vfs2-Component"
+              >
+                <div
+                  className=""
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
+                  <input
+                    aria-autocomplete="list"
+                    autoCapitalize="none"
+                    autoComplete="off"
+                    autoCorrect="off"
+                    disabled={false}
+                    id="react-select-4-input"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    spellCheck="false"
+                    style={
+                      Object {
+                        "background": 0,
+                        "border": 0,
+                        "boxSizing": "content-box",
+                        "color": "inherit",
+                        "fontSize": "inherit",
+                        "label": "input",
+                        "opacity": 1,
+                        "outline": 0,
+                        "padding": 0,
+                        "width": "1px",
+                      }
+                    }
+                    tabIndex="0"
+                    type="text"
+                    value=""
+                  />
+                  <div
+                    style={
+                      Object {
+                        "height": 0,
+                        "left": 0,
+                        "overflow": "scroll",
+                        "position": "absolute",
+                        "top": 0,
+                        "visibility": "hidden",
+                        "whiteSpace": "pre",
+                      }
+                    }
+                  >
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className=" css-ny0e4k-Component"
+            >
+              <span
+                className=" css-bqiiy2-indicatorSeparator"
+              />
+              <div
+                aria-hidden="true"
+                className=" css-1nl7p2c-indicatorContainer"
+                onMouseDown={[Function]}
+                onTouchEnd={[Function]}
+              >
+                <svg
+                  aria-hidden="true"
+                  className="css-7ezgaa-Component"
+                  focusable="false"
+                  height={20}
+                  viewBox="0 0 20 20"
+                  width={20}
+                >
+                  <path
+                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+    >
+      <div
+        className="Select__Wrapper-bfi43f-0 gYlKKw"
+      >
+        <div
+          className=" css-r5uqf3-container"
+          onKeyDown={[Function]}
+        >
+          <div
+            className=" css-ft2imt-control"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+          >
+            <div
+              className=" css-1hwfws3"
+            >
+              <div
+                className=" css-rbsjjc-placeholder"
+              >
+                Select...
+              </div>
+              <div
+                className="css-b4vfs2-Component"
+              >
+                <div
+                  className=""
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
+                >
+                  <input
+                    aria-autocomplete="list"
+                    autoCapitalize="none"
+                    autoComplete="off"
+                    autoCorrect="off"
+                    disabled={false}
+                    id="react-select-5-input"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    spellCheck="false"
+                    style={
+                      Object {
+                        "background": 0,
+                        "border": 0,
+                        "boxSizing": "content-box",
+                        "color": "inherit",
+                        "fontSize": "inherit",
+                        "label": "input",
+                        "opacity": 1,
+                        "outline": 0,
+                        "padding": 0,
+                        "width": "1px",
+                      }
+                    }
+                    tabIndex="0"
+                    type="text"
+                    value=""
+                  />
+                  <div
+                    style={
+                      Object {
+                        "height": 0,
+                        "left": 0,
+                        "overflow": "scroll",
+                        "position": "absolute",
+                        "top": 0,
+                        "visibility": "hidden",
+                        "whiteSpace": "pre",
+                      }
+                    }
+                  >
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className=" css-ny0e4k-Component"
+            >
+              <span
+                className=" css-bqiiy2-indicatorSeparator"
+              />
+              <div
+                aria-hidden="true"
+                className=" css-1nl7p2c-indicatorContainer"
+                onMouseDown={[Function]}
+                onTouchEnd={[Function]}
+              >
+                <svg
+                  aria-hidden="true"
+                  className="css-7ezgaa-Component"
+                  focusable="false"
+                  height={20}
+                  viewBox="0 0 20 20"
+                  width={20}
+                >
+                  <path
+                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Select Multi-select 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 iUnXLf"
+  data-testid={null}
+>
+  <div
+    className="Select__Wrapper-bfi43f-0 gYlKKw"
+  >
+    <div
+      className=" css-1vkcoju-container"
+      onKeyDown={[Function]}
+    >
+      <div
+        className=" css-1htyj3l-control"
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+      >
+        <div
+          className=" css-1hwfws3"
+        >
+          <div
+            className=" css-1j591rh-placeholder"
+          >
+            Select...
+          </div>
+          <div
+            className="css-b4vfs2-Component"
+          >
+            <div
+              className=""
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <input
+                aria-autocomplete="list"
+                autoCapitalize="none"
+                autoComplete="off"
+                autoCorrect="off"
+                disabled={false}
+                id="react-select-3-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                spellCheck="false"
+                style={
+                  Object {
+                    "background": 0,
+                    "border": 0,
+                    "boxSizing": "content-box",
+                    "color": "inherit",
+                    "fontSize": "inherit",
+                    "label": "input",
+                    "opacity": 1,
+                    "outline": 0,
+                    "padding": 0,
+                    "width": "1px",
+                  }
+                }
+                tabIndex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style={
+                  Object {
+                    "height": 0,
+                    "left": 0,
+                    "overflow": "scroll",
+                    "position": "absolute",
+                    "top": 0,
+                    "visibility": "hidden",
+                    "whiteSpace": "pre",
+                  }
+                }
+              >
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className=" css-ny0e4k-Component"
+        >
+          <span
+            className=" css-bqiiy2-indicatorSeparator"
+          />
+          <div
+            aria-hidden="true"
+            className=" css-169sjxl-indicatorContainer"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+          >
+            <svg
+              aria-hidden="true"
+              className="css-7ezgaa-Component"
+              focusable="false"
+              height={20}
+              viewBox="0 0 20 20"
+              width={20}
+            >
+              <path
+                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Select With Data ID 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 iUnXLf"
+  data-testid={null}
+>
+  <div
+    className="Select__Wrapper-bfi43f-0 gYlKKw"
+    data-testid="test-this-component"
+  >
+    <div
+      className=" css-1vkcoju-container"
+      onKeyDown={[Function]}
+    >
+      <div
+        className=" css-1htyj3l-control"
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+      >
+        <div
+          className=" css-1hwfws3"
+        >
+          <div
+            className=" css-1j591rh-placeholder"
+          >
+            Select...
+          </div>
+          <div
+            className="css-b4vfs2-Component"
+          >
+            <div
+              className=""
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <input
+                aria-autocomplete="list"
+                autoCapitalize="none"
+                autoComplete="off"
+                autoCorrect="off"
+                disabled={false}
+                id="react-select-6-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                spellCheck="false"
+                style={
+                  Object {
+                    "background": 0,
+                    "border": 0,
+                    "boxSizing": "content-box",
+                    "color": "inherit",
+                    "fontSize": "inherit",
+                    "label": "input",
+                    "opacity": 1,
+                    "outline": 0,
+                    "padding": 0,
+                    "width": "1px",
+                  }
+                }
+                tabIndex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style={
+                  Object {
+                    "height": 0,
+                    "left": 0,
+                    "overflow": "scroll",
+                    "position": "absolute",
+                    "top": 0,
+                    "visibility": "hidden",
+                    "whiteSpace": "pre",
+                  }
+                }
+              >
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className=" css-ny0e4k-Component"
+        >
+          <span
+            className=" css-bqiiy2-indicatorSeparator"
+          />
+          <div
+            aria-hidden="true"
+            className=" css-169sjxl-indicatorContainer"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+          >
+            <svg
+              aria-hidden="true"
+              className="css-7ezgaa-Component"
+              focusable="false"
+              height={20}
+              viewBox="0 0 20 20"
+              width={20}
+            >
+              <path
+                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Select With Selected Value 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 iUnXLf"
+  data-testid={null}
+>
+  <div
+    className="Select__Wrapper-bfi43f-0 gYlKKw"
+    defaultValue={
+      Object {
+        "label": "Chocolate",
+        "value": "chocolate",
+      }
+    }
+  >
+    <div
+      className=" css-1vkcoju-container"
+      onKeyDown={[Function]}
+    >
+      <div
+        className=" css-1htyj3l-control"
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+      >
+        <div
+          className=" css-1hwfws3"
+        >
+          <div
+            className=" css-r447wv-singleValue"
+          >
+            Chocolate
+          </div>
+          <div
+            className="css-b4vfs2-Component"
+          >
+            <div
+              className=""
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <input
+                aria-autocomplete="list"
+                autoCapitalize="none"
+                autoComplete="off"
+                autoCorrect="off"
+                disabled={false}
+                id="react-select-7-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                spellCheck="false"
+                style={
+                  Object {
+                    "background": 0,
+                    "border": 0,
+                    "boxSizing": "content-box",
+                    "color": "inherit",
+                    "fontSize": "inherit",
+                    "label": "input",
+                    "opacity": 1,
+                    "outline": 0,
+                    "padding": 0,
+                    "width": "1px",
+                  }
+                }
+                tabIndex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style={
+                  Object {
+                    "height": 0,
+                    "left": 0,
+                    "overflow": "scroll",
+                    "position": "absolute",
+                    "top": 0,
+                    "visibility": "hidden",
+                    "whiteSpace": "pre",
+                  }
+                }
+              >
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className=" css-ny0e4k-Component"
+        >
+          <span
+            className=" css-bqiiy2-indicatorSeparator"
+          />
+          <div
+            aria-hidden="true"
+            className=" css-169sjxl-indicatorContainer"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+          >
+            <svg
+              aria-hidden="true"
+              className="css-7ezgaa-Component"
+              focusable="false"
+              height={20}
+              viewBox="0 0 20 20"
+              width={20}
+            >
+              <path
+                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/StyledLink Active 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <a
+    className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
+    data-testid={null}
+    href="#"
+  >
+    Active Link
+  </a>
+</div>
+`;
+
+exports[`Storyshots Components/StyledLink Bold 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <a
+    className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 isqNRL StyledLink"
+    data-testid={null}
+    href="#"
+  >
+    Active Link
+  </a>
+</div>
+`;
+
+exports[`Storyshots Components/StyledLink Default 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <a
+    className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
+    data-testid={null}
+    href="#"
+  >
+    Styled Link
+  </a>
+</div>
+`;
+
+exports[`Storyshots Components/StyledLink Inverted 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <div
+    className="Box__BoxWrapper-jr1api-0 cQxHnQ"
+    data-testid={null}
+  >
+    <div
+      className="Flex__FlexWrapper-sc-1f3kfw7-0 gSqVEO"
+      data-testid={null}
+    >
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 gHANPZ"
+      >
+        <a
+          className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 bDsIQU StyledLink"
+          data-testid={null}
+          href="#"
+        >
+          White navigation link on dark background
+        </a>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 gHANPZ"
+      >
+        <a
+          className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 isqNRL StyledLink"
+          data-testid={null}
+          href="#"
+        >
+          Active/selected bold navigation link
+        </a>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 gHANPZ"
+      >
+        <a
+          className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
+          data-testid={null}
+          href="#"
+        >
+          Bold inverted link
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/StyledLink Targeted 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <a
+    className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
+    data-testid={null}
+    href="#"
+    target="_blank"
+  >
+    Targeted Link
+  </a>
+</div>
+`;
+
+exports[`Storyshots Components/StyledLink Using react-router 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <a
+    className="StyledLink-sc-1beg6q3-0 ggfsdv StyledLink"
+    data-testid={null}
+    href="/about"
+    onClick={[Function]}
+  >
+    Custom Link
+  </a>
+</div>
+`;
+
+exports[`Storyshots Components/TextArea Bold Label 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <div
+    className="sc-AxirZ gbFaog"
+  >
+    <label
+      className="sc-AxhCb eEalUt"
+      htmlFor="TextAreaBold"
+    >
+      Message
+       
+    </label>
+    <textarea
+      className="sc-AxiKw kGLnIu"
+      data-testid={null}
+      id="TextAreaBold"
+      label="Message"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/TextArea Default 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <div
+    className="sc-AxirZ gbFaog"
+  >
+    <label
+      className="sc-AxhCb ejGHxD"
+      htmlFor="TextArea01"
+    >
+      Message
+       
+    </label>
+    <textarea
+      className="sc-AxiKw kGLnIu"
+      data-testid="Test-id"
+      id="TextArea01"
+      label="Message"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/TextArea Full-width 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <div
+    className="sc-AxirZ hFsQEn"
+  >
+    <label
+      className="sc-AxhCb ejGHxD"
+      htmlFor="TextArea05"
+    >
+      Message
+       
+    </label>
+    <textarea
+      className="sc-AxiKw hSPumN"
+      data-testid={null}
+      id="TextArea05"
+      label="Message"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/TextArea Inverted 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <div
+    className="Box__BoxWrapper-jr1api-0 cQxHnQ"
+    data-testid={null}
+  >
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+    >
+      <div
+        className="sc-AxirZ gbFaog"
+      >
+        <label
+          className="sc-AxhCb eslSxC"
+          htmlFor="TextArea06"
+        >
+          Message
+           
+        </label>
+        <textarea
+          className="sc-AxiKw gpaKXx"
+          data-testid={null}
+          id="TextArea06"
+          label="Message"
+        />
+      </div>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+    >
+      <div
+        className="sc-AxirZ gbFaog"
+      >
+        <label
+          className="sc-AxhCb eslSxC"
+          htmlFor="TextArea07"
+        >
+          Message
+           
+        </label>
+        <textarea
+          className="sc-AxiKw eVZYAp"
+          data-testid={null}
+          id="TextArea07"
+          label="Message"
+        />
+      </div>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+    >
+      <div
+        className="sc-AxirZ gbFaog"
+      >
+        <label
+          className="sc-AxhCb eslSxC"
+          htmlFor="TextArea08"
+        >
+          Message
+           
+        </label>
+        <textarea
+          className="sc-AxiKw bbgHcJ"
+          data-testid={null}
+          id="TextArea08"
+          label="Message"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/TextArea Mandatory 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <div
+    className="sc-AxirZ gbFaog"
+  >
+    <label
+      className="sc-AxhCb ejGHxD"
+      htmlFor="TextAreaMandatory"
+    >
+      Message
+       
+      <span>
+         *
+      </span>
+    </label>
+    <textarea
+      className="sc-AxiKw kGLnIu"
+      data-testid={null}
+      id="TextAreaMandatory"
+      label="Message"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/TextArea Size 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <div
+    className="sc-AxirZ gbFaog"
+  >
+    <label
+      className="sc-AxhCb ejGHxD"
+      htmlFor="TextArea02"
+    >
+      Message
+       
+    </label>
+    <textarea
+      className="sc-AxiKw kGLnIu"
+      cols="50"
+      data-testid={null}
+      id="TextArea02"
+      label="Message"
+      rows="5"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/TextArea States 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="sc-AxirZ gbFaog"
+    >
+      <label
+        className="sc-AxhCb eTsyzH"
+        htmlFor="TextArea03"
+      >
+        Message
+         
+      </label>
+      <textarea
+        className="sc-AxiKw UTvzm"
+        data-testid={null}
+        id="TextArea03"
+        label="Message"
+      />
+    </div>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="sc-AxirZ gbFaog"
+    >
+      <label
+        className="sc-AxhCb MolIe"
+        htmlFor="TextArea04"
+      >
+        Message
+         
+      </label>
+      <textarea
+        className="sc-AxiKw cWaXsK"
+        data-testid={null}
+        id="TextArea04"
+        label="Message"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/ActionsMenu Default actions menu 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gFkEUh"
+  data-testid={null}
+>
+  <div
+    className="ActionsMenu__Wrapper-yvbni2-0 dNblPG"
+  >
+    <button
+      className="ActionsMenu__Control-yvbni2-1 caVsMX"
+      onClick={[Function]}
+    >
+      <div
+        className="ActionsMenu__Icon-yvbni2-2 eubGjt"
+      />
+    </button>
+    <div
+      className="ActionsMenu__Menu-yvbni2-3 kDrEVi"
+    >
+      <a
+        href="#"
+      >
+        Open details in new tab
+      </a>
+      <button>
+        Edit
+      </button>
+      <button>
+        Remove
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/ActionsMenu Left offset actions menu 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gFkEUh"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 epDpoM"
+    data-testid={null}
+  >
+    <div
+      className="ActionsMenu__Wrapper-yvbni2-0 dNblPG"
+    >
+      <button
+        className="ActionsMenu__Control-yvbni2-1 caVsMX"
+        onClick={[Function]}
+      >
+        <div
+          className="ActionsMenu__Icon-yvbni2-2 eubGjt"
+        />
+      </button>
+      <div
+        className="ActionsMenu__Menu-yvbni2-3 jDXKDl"
+        direction="left"
+      >
+        <a
+          href="#"
+        >
+          Open details in new tab
+        </a>
+        <button>
+          Edit
+        </button>
+        <button>
+          Remove
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Avatar Default avatar 1`] = `
+<div
+  className="Avatar__AvatarWrapper-sc-1wtet2j-0 ihQtwr"
+>
+  <img
+    className="Avatar__Image-sc-1wtet2j-2 enCcxg"
+    src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+  />
+  <div
+    className="Avatar__TextContent-sc-1wtet2j-1 emrUQv"
+  >
+    <h3
+      className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 TZuyA"
+    >
+      Ayden Lundgre
+    </h3>
+    <span
+      className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 lgvTgY"
+    >
+      Senior Business Analyst
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Avatar Icon only 1`] = `
+<div
+  className="Avatar__AvatarWrapper-sc-1wtet2j-0 ihQtwr"
+>
+  <div
+    className="Avatar__Circle-sc-1wtet2j-3 kNqfAA"
+  >
+    <span
+      className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+    >
+      <svg
+        className="svg-inline--fa fa-undefined"
+      />
+    </span>
+  </div>
+  <div
+    className="Avatar__TextContent-sc-1wtet2j-1 emrUQv"
+  >
+    <h3
+      className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 TZuyA"
+    >
+      Ayden Lundgre
+    </h3>
+    <span
+      className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 lgvTgY"
+    >
+      Senior Business Analyst
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Avatar Name as link 1`] = `
+<div
+  className="Avatar__AvatarWrapper-sc-1wtet2j-0 ihQtwr"
+>
+  <img
+    className="Avatar__Image-sc-1wtet2j-2 enCcxg"
+    src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+  />
+  <div
+    className="Avatar__TextContent-sc-1wtet2j-1 emrUQv"
+  >
+    <h3
+      className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 TZuyA"
+    >
+      <a
+        className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
+        data-testid={null}
+        href="#"
+      >
+        Ayden Lundgre
+      </a>
+    </h3>
+    <span
+      className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 lgvTgY"
+    >
+      Senior Business Analyst
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Avatar No image 1`] = `
+<div
+  className="Avatar__AvatarWrapper-sc-1wtet2j-0 ihQtwr"
+>
+  <div
+    className="Avatar__Circle-sc-1wtet2j-3 kNqfAA"
+  >
+    AL
+  </div>
+  <div
+    className="Avatar__TextContent-sc-1wtet2j-1 emrUQv"
+  >
+    <h3
+      className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 TZuyA"
+    >
+      Ayden Lundgre
+    </h3>
+    <span
+      className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 lgvTgY"
+    >
+      Senior Business Analyst
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Avatar On dark background 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 eFGCqk"
+  data-testid={null}
+>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <div
+      className="Avatar__AvatarWrapper-sc-1wtet2j-0 ihQtwr"
+      type="inverted"
+    >
+      <img
+        className="Avatar__Image-sc-1wtet2j-2 enCcxg"
+        src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+      />
+      <div
+        className="Avatar__TextContent-sc-1wtet2j-1 cjfUrq"
+        type="inverted"
+      >
+        <h3
+          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 jXpBeJ"
+          type="inverted"
+        >
+          Ayden Lundgre
+        </h3>
+        <span
+          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 bdyzed"
+          type="inverted"
+        >
+          Senior Business Analyst
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <div
+      className="Avatar__AvatarWrapper-sc-1wtet2j-0 ihQtwr"
+      type="inverted"
+    >
+      <img
+        className="Avatar__Image-sc-1wtet2j-2 enCcxg"
+        src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+      />
+      <div
+        className="Avatar__TextContent-sc-1wtet2j-1 cjfUrq"
+        type="inverted"
+      >
+        <h3
+          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 jXpBeJ"
+          type="inverted"
+        >
+          <a
+            className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
+            data-testid={null}
+            href="#"
+          >
+            Ayden Lundgre
+          </a>
+        </h3>
+        <span
+          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 bdyzed"
+          type="inverted"
+        >
+          Senior Business Analyst
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <div
+      className="Avatar__AvatarWrapper-sc-1wtet2j-0 jrXiJY"
+      type="inverted"
+    >
+      <img
+        className="Avatar__Image-sc-1wtet2j-2 eEfKKB"
+        src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+      />
+      <div
+        className="Avatar__TextContent-sc-1wtet2j-1 irScUB"
+        type="inverted"
+      >
+        <h3
+          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 exCJCn"
+          type="inverted"
+        >
+          Ayden Lundgre
+        </h3>
+        <span
+          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 kyXVZS"
+          type="inverted"
+        >
+          Senior Business Analyst
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <div
+      className="Avatar__AvatarWrapper-sc-1wtet2j-0 jrXiJY"
+      type="inverted"
+    >
+      <img
+        className="Avatar__Image-sc-1wtet2j-2 eEfKKB"
+        src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+      />
+      <div
+        className="Avatar__TextContent-sc-1wtet2j-1 irScUB"
+        type="inverted"
+      >
+        <h3
+          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 exCJCn"
+          type="inverted"
+        >
+          <a
+            className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
+            data-testid={null}
+            href="#"
+          >
+            Ayden Lundgre
+          </a>
+        </h3>
+        <span
+          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 kyXVZS"
+          type="inverted"
+        >
+          Senior Business Analyst
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Avatar Small 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <div
+      className="Avatar__AvatarWrapper-sc-1wtet2j-0 jrXiJY"
+    >
+      <div
+        className="Avatar__Circle-sc-1wtet2j-3 egTfbh"
+      >
+        AL
+      </div>
+      <div
+        className="Avatar__TextContent-sc-1wtet2j-1 gtYgsc"
+      >
+        <h3
+          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 dbTNMm"
+        >
+          Ayden Lundgre
+        </h3>
+        <span
+          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 kAvPxL"
+        >
+          Senior Business Analyst
+        </span>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <div
+      className="Avatar__AvatarWrapper-sc-1wtet2j-0 jrXiJY"
+    >
+      <img
+        className="Avatar__Image-sc-1wtet2j-2 eEfKKB"
+        src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+      />
+      <div
+        className="Avatar__TextContent-sc-1wtet2j-1 gtYgsc"
+      >
+        <h3
+          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 dbTNMm"
+        >
+          Ayden Lundgre
+        </h3>
+        <span
+          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 kAvPxL"
+        >
+          Senior Business Analyst
+        </span>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <div
+      className="Avatar__AvatarWrapper-sc-1wtet2j-0 jrXiJY"
+    >
+      <img
+        className="Avatar__Image-sc-1wtet2j-2 eEfKKB"
+        src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+      />
+      <div
+        className="Avatar__TextContent-sc-1wtet2j-1 gtYgsc"
+      >
+        <h3
+          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 dbTNMm"
+        >
+          <a
+            className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
+            data-testid={null}
+            href="#"
+          >
+            Ayden Lundgre
+          </a>
+        </h3>
+        <span
+          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 kAvPxL"
+        >
+          Senior Business Analyst
+        </span>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Units/Badge Colour variants 1`] = `
+Array [
+  <div
+    className="Box__BoxWrapper-jr1api-0 ezPMxm"
+    data-testid={null}
+  >
+    <div
+      className="Flex__FlexWrapper-sc-1f3kfw7-0 gEccMi"
+      data-testid={null}
+    >
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 feOvPK"
+        >
+          Default
+        </span>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 iaagFf"
+        >
+          Success
+        </span>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 beGUTi"
+        >
+          Warning
+        </span>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 gsOGRg"
+        >
+          Danger
+        </span>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 ibszHM"
+        >
+          Low priority
+        </span>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 cXIqIS"
+        >
+          Medium priority
+        </span>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 dOFhrC"
+        >
+          High priority
+        </span>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 brXHRh"
+        >
+          Secondary
+        </span>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="Box__BoxWrapper-jr1api-0 gsDhqA"
+    data-testid={null}
+  >
+    <div
+      className="Flex__FlexWrapper-sc-1f3kfw7-0 gEccMi"
+      data-testid={null}
+    >
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 feOvPK"
+        >
+          Default
+        </span>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 iaagFf"
+        >
+          Success
+        </span>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 beGUTi"
+        >
+          Warning
+        </span>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 gsOGRg"
+        >
+          Danger
+        </span>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 ibszHM"
+        >
+          Low priority
+        </span>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 cXIqIS"
+        >
+          Medium priority
+        </span>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 dOFhrC"
+        >
+          High priority
+        </span>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 brXHRh"
+        >
+          Secondary
+        </span>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Units/Badge Default badge 1`] = `
+<span
+  className="Badge__Item-sc-9r75kj-0 feOvPK"
+>
+  Default
+</span>
+`;
+
+exports[`Storyshots Units/ButtonGroup Default button group 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 jYILjR"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 dCvMz"
+    data-testid={null}
+  >
+    <div
+      className="ButtonGroup__ButtonGroupControlLabel-g7627n-0 fA-DjJA"
+    >
+      View:
+    </div>
+    <div
+      className="ButtonGroup__ButtonGroupWrapper-g7627n-1 eVtrbV"
+    >
+      <input
+        className="ButtonGroup__ButtonGroupRadio-g7627n-2 cZWZEJ"
+        id="Chapters"
+        name="viewMode"
+        type="radio"
+        value="Chapters view"
+      />
+      <label
+        className="ButtonGroup__ButtonGroupLabel-g7627n-3 kBdWZV"
+        for="Chapters"
+      >
+        Chapters
+      </label>
+      <input
+        checked={true}
+        className="ButtonGroup__ButtonGroupRadio-g7627n-2 cZWZEJ"
+        id="Groups"
+        name="viewMode"
+        type="radio"
+        value="Groups view"
+      />
+      <label
+        checked={true}
+        className="ButtonGroup__ButtonGroupLabel-g7627n-3 hFiVhK"
+        for="Groups"
+      >
+        Groups
+      </label>
+      <input
+        className="ButtonGroup__ButtonGroupRadio-g7627n-2 cZWZEJ"
+        id="Constraints"
+        name="viewMode"
+        type="radio"
+        value="Constraints view"
+      />
+      <label
+        className="ButtonGroup__ButtonGroupLabel-g7627n-3 kBdWZV"
+        for="Constraints"
+      >
+        Constraints
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Card Alternate card 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gjygQu"
+  data-testid={null}
+>
+  <div
+    className="Card__Item-yfq75p-0 gMqXmz"
+  >
+    <div
+      className="Card__Header-yfq75p-1 hQcgPp"
+    >
+      <span
+        className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+      >
+        <svg
+          className="svg-inline--fa fa-undefined"
+        />
+      </span>
+      <h3
+        className="Typography__H3-sc-1613j99-2 oYbxO"
+      >
+        Works for
+      </h3>
+      <h6
+        className="Typography__H6-sc-1613j99-5 bRBAKr"
+      >
+        18
+      </h6>
+    </div>
+    <div
+      className="Card__Content-yfq75p-2 goaCw"
+    >
+      <p
+        className="Typography__P-sc-1613j99-6 cdYHMX"
+      >
+        This is an alternate style card that supports an icon and moves the subtitle to the right of the title, rather than underneath it.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Card Basic card 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gjygQu"
+  data-testid={null}
+>
+  <div
+    className="Card__Item-yfq75p-0 gTxtqf"
+  >
+    <div
+      className="Card__Header-yfq75p-1 hQcgPp"
+    >
+      <h3
+        className="Typography__H3-sc-1613j99-2 oYbxO"
+      >
+        Card title
+      </h3>
+      <h6
+        className="Typography__H6-sc-1613j99-5 bRBAKr"
+      >
+        Subtitle
+      </h6>
+    </div>
+    <div
+      className="Card__Content-yfq75p-2 goaCw"
+    >
+      <p
+        className="Typography__P-sc-1613j99-6 eqWAJp"
+      >
+        Card content lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <a
+        className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 isqNRL StyledLink"
+        data-testid={null}
+        href="#"
+      >
+        Learn more
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Card Coloured cards 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gjygQu"
+  data-testid={null}
+>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Card__Item-yfq75p-0 iKBELc"
+    >
+      <div
+        className="Card__Header-yfq75p-1 hQcgPp"
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+        <h3
+          className="Typography__H3-sc-1613j99-2 oYbxO"
+        >
+          Locations
+        </h3>
+        <h6
+          className="Typography__H6-sc-1613j99-5 bRBAKr"
+        >
+          57
+        </h6>
+      </div>
+      <div
+        className="Card__Content-yfq75p-2 goaCw"
+      >
+        <p
+          className="Typography__P-sc-1613j99-6 cdYHMX"
+        >
+          This is an alternate style card that supports a coloured border, an icon and moves the subtitle to the right of the title, rather than underneath it.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Card__Item-yfq75p-0 cHzaXt"
+    >
+      <div
+        className="Card__Header-yfq75p-1 hQcgPp"
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+        <h3
+          className="Typography__H3-sc-1613j99-2 oYbxO"
+        >
+          Roles
+        </h3>
+        <h6
+          className="Typography__H6-sc-1613j99-5 bRBAKr"
+        >
+          Here is a subtitle
+        </h6>
+      </div>
+      <div
+        className="Card__Content-yfq75p-2 goaCw"
+      >
+        <p
+          className="Typography__P-sc-1613j99-6 cdYHMX"
+        >
+          This is an alternate style card that supports a coloured border, an icon and moves the subtitle to the right of the title, rather than underneath it.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Card__Item-yfq75p-0 hOEdXd"
+    >
+      <div
+        className="Card__Header-yfq75p-1 hQcgPp"
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+        <h3
+          className="Typography__H3-sc-1613j99-2 oYbxO"
+        >
+          4,539 People
+        </h3>
+        <small
+          className="Card__ChangeValue-yfq75p-4 cHegKK"
+        >
+          No change
+        </small>
+      </div>
+      <div
+        className="Card__Content-yfq75p-2 goaCw"
+      >
+        <p
+          className="Typography__P-sc-1613j99-6 cdYHMX"
+        >
+          This is an alternate style card that supports a coloured border, an icon and shows a delta change.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Card__Item-yfq75p-0 kQlLJV"
+    >
+      <div
+        className="Card__Header-yfq75p-1 hQcgPp"
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+        <h3
+          className="Typography__H3-sc-1613j99-2 oYbxO"
+        >
+          12 Divisions
+        </h3>
+        <div
+          className="Card__ChangeIcon-yfq75p-3 ibzsKd"
+        />
+        <small
+          className="Card__ChangeValue-yfq75p-4 cHegKK"
+        >
+          2 (-1%)
+        </small>
+      </div>
+      <div
+        className="Card__Content-yfq75p-2 goaCw"
+      >
+        <p
+          className="Typography__P-sc-1613j99-6 cdYHMX"
+        >
+          This is an alternate style card that supports a coloured border, an icon and shows a delta change.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Card__Item-yfq75p-0 dqqKLZ"
+    >
+      <div
+        className="Card__Header-yfq75p-1 hQcgPp"
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+        <h3
+          className="Typography__H3-sc-1613j99-2 oYbxO"
+        >
+          289 Teams
+        </h3>
+        <div
+          className="Card__ChangeIcon-yfq75p-3 pxfpD"
+        />
+        <small
+          className="Card__ChangeValue-yfq75p-4 cHegKK"
+        >
+          9 (+2%)
+        </small>
+      </div>
+      <div
+        className="Card__Content-yfq75p-2 goaCw"
+      >
+        <p
+          className="Typography__P-sc-1613j99-6 cdYHMX"
+        >
+          This is an alternate style card that supports a coloured border, an icon and shows a delta change.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Card Complex card 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gjygQu"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 gSqVEO"
+    data-testid={null}
+  >
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 gHANPZ"
+    >
+      <div
+        className="Card__Item-yfq75p-0 kDqDaU"
+      >
+        <div
+          className="Card__Content-yfq75p-2 goaCw"
+        >
+          <span
+            className="Icon__IconWrapper-xeqnbo-0 kfbvmR"
+            color="greyLight"
+          >
+            <svg
+              className="svg-inline--fa fa-undefined"
+            />
+          </span>
+          <h3
+            className="Typography__H3-sc-1613j99-2 oYbxO"
+          >
+            Create new
+          </h3>
+          <p
+            className="Typography__P-sc-1613j99-6 cdYHMX"
+          >
+            Start with a blank slate and add your own data
+          </p>
+          <button
+            className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+            data-testid={null}
+            disabled={false}
+          >
+            Start fresh
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 gHANPZ"
+    >
+      <div
+        className="Card__Item-yfq75p-0 kDqDaU"
+      >
+        <div
+          className="Card__Content-yfq75p-2 goaCw"
+        >
+          <span
+            className="Icon__IconWrapper-xeqnbo-0 kfbvmR"
+            color="greyLight"
+          >
+            <svg
+              className="svg-inline--fa fa-undefined"
+            />
+          </span>
+          <h3
+            className="Typography__H3-sc-1613j99-2 oYbxO"
+          >
+            Explore app
+          </h3>
+          <p
+            className="Typography__P-sc-1613j99-6 cdYHMX"
+          >
+            Look at pre-populated data to see app in action
+          </p>
+          <button
+            className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+            data-testid={null}
+            disabled={false}
+          >
+            View example
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Checkbox Basic Checkbox 1`] = `
+<div
+  className="Checkbox__Item-p4d19b-0 bvDiDr"
+>
+  <label
+    className="Checkbox__Label-p4d19b-1 kOyQzY"
+  >
+    <input
+      className="Checkbox__Control-p4d19b-2 eYCfEr"
+      type="checkbox"
+    />
+    <div
+      className="Checkbox__Box-p4d19b-3 csKNKp"
+    >
+      <div
+        className="Checkbox__Check-p4d19b-4 eTdZLy"
+      />
+    </div>
+    <div
+      className="Checkbox__Text-p4d19b-5 koOQLU"
+    >
+      Default checkbox
+    </div>
+  </label>
+</div>
+`;
+
+exports[`Storyshots Units/Checkbox Checked 1`] = `
+<div
+  className="Checkbox__Item-p4d19b-0 bvDiDr"
+>
+  <label
+    className="Checkbox__Label-p4d19b-1 kOyQzY"
+  >
+    <input
+      checked={true}
+      className="Checkbox__Control-p4d19b-2 eYCfEr"
+      type="checkbox"
+    />
+    <div
+      className="Checkbox__Box-p4d19b-3 csKNKp"
+    >
+      <div
+        className="Checkbox__Check-p4d19b-4 eTdZLy"
+      />
+    </div>
+    <div
+      className="Checkbox__Text-p4d19b-5 koOQLU"
+    >
+      Ticked checkbox
+    </div>
+  </label>
+</div>
+`;
+
+exports[`Storyshots Units/Checkbox Colour Variants 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
+  >
+    <div
+      className="Checkbox__Item-p4d19b-0 bvDiDr"
+    >
+      <label
+        className="Checkbox__Label-p4d19b-1 kOyQzY"
+      >
+        <input
+          className="Checkbox__Control-p4d19b-2 dEruue"
+          type="checkbox"
+        />
+        <div
+          className="Checkbox__Box-p4d19b-3 csKNKp"
+        >
+          <div
+            className="Checkbox__Check-p4d19b-4 eTdZLy"
+          />
+        </div>
+        <div
+          className="Checkbox__Text-p4d19b-5 koOQLU"
+        >
+          Primary colour checkbox
+        </div>
+      </label>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
+  >
+    <div
+      className="Checkbox__Item-p4d19b-0 bvDiDr"
+    >
+      <label
+        className="Checkbox__Label-p4d19b-1 kOyQzY"
+      >
+        <input
+          className="Checkbox__Control-p4d19b-2 ksOOIp"
+          type="checkbox"
+        />
+        <div
+          className="Checkbox__Box-p4d19b-3 csKNKp"
+        >
+          <div
+            className="Checkbox__Check-p4d19b-4 eTdZLy"
+          />
+        </div>
+        <div
+          className="Checkbox__Text-p4d19b-5 koOQLU"
+        >
+          Success colour checkbox
+        </div>
+      </label>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
+  >
+    <div
+      className="Checkbox__Item-p4d19b-0 bvDiDr"
+    >
+      <label
+        className="Checkbox__Label-p4d19b-1 kOyQzY"
+      >
+        <input
+          className="Checkbox__Control-p4d19b-2 hBvgQm"
+          type="checkbox"
+        />
+        <div
+          className="Checkbox__Box-p4d19b-3 csKNKp"
+        >
+          <div
+            className="Checkbox__Check-p4d19b-4 eTdZLy"
+          />
+        </div>
+        <div
+          className="Checkbox__Text-p4d19b-5 koOQLU"
+        >
+          Warning colour checkbox
+        </div>
+      </label>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
+  >
+    <div
+      className="Checkbox__Item-p4d19b-0 bvDiDr"
+    >
+      <label
+        className="Checkbox__Label-p4d19b-1 kOyQzY"
+      >
+        <input
+          className="Checkbox__Control-p4d19b-2 gFMsFc"
+          type="checkbox"
+        />
+        <div
+          className="Checkbox__Box-p4d19b-3 csKNKp"
+        >
+          <div
+            className="Checkbox__Check-p4d19b-4 eTdZLy"
+          />
+        </div>
+        <div
+          className="Checkbox__Text-p4d19b-5 koOQLU"
+        >
+          Danger colour checkbox
+        </div>
+      </label>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Units/Checkbox Disabled 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
+  >
+    <div
+      className="Checkbox__Item-p4d19b-0 bvDiDr"
+    >
+      <label
+        className="Checkbox__Label-p4d19b-1 bMlqJq"
+        disabled={true}
+      >
+        <input
+          className="Checkbox__Control-p4d19b-2 eYCfEr"
+          disabled={true}
+          type="checkbox"
+        />
+        <div
+          className="Checkbox__Box-p4d19b-3 csKNKp"
+        >
+          <div
+            className="Checkbox__Check-p4d19b-4 eTdZLy"
+          />
+        </div>
+        <div
+          className="Checkbox__Text-p4d19b-5 koOQLU"
+        >
+          Disabled checkbox
+        </div>
+      </label>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
+  >
+    <div
+      className="Checkbox__Item-p4d19b-0 bvDiDr"
+    >
+      <label
+        className="Checkbox__Label-p4d19b-1 bMlqJq"
+        disabled={true}
+      >
+        <input
+          checked={true}
+          className="Checkbox__Control-p4d19b-2 eYCfEr"
+          disabled={true}
+          type="checkbox"
+        />
+        <div
+          className="Checkbox__Box-p4d19b-3 csKNKp"
+        >
+          <div
+            className="Checkbox__Check-p4d19b-4 eTdZLy"
+          />
+        </div>
+        <div
+          className="Checkbox__Text-p4d19b-5 koOQLU"
+        >
+          Disabled ticked checkbox
+        </div>
+      </label>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Units/Checkbox Inverted 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 cQxHnQ"
+  data-testid={null}
+>
+  <div
+    className="Checkbox__Item-p4d19b-0 fZqhjr"
+  >
+    <label
+      className="Checkbox__Label-p4d19b-1 kOyQzY"
+    >
+      <input
+        className="Checkbox__Control-p4d19b-2 iShEdo"
+        type="checkbox"
+      />
+      <div
+        className="Checkbox__Box-p4d19b-3 csKNKp"
+      >
+        <div
+          className="Checkbox__Check-p4d19b-4 eTdZLy"
+        />
+      </div>
+      <div
+        className="Checkbox__Text-p4d19b-5 koOQLU"
+      >
+        Inverted checkbox
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Divider Default Divider 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Divider__Item-sc-106mlj-0 bFDWQk"
+    />
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Divider__Item-sc-106mlj-0 bVLzUP"
+    />
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Divider__Item-sc-106mlj-0 hCFvIy"
+    />
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Divider__Item-sc-106mlj-0 lgLMcl"
+    />
+  </div>,
+]
+`;
+
+exports[`Storyshots Units/Divider Inverted Divider 1`] = `
+Array [
+  <div
+    className="Divider__Item-sc-106mlj-0 eLdOpL"
+  />,
+  <div
+    className="Divider__Item-sc-106mlj-0 bijHol"
+  />,
+]
+`;
+
+exports[`Storyshots Units/Divider Span Grid 1`] = `
+<div
+  className="Divider__Item-sc-106mlj-0 cVpIJd"
+/>
+`;
+
+exports[`Storyshots Units/Expandable Default Expandable 1`] = `
+<div
+  className="Expandable__Item-na4gdb-0 dfSpXr"
+>
+  <button
+    className="Expandable__Button-na4gdb-1 kkyPOz"
+    onClick={[Function]}
+  >
+    <div
+      className="Flex__FlexWrapper-sc-1f3kfw7-0 cThWPn"
+      data-testid={null}
+    >
+      <div
+        className="Expandable__Text-na4gdb-2 kgTlSW"
+      >
+        <h4
+          className="Typography__H4-sc-1613j99-3 cvPFAr"
+        >
+          Details
+        </h4>
+      </div>
+    </div>
+  </button>
+  <div
+    className="Expandable__Content-na4gdb-3 dNUyVo"
+  >
+    <p
+      className="Typography__P-sc-1613j99-6 cdYHMX"
+    >
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Expandable Expandable With Badge 1`] = `
+<div
+  className="Expandable__Item-na4gdb-0 dfSpXr"
+>
+  <button
+    className="Expandable__Button-na4gdb-1 kkyPOz"
+    onClick={[Function]}
+  >
+    <div
+      className="Flex__FlexWrapper-sc-1f3kfw7-0 cThWPn"
+      data-testid={null}
+    >
+      <div
+        className="Expandable__Text-na4gdb-2 kgTlSW"
+      >
+        <h4
+          className="Typography__H4-sc-1613j99-3 cvPFAr"
+        >
+          Complex example
+        </h4>
+      </div>
+      <span
+        className="Badge__Item-sc-9r75kj-0 feOvPK"
+      >
+        status
+      </span>
+    </div>
+  </button>
+  <div
+    className="Expandable__Content-na4gdb-3 dNUyVo"
+  >
+    <p
+      className="Typography__P-sc-1613j99-6 cdYHMX"
+    >
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Expandable Expandable With Subtitle 1`] = `
+<div
+  className="Expandable__Item-na4gdb-0 dfSpXr"
+>
+  <button
+    className="Expandable__Button-na4gdb-1 kkyPOz"
+    onClick={[Function]}
+  >
+    <div
+      className="Flex__FlexWrapper-sc-1f3kfw7-0 cThWPn"
+      data-testid={null}
+    >
+      <div
+        className="Expandable__Text-na4gdb-2 kgTlSW"
+      >
+        <h4
+          className="Typography__H4-sc-1613j99-3 cvPFAr"
+        >
+          Complex example
+        </h4>
+        <span
+          className="sc-AxjAm wVQLA"
+        >
+          Subtitle
+        </span>
+      </div>
+    </div>
+  </button>
+  <div
+    className="Expandable__Content-na4gdb-3 dNUyVo"
+  >
+    <p
+      className="Typography__P-sc-1613j99-6 cdYHMX"
+    >
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Expandable Open Expandable 1`] = `
+<div
+  className="Expandable__Item-na4gdb-0 dfSpXr"
+>
+  <button
+    aria-expanded={true}
+    className="Expandable__Button-na4gdb-1 jXwJcg"
+    onClick={[Function]}
+    open={true}
+  >
+    <div
+      className="Flex__FlexWrapper-sc-1f3kfw7-0 cThWPn"
+      data-testid={null}
+    >
+      <div
+        className="Expandable__Text-na4gdb-2 kgTlSW"
+      >
+        <h4
+          className="Typography__H4-sc-1613j99-3 cvPFAr"
+        >
+          Details
+        </h4>
+      </div>
+    </div>
+  </button>
+  <div
+    className="Expandable__Content-na4gdb-3 hhEXij"
+    open={true}
+  >
+    <p
+      className="Typography__P-sc-1613j99-6 cdYHMX"
+    >
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Icon Animated Icons 1`] = `
+Array [
+  <span
+    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+  >
+    <svg
+      className="svg-inline--fa fa-undefined"
+    />
+  </span>,
+  <span
+    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+  >
+    <svg
+      className="svg-inline--fa fa-undefined"
+    />
+  </span>,
+]
+`;
+
+exports[`Storyshots Units/Icon Coloured Icon 1`] = `
+Array [
+  <span
+    className="Icon__IconWrapper-xeqnbo-0 faAlRc"
+    color="primaryDark"
+  >
+    <svg
+      className="svg-inline--fa fa-undefined"
+    />
+  </span>,
+  <span
+    className="Icon__IconWrapper-xeqnbo-0 lhhCCK"
+    color="successDark"
+  >
+    <svg
+      className="svg-inline--fa fa-undefined"
+    />
+  </span>,
+  <span
+    className="Icon__IconWrapper-xeqnbo-0 eDWSpX"
+    color="dangerDark"
+  >
+    <svg
+      className="svg-inline--fa fa-undefined"
+    />
+  </span>,
+]
+`;
+
+exports[`Storyshots Units/Icon Default Icon 1`] = `
+Array [
+  <span
+    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+  >
+    <svg
+      className="svg-inline--fa fa-undefined"
+    />
+  </span>,
+  <span
+    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+  >
+    <svg
+      className="svg-inline--fa fa-undefined"
+    />
+  </span>,
+  <span
+    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+  >
+    <svg
+      className="svg-inline--fa fa-undefined"
+    />
+  </span>,
+]
+`;
+
+exports[`Storyshots Units/Icon Icon Size 1`] = `
+Array [
+  <span
+    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+  >
+    <svg
+      className="svg-inline--fa fa-undefined"
+    />
+  </span>,
+  <span
+    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+  >
+    <svg
+      className="svg-inline--fa fa-undefined"
+    />
+  </span>,
+  <span
+    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+  >
+    <svg
+      className="svg-inline--fa fa-undefined"
+    />
+  </span>,
+  <span
+    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+  >
+    <svg
+      className="svg-inline--fa fa-undefined"
+    />
+  </span>,
+]
+`;
+
+exports[`Storyshots Units/Icon Inverted Icons 1`] = `
+Array [
+  <span
+    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+  >
+    <svg
+      className="svg-inline--fa fa-undefined"
+    />
+  </span>,
+  <span
+    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+  >
+    <svg
+      className="svg-inline--fa fa-undefined"
+    />
+  </span>,
+  <span
+    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+  >
+    <svg
+      className="svg-inline--fa fa-undefined"
+    />
+  </span>,
+]
+`;
+
+exports[`Storyshots Units/Icon Transforms And Rotations 1`] = `
+Array [
+  <span
+    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+  >
+    <svg
+      className="svg-inline--fa fa-undefined"
+    />
+  </span>,
+  <span
+    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+  >
+    <svg
+      className="svg-inline--fa fa-undefined"
+    />
+  </span>,
+  <span
+    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+  >
+    <svg
+      className="svg-inline--fa fa-undefined"
+    />
+  </span>,
+]
+`;
+
+exports[`Storyshots Units/Loading Centered 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 hOHba-d"
+  >
+    <div
+      className="Loading__LoadingWrapper-sc-195w3kf-0 iBdrdZ"
+    >
+      <div
+        className="Loading__Item-sc-195w3kf-1 beTUwW"
+      />
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 hOHba-d"
+  >
+    <div
+      className="Loading__LoadingWrapper-sc-195w3kf-0 iBdrdZ"
+    >
+      <div
+        className="Loading__Item-sc-195w3kf-1 knLRSc"
+      />
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Units/Loading Default Loading 1`] = `
+<div
+  className="Loading__LoadingWrapper-sc-195w3kf-0 iBdrdZ"
+>
+  <div
+    className="Loading__Item-sc-195w3kf-1 lhHtkV"
+  />
+</div>
+`;
+
+exports[`Storyshots Units/Loading Inverted 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 eFGCqk"
+  data-testid={null}
+>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 hOHba-d"
+  >
+    <div
+      className="Loading__LoadingWrapper-sc-195w3kf-0 iBdrdZ"
+    >
+      <div
+        className="Loading__Item-sc-195w3kf-1 jqyRqE"
+      />
+    </div>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 hOHba-d"
+  >
+    <div
+      className="Loading__LoadingWrapper-sc-195w3kf-0 iBdrdZ"
+    >
+      <div
+        className="Loading__Item-sc-195w3kf-1 bJFVQn"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Loading Large 1`] = `
+<div
+  className="Loading__LoadingWrapper-sc-195w3kf-0 iBdrdZ"
+>
+  <div
+    className="Loading__Item-sc-195w3kf-1 fQoQjz"
+  />
+</div>
+`;
+
+exports[`Storyshots Units/Popover Default popover 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gILfyj"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 jSQlXT"
+    data-testid={null}
+  >
+    <div
+      className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+    >
+      <div
+        className="Popover__Text-sc-1bwoak-1 jwsBmN tooltip"
+      >
+        Text description of what this button does
+      </div>
+      <button
+        className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+        data-testid={null}
+        disabled={false}
+      >
+        Hover Me!
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Popover Direction 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gILfyj"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 jSQlXT"
+    data-testid={null}
+  >
+    <div
+      className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+    >
+      <div
+        className="Popover__Text-sc-1bwoak-1 jwsBmN tooltip"
+        direction="right"
+      >
+        Text description of what this button does
+      </div>
+      <button
+        className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+        data-testid={null}
+        disabled={false}
+      >
+        Right Hover
+      </button>
+    </div>
+    <div
+      className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+    >
+      <div
+        className="Popover__Text-sc-1bwoak-1 eDxeZo tooltip"
+        direction="left"
+      >
+        Text description of what this button does
+      </div>
+      <button
+        className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+        data-testid={null}
+        disabled={false}
+      >
+        Left Hover
+      </button>
+    </div>
+    <div
+      className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+    >
+      <div
+        className="Popover__Text-sc-1bwoak-1 goQkAT tooltip"
+        direction="bottom"
+      >
+        Centered description of what this button does
+      </div>
+      <button
+        className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+        data-testid={null}
+        disabled={false}
+      >
+        Bottom Hover
+      </button>
+    </div>
+    <div
+      className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+    >
+      <div
+        className="Popover__Text-sc-1bwoak-1 hPuoUG tooltip"
+        direction="top"
+      >
+        Text description of what this button does
+      </div>
+      <button
+        className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+        data-testid={null}
+        disabled={false}
+      >
+        Top Hover
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Popover Inline 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gILfyj"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 jSQlXT"
+    data-testid={null}
+  >
+    <div
+      className="Popover__Container-sc-1bwoak-0 HfJTx"
+    >
+      <div
+        className="Popover__Text-sc-1bwoak-1 jwsBmN tooltip"
+      >
+        Text description of what this button does
+      </div>
+      <button
+        className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+        data-testid={null}
+        disabled={false}
+      >
+        Inline Block Set
+      </button>
+    </div>
+    <div
+      className="Popover__Container-sc-1bwoak-0 HfJTx"
+    >
+      <div
+        className="Popover__Text-sc-1bwoak-1 jwsBmN tooltip"
+      >
+        Text description of what this button does
+      </div>
+      <button
+        className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+        data-testid={null}
+        disabled={false}
+      >
+        Inline Block Set
+      </button>
+    </div>
+    <div
+      className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+    >
+      <div
+        className="Popover__Text-sc-1bwoak-1 jwsBmN tooltip"
+      >
+        Centered description of what this button does
+      </div>
+      <button
+        className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+        data-testid={null}
+        disabled={false}
+      >
+        Not Inline
+      </button>
+    </div>
+    <div
+      className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+    >
+      <div
+        className="Popover__Text-sc-1bwoak-1 hPuoUG tooltip"
+        direction="top"
+      >
+        Text description of what this button does
+      </div>
+      <button
+        className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+        data-testid={null}
+        disabled={false}
+      >
+        Not Inline
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Popover Specified width 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gILfyj"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 jSQlXT"
+    data-testid={null}
+  >
+    <div
+      className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+    >
+      <div
+        className="Popover__Text-sc-1bwoak-1 jAUnCe tooltip"
+        width="100px"
+      >
+        Text description of what this button does
+      </div>
+      <button
+        className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+        data-testid={null}
+        disabled={false}
+      >
+        Hover Me
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Popover Text alignment 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gILfyj"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 jSQlXT"
+    data-testid={null}
+  >
+    <div
+      className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+    >
+      <div
+        className="Popover__Text-sc-1bwoak-1 hCeyYV tooltip"
+      >
+        Text description of what this button does
+      </div>
+      <button
+        className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+        data-testid={null}
+        disabled={false}
+      >
+        Hover Me
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/ProgressBar Default 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="ProgressBar__Background-q9qaaf-0 ctVlUv"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="ProgressBar__Fill-q9qaaf-1 kOCBNh"
+        style={
+          Object {
+            "width": "40%",
+          }
+        }
+      />
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="ProgressBar__Background-q9qaaf-0 ctVlUv"
+      style={
+        Object {
+          "width": "50%",
+        }
+      }
+    >
+      <div
+        className="ProgressBar__Fill-q9qaaf-1 kOCBNh"
+        style={
+          Object {
+            "width": "70%",
+          }
+        }
+      />
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Units/ProgressBar Gradient 1`] = `
+<div
+  className="ProgressBar__Background-q9qaaf-0 ctVlUv"
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <div
+    className="ProgressBar__Fill-q9qaaf-1 kOCBNh"
+    style={
+      Object {
+        "width": "40%",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Storyshots Units/ProgressBar Inverted 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 cQxHnQ"
+  data-testid={null}
+>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="ProgressBar__Background-q9qaaf-0 cTuA-DY"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="ProgressBar__Fill-q9qaaf-1 hMAPDb"
+        style={
+          Object {
+            "width": "40%",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="ProgressBar__Background-q9qaaf-0 cTuA-DY"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="ProgressBar__Fill-q9qaaf-1 fUMGEw"
+        style={
+          Object {
+            "width": "70%",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/RadioButton Checked 1`] = `
+<div
+  className="RadioButton__RadioButtonItem-d2jy6y-0 eqcrGb"
+>
+  <label
+    className="RadioButton__RadioButtonLabel-d2jy6y-1 dpSbtL"
+  >
+    <input
+      checked={true}
+      className="RadioButton__RadioButtonControl-d2jy6y-2 kdKDlH"
+      name="RadioButtons02"
+      type="radio"
+    />
+    <div
+      className="RadioButton__RadioButtonCircle-d2jy6y-3 dQIFue"
+    >
+      <div
+        className="RadioButton__RadioButtonDot-d2jy6y-4 bykKuA"
+      />
+    </div>
+    <div
+      className="RadioButton__RadioButtonText-d2jy6y-5 jvVOeF"
+    >
+      Default checked radio
+    </div>
+  </label>
+</div>
+`;
+
+exports[`Storyshots Units/RadioButton Colour 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="RadioButton__RadioButtonItem-d2jy6y-0 eqcrGb"
+    >
+      <label
+        className="RadioButton__RadioButtonLabel-d2jy6y-1 dpSbtL"
+      >
+        <input
+          className="RadioButton__RadioButtonControl-d2jy6y-2 jYQeIN"
+          name="RadioButtons"
+          type="radio"
+        />
+        <div
+          className="RadioButton__RadioButtonCircle-d2jy6y-3 iXRqLe"
+        >
+          <div
+            className="RadioButton__RadioButtonDot-d2jy6y-4 bMMBJy"
+          />
+        </div>
+        <div
+          className="RadioButton__RadioButtonText-d2jy6y-5 jvVOeF"
+        >
+          Primary colour radio
+        </div>
+      </label>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="RadioButton__RadioButtonItem-d2jy6y-0 eqcrGb"
+    >
+      <label
+        className="RadioButton__RadioButtonLabel-d2jy6y-1 dpSbtL"
+      >
+        <input
+          className="RadioButton__RadioButtonControl-d2jy6y-2 bdpfvB"
+          name="RadioButtons"
+          type="radio"
+        />
+        <div
+          className="RadioButton__RadioButtonCircle-d2jy6y-3 jxLUMX"
+        >
+          <div
+            className="RadioButton__RadioButtonDot-d2jy6y-4 fLbbgD"
+          />
+        </div>
+        <div
+          className="RadioButton__RadioButtonText-d2jy6y-5 jvVOeF"
+        >
+          Success colour radio
+        </div>
+      </label>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="RadioButton__RadioButtonItem-d2jy6y-0 eqcrGb"
+    >
+      <label
+        className="RadioButton__RadioButtonLabel-d2jy6y-1 dpSbtL"
+      >
+        <input
+          className="RadioButton__RadioButtonControl-d2jy6y-2 eOwlHp"
+          name="RadioButtons"
+          type="radio"
+        />
+        <div
+          className="RadioButton__RadioButtonCircle-d2jy6y-3 hHGzRD"
+        >
+          <div
+            className="RadioButton__RadioButtonDot-d2jy6y-4 huyqXr"
+          />
+        </div>
+        <div
+          className="RadioButton__RadioButtonText-d2jy6y-5 jvVOeF"
+        >
+          Warning colour radio
+        </div>
+      </label>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="RadioButton__RadioButtonItem-d2jy6y-0 eqcrGb"
+    >
+      <label
+        className="RadioButton__RadioButtonLabel-d2jy6y-1 dpSbtL"
+      >
+        <input
+          className="RadioButton__RadioButtonControl-d2jy6y-2 hjZZDd"
+          name="RadioButtons"
+          type="radio"
+        />
+        <div
+          className="RadioButton__RadioButtonCircle-d2jy6y-3 crGNEn"
+        >
+          <div
+            className="RadioButton__RadioButtonDot-d2jy6y-4 fDNuFT"
+          />
+        </div>
+        <div
+          className="RadioButton__RadioButtonText-d2jy6y-5 jvVOeF"
+        >
+          Danger colour radio
+        </div>
+      </label>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Units/RadioButton Default 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="RadioButton__RadioButtonItem-d2jy6y-0 eqcrGb"
+    >
+      <label
+        className="RadioButton__RadioButtonLabel-d2jy6y-1 dpSbtL"
+      >
+        <input
+          className="RadioButton__RadioButtonControl-d2jy6y-2 kdKDlH"
+          name="RadioButtons01"
+          type="radio"
+        />
+        <div
+          className="RadioButton__RadioButtonCircle-d2jy6y-3 dQIFue"
+        >
+          <div
+            className="RadioButton__RadioButtonDot-d2jy6y-4 bykKuA"
+          />
+        </div>
+        <div
+          className="RadioButton__RadioButtonText-d2jy6y-5 jvVOeF"
+        >
+          Default radio
+        </div>
+      </label>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="RadioButton__RadioButtonItem-d2jy6y-0 eqcrGb"
+    >
+      <label
+        className="RadioButton__RadioButtonLabel-d2jy6y-1 dpSbtL"
+      >
+        <input
+          className="RadioButton__RadioButtonControl-d2jy6y-2 kdKDlH"
+          name="RadioButtons01"
+          type="radio"
+        />
+        <div
+          className="RadioButton__RadioButtonCircle-d2jy6y-3 dQIFue"
+        >
+          <div
+            className="RadioButton__RadioButtonDot-d2jy6y-4 bykKuA"
+          />
+        </div>
+        <div
+          className="RadioButton__RadioButtonText-d2jy6y-5 jvVOeF"
+        >
+          Default radio 02
+        </div>
+      </label>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Units/RadioButton Disabled 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="RadioButton__RadioButtonItem-d2jy6y-0 eqcrGb"
+    >
+      <label
+        className="RadioButton__RadioButtonLabel-d2jy6y-1 caxtUt"
+        disabled={true}
+      >
+        <input
+          className="RadioButton__RadioButtonControl-d2jy6y-2 kdKDlH"
+          disabled={true}
+          name="RadioButtons03"
+          type="radio"
+        />
+        <div
+          className="RadioButton__RadioButtonCircle-d2jy6y-3 dQIFue"
+        >
+          <div
+            className="RadioButton__RadioButtonDot-d2jy6y-4 bykKuA"
+          />
+        </div>
+        <div
+          className="RadioButton__RadioButtonText-d2jy6y-5 jvVOeF"
+        >
+          Disabled unchecked radio
+        </div>
+      </label>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="RadioButton__RadioButtonItem-d2jy6y-0 eqcrGb"
+    >
+      <label
+        className="RadioButton__RadioButtonLabel-d2jy6y-1 caxtUt"
+        disabled={true}
+      >
+        <input
+          checked={true}
+          className="RadioButton__RadioButtonControl-d2jy6y-2 kdKDlH"
+          disabled={true}
+          name="RadioButtons03"
+          type="radio"
+        />
+        <div
+          className="RadioButton__RadioButtonCircle-d2jy6y-3 dQIFue"
+        >
+          <div
+            className="RadioButton__RadioButtonDot-d2jy6y-4 bykKuA"
+          />
+        </div>
+        <div
+          className="RadioButton__RadioButtonText-d2jy6y-5 jvVOeF"
+        >
+          Disabled checked radio
+        </div>
+      </label>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Units/RadioButton Inverted 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 cizYVY"
+  data-testid={null}
+>
+  <div
+    className="RadioButton__RadioButtonItem-d2jy6y-0 kJxzei"
+  >
+    <label
+      className="RadioButton__RadioButtonLabel-d2jy6y-1 dpSbtL"
+    >
+      <input
+        className="RadioButton__RadioButtonControl-d2jy6y-2 hVPBQb"
+        name="RadioButtons04"
+        type="radio"
+      />
+      <div
+        className="RadioButton__RadioButtonCircle-d2jy6y-3 OeCyC"
+      >
+        <div
+          className="RadioButton__RadioButtonDot-d2jy6y-4 eZzilu"
+        />
+      </div>
+      <div
+        className="RadioButton__RadioButtonText-d2jy6y-5 jvVOeF"
+      >
+        Inverted radio
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Range Default 1`] = `
+<div
+  className="Range__Wrapper-zb0zps-0 jjvWhp"
+  max={20}
+  min={0}
+>
+  <input
+    className="Range__Input-zb0zps-1 faEVHp"
+    type="range"
+  />
+  <output
+    className="Range__Output-zb0zps-2 dQbfcl"
+  >
+    10
+  </output>
+</div>
+`;
+
+exports[`Storyshots Units/Range Inverted 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 cQxHnQ"
+  data-testid={null}
+>
+  <div
+    className="Range__Wrapper-zb0zps-0 hudaPL"
+    max={20}
+    min={0}
+  >
+    <input
+      className="Range__Input-zb0zps-1 faEVHp"
+      type="range"
+    />
+    <output
+      className="Range__Output-zb0zps-2 dQbfcl"
+    >
+      10
+    </output>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/StatusDot Colour Variants 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gILfyj"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 eZeQXC"
+    data-testid={null}
+  >
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+    >
+      <div
+        className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+      >
+        <div
+          className="Popover__Text-sc-1bwoak-1 jaBCFX tooltip"
+          direction="top"
+          width="250px"
+        >
+          Team has a dedicated Product Owner. STATUS: Met
+        </div>
+        <div
+          className="StatusDot__StatusDotItem-sc-1esxq7c-0 dQEiKV"
+        />
+      </div>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+    >
+      <div
+        className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+      >
+        <div
+          className="Popover__Text-sc-1bwoak-1 jaBCFX tooltip"
+          direction="top"
+          width="250px"
+        >
+          Team members are in less than 3 locations. STATUS: Not enough data
+        </div>
+        <div
+          className="StatusDot__StatusDotItem-sc-1esxq7c-0 cRoPwx"
+        />
+      </div>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+    >
+      <div
+        className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+      >
+        <div
+          className="Popover__Text-sc-1bwoak-1 jaBCFX tooltip"
+          direction="top"
+          width="250px"
+        >
+          Team has a dedicated Engineering Lead. STATUS: Not met
+        </div>
+        <div
+          className="StatusDot__StatusDotItem-sc-1esxq7c-0 ediouZ"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/StatusDot Default badge 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gILfyj"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 eZeQXC"
+    data-testid={null}
+  >
+    <div
+      className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+    >
+      <div
+        className="Popover__Text-sc-1bwoak-1 gmaSeC tooltip"
+        direction="top"
+        width="170px"
+      >
+        New approvals received
+      </div>
+      <div
+        className="StatusDot__StatusDotItem-sc-1esxq7c-0 dIsRjm"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/StatusDot With icon 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gILfyj"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 eZeQXC"
+    data-testid={null}
+  >
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+    >
+      <div
+        className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+      >
+        <div
+          className="Popover__Text-sc-1bwoak-1 dFOCLM tooltip"
+          direction="top"
+          width="110px"
+        >
+          Target met
+        </div>
+        <div
+          className="StatusDot__StatusDotItem-sc-1esxq7c-0 btxbkN"
+        >
+          <span
+            className="Icon__IconWrapper-xeqnbo-0 hrqhCG"
+            color="white"
+          >
+            <svg
+              className="svg-inline--fa fa-undefined"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+    >
+      <div
+        className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+      >
+        <div
+          className="Popover__Text-sc-1bwoak-1 dFOCLM tooltip"
+          direction="top"
+          width="110px"
+        >
+          Under allocated
+        </div>
+        <div
+          className="StatusDot__StatusDotItem-sc-1esxq7c-0 uhHWp"
+        >
+          <span
+            className="Icon__IconWrapper-xeqnbo-0 hrqhCG"
+            color="white"
+          >
+            <svg
+              className="svg-inline--fa fa-undefined"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+    >
+      <div
+        className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+      >
+        <div
+          className="Popover__Text-sc-1bwoak-1 dFOCLM tooltip"
+          direction="top"
+          width="110px"
+        >
+          Over allocated
+        </div>
+        <div
+          className="StatusDot__StatusDotItem-sc-1esxq7c-0 bGbgUR"
+        >
+          <span
+            className="Icon__IconWrapper-xeqnbo-0 hrqhCG"
+            color="white"
+          >
+            <svg
+              className="svg-inline--fa fa-undefined"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Tabs Default Tabs 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 hWsMxU"
+  data-testid={null}
+>
+  <div
+    className="Tabs__TabsContainerItem-sc-15tpvnt-0 cgNJtA"
+  >
+    <div
+      className="Tabs__TabItem-sc-15tpvnt-1 jHFIIe  "
+    >
+      <a
+        href="#"
+      >
+        Details
+      </a>
+    </div>
+    <div
+      className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+    >
+      <div
+        className="Popover__Text-sc-1bwoak-1 ekMAAj tooltip"
+        direction="top"
+        width="218px"
+      >
+        Example with tooltip explaining tab
+      </div>
+      <div
+        className="Tabs__TabItem-sc-15tpvnt-1 jHFIIe active "
+      >
+        <a
+          href="#"
+          tabIndex="-1"
+        >
+          Additional information
+        </a>
+      </div>
+    </div>
+    <div
+      className="Tabs__TabItem-sc-15tpvnt-1 UpFlm  notification notification-97"
+    >
+      <a
+        href="#"
+      >
+        Planning
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Tag Default 1`] = `
+<div
+  className="Layout__LayoutWrapper-v8gb7g-0 keuwsA"
+  display="block"
+  overflow="hidden"
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 cThWPn"
+    data-testid={null}
+  >
+    <button
+      className="Tag__TagWrapper-sc-1dh2aa8-0 bCioSy"
+      disabled={false}
+      selected={false}
+    >
+      Default Tag
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Tag Disabled 1`] = `
+<div
+  className="Layout__LayoutWrapper-v8gb7g-0 keuwsA"
+  display="block"
+  overflow="hidden"
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 cThWPn"
+    data-testid={null}
+  >
+    <button
+      className="Tag__TagWrapper-sc-1dh2aa8-0 jpSajg"
+      disabled={true}
+      selected={false}
+    >
+      devops
+    </button>
+    <button
+      className="Tag__TagWrapper-sc-1dh2aa8-0 jpSajg"
+      disabled={true}
+      selected={false}
+    >
+      software engineering
+    </button>
+    <button
+      className="Tag__TagWrapper-sc-1dh2aa8-0 jpSajg"
+      disabled={true}
+      selected={false}
+    >
+      product design
+    </button>
+    <button
+      className="Tag__TagWrapper-sc-1dh2aa8-0 jpSajg"
+      disabled={true}
+      selected={false}
+    >
+      digital transformation
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Tag No Cross 1`] = `
+<div
+  className="Layout__LayoutWrapper-v8gb7g-0 keuwsA"
+  display="block"
+  overflow="hidden"
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 cThWPn"
+    data-testid={null}
+  >
+    <button
+      className="Tag__TagWrapper-sc-1dh2aa8-0 krNWfN"
+      disabled={false}
+      selected={true}
+    >
+      devops
+    </button>
+    <button
+      className="Tag__TagWrapper-sc-1dh2aa8-0 krNWfN"
+      disabled={false}
+      selected={true}
+    >
+      software engineering
+    </button>
+    <button
+      className="Tag__TagWrapper-sc-1dh2aa8-0 bCioSy"
+      disabled={false}
+      selected={false}
+    >
+      product design
+    </button>
+    <button
+      className="Tag__TagWrapper-sc-1dh2aa8-0 bCioSy"
+      disabled={false}
+      selected={false}
+    >
+      digital transformation
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Tag Selected 1`] = `
+<div
+  className="Layout__LayoutWrapper-v8gb7g-0 keuwsA"
+  display="block"
+  overflow="hidden"
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 cThWPn"
+    data-testid={null}
+  >
+    <button
+      className="Tag__TagWrapper-sc-1dh2aa8-0 cIWlIV"
+      disabled={false}
+      selected={true}
+    >
+      devops
+    </button>
+    <button
+      className="Tag__TagWrapper-sc-1dh2aa8-0 cIWlIV"
+      disabled={false}
+      selected={true}
+    >
+      software engineering
+    </button>
+    <button
+      className="Tag__TagWrapper-sc-1dh2aa8-0 bCioSy"
+      disabled={false}
+      selected={false}
+    >
+      product design
+    </button>
+    <button
+      className="Tag__TagWrapper-sc-1dh2aa8-0 bCioSy"
+      disabled={false}
+      selected={false}
+    >
+      digital transformation
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/TextInput Default 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="TextInput__Group-shde0o-0 gRGOZf"
+      placeholder="E.g. John Smith"
+      type="text"
+    >
+      <label
+        className="TextInput__Label-shde0o-4 gJzsZZ"
+        htmlFor="textInput1"
+      >
+        Full name
+      </label>
+      <input
+        className="TextInput__Input-shde0o-2 gUCiTr"
+        id="textInput1"
+        label="Full name"
+        placeholder="E.g. John Smith"
+        type="text"
+      />
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="TextInput__Group-shde0o-0 gRGOZf"
+      placeholder="E.g. John Smith"
+      type="text"
+    >
+      <label
+        className="TextInput__Label-shde0o-4 ftnqwa"
+        htmlFor="textInput2"
+      >
+        Full name
+      </label>
+      <input
+        className="TextInput__Input-shde0o-2 jsIVpY"
+        id="textInput2"
+        label="Full name"
+        placeholder="E.g. John Smith"
+        type="text"
+      />
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="TextInput__Group-shde0o-0 gRGOZf"
+      placeholder="E.g. John Smith"
+      type="text"
+    >
+      <label
+        className="TextInput__Label-shde0o-4 dgeIiB"
+        htmlFor="textInput3"
+      >
+        Full name
+      </label>
+      <input
+        className="TextInput__Input-shde0o-2 koskDo"
+        id="textInput3"
+        label="Full name"
+        placeholder="E.g. John Smith"
+        type="text"
+      />
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="TextInput__Group-shde0o-0 gRGOZf"
+      placeholder="E.g. John Smith"
+      type="text"
+    >
+      <label
+        className="TextInput__Label-shde0o-4 khxHLp"
+        htmlFor="textInput4"
+      >
+        Full name
+      </label>
+      <input
+        className="TextInput__Input-shde0o-2 gUCiTr"
+        id="textInput4"
+        label="Full name"
+        placeholder="E.g. John Smith"
+        type="text"
+      />
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Units/TextInput Floating label 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="TextInput__Group-shde0o-0 gRGOZf"
+      placeholder="E.g. John Smith"
+      type="text"
+    >
+      <input
+        className="TextInput__Input-shde0o-2 hOhAbG"
+        id="textInput5"
+        label="Full name"
+        placeholder="E.g. John Smith"
+        type="text"
+      />
+      <label
+        className="TextInput__Label-shde0o-4 ZQbaL"
+        htmlFor="textInput5"
+      >
+        Full name
+      </label>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="TextInput__Group-shde0o-0 gRGOZf"
+      placeholder="E.g. John Smith"
+      type="text"
+    >
+      <input
+        className="TextInput__Input-shde0o-2 hUAA-Dg"
+        id="textInput6"
+        label="Full name"
+        placeholder="E.g. John Smith"
+        type="text"
+      />
+      <label
+        className="TextInput__Label-shde0o-4 cohUvM"
+        htmlFor="textInput6"
+      >
+        Full name
+      </label>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="TextInput__Group-shde0o-0 gRGOZf"
+      placeholder="E.g. John Smith"
+      type="text"
+    >
+      <input
+        className="TextInput__Input-shde0o-2 hatoxP"
+        id="textInput7"
+        label="Full name"
+        placeholder="E.g. John Smith"
+        type="text"
+      />
+      <label
+        className="TextInput__Label-shde0o-4 kYKNXg"
+        htmlFor="textInput7"
+      >
+        Full name
+      </label>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="TextInput__Group-shde0o-0 gRGOZf"
+      placeholder="E.g. John Smith"
+      type="text"
+    >
+      <input
+        className="TextInput__Input-shde0o-2 hOhAbG"
+        id="textInput8"
+        label="Full name"
+        placeholder="E.g. John Smith"
+        type="text"
+      />
+      <label
+        className="TextInput__Label-shde0o-4 kYMwjf"
+        htmlFor="textInput8"
+      >
+        Full name
+      </label>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Units/TextInput Number 1`] = `
+<div
+  className="TextInput__Group-shde0o-0 gRGOZf"
+  value="345345.55"
+>
+  <label
+    className="TextInput__Label-shde0o-4 gJzsZZ"
+    htmlFor="numInput1"
+  >
+    Currency
+  </label>
+  <input
+    className="TextInput__NumberInput-shde0o-3 bzFUJB"
+    id="numInput1"
+    inputMode="numeric"
+    label="Currency"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onMouseUp={[Function]}
+    type="text"
+    value="$345345.55"
+  />
+</div>
+`;
+
+exports[`Storyshots Units/TextInput With Icons 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="TextInput__Group-shde0o-0 gRGOZf"
+      placeholder="E.g. (03) 9451 1786"
+      type="text"
+    >
+      <label
+        className="TextInput__Label-shde0o-4 gJzsZZ"
+        htmlFor="textInput9"
+      >
+        Phone number
+      </label>
+      <input
+        className="TextInput__Input-shde0o-2 iitdbU"
+        id="textInput9"
+        label="Phone number"
+        placeholder="E.g. (03) 9451 1786"
+        type="text"
+      />
+      <div>
+        <label
+          className="TextInput__IconWrapper-shde0o-1 edUEWd"
+          htmlFor="textInput9"
+        >
+          <span
+            className="Icon__IconWrapper-xeqnbo-0 kIa-dkE"
+            color="black"
+            htmlFor="textInput9"
+          >
+            <svg
+              className="svg-inline--fa fa-undefined"
+            />
+          </span>
+        </label>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="TextInput__Group-shde0o-0 gRGOZf"
+      placeholder="E.g. (03) 9451 1786"
+      type="text"
+    >
+      <input
+        className="TextInput__Input-shde0o-2 ilDcqZ"
+        id="textInput10"
+        label="Phone number"
+        placeholder="E.g. (03) 9451 1786"
+        type="text"
+      />
+      <label
+        className="TextInput__Label-shde0o-4 hhEVmY"
+        htmlFor="textInput10"
+      >
+        Phone number
+      </label>
+      <div>
+        <label
+          className="TextInput__IconWrapper-shde0o-1 cFZdcO"
+          htmlFor="textInput10"
+        >
+          <span
+            className="Icon__IconWrapper-xeqnbo-0 kIa-dkE"
+            color="black"
+            htmlFor="textInput10"
+          >
+            <svg
+              className="svg-inline--fa fa-undefined"
+            />
+          </span>
+        </label>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="TextInput__Group-shde0o-0 eQdUQs"
+      placeholder="E.g. agile teams"
+      type="text"
+    >
+      <label
+        className="TextInput__Label-shde0o-4 gJzsZZ"
+        htmlFor="textInput11"
+      >
+        What are you looking for?
+      </label>
+      <input
+        className="TextInput__Input-shde0o-2 bjiVAr"
+        id="textInput11"
+        label="What are you looking for?"
+        placeholder="E.g. agile teams"
+        type="text"
+      />
+      <div>
+        <label
+          className="TextInput__IconWrapper-shde0o-1 jnpZQG"
+          htmlFor="textInput11"
+        >
+          <span
+            className="Icon__IconWrapper-xeqnbo-0 cOFzCH"
+            color="#black"
+            htmlFor="textInput11"
+          >
+            <svg
+              className="svg-inline--fa fa-undefined"
+            />
+          </span>
+        </label>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <div
+      className="TextInput__Group-shde0o-0 eQdUQs"
+      placeholder="E.g. agile teams"
+      type="text"
+    >
+      <input
+        className="TextInput__Input-shde0o-2 dLhsfK"
+        id="textInput12"
+        label="What are you looking for?"
+        placeholder="E.g. agile teams"
+        type="text"
+      />
+      <label
+        className="TextInput__Label-shde0o-4 kVLpNw"
+        htmlFor="textInput12"
+      >
+        What are you looking for?
+      </label>
+      <div>
+        <label
+          className="TextInput__IconWrapper-shde0o-1 hhiilF"
+          htmlFor="textInput12"
+        >
+          <span
+            className="Icon__IconWrapper-xeqnbo-0 cOFzCH"
+            color="#black"
+            htmlFor="textInput12"
+          >
+            <svg
+              className="svg-inline--fa fa-undefined"
+            />
+          </span>
+        </label>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Units/Toggle Default Toggle 1`] = `
+<div
+  className="Toggle__Group-f6l22k-0 dfPeJz"
+  id="autosave"
+  label="Auto save"
+>
+  <input
+    className="Toggle__Input-f6l22k-1 iVVGvY"
+    id="autosave"
+    label="Auto save"
+    type="checkbox"
+  />
+  <label
+    className="Toggle__Item-f6l22k-2 jklSmo"
+    htmlFor="autosave"
+  />
+  <label
+    className="Toggle__Label-f6l22k-3 fjqoMo"
+    htmlFor="autosave"
+  >
+    Auto save
+  </label>
+</div>
+`;
+
+exports[`Storyshots Units/Toggle Inverted Toggle 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gsDhqA"
+  data-testid={null}
+>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Toggle__Group-f6l22k-0 fdTRoC"
+      id="autosave3"
+      label="Auto save"
+    >
+      <input
+        className="Toggle__Input-f6l22k-1 iVVGvY"
+        id="autosave3"
+        label="Auto save"
+        type="checkbox"
+      />
+      <label
+        className="Toggle__Item-f6l22k-2 fVtFEp"
+        htmlFor="autosave3"
+      />
+      <label
+        className="Toggle__Label-f6l22k-3 fjGgOK"
+        htmlFor="autosave3"
+      >
+        Auto save
+      </label>
+    </div>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Toggle__Group-f6l22k-0 fdTRoC"
+      id="autosave4"
+      label="Auto save"
+    >
+      <input
+        className="Toggle__Input-f6l22k-1 iVVGvY"
+        id="autosave4"
+        label="Auto save"
+        type="checkbox"
+      />
+      <label
+        className="Toggle__Item-f6l22k-2 jklSmo"
+        htmlFor="autosave4"
+      />
+      <label
+        className="Toggle__Label-f6l22k-3 fjqoMo"
+        htmlFor="autosave4"
+      >
+        Auto save
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Toggle Small Toggle 1`] = `
+<div
+  className="Toggle__Group-f6l22k-0 dfPeJz"
+  id="autosave2"
+  label="Auto save"
+>
+  <input
+    className="Toggle__Input-f6l22k-1 iVVGvY"
+    id="autosave2"
+    label="Auto save"
+    type="checkbox"
+  />
+  <label
+    className="Toggle__Item-f6l22k-2 fVtFEp"
+    htmlFor="autosave2"
+  />
+  <label
+    className="Toggle__Label-f6l22k-3 fjGgOK"
+    htmlFor="autosave2"
+  >
+    Auto save
+  </label>
+</div>
+`;
+
+exports[`Storyshots Units/Tooltip Default tooltip 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 jfPVQl"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 gSqVEO"
+    data-testid={null}
+  >
+    <button
+      className="Tooltip__Container-vx1y1f-0 cXJzHd"
+    >
+      <span
+        className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
+      >
+        ?
+      </span>
+      <div
+        className="Tooltip__Text-vx1y1f-2 bbWFig"
+        width="200px"
+      >
+        This tooltip helps explain stuff.
+      </div>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Tooltip Direction 1`] = `
+<div
+  className="Flex__FlexWrapper-sc-1f3kfw7-0 gSqVEO"
+  data-testid={null}
+>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 dchEdD"
+  >
+    <button
+      className="Tooltip__Container-vx1y1f-0 cXJzHd"
+    >
+      <span
+        className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
+      >
+        ?
+      </span>
+      <div
+        className="Tooltip__Text-vx1y1f-2 bbWFig"
+        direction="top"
+        width="200px"
+      >
+        Top tooltip example description
+      </div>
+    </button>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 dchEdD"
+  >
+    <button
+      className="Tooltip__Container-vx1y1f-0 cXJzHd"
+    >
+      <span
+        className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
+      >
+        ?
+      </span>
+      <div
+        className="Tooltip__Text-vx1y1f-2 cIeWlV"
+        direction="right"
+        width="200px"
+      >
+        Right tooltip example description
+      </div>
+    </button>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 dchEdD"
+  >
+    <button
+      className="Tooltip__Container-vx1y1f-0 cXJzHd"
+    >
+      <span
+        className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
+      >
+        ?
+      </span>
+      <div
+        className="Tooltip__Text-vx1y1f-2 breOgW"
+        direction="bottom"
+        width="200px"
+      >
+        Bottom tooltip example description
+      </div>
+    </button>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 dchEdD"
+  >
+    <button
+      className="Tooltip__Container-vx1y1f-0 cXJzHd"
+    >
+      <span
+        className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
+      >
+        ?
+      </span>
+      <div
+        className="Tooltip__Text-vx1y1f-2 hTORIs"
+        direction="left"
+        width="200px"
+      >
+        Left tooltip example description
+      </div>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Tooltip On dark background 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 kZDROm"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 gSqVEO"
+    data-testid={null}
+  >
+    <button
+      className="Tooltip__Container-vx1y1f-0 fdqOMp"
+    >
+      <span
+        className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
+      >
+        ?
+      </span>
+      <div
+        className="Tooltip__Text-vx1y1f-2 fufIuM"
+        width="200px"
+      >
+        Inverted example description
+      </div>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Units/Tooltip Size 1`] = `
+<div
+  className="Flex__FlexWrapper-sc-1f3kfw7-0 gSqVEO"
+  data-testid={null}
+>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <button
+      className="Tooltip__Container-vx1y1f-0 cXJzHd"
+    >
+      <span
+        className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
+      >
+        ?
+      </span>
+      <div
+        className="Tooltip__Text-vx1y1f-2 fDasZr"
+        width="90px"
+      >
+        Short tooltip
+      </div>
+    </button>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
+  >
+    <button
+      className="Tooltip__Container-vx1y1f-0 cXJzHd"
+    >
+      <span
+        className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
+      >
+        ?
+      </span>
+      <div
+        className="Tooltip__Text-vx1y1f-2 jqleph"
+        width="250px"
+      >
+        Long tooltip to accommodate more text.
+      </div>
+    </button>
+  </div>
+</div>
+`;
