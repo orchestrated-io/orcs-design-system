@@ -12,6 +12,7 @@ import Icon from "../Icon";
 const ButtonStyles = compose(space, layout, color, border);
 
 const StyledButton = styled("button")
+  .withConfig({ shouldForwardProp })
   .attrs(props => ({
     "data-testid": props.dataTestId
       ? props.dataTestId
@@ -19,8 +20,7 @@ const StyledButton = styled("button")
       ? props["data-testid"]
       : null,
     disabled: props.disabled ? true : props.variant == "disabled" ? true : false
-  }))
-  .withConfig({ shouldForwardProp })(
+  }))(
   props =>
     css({
       bg: "primary",
@@ -160,7 +160,8 @@ export const Button = ({
   leftIcon,
   rightIcon,
   children,
-  ...props
+  onClick,
+  ...ButtonStyles
 }) => {
   return (
     <ThemeProvider theme={theme}>
@@ -179,7 +180,8 @@ export const Button = ({
         borderStyle="solid"
         disabled={disabled}
         variant={disabled ? "disabled" : null}
-        {...props}
+        onClick={onClick}
+        {...ButtonStyles}
       >
         {leftIcon && <Icon icon={leftIcon} mr={small ? "xxs" : "xs"} />}
         {children}
@@ -222,6 +224,8 @@ Button.propTypes = {
   iconOnly: PropTypes.bool,
   /** Specifies whether the button is disabled. */
   disabled: PropTypes.bool,
+  /** Function to run when the `Button` is clicked */
+  onClick: PropTypes.func,
   /** The text label on the button is passed as a child. Keep this text short and descriptive. Use an action word or confirmation if possible. */
   children: PropTypes.node,
   /** Specifies the `data-testid` attribute for testing. */

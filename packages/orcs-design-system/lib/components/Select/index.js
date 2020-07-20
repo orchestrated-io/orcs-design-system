@@ -10,7 +10,7 @@ import { themeGet } from "@styled-system/theme-get";
 const SelectStyles = compose(space, layout);
 
 const Wrapper = styled("div").attrs(props => ({
-  "data-testid": props.dataTestId
+  "data-testid": props["data-testid"] ? props["data-testid"] : props.dataTestId
 }))(
   css({
     display: "inline-block",
