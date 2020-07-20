@@ -82,16 +82,22 @@ const Circle = styled("div")(
     height: "calc(" + themeGet("space.5")(props) + " * 2)",
     fontWeight: themeGet("fontWeights.2")(props)
   }),
-  css({
-    backgroundColor: "greyLighter",
-    border: "0",
-    display: "flex",
-    borderRadius: "50%",
-    alignItems: "center",
-    justifyContent: "center",
-    textAlign: "center",
-    textTransform: "uppercase"
-  }),
+  props =>
+    css({
+      backgroundColor: "greyLighter",
+      color: props.whiteInitials ? "white" : "greyDarkest",
+      border: "0",
+      display: "flex",
+      borderRadius: "50%",
+      alignItems: "center",
+      justifyContent: "center",
+      textAlign: "center",
+      textTransform: "uppercase",
+      a: {
+        color: "greyDarkest"
+      },
+      "&.inverted a": { color: "white" }
+    }),
   props =>
     variant({
       prop: "sizing",
@@ -166,6 +172,7 @@ const Avatar = ({
   subtitle,
   type,
   theme,
+  whiteInitials,
   ...props
 }) => {
   return (
@@ -174,7 +181,12 @@ const Avatar = ({
         {image ? (
           <Image src={image} sizing={sizing} />
         ) : (
-          <Circle sizing={sizing} type={type}>
+          <Circle
+            sizing={sizing}
+            type={type}
+            className={type == "inverted" ? "inverted" : ""}
+            whiteInitials={whiteInitials}
+          >
             {initials ? initials : <Icon icon={["fas", "user"]} />}
           </Circle>
         )}
@@ -202,6 +214,8 @@ Avatar.propTypes = {
   image: PropTypes.string,
   /** Specifies initials of person if available */
   initials: PropTypes.string,
+  /** Turns white initials on for custom `Circle` backgrounds */
+  whiteInitials: PropTypes.bool,
   /** Specifies title / name as just plain text, or an element like a hyperlink or react router link */
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   /** Specifies subtitle / role */

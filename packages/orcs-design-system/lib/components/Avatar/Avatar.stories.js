@@ -24,11 +24,19 @@ defaultAvatar.story = {
 };
 
 export const noImage = () => (
-  <Avatar
-    title="Ayden Lundgre"
-    subtitle="Senior Business Analyst"
-    initials="AL"
-  />
+  <Spacer my="r">
+    <Avatar
+      title="Ayden Lundgre"
+      subtitle="Senior Business Analyst"
+      initials="AL"
+    />
+    <Avatar
+      title="Ayden Lundgre"
+      subtitle="Senior Business Analyst"
+      initials="AL"
+      whiteInitials
+    />
+  </Spacer>
 );
 noImage.story = {
   name: "No image"
@@ -103,8 +111,7 @@ export const inverted = () => (
         sizing="small"
         title="Ayden Lundgre"
         subtitle="Senior Business Analyst"
-        initials="AL"
-        image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+        initials={<StyledLink href="#">AL</StyledLink>}
       />
       <Avatar
         type="inverted"
