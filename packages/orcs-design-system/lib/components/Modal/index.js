@@ -100,27 +100,20 @@ const Modal = ({
                 overflow={overflowVisible ? "visible" : "hidden"}
                 borderRadius="2"
                 bg="white"
+                p="r"
               >
-                <ThemeProvider theme={theme}>
-                  <Box p="r">
-                    <CloseButton
-                      onClick={onClose}
-                      small
-                      variant="transparent"
-                      px="6px"
-                      position="absolute"
-                      top="0"
-                      right="0"
-                    >
-                      <Icon
-                        icon={["fas", "times"]}
-                        color="greyDark"
-                        size="lg"
-                      />
-                    </CloseButton>
-                    {children}
-                  </Box>
-                </ThemeProvider>
+                <CloseButton
+                  onClick={onClose}
+                  small
+                  variant="transparent"
+                  px="6px"
+                  position="absolute"
+                  top="0"
+                  right="0"
+                >
+                  <Icon icon={["fas", "times"]} color="greyDark" size="lg" />
+                </CloseButton>
+                {children}
               </Container>
             </Overlay>
           </ThemeProvider>,
