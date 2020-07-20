@@ -9,17 +9,16 @@ import systemtheme from "../../systemtheme";
 const FlexStyles = compose(space, layout, flexbox);
 
 const FlexWrapper = styled("div")
+  .withConfig({
+    shouldForwardProp
+  })
   .attrs(props => ({
     "data-testid": props.dataTestId
       ? props.dataTestId
       : props["data-testid"]
       ? props["data-testid"]
       : null
-  }))
-  .withConfig({ shouldForwardProp })(
-  css({ boxSizing: "border-box" }),
-  FlexStyles
-);
+  }))(css({ boxSizing: "border-box" }), FlexStyles);
 
 const FlexItem = styled("div")(
   css({
