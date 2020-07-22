@@ -2839,14 +2839,18 @@ exports[`Storyshots Units/ActionsMenu Default actions menu 1`] = `
       className="ActionsMenu__Menu-yvbni2-3 gHBMnz"
     >
       <a
-        href="#"
+        href="https://orchestrated.io/"
       >
-        Open details in new tab
+        Open details page
       </a>
-      <button>
+      <button
+        type="button"
+      >
         Edit
       </button>
-      <button>
+      <button
+        type="button"
+      >
         Remove
       </button>
     </div>
@@ -2880,14 +2884,18 @@ exports[`Storyshots Units/ActionsMenu Left offset actions menu 1`] = `
         direction="left"
       >
         <a
-          href="#"
+          href="https://orchestrated.io/"
         >
-          Open details in new tab
+          Open details page
         </a>
-        <button>
+        <button
+          type="button"
+        >
           Edit
         </button>
-        <button>
+        <button
+          type="button"
+        >
           Remove
         </button>
       </div>
