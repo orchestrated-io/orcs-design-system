@@ -168,24 +168,33 @@ const Menu = styled.div`
   }
 `;
 
-const ActionsMenu = ({ children, direction, isOpen, theme, ...props }) => {
-  const [baseState, setBase] = useState(isOpen);
-  const [toggleState, setToggle] = useState(false);
+const ActionsMenu = ({
+  children,
+  direction,
+  isOpen = false,
+  theme,
+  ...props
+}) => {
+  const [toggleState, setToggle] = useState(isOpen);
 
+  const openMenu = () => {
+    setToggle(true);
+  };
+  const closeMenu = () => {
+    setToggle(false);
+  };
   const onToggle = e => {
     e.stopPropagation();
-    if (!toggleState) setToggle(true);
-    else setToggle(false);
-    if (!baseState) setBase(true);
-    else setBase(false);
+    if (!toggleState) openMenu();
+    else closeMenu();
   };
   return (
     <ThemeProvider theme={theme}>
       <Wrapper {...props}>
-        <Control onClick={onToggle} onBlur={onToggle}>
-          <Icon isOpen={baseState} />
+        <Control onClick={onToggle} onBlur={closeMenu}>
+          <Icon isOpen={toggleState} />
         </Control>
-        <Menu isOpen={baseState} direction={direction}>
+        <Menu isOpen={toggleState} direction={direction}>
           {children}
         </Menu>
       </Wrapper>
