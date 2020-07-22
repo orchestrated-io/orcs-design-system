@@ -3,6 +3,7 @@ import StatusDot from ".";
 import Box from "../Box";
 import Flex from "../Flex";
 import Spacer from "../Spacer";
+import Icon from "../Icon";
 import Popover from "../Popover";
 
 export default {
@@ -76,7 +77,14 @@ export const withIcon = () => (
           textAlign="center"
           width="110px"
         >
-          <StatusDot variant="success" icon={["fas", "check"]} />
+          <StatusDot variant="success" icon>
+            <Icon
+              icon={["fas", "check"]}
+              color="white"
+              size="xs"
+              transform="up-1 right-1"
+            />
+          </StatusDot>
         </Popover>
 
         <Popover
@@ -85,7 +93,14 @@ export const withIcon = () => (
           textAlign="center"
           width="110px"
         >
-          <StatusDot variant="warning" icon={["fas", "exclamation"]} />
+          <StatusDot variant="warning" icon>
+            <Icon
+              icon={["fas", "exclamation"]}
+              color="white"
+              size="xs"
+              transform="up-1 right-1"
+            />
+          </StatusDot>
         </Popover>
 
         <Popover
@@ -94,7 +109,14 @@ export const withIcon = () => (
           textAlign="center"
           width="110px"
         >
-          <StatusDot variant="danger" icon={["fas", "exclamation"]} />
+          <StatusDot variant="danger" icon>
+            <Icon
+              icon={["fas", "bell"]}
+              color="white"
+              size="xs"
+              transform="up-1 right-1"
+            />
+          </StatusDot>
         </Popover>
       </Spacer>
     </Flex>
