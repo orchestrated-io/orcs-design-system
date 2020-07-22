@@ -188,10 +188,13 @@ const ActionsMenu = ({
     if (!toggleState) openMenu();
     else closeMenu();
   };
+  const onBlur = () => {
+    setTimeout(closeMenu, 200);
+  };
   return (
     <ThemeProvider theme={theme}>
       <Wrapper {...props}>
-        <Control onClick={onToggle} onBlur={closeMenu}>
+        <Control onClick={onToggle} onBlur={onBlur}>
           <Icon isOpen={toggleState} />
         </Control>
         <Menu isOpen={toggleState} direction={direction}>

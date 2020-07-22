@@ -13,9 +13,9 @@ export default {
 
 export const defaultActionsMenu = () => (
   <ActionsMenu>
-    <a href="#">Open details in new tab</a>
-    <button>Edit</button>
-    <button>Remove</button>
+    <a href="https://orchestrated.io/">Open details page</a>
+    <button type="button">Edit</button>
+    <button type="button">Remove</button>
   </ActionsMenu>
 );
 defaultActionsMenu.story = {
@@ -25,9 +25,9 @@ defaultActionsMenu.story = {
 export const leftOffsetActionsMenu = () => (
   <Flex justifyContent="flex-end">
     <ActionsMenu direction="left">
-      <a href="#">Open details in new tab</a>
-      <button>Edit</button>
-      <button>Remove</button>
+      <a href="https://orchestrated.io/">Open details page</a>
+      <button type="button">Edit</button>
+      <button type="button">Remove</button>
     </ActionsMenu>
   </Flex>
 );
