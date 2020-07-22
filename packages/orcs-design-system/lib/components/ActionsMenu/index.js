@@ -152,6 +152,7 @@ const Menu = styled.div`
     border: none;
     color: ${themeGet("colors.white")};
     font-size: ${themeGet("fontSizes.1")};
+    font-family: ${themeGet("fonts.main")};
     font-weight: ${themeGet("fontWeights.2")};
     text-decoration: none;
     border-bottom: solid 1px ${themeGet("colors.greyDarkest")};
@@ -181,7 +182,7 @@ const ActionsMenu = ({ children, direction, isOpen, theme, ...props }) => {
   return (
     <ThemeProvider theme={theme}>
       <Wrapper {...props}>
-        <Control onClick={onToggle}>
+        <Control onClick={onToggle} onBlur={onToggle}>
           <Icon isOpen={baseState} />
         </Control>
         <Menu isOpen={baseState} direction={direction}>
