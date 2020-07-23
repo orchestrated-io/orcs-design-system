@@ -3,18 +3,18 @@ import Box from "../Box";
 import Spacer from "../Spacer";
 import Flex from "../Flex";
 import Badge from ".";
+import mdx from "./Badge.mdx";
 
 export default {
-  title: "Units/Badge",
+  title: "Components/Badge",
   parameters: {
-    component: Badge
-  }
+    docs: { page: mdx }
+  },
+  component: Badge
 };
 
 export const defaultBadge = () => <Badge>Default</Badge>;
-defaultBadge.story = {
-  name: "Default badge"
-};
+defaultBadge.storyName = "Default";
 
 export const colourVariants = () => (
   <>
@@ -48,6 +48,4 @@ export const colourVariants = () => (
     </Box>
   </>
 );
-colourVariants.story = {
-  name: "Colour variants"
-};
+colourVariants.storyName = "Colour variants";

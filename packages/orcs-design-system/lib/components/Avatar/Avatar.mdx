@@ -1,8 +1,5 @@
 import Avatar from ".";
-import * as stories from './Avatar.stories.js';
-import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
-
-<Meta title="Components/Avatar" component={Avatar} />
+import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
 
 # Avatar
 
@@ -23,45 +20,45 @@ Follow example code below to achieve desired option.
 ## Default avatar
 
 <Preview>
-  <Story name="defaultAvatar">{stories.defaultAvatar()}</Story>
+  <Story id="components-avatar--default-avatar" />
 </Preview>
 
 ## No image source
 
-In cases where an image is not available, fall back is to show initials
+In cases where an image is not available, fall back is to show initials.
 
 <Preview>
-  <Story name="noImage">{stories.noImage()}</Story>
+  <Story id="components-avatar--default-avatar" />
 </Preview>
 
 ## Icon only
 
-In cases where neither an image or initials are available, fall back is to show icon
+In cases where neither an image or initials are available, fall back is to show icon.
 
 <Preview>
-  <Story name="iconOnly">{stories.iconOnly()}</Story>
+  <Story id="components-avatar--icon-only" />
 </Preview>
 
 ## Name as link
 
-This component can support a link for the name
+This component can support a link for the name.
 
 <Preview>
-  <Story name="nameLink">{stories.nameLink()}</Story>
+  <Story id="components-avatar--name-link" />
 </Preview>
 
 ## Small size
 
 <Preview>
-  <Story name="small">{stories.small()}</Story>
+  <Story id="components-avatar--small" />
 </Preview>
 
-## Inverted style
+## Inverted
 
-For when Avatar is used on a dark background
+For when Avatar is used on a dark background.
 
 <Preview>
-  <Story name="inverted">{stories.inverted()}</Story>
+  <Story id="components-avatar--inverted" />
 </Preview>
 
 ## Properties

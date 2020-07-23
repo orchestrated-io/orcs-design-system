@@ -3,12 +3,16 @@ import Box from "../Box";
 import Spacer from "../Spacer";
 import StyledLink from "../StyledLink";
 import Avatar from ".";
+import mdx from "./Avatar.mdx";
 
 export default {
-  title: "Units/Avatar",
+  title: "Components/Avatar",
   parameters: {
-    component: Avatar
-  }
+    docs: {
+      page: mdx
+    }
+  },
+  component: Avatar
 };
 
 export const defaultAvatar = () => (
@@ -19,9 +23,7 @@ export const defaultAvatar = () => (
     image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
   />
 );
-defaultAvatar.story = {
-  name: "Default avatar"
-};
+defaultAvatar.storyName = "Default";
 
 export const noImage = () => (
   <Spacer my="r">
@@ -38,16 +40,12 @@ export const noImage = () => (
     />
   </Spacer>
 );
-noImage.story = {
-  name: "No image"
-};
+noImage.storyName = "No image";
 
 export const iconOnly = () => (
   <Avatar title="Ayden Lundgre" subtitle="Senior Business Analyst" />
 );
-iconOnly.story = {
-  name: "Icon only"
-};
+iconOnly.storyName = "Icon only";
 
 export const nameLink = () => (
   <Avatar
@@ -57,9 +55,7 @@ export const nameLink = () => (
     image="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
   />
 );
-nameLink.story = {
-  name: "Name as link"
-};
+nameLink.storyName = "Name as link";
 
 export const small = () => (
   <Spacer my={3}>
@@ -85,9 +81,7 @@ export const small = () => (
     />
   </Spacer>
 );
-small.story = {
-  name: "Small"
-};
+small.storyName = "Small";
 
 export const inverted = () => (
   <Box bg="greyDarkest" p="r">
@@ -124,6 +118,4 @@ export const inverted = () => (
     </Spacer>
   </Box>
 );
-inverted.story = {
-  name: "On dark background"
-};
+inverted.storyName = "Inverted";

@@ -2,13 +2,15 @@ import React from "react";
 import ActionsMenu from ".";
 import Flex from "../Flex";
 import Box from "../Box";
+import mdx from "./ActionsMenu.mdx";
 
 export default {
-  title: "Units/ActionsMenu",
+  title: "Components/ActionsMenu",
   decorators: [storyFn => <Box pb="xxl">{storyFn()}</Box>],
   parameters: {
-    component: ActionsMenu
-  }
+    docs: { page: mdx }
+  },
+  component: ActionsMenu
 };
 
 export const defaultActionsMenu = () => (
@@ -18,9 +20,7 @@ export const defaultActionsMenu = () => (
     <button type="button">Remove</button>
   </ActionsMenu>
 );
-defaultActionsMenu.story = {
-  name: "Default actions menu"
-};
+defaultActionsMenu.storyName = "Default";
 
 export const leftOffsetActionsMenu = () => (
   <Flex justifyContent="flex-end">
@@ -31,6 +31,4 @@ export const leftOffsetActionsMenu = () => (
     </ActionsMenu>
   </Flex>
 );
-leftOffsetActionsMenu.story = {
-  name: "Left offset actions menu"
-};
+leftOffsetActionsMenu.storyName = "Left offset";

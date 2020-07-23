@@ -2,15 +2,16 @@ import React from "react";
 import Checkbox from ".";
 import Box from "../Box";
 import Spacer from "../Spacer";
+import mdx from "./Checkbox.mdx";
 
 export default {
-  title: "Units/Checkbox",
-  parameters: {
-    component: Checkbox
-  }
+  title: "Components/Checkbox",
+  parameters: { docs: { page: mdx } },
+  component: Checkbox
 };
 
 export const basicCheckbox = () => <Checkbox label="Default checkbox" />;
+basicCheckbox.storyName = "Default";
 
 export const colourVariants = () => (
   <Spacer m="3">

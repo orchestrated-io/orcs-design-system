@@ -1,8 +1,5 @@
-import * as stories from './Card.stories.js';
 import Card from ".";
-import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
-
-<Meta title="Components/Card" component={Card} />
+import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
 
 # Card
 
@@ -17,7 +14,7 @@ If your UI is split into different areas or sections you can also choose to colo
 The subtitle is optional.
 
 <Preview>
-  <Story name="basicCard">{stories.basicCard()}</Story>
+  <Story id="components-card--basic-card" />
 </Preview>
 
 ## Alternate style
@@ -25,7 +22,7 @@ The subtitle is optional.
 Puts subtitle on the right of the card.
 
 <Preview>
-  <Story name="alternateCard">{stories.alternateCard()}</Story>
+  <Story id="components-card--alternate-card" />
 </Preview>
 
 ## Colour options
@@ -33,7 +30,7 @@ Puts subtitle on the right of the card.
 Colour options plus a few extra examples of showing change delta.
 
 <Preview>
-  <Story name="colouredCards">{stories.colouredCards()}</Story>
+  <Story id="components-card--coloured-cards" />
 </Preview>
 
 ## Complex example
@@ -45,4 +42,5 @@ Example showing how you can use the card in an alternate way.
 </Preview>
 
 ## Properties
+
 <Props of={Card} />

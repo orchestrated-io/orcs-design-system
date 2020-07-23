@@ -6,11 +6,12 @@ import Spacer from "../Spacer";
 import Icon from "../Icon";
 import Flex from "../Flex";
 import Button from "../Button";
+import mdx from "./Card.mdx";
 
 import Card from ".";
 
 export default {
-  title: "Units/Card",
+  title: "Components/Card",
   decorators: [
     storyFn => (
       <Box bg="greyLightest" p="r">
@@ -19,8 +20,9 @@ export default {
     )
   ],
   parameters: {
-    component: Card
-  }
+    docs: { page: mdx }
+  },
+  component: Card
 };
 
 export const basicCard = () => (

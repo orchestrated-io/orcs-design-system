@@ -1,8 +1,5 @@
-import * as stories from './Checkbox.stories.js';
 import Checkbox from ".";
-import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
-
-<Meta title="Components/Checkbox" component={Checkbox} />
+import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
 
 # Checkbox
 
@@ -13,7 +10,7 @@ The default checkbox (or inverted if on dark background) should be used for the 
 ## Basic checkbox
 
 <Preview>
-  <Story name="Basic checkbox">{stories.basicCheckbox()}</Story>
+  <Story id="components-checkbox--basic-checkbox" />
 </Preview>
 
 ## Colour variants
@@ -21,20 +18,22 @@ The default checkbox (or inverted if on dark background) should be used for the 
 Different colours for checkbox.
 
 <Preview>
-  <Story name="Colour variants">{stories.colourVariants()}</Story>
+<Story id="components-checkbox--colour-variants" />
 </Preview>
 
 ## Checkbox statuses
 
 <Preview>
-<Story name="Disabled">{stories.disabled()}</Story>
-<Story name="Checked">{stories.checked()}</Story>
+<Story id="components-checkbox--disabled" />
+<Story id="components-checkbox--checked" />
 </Preview>
 
-## On dark background
+## Inverted
+
 <Preview>
-<Story name="Inverted">{stories.inverted()}</Story>
+<Story id="components-checkbox--inverted" />
 </Preview>
 
 ## Properties
+
 <Props of={Checkbox} />
