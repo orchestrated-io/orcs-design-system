@@ -16,7 +16,7 @@
     "license": "SEE LICENSE IN LICENCE"
   },
   "module": "es/index.js",
-  "browser": "es/index.js",
+  "main": "es/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/orchestrated-io/orca-design-system.git"
