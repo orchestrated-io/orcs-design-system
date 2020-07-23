@@ -1,14 +1,24 @@
 {
   "name": "orcs-design-system",
-  "version": "0.9.104",
+  "version": "0.9.105",
   "description": "Orchestrated Design System: ORCS",
-  "keywords": ["design", "system", "styled", "components", "react", "storybook", "orcs"],
+  "keywords": [
+    "design",
+    "system",
+    "styled",
+    "components",
+    "react",
+    "storybook",
+    "orcs"
+  ],
   "homepage": "https://styleguide.orchestrated.io",
-  "licence": { "license" : "SEE LICENSE IN LICENCE" },
+  "licence": {
+    "license": "SEE LICENSE IN LICENCE"
+  },
   "browser": "es/index.js",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/orchestrated-io/orca-design-system.git"
+    "type": "git",
+    "url": "https://github.com/orchestrated-io/orca-design-system.git"
   },
   "sideEffects": false,
   "private": false,
