@@ -59,6 +59,7 @@ const Image = styled("img")(
     height: "calc(" + themeGet("space.5")(props) + " * 2)"
   }),
   css({
+    flex: "0 0 auto",
     backgroundColor: "greyLighter",
     border: "0",
     display: "block",
@@ -84,6 +85,7 @@ const Circle = styled("div")(
   }),
   props =>
     css({
+      flex: "0 0 auto",
       backgroundColor: "greyLighter",
       color: props.whiteInitials ? "white" : "greyDarkest",
       border: "0",
