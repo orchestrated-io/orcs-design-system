@@ -15,6 +15,7 @@
   "licence": {
     "license": "SEE LICENSE IN LICENCE"
   },
+  "module": "es/index.js",
   "browser": "es/index.js",
   "repository": {
     "type": "git",
