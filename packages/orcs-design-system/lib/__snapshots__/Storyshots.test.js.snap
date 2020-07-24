@@ -1,5 +1,653 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Components/ActionsMenu Default 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gFkEUh"
+  data-testid={null}
+>
+  <div
+    className="ActionsMenu__Wrapper-yvbni2-0 dNblPG"
+  >
+    <button
+      className="ActionsMenu__Control-yvbni2-1 caVsMX"
+      onBlur={[Function]}
+      onClick={[Function]}
+    >
+      <div
+        className="ActionsMenu__Icon-yvbni2-2 eubGjt"
+      />
+    </button>
+    <div
+      className="ActionsMenu__Menu-yvbni2-3 gHBMnz"
+    >
+      <a
+        href="https://orchestrated.io/"
+      >
+        Open details page
+      </a>
+      <button
+        type="button"
+      >
+        Edit
+      </button>
+      <button
+        type="button"
+      >
+        Remove
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/ActionsMenu Left offset 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gFkEUh"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 epDpoM"
+    data-testid={null}
+  >
+    <div
+      className="ActionsMenu__Wrapper-yvbni2-0 dNblPG"
+    >
+      <button
+        className="ActionsMenu__Control-yvbni2-1 caVsMX"
+        onBlur={[Function]}
+        onClick={[Function]}
+      >
+        <div
+          className="ActionsMenu__Icon-yvbni2-2 eubGjt"
+        />
+      </button>
+      <div
+        className="ActionsMenu__Menu-yvbni2-3 eiLgdQ"
+        direction="left"
+      >
+        <a
+          href="https://orchestrated.io/"
+        >
+          Open details page
+        </a>
+        <button
+          type="button"
+        >
+          Edit
+        </button>
+        <button
+          type="button"
+        >
+          Remove
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Avatar Default 1`] = `
+<div
+  className="Avatar__AvatarWrapper-sc-1wtet2j-0 ihQtwr"
+>
+  <img
+    className="Avatar__Image-sc-1wtet2j-2 iQDHHh"
+    src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+  />
+  <div
+    className="Avatar__TextContent-sc-1wtet2j-1 emrUQv"
+  >
+    <h3
+      className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 TZuyA"
+    >
+      Ayden Lundgre
+    </h3>
+    <span
+      className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 lgvTgY"
+    >
+      Senior Business Analyst
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Avatar Icon only 1`] = `
+<div
+  className="Avatar__AvatarWrapper-sc-1wtet2j-0 ihQtwr"
+>
+  <div
+    className="Avatar__Circle-sc-1wtet2j-3 jnNHLv"
+  >
+    <span
+      className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+    >
+      <svg
+        className="svg-inline--fa fa-undefined"
+      />
+    </span>
+  </div>
+  <div
+    className="Avatar__TextContent-sc-1wtet2j-1 emrUQv"
+  >
+    <h3
+      className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 TZuyA"
+    >
+      Ayden Lundgre
+    </h3>
+    <span
+      className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 lgvTgY"
+    >
+      Senior Business Analyst
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Avatar Inverted 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 eFGCqk"
+  data-testid={null}
+>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <div
+      className="Avatar__AvatarWrapper-sc-1wtet2j-0 ihQtwr"
+      type="inverted"
+    >
+      <img
+        className="Avatar__Image-sc-1wtet2j-2 iQDHHh"
+        src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+      />
+      <div
+        className="Avatar__TextContent-sc-1wtet2j-1 cjfUrq"
+        type="inverted"
+      >
+        <h3
+          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 jXpBeJ"
+          type="inverted"
+        >
+          Ayden Lundgre
+        </h3>
+        <span
+          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 bdyzed"
+          type="inverted"
+        >
+          Senior Business Analyst
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <div
+      className="Avatar__AvatarWrapper-sc-1wtet2j-0 ihQtwr"
+      type="inverted"
+    >
+      <img
+        className="Avatar__Image-sc-1wtet2j-2 iQDHHh"
+        src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+      />
+      <div
+        className="Avatar__TextContent-sc-1wtet2j-1 cjfUrq"
+        type="inverted"
+      >
+        <h3
+          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 jXpBeJ"
+          type="inverted"
+        >
+          <a
+            className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
+            data-testid={null}
+            href="#"
+          >
+            Ayden Lundgre
+          </a>
+        </h3>
+        <span
+          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 bdyzed"
+          type="inverted"
+        >
+          Senior Business Analyst
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <div
+      className="Avatar__AvatarWrapper-sc-1wtet2j-0 jrXiJY"
+      type="inverted"
+    >
+      <div
+        className="Avatar__Circle-sc-1wtet2j-3 kgvvgo inverted"
+        type="inverted"
+      >
+        <a
+          className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
+          data-testid={null}
+          href="#"
+        >
+          AL
+        </a>
+      </div>
+      <div
+        className="Avatar__TextContent-sc-1wtet2j-1 irScUB"
+        type="inverted"
+      >
+        <h3
+          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 exCJCn"
+          type="inverted"
+        >
+          Ayden Lundgre
+        </h3>
+        <span
+          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 kyXVZS"
+          type="inverted"
+        >
+          Senior Business Analyst
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <div
+      className="Avatar__AvatarWrapper-sc-1wtet2j-0 jrXiJY"
+      type="inverted"
+    >
+      <img
+        className="Avatar__Image-sc-1wtet2j-2 HpUeI"
+        src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+      />
+      <div
+        className="Avatar__TextContent-sc-1wtet2j-1 irScUB"
+        type="inverted"
+      >
+        <h3
+          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 exCJCn"
+          type="inverted"
+        >
+          <a
+            className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
+            data-testid={null}
+            href="#"
+          >
+            Ayden Lundgre
+          </a>
+        </h3>
+        <span
+          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 kyXVZS"
+          type="inverted"
+        >
+          Senior Business Analyst
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Avatar Name as link 1`] = `
+<div
+  className="Avatar__AvatarWrapper-sc-1wtet2j-0 ihQtwr"
+>
+  <img
+    className="Avatar__Image-sc-1wtet2j-2 iQDHHh"
+    src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+  />
+  <div
+    className="Avatar__TextContent-sc-1wtet2j-1 emrUQv"
+  >
+    <h3
+      className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 TZuyA"
+    >
+      <a
+        className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
+        data-testid={null}
+        href="#"
+      >
+        Ayden Lundgre
+      </a>
+    </h3>
+    <span
+      className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 lgvTgY"
+    >
+      Senior Business Analyst
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Avatar No image 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Avatar__AvatarWrapper-sc-1wtet2j-0 ihQtwr"
+    >
+      <div
+        className="Avatar__Circle-sc-1wtet2j-3 jnNHLv"
+      >
+        AL
+      </div>
+      <div
+        className="Avatar__TextContent-sc-1wtet2j-1 emrUQv"
+      >
+        <h3
+          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 TZuyA"
+        >
+          Ayden Lundgre
+        </h3>
+        <span
+          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 lgvTgY"
+        >
+          Senior Business Analyst
+        </span>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Avatar__AvatarWrapper-sc-1wtet2j-0 ihQtwr"
+    >
+      <div
+        className="Avatar__Circle-sc-1wtet2j-3 gbMWCO"
+      >
+        AL
+      </div>
+      <div
+        className="Avatar__TextContent-sc-1wtet2j-1 emrUQv"
+      >
+        <h3
+          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 TZuyA"
+        >
+          Ayden Lundgre
+        </h3>
+        <span
+          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 lgvTgY"
+        >
+          Senior Business Analyst
+        </span>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Components/Avatar Small 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <div
+      className="Avatar__AvatarWrapper-sc-1wtet2j-0 jrXiJY"
+    >
+      <div
+        className="Avatar__Circle-sc-1wtet2j-3 jMcDte"
+      >
+        AL
+      </div>
+      <div
+        className="Avatar__TextContent-sc-1wtet2j-1 gtYgsc"
+      >
+        <h3
+          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 dbTNMm"
+        >
+          Ayden Lundgre
+        </h3>
+        <span
+          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 kAvPxL"
+        >
+          Senior Business Analyst
+        </span>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <div
+      className="Avatar__AvatarWrapper-sc-1wtet2j-0 jrXiJY"
+    >
+      <img
+        className="Avatar__Image-sc-1wtet2j-2 HpUeI"
+        src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+      />
+      <div
+        className="Avatar__TextContent-sc-1wtet2j-1 gtYgsc"
+      >
+        <h3
+          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 dbTNMm"
+        >
+          Ayden Lundgre
+        </h3>
+        <span
+          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 kAvPxL"
+        >
+          Senior Business Analyst
+        </span>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
+  >
+    <div
+      className="Avatar__AvatarWrapper-sc-1wtet2j-0 jrXiJY"
+    >
+      <img
+        className="Avatar__Image-sc-1wtet2j-2 HpUeI"
+        src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+      />
+      <div
+        className="Avatar__TextContent-sc-1wtet2j-1 gtYgsc"
+      >
+        <h3
+          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 dbTNMm"
+        >
+          <a
+            className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
+            data-testid={null}
+            href="#"
+          >
+            Ayden Lundgre
+          </a>
+        </h3>
+        <span
+          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 kAvPxL"
+        >
+          Senior Business Analyst
+        </span>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Components/Badge Colour variants 1`] = `
+Array [
+  <div
+    className="Box__BoxWrapper-jr1api-0 ezPMxm"
+    data-testid={null}
+  >
+    <div
+      className="Flex__FlexWrapper-sc-1f3kfw7-0 gEccMi"
+      data-testid={null}
+    >
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 feOvPK"
+        >
+          Default
+        </span>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 iaagFf"
+        >
+          Success
+        </span>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 beGUTi"
+        >
+          Warning
+        </span>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 gsOGRg"
+        >
+          Danger
+        </span>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 ibszHM"
+        >
+          Low priority
+        </span>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 cXIqIS"
+        >
+          Medium priority
+        </span>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 dOFhrC"
+        >
+          High priority
+        </span>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 brXHRh"
+        >
+          Secondary
+        </span>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="Box__BoxWrapper-jr1api-0 gsDhqA"
+    data-testid={null}
+  >
+    <div
+      className="Flex__FlexWrapper-sc-1f3kfw7-0 gEccMi"
+      data-testid={null}
+    >
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 feOvPK"
+        >
+          Default
+        </span>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 iaagFf"
+        >
+          Success
+        </span>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 beGUTi"
+        >
+          Warning
+        </span>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 gsOGRg"
+        >
+          Danger
+        </span>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 ibszHM"
+        >
+          Low priority
+        </span>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 cXIqIS"
+        >
+          Medium priority
+        </span>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 dOFhrC"
+        >
+          High priority
+        </span>
+      </div>
+      <div
+        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
+      >
+        <span
+          className="Badge__Item-sc-9r75kj-0 brXHRh"
+        >
+          Secondary
+        </span>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Components/Badge Default 1`] = `
+<span
+  className="Badge__Item-sc-9r75kj-0 feOvPK"
+>
+  Default
+</span>
+`;
+
 exports[`Storyshots Components/Box Background colour 1`] = `
 <div
   className="Box__BoxWrapper-jr1api-0 gjygQu"
@@ -452,6 +1100,651 @@ Array [
 ]
 `;
 
+exports[`Storyshots Components/Card Alternate card 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gjygQu"
+  data-testid={null}
+>
+  <div
+    className="Card__Item-yfq75p-0 gMqXmz"
+  >
+    <div
+      className="Card__Header-yfq75p-1 hQcgPp"
+    >
+      <span
+        className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+      >
+        <svg
+          className="svg-inline--fa fa-undefined"
+        />
+      </span>
+      <h3
+        className="Typography__H3-sc-1613j99-2 oYbxO"
+      >
+        Works for
+      </h3>
+      <h6
+        className="Typography__H6-sc-1613j99-5 bRBAKr"
+      >
+        18
+      </h6>
+    </div>
+    <div
+      className="Card__Content-yfq75p-2 goaCw"
+    >
+      <p
+        className="Typography__P-sc-1613j99-6 cdYHMX"
+      >
+        This is an alternate style card that supports an icon and moves the subtitle to the right of the title, rather than underneath it.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Card Basic card 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gjygQu"
+  data-testid={null}
+>
+  <div
+    className="Card__Item-yfq75p-0 gTxtqf"
+  >
+    <div
+      className="Card__Header-yfq75p-1 hQcgPp"
+    >
+      <h3
+        className="Typography__H3-sc-1613j99-2 oYbxO"
+      >
+        Card title
+      </h3>
+      <h6
+        className="Typography__H6-sc-1613j99-5 bRBAKr"
+      >
+        Subtitle
+      </h6>
+    </div>
+    <div
+      className="Card__Content-yfq75p-2 goaCw"
+    >
+      <p
+        className="Typography__P-sc-1613j99-6 eqWAJp"
+      >
+        Card content lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <a
+        className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 isqNRL StyledLink"
+        data-testid={null}
+        href="#"
+      >
+        Learn more
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Card Coloured cards 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gjygQu"
+  data-testid={null}
+>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Card__Item-yfq75p-0 iKBELc"
+    >
+      <div
+        className="Card__Header-yfq75p-1 hQcgPp"
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+        <h3
+          className="Typography__H3-sc-1613j99-2 oYbxO"
+        >
+          Locations
+        </h3>
+        <h6
+          className="Typography__H6-sc-1613j99-5 bRBAKr"
+        >
+          57
+        </h6>
+      </div>
+      <div
+        className="Card__Content-yfq75p-2 goaCw"
+      >
+        <p
+          className="Typography__P-sc-1613j99-6 cdYHMX"
+        >
+          This is an alternate style card that supports a coloured border, an icon and moves the subtitle to the right of the title, rather than underneath it.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Card__Item-yfq75p-0 cHzaXt"
+    >
+      <div
+        className="Card__Header-yfq75p-1 hQcgPp"
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+        <h3
+          className="Typography__H3-sc-1613j99-2 oYbxO"
+        >
+          Roles
+        </h3>
+        <h6
+          className="Typography__H6-sc-1613j99-5 bRBAKr"
+        >
+          Here is a subtitle
+        </h6>
+      </div>
+      <div
+        className="Card__Content-yfq75p-2 goaCw"
+      >
+        <p
+          className="Typography__P-sc-1613j99-6 cdYHMX"
+        >
+          This is an alternate style card that supports a coloured border, an icon and moves the subtitle to the right of the title, rather than underneath it.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Card__Item-yfq75p-0 hOEdXd"
+    >
+      <div
+        className="Card__Header-yfq75p-1 hQcgPp"
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+        <h3
+          className="Typography__H3-sc-1613j99-2 oYbxO"
+        >
+          4,539 People
+        </h3>
+        <small
+          className="Card__ChangeValue-yfq75p-4 cHegKK"
+        >
+          No change
+        </small>
+      </div>
+      <div
+        className="Card__Content-yfq75p-2 goaCw"
+      >
+        <p
+          className="Typography__P-sc-1613j99-6 cdYHMX"
+        >
+          This is an alternate style card that supports a coloured border, an icon and shows a delta change.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Card__Item-yfq75p-0 kQlLJV"
+    >
+      <div
+        className="Card__Header-yfq75p-1 hQcgPp"
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+        <h3
+          className="Typography__H3-sc-1613j99-2 oYbxO"
+        >
+          12 Divisions
+        </h3>
+        <div
+          className="Card__ChangeIcon-yfq75p-3 ibzsKd"
+        />
+        <small
+          className="Card__ChangeValue-yfq75p-4 cHegKK"
+        >
+          2 (-1%)
+        </small>
+      </div>
+      <div
+        className="Card__Content-yfq75p-2 goaCw"
+      >
+        <p
+          className="Typography__P-sc-1613j99-6 cdYHMX"
+        >
+          This is an alternate style card that supports a coloured border, an icon and shows a delta change.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Card__Item-yfq75p-0 dqqKLZ"
+    >
+      <div
+        className="Card__Header-yfq75p-1 hQcgPp"
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+        <h3
+          className="Typography__H3-sc-1613j99-2 oYbxO"
+        >
+          289 Teams
+        </h3>
+        <div
+          className="Card__ChangeIcon-yfq75p-3 pxfpD"
+        />
+        <small
+          className="Card__ChangeValue-yfq75p-4 cHegKK"
+        >
+          9 (+2%)
+        </small>
+      </div>
+      <div
+        className="Card__Content-yfq75p-2 goaCw"
+      >
+        <p
+          className="Typography__P-sc-1613j99-6 cdYHMX"
+        >
+          This is an alternate style card that supports a coloured border, an icon and shows a delta change.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Card Complex card 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gjygQu"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 gSqVEO"
+    data-testid={null}
+  >
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 gHANPZ"
+    >
+      <div
+        className="Card__Item-yfq75p-0 kDqDaU"
+      >
+        <div
+          className="Card__Content-yfq75p-2 goaCw"
+        >
+          <span
+            className="Icon__IconWrapper-xeqnbo-0 kfbvmR"
+            color="greyLight"
+          >
+            <svg
+              className="svg-inline--fa fa-undefined"
+            />
+          </span>
+          <h3
+            className="Typography__H3-sc-1613j99-2 oYbxO"
+          >
+            Create new
+          </h3>
+          <p
+            className="Typography__P-sc-1613j99-6 cdYHMX"
+          >
+            Start with a blank slate and add your own data
+          </p>
+          <button
+            className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+            data-testid={null}
+            disabled={false}
+          >
+            Start fresh
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="Spacer__SpacerBox-sc-1acikjz-0 gHANPZ"
+    >
+      <div
+        className="Card__Item-yfq75p-0 kDqDaU"
+      >
+        <div
+          className="Card__Content-yfq75p-2 goaCw"
+        >
+          <span
+            className="Icon__IconWrapper-xeqnbo-0 kfbvmR"
+            color="greyLight"
+          >
+            <svg
+              className="svg-inline--fa fa-undefined"
+            />
+          </span>
+          <h3
+            className="Typography__H3-sc-1613j99-2 oYbxO"
+          >
+            Explore app
+          </h3>
+          <p
+            className="Typography__P-sc-1613j99-6 cdYHMX"
+          >
+            Look at pre-populated data to see app in action
+          </p>
+          <button
+            className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+            data-testid={null}
+            disabled={false}
+          >
+            View example
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Checkbox Checked 1`] = `
+<div
+  className="Checkbox__Item-p4d19b-0 bvDiDr"
+>
+  <label
+    className="Checkbox__Label-p4d19b-1 kOyQzY"
+  >
+    <input
+      checked={true}
+      className="Checkbox__Control-p4d19b-2 eYCfEr"
+      type="checkbox"
+    />
+    <div
+      className="Checkbox__Box-p4d19b-3 csKNKp"
+    >
+      <div
+        className="Checkbox__Check-p4d19b-4 eTdZLy"
+      />
+    </div>
+    <div
+      className="Checkbox__Text-p4d19b-5 koOQLU"
+    >
+      Ticked checkbox
+    </div>
+  </label>
+</div>
+`;
+
+exports[`Storyshots Components/Checkbox Colour Variants 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
+  >
+    <div
+      className="Checkbox__Item-p4d19b-0 bvDiDr"
+    >
+      <label
+        className="Checkbox__Label-p4d19b-1 kOyQzY"
+      >
+        <input
+          className="Checkbox__Control-p4d19b-2 dEruue"
+          type="checkbox"
+        />
+        <div
+          className="Checkbox__Box-p4d19b-3 csKNKp"
+        >
+          <div
+            className="Checkbox__Check-p4d19b-4 eTdZLy"
+          />
+        </div>
+        <div
+          className="Checkbox__Text-p4d19b-5 koOQLU"
+        >
+          Primary colour checkbox
+        </div>
+      </label>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
+  >
+    <div
+      className="Checkbox__Item-p4d19b-0 bvDiDr"
+    >
+      <label
+        className="Checkbox__Label-p4d19b-1 kOyQzY"
+      >
+        <input
+          className="Checkbox__Control-p4d19b-2 ksOOIp"
+          type="checkbox"
+        />
+        <div
+          className="Checkbox__Box-p4d19b-3 csKNKp"
+        >
+          <div
+            className="Checkbox__Check-p4d19b-4 eTdZLy"
+          />
+        </div>
+        <div
+          className="Checkbox__Text-p4d19b-5 koOQLU"
+        >
+          Success colour checkbox
+        </div>
+      </label>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
+  >
+    <div
+      className="Checkbox__Item-p4d19b-0 bvDiDr"
+    >
+      <label
+        className="Checkbox__Label-p4d19b-1 kOyQzY"
+      >
+        <input
+          className="Checkbox__Control-p4d19b-2 hBvgQm"
+          type="checkbox"
+        />
+        <div
+          className="Checkbox__Box-p4d19b-3 csKNKp"
+        >
+          <div
+            className="Checkbox__Check-p4d19b-4 eTdZLy"
+          />
+        </div>
+        <div
+          className="Checkbox__Text-p4d19b-5 koOQLU"
+        >
+          Warning colour checkbox
+        </div>
+      </label>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
+  >
+    <div
+      className="Checkbox__Item-p4d19b-0 bvDiDr"
+    >
+      <label
+        className="Checkbox__Label-p4d19b-1 kOyQzY"
+      >
+        <input
+          className="Checkbox__Control-p4d19b-2 gFMsFc"
+          type="checkbox"
+        />
+        <div
+          className="Checkbox__Box-p4d19b-3 csKNKp"
+        >
+          <div
+            className="Checkbox__Check-p4d19b-4 eTdZLy"
+          />
+        </div>
+        <div
+          className="Checkbox__Text-p4d19b-5 koOQLU"
+        >
+          Danger colour checkbox
+        </div>
+      </label>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Components/Checkbox Default 1`] = `
+<div
+  className="Checkbox__Item-p4d19b-0 bvDiDr"
+>
+  <label
+    className="Checkbox__Label-p4d19b-1 kOyQzY"
+  >
+    <input
+      className="Checkbox__Control-p4d19b-2 eYCfEr"
+      type="checkbox"
+    />
+    <div
+      className="Checkbox__Box-p4d19b-3 csKNKp"
+    >
+      <div
+        className="Checkbox__Check-p4d19b-4 eTdZLy"
+      />
+    </div>
+    <div
+      className="Checkbox__Text-p4d19b-5 koOQLU"
+    >
+      Default checkbox
+    </div>
+  </label>
+</div>
+`;
+
+exports[`Storyshots Components/Checkbox Disabled 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
+  >
+    <div
+      className="Checkbox__Item-p4d19b-0 bvDiDr"
+    >
+      <label
+        className="Checkbox__Label-p4d19b-1 bMlqJq"
+        disabled={true}
+      >
+        <input
+          className="Checkbox__Control-p4d19b-2 eYCfEr"
+          disabled={true}
+          type="checkbox"
+        />
+        <div
+          className="Checkbox__Box-p4d19b-3 csKNKp"
+        >
+          <div
+            className="Checkbox__Check-p4d19b-4 eTdZLy"
+          />
+        </div>
+        <div
+          className="Checkbox__Text-p4d19b-5 koOQLU"
+        >
+          Disabled checkbox
+        </div>
+      </label>
+    </div>
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
+  >
+    <div
+      className="Checkbox__Item-p4d19b-0 bvDiDr"
+    >
+      <label
+        className="Checkbox__Label-p4d19b-1 bMlqJq"
+        disabled={true}
+      >
+        <input
+          checked={true}
+          className="Checkbox__Control-p4d19b-2 eYCfEr"
+          disabled={true}
+          type="checkbox"
+        />
+        <div
+          className="Checkbox__Box-p4d19b-3 csKNKp"
+        >
+          <div
+            className="Checkbox__Check-p4d19b-4 eTdZLy"
+          />
+        </div>
+        <div
+          className="Checkbox__Text-p4d19b-5 koOQLU"
+        >
+          Disabled ticked checkbox
+        </div>
+      </label>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Components/Checkbox Inverted 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 cQxHnQ"
+  data-testid={null}
+>
+  <div
+    className="Checkbox__Item-p4d19b-0 fZqhjr"
+  >
+    <label
+      className="Checkbox__Label-p4d19b-1 kOyQzY"
+    >
+      <input
+        className="Checkbox__Control-p4d19b-2 iShEdo"
+        type="checkbox"
+      />
+      <div
+        className="Checkbox__Box-p4d19b-3 csKNKp"
+      >
+        <div
+          className="Checkbox__Check-p4d19b-4 eTdZLy"
+        />
+      </div>
+      <div
+        className="Checkbox__Text-p4d19b-5 koOQLU"
+      >
+        Inverted checkbox
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components/Dialogue Basic Dialogue 1`] = `
 <button
   className="Button__StyledButton-sc-10uojnk-0 kBbUFJ"
@@ -486,6 +1779,232 @@ exports[`Storyshots Components/Dialogue Edit Dialogue 1`] = `
   </span>
   Modify Details
 </button>
+`;
+
+exports[`Storyshots Components/Divider Default Divider 1`] = `
+Array [
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Divider__Item-sc-106mlj-0 bFDWQk"
+    />
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Divider__Item-sc-106mlj-0 bVLzUP"
+    />
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Divider__Item-sc-106mlj-0 hCFvIy"
+    />
+  </div>,
+  <div
+    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
+  >
+    <div
+      className="Divider__Item-sc-106mlj-0 lgLMcl"
+    />
+  </div>,
+]
+`;
+
+exports[`Storyshots Components/Divider Inverted Divider 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 eDiRrh"
+  data-testid={null}
+>
+  <div
+    className="Divider__Item-sc-106mlj-0 eLdOpL"
+  />
+  <div
+    className="Divider__Item-sc-106mlj-0 bijHol"
+  />
+</div>
+`;
+
+exports[`Storyshots Components/Divider Span Grid 1`] = `
+<div
+  className="Divider__Item-sc-106mlj-0 cVpIJd"
+/>
+`;
+
+exports[`Storyshots Components/Expandable Default Expandable 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 bfPdXE"
+  data-testid={null}
+>
+  <div
+    className="Expandable__Item-na4gdb-0 dfSpXr"
+  >
+    <button
+      className="Expandable__Button-na4gdb-1 kkyPOz"
+      onClick={[Function]}
+    >
+      <div
+        className="Flex__FlexWrapper-sc-1f3kfw7-0 cThWPn"
+        data-testid={null}
+      >
+        <div
+          className="Expandable__Text-na4gdb-2 kgTlSW"
+        >
+          <h4
+            className="Typography__H4-sc-1613j99-3 cvPFAr"
+          >
+            Details
+          </h4>
+        </div>
+      </div>
+    </button>
+    <div
+      className="Expandable__Content-na4gdb-3 dNUyVo"
+    >
+      <p
+        className="Typography__P-sc-1613j99-6 cdYHMX"
+      >
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Expandable Expandable With Badge 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 bfPdXE"
+  data-testid={null}
+>
+  <div
+    className="Expandable__Item-na4gdb-0 dfSpXr"
+  >
+    <button
+      className="Expandable__Button-na4gdb-1 kkyPOz"
+      onClick={[Function]}
+    >
+      <div
+        className="Flex__FlexWrapper-sc-1f3kfw7-0 cThWPn"
+        data-testid={null}
+      >
+        <div
+          className="Expandable__Text-na4gdb-2 kgTlSW"
+        >
+          <h4
+            className="Typography__H4-sc-1613j99-3 cvPFAr"
+          >
+            Complex example
+          </h4>
+        </div>
+        <span
+          className="Badge__Item-sc-9r75kj-0 feOvPK"
+        >
+          status
+        </span>
+      </div>
+    </button>
+    <div
+      className="Expandable__Content-na4gdb-3 dNUyVo"
+    >
+      <p
+        className="Typography__P-sc-1613j99-6 cdYHMX"
+      >
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Expandable Expandable With Subtitle 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 bfPdXE"
+  data-testid={null}
+>
+  <div
+    className="Expandable__Item-na4gdb-0 dfSpXr"
+  >
+    <button
+      className="Expandable__Button-na4gdb-1 kkyPOz"
+      onClick={[Function]}
+    >
+      <div
+        className="Flex__FlexWrapper-sc-1f3kfw7-0 cThWPn"
+        data-testid={null}
+      >
+        <div
+          className="Expandable__Text-na4gdb-2 kgTlSW"
+        >
+          <h4
+            className="Typography__H4-sc-1613j99-3 cvPFAr"
+          >
+            Complex example
+          </h4>
+          <span
+            className="sc-AxjAm wVQLA"
+          >
+            Subtitle
+          </span>
+        </div>
+      </div>
+    </button>
+    <div
+      className="Expandable__Content-na4gdb-3 dNUyVo"
+    >
+      <p
+        className="Typography__P-sc-1613j99-6 cdYHMX"
+      >
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Expandable Open Expandable 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 bfPdXE"
+  data-testid={null}
+>
+  <div
+    className="Expandable__Item-na4gdb-0 dfSpXr"
+  >
+    <button
+      aria-expanded={true}
+      className="Expandable__Button-na4gdb-1 jXwJcg"
+      onClick={[Function]}
+      open={true}
+    >
+      <div
+        className="Flex__FlexWrapper-sc-1f3kfw7-0 cThWPn"
+        data-testid={null}
+      >
+        <div
+          className="Expandable__Text-na4gdb-2 kgTlSW"
+        >
+          <h4
+            className="Typography__H4-sc-1613j99-3 cvPFAr"
+          >
+            Details
+          </h4>
+        </div>
+      </div>
+    </button>
+    <div
+      className="Expandable__Content-na4gdb-3 hhEXij"
+      open={true}
+    >
+      <p
+        className="Typography__P-sc-1613j99-6 cdYHMX"
+      >
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
+      </p>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`Storyshots Components/Flex Basic Flex 1`] = `
@@ -995,7 +2514,7 @@ Array [
           type="inverted"
         >
           <img
-            className="Avatar__Image-sc-1wtet2j-2 eEfKKB"
+            className="Avatar__Image-sc-1wtet2j-2 HpUeI"
             src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
           />
           <div
@@ -1055,7 +2574,7 @@ Array [
           type="inverted"
         >
           <img
-            className="Avatar__Image-sc-1wtet2j-2 eEfKKB"
+            className="Avatar__Image-sc-1wtet2j-2 HpUeI"
             src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
           />
           <div
@@ -1189,7 +2708,7 @@ Array [
             type="inverted"
           >
             <img
-              className="Avatar__Image-sc-1wtet2j-2 eEfKKB"
+              className="Avatar__Image-sc-1wtet2j-2 HpUeI"
               src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
             />
             <div
@@ -1250,7 +2769,7 @@ Array [
           type="inverted"
         >
           <img
-            className="Avatar__Image-sc-1wtet2j-2 eEfKKB"
+            className="Avatar__Image-sc-1wtet2j-2 HpUeI"
             src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
           />
           <div
@@ -1750,7 +3269,7 @@ exports[`Storyshots Components/Select Default 1`] = `
         onTouchEnd={[Function]}
       >
         <div
-          className=" css-1hwfws3"
+          className=" css-l1xr2i-Component"
         >
           <div
             className=" css-1j591rh-placeholder"
@@ -1872,7 +3391,7 @@ exports[`Storyshots Components/Select Inverted 1`] = `
             onTouchEnd={[Function]}
           >
             <div
-              className=" css-1hwfws3"
+              className=" css-l1xr2i-Component"
             >
               <div
                 className=" css-rbsjjc-placeholder"
@@ -1983,7 +3502,7 @@ exports[`Storyshots Components/Select Inverted 1`] = `
             onTouchEnd={[Function]}
           >
             <div
-              className=" css-1hwfws3"
+              className=" css-l1xr2i-Component"
             >
               <div
                 className=" css-rbsjjc-placeholder"
@@ -2100,7 +3619,7 @@ exports[`Storyshots Components/Select Multi-select 1`] = `
         onTouchEnd={[Function]}
       >
         <div
-          className=" css-1hwfws3"
+          className=" css-l1xr2i-Component"
         >
           <div
             className=" css-1j591rh-placeholder"
@@ -2216,7 +3735,7 @@ exports[`Storyshots Components/Select With Data ID 1`] = `
         onTouchEnd={[Function]}
       >
         <div
-          className=" css-1hwfws3"
+          className=" css-l1xr2i-Component"
         >
           <div
             className=" css-1j591rh-placeholder"
@@ -2337,7 +3856,7 @@ exports[`Storyshots Components/Select With Selected Value 1`] = `
         onTouchEnd={[Function]}
       >
         <div
-          className=" css-1hwfws3"
+          className=" css-l1xr2i-Component"
         >
           <div
             className=" css-r447wv-singleValue"
@@ -2818,654 +4337,6 @@ exports[`Storyshots Components/TextArea States 1`] = `
 </div>
 `;
 
-exports[`Storyshots Units/ActionsMenu Default actions menu 1`] = `
-<div
-  className="Box__BoxWrapper-jr1api-0 gFkEUh"
-  data-testid={null}
->
-  <div
-    className="ActionsMenu__Wrapper-yvbni2-0 dNblPG"
-  >
-    <button
-      className="ActionsMenu__Control-yvbni2-1 caVsMX"
-      onBlur={[Function]}
-      onClick={[Function]}
-    >
-      <div
-        className="ActionsMenu__Icon-yvbni2-2 eubGjt"
-      />
-    </button>
-    <div
-      className="ActionsMenu__Menu-yvbni2-3 gHBMnz"
-    >
-      <a
-        href="https://orchestrated.io/"
-      >
-        Open details page
-      </a>
-      <button
-        type="button"
-      >
-        Edit
-      </button>
-      <button
-        type="button"
-      >
-        Remove
-      </button>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Units/ActionsMenu Left offset actions menu 1`] = `
-<div
-  className="Box__BoxWrapper-jr1api-0 gFkEUh"
-  data-testid={null}
->
-  <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 epDpoM"
-    data-testid={null}
-  >
-    <div
-      className="ActionsMenu__Wrapper-yvbni2-0 dNblPG"
-    >
-      <button
-        className="ActionsMenu__Control-yvbni2-1 caVsMX"
-        onBlur={[Function]}
-        onClick={[Function]}
-      >
-        <div
-          className="ActionsMenu__Icon-yvbni2-2 eubGjt"
-        />
-      </button>
-      <div
-        className="ActionsMenu__Menu-yvbni2-3 eiLgdQ"
-        direction="left"
-      >
-        <a
-          href="https://orchestrated.io/"
-        >
-          Open details page
-        </a>
-        <button
-          type="button"
-        >
-          Edit
-        </button>
-        <button
-          type="button"
-        >
-          Remove
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Units/Avatar Default avatar 1`] = `
-<div
-  className="Avatar__AvatarWrapper-sc-1wtet2j-0 ihQtwr"
->
-  <img
-    className="Avatar__Image-sc-1wtet2j-2 enCcxg"
-    src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
-  />
-  <div
-    className="Avatar__TextContent-sc-1wtet2j-1 emrUQv"
-  >
-    <h3
-      className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 TZuyA"
-    >
-      Ayden Lundgre
-    </h3>
-    <span
-      className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 lgvTgY"
-    >
-      Senior Business Analyst
-    </span>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Units/Avatar Icon only 1`] = `
-<div
-  className="Avatar__AvatarWrapper-sc-1wtet2j-0 ihQtwr"
->
-  <div
-    className="Avatar__Circle-sc-1wtet2j-3 bFIEcO"
-  >
-    <span
-      className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
-    >
-      <svg
-        className="svg-inline--fa fa-undefined"
-      />
-    </span>
-  </div>
-  <div
-    className="Avatar__TextContent-sc-1wtet2j-1 emrUQv"
-  >
-    <h3
-      className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 TZuyA"
-    >
-      Ayden Lundgre
-    </h3>
-    <span
-      className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 lgvTgY"
-    >
-      Senior Business Analyst
-    </span>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Units/Avatar Name as link 1`] = `
-<div
-  className="Avatar__AvatarWrapper-sc-1wtet2j-0 ihQtwr"
->
-  <img
-    className="Avatar__Image-sc-1wtet2j-2 enCcxg"
-    src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
-  />
-  <div
-    className="Avatar__TextContent-sc-1wtet2j-1 emrUQv"
-  >
-    <h3
-      className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 TZuyA"
-    >
-      <a
-        className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
-        data-testid={null}
-        href="#"
-      >
-        Ayden Lundgre
-      </a>
-    </h3>
-    <span
-      className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 lgvTgY"
-    >
-      Senior Business Analyst
-    </span>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Units/Avatar No image 1`] = `
-Array [
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
-  >
-    <div
-      className="Avatar__AvatarWrapper-sc-1wtet2j-0 ihQtwr"
-    >
-      <div
-        className="Avatar__Circle-sc-1wtet2j-3 bFIEcO"
-      >
-        AL
-      </div>
-      <div
-        className="Avatar__TextContent-sc-1wtet2j-1 emrUQv"
-      >
-        <h3
-          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 TZuyA"
-        >
-          Ayden Lundgre
-        </h3>
-        <span
-          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 lgvTgY"
-        >
-          Senior Business Analyst
-        </span>
-      </div>
-    </div>
-  </div>,
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
-  >
-    <div
-      className="Avatar__AvatarWrapper-sc-1wtet2j-0 ihQtwr"
-    >
-      <div
-        className="Avatar__Circle-sc-1wtet2j-3 drxOlL"
-      >
-        AL
-      </div>
-      <div
-        className="Avatar__TextContent-sc-1wtet2j-1 emrUQv"
-      >
-        <h3
-          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 TZuyA"
-        >
-          Ayden Lundgre
-        </h3>
-        <span
-          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 lgvTgY"
-        >
-          Senior Business Analyst
-        </span>
-      </div>
-    </div>
-  </div>,
-]
-`;
-
-exports[`Storyshots Units/Avatar On dark background 1`] = `
-<div
-  className="Box__BoxWrapper-jr1api-0 eFGCqk"
-  data-testid={null}
->
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
-  >
-    <div
-      className="Avatar__AvatarWrapper-sc-1wtet2j-0 ihQtwr"
-      type="inverted"
-    >
-      <img
-        className="Avatar__Image-sc-1wtet2j-2 enCcxg"
-        src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
-      />
-      <div
-        className="Avatar__TextContent-sc-1wtet2j-1 cjfUrq"
-        type="inverted"
-      >
-        <h3
-          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 jXpBeJ"
-          type="inverted"
-        >
-          Ayden Lundgre
-        </h3>
-        <span
-          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 bdyzed"
-          type="inverted"
-        >
-          Senior Business Analyst
-        </span>
-      </div>
-    </div>
-  </div>
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
-  >
-    <div
-      className="Avatar__AvatarWrapper-sc-1wtet2j-0 ihQtwr"
-      type="inverted"
-    >
-      <img
-        className="Avatar__Image-sc-1wtet2j-2 enCcxg"
-        src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
-      />
-      <div
-        className="Avatar__TextContent-sc-1wtet2j-1 cjfUrq"
-        type="inverted"
-      >
-        <h3
-          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 jXpBeJ"
-          type="inverted"
-        >
-          <a
-            className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
-            data-testid={null}
-            href="#"
-          >
-            Ayden Lundgre
-          </a>
-        </h3>
-        <span
-          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 bdyzed"
-          type="inverted"
-        >
-          Senior Business Analyst
-        </span>
-      </div>
-    </div>
-  </div>
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
-  >
-    <div
-      className="Avatar__AvatarWrapper-sc-1wtet2j-0 jrXiJY"
-      type="inverted"
-    >
-      <div
-        className="Avatar__Circle-sc-1wtet2j-3 hjPAAh inverted"
-        type="inverted"
-      >
-        <a
-          className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
-          data-testid={null}
-          href="#"
-        >
-          AL
-        </a>
-      </div>
-      <div
-        className="Avatar__TextContent-sc-1wtet2j-1 irScUB"
-        type="inverted"
-      >
-        <h3
-          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 exCJCn"
-          type="inverted"
-        >
-          Ayden Lundgre
-        </h3>
-        <span
-          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 kyXVZS"
-          type="inverted"
-        >
-          Senior Business Analyst
-        </span>
-      </div>
-    </div>
-  </div>
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
-  >
-    <div
-      className="Avatar__AvatarWrapper-sc-1wtet2j-0 jrXiJY"
-      type="inverted"
-    >
-      <img
-        className="Avatar__Image-sc-1wtet2j-2 eEfKKB"
-        src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
-      />
-      <div
-        className="Avatar__TextContent-sc-1wtet2j-1 irScUB"
-        type="inverted"
-      >
-        <h3
-          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 exCJCn"
-          type="inverted"
-        >
-          <a
-            className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
-            data-testid={null}
-            href="#"
-          >
-            Ayden Lundgre
-          </a>
-        </h3>
-        <span
-          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 kyXVZS"
-          type="inverted"
-        >
-          Senior Business Analyst
-        </span>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Units/Avatar Small 1`] = `
-Array [
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
-  >
-    <div
-      className="Avatar__AvatarWrapper-sc-1wtet2j-0 jrXiJY"
-    >
-      <div
-        className="Avatar__Circle-sc-1wtet2j-3 ofgaP"
-      >
-        AL
-      </div>
-      <div
-        className="Avatar__TextContent-sc-1wtet2j-1 gtYgsc"
-      >
-        <h3
-          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 dbTNMm"
-        >
-          Ayden Lundgre
-        </h3>
-        <span
-          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 kAvPxL"
-        >
-          Senior Business Analyst
-        </span>
-      </div>
-    </div>
-  </div>,
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
-  >
-    <div
-      className="Avatar__AvatarWrapper-sc-1wtet2j-0 jrXiJY"
-    >
-      <img
-        className="Avatar__Image-sc-1wtet2j-2 eEfKKB"
-        src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
-      />
-      <div
-        className="Avatar__TextContent-sc-1wtet2j-1 gtYgsc"
-      >
-        <h3
-          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 dbTNMm"
-        >
-          Ayden Lundgre
-        </h3>
-        <span
-          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 kAvPxL"
-        >
-          Senior Business Analyst
-        </span>
-      </div>
-    </div>
-  </div>,
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
-  >
-    <div
-      className="Avatar__AvatarWrapper-sc-1wtet2j-0 jrXiJY"
-    >
-      <img
-        className="Avatar__Image-sc-1wtet2j-2 eEfKKB"
-        src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
-      />
-      <div
-        className="Avatar__TextContent-sc-1wtet2j-1 gtYgsc"
-      >
-        <h3
-          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 dbTNMm"
-        >
-          <a
-            className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
-            data-testid={null}
-            href="#"
-          >
-            Ayden Lundgre
-          </a>
-        </h3>
-        <span
-          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 kAvPxL"
-        >
-          Senior Business Analyst
-        </span>
-      </div>
-    </div>
-  </div>,
-]
-`;
-
-exports[`Storyshots Units/Badge Colour variants 1`] = `
-Array [
-  <div
-    className="Box__BoxWrapper-jr1api-0 ezPMxm"
-    data-testid={null}
-  >
-    <div
-      className="Flex__FlexWrapper-sc-1f3kfw7-0 gEccMi"
-      data-testid={null}
-    >
-      <div
-        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
-      >
-        <span
-          className="Badge__Item-sc-9r75kj-0 feOvPK"
-        >
-          Default
-        </span>
-      </div>
-      <div
-        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
-      >
-        <span
-          className="Badge__Item-sc-9r75kj-0 iaagFf"
-        >
-          Success
-        </span>
-      </div>
-      <div
-        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
-      >
-        <span
-          className="Badge__Item-sc-9r75kj-0 beGUTi"
-        >
-          Warning
-        </span>
-      </div>
-      <div
-        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
-      >
-        <span
-          className="Badge__Item-sc-9r75kj-0 gsOGRg"
-        >
-          Danger
-        </span>
-      </div>
-      <div
-        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
-      >
-        <span
-          className="Badge__Item-sc-9r75kj-0 ibszHM"
-        >
-          Low priority
-        </span>
-      </div>
-      <div
-        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
-      >
-        <span
-          className="Badge__Item-sc-9r75kj-0 cXIqIS"
-        >
-          Medium priority
-        </span>
-      </div>
-      <div
-        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
-      >
-        <span
-          className="Badge__Item-sc-9r75kj-0 dOFhrC"
-        >
-          High priority
-        </span>
-      </div>
-      <div
-        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
-      >
-        <span
-          className="Badge__Item-sc-9r75kj-0 brXHRh"
-        >
-          Secondary
-        </span>
-      </div>
-    </div>
-  </div>,
-  <div
-    className="Box__BoxWrapper-jr1api-0 gsDhqA"
-    data-testid={null}
-  >
-    <div
-      className="Flex__FlexWrapper-sc-1f3kfw7-0 gEccMi"
-      data-testid={null}
-    >
-      <div
-        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
-      >
-        <span
-          className="Badge__Item-sc-9r75kj-0 feOvPK"
-        >
-          Default
-        </span>
-      </div>
-      <div
-        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
-      >
-        <span
-          className="Badge__Item-sc-9r75kj-0 iaagFf"
-        >
-          Success
-        </span>
-      </div>
-      <div
-        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
-      >
-        <span
-          className="Badge__Item-sc-9r75kj-0 beGUTi"
-        >
-          Warning
-        </span>
-      </div>
-      <div
-        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
-      >
-        <span
-          className="Badge__Item-sc-9r75kj-0 gsOGRg"
-        >
-          Danger
-        </span>
-      </div>
-      <div
-        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
-      >
-        <span
-          className="Badge__Item-sc-9r75kj-0 ibszHM"
-        >
-          Low priority
-        </span>
-      </div>
-      <div
-        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
-      >
-        <span
-          className="Badge__Item-sc-9r75kj-0 cXIqIS"
-        >
-          Medium priority
-        </span>
-      </div>
-      <div
-        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
-      >
-        <span
-          className="Badge__Item-sc-9r75kj-0 dOFhrC"
-        >
-          High priority
-        </span>
-      </div>
-      <div
-        className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
-      >
-        <span
-          className="Badge__Item-sc-9r75kj-0 brXHRh"
-        >
-          Secondary
-        </span>
-      </div>
-    </div>
-  </div>,
-]
-`;
-
-exports[`Storyshots Units/Badge Default badge 1`] = `
-<span
-  className="Badge__Item-sc-9r75kj-0 feOvPK"
->
-  Default
-</span>
-`;
-
 exports[`Storyshots Units/ButtonGroup Default button group 1`] = `
 <div
   className="Box__BoxWrapper-jr1api-0 jYILjR"
@@ -3525,854 +4396,6 @@ exports[`Storyshots Units/ButtonGroup Default button group 1`] = `
         Constraints
       </label>
     </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Units/Card Alternate card 1`] = `
-<div
-  className="Box__BoxWrapper-jr1api-0 gjygQu"
-  data-testid={null}
->
-  <div
-    className="Card__Item-yfq75p-0 gMqXmz"
-  >
-    <div
-      className="Card__Header-yfq75p-1 hQcgPp"
-    >
-      <span
-        className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
-      >
-        <svg
-          className="svg-inline--fa fa-undefined"
-        />
-      </span>
-      <h3
-        className="Typography__H3-sc-1613j99-2 oYbxO"
-      >
-        Works for
-      </h3>
-      <h6
-        className="Typography__H6-sc-1613j99-5 bRBAKr"
-      >
-        18
-      </h6>
-    </div>
-    <div
-      className="Card__Content-yfq75p-2 goaCw"
-    >
-      <p
-        className="Typography__P-sc-1613j99-6 cdYHMX"
-      >
-        This is an alternate style card that supports an icon and moves the subtitle to the right of the title, rather than underneath it.
-      </p>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Units/Card Basic card 1`] = `
-<div
-  className="Box__BoxWrapper-jr1api-0 gjygQu"
-  data-testid={null}
->
-  <div
-    className="Card__Item-yfq75p-0 gTxtqf"
-  >
-    <div
-      className="Card__Header-yfq75p-1 hQcgPp"
-    >
-      <h3
-        className="Typography__H3-sc-1613j99-2 oYbxO"
-      >
-        Card title
-      </h3>
-      <h6
-        className="Typography__H6-sc-1613j99-5 bRBAKr"
-      >
-        Subtitle
-      </h6>
-    </div>
-    <div
-      className="Card__Content-yfq75p-2 goaCw"
-    >
-      <p
-        className="Typography__P-sc-1613j99-6 eqWAJp"
-      >
-        Card content lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </p>
-      <a
-        className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 isqNRL StyledLink"
-        data-testid={null}
-        href="#"
-      >
-        Learn more
-      </a>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Units/Card Coloured cards 1`] = `
-<div
-  className="Box__BoxWrapper-jr1api-0 gjygQu"
-  data-testid={null}
->
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
-  >
-    <div
-      className="Card__Item-yfq75p-0 iKBELc"
-    >
-      <div
-        className="Card__Header-yfq75p-1 hQcgPp"
-      >
-        <span
-          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
-        >
-          <svg
-            className="svg-inline--fa fa-undefined"
-          />
-        </span>
-        <h3
-          className="Typography__H3-sc-1613j99-2 oYbxO"
-        >
-          Locations
-        </h3>
-        <h6
-          className="Typography__H6-sc-1613j99-5 bRBAKr"
-        >
-          57
-        </h6>
-      </div>
-      <div
-        className="Card__Content-yfq75p-2 goaCw"
-      >
-        <p
-          className="Typography__P-sc-1613j99-6 cdYHMX"
-        >
-          This is an alternate style card that supports a coloured border, an icon and moves the subtitle to the right of the title, rather than underneath it.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
-  >
-    <div
-      className="Card__Item-yfq75p-0 cHzaXt"
-    >
-      <div
-        className="Card__Header-yfq75p-1 hQcgPp"
-      >
-        <span
-          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
-        >
-          <svg
-            className="svg-inline--fa fa-undefined"
-          />
-        </span>
-        <h3
-          className="Typography__H3-sc-1613j99-2 oYbxO"
-        >
-          Roles
-        </h3>
-        <h6
-          className="Typography__H6-sc-1613j99-5 bRBAKr"
-        >
-          Here is a subtitle
-        </h6>
-      </div>
-      <div
-        className="Card__Content-yfq75p-2 goaCw"
-      >
-        <p
-          className="Typography__P-sc-1613j99-6 cdYHMX"
-        >
-          This is an alternate style card that supports a coloured border, an icon and moves the subtitle to the right of the title, rather than underneath it.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
-  >
-    <div
-      className="Card__Item-yfq75p-0 hOEdXd"
-    >
-      <div
-        className="Card__Header-yfq75p-1 hQcgPp"
-      >
-        <span
-          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
-        >
-          <svg
-            className="svg-inline--fa fa-undefined"
-          />
-        </span>
-        <h3
-          className="Typography__H3-sc-1613j99-2 oYbxO"
-        >
-          4,539 People
-        </h3>
-        <small
-          className="Card__ChangeValue-yfq75p-4 cHegKK"
-        >
-          No change
-        </small>
-      </div>
-      <div
-        className="Card__Content-yfq75p-2 goaCw"
-      >
-        <p
-          className="Typography__P-sc-1613j99-6 cdYHMX"
-        >
-          This is an alternate style card that supports a coloured border, an icon and shows a delta change.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
-  >
-    <div
-      className="Card__Item-yfq75p-0 kQlLJV"
-    >
-      <div
-        className="Card__Header-yfq75p-1 hQcgPp"
-      >
-        <span
-          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
-        >
-          <svg
-            className="svg-inline--fa fa-undefined"
-          />
-        </span>
-        <h3
-          className="Typography__H3-sc-1613j99-2 oYbxO"
-        >
-          12 Divisions
-        </h3>
-        <div
-          className="Card__ChangeIcon-yfq75p-3 ibzsKd"
-        />
-        <small
-          className="Card__ChangeValue-yfq75p-4 cHegKK"
-        >
-          2 (-1%)
-        </small>
-      </div>
-      <div
-        className="Card__Content-yfq75p-2 goaCw"
-      >
-        <p
-          className="Typography__P-sc-1613j99-6 cdYHMX"
-        >
-          This is an alternate style card that supports a coloured border, an icon and shows a delta change.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
-  >
-    <div
-      className="Card__Item-yfq75p-0 dqqKLZ"
-    >
-      <div
-        className="Card__Header-yfq75p-1 hQcgPp"
-      >
-        <span
-          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
-        >
-          <svg
-            className="svg-inline--fa fa-undefined"
-          />
-        </span>
-        <h3
-          className="Typography__H3-sc-1613j99-2 oYbxO"
-        >
-          289 Teams
-        </h3>
-        <div
-          className="Card__ChangeIcon-yfq75p-3 pxfpD"
-        />
-        <small
-          className="Card__ChangeValue-yfq75p-4 cHegKK"
-        >
-          9 (+2%)
-        </small>
-      </div>
-      <div
-        className="Card__Content-yfq75p-2 goaCw"
-      >
-        <p
-          className="Typography__P-sc-1613j99-6 cdYHMX"
-        >
-          This is an alternate style card that supports a coloured border, an icon and shows a delta change.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Units/Card Complex card 1`] = `
-<div
-  className="Box__BoxWrapper-jr1api-0 gjygQu"
-  data-testid={null}
->
-  <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 gSqVEO"
-    data-testid={null}
-  >
-    <div
-      className="Spacer__SpacerBox-sc-1acikjz-0 gHANPZ"
-    >
-      <div
-        className="Card__Item-yfq75p-0 kDqDaU"
-      >
-        <div
-          className="Card__Content-yfq75p-2 goaCw"
-        >
-          <span
-            className="Icon__IconWrapper-xeqnbo-0 kfbvmR"
-            color="greyLight"
-          >
-            <svg
-              className="svg-inline--fa fa-undefined"
-            />
-          </span>
-          <h3
-            className="Typography__H3-sc-1613j99-2 oYbxO"
-          >
-            Create new
-          </h3>
-          <p
-            className="Typography__P-sc-1613j99-6 cdYHMX"
-          >
-            Start with a blank slate and add your own data
-          </p>
-          <button
-            className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
-            data-testid={null}
-            disabled={false}
-          >
-            Start fresh
-          </button>
-        </div>
-      </div>
-    </div>
-    <div
-      className="Spacer__SpacerBox-sc-1acikjz-0 gHANPZ"
-    >
-      <div
-        className="Card__Item-yfq75p-0 kDqDaU"
-      >
-        <div
-          className="Card__Content-yfq75p-2 goaCw"
-        >
-          <span
-            className="Icon__IconWrapper-xeqnbo-0 kfbvmR"
-            color="greyLight"
-          >
-            <svg
-              className="svg-inline--fa fa-undefined"
-            />
-          </span>
-          <h3
-            className="Typography__H3-sc-1613j99-2 oYbxO"
-          >
-            Explore app
-          </h3>
-          <p
-            className="Typography__P-sc-1613j99-6 cdYHMX"
-          >
-            Look at pre-populated data to see app in action
-          </p>
-          <button
-            className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
-            data-testid={null}
-            disabled={false}
-          >
-            View example
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Units/Checkbox Basic Checkbox 1`] = `
-<div
-  className="Checkbox__Item-p4d19b-0 bvDiDr"
->
-  <label
-    className="Checkbox__Label-p4d19b-1 kOyQzY"
-  >
-    <input
-      className="Checkbox__Control-p4d19b-2 eYCfEr"
-      type="checkbox"
-    />
-    <div
-      className="Checkbox__Box-p4d19b-3 csKNKp"
-    >
-      <div
-        className="Checkbox__Check-p4d19b-4 eTdZLy"
-      />
-    </div>
-    <div
-      className="Checkbox__Text-p4d19b-5 koOQLU"
-    >
-      Default checkbox
-    </div>
-  </label>
-</div>
-`;
-
-exports[`Storyshots Units/Checkbox Checked 1`] = `
-<div
-  className="Checkbox__Item-p4d19b-0 bvDiDr"
->
-  <label
-    className="Checkbox__Label-p4d19b-1 kOyQzY"
-  >
-    <input
-      checked={true}
-      className="Checkbox__Control-p4d19b-2 eYCfEr"
-      type="checkbox"
-    />
-    <div
-      className="Checkbox__Box-p4d19b-3 csKNKp"
-    >
-      <div
-        className="Checkbox__Check-p4d19b-4 eTdZLy"
-      />
-    </div>
-    <div
-      className="Checkbox__Text-p4d19b-5 koOQLU"
-    >
-      Ticked checkbox
-    </div>
-  </label>
-</div>
-`;
-
-exports[`Storyshots Units/Checkbox Colour Variants 1`] = `
-Array [
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
-  >
-    <div
-      className="Checkbox__Item-p4d19b-0 bvDiDr"
-    >
-      <label
-        className="Checkbox__Label-p4d19b-1 kOyQzY"
-      >
-        <input
-          className="Checkbox__Control-p4d19b-2 dEruue"
-          type="checkbox"
-        />
-        <div
-          className="Checkbox__Box-p4d19b-3 csKNKp"
-        >
-          <div
-            className="Checkbox__Check-p4d19b-4 eTdZLy"
-          />
-        </div>
-        <div
-          className="Checkbox__Text-p4d19b-5 koOQLU"
-        >
-          Primary colour checkbox
-        </div>
-      </label>
-    </div>
-  </div>,
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
-  >
-    <div
-      className="Checkbox__Item-p4d19b-0 bvDiDr"
-    >
-      <label
-        className="Checkbox__Label-p4d19b-1 kOyQzY"
-      >
-        <input
-          className="Checkbox__Control-p4d19b-2 ksOOIp"
-          type="checkbox"
-        />
-        <div
-          className="Checkbox__Box-p4d19b-3 csKNKp"
-        >
-          <div
-            className="Checkbox__Check-p4d19b-4 eTdZLy"
-          />
-        </div>
-        <div
-          className="Checkbox__Text-p4d19b-5 koOQLU"
-        >
-          Success colour checkbox
-        </div>
-      </label>
-    </div>
-  </div>,
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
-  >
-    <div
-      className="Checkbox__Item-p4d19b-0 bvDiDr"
-    >
-      <label
-        className="Checkbox__Label-p4d19b-1 kOyQzY"
-      >
-        <input
-          className="Checkbox__Control-p4d19b-2 hBvgQm"
-          type="checkbox"
-        />
-        <div
-          className="Checkbox__Box-p4d19b-3 csKNKp"
-        >
-          <div
-            className="Checkbox__Check-p4d19b-4 eTdZLy"
-          />
-        </div>
-        <div
-          className="Checkbox__Text-p4d19b-5 koOQLU"
-        >
-          Warning colour checkbox
-        </div>
-      </label>
-    </div>
-  </div>,
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
-  >
-    <div
-      className="Checkbox__Item-p4d19b-0 bvDiDr"
-    >
-      <label
-        className="Checkbox__Label-p4d19b-1 kOyQzY"
-      >
-        <input
-          className="Checkbox__Control-p4d19b-2 gFMsFc"
-          type="checkbox"
-        />
-        <div
-          className="Checkbox__Box-p4d19b-3 csKNKp"
-        >
-          <div
-            className="Checkbox__Check-p4d19b-4 eTdZLy"
-          />
-        </div>
-        <div
-          className="Checkbox__Text-p4d19b-5 koOQLU"
-        >
-          Danger colour checkbox
-        </div>
-      </label>
-    </div>
-  </div>,
-]
-`;
-
-exports[`Storyshots Units/Checkbox Disabled 1`] = `
-Array [
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
-  >
-    <div
-      className="Checkbox__Item-p4d19b-0 bvDiDr"
-    >
-      <label
-        className="Checkbox__Label-p4d19b-1 bMlqJq"
-        disabled={true}
-      >
-        <input
-          className="Checkbox__Control-p4d19b-2 eYCfEr"
-          disabled={true}
-          type="checkbox"
-        />
-        <div
-          className="Checkbox__Box-p4d19b-3 csKNKp"
-        >
-          <div
-            className="Checkbox__Check-p4d19b-4 eTdZLy"
-          />
-        </div>
-        <div
-          className="Checkbox__Text-p4d19b-5 koOQLU"
-        >
-          Disabled checkbox
-        </div>
-      </label>
-    </div>
-  </div>,
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
-  >
-    <div
-      className="Checkbox__Item-p4d19b-0 bvDiDr"
-    >
-      <label
-        className="Checkbox__Label-p4d19b-1 bMlqJq"
-        disabled={true}
-      >
-        <input
-          checked={true}
-          className="Checkbox__Control-p4d19b-2 eYCfEr"
-          disabled={true}
-          type="checkbox"
-        />
-        <div
-          className="Checkbox__Box-p4d19b-3 csKNKp"
-        >
-          <div
-            className="Checkbox__Check-p4d19b-4 eTdZLy"
-          />
-        </div>
-        <div
-          className="Checkbox__Text-p4d19b-5 koOQLU"
-        >
-          Disabled ticked checkbox
-        </div>
-      </label>
-    </div>
-  </div>,
-]
-`;
-
-exports[`Storyshots Units/Checkbox Inverted 1`] = `
-<div
-  className="Box__BoxWrapper-jr1api-0 cQxHnQ"
-  data-testid={null}
->
-  <div
-    className="Checkbox__Item-p4d19b-0 fZqhjr"
-  >
-    <label
-      className="Checkbox__Label-p4d19b-1 kOyQzY"
-    >
-      <input
-        className="Checkbox__Control-p4d19b-2 iShEdo"
-        type="checkbox"
-      />
-      <div
-        className="Checkbox__Box-p4d19b-3 csKNKp"
-      >
-        <div
-          className="Checkbox__Check-p4d19b-4 eTdZLy"
-        />
-      </div>
-      <div
-        className="Checkbox__Text-p4d19b-5 koOQLU"
-      >
-        Inverted checkbox
-      </div>
-    </label>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Units/Divider Default Divider 1`] = `
-Array [
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
-  >
-    <div
-      className="Divider__Item-sc-106mlj-0 bFDWQk"
-    />
-  </div>,
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
-  >
-    <div
-      className="Divider__Item-sc-106mlj-0 bVLzUP"
-    />
-  </div>,
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
-  >
-    <div
-      className="Divider__Item-sc-106mlj-0 hCFvIy"
-    />
-  </div>,
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
-  >
-    <div
-      className="Divider__Item-sc-106mlj-0 lgLMcl"
-    />
-  </div>,
-]
-`;
-
-exports[`Storyshots Units/Divider Inverted Divider 1`] = `
-Array [
-  <div
-    className="Divider__Item-sc-106mlj-0 eLdOpL"
-  />,
-  <div
-    className="Divider__Item-sc-106mlj-0 bijHol"
-  />,
-]
-`;
-
-exports[`Storyshots Units/Divider Span Grid 1`] = `
-<div
-  className="Divider__Item-sc-106mlj-0 cVpIJd"
-/>
-`;
-
-exports[`Storyshots Units/Expandable Default Expandable 1`] = `
-<div
-  className="Expandable__Item-na4gdb-0 dfSpXr"
->
-  <button
-    className="Expandable__Button-na4gdb-1 kkyPOz"
-    onClick={[Function]}
-  >
-    <div
-      className="Flex__FlexWrapper-sc-1f3kfw7-0 cThWPn"
-      data-testid={null}
-    >
-      <div
-        className="Expandable__Text-na4gdb-2 kgTlSW"
-      >
-        <h4
-          className="Typography__H4-sc-1613j99-3 cvPFAr"
-        >
-          Details
-        </h4>
-      </div>
-    </div>
-  </button>
-  <div
-    className="Expandable__Content-na4gdb-3 dNUyVo"
-  >
-    <p
-      className="Typography__P-sc-1613j99-6 cdYHMX"
-    >
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-    </p>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Units/Expandable Expandable With Badge 1`] = `
-<div
-  className="Expandable__Item-na4gdb-0 dfSpXr"
->
-  <button
-    className="Expandable__Button-na4gdb-1 kkyPOz"
-    onClick={[Function]}
-  >
-    <div
-      className="Flex__FlexWrapper-sc-1f3kfw7-0 cThWPn"
-      data-testid={null}
-    >
-      <div
-        className="Expandable__Text-na4gdb-2 kgTlSW"
-      >
-        <h4
-          className="Typography__H4-sc-1613j99-3 cvPFAr"
-        >
-          Complex example
-        </h4>
-      </div>
-      <span
-        className="Badge__Item-sc-9r75kj-0 feOvPK"
-      >
-        status
-      </span>
-    </div>
-  </button>
-  <div
-    className="Expandable__Content-na4gdb-3 dNUyVo"
-  >
-    <p
-      className="Typography__P-sc-1613j99-6 cdYHMX"
-    >
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-    </p>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Units/Expandable Expandable With Subtitle 1`] = `
-<div
-  className="Expandable__Item-na4gdb-0 dfSpXr"
->
-  <button
-    className="Expandable__Button-na4gdb-1 kkyPOz"
-    onClick={[Function]}
-  >
-    <div
-      className="Flex__FlexWrapper-sc-1f3kfw7-0 cThWPn"
-      data-testid={null}
-    >
-      <div
-        className="Expandable__Text-na4gdb-2 kgTlSW"
-      >
-        <h4
-          className="Typography__H4-sc-1613j99-3 cvPFAr"
-        >
-          Complex example
-        </h4>
-        <span
-          className="sc-AxjAm wVQLA"
-        >
-          Subtitle
-        </span>
-      </div>
-    </div>
-  </button>
-  <div
-    className="Expandable__Content-na4gdb-3 dNUyVo"
-  >
-    <p
-      className="Typography__P-sc-1613j99-6 cdYHMX"
-    >
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-    </p>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Units/Expandable Open Expandable 1`] = `
-<div
-  className="Expandable__Item-na4gdb-0 dfSpXr"
->
-  <button
-    aria-expanded={true}
-    className="Expandable__Button-na4gdb-1 jXwJcg"
-    onClick={[Function]}
-    open={true}
-  >
-    <div
-      className="Flex__FlexWrapper-sc-1f3kfw7-0 cThWPn"
-      data-testid={null}
-    >
-      <div
-        className="Expandable__Text-na4gdb-2 kgTlSW"
-      >
-        <h4
-          className="Typography__H4-sc-1613j99-3 cvPFAr"
-        >
-          Details
-        </h4>
-      </div>
-    </div>
-  </button>
-  <div
-    className="Expandable__Content-na4gdb-3 hhEXij"
-    open={true}
-  >
-    <p
-      className="Typography__P-sc-1613j99-6 cdYHMX"
-    >
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-    </p>
   </div>
 </div>
 `;
