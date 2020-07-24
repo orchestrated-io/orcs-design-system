@@ -3,9 +3,10 @@ import Button from "../Button";
 import Popover from ".";
 import Box from "../Box";
 import Flex from "../Flex";
+import mdx from "./Popover.mdx";
 
 export default {
-  title: "Units/Popover",
+  title: "Components/Popover",
   decorators: [
     storyFn => (
       <Box p="5">
@@ -14,8 +15,9 @@ export default {
     )
   ],
   parameters: {
-    component: Popover
-  }
+    docs: { page: mdx }
+  },
+  component: Popover
 };
 
 export const defaultPopover = () => (
@@ -23,9 +25,7 @@ export const defaultPopover = () => (
     <Button>Hover Me!</Button>
   </Popover>
 );
-defaultPopover.story = {
-  name: "Default popover"
-};
+defaultPopover.storyName = "Default";
 
 export const direction = () => (
   <>
@@ -46,27 +46,19 @@ export const direction = () => (
     </Popover>
   </>
 );
-direction.story = {
-  name: "Direction"
-};
+direction.storyName = "Direction";
 
 export const specifiedWidth = () => (
   <Popover text="Text description of what this button does" width="100px">
     <Button>Hover Me</Button>
   </Popover>
 );
-specifiedWidth.story = {
-  name: "Specified width"
-};
 
 export const textAlignment = () => (
   <Popover textAlign="center" text="Text description of what this button does">
     <Button>Hover Me</Button>
   </Popover>
 );
-textAlignment.story = {
-  name: "Text alignment"
-};
 
 export const inline = () => (
   <>
@@ -84,6 +76,3 @@ export const inline = () => (
     </Popover>
   </>
 );
-inline.story = {
-  name: "Inline"
-};

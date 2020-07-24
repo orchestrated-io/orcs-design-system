@@ -2,12 +2,14 @@ import React from "react";
 import RadioButton from ".";
 import Box from "../Box";
 import Spacer from "../Spacer";
+import mdx from "./RadioButton.mdx";
 
 export default {
-  title: "Units/RadioButton",
+  title: "Components/RadioButton",
   parameters: {
-    component: RadioButton
-  }
+    docs: { page: mdx }
+  },
+  component: RadioButton
 };
 
 export const defaultRadioButton = () => (
@@ -16,18 +18,13 @@ export const defaultRadioButton = () => (
     <RadioButton name="RadioButtons01" label="Default radio 02" />
   </Spacer>
 );
-defaultRadioButton.story = {
-  name: "Default"
-};
+defaultRadioButton.storyName = "Default";
 
-export const checkedRadioButton = () => (
+export const checked = () => (
   <RadioButton name="RadioButtons02" label="Default checked radio" checked />
 );
-checkedRadioButton.story = {
-  name: "Checked"
-};
 
-export const disabledRadioButton = () => (
+export const disabled = () => (
   <Spacer m="r">
     <RadioButton
       name="RadioButtons03"
@@ -43,11 +40,8 @@ export const disabledRadioButton = () => (
     />
   </Spacer>
 );
-disabledRadioButton.story = {
-  name: "Disabled"
-};
 
-export const colouredRadioButton = () => (
+export const colour = () => (
   <Spacer m="r">
     <RadioButton
       name="RadioButtons"
@@ -74,15 +68,9 @@ export const colouredRadioButton = () => (
     />
   </Spacer>
 );
-colouredRadioButton.story = {
-  name: "Colour"
-};
 
-export const invertedRadioButton = () => (
+export const inverted = () => (
   <Box p="r" bg="greyDarker">
     <RadioButton name="RadioButtons04" label="Inverted radio" variant="white" />
   </Box>
 );
-invertedRadioButton.story = {
-  name: "Inverted"
-};

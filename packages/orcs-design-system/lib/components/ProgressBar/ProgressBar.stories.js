@@ -2,12 +2,15 @@ import React from "react";
 import ProgressBar from ".";
 import Box from "../Box";
 import Spacer from "../Spacer";
+import mdx from "./ProgressBar.mdx";
 
 export default {
-  title: "Units/ProgressBar",
+  title: "Components/ProgressBar",
   parameters: {
-    component: ProgressBar
-  }
+    docs: { page: mdx }
+  },
+  decorators: [storyFn => <Box p="r">{storyFn()}</Box>],
+  component: ProgressBar
 };
 
 export const defaultProgressBar = () => (
@@ -16,18 +19,13 @@ export const defaultProgressBar = () => (
     <ProgressBar containerWidth={50} fillWidth={70} />
   </Spacer>
 );
-defaultProgressBar.story = {
-  name: "Default"
-};
+defaultProgressBar.storyName = "Default";
 
-export const gradientProgressBar = () => (
-  <ProgressBar containerWidth={100} fillWidth={40} />
+export const gradient = () => (
+  <ProgressBar containerWidth={100} fillWidth={40} gradient />
 );
-gradientProgressBar.story = {
-  name: "Gradient"
-};
 
-export const invertedProgressBar = () => (
+export const inverted = () => (
   <Box bg="greyDarker" p="r">
     <Spacer m="r">
       <ProgressBar containerWidth={100} fillWidth={40} inverted />
@@ -35,6 +33,3 @@ export const invertedProgressBar = () => (
     </Spacer>
   </Box>
 );
-invertedProgressBar.story = {
-  name: "Inverted"
-};

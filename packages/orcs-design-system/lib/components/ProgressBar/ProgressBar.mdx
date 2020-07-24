@@ -1,9 +1,5 @@
-import * as stories from './ProgressBar.stories.js';
-import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
 import ProgressBar from ".";
-import Box from "../Box";
-
-<Meta title="Components/ProgressBar" component={ProgressBar} decorators={[storyFn => <Box p="r">{storyFn()}</Box> ]} />
 
 # Progress Bar
 
@@ -18,19 +14,19 @@ A percentage width of the fill (coloured element) can be specified using the fil
 ## Default
 
 <Preview>
-  <Story name="defaultProgressBar">{stories.defaultProgressBar()}</Story>
+  <Story id="components-progressbar--default-progress-bar" />
 </Preview>
 
 ## Gradient
 
 <Preview>
-  <Story name="gradientProgressBar">{stories.gradientProgressBar()}</Story>
+  <Story id="components-progressbar--gradient" />
 </Preview>
 
 ## Inverted
 
 <Preview>
-  <Story name="invertedProgressBar">{stories.invertedProgressBar()}</Story>
+  <Story id="components-progressbar--inverted" />
 </Preview>
 
 ## Properties

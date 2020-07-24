@@ -1,9 +1,5 @@
-import * as stories from './RadioButton.stories.js';
-import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
 import RadioButton from ".";
-import Box from "../Box";
-
-<Meta title="Components/RadioButton" component={RadioButton} decorators={[storyFn => <Box p="r">{storyFn()}</Box> ]} />
 
 # Radio Button
 
@@ -14,31 +10,31 @@ The default radio button (or inverted if on dark background) should be used for 
 ## Default
 
 <Preview>
-  <Story name="defaultRadioButton">{stories.defaultRadioButton()}</Story>
+  <Story id="components-radiobutton--default-radio-button" />
 </Preview>
 
 ## Colour
 
 <Preview>
-  <Story name="colouredRadioButton">{stories.colouredRadioButton()}</Story>
+  <Story id="components-radiobutton--colour" />
 </Preview>
 
 ## Checked
 
 <Preview>
-  <Story name="checkedRadioButton">{stories.checkedRadioButton()}</Story>
+  <Story id="components-radiobutton--checked" />
 </Preview>
 
 ## Disabled
 
 <Preview>
-  <Story name="disabledRadioButton">{stories.disabledRadioButton()}</Story>
+  <Story id="components-radiobutton--disabled" />
 </Preview>
 
 ## Inverted
 
 <Preview>
-  <Story name="invertedRadioButton">{stories.invertedRadioButton()}</Story>
+  <Story id="components-radiobutton--inverted" />
 </Preview>
 
 ## Properties

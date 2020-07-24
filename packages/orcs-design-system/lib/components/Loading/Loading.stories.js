@@ -2,23 +2,22 @@ import React from "react";
 import Loading from ".";
 import Spacer from "../Spacer";
 import Box from "../Box";
+import mdx from "./Loading.mdx";
 
 export default {
-  title: "Units/Loading",
+  title: "Components/Loading",
   parameters: {
-    component: Loading
-  }
+    docs: { page: mdx }
+  },
+  decorators: [storyFn => <Box p="r">{storyFn()}</Box>],
+  component: Loading
 };
 
 export const defaultLoading = () => <Loading />;
-defaultLoading.story = {
-  name: "Default Loading"
-};
+defaultLoading.storyName = "Default";
 
 export const largeLoading = () => <Loading large />;
-largeLoading.story = {
-  name: "Large"
-};
+largeLoading.storyName = "Large";
 
 export const centeredLoading = () => (
   <Spacer p="r">
@@ -26,9 +25,7 @@ export const centeredLoading = () => (
     <Loading large centered />
   </Spacer>
 );
-centeredLoading.story = {
-  name: "Centered"
-};
+centeredLoading.storyName = "Centered";
 
 export const invertedLoading = () => (
   <Box bg="greyDarkest" p="r">
@@ -38,6 +35,4 @@ export const invertedLoading = () => (
     </Spacer>
   </Box>
 );
-invertedLoading.story = {
-  name: "Inverted"
-};
+invertedLoading.storyName = "Inverted";

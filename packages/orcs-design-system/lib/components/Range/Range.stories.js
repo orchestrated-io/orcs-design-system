@@ -1,26 +1,23 @@
 import React from "react";
 import Range from ".";
 import Box from "../Box";
+import mdx from "./Range.mdx";
 
 export default {
-  title: "Units/Range",
+  title: "Components/Range",
   parameters: {
-    component: Range
-  }
+    docs: { page: mdx }
+  },
+  component: Range
 };
 
 export const defaultRange = () => <Range min={0} max={20} defaultValue={10} />;
-defaultRange.story = {
-  name: "Default"
-};
+defaultRange.storyName = "Default";
 
-export const invertedRange = () => (
+export const inverted = () => (
   <>
     <Box bg="greyDarker" p="r">
       <Range min={0} max={20} defaultValue={10} inverted />
     </Box>
   </>
 );
-invertedRange.story = {
-  name: "Inverted"
-};
