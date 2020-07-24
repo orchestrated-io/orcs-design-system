@@ -1,9 +1,5 @@
-import * as stories from './Toggle.stories.js';
-import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
 import Toggle from ".";
-import Box from "../Box";
-
-<Meta title="Components/Toggle" component={Toggle} decorators={[storyFn => <Box p="r">{storyFn()}</Box> ]} />
 
 # Toggle
 
@@ -16,18 +12,19 @@ As a general rule, the small version should be used in any layout components lik
 ## Default
 
 <Preview>
-  <Story name="defaultToggle">{stories.defaultToggle()}</Story>
+  <Story id="components-toggle--default-toggle" />
 </Preview>
 
 ## Small
 
 <Preview>
-  <Story name="smallToggle">{stories.smallToggle()}</Story>
+  <Story id="components-toggle--small" />
 </Preview>
 
 ## Inverted
+
 <Preview>
-  <Story name="invertedToggle">{stories.invertedToggle()}</Story>
+  <Story id="components-toggle--inverted" />
 </Preview>
 
 ## Properties

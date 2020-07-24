@@ -1,12 +1,9 @@
-import * as stories from './Tooltip.stories.js';
-import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
 import Tooltip from ".";
-
-<Meta title="Components/Tooltip" component={Tooltip} />
 
 # Tooltip
 
-[Default tooltip](#default-tooltip) | [Directional variants](#directional-variants) | [Size](#size) | [On dark background](#on-dark-background) | [Properties](#properties)
+[Default tooltip](#default-tooltip) | [Direction](#direction) | [Size](#size) | [Inverted](#inverted) | [Properties](#properties)
 
 This tooltip component supports customisation of direction and width. This is so that you can ensure that the tooltip doesn't run off the screen, and that the width suits the amount of text in the tooltip.
 
@@ -17,15 +14,15 @@ It's ok for the tooltip text to wrap if it's a long sentence or paragraph, just 
 Default tooltip is positioned at the top, and has a width of 200px.
 
 <Preview>
-  <Story name="defaultTooltip">{stories.defaultTooltip()}</Story>
+  <Story id="components-tooltip--default-tooltip" />
 </Preview>
 
-## Directional variants
+## Direction
 
 The direction prop allows the tooltip to be positioned in different ways to best suit how and where it is used in the UI.
 
 <Preview>
-  <Story name="direction">{stories.direction()}</Story>
+  <Story id="components-tooltip--direction" />
 </Preview>
 
 ## Size
@@ -33,15 +30,15 @@ The direction prop allows the tooltip to be positioned in different ways to best
 Default width is 200px, can modify width to best suit the text in the tooltip. Make sure to specify units (e.g. px, %, etc.).
 
 <Preview>
-  <Story name="size">{stories.size()}</Story>
+  <Story id="components-tooltip--size" />
 </Preview>
 
-## On dark background
+## Inverted
 
 Use this prop in cases where the tooltip is used against a dark background.
 
 <Preview>
-  <Story name="onDarkBackground">{stories.onDarkBackground()}</Story>
+  <Story id="components-tooltip--inverted" />
 </Preview>
 
 ## Properties

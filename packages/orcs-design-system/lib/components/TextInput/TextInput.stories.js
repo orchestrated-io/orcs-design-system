@@ -1,9 +1,11 @@
 import React from "react";
 import TextInput from ".";
 import Spacer from "../Spacer";
+import mdx from "./TextInput.mdx";
 
 export default {
-  title: "Units/TextInput",
+  title: "Components/TextInput",
+  parameters: { docs: { page: mdx } },
   component: TextInput
 };
 
@@ -51,7 +53,7 @@ const numberProps = {
   prefix: "$"
 };
 
-export const numberTextInput = () => [
+export const number = () => [
   <TextInput
     id="numInput1"
     key="numInput1"
@@ -60,11 +62,8 @@ export const numberTextInput = () => [
     value="345345.55"
   />
 ];
-numberTextInput.story = {
-  name: "Number"
-};
 
-export const floatingLabelTextInput = () => (
+export const floatingLabel = () => (
   <Spacer m="r">
     <TextInput
       id="textInput5"
@@ -103,11 +102,8 @@ export const floatingLabelTextInput = () => (
     />
   </Spacer>
 );
-floatingLabelTextInput.story = {
-  name: "Floating label"
-};
 
-export const withIconsTextInput = () => (
+export const withIcons = () => (
   <Spacer m="r">
     <TextInput
       id="textInput9"
@@ -150,6 +146,3 @@ export const withIconsTextInput = () => (
     />
   </Spacer>
 );
-withIconsTextInput.story = {
-  name: "With Icons"
-};

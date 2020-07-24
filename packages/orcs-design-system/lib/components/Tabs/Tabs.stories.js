@@ -4,7 +4,7 @@ import Popover from "../Popover";
 import { TabsContainer, Tab } from ".";
 
 export default {
-  title: "Units/Tabs",
+  title: "Components/Tabs",
   decorators: [
     storyFn => (
       <Box bg="greyLightest" p="xl">

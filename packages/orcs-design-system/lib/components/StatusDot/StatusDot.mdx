@@ -1,12 +1,9 @@
-import * as stories from './StatusDot.stories.js';
-import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
 import StatusDot from ".";
-
-<Meta title="Components/StatusDot" component={StatusDot} />
 
 # StatusDot
 
-[Default StatusDot](#default-StatusDot) | [Colour variants](#colour-variants) | [With icon](#with-icon) | [Properties](#properties)
+[Default StatusDot](#default-StatusDot) | [Colour](#colour) | [With icon](#with-icon) | [Properties](#properties)
 
 Status dot component is used to specify a notification or status on an item. For example, this can be used to represent a true/false, met/not met, on/off or new/received/updated states. One, or multiple can be used to represent different things.
 
@@ -15,19 +12,19 @@ The horizontal layout and tooltip functionality comes from other components (Fle
 ## Default StatusDot
 
 <Preview>
-  <Story name="defaultStatusDot">{stories.defaultStatusDot()}</Story>
+  <Story id="components-statusdot--default-status-dot" />
 </Preview>
 
-## Colour variants
+## Colour
 
 <Preview>
-  <Story name="colourVariants">{stories.colourVariants()}</Story>
+  <Story id="components-statusdot--colour" />
 </Preview>
 
 ## With icon
 
 <Preview>
-  <Story name="withIcon">{stories.withIcon()}</Story>
+  <Story id="components-statusdot--with-icon" />
 </Preview>
 
 ## Properties

@@ -1,39 +1,30 @@
 import React from "react";
 import Tag from ".";
-import Layout from "../Layout";
 import Flex from "../Flex";
+import Spacer from "../Spacer";
+import mdx from "./Tag.mdx";
 
 export default {
-  title: "Units/Tag",
+  title: "Components/Tag",
   component: Tag,
-  decorators: [
-    storyFn => (
-      <Layout padding childChildHorizontalSpacing>
-        <Flex center>{storyFn()}</Flex>
-      </Layout>
-    )
-  ]
+  parameters: { docs: { page: mdx } },
+  decorators: [storyFn => <Flex center>{storyFn()}</Flex>]
 };
 
 export const defaultTag = () => <Tag>Default Tag</Tag>;
-defaultTag.story = {
-  name: "Default"
-};
+defaultTag.storyName = "Default";
 
-export const selectedTag = () => (
-  <>
+export const selected = () => (
+  <Spacer mr="s">
     <Tag selected>devops</Tag>
     <Tag selected>software engineering</Tag>
     <Tag>product design</Tag>
     <Tag>digital transformation</Tag>
-  </>
+  </Spacer>
 );
-selectedTag.story = {
-  name: "Selected"
-};
 
-export const noCrossTag = () => (
-  <>
+export const noCross = () => (
+  <Spacer mr="s">
     <Tag selected hideCross>
       devops
     </Tag>
@@ -42,20 +33,14 @@ export const noCrossTag = () => (
     </Tag>
     <Tag>product design</Tag>
     <Tag>digital transformation</Tag>
-  </>
+  </Spacer>
 );
-noCrossTag.story = {
-  name: "No Cross"
-};
 
-export const disabledTag = () => (
-  <>
+export const disabled = () => (
+  <Spacer mr="s">
     <Tag disabled>devops</Tag>
     <Tag disabled>software engineering</Tag>
     <Tag disabled>product design</Tag>
     <Tag disabled>digital transformation</Tag>
-  </>
+  </Spacer>
 );
-disabledTag.story = {
-  name: "Disabled"
-};

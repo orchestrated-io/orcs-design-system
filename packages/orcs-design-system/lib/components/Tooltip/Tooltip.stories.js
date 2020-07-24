@@ -3,9 +3,11 @@ import Tooltip from ".";
 import Spacer from "../Spacer";
 import Flex from "../Flex";
 import Box from "../Box";
+import mdx from "./Tooltip.mdx";
 
 export default {
-  title: "Units/Tooltip",
+  title: "Components/Tooltip",
+  parameters: { docs: { page: mdx } },
   component: Tooltip
 };
 
@@ -16,9 +18,7 @@ export const defaultTooltip = () => (
     </Flex>
   </Box>
 );
-defaultTooltip.story = {
-  name: "Default tooltip"
-};
+defaultTooltip.storyName = "Default";
 
 export const direction = () => (
   <Flex justifyContent="center">
@@ -33,9 +33,6 @@ export const direction = () => (
     </Spacer>
   </Flex>
 );
-direction.story = {
-  name: "Direction"
-};
 
 export const size = () => (
   <Flex justifyContent="center">
@@ -45,17 +42,11 @@ export const size = () => (
     </Spacer>
   </Flex>
 );
-size.story = {
-  name: "Size"
-};
 
-export const onDarkBackground = () => (
+export const inverted = () => (
   <Box bg="greyDarkest" width="100%" p="7">
     <Flex justifyContent="center">
       <Tooltip inverted>Inverted example description</Tooltip>
     </Flex>
   </Box>
 );
-onDarkBackground.story = {
-  name: "On dark background"
-};

@@ -5,10 +5,12 @@ import Flex from "../Flex";
 import Spacer from "../Spacer";
 import Icon from "../Icon";
 import Popover from "../Popover";
+import mdx from "./StatusDot.mdx";
 
 export default {
-  title: "Units/StatusDot",
-  component: StatusDot
+  title: "Components/StatusDot",
+  component: StatusDot,
+  parameters: { docs: { page: mdx } }
 };
 
 export const defaultStatusDot = () => (
@@ -25,11 +27,9 @@ export const defaultStatusDot = () => (
     </Flex>
   </Box>
 );
-defaultStatusDot.story = {
-  name: "Default badge"
-};
+defaultStatusDot.storyName = "Default";
 
-export const colourVariants = () => (
+export const colour = () => (
   <Box p="l">
     <Flex justifyContent="center" alignItems="center">
       <Spacer m="xxs">
@@ -63,9 +63,6 @@ export const colourVariants = () => (
     </Flex>
   </Box>
 );
-colourVariants.story = {
-  name: "Colour Variants"
-};
 
 export const withIcon = () => (
   <Box p="l">
@@ -122,6 +119,3 @@ export const withIcon = () => (
     </Flex>
   </Box>
 );
-withIcon.story = {
-  name: "With icon"
-};
