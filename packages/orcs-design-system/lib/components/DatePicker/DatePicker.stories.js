@@ -7,7 +7,7 @@ import "react-dates/lib/css/_datepicker.css";
 import "react-dates/initialize";
 
 export default {
-  title: "Units/DatePicker",
+  title: "Components/DatePicker",
   decorators: [
     storyFn => (
       <Box bg="greyLightest" p="r">

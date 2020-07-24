@@ -3,13 +3,26 @@ import Icon from ".";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
+import mdx from "./Icon.mdx";
+import Box from "../Box";
+import Flex from "../Flex";
 library.add(far, fas);
 
 export default {
-  title: "Units/Icon",
+  title: "Components/Icon",
   parameters: {
-    component: Icon
-  }
+    docs: { page: mdx }
+  },
+  decorators: [
+    storyFn => (
+      <Box p="3">
+        <Flex alignItems="center" justifyContent="space-around">
+          {storyFn()}
+        </Flex>
+      </Box>
+    )
+  ],
+  component: Icon
 };
 
 export const defaultIcon = () => (
@@ -38,11 +51,13 @@ export const iconSize = () => (
 );
 
 export const invertedIcons = () => (
-  <>
-    <Icon icon={["fas", "angle-down"]} inverse />
-    <Icon icon={["fas", "plus"]} inverse />
-    <Icon icon={["far", "user"]} inverse />
-  </>
+  <Box bg="greyDarker" width="100%">
+    <Flex alignItems="center" justifyContent="space-around">
+      <Icon icon={["fas", "angle-down"]} inverse />
+      <Icon icon={["fas", "plus"]} inverse />
+      <Icon icon={["far", "user"]} inverse />
+    </Flex>
+  </Box>
 );
 
 export const animatedIcons = () => (

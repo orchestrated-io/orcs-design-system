@@ -2868,6 +2868,223 @@ Array [
 ]
 `;
 
+exports[`Storyshots Components/Icon Animated Icons 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 jpPVhR"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 bnrZtf"
+    data-testid={null}
+  >
+    <span
+      className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+    >
+      <svg
+        className="svg-inline--fa fa-undefined"
+      />
+    </span>
+    <span
+      className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+    >
+      <svg
+        className="svg-inline--fa fa-undefined"
+      />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Icon Coloured Icon 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 jpPVhR"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 bnrZtf"
+    data-testid={null}
+  >
+    <span
+      className="Icon__IconWrapper-xeqnbo-0 faAlRc"
+      color="primaryDark"
+    >
+      <svg
+        className="svg-inline--fa fa-undefined"
+      />
+    </span>
+    <span
+      className="Icon__IconWrapper-xeqnbo-0 lhhCCK"
+      color="successDark"
+    >
+      <svg
+        className="svg-inline--fa fa-undefined"
+      />
+    </span>
+    <span
+      className="Icon__IconWrapper-xeqnbo-0 eDWSpX"
+      color="dangerDark"
+    >
+      <svg
+        className="svg-inline--fa fa-undefined"
+      />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Icon Default Icon 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 jpPVhR"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 bnrZtf"
+    data-testid={null}
+  >
+    <span
+      className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+    >
+      <svg
+        className="svg-inline--fa fa-undefined"
+      />
+    </span>
+    <span
+      className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+    >
+      <svg
+        className="svg-inline--fa fa-undefined"
+      />
+    </span>
+    <span
+      className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+    >
+      <svg
+        className="svg-inline--fa fa-undefined"
+      />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Icon Icon Size 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 jpPVhR"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 bnrZtf"
+    data-testid={null}
+  >
+    <span
+      className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+    >
+      <svg
+        className="svg-inline--fa fa-undefined"
+      />
+    </span>
+    <span
+      className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+    >
+      <svg
+        className="svg-inline--fa fa-undefined"
+      />
+    </span>
+    <span
+      className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+    >
+      <svg
+        className="svg-inline--fa fa-undefined"
+      />
+    </span>
+    <span
+      className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+    >
+      <svg
+        className="svg-inline--fa fa-undefined"
+      />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Icon Inverted Icons 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 jpPVhR"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 bnrZtf"
+    data-testid={null}
+  >
+    <div
+      className="Box__BoxWrapper-jr1api-0 duHOyY"
+      data-testid={null}
+    >
+      <div
+        className="Flex__FlexWrapper-sc-1f3kfw7-0 bnrZtf"
+        data-testid={null}
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Icon Transforms And Rotations 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 jpPVhR"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 bnrZtf"
+    data-testid={null}
+  >
+    <span
+      className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+    >
+      <svg
+        className="svg-inline--fa fa-undefined"
+      />
+    </span>
+    <span
+      className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+    >
+      <svg
+        className="svg-inline--fa fa-undefined"
+      />
+    </span>
+    <span
+      className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+    >
+      <svg
+        className="svg-inline--fa fa-undefined"
+      />
+    </span>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components/Modal Basic Modal 1`] = `
 <button
   className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
@@ -4398,165 +4615,6 @@ exports[`Storyshots Units/ButtonGroup Default button group 1`] = `
     </div>
   </div>
 </div>
-`;
-
-exports[`Storyshots Units/Icon Animated Icons 1`] = `
-Array [
-  <span
-    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
-  >
-    <svg
-      className="svg-inline--fa fa-undefined"
-    />
-  </span>,
-  <span
-    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
-  >
-    <svg
-      className="svg-inline--fa fa-undefined"
-    />
-  </span>,
-]
-`;
-
-exports[`Storyshots Units/Icon Coloured Icon 1`] = `
-Array [
-  <span
-    className="Icon__IconWrapper-xeqnbo-0 faAlRc"
-    color="primaryDark"
-  >
-    <svg
-      className="svg-inline--fa fa-undefined"
-    />
-  </span>,
-  <span
-    className="Icon__IconWrapper-xeqnbo-0 lhhCCK"
-    color="successDark"
-  >
-    <svg
-      className="svg-inline--fa fa-undefined"
-    />
-  </span>,
-  <span
-    className="Icon__IconWrapper-xeqnbo-0 eDWSpX"
-    color="dangerDark"
-  >
-    <svg
-      className="svg-inline--fa fa-undefined"
-    />
-  </span>,
-]
-`;
-
-exports[`Storyshots Units/Icon Default Icon 1`] = `
-Array [
-  <span
-    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
-  >
-    <svg
-      className="svg-inline--fa fa-undefined"
-    />
-  </span>,
-  <span
-    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
-  >
-    <svg
-      className="svg-inline--fa fa-undefined"
-    />
-  </span>,
-  <span
-    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
-  >
-    <svg
-      className="svg-inline--fa fa-undefined"
-    />
-  </span>,
-]
-`;
-
-exports[`Storyshots Units/Icon Icon Size 1`] = `
-Array [
-  <span
-    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
-  >
-    <svg
-      className="svg-inline--fa fa-undefined"
-    />
-  </span>,
-  <span
-    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
-  >
-    <svg
-      className="svg-inline--fa fa-undefined"
-    />
-  </span>,
-  <span
-    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
-  >
-    <svg
-      className="svg-inline--fa fa-undefined"
-    />
-  </span>,
-  <span
-    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
-  >
-    <svg
-      className="svg-inline--fa fa-undefined"
-    />
-  </span>,
-]
-`;
-
-exports[`Storyshots Units/Icon Inverted Icons 1`] = `
-Array [
-  <span
-    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
-  >
-    <svg
-      className="svg-inline--fa fa-undefined"
-    />
-  </span>,
-  <span
-    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
-  >
-    <svg
-      className="svg-inline--fa fa-undefined"
-    />
-  </span>,
-  <span
-    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
-  >
-    <svg
-      className="svg-inline--fa fa-undefined"
-    />
-  </span>,
-]
-`;
-
-exports[`Storyshots Units/Icon Transforms And Rotations 1`] = `
-Array [
-  <span
-    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
-  >
-    <svg
-      className="svg-inline--fa fa-undefined"
-    />
-  </span>,
-  <span
-    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
-  >
-    <svg
-      className="svg-inline--fa fa-undefined"
-    />
-  </span>,
-  <span
-    className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
-  >
-    <svg
-      className="svg-inline--fa fa-undefined"
-    />
-  </span>,
-]
 `;
 
 exports[`Storyshots Units/Loading Centered 1`] = `
