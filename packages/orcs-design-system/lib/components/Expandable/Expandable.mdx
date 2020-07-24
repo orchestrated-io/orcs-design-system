@@ -1,9 +1,5 @@
-import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
 import Expandable from ".";
-import * as stories from "./Expandable.stories.js";
-import Box from "../Box";
-
-<Meta title="Components/Expandable" component={Expandable} decorators={[storyFn => <Box height="300px">{storyFn()}</Box>]}/>
 
 # Expandable
 
@@ -18,30 +14,25 @@ This component supports any child elements, not just text, can be other componen
 ## Default Expandable
 
 <Preview>
-  <Story name="Default Expandable">{stories.defaultExpandable()}
-  </Story>
+  <Story id="components-expandable--default-expandable" />
 </Preview>
 
 ## Open
 
 <Preview>
-  <Story name="Open Expandable">{stories.openExpandable()}
-  </Story>
+  <Story id="components-expandable--open-expandable" />
 </Preview>
 
 ## With subtitle
 
 <Preview>
-  <Story name="Expandable with subtitle">{stories.expandableWithSubtitle()}
-  </Story>
+  <Story id="components-expandable--expandable-with-subtitle" />
 </Preview>
-
 
 ## With badge
 
 <Preview>
-  <Story name="Expandable with badge">{stories.expandableWithBadge()}
-  </Story>
+  <Story id="components-expandable--expandable-with-badge" />
 </Preview>
 
 ## Properties

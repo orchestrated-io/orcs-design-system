@@ -1,12 +1,16 @@
 import React from "react";
 import Expandable from ".";
 import Typography from "../Typography";
+import Box from "../Box";
+import mdx from "./Expandable.mdx";
 
 export default {
-  title: "Units/Expandable",
+  title: "Components/Expandable",
   parameters: {
-    component: Expandable
-  }
+    docs: { page: mdx }
+  },
+  decorators: [storyFn => <Box height="300px">{storyFn()}</Box>],
+  component: Expandable
 };
 
 export const defaultExpandable = () => (

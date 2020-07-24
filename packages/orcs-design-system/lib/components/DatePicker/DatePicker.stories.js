@@ -1,11 +1,22 @@
 import React from "react";
 import DatePicker from ".";
+import Box from "../Box";
+import mdx from "./DatePicker.mdx";
 
 import "react-dates/lib/css/_datepicker.css";
 import "react-dates/initialize";
 
 export default {
-  title: "Units/DatePicker"
+  title: "Units/DatePicker",
+  decorators: [
+    storyFn => (
+      <Box bg="greyLightest" p="r">
+        {storyFn()}
+      </Box>
+    )
+  ],
+  parameters: { docs: { page: mdx } },
+  component: DatePicker
 };
 
 export const singleDate = () => (

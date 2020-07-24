@@ -1,10 +1,5 @@
-import * as stories from "./Divider.stories.js";
-import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
 import Divider from ".";
-import Box from "../Box";
-import Spacer from "../Spacer";
-
-<Meta title="Components/Divider" component={Divider} />
 
 # Divider
 
@@ -19,8 +14,7 @@ As a general rule, the default divider with no props set should be used in most 
 To be used throughout most of the app, in most cases purely the default Divider with no props should be used.
 
 <Preview>
-  <Story name="Default Divider">{stories.defaultDivider()}
-  </Story>
+  <Story id="components-divider--default-divider" />
 </Preview>
 
 ## Inverted
@@ -28,11 +22,7 @@ To be used throughout most of the app, in most cases purely the default Divider 
 The inverted prop should be used if a divider is required on a dark background.
 
 <Preview>
-  <Story name="Inverted Divider">
-    <Box bg="greyDarkest" p="5">
-{stories.invertedDivider()}
-    </Box>
-  </Story>
+  <Story id="components-divider--inverted-divider" />
 </Preview>
 
 ## Span grid
@@ -40,9 +30,7 @@ The inverted prop should be used if a divider is required on a dark background.
 This prop is to be used when you need to use a divider between rows in a grid, this will allow the divider to span across all columns in the grid.
 
 <Preview>
-  <Story name="Span Grid">
-  {stories.spanGrid()}
-  </Story>
+  <Story id="components-divider--span-grid" />
 </Preview>
 
 ## Properties
