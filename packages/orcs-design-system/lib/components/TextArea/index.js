@@ -11,7 +11,13 @@ const WrapperStyles = compose(space, layout);
 
 const LabelStyles = compose(space, layout, typography, color);
 
-const Group = styled("div").withConfig({ shouldForwardProp })(
+const InputStyles = compose(space, layout, typography, color);
+
+const Wrapper = styled("div")
+  .withConfig({ shouldForwardProp })
+  .attrs(props => ({
+    "data-testid": props["data-testid"] ? props["data-testid"] : null
+  }))(
   props =>
     css({
       position: "relative",
@@ -22,61 +28,59 @@ const Group = styled("div").withConfig({ shouldForwardProp })(
 
 const Input = styled("textarea")
   .attrs(props => ({
-    "data-testid": props.dataTestId
-      ? props.dataTestId
-      : props["data-testid"]
-      ? props["data-testid"]
-      : null
+    "data-testid": props["data-testid"] ? props["data-testid"] : null
   }))
-  .withConfig({ shouldForwardProp })(props =>
-  css({
-    display: "block",
-    cursor: "text",
-    appearance: "none",
-    boxShadow: "none",
-    fontFamily: "main",
-    fontSize: "2",
-    zIndex: "1",
-    borderRadius: "2",
-    transition: "transitionDefault",
-    bg: props.inverted ? "greyLightest" : "white",
-    color: "greyDarkest",
-    width: props.fullWidth ? "100%" : "auto",
-    padding: "between",
-    borderWidth: "1",
-    borderStyle: "solid",
-    borderColor: props.invalid
-      ? "dangerLight"
-      : props.valid
-      ? "successLight"
-      : "black20",
-    "&:hover": {
+  .withConfig({ shouldForwardProp })(
+  props =>
+    css({
+      display: "block",
+      cursor: "text",
+      appearance: "none",
+      boxShadow: "none",
+      fontFamily: "main",
+      fontSize: "2",
+      zIndex: "1",
+      borderRadius: "2",
+      transition: "transitionDefault",
+      bg: props.inverted ? "greyLightest" : "white",
+      color: "greyDarkest",
+      width: props.fullWidth ? "100%" : "auto",
+      padding: "between",
+      borderWidth: "1",
+      borderStyle: "solid",
       borderColor: props.invalid
-        ? "dangerDark"
+        ? "dangerLight"
         : props.valid
-        ? "successDark"
-        : "primary"
-    },
-    "&:focus": {
-      outline: "0",
-      boxShadow: props.invalid
-        ? themeGet("shadows.thinOutline")(props) +
-          " " +
-          themeGet("colors.danger20")(props)
-        : props.valid
-        ? themeGet("shadows.thinOutline")(props) +
-          " " +
-          themeGet("colors.success20")(props)
-        : themeGet("shadows.thinOutline")(props) +
-          " " +
-          themeGet("colors.primary20")(props),
-      borderColor: props.invalid
-        ? "dangerDark"
-        : props.valid
-        ? "successDark"
-        : "primary"
-    }
-  })
+        ? "successLight"
+        : "black20",
+      "&:hover": {
+        borderColor: props.invalid
+          ? "dangerDark"
+          : props.valid
+          ? "successDark"
+          : "primary"
+      },
+      "&:focus": {
+        outline: "0",
+        boxShadow: props.invalid
+          ? themeGet("shadows.thinOutline")(props) +
+            " " +
+            themeGet("colors.danger20")(props)
+          : props.valid
+          ? themeGet("shadows.thinOutline")(props) +
+            " " +
+            themeGet("colors.success20")(props)
+          : themeGet("shadows.thinOutline")(props) +
+            " " +
+            themeGet("colors.primary20")(props),
+        borderColor: props.invalid
+          ? "dangerDark"
+          : props.valid
+          ? "successDark"
+          : "primary"
+      }
+    }),
+  InputStyles
 );
 
 const Label = styled("label").withConfig({ shouldForwardProp })(
@@ -89,21 +93,11 @@ const Label = styled("label").withConfig({ shouldForwardProp })(
       fontWeight: props.bold ? "2" : "1",
       transition: themeGet("transition.defaultTransition")(props),
       mb: props.floating ? 0 : "xs",
-      color: props.inverted
-        ? "white"
-        : props.inverted && props.valid
-        ? "successLightest"
-        : props.inverted && props.invalid
-        ? "dangerLightest"
-        : props.valid
-        ? "successDark"
-        : props.invalid
-        ? "dangerDark"
-        : "greyDarkest",
       span: {
         color: "danger",
         fontWeight: "2"
-      }
+      },
+      color: props.labelColor
     }),
   LabelStyles
 );
@@ -111,16 +105,6 @@ const Label = styled("label").withConfig({ shouldForwardProp })(
 const Asterisk = () => {
   return <span> *</span>;
 };
-
-/**
- * The TextArea component should be used wherever a multi line form entry is required. Some examples of this could be enquiries, descriptions, summaries, questions etc.
- *
- * Examples include three validation states: default, invalid, valid.
- *
- * Ensure to use a unique id for each text area.
- *
- * Specify size using `cols` and `rows` like shown in the example. adding `fullWidth` prop will override the cols value and make the text input 100% width of parent container.
- */
 
 const TextArea = React.forwardRef((props, ref) => {
   const {
@@ -131,13 +115,28 @@ const TextArea = React.forwardRef((props, ref) => {
     valid,
     fullWidth,
     mandatory,
-    dataTestId,
     bold,
     theme
   } = props;
+
+  var labelColor;
+  if (inverted) {
+    if (valid) {
+      labelColor = "successLightest";
+    } else if (invalid) {
+      labelColor = "dangerLightest";
+    } else labelColor = "white";
+  } else {
+    if (valid) {
+      labelColor = "successDark";
+    } else if (invalid) {
+      labelColor = "dangerDark";
+    } else labelColor = "greyDarkest";
+  }
+
   return (
     <ThemeProvider theme={theme}>
-      <Group fullWidth={fullWidth} {...WrapperStyles}>
+      <Wrapper fullWidth={fullWidth} {...WrapperStyles}>
         {label && (
           <Label
             inverted={inverted}
@@ -146,13 +145,14 @@ const TextArea = React.forwardRef((props, ref) => {
             htmlFor={id}
             mandatory={mandatory}
             bold={bold}
+            labelColor={labelColor}
             {...LabelStyles}
           >
             {label} {mandatory && <Asterisk />}
           </Label>
         )}
-        <Input ref={ref} id={id} dataTestId={dataTestId} {...props} />
-      </Group>
+        <Input ref={ref} id={id} {...InputStyles} />
+      </Wrapper>
     </ThemeProvider>
   );
 });
@@ -174,8 +174,12 @@ TextArea.propTypes = {
   mandatory: PropTypes.bool,
   /** Set inverted styling for dark backgrounds */
   inverted: PropTypes.bool,
-  /** Specifies `data-testid`. Can use `dataTestId="value"` or `data-testid="value"` */
-  dataTestId: PropTypes.string,
+  /** Set additional styles for the `Wrapper` */
+  WrapperStyles: PropTypes.object,
+  /** Set additional styles for the `Label` */
+  LabelStyles: PropTypes.object,
+  /** Set additional styles for the `Input` textarea */
+  InputStyles: PropTypes.object,
   /** Specifies the design theme object */
   theme: PropTypes.object
 };

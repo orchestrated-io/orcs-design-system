@@ -39,7 +39,7 @@ export const statesTextArea = () => (
 statesTextArea.storyName = "States";
 
 export const boldLabelTextArea = () => (
-  <TextArea id="TextAreaBold" label="Message" bold />
+  <TextArea id="TextAreaBold" label="Message" bold data-testid="test-input" />
 );
 boldLabelTextArea.storyName = "Bold Label";
 
