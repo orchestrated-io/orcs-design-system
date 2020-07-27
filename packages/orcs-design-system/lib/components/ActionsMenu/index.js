@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled, { css, keyframes, ThemeProvider } from "styled-components";
 import PropTypes from "prop-types";
 import { space, layout } from "styled-system";
@@ -177,24 +177,31 @@ const ActionsMenu = ({
 }) => {
   const [toggleState, setToggle] = useState(isOpen);
 
-  const openMenu = () => {
-    setToggle(true);
-  };
-  const closeMenu = () => {
-    setToggle(false);
-  };
+  useEffect(() => {
+    if (!toggleState) {
+      return;
+    }
+
+    const handleClicked = () => {
+      setToggle(false);
+    };
+
+    document.addEventListener("click", handleClicked);
+
+    return () => {
+      document.removeEventListener("click", handleClicked);
+    };
+  }, [toggleState]);
+
   const onToggle = e => {
     e.stopPropagation();
-    if (!toggleState) openMenu();
-    else closeMenu();
+    setToggle(!toggleState);
   };
-  const onBlur = () => {
-    setTimeout(closeMenu, 200);
-  };
+
   return (
     <ThemeProvider theme={theme}>
       <Wrapper {...props}>
-        <Control onClick={onToggle} onBlur={onBlur}>
+        <Control onClick={onToggle}>
           <Icon isOpen={toggleState} />
         </Control>
         <Menu isOpen={toggleState} direction={direction}>
