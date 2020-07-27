@@ -10,7 +10,6 @@ exports[`Storyshots Components/ActionsMenu Default 1`] = `
   >
     <button
       className="ActionsMenu__Control-yvbni2-1 caVsMX"
-      onBlur={[Function]}
       onClick={[Function]}
     >
       <div
@@ -54,7 +53,6 @@ exports[`Storyshots Components/ActionsMenu Left offset 1`] = `
     >
       <button
         className="ActionsMenu__Control-yvbni2-1 caVsMX"
-        onBlur={[Function]}
         onClick={[Function]}
       >
         <div
