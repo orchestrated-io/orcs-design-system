@@ -3,11 +3,16 @@ import styled, { ThemeProvider } from "styled-components";
 import PropTypes from "prop-types";
 import { space, layout, color, compose, variant } from "styled-system";
 import { css } from "@styled-system/css";
+import shouldForwardProp from "@styled-system/should-forward-prop";
 import systemtheme from "../../systemtheme";
 
 const BadgeStyles = compose(space, layout, color);
 
-const Item = styled("span")(
+const Item = styled("span")
+  .withConfig({ shouldForwardProp })
+  .attrs(props => ({
+    "data-testid": props["data-testid"] ? props["data-testid"] : null
+  }))(
   css({
     fontSize: 0,
     fontWeight: 2,

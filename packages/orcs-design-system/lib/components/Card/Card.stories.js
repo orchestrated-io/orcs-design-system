@@ -7,11 +7,13 @@ import Icon from "../Icon";
 import Flex from "../Flex";
 import Button from "../Button";
 import mdx from "./Card.mdx";
-
 import Card from ".";
 
 export default {
   title: "Components/Card",
+  parameters: {
+    docs: { page: mdx }
+  },
   decorators: [
     storyFn => (
       <Box bg="greyLightest" p="r">
@@ -19,9 +21,6 @@ export default {
       </Box>
     )
   ],
-  parameters: {
-    docs: { page: mdx }
-  },
   component: Card
 };
 
