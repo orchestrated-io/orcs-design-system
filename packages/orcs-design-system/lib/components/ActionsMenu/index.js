@@ -186,9 +186,11 @@ const ActionsMenu = ({
       setToggle(false);
     };
 
+    // handle click to hide menu
     document.addEventListener("click", handleClicked);
 
     return () => {
+      // If menu closed, unregister event listener to prevent memory leaks
       document.removeEventListener("click", handleClicked);
     };
   }, [toggleState]);
