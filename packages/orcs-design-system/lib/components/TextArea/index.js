@@ -116,6 +116,8 @@ const TextArea = React.forwardRef((props, ref) => {
     fullWidth,
     mandatory,
     bold,
+    cols,
+    rows,
     theme
   } = props;
 
@@ -151,7 +153,16 @@ const TextArea = React.forwardRef((props, ref) => {
             {label} {mandatory && <Asterisk />}
           </Label>
         )}
-        <Input ref={ref} id={id} {...InputStyles} />
+        <Input
+          ref={ref}
+          id={id}
+          fullWidth={fullWidth}
+          cols={cols}
+          rows={rows}
+          valid={valid}
+          invalid={invalid}
+          {...InputStyles}
+        />
       </Wrapper>
     </ThemeProvider>
   );
@@ -166,6 +177,10 @@ TextArea.propTypes = {
   bold: PropTypes.bool,
   /** Makes text box take up full width of parent */
   fullWidth: PropTypes.bool,
+  /** Sets specified width of input area in columns */
+  cols: PropTypes.string,
+  /** Sets specified height of input area in rows */
+  rows: PropTypes.string,
   /** Applies invalid styles (coloured with "warning" colour from design system) */
   invalid: PropTypes.bool,
   /** Applies valid styles (coloured with "success" colour from design system) */
@@ -174,11 +189,11 @@ TextArea.propTypes = {
   mandatory: PropTypes.bool,
   /** Set inverted styling for dark backgrounds */
   inverted: PropTypes.bool,
-  /** Set additional styles for the `Wrapper` */
+  /** Set additional styles for the `Wrapper` if needed */
   WrapperStyles: PropTypes.object,
-  /** Set additional styles for the `Label` */
+  /** Set additional styles for the `Label` if needed */
   LabelStyles: PropTypes.object,
-  /** Set additional styles for the `Input` textarea */
+  /** Set additional styles for the `Input` textarea if needed */
   InputStyles: PropTypes.object,
   /** Specifies the design theme object */
   theme: PropTypes.object
