@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { action } from "@storybook/addon-actions";
 import Dialogue from ".";
 import { P, H2 } from "../Typography";
@@ -56,6 +56,22 @@ const Basic = () => {
     }
     setVisible(false);
   }, [cancelAction, setVisible]);
+  useEffect(() => {
+    if (!visible) {
+      return;
+    }
+    const handleClicked = () => {
+      setVisible(false);
+    };
+
+    // handle click outside to close Modal
+    document.addEventListener("click", handleClicked);
+
+    return () => {
+      // If Modal closed, unregister event listener to prevent memory leaks
+      document.removeEventListener("click", handleClicked);
+    };
+  }, [visible]);
   return (
     <>
       <Button
@@ -126,6 +142,22 @@ basicDialogue.parameters = {
       }
       setVisible(false);
     }, [cancelAction, setVisible]);
+    useEffect(() => {
+      if (!visible) {
+        return;
+      }
+      const handleClicked = () => {
+        setVisible(false);
+      };
+
+      // handle click outside to close Modal
+      document.addEventListener("click", handleClicked);
+
+      return () => {
+        // If Modal closed, unregister event listener to prevent memory leaks
+        document.removeEventListener("click", handleClicked);
+      };
+    }, [visible]);
     return (
       <>
         <Button
@@ -186,7 +218,6 @@ const Edit = () => {
     }
     setVisible(false);
   }, [confirmAction, setVisible]);
-
   const onCancel = useCallback(() => {
     if (cancelAction) {
       const result = cancelAction();
@@ -201,6 +232,22 @@ const Edit = () => {
     }
     setVisible(false);
   }, [cancelAction, setVisible]);
+  useEffect(() => {
+    if (!visible) {
+      return;
+    }
+    const handleClicked = () => {
+      setVisible(false);
+    };
+
+    // handle click outside to close Modal
+    document.addEventListener("click", handleClicked);
+
+    return () => {
+      // If Modal closed, unregister event listener to prevent memory leaks
+      document.removeEventListener("click", handleClicked);
+    };
+  }, [visible]);
   return (
     <>
       <Button onClick={handleOnButtonClick} leftIcon={["fas", "edit"]}>
@@ -285,6 +332,22 @@ editDialogue.parameters = {
           }
           setVisible(false);
         }, [cancelAction, setVisible]);
+        useEffect(() => {
+          if (!visible) {
+            return;
+          }
+          const handleClicked = () => {
+            setVisible(false);
+          };
+
+          // handle click outside to close Modal
+          document.addEventListener("click", handleClicked);
+
+          return () => {
+            // If Modal closed, unregister event listener to prevent memory leaks
+            document.removeEventListener("click", handleClicked);
+          };
+        }, [visible]);
         return (
           <>
             <Button onClick={handleOnButtonClick} leftIcon={["fas", "edit"]}>

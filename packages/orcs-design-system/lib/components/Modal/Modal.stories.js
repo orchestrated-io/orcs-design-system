@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "../Button";
 import Modal from ".";
 import { H3, P } from "../Typography";
@@ -26,6 +26,23 @@ const Basic = () => {
   const handleOnConfirm = () => {
     setVisible(false);
   };
+  useEffect(() => {
+    if (!visible) {
+      return;
+    }
+    const handleClicked = () => {
+      setVisible(false);
+    };
+
+    // handle click to hide menu
+    document.addEventListener("click", handleClicked);
+
+    return () => {
+      // If menu closed, unregister event listener to prevent memory leaks
+      document.removeEventListener("click", handleClicked);
+    };
+  }, [visible]);
+
   return (
     <>
       <Button onClick={handleOnButtonClick}>Open Modal</Button>
@@ -58,6 +75,22 @@ basicModal.parameters = {
       const handleOnConfirm = () => {
         setVisible(false);
       };
+      useEffect(() => {
+        if (!visible) {
+          return;
+        }
+        const handleClicked = () => {
+          setVisible(false);
+        };
+
+        // handle click outside to close Modal
+        document.addEventListener("click", handleClicked);
+
+        return () => {
+          // If Modal closed, unregister event listener to prevent memory leaks
+          document.removeEventListener("click", handleClicked);
+        };
+      }, [visible]);
       return (
         <>
           <Button onClick={handleOnButtonClick}>Open Modal</Button>
