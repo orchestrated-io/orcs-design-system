@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled, { css, keyframes, ThemeProvider } from "styled-components";
 import PropTypes from "prop-types";
 import { space, layout } from "styled-system";
@@ -152,6 +152,7 @@ const Menu = styled.div`
     border: none;
     color: ${themeGet("colors.white")};
     font-size: ${themeGet("fontSizes.1")};
+    line-height: ${themeGet("fontSizes.1")};
     font-family: ${themeGet("fonts.main")};
     font-weight: ${themeGet("fontWeights.2")};
     text-decoration: none;
@@ -177,24 +178,33 @@ const ActionsMenu = ({
 }) => {
   const [toggleState, setToggle] = useState(isOpen);
 
-  const openMenu = () => {
-    setToggle(true);
-  };
-  const closeMenu = () => {
-    setToggle(false);
-  };
+  useEffect(() => {
+    if (!toggleState) {
+      return;
+    }
+
+    const handleClicked = () => {
+      setToggle(false);
+    };
+
+    // handle click to hide menu
+    document.addEventListener("click", handleClicked);
+
+    return () => {
+      // If menu closed, unregister event listener to prevent memory leaks
+      document.removeEventListener("click", handleClicked);
+    };
+  }, [toggleState]);
+
   const onToggle = e => {
     e.stopPropagation();
-    if (!toggleState) openMenu();
-    else closeMenu();
+    setToggle(!toggleState);
   };
-  const onBlur = () => {
-    setTimeout(closeMenu, 200);
-  };
+
   return (
     <ThemeProvider theme={theme}>
       <Wrapper {...props}>
-        <Control onClick={onToggle} onBlur={onBlur}>
+        <Control onClick={onToggle}>
           <Icon isOpen={toggleState} />
         </Control>
         <Menu isOpen={toggleState} direction={direction}>
