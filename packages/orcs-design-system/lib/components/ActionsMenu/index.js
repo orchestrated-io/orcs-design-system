@@ -152,6 +152,7 @@ const Menu = styled.div`
     border: none;
     color: ${themeGet("colors.white")};
     font-size: ${themeGet("fontSizes.1")};
+    line-height: ${themeGet("fontSizes.1")};
     font-family: ${themeGet("fonts.main")};
     font-weight: ${themeGet("fontWeights.2")};
     text-decoration: none;
