@@ -17,7 +17,7 @@ exports[`Storyshots Components/ActionsMenu Default 1`] = `
       />
     </button>
     <div
-      className="ActionsMenu__Menu-yvbni2-3 gHBMnz"
+      className="ActionsMenu__Menu-yvbni2-3 dUQltz"
     >
       <a
         href="https://orchestrated.io/"
@@ -60,7 +60,7 @@ exports[`Storyshots Components/ActionsMenu Left offset 1`] = `
         />
       </button>
       <div
-        className="ActionsMenu__Menu-yvbni2-3 eiLgdQ"
+        className="ActionsMenu__Menu-yvbni2-3 ldBWdI"
         direction="left"
       >
         <a
