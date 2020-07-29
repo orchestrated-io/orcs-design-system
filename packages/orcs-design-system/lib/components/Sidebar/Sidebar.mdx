@@ -1,0 +1,37 @@
+import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import Sidebar, {
+  SidebarTabs,
+  SidebarTab,
+  SidebarPanels,
+  SidebarPanel,
+  SidebarFooter
+} from ".";
+
+# Sidebar
+
+Sidebar component for app layout. Panels support any content you'd like to put in them and the panel will scroll vertically if the content is taller than browser height.
+
+Make sure you use an appropriate icon for each tab so that the intent of that tab section is conveyed as best as possible, e.g. filter icon for filters, cog icon for settings.
+
+Use the subcomponent `SidebarClose` for functionality related to closing the sidebar.
+
+<Preview>
+  <Story id="components-sidebar--default-sidebar" />
+</Preview>
+
+## Properties
+
+<Props of={Sidebar} />
+
+## Upgrading
+
+This is a **breaking change** from the old `Sidebar` component, as the syntax has changed. Please use the following guide to convert from the old usage to the current usage.
+
+| **old orca**        | **new ORCS** |
+| ------------------- | ------------ |
+| `Sidebar.Container` | `Sidebar`    |
+| `Sidebar.Tabs`      | `Tabs`       |
+| `Sidebar.Tab`       | `Tab`        |
+| `Sidebar.Panels`    | `Panels`     |
+| `Sidebar.Panel`     | `Panel`      |
+| `Sidebar.Footer`    | `Footer`     |
