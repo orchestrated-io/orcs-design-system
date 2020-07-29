@@ -73,20 +73,6 @@ const StyledButton = styled("button")
     variant({
       variants: {
         default: {},
-        transparent: {
-          bg: "transparent",
-          color: "greyDark",
-          borderColor: "transparent",
-          "&:hover": {
-            bg: "greyLighter",
-            borderColor: "greyLighter"
-          },
-          "&:focus": {
-            outline: "0",
-            boxShadow:
-              "0 0 0 3px " + rgba(themeGet("colors.greyLight")(props), 0.4)
-          }
-        },
         success: {
           bg: "successDark",
           color: "white",
@@ -205,7 +191,6 @@ Button.propTypes = {
     "danger",
     "disabled",
     "ghost",
-    "transparent",
     "default"
   ]),
   /** Full width button that takes up all available space of parent */
