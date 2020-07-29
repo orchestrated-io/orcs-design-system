@@ -8,6 +8,7 @@ import Button from "../Button";
 import Flex from "../Flex";
 import Box from "../Box";
 import systemtheme from "../../systemtheme";
+import themeGet from "@styled-system/theme-get";
 
 const scaleIn = keyframes`
   0% {
@@ -41,8 +42,9 @@ const Overlay = styled(Flex)`
   z-index: 900;
   visibility: visible;
   animation: 300ms ${fadeIn} ease-in-out;
+  justify-content: center;
+  align-items: center;
 `;
-
 const Container = styled(Box)`
   position: relative;
   z-index: 9001;
@@ -51,11 +53,22 @@ const Container = styled(Box)`
   animation: 300ms ${fadeIn} ease-in-out, 300ms ${scaleIn} ease-in-out;
 `;
 
-const CloseButton = styled(Button)(
+const CloseButton = styled(Button)(props =>
   css({
     position: "absolute",
-    top: "r",
-    right: "r"
+    top: "s",
+    right: "s",
+    bg: "transparent",
+    color: "greyDark",
+    borderColor: "transparent",
+    "&:hover": {
+      bg: "greyLighter",
+      borderColor: "greyLighter"
+    },
+    "&:focus": {
+      outline: "0",
+      boxShadow: "0 0 0 3px " + themeGet("colors.greyLightest")(props)
+    }
   })
 );
 
@@ -93,7 +106,12 @@ const Modal = ({
       {visible &&
         ReactDOM.createPortal(
           <ThemeProvider theme={theme}>
-            <Overlay alignItems="center" justifyContent="center" {...restProps}>
+            <Overlay
+              alignItems="center"
+              justifyContent="center"
+              id="modal-overlay"
+              {...restProps}
+            >
               <Container
                 width={width}
                 height={height}
@@ -101,16 +119,9 @@ const Modal = ({
                 borderRadius="2"
                 bg="white"
                 p="r"
+                className="modal-container"
               >
-                <CloseButton
-                  onClick={onClose}
-                  small
-                  variant="transparent"
-                  px="6px"
-                  position="absolute"
-                  top="0"
-                  right="0"
-                >
+                <CloseButton onClick={onClose} small px="6px">
                   <Icon icon={["fas", "times"]} color="greyDark" size="lg" />
                 </CloseButton>
                 {children}

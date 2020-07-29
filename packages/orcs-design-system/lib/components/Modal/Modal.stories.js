@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Button from "../Button";
 import Modal from ".";
 import { H3, P } from "../Typography";
@@ -16,7 +16,34 @@ export default {
 };
 
 const Basic = () => {
+  window.addEventListener("load", setup);
+  const get = document.getElementById.bind(document);
+  const query = document.querySelector.bind(document);
+
   const [visible, setVisible] = useState(false);
+  function setup() {
+    let modalRoot = get("modal-overlay");
+    let modal = query(".modal-container");
+
+    // handle click to hide menu
+    modalRoot.addEventListener("click", rootClick);
+    modal.addEventListener("click", modalClick);
+
+    return () => {
+      // If menu closed, unregister event listener to prevent memory leaks
+      modalRoot.removeEventListener("click", rootClick);
+      modal.removeEventListener("click", modalClick);
+    };
+    function rootClick() {
+      setVisible(false);
+    }
+    function modalClick(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+      return false;
+    }
+  }
   const handleOnButtonClick = () => {
     setVisible(true);
   };
@@ -26,23 +53,6 @@ const Basic = () => {
   const handleOnConfirm = () => {
     setVisible(false);
   };
-  useEffect(() => {
-    if (!visible) {
-      return;
-    }
-    const handleClicked = () => {
-      setVisible(false);
-    };
-
-    // handle click to hide menu
-    document.addEventListener("click", handleClicked);
-
-    return () => {
-      // If menu closed, unregister event listener to prevent memory leaks
-      document.removeEventListener("click", handleClicked);
-    };
-  }, [visible]);
-
   return (
     <>
       <Button onClick={handleOnButtonClick}>Open Modal</Button>
