@@ -4371,11 +4371,11 @@ exports[`Storyshots Components/Select Default 1`] = `
     className="Select__Wrapper-bfi43f-0 gYlKKw"
   >
     <div
-      className=" css-1vkcoju-container"
+      className=" css-1xwgcs9-container"
       onKeyDown={[Function]}
     >
       <div
-        className=" css-1htyj3l-control"
+        className=" css-1u9pcp5-control"
         onMouseDown={[Function]}
         onTouchEnd={[Function]}
       >
@@ -4383,7 +4383,7 @@ exports[`Storyshots Components/Select Default 1`] = `
           className=" css-l1xr2i-Component"
         >
           <div
-            className=" css-1j591rh-placeholder"
+            className=" css-1lls55s-placeholder"
           >
             Select...
           </div>
@@ -4453,7 +4453,7 @@ exports[`Storyshots Components/Select Default 1`] = `
           />
           <div
             aria-hidden="true"
-            className=" css-169sjxl-indicatorContainer"
+            className=" css-1ur6b96-indicatorContainer"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -4493,11 +4493,11 @@ exports[`Storyshots Components/Select Inverted 1`] = `
         className="Select__Wrapper-bfi43f-0 gYlKKw"
       >
         <div
-          className=" css-r5uqf3-container"
+          className=" css-182w39l-container"
           onKeyDown={[Function]}
         >
           <div
-            className=" css-ft2imt-control"
+            className=" css-lfu48g-control"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -4505,7 +4505,7 @@ exports[`Storyshots Components/Select Inverted 1`] = `
               className=" css-l1xr2i-Component"
             >
               <div
-                className=" css-rbsjjc-placeholder"
+                className=" css-10ikxcu-placeholder"
               >
                 Select...
               </div>
@@ -4575,7 +4575,7 @@ exports[`Storyshots Components/Select Inverted 1`] = `
               />
               <div
                 aria-hidden="true"
-                className=" css-1nl7p2c-indicatorContainer"
+                className=" css-1p54kpi-indicatorContainer"
                 onMouseDown={[Function]}
                 onTouchEnd={[Function]}
               >
@@ -4604,11 +4604,11 @@ exports[`Storyshots Components/Select Inverted 1`] = `
         className="Select__Wrapper-bfi43f-0 gYlKKw"
       >
         <div
-          className=" css-r5uqf3-container"
+          className=" css-182w39l-container"
           onKeyDown={[Function]}
         >
           <div
-            className=" css-ft2imt-control"
+            className=" css-lfu48g-control"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -4616,7 +4616,7 @@ exports[`Storyshots Components/Select Inverted 1`] = `
               className=" css-l1xr2i-Component"
             >
               <div
-                className=" css-rbsjjc-placeholder"
+                className=" css-10ikxcu-placeholder"
               >
                 Select...
               </div>
@@ -4686,7 +4686,7 @@ exports[`Storyshots Components/Select Inverted 1`] = `
               />
               <div
                 aria-hidden="true"
-                className=" css-1nl7p2c-indicatorContainer"
+                className=" css-1p54kpi-indicatorContainer"
                 onMouseDown={[Function]}
                 onTouchEnd={[Function]}
               >
@@ -4721,11 +4721,11 @@ exports[`Storyshots Components/Select Multi-select 1`] = `
     className="Select__Wrapper-bfi43f-0 gYlKKw"
   >
     <div
-      className=" css-1vkcoju-container"
+      className=" css-1xwgcs9-container"
       onKeyDown={[Function]}
     >
       <div
-        className=" css-1htyj3l-control"
+        className=" css-1u9pcp5-control"
         onMouseDown={[Function]}
         onTouchEnd={[Function]}
       >
@@ -4733,7 +4733,7 @@ exports[`Storyshots Components/Select Multi-select 1`] = `
           className=" css-l1xr2i-Component"
         >
           <div
-            className=" css-1j591rh-placeholder"
+            className=" css-1lls55s-placeholder"
           >
             Select...
           </div>
@@ -4803,7 +4803,7 @@ exports[`Storyshots Components/Select Multi-select 1`] = `
           />
           <div
             aria-hidden="true"
-            className=" css-169sjxl-indicatorContainer"
+            className=" css-1ur6b96-indicatorContainer"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -4837,11 +4837,11 @@ exports[`Storyshots Components/Select With Data ID 1`] = `
     data-testid="test-this-component"
   >
     <div
-      className=" css-1vkcoju-container"
+      className=" css-1xwgcs9-container"
       onKeyDown={[Function]}
     >
       <div
-        className=" css-1htyj3l-control"
+        className=" css-1u9pcp5-control"
         onMouseDown={[Function]}
         onTouchEnd={[Function]}
       >
@@ -4849,7 +4849,7 @@ exports[`Storyshots Components/Select With Data ID 1`] = `
           className=" css-l1xr2i-Component"
         >
           <div
-            className=" css-1j591rh-placeholder"
+            className=" css-1lls55s-placeholder"
           >
             Select...
           </div>
@@ -4919,7 +4919,7 @@ exports[`Storyshots Components/Select With Data ID 1`] = `
           />
           <div
             aria-hidden="true"
-            className=" css-169sjxl-indicatorContainer"
+            className=" css-1ur6b96-indicatorContainer"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -4958,11 +4958,11 @@ exports[`Storyshots Components/Select With Selected Value 1`] = `
     }
   >
     <div
-      className=" css-1vkcoju-container"
+      className=" css-1xwgcs9-container"
       onKeyDown={[Function]}
     >
       <div
-        className=" css-1htyj3l-control"
+        className=" css-1u9pcp5-control"
         onMouseDown={[Function]}
         onTouchEnd={[Function]}
       >
@@ -5040,7 +5040,7 @@ exports[`Storyshots Components/Select With Selected Value 1`] = `
           />
           <div
             aria-hidden="true"
-            className=" css-169sjxl-indicatorContainer"
+            className=" css-1ur6b96-indicatorContainer"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
