@@ -95,7 +95,7 @@ export const SidebarPanels = styled("div")(
   SidebarStyles
 );
 
-export const SidebarPanel = styled("div")(
+const SidebarPanelItem = styled("div")(
   props =>
     css({
       display: props.active ? "block" : "none",
@@ -116,6 +116,10 @@ export const SidebarPanel = styled("div")(
     }),
   SidebarStyles
 );
+
+export const SidebarPanel = ({ SidebarStyles, children }) => {
+  return <SidebarPanelItem {...SidebarStyles}>{children}</SidebarPanelItem>;
+};
 
 export const SidebarClose = styled("label")(
   props =>
@@ -181,4 +185,39 @@ Sidebar.propTypes = {
 
 Sidebar.defaultProps = {
   theme: systemtheme
+};
+
+SidebarPanel.propTypes = {
+  /** SidebarPanel children, ie `SidebarPanels` components, are rendered as node elements */
+  children: PropTypes.node,
+  /** Set the styles for this subcomponent if needed, using the `space` and `layout` styled-system categories */
+  SidebarStyles: PropTypes.object
+};
+
+SidebarPanels.propTypes = {
+  /** Content of the SidebarPanels are rendered as node elements */
+  children: PropTypes.node,
+  /** Set the styles for this subcomponent if needed, using the `space` and `layout` styled-system categories */
+  SidebarStyles: PropTypes.object
+};
+
+SidebarTabs.propTypes = {
+  /** SidebarTabs children, ie `SidebarTab` components, are rendered as node elements */
+  children: PropTypes.node,
+  /** Set the styles for this subcomponent if needed, using the `space` and `layout` styled-system categories */
+  SidebarStyles: PropTypes.object
+};
+
+SidebarTab.propTypes = {
+  /** SidebarTab children are rendered as node elements */
+  children: PropTypes.node,
+  /** Set the styles for this subcomponent if needed, using the `space` and `layout` styled-system categories */
+  SidebarStyles: PropTypes.object
+};
+
+SidebarFooter.propTypes = {
+  /** Sidebar children are rendered as node elements */
+  children: PropTypes.node,
+  /** Set the styles for this subcomponent if needed, using the `space` and `layout` styled-system categories */
+  SidebarStyles: PropTypes.object
 };

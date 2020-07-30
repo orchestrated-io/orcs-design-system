@@ -39,6 +39,7 @@ const Select = forwardRef((props, ref) => {
   const customStyles = {
     menu: (provided, state) => ({
       ...provided,
+      opacity: state.isDisabled ? 0.7 : 1,
       borderColor: state.isSelected
         ? themeGet("colors.warning")(props)
         : state.isFocused
@@ -53,6 +54,7 @@ const Select = forwardRef((props, ref) => {
     }),
     control: (provided, state) => ({
       ...provided,
+      opacity: state.isDisabled ? 0.7 : 1,
       boxShadow: !state.isFocused
         ? 0
         : props.inverted
@@ -83,6 +85,7 @@ const Select = forwardRef((props, ref) => {
     }),
     clearIndicator: (provided, state) => ({
       ...provided,
+      opacity: state.isDisabled ? 0.7 : 1,
       color:
         !state.isFocused && !props.inverted
           ? themeGet("colors.greyDark")(props)
@@ -102,8 +105,9 @@ const Select = forwardRef((props, ref) => {
             : themeGet("colors.white")(props)
       }
     }),
-    container: provided => ({
+    container: (provided, state) => ({
       ...provided,
+      opacity: state.isDisabled ? 0.7 : 1,
       color: props.inverted
         ? themeGet("colors.white")
         : themeGet("colors.grey")(props),
@@ -113,6 +117,7 @@ const Select = forwardRef((props, ref) => {
     }),
     dropdownIndicator: (provided, state) => ({
       ...provided,
+      opacity: state.isDisabled ? 0.7 : 1,
       color:
         !state.isFocused && !props.inverted
           ? themeGet("colors.greyDark")(props)
@@ -132,8 +137,9 @@ const Select = forwardRef((props, ref) => {
             : themeGet("colors.white")(props)
       }
     }),
-    multiValue: provided => ({
+    multiValue: (provided, state) => ({
       ...provided,
+      opacity: state.isDisabled ? 0.7 : 1,
       backgroundColor: props.inverted
         ? themeGet("colors.primaryDark")(props)
         : themeGet("colors.primary")(props),
@@ -163,6 +169,7 @@ const Select = forwardRef((props, ref) => {
     }),
     option: (provided, state) => ({
       ...provided,
+      opacity: state.isDisabled ? 0.7 : 1,
       backgroundColor:
         !state.isFocused && !props.inverted
           ? themeGet("colors.white")(props)
@@ -172,8 +179,9 @@ const Select = forwardRef((props, ref) => {
           ? themeGet("colors.greyDarker")(props)
           : themeGet("colors.primaryDark")(props)
     }),
-    placeholder: provided => ({
+    placeholder: (provided, state) => ({
       ...provided,
+      opacity: state.isDisabled ? 0.7 : 1,
       color: props.inverted
         ? themeGet("colors.white")(props)
         : themeGet("colors.greyDarkest")(props)

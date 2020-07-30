@@ -215,7 +215,7 @@ Avatar.propTypes = {
   /** Specifies a source path for an image */
   image: PropTypes.string,
   /** Specifies initials of person if available */
-  initials: PropTypes.string,
+  initials: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   /** Turns white initials on for custom `Circle` backgrounds */
   whiteInitials: PropTypes.bool,
   /** Specifies title / name as just plain text, or an element like a hyperlink or react router link */
