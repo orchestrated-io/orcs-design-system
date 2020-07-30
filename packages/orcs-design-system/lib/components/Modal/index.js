@@ -51,6 +51,7 @@ const Container = styled(Box)`
   max-height: 90vh;
   overflow-y: auto;
   animation: 300ms ${fadeIn} ease-in-out, 300ms ${scaleIn} ease-in-out;
+  overflow: hidden;
 `;
 
 const CloseButton = styled(Button)(props =>
@@ -76,7 +77,7 @@ const Modal = ({
   children,
   width,
   height,
-  overflowVisible,
+  overflow,
   onClose,
   theme,
   visible,
@@ -115,7 +116,7 @@ const Modal = ({
               <Container
                 width={width}
                 height={height}
-                overflow={overflowVisible ? "visible" : "hidden"}
+                overflow={overflow}
                 borderRadius="2"
                 bg="white"
                 p="r"
@@ -149,8 +150,8 @@ Modal.propTypes = {
   visible: PropTypes.bool,
   /** Specifies the function to run on clicking X icon. Ensure that this function will close Modal through the `visible` prop */
   onClose: PropTypes.func,
-  /** Specifies whether the Modal overflow is visible or not. If height is not enough, vertical scrollbar will be displayed (`overflow-y: auto`) */
-  overflowVisible: PropTypes.bool,
+  /** Specifies whether the Modal overflow is visible or not, default is `hidden`. If height is not enough, vertical scrollbar will be displayed (`overflow-y: auto`) */
+  overflow: PropTypes.string,
   /** Sets the theme for the Modal */
   theme: PropTypes.object
 };
@@ -158,7 +159,6 @@ Modal.propTypes = {
 Modal.defaultProps = {
   width: "300px",
   height: "auto",
-  overflowVisible: false,
   theme: systemtheme
 };
 
