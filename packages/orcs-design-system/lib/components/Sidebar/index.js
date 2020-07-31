@@ -95,7 +95,7 @@ export const SidebarPanels = styled("div")(
   SidebarStyles
 );
 
-const SidebarPanelItem = styled("div")(
+const SidebarPanelStyle = styled("div")(
   props =>
     css({
       display: props.active ? "block" : "none",
@@ -117,8 +117,12 @@ const SidebarPanelItem = styled("div")(
   SidebarStyles
 );
 
-export const SidebarPanel = ({ SidebarStyles, children }) => {
-  return <SidebarPanelItem {...SidebarStyles}>{children}</SidebarPanelItem>;
+export const SidebarPanel = ({ SidebarStyles, children, ...props }) => {
+  return (
+    <SidebarPanelStyle {...SidebarStyles} {...props}>
+      {children}
+    </SidebarPanelStyle>
+  );
 };
 
 export const SidebarClose = styled("label")(
