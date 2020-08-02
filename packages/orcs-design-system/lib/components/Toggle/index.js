@@ -43,7 +43,6 @@ const Input = styled.input.attrs({
   height: 0;
   /* overflow: hidden; */
   pointer-events: none;
-
   &:focus {
     + label {
       box-shadow: 0 0 0 3px ${rgba(colours.greyDarker, 0.2)};
@@ -110,12 +109,20 @@ const Label = styled.label`
  * As a general rule, the small version should be used in any layout components like `Header`, `Sidebar`, `MobileNav`; whereas the larger one can be used within the page content when required.
  */
 
-export default function Toggle({ ...props }) {
-  const { inverted, small, id, label, theme } = props;
+export default function Toggle({
+  inverted,
+  id,
+  small,
+  theme,
+  label,
+  checked,
+  ...props
+}) {
+  /*  const { inverted, small, id, label, theme } = props; */
   return (
     <ThemeProvider theme={theme}>
       <Group inverted={inverted} {...props}>
-        <Input {...props} />
+        <Input id={id} checked={checked} {...props} />
         <Item htmlFor={id} small={small} />
         <Label htmlFor={id} small={small}>
           {label}
