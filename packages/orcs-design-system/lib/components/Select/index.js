@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { default as ReactSelect } from "react-select";
 import systemtheme from "../../systemtheme";
 import { space, layout, compose } from "styled-system";
@@ -17,6 +17,16 @@ const Wrapper = styled("div").attrs(props => ({
     width: "100%"
   }),
   SelectStyles
+);
+
+const Label = styled("label").attrs(props => ({
+  for: props.id
+}))(props =>
+  css({
+    color: props.inverted ? "white" : "greyDarkest",
+    fontWeight: "2",
+    fontSize: "1"
+  })
 );
 
 /**
@@ -49,8 +59,9 @@ const Select = forwardRef((props, ref) => {
         ? themeGet("colors.greyDarker")(props)
         : themeGet("colors.white")(props),
       color: props.inverted
-        ? themeGet("colors.white")(props)
-        : themeGet("colors.greyDarkest")(props)
+        ? themeGet("colors.greyLighter")(props)
+        : themeGet("colors.greyDarkest")(props),
+      fontSize: themeGet("fontSizes.1")(props)
     }),
     control: (provided, state) => ({
       ...provided,
@@ -79,9 +90,10 @@ const Select = forwardRef((props, ref) => {
         ? themeGet("colors.greyDarker")(props)
         : themeGet("colors.white")(props),
       color: props.inverted
-        ? themeGet("colors.white")(props)
+        ? themeGet("colors.greyLighter")(props)
         : themeGet("colors.greyDarkest")(props),
-      borderRadius: themeGet("radii.2")(props)
+      borderRadius: themeGet("radii.2")(props),
+      fontSize: themeGet("fontSizes.1")(props)
     }),
     clearIndicator: (provided, state) => ({
       ...provided,
@@ -109,11 +121,13 @@ const Select = forwardRef((props, ref) => {
       ...provided,
       opacity: state.isDisabled ? 0.7 : 1,
       color: props.inverted
-        ? themeGet("colors.white")
+        ? themeGet("colors.greyLighter")
         : themeGet("colors.grey")(props),
       backgroundColor: props.inverted
         ? themeGet("colors.greyDarker")(props)
-        : themeGet("colors.white")(props)
+        : themeGet("colors.white")(props),
+      marginTop: themeGet("space.s")(props),
+      fontSize: themeGet("fontSizes.1")(props)
     }),
     dropdownIndicator: (provided, state) => ({
       ...provided,
@@ -144,7 +158,8 @@ const Select = forwardRef((props, ref) => {
         ? themeGet("colors.primaryDark")(props)
         : themeGet("colors.primary")(props),
       color: themeGet("colors.white")(props),
-      borderRadius: themeGet("radii.2")(props)
+      borderRadius: themeGet("radii.2")(props),
+      fontSize: themeGet("fontSizes.1")(props)
     }),
     multiValueLabel: provided => ({
       ...provided,
@@ -153,7 +168,8 @@ const Select = forwardRef((props, ref) => {
         : themeGet("colors.primary")(props),
       color: themeGet("colors.white"),
       borderRadius: themeGet("radii.2")(props),
-      padding: themeGet("space.2")(props)
+      padding: themeGet("space.2")(props),
+      fontSize: themeGet("fontSizes.1")(props)
     }),
     multiValueRemove: provided => ({
       ...provided,
@@ -177,32 +193,50 @@ const Select = forwardRef((props, ref) => {
           ? themeGet("colors.primaryLightest")(props)
           : !state.isFocused && props.inverted
           ? themeGet("colors.greyDarker")(props)
-          : themeGet("colors.primaryDark")(props)
+          : themeGet("colors.primaryDark")(props),
+      fontSize: themeGet("fontSizes.1")(props)
     }),
     placeholder: (provided, state) => ({
       ...provided,
       opacity: state.isDisabled ? 0.7 : 1,
       color: props.inverted
-        ? themeGet("colors.white")(props)
-        : themeGet("colors.greyDarkest")(props)
+        ? themeGet("colors.greyLightest")(props)
+        : themeGet("colors.greyDarkest")(props),
+      fontSize: themeGet("fontSizes.1")(props)
     })
   };
   return (
-    <Wrapper inverted={props.inverted} {...props}>
-      <ReactSelect
-        ref={ref}
-        styles={customStyles}
-        theme={props.theme}
-        data-testid={props.dataTestId}
-        {...props}
-      />
-    </Wrapper>
+    <ThemeProvider theme={props.theme}>
+      <Wrapper inverted={props.inverted} {...SelectStyles}>
+        <Label inverted={props.inverted} htmlFor={props.id}>
+          {props.label}
+        </Label>
+        <ReactSelect
+          ref={ref}
+          styles={customStyles}
+          theme={props.theme}
+          data-testid={props.dataTestId}
+          inputId={props.id}
+          inverted={props.inverted}
+          isMulti={props.multi || props.isMulti ? true : null}
+          {...props}
+        />
+      </Wrapper>
+    </ThemeProvider>
   );
 });
 
 Select.propTypes = {
   /** Points to options object, see example code above */
-  options: PropTypes.array,
+  options: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
+  /** Specifies the label for the `Select` */
+  label: PropTypes.string,
+  /** Specifies the id for the rendered `input` tag */
+  id: PropTypes.string,
+  /** Specifies if the `Select` component is multi-select. */
+  isMulti: PropTypes.boolean,
+  /** Deprecated prop for multi-select. */
+  multi: PropTypes.boolean,
   /** Styling for dark backgrounds. */
   inverted: PropTypes.bool,
   /** Specifies the `data-testid` attribute for testing. */
