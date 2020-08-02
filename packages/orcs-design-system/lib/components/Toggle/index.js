@@ -137,6 +137,8 @@ Toggle.propTypes = {
   id: PropTypes.string,
   /** Specifies the text for the label. */
   label: PropTypes.string,
+  /** Specifies whether the `checkbox` for Toggle is on or not. */
+  checked: PropTypes.bool,
   /** Changes appearance to suit a dark background. */
   inverted: PropTypes.bool,
   /** Makes toggle and label smaller. */

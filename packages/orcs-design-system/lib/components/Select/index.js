@@ -218,7 +218,7 @@ const Select = forwardRef((props, ref) => {
           data-testid={props.dataTestId}
           inputId={props.id}
           inverted={props.inverted}
-          isMulti={props.multi || props.isMulti ? true : null}
+          isMulti={props.isMulti}
           {...props}
         />
       </Wrapper>
@@ -234,9 +234,7 @@ Select.propTypes = {
   /** Specifies the id for the rendered `input` tag */
   id: PropTypes.string,
   /** Specifies if the `Select` component is multi-select. */
-  isMulti: PropTypes.boolean,
-  /** Deprecated prop for multi-select. */
-  multi: PropTypes.boolean,
+  isMulti: PropTypes.bool,
   /** Styling for dark backgrounds. */
   inverted: PropTypes.bool,
   /** Specifies the `data-testid` attribute for testing. */

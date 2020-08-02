@@ -4368,14 +4368,22 @@ exports[`Storyshots Components/Select Default 1`] = `
   data-testid={null}
 >
   <div
-    className="Select__Wrapper-bfi43f-0 gYlKKw"
+    className="Select__Wrapper-bfi43f-0 eLvxhH"
+    display={[Function]}
+    height={[Function]}
+    overflow={[Function]}
+    size={[Function]}
+    width={[Function]}
   >
+    <label
+      className="Select__Label-bfi43f-1 ioBnwi"
+    />
     <div
-      className=" css-1xwgcs9-container"
+      className=" css-epl5p4-container"
       onKeyDown={[Function]}
     >
       <div
-        className=" css-1u9pcp5-control"
+        className=" css-e67xwx-control"
         onMouseDown={[Function]}
         onTouchEnd={[Function]}
       >
@@ -4383,7 +4391,7 @@ exports[`Storyshots Components/Select Default 1`] = `
           className=" css-l1xr2i-Component"
         >
           <div
-            className=" css-1lls55s-placeholder"
+            className=" css-12r8v8r-placeholder"
           >
             Select...
           </div>
@@ -4490,14 +4498,22 @@ exports[`Storyshots Components/Select Inverted 1`] = `
       className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
     >
       <div
-        className="Select__Wrapper-bfi43f-0 gYlKKw"
+        className="Select__Wrapper-bfi43f-0 eLvxhH"
+        display={[Function]}
+        height={[Function]}
+        overflow={[Function]}
+        size={[Function]}
+        width={[Function]}
       >
+        <label
+          className="Select__Label-bfi43f-1 hmcamX"
+        />
         <div
-          className=" css-182w39l-container"
+          className=" css-1daqoyz-container"
           onKeyDown={[Function]}
         >
           <div
-            className=" css-lfu48g-control"
+            className=" css-11ghqnx-control"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -4505,7 +4521,7 @@ exports[`Storyshots Components/Select Inverted 1`] = `
               className=" css-l1xr2i-Component"
             >
               <div
-                className=" css-10ikxcu-placeholder"
+                className=" css-1hvxwfy-placeholder"
               >
                 Select...
               </div>
@@ -4601,14 +4617,22 @@ exports[`Storyshots Components/Select Inverted 1`] = `
       className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
     >
       <div
-        className="Select__Wrapper-bfi43f-0 gYlKKw"
+        className="Select__Wrapper-bfi43f-0 eLvxhH"
+        display={[Function]}
+        height={[Function]}
+        overflow={[Function]}
+        size={[Function]}
+        width={[Function]}
       >
+        <label
+          className="Select__Label-bfi43f-1 hmcamX"
+        />
         <div
-          className=" css-182w39l-container"
+          className=" css-1daqoyz-container"
           onKeyDown={[Function]}
         >
           <div
-            className=" css-lfu48g-control"
+            className=" css-11ghqnx-control"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -4616,7 +4640,7 @@ exports[`Storyshots Components/Select Inverted 1`] = `
               className=" css-l1xr2i-Component"
             >
               <div
-                className=" css-10ikxcu-placeholder"
+                className=" css-1hvxwfy-placeholder"
               >
                 Select...
               </div>
@@ -4718,14 +4742,22 @@ exports[`Storyshots Components/Select Multi-select 1`] = `
   data-testid={null}
 >
   <div
-    className="Select__Wrapper-bfi43f-0 gYlKKw"
+    className="Select__Wrapper-bfi43f-0 eLvxhH"
+    display={[Function]}
+    height={[Function]}
+    overflow={[Function]}
+    size={[Function]}
+    width={[Function]}
   >
+    <label
+      className="Select__Label-bfi43f-1 ioBnwi"
+    />
     <div
-      className=" css-1xwgcs9-container"
+      className=" css-epl5p4-container"
       onKeyDown={[Function]}
     >
       <div
-        className=" css-1u9pcp5-control"
+        className=" css-e67xwx-control"
         onMouseDown={[Function]}
         onTouchEnd={[Function]}
       >
@@ -4733,7 +4765,7 @@ exports[`Storyshots Components/Select Multi-select 1`] = `
           className=" css-l1xr2i-Component"
         >
           <div
-            className=" css-1lls55s-placeholder"
+            className=" css-12r8v8r-placeholder"
           >
             Select...
           </div>
@@ -4833,15 +4865,22 @@ exports[`Storyshots Components/Select With Data ID 1`] = `
   data-testid={null}
 >
   <div
-    className="Select__Wrapper-bfi43f-0 gYlKKw"
-    data-testid="test-this-component"
+    className="Select__Wrapper-bfi43f-0 eLvxhH"
+    display={[Function]}
+    height={[Function]}
+    overflow={[Function]}
+    size={[Function]}
+    width={[Function]}
   >
+    <label
+      className="Select__Label-bfi43f-1 ioBnwi"
+    />
     <div
-      className=" css-1xwgcs9-container"
+      className=" css-epl5p4-container"
       onKeyDown={[Function]}
     >
       <div
-        className=" css-1u9pcp5-control"
+        className=" css-e67xwx-control"
         onMouseDown={[Function]}
         onTouchEnd={[Function]}
       >
@@ -4849,7 +4888,7 @@ exports[`Storyshots Components/Select With Data ID 1`] = `
           className=" css-l1xr2i-Component"
         >
           <div
-            className=" css-1lls55s-placeholder"
+            className=" css-12r8v8r-placeholder"
           >
             Select...
           </div>
@@ -4949,20 +4988,22 @@ exports[`Storyshots Components/Select With Selected Value 1`] = `
   data-testid={null}
 >
   <div
-    className="Select__Wrapper-bfi43f-0 gYlKKw"
-    defaultValue={
-      Object {
-        "label": "Chocolate",
-        "value": "chocolate",
-      }
-    }
+    className="Select__Wrapper-bfi43f-0 eLvxhH"
+    display={[Function]}
+    height={[Function]}
+    overflow={[Function]}
+    size={[Function]}
+    width={[Function]}
   >
+    <label
+      className="Select__Label-bfi43f-1 ioBnwi"
+    />
     <div
-      className=" css-1xwgcs9-container"
+      className=" css-epl5p4-container"
       onKeyDown={[Function]}
     >
       <div
-        className=" css-1u9pcp5-control"
+        className=" css-e67xwx-control"
         onMouseDown={[Function]}
         onTouchEnd={[Function]}
       >
@@ -5109,7 +5150,7 @@ exports[`Storyshots Components/Sidebar Default Sidebar 1`] = `
     className="Sidebar__SidebarPanels-wr9mfw-3 liBzVI"
   >
     <div
-      className="Sidebar__SidebarPanelItem-wr9mfw-4 iwscqW"
+      className="Sidebar__SidebarPanelStyle-wr9mfw-4 dHdqpf"
     >
       <div
         className="Box__BoxWrapper-jr1api-0 ezPMxm"
@@ -5119,7 +5160,7 @@ exports[`Storyshots Components/Sidebar Default Sidebar 1`] = `
       </div>
     </div>
     <div
-      className="Sidebar__SidebarPanelItem-wr9mfw-4 iwscqW"
+      className="Sidebar__SidebarPanelStyle-wr9mfw-4 euoGFM"
     >
       <div
         className="Box__BoxWrapper-jr1api-0 ezPMxm"
@@ -5129,7 +5170,7 @@ exports[`Storyshots Components/Sidebar Default Sidebar 1`] = `
       </div>
     </div>
     <div
-      className="Sidebar__SidebarPanelItem-wr9mfw-4 iwscqW"
+      className="Sidebar__SidebarPanelStyle-wr9mfw-4 euoGFM"
     >
       <div
         className="Box__BoxWrapper-jr1api-0 ezPMxm"
@@ -6367,13 +6408,10 @@ Array [
 exports[`Storyshots Components/Toggle Default 1`] = `
 <div
   className="Toggle__Group-f6l22k-0 dfPeJz"
-  id="autosave"
-  label="Auto save"
 >
   <input
     className="Toggle__Input-f6l22k-1 iVVGvY"
     id="autosave"
-    label="Auto save"
     type="checkbox"
   />
   <label
@@ -6399,13 +6437,10 @@ exports[`Storyshots Components/Toggle Inverted 1`] = `
   >
     <div
       className="Toggle__Group-f6l22k-0 fdTRoC"
-      id="autosave3"
-      label="Auto save"
     >
       <input
         className="Toggle__Input-f6l22k-1 iVVGvY"
         id="autosave3"
-        label="Auto save"
         type="checkbox"
       />
       <label
@@ -6425,13 +6460,10 @@ exports[`Storyshots Components/Toggle Inverted 1`] = `
   >
     <div
       className="Toggle__Group-f6l22k-0 fdTRoC"
-      id="autosave4"
-      label="Auto save"
     >
       <input
         className="Toggle__Input-f6l22k-1 iVVGvY"
         id="autosave4"
-        label="Auto save"
         type="checkbox"
       />
       <label
@@ -6452,13 +6484,10 @@ exports[`Storyshots Components/Toggle Inverted 1`] = `
 exports[`Storyshots Components/Toggle Small 1`] = `
 <div
   className="Toggle__Group-f6l22k-0 dfPeJz"
-  id="autosave2"
-  label="Auto save"
 >
   <input
     className="Toggle__Input-f6l22k-1 iVVGvY"
     id="autosave2"
-    label="Auto save"
     type="checkbox"
   />
   <label
