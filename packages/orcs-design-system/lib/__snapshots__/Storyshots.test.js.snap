@@ -4379,7 +4379,7 @@ exports[`Storyshots Components/Select Default 1`] = `
       className="Select__Label-bfi43f-1 ioBnwi"
     />
     <div
-      className=" css-epl5p4-container"
+      className=" css-drms3i-container"
       onKeyDown={[Function]}
     >
       <div
@@ -4388,7 +4388,7 @@ exports[`Storyshots Components/Select Default 1`] = `
         onTouchEnd={[Function]}
       >
         <div
-          className=" css-l1xr2i-Component"
+          className=" css-1ppb8y7-Component"
         >
           <div
             className=" css-12r8v8r-placeholder"
@@ -4509,7 +4509,7 @@ exports[`Storyshots Components/Select Inverted 1`] = `
           className="Select__Label-bfi43f-1 hmcamX"
         />
         <div
-          className=" css-1daqoyz-container"
+          className=" css-4laq5b-container"
           onKeyDown={[Function]}
         >
           <div
@@ -4518,7 +4518,7 @@ exports[`Storyshots Components/Select Inverted 1`] = `
             onTouchEnd={[Function]}
           >
             <div
-              className=" css-l1xr2i-Component"
+              className=" css-1ppb8y7-Component"
             >
               <div
                 className=" css-1hvxwfy-placeholder"
@@ -4628,7 +4628,7 @@ exports[`Storyshots Components/Select Inverted 1`] = `
           className="Select__Label-bfi43f-1 hmcamX"
         />
         <div
-          className=" css-1daqoyz-container"
+          className=" css-4laq5b-container"
           onKeyDown={[Function]}
         >
           <div
@@ -4637,7 +4637,7 @@ exports[`Storyshots Components/Select Inverted 1`] = `
             onTouchEnd={[Function]}
           >
             <div
-              className=" css-l1xr2i-Component"
+              className=" css-1ppb8y7-Component"
             >
               <div
                 className=" css-1hvxwfy-placeholder"
@@ -4753,7 +4753,7 @@ exports[`Storyshots Components/Select Multi-select 1`] = `
       className="Select__Label-bfi43f-1 ioBnwi"
     />
     <div
-      className=" css-epl5p4-container"
+      className=" css-drms3i-container"
       onKeyDown={[Function]}
     >
       <div
@@ -4762,7 +4762,7 @@ exports[`Storyshots Components/Select Multi-select 1`] = `
         onTouchEnd={[Function]}
       >
         <div
-          className=" css-l1xr2i-Component"
+          className=" css-1ppb8y7-Component"
         >
           <div
             className=" css-12r8v8r-placeholder"
@@ -4876,7 +4876,7 @@ exports[`Storyshots Components/Select With Data ID 1`] = `
       className="Select__Label-bfi43f-1 ioBnwi"
     />
     <div
-      className=" css-epl5p4-container"
+      className=" css-drms3i-container"
       onKeyDown={[Function]}
     >
       <div
@@ -4885,7 +4885,7 @@ exports[`Storyshots Components/Select With Data ID 1`] = `
         onTouchEnd={[Function]}
       >
         <div
-          className=" css-l1xr2i-Component"
+          className=" css-1ppb8y7-Component"
         >
           <div
             className=" css-12r8v8r-placeholder"
@@ -4999,7 +4999,7 @@ exports[`Storyshots Components/Select With Selected Value 1`] = `
       className="Select__Label-bfi43f-1 ioBnwi"
     />
     <div
-      className=" css-epl5p4-container"
+      className=" css-drms3i-container"
       onKeyDown={[Function]}
     >
       <div
@@ -5008,7 +5008,7 @@ exports[`Storyshots Components/Select With Selected Value 1`] = `
         onTouchEnd={[Function]}
       >
         <div
-          className=" css-l1xr2i-Component"
+          className=" css-1ppb8y7-Component"
         >
           <div
             className=" css-r447wv-singleValue"
@@ -5150,7 +5150,7 @@ exports[`Storyshots Components/Sidebar Default Sidebar 1`] = `
     className="Sidebar__SidebarPanels-wr9mfw-3 liBzVI"
   >
     <div
-      className="Sidebar__SidebarPanelStyle-wr9mfw-4 dHdqpf"
+      className="Sidebar__SidebarPanelStyle-wr9mfw-4 flZrqQ"
     >
       <div
         className="Box__BoxWrapper-jr1api-0 ezPMxm"
@@ -5160,7 +5160,7 @@ exports[`Storyshots Components/Sidebar Default Sidebar 1`] = `
       </div>
     </div>
     <div
-      className="Sidebar__SidebarPanelStyle-wr9mfw-4 euoGFM"
+      className="Sidebar__SidebarPanelStyle-wr9mfw-4 jNaJGj"
     >
       <div
         className="Box__BoxWrapper-jr1api-0 ezPMxm"
@@ -5170,7 +5170,7 @@ exports[`Storyshots Components/Sidebar Default Sidebar 1`] = `
       </div>
     </div>
     <div
-      className="Sidebar__SidebarPanelStyle-wr9mfw-4 euoGFM"
+      className="Sidebar__SidebarPanelStyle-wr9mfw-4 jNaJGj"
     >
       <div
         className="Box__BoxWrapper-jr1api-0 ezPMxm"
