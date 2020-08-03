@@ -51,7 +51,7 @@ const Select = forwardRef((props, ref) => {
       ...provided,
       opacity: state.isDisabled ? 0.7 : 1,
       borderColor: state.isSelected
-        ? themeGet("colors.warning")(props)
+        ? themeGet("colors.primary")(props)
         : state.isFocused
         ? themeGet("colors.primary")(props)
         : null,
@@ -59,9 +59,39 @@ const Select = forwardRef((props, ref) => {
         ? themeGet("colors.greyDarker")(props)
         : themeGet("colors.white")(props),
       color: props.inverted
-        ? themeGet("colors.greyLighter")(props)
+        ? themeGet("colors.greyLighter")
         : themeGet("colors.greyDarkest")(props),
-      fontSize: themeGet("fontSizes.1")(props)
+      fontSize: themeGet("fontSizes.1")(props),
+      boxShadow: props.inverted
+        ? "0 0 0 " +
+          themeGet("borderWidths.1")(props) +
+          " " +
+          themeGet("colors.primaryLight")(props)
+        : "0 0 0 " +
+          themeGet("borderWidths.1")(props) +
+          " " +
+          themeGet("colors.primary")(props),
+      border: !state.isFocused
+        ? 0
+        : props.inverted
+        ? themeGet("borderWidths.1")(props) +
+          " solid " +
+          themeGet("colors.primaryLight")(props)
+        : themeGet("borderWidths.1")(props) +
+          " solid " +
+          themeGet("colors.primary")(props),
+      borderRadius:
+        "0 0 " + themeGet("radii.2")(props) + " " + themeGet("radii.2")(props),
+      marginBottom: "0",
+      marginTop: "0",
+      overflow: "hidden"
+    }),
+    menuList: provided => ({
+      ...provided,
+      paddingTop: "0",
+      borderRadius:
+        "0 0 " + themeGet("radii.2")(props) + " " + themeGet("radii.2")(props),
+      overflow: "auto"
     }),
     control: (provided, state) => ({
       ...provided,
@@ -92,8 +122,14 @@ const Select = forwardRef((props, ref) => {
       color: props.inverted
         ? themeGet("colors.greyLighter")(props)
         : themeGet("colors.greyDarkest")(props),
-      borderRadius: themeGet("radii.2")(props),
+      borderRadius: state.isFocused
+        ? themeGet("radii.2")(props) + " " + themeGet("radii.2")(props) + " 0 0"
+        : themeGet("radii.2")(props),
       fontSize: themeGet("fontSizes.1")(props)
+    }),
+    valueContainer: provided => ({
+      ...provided,
+      padding: themeGet("space.2")(props)
     }),
     clearIndicator: (provided, state) => ({
       ...provided,
@@ -124,10 +160,11 @@ const Select = forwardRef((props, ref) => {
         ? themeGet("colors.greyLighter")
         : themeGet("colors.grey")(props),
       backgroundColor: props.inverted
-        ? themeGet("colors.greyDarker")(props)
+        ? themeGet("colors.greyDarkest")(props)
         : themeGet("colors.white")(props),
       marginTop: themeGet("space.s")(props),
-      fontSize: themeGet("fontSizes.1")(props)
+      fontSize: themeGet("fontSizes.1")(props),
+      borderRadius: themeGet("radii.2")(props)
     }),
     dropdownIndicator: (provided, state) => ({
       ...provided,
@@ -159,7 +196,8 @@ const Select = forwardRef((props, ref) => {
         : themeGet("colors.primary")(props),
       color: themeGet("colors.white")(props),
       borderRadius: themeGet("radii.2")(props),
-      fontSize: themeGet("fontSizes.1")(props)
+      fontSize: themeGet("fontSizes.1")(props),
+      wordWrap: "break-word"
     }),
     multiValueLabel: provided => ({
       ...provided,
@@ -169,7 +207,9 @@ const Select = forwardRef((props, ref) => {
       color: themeGet("colors.white"),
       borderRadius: themeGet("radii.2")(props),
       padding: themeGet("space.2")(props),
-      fontSize: themeGet("fontSizes.1")(props)
+      fontSize: themeGet("fontSizes.1")(props),
+      wordWrap: "break-word",
+      whiteSpace: "wrap"
     }),
     multiValueRemove: provided => ({
       ...provided,
@@ -192,9 +232,10 @@ const Select = forwardRef((props, ref) => {
           : state.isFocused && !props.inverted
           ? themeGet("colors.primaryLightest")(props)
           : !state.isFocused && props.inverted
-          ? themeGet("colors.greyDarker")(props)
+          ? themeGet("colors.black")(props)
           : themeGet("colors.primaryDark")(props),
-      fontSize: themeGet("fontSizes.1")(props)
+      fontSize: themeGet("fontSizes.1")(props),
+      whiteSpace: "wrap"
     }),
     placeholder: (provided, state) => ({
       ...provided,
@@ -219,6 +260,7 @@ const Select = forwardRef((props, ref) => {
           inputId={props.id}
           inverted={props.inverted}
           isMulti={props.isMulti}
+          classNamePrefix={props.classNamePrefix}
           {...props}
         />
       </Wrapper>
@@ -239,6 +281,8 @@ Select.propTypes = {
   inverted: PropTypes.bool,
   /** Specifies the `data-testid` attribute for testing. */
   dataTestId: PropTypes.string,
+  /** Specifies prefix for the `#class` applied to the `Select` structures */
+  classNamePrefix: PropTypes.string,
   /** Specifies the system design theme object */
   theme: PropTypes.object
 };
