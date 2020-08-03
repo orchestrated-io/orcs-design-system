@@ -105,6 +105,12 @@ const SidebarPanelStyle = styled("div")(
         " - " +
         themeGet("appScale.navBarSize")(props) +
         ")",
+      maxWidth:
+        "calc(" +
+        themeGet("appScale.sidebarMaxWidth")(props) +
+        " - " +
+        themeGet("appScale.navBarSize")(props) +
+        ")",
       height:
         "calc(100vh - ( " +
         themeGet("appScale.navBarSize")(props) +
