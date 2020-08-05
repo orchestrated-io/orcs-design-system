@@ -156,7 +156,9 @@ const RadioButtonDot = styled("div")(
 
 const RadioButtonText = styled("div")(
   css({
-    paddingLeft: "6px"
+    paddingLeft: "xs",
+    fontSize: "1",
+    fontWeight: "1"
   })
 );
 
