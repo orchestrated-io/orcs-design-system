@@ -181,7 +181,8 @@ const DatePickerContainer = styled.div`
     color: ${colours.white};
   }
   /*  .CalendarDay__hovered_span, */
-  .CalendarDay__hovered_span:hover {
+  .CalendarDay__hovered_span:hover,
+  .CalendarDay__default:hover {
     background: ${colours.primary};
     border: 1px double ${colours.primary};
     color: ${colours.white};
