@@ -13,11 +13,7 @@ const LabelStyles = compose(space, layout, typography, color);
 
 const InputStyles = compose(space, layout, typography, color);
 
-const Wrapper = styled("div")
-  .withConfig({ shouldForwardProp })
-  .attrs(props => ({
-    "data-testid": props["data-testid"] ? props["data-testid"] : null
-  }))(
+const Wrapper = styled("div").withConfig({ shouldForwardProp })(
   props =>
     css({
       position: "relative",
@@ -27,10 +23,10 @@ const Wrapper = styled("div")
 );
 
 const Input = styled("textarea")
+  .withConfig({ shouldForwardProp })
   .attrs(props => ({
     "data-testid": props["data-testid"] ? props["data-testid"] : null
-  }))
-  .withConfig({ shouldForwardProp })(
+  }))(
   props =>
     css({
       display: "block",
@@ -118,6 +114,7 @@ const TextArea = React.forwardRef((props, ref) => {
     bold,
     cols,
     rows,
+    onChange,
     theme
   } = props;
 
@@ -161,6 +158,8 @@ const TextArea = React.forwardRef((props, ref) => {
           rows={rows}
           valid={valid}
           invalid={invalid}
+          onChange={onChange}
+          data-testid={props["data-testid"]}
           {...InputStyles}
         />
       </Wrapper>

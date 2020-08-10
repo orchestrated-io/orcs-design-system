@@ -10,7 +10,7 @@ import { themeGet } from "@styled-system/theme-get";
 const SelectStyles = compose(space, layout);
 
 const Wrapper = styled("div").attrs(props => ({
-  "data-testid": props["data-testid"] ? props["data-testid"] : props.dataTestId
+  "data-testid": props["data-testid"] ? props["data-testid"] : null
 }))(
   css({
     display: "inline-block",
@@ -28,7 +28,6 @@ const Label = styled("label").attrs(props => ({
     fontSize: "1"
   })
 );
-
 /**
  *
  * This component uses React Select: <https://react-select.com/home>
@@ -248,7 +247,11 @@ const Select = forwardRef((props, ref) => {
   };
   return (
     <ThemeProvider theme={props.theme}>
-      <Wrapper inverted={props.inverted} {...SelectStyles}>
+      <Wrapper
+        inverted={props.inverted}
+        data-testid={props["data-testid"]}
+        {...SelectStyles}
+      >
         <Label inverted={props.inverted} htmlFor={props.id}>
           {props.label}
         </Label>
@@ -256,7 +259,6 @@ const Select = forwardRef((props, ref) => {
           ref={ref}
           styles={customStyles}
           theme={props.theme}
-          data-testid={props.dataTestId}
           inputId={props.id}
           inverted={props.inverted}
           isMulti={props.isMulti}
