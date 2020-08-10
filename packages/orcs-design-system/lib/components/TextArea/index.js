@@ -194,6 +194,10 @@ TextArea.propTypes = {
   LabelStyles: PropTypes.object,
   /** Set additional styles for the `Input` textarea if needed */
   InputStyles: PropTypes.object,
+  /** Specifies `data-testid` for testing */
+  "data-testid": PropTypes.string,
+  /** Specifies `onChange` function */
+  onChange: PropTypes.func,
   /** Specifies the design theme object */
   theme: PropTypes.object
 };

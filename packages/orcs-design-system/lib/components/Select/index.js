@@ -285,6 +285,8 @@ Select.propTypes = {
   dataTestId: PropTypes.string,
   /** Specifies prefix for the `#class` applied to the `Select` structures */
   classNamePrefix: PropTypes.string,
+  /** Specifies `data-testid` for testing */
+  "data-testid": PropTypes.string,
   /** Specifies the system design theme object */
   theme: PropTypes.object
 };
