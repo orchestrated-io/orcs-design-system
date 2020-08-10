@@ -200,6 +200,8 @@ TextArea.propTypes = {
   "data-testid": PropTypes.string,
   /** Specifies `onChange` function */
   onChange: PropTypes.func,
+  /** Specifies `textarea` default value (different from placeholder) */
+  defaultValue: PropTypes.string,
   /** Specifies the design theme object */
   theme: PropTypes.object
 };
