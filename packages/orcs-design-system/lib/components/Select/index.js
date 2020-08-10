@@ -263,6 +263,7 @@ const Select = forwardRef((props, ref) => {
           inverted={props.inverted}
           isMulti={props.isMulti}
           classNamePrefix={props.classNamePrefix}
+          onChange={props.onChange}
           {...props}
         />
       </Wrapper>
@@ -287,6 +288,8 @@ Select.propTypes = {
   classNamePrefix: PropTypes.string,
   /** Specifies `data-testid` for testing */
   "data-testid": PropTypes.string,
+  /** Specifies `onChange` function for the input */
+  onChange: PropTypes.func,
   /** Specifies the system design theme object */
   theme: PropTypes.object
 };

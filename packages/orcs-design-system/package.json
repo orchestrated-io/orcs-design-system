@@ -1,6 +1,6 @@
 {
   "name": "orcs-design-system",
-  "version": "0.9.119",
+  "version": "0.9.120",
   "description": "Orchestrated Design System: ORCS",
   "keywords": [
     "design",
@@ -70,7 +70,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/react-fontawesome": "^0.1.9",
     "@storybook/addon-a11y": "^6.0.0-beta.28",
-    "@storybook/addon-actions": "^6.0.0-beta.28",
+    "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-docs": "^6.0.0-beta.28",
     "@storybook/addon-knobs": "^6.0.0-beta.28",
     "@storybook/addon-links": "^6.0.0-beta.28",
