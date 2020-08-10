@@ -115,6 +115,7 @@ const TextArea = React.forwardRef((props, ref) => {
     cols,
     rows,
     onChange,
+    defaultValue,
     theme
   } = props;
 
@@ -160,6 +161,7 @@ const TextArea = React.forwardRef((props, ref) => {
           invalid={invalid}
           onChange={onChange}
           data-testid={props["data-testid"]}
+          defaultValue={defaultValue}
           {...InputStyles}
         />
       </Wrapper>
