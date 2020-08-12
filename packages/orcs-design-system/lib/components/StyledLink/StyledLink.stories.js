@@ -70,3 +70,10 @@ export const reactLink = () => (
   </BrowserRouter>
 );
 reactLink.storyName = "Using react-router";
+
+export const buttonLink = () => (
+  <StyledLink href="#" button>
+    Click me
+  </StyledLink>
+);
+buttonLink.storyName = "Button";

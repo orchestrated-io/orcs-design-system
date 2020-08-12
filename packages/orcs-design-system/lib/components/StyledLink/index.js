@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import shouldForwardProp from "@styled-system/should-forward-prop";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { space, layout } from "styled-system";
+import { space, layout, variant } from "styled-system";
 import { css } from "@styled-system/css";
 import systemtheme from "../../systemtheme";
 
@@ -47,8 +47,111 @@ const styleLink = LinkComponent =>
     layout
   );
 
+const styleButtonLink = LinkComponent =>
+  styled(LinkComponent)
+    .withConfig({
+      shouldForwardProp
+    })
+    .attrs(props => ({
+      className: "StyledLink",
+      to: props.to,
+      target: props.target,
+      "data-testid": props.dataTestId
+        ? props.dataTestId
+        : props["data-testid"]
+        ? props["data-testid"]
+        : null,
+      disabled: props.disabled
+        ? true
+        : props.variant == "disabled"
+        ? true
+        : false
+    }))(
+    props =>
+      css({
+        bg: "primary",
+        color: "white",
+        borderColor: "primary",
+        borderWidth: "1px",
+        borderStyle: "solid",
+        textDecoration: "none",
+        fontFamily: "main",
+        fontWeight: "2",
+        borderRadius: "2",
+        transition: "transitionDefault",
+        cursor: props.disabled
+          ? "not-allowed"
+          : props.isLoading
+          ? "progress"
+          : "pointer",
+        height: "auto",
+        fontSize: props.small
+          ? "1"
+          : props.large && props.iconOnly
+          ? "5"
+          : props.large
+          ? "3"
+          : "2",
+        py: props.large ? "s" : props.small ? "xxs" : "xs",
+        px: props.large ? "r" : props.small ? "s" : "between",
+        svg: {
+          marginRight: !props.iconLeft ? "" : props.small ? "xs" : "s",
+          marginLeft: !props.iconRight ? "" : props.small ? "xs" : "s"
+        },
+        "&:hover": {
+          bg: "primaryDark",
+          borderColor: "primaryDark"
+        }
+      }),
+    variant({
+      variants: {
+        default: {},
+        success: {
+          bg: "successDark",
+          color: "white",
+          borderColor: "successDark",
+          "&:hover": {
+            bg: "successDarker",
+            borderColor: "successDarker"
+          }
+        },
+        danger: {
+          bg: "danger",
+          color: "white",
+          borderColor: "danger",
+          "&:hover": {
+            bg: "dangerDark",
+            borderColor: "dangerDark"
+          }
+        },
+        disabled: {
+          bg: "greyLighter",
+          color: "grey",
+          borderColor: "greyLighter",
+          "&:hover": {
+            bg: "greyLighter",
+            color: "grey",
+            borderColor: "greyLighter"
+          }
+        },
+        ghost: {
+          bg: "primaryLightest",
+          color: "primary",
+          borderColor: "primaryLightest",
+          "&:hover": {
+            bg: "primaryLighter",
+            borderColor: "primaryLighter",
+            color: "primaryDark"
+          }
+        }
+      }
+    })
+  );
+
 const Hyperlink = styleLink(styled.a``);
 const ReactLink = styleLink(Link);
+const ButtonLink = styleButtonLink(styled.a``);
+const ReactButtonLink = styleButtonLink(Link);
 
 /**
  * This `StyledLink` component supports both standard html hyperlinks and react Link components (if using react router for example).
@@ -72,7 +175,7 @@ const ReactLink = styleLink(Link);
  *        Dashboard
  *      </HeaderLink>
  */
-export function StyledLink({
+const StyledLink = ({
   children,
   active,
   white,
@@ -80,8 +183,36 @@ export function StyledLink({
   theme,
   to,
   target,
+  button,
   ...props
-}) {
+}) => {
+  if (button) {
+    return to ? (
+      <ReactButtonLink
+        theme={theme}
+        active={active}
+        white={white}
+        bold={bold}
+        to={to}
+        target={target}
+        {...props}
+      >
+        {children}
+      </ReactButtonLink>
+    ) : (
+      <ButtonLink
+        theme={theme}
+        active={active}
+        white={white}
+        bold={bold}
+        to={to}
+        target={target}
+        {...props}
+      >
+        {children}
+      </ButtonLink>
+    );
+  }
   return to ? (
     <ReactLink
       theme={theme}
@@ -107,7 +238,7 @@ export function StyledLink({
       {children}
     </Hyperlink>
   );
-}
+};
 
 StyledLink.propTypes = {
   /** The content wrapped by the link component */
@@ -126,6 +257,8 @@ StyledLink.propTypes = {
   ]),
   /** Specifies the link target */
   target: PropTypes.string,
+  /** Specifies if the `StyledLink` should be visually styled to resemble a button */
+  button: PropTypes.bool,
   /** Specifies the system design theme. */
   theme: PropTypes.object
 };

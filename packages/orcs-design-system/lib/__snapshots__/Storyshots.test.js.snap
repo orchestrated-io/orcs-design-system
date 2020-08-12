@@ -196,7 +196,7 @@ exports[`Storyshots Components/Avatar Inverted 1`] = `
           type="inverted"
         >
           <a
-            className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
+            className="StyledLink__Hyperlink-sc-1beg6q3-2 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
             data-testid={null}
             href="#"
           >
@@ -224,7 +224,7 @@ exports[`Storyshots Components/Avatar Inverted 1`] = `
         type="inverted"
       >
         <a
-          className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
+          className="StyledLink__Hyperlink-sc-1beg6q3-2 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
           data-testid={null}
           href="#"
         >
@@ -270,7 +270,7 @@ exports[`Storyshots Components/Avatar Inverted 1`] = `
           type="inverted"
         >
           <a
-            className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
+            className="StyledLink__Hyperlink-sc-1beg6q3-2 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
             data-testid={null}
             href="#"
           >
@@ -304,7 +304,7 @@ exports[`Storyshots Components/Avatar Name as link 1`] = `
       className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 TZuyA"
     >
       <a
-        className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
+        className="StyledLink__Hyperlink-sc-1beg6q3-2 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
         data-testid={null}
         href="#"
       >
@@ -451,7 +451,7 @@ Array [
           className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 dbTNMm"
         >
           <a
-            className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
+            className="StyledLink__Hyperlink-sc-1beg6q3-2 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
             data-testid={null}
             href="#"
           >
@@ -1239,7 +1239,7 @@ exports[`Storyshots Components/Card Basic card 1`] = `
         Card content lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       </p>
       <a
-        className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 isqNRL StyledLink"
+        className="StyledLink__Hyperlink-sc-1beg6q3-2 StyledLink-sc-1beg6q3-0 isqNRL StyledLink"
         data-testid={null}
         href="#"
       >
@@ -2542,19 +2542,17 @@ Array [
       className="Header__SearchContainer-yf04b-2 gTnCUW"
     >
       <div
-        className="TextInput__Group-shde0o-0 eQdUQs"
-        placeholder="Search for..."
-        type="text"
+        className="sc-AxirZ ldFVTk"
       >
         <input
-          className="TextInput__Input-shde0o-2 bjiVAr"
+          className="TextInput__Input-shde0o-1 laTqlo"
           id="search"
           placeholder="Search for..."
           type="text"
         />
         <div>
           <label
-            className="TextInput__IconWrapper-shde0o-1 jnpZQG"
+            className="TextInput__IconWrapper-shde0o-0 fNQvEr"
             htmlFor="search"
           >
             <span
@@ -2601,7 +2599,7 @@ Array [
         className="Spacer__SpacerBox-sc-1acikjz-0 iGoMbw"
       >
         <a
-          className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
+          className="StyledLink__Hyperlink-sc-1beg6q3-2 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
           data-testid={null}
           onClick={[Function]}
         >
@@ -2663,7 +2661,7 @@ Array [
       display="block"
     >
       <a
-        className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
+        className="StyledLink__Hyperlink-sc-1beg6q3-2 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
         data-testid={null}
         onClick={[Function]}
       >
@@ -2704,7 +2702,7 @@ Array [
       className="Spacer__SpacerBox-sc-1acikjz-0 iGoMbw"
     >
       <a
-        className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 isqNRL StyledLink"
+        className="StyledLink__Hyperlink-sc-1beg6q3-2 StyledLink-sc-1beg6q3-0 isqNRL StyledLink"
         data-testid={null}
         href="#"
       >
@@ -2715,7 +2713,7 @@ Array [
       className="Spacer__SpacerBox-sc-1acikjz-0 iGoMbw"
     >
       <a
-        className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
+        className="StyledLink__Hyperlink-sc-1beg6q3-2 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
         data-testid={null}
         href="#"
       >
@@ -2726,7 +2724,7 @@ Array [
       className="Spacer__SpacerBox-sc-1acikjz-0 iGoMbw"
     >
       <a
-        className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
+        className="StyledLink__Hyperlink-sc-1beg6q3-2 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
         data-testid={null}
         href="#"
       >
@@ -2743,7 +2741,7 @@ Array [
         className="Spacer__SpacerBox-sc-1acikjz-0 iGoMbw"
       >
         <a
-          className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
+          className="StyledLink__Hyperlink-sc-1beg6q3-2 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
           data-testid={null}
           href="#"
         >
@@ -2796,7 +2794,7 @@ Array [
         className="Spacer__SpacerBox-sc-1acikjz-0 iGoMbw"
       >
         <a
-          className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
+          className="StyledLink__Hyperlink-sc-1beg6q3-2 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
           data-testid={null}
           onClick={[Function]}
         >
@@ -2858,7 +2856,7 @@ Array [
       display="block"
     >
       <a
-        className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 isqNRL StyledLink"
+        className="StyledLink__Hyperlink-sc-1beg6q3-2 StyledLink-sc-1beg6q3-0 isqNRL StyledLink"
         data-testid={null}
         href="#"
       >
@@ -2870,7 +2868,7 @@ Array [
       display="block"
     >
       <a
-        className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
+        className="StyledLink__Hyperlink-sc-1beg6q3-2 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
         data-testid={null}
         href="#"
       >
@@ -2882,7 +2880,7 @@ Array [
       display="block"
     >
       <a
-        className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
+        className="StyledLink__Hyperlink-sc-1beg6q3-2 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
         data-testid={null}
         href="#"
       >
@@ -2894,7 +2892,7 @@ Array [
       display="block"
     >
       <a
-        className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
+        className="StyledLink__Hyperlink-sc-1beg6q3-2 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
         data-testid={null}
         href="#"
       >
@@ -2913,7 +2911,7 @@ Array [
       display="block"
     >
       <a
-        className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
+        className="StyledLink__Hyperlink-sc-1beg6q3-2 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
         data-testid={null}
         onClick={[Function]}
       >
@@ -4028,7 +4026,7 @@ exports[`Storyshots Components/RadioButton Checked 1`] = `
       />
     </div>
     <div
-      className="RadioButton__RadioButtonText-d2jy6y-5 jvVOeF"
+      className="RadioButton__RadioButtonText-d2jy6y-5 gaqdzn"
     >
       Default checked radio
     </div>
@@ -4060,7 +4058,7 @@ Array [
           />
         </div>
         <div
-          className="RadioButton__RadioButtonText-d2jy6y-5 jvVOeF"
+          className="RadioButton__RadioButtonText-d2jy6y-5 gaqdzn"
         >
           Primary colour radio
         </div>
@@ -4089,7 +4087,7 @@ Array [
           />
         </div>
         <div
-          className="RadioButton__RadioButtonText-d2jy6y-5 jvVOeF"
+          className="RadioButton__RadioButtonText-d2jy6y-5 gaqdzn"
         >
           Success colour radio
         </div>
@@ -4118,7 +4116,7 @@ Array [
           />
         </div>
         <div
-          className="RadioButton__RadioButtonText-d2jy6y-5 jvVOeF"
+          className="RadioButton__RadioButtonText-d2jy6y-5 gaqdzn"
         >
           Warning colour radio
         </div>
@@ -4147,7 +4145,7 @@ Array [
           />
         </div>
         <div
-          className="RadioButton__RadioButtonText-d2jy6y-5 jvVOeF"
+          className="RadioButton__RadioButtonText-d2jy6y-5 gaqdzn"
         >
           Danger colour radio
         </div>
@@ -4181,7 +4179,7 @@ Array [
           />
         </div>
         <div
-          className="RadioButton__RadioButtonText-d2jy6y-5 jvVOeF"
+          className="RadioButton__RadioButtonText-d2jy6y-5 gaqdzn"
         >
           Default radio
         </div>
@@ -4210,7 +4208,7 @@ Array [
           />
         </div>
         <div
-          className="RadioButton__RadioButtonText-d2jy6y-5 jvVOeF"
+          className="RadioButton__RadioButtonText-d2jy6y-5 gaqdzn"
         >
           Default radio 02
         </div>
@@ -4246,7 +4244,7 @@ Array [
           />
         </div>
         <div
-          className="RadioButton__RadioButtonText-d2jy6y-5 jvVOeF"
+          className="RadioButton__RadioButtonText-d2jy6y-5 gaqdzn"
         >
           Disabled unchecked radio
         </div>
@@ -4278,7 +4276,7 @@ Array [
           />
         </div>
         <div
-          className="RadioButton__RadioButtonText-d2jy6y-5 jvVOeF"
+          className="RadioButton__RadioButtonText-d2jy6y-5 gaqdzn"
         >
           Disabled checked radio
         </div>
@@ -4312,7 +4310,7 @@ exports[`Storyshots Components/RadioButton Inverted 1`] = `
         />
       </div>
       <div
-        className="RadioButton__RadioButtonText-d2jy6y-5 jvVOeF"
+        className="RadioButton__RadioButtonText-d2jy6y-5 gaqdzn"
       >
         Inverted radio
       </div>
@@ -4369,6 +4367,7 @@ exports[`Storyshots Components/Select Default 1`] = `
 >
   <div
     className="Select__Wrapper-bfi43f-0 eLvxhH"
+    data-testid={null}
     display={[Function]}
     height={[Function]}
     overflow={[Function]}
@@ -4499,6 +4498,7 @@ exports[`Storyshots Components/Select Inverted 1`] = `
     >
       <div
         className="Select__Wrapper-bfi43f-0 eLvxhH"
+        data-testid={null}
         display={[Function]}
         height={[Function]}
         overflow={[Function]}
@@ -4618,6 +4618,7 @@ exports[`Storyshots Components/Select Inverted 1`] = `
     >
       <div
         className="Select__Wrapper-bfi43f-0 eLvxhH"
+        data-testid={null}
         display={[Function]}
         height={[Function]}
         overflow={[Function]}
@@ -4743,6 +4744,7 @@ exports[`Storyshots Components/Select Multi-select 1`] = `
 >
   <div
     className="Select__Wrapper-bfi43f-0 eLvxhH"
+    data-testid={null}
     display={[Function]}
     height={[Function]}
     overflow={[Function]}
@@ -4866,6 +4868,7 @@ exports[`Storyshots Components/Select With Data ID 1`] = `
 >
   <div
     className="Select__Wrapper-bfi43f-0 eLvxhH"
+    data-testid="test-this-component"
     display={[Function]}
     height={[Function]}
     overflow={[Function]}
@@ -4989,6 +4992,7 @@ exports[`Storyshots Components/Select With Selected Value 1`] = `
 >
   <div
     className="Select__Wrapper-bfi43f-0 eLvxhH"
+    data-testid={null}
     display={[Function]}
     height={[Function]}
     overflow={[Function]}
@@ -5107,7 +5111,7 @@ exports[`Storyshots Components/Select With Selected Value 1`] = `
 
 exports[`Storyshots Components/Sidebar Default Sidebar 1`] = `
 <div
-  className="Sidebar__SidebarWrapper-wr9mfw-0 dCzcjZ"
+  className="Sidebar__SidebarWrapper-wr9mfw-0 kaxmjM"
 >
   <div
     className="Sidebar__SidebarTabs-wr9mfw-1 iyffQQ"
@@ -5423,7 +5427,7 @@ exports[`Storyshots Components/StyledLink Active 1`] = `
   data-testid={null}
 >
   <a
-    className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
+    className="StyledLink__Hyperlink-sc-1beg6q3-2 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
     data-testid={null}
     href="#"
   >
@@ -5438,11 +5442,27 @@ exports[`Storyshots Components/StyledLink Bold 1`] = `
   data-testid={null}
 >
   <a
-    className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 isqNRL StyledLink"
+    className="StyledLink__Hyperlink-sc-1beg6q3-2 StyledLink-sc-1beg6q3-0 isqNRL StyledLink"
     data-testid={null}
     href="#"
   >
     Active Link
+  </a>
+</div>
+`;
+
+exports[`Storyshots Components/StyledLink Button 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 ezPMxm"
+  data-testid={null}
+>
+  <a
+    className="StyledLink__ButtonLink-sc-1beg6q3-3 StyledLink-sc-1beg6q3-1 dUIoJ StyledLink"
+    data-testid={null}
+    disabled={false}
+    href="#"
+  >
+    Click me
   </a>
 </div>
 `;
@@ -5453,7 +5473,7 @@ exports[`Storyshots Components/StyledLink Default 1`] = `
   data-testid={null}
 >
   <a
-    className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
+    className="StyledLink__Hyperlink-sc-1beg6q3-2 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
     data-testid={null}
     href="#"
   >
@@ -5479,7 +5499,7 @@ exports[`Storyshots Components/StyledLink Inverted 1`] = `
         className="Spacer__SpacerBox-sc-1acikjz-0 gHANPZ"
       >
         <a
-          className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 bDsIQU StyledLink"
+          className="StyledLink__Hyperlink-sc-1beg6q3-2 StyledLink-sc-1beg6q3-0 bDsIQU StyledLink"
           data-testid={null}
           href="#"
         >
@@ -5490,7 +5510,7 @@ exports[`Storyshots Components/StyledLink Inverted 1`] = `
         className="Spacer__SpacerBox-sc-1acikjz-0 gHANPZ"
       >
         <a
-          className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 isqNRL StyledLink"
+          className="StyledLink__Hyperlink-sc-1beg6q3-2 StyledLink-sc-1beg6q3-0 isqNRL StyledLink"
           data-testid={null}
           href="#"
         >
@@ -5501,7 +5521,7 @@ exports[`Storyshots Components/StyledLink Inverted 1`] = `
         className="Spacer__SpacerBox-sc-1acikjz-0 gHANPZ"
       >
         <a
-          className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
+          className="StyledLink__Hyperlink-sc-1beg6q3-2 StyledLink-sc-1beg6q3-0 iIIczX StyledLink"
           data-testid={null}
           href="#"
         >
@@ -5519,7 +5539,7 @@ exports[`Storyshots Components/StyledLink Targeted 1`] = `
   data-testid={null}
 >
   <a
-    className="StyledLink__Hyperlink-sc-1beg6q3-1 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
+    className="StyledLink__Hyperlink-sc-1beg6q3-2 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
     data-testid={null}
     href="#"
     target="_blank"
@@ -5773,19 +5793,18 @@ exports[`Storyshots Components/TextArea Bold Label 1`] = `
   data-testid={null}
 >
   <div
-    className="TextArea__Wrapper-sc-1oyenoa-0 fWZQnj"
-    data-testid={null}
+    className="sc-AxiKw jGnPVo"
   >
     <label
-      className="sc-AxiKw kjcFdB"
+      className="sc-AxhCb imqlcJ"
       htmlFor="TextAreaBold"
     >
       Message
        
     </label>
     <textarea
-      className="sc-AxirZ kQOMRJ"
-      data-testid={null}
+      className="TextArea__Input-sc-1oyenoa-0 bwEUUr"
+      data-testid="test-input"
       id="TextAreaBold"
     />
   </div>
@@ -5798,19 +5817,18 @@ exports[`Storyshots Components/TextArea Default 1`] = `
   data-testid={null}
 >
   <div
-    className="TextArea__Wrapper-sc-1oyenoa-0 fWZQnj"
-    data-testid={null}
+    className="sc-AxiKw jGnPVo"
   >
     <label
-      className="sc-AxiKw iNHEgn"
+      className="sc-AxhCb gQVkfv"
       htmlFor="TextArea01"
     >
       Message
        
     </label>
     <textarea
-      className="sc-AxirZ kQOMRJ"
-      data-testid={null}
+      className="TextArea__Input-sc-1oyenoa-0 bwEUUr"
+      data-testid="Test-id"
       id="TextArea01"
     />
   </div>
@@ -5823,18 +5841,17 @@ exports[`Storyshots Components/TextArea Full-width 1`] = `
   data-testid={null}
 >
   <div
-    className="TextArea__Wrapper-sc-1oyenoa-0 bUqfwo"
-    data-testid={null}
+    className="sc-AxiKw gAAQj"
   >
     <label
-      className="sc-AxiKw iNHEgn"
+      className="sc-AxhCb gQVkfv"
       htmlFor="TextArea05"
     >
       Message
        
     </label>
     <textarea
-      className="sc-AxirZ eYJaHq"
+      className="TextArea__Input-sc-1oyenoa-0 eoBnJg"
       data-testid={null}
       id="TextArea05"
     />
@@ -5855,18 +5872,17 @@ exports[`Storyshots Components/TextArea Inverted 1`] = `
       className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
     >
       <div
-        className="TextArea__Wrapper-sc-1oyenoa-0 fWZQnj"
-        data-testid={null}
+        className="sc-AxiKw jGnPVo"
       >
         <label
-          className="sc-AxiKw gGsgKe"
+          className="sc-AxhCb kdYhga"
           htmlFor="TextArea06"
         >
           Message
            
         </label>
         <textarea
-          className="sc-AxirZ kQOMRJ"
+          className="TextArea__Input-sc-1oyenoa-0 bwEUUr"
           data-testid={null}
           id="TextArea06"
         />
@@ -5876,18 +5892,17 @@ exports[`Storyshots Components/TextArea Inverted 1`] = `
       className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
     >
       <div
-        className="TextArea__Wrapper-sc-1oyenoa-0 fWZQnj"
-        data-testid={null}
+        className="sc-AxiKw jGnPVo"
       >
         <label
-          className="sc-AxiKw cMSLBM"
+          className="sc-AxhCb dJiddI"
           htmlFor="TextArea07"
         >
           Message
            
         </label>
         <textarea
-          className="sc-AxirZ cxvnhh"
+          className="TextArea__Input-sc-1oyenoa-0 bboggD"
           data-testid={null}
           id="TextArea07"
         />
@@ -5897,18 +5912,17 @@ exports[`Storyshots Components/TextArea Inverted 1`] = `
       className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
     >
       <div
-        className="TextArea__Wrapper-sc-1oyenoa-0 fWZQnj"
-        data-testid={null}
+        className="sc-AxiKw jGnPVo"
       >
         <label
-          className="sc-AxiKw bVzTCZ"
+          className="sc-AxhCb jOYICF"
           htmlFor="TextArea08"
         >
           Message
            
         </label>
         <textarea
-          className="sc-AxirZ fHlbdd"
+          className="TextArea__Input-sc-1oyenoa-0 gfUANn"
           data-testid={null}
           id="TextArea08"
         />
@@ -5924,11 +5938,10 @@ exports[`Storyshots Components/TextArea Mandatory 1`] = `
   data-testid={null}
 >
   <div
-    className="TextArea__Wrapper-sc-1oyenoa-0 fWZQnj"
-    data-testid={null}
+    className="sc-AxiKw jGnPVo"
   >
     <label
-      className="sc-AxiKw iNHEgn"
+      className="sc-AxhCb gQVkfv"
       htmlFor="TextAreaMandatory"
     >
       Message
@@ -5938,7 +5951,7 @@ exports[`Storyshots Components/TextArea Mandatory 1`] = `
       </span>
     </label>
     <textarea
-      className="sc-AxirZ kQOMRJ"
+      className="TextArea__Input-sc-1oyenoa-0 bwEUUr"
       data-testid={null}
       id="TextAreaMandatory"
     />
@@ -5952,18 +5965,17 @@ exports[`Storyshots Components/TextArea Size 1`] = `
   data-testid={null}
 >
   <div
-    className="TextArea__Wrapper-sc-1oyenoa-0 fWZQnj"
-    data-testid={null}
+    className="sc-AxiKw jGnPVo"
   >
     <label
-      className="sc-AxiKw iNHEgn"
+      className="sc-AxhCb gQVkfv"
       htmlFor="TextArea02"
     >
       Message
        
     </label>
     <textarea
-      className="sc-AxirZ kQOMRJ"
+      className="TextArea__Input-sc-1oyenoa-0 bwEUUr"
       cols="50"
       data-testid={null}
       id="TextArea02"
@@ -5982,18 +5994,17 @@ exports[`Storyshots Components/TextArea States 1`] = `
     className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
   >
     <div
-      className="TextArea__Wrapper-sc-1oyenoa-0 fWZQnj"
-      data-testid={null}
+      className="sc-AxiKw jGnPVo"
     >
       <label
-        className="sc-AxiKw clAwFD"
+        className="sc-AxhCb kbrPSv"
         htmlFor="TextArea03"
       >
         Message
          
       </label>
       <textarea
-        className="sc-AxirZ cxvnhh"
+        className="TextArea__Input-sc-1oyenoa-0 bboggD"
         data-testid={null}
         id="TextArea03"
       />
@@ -6003,18 +6014,17 @@ exports[`Storyshots Components/TextArea States 1`] = `
     className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
   >
     <div
-      className="TextArea__Wrapper-sc-1oyenoa-0 fWZQnj"
-      data-testid={null}
+      className="sc-AxiKw jGnPVo"
     >
       <label
-        className="sc-AxiKw kBJRfm"
+        className="sc-AxhCb iHLCEe"
         htmlFor="TextArea04"
       >
         Message
          
       </label>
       <textarea
-        className="sc-AxirZ fHlbdd"
+        className="TextArea__Input-sc-1oyenoa-0 gfUANn"
         data-testid={null}
         id="TextArea04"
       />
@@ -6029,18 +6039,16 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="TextInput__Group-shde0o-0 gRGOZf"
-      placeholder="E.g. John Smith"
-      type="text"
+      className="sc-AxirZ jSSjhL"
     >
       <label
-        className="TextInput__Label-shde0o-4 gJzsZZ"
+        className="TextInput__Label-shde0o-3 kLmJEa"
         htmlFor="textInput1"
       >
         Full name
       </label>
       <input
-        className="TextInput__Input-shde0o-2 gUCiTr"
+        className="TextInput__Input-shde0o-1 cAHiXc"
         id="textInput1"
         label="Full name"
         placeholder="E.g. John Smith"
@@ -6052,18 +6060,16 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="TextInput__Group-shde0o-0 gRGOZf"
-      placeholder="E.g. John Smith"
-      type="text"
+      className="sc-AxirZ kfOHSf"
     >
       <label
-        className="TextInput__Label-shde0o-4 ftnqwa"
+        className="TextInput__Label-shde0o-3 jLNJsh"
         htmlFor="textInput2"
       >
         Full name
       </label>
       <input
-        className="TextInput__Input-shde0o-2 jsIVpY"
+        className="TextInput__Input-shde0o-1 iITdun"
         id="textInput2"
         label="Full name"
         placeholder="E.g. John Smith"
@@ -6075,18 +6081,16 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="TextInput__Group-shde0o-0 gRGOZf"
-      placeholder="E.g. John Smith"
-      type="text"
+      className="sc-AxirZ kfOHSf"
     >
       <label
-        className="TextInput__Label-shde0o-4 dgeIiB"
+        className="TextInput__Label-shde0o-3 dGzwji"
         htmlFor="textInput3"
       >
         Full name
       </label>
       <input
-        className="TextInput__Input-shde0o-2 koskDo"
+        className="TextInput__Input-shde0o-1 iQZByb"
         id="textInput3"
         label="Full name"
         placeholder="E.g. John Smith"
@@ -6098,18 +6102,16 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="TextInput__Group-shde0o-0 gRGOZf"
-      placeholder="E.g. John Smith"
-      type="text"
+      className="sc-AxirZ kfOHSf"
     >
       <label
-        className="TextInput__Label-shde0o-4 khxHLp"
+        className="TextInput__Label-shde0o-3 bhEaoS"
         htmlFor="textInput4"
       >
         Full name
       </label>
       <input
-        className="TextInput__Input-shde0o-2 gUCiTr"
+        className="TextInput__Input-shde0o-1 cAHiXc"
         id="textInput4"
         label="Full name"
         placeholder="E.g. John Smith"
@@ -6126,19 +6128,17 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="TextInput__Group-shde0o-0 gRGOZf"
-      placeholder="E.g. John Smith"
-      type="text"
+      className="sc-AxirZ kfOHSf"
     >
       <input
-        className="TextInput__Input-shde0o-2 hOhAbG"
+        className="TextInput__Input-shde0o-1 bLZXHZ"
         id="textInput5"
         label="Full name"
         placeholder="E.g. John Smith"
         type="text"
       />
       <label
-        className="TextInput__Label-shde0o-4 ZQbaL"
+        className="TextInput__Label-shde0o-3 rLDmY"
         htmlFor="textInput5"
       >
         Full name
@@ -6149,19 +6149,17 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="TextInput__Group-shde0o-0 gRGOZf"
-      placeholder="E.g. John Smith"
-      type="text"
+      className="sc-AxirZ kfOHSf"
     >
       <input
-        className="TextInput__Input-shde0o-2 hUAA-Dg"
+        className="TextInput__Input-shde0o-1 bUmpzL"
         id="textInput6"
         label="Full name"
         placeholder="E.g. John Smith"
         type="text"
       />
       <label
-        className="TextInput__Label-shde0o-4 cohUvM"
+        className="TextInput__Label-shde0o-3 eCVpHP"
         htmlFor="textInput6"
       >
         Full name
@@ -6172,19 +6170,17 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="TextInput__Group-shde0o-0 gRGOZf"
-      placeholder="E.g. John Smith"
-      type="text"
+      className="sc-AxirZ kfOHSf"
     >
       <input
-        className="TextInput__Input-shde0o-2 hatoxP"
+        className="TextInput__Input-shde0o-1 gtEfZk"
         id="textInput7"
         label="Full name"
         placeholder="E.g. John Smith"
         type="text"
       />
       <label
-        className="TextInput__Label-shde0o-4 kYKNXg"
+        className="TextInput__Label-shde0o-3 hEfZVX"
         htmlFor="textInput7"
       >
         Full name
@@ -6195,19 +6191,17 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="TextInput__Group-shde0o-0 gRGOZf"
-      placeholder="E.g. John Smith"
-      type="text"
+      className="sc-AxirZ kfOHSf"
     >
       <input
-        className="TextInput__Input-shde0o-2 hOhAbG"
+        className="TextInput__Input-shde0o-1 bLZXHZ"
         id="textInput8"
         label="Full name"
         placeholder="E.g. John Smith"
         type="text"
       />
       <label
-        className="TextInput__Label-shde0o-4 kYMwjf"
+        className="TextInput__Label-shde0o-3 fMA-dCE"
         htmlFor="textInput8"
       >
         Full name
@@ -6219,17 +6213,18 @@ Array [
 
 exports[`Storyshots Components/TextInput Number 1`] = `
 <div
-  className="TextInput__Group-shde0o-0 gRGOZf"
+  className="sc-AxirZ kfOHSf"
   value="345345.55"
 >
   <label
-    className="TextInput__Label-shde0o-4 gJzsZZ"
+    className="TextInput__Label-shde0o-3 kLmJEa"
     htmlFor="numInput1"
   >
     Currency
   </label>
   <input
-    className="TextInput__NumberInput-shde0o-3 bzFUJB"
+    className="TextInput__NumberInput-shde0o-2 eMbHnI"
+    data-testid={null}
     id="numInput1"
     inputMode="numeric"
     label="Currency"
@@ -6250,18 +6245,16 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="TextInput__Group-shde0o-0 gRGOZf"
-      placeholder="E.g. (03) 9451 1786"
-      type="text"
+      className="sc-AxirZ kfOHSf"
     >
       <label
-        className="TextInput__Label-shde0o-4 gJzsZZ"
+        className="TextInput__Label-shde0o-3 kLmJEa"
         htmlFor="textInput9"
       >
         Phone number
       </label>
       <input
-        className="TextInput__Input-shde0o-2 iitdbU"
+        className="TextInput__Input-shde0o-1 evtjJL"
         id="textInput9"
         label="Phone number"
         placeholder="E.g. (03) 9451 1786"
@@ -6269,7 +6262,7 @@ Array [
       />
       <div>
         <label
-          className="TextInput__IconWrapper-shde0o-1 edUEWd"
+          className="TextInput__IconWrapper-shde0o-0 gqmMbo"
           htmlFor="textInput9"
         >
           <span
@@ -6289,26 +6282,24 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="TextInput__Group-shde0o-0 gRGOZf"
-      placeholder="E.g. (03) 9451 1786"
-      type="text"
+      className="sc-AxirZ kfOHSf"
     >
       <input
-        className="TextInput__Input-shde0o-2 ilDcqZ"
+        className="TextInput__Input-shde0o-1 iUfvyG"
         id="textInput10"
         label="Phone number"
         placeholder="E.g. (03) 9451 1786"
         type="text"
       />
       <label
-        className="TextInput__Label-shde0o-4 hhEVmY"
+        className="TextInput__Label-shde0o-3 JrWNP"
         htmlFor="textInput10"
       >
         Phone number
       </label>
       <div>
         <label
-          className="TextInput__IconWrapper-shde0o-1 cFZdcO"
+          className="TextInput__IconWrapper-shde0o-0 iTUglL"
           htmlFor="textInput10"
         >
           <span
@@ -6328,18 +6319,16 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="TextInput__Group-shde0o-0 eQdUQs"
-      placeholder="E.g. agile teams"
-      type="text"
+      className="sc-AxirZ ldFVTk"
     >
       <label
-        className="TextInput__Label-shde0o-4 gJzsZZ"
+        className="TextInput__Label-shde0o-3 kLmJEa"
         htmlFor="textInput11"
       >
         What are you looking for?
       </label>
       <input
-        className="TextInput__Input-shde0o-2 bjiVAr"
+        className="TextInput__Input-shde0o-1 laTqlo"
         id="textInput11"
         label="What are you looking for?"
         placeholder="E.g. agile teams"
@@ -6347,7 +6336,7 @@ Array [
       />
       <div>
         <label
-          className="TextInput__IconWrapper-shde0o-1 jnpZQG"
+          className="TextInput__IconWrapper-shde0o-0 fNQvEr"
           htmlFor="textInput11"
         >
           <span
@@ -6367,26 +6356,24 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="TextInput__Group-shde0o-0 eQdUQs"
-      placeholder="E.g. agile teams"
-      type="text"
+      className="sc-AxirZ ldFVTk"
     >
       <input
-        className="TextInput__Input-shde0o-2 dLhsfK"
+        className="TextInput__Input-shde0o-1 ldTexF"
         id="textInput12"
         label="What are you looking for?"
         placeholder="E.g. agile teams"
         type="text"
       />
       <label
-        className="TextInput__Label-shde0o-4 kVLpNw"
+        className="TextInput__Label-shde0o-3 bLlXZj"
         htmlFor="textInput12"
       >
         What are you looking for?
       </label>
       <div>
         <label
-          className="TextInput__IconWrapper-shde0o-1 hhiilF"
+          className="TextInput__IconWrapper-shde0o-0 fSEjg"
           htmlFor="textInput12"
         >
           <span
