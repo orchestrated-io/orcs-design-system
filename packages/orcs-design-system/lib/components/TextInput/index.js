@@ -4,6 +4,10 @@ import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import { space, layout, compose } from "styled-system";
 import { css as sscss } from "@styled-system/css";
+import {
+  createShouldForwardProp,
+  props
+} from "@styled-system/should-forward-prop";
 import colours from "../../colours";
 import variables from "../../variables";
 import Icon from "../Icon";
@@ -11,7 +15,22 @@ import { rgba } from "polished";
 
 const InputStyles = compose(space, layout);
 
-const Group = styled("div")(
+const shouldForwardProp = createShouldForwardProp([
+  ...props,
+  "type",
+  "placeholder",
+  "defaultValue",
+  "disabled",
+  "maxLength",
+  "pattern",
+  "required",
+  "autocomplete",
+  "autofocus",
+  "step",
+  "readonly"
+]);
+
+const Group = styled("div").withConfig({ shouldForwardProp })(
   props =>
     sscss({
       position: "relative",
@@ -174,7 +193,7 @@ const Input = styled("input").attrs(props => ({
 `;
 
 const NumberInput = styled(NumberFormat).attrs(props => ({
-  "data-testid": props.dataTestId
+  "data-testid": props["data-testid"] ? props["data-testid"] : null
 }))`
   ${InputStyle}
 `;
@@ -225,15 +244,7 @@ const Label = styled.label`
         `
       : css``};
 `;
-/**
- * The TextInput component can be used as default text inputs with separate label and input like top row examples; these should be used most of the time.
- *
- * For extra flair, a `floating` prop can be added to display the label floating inside the input which animates on click; these should be used for stand out or important forms such as sign in/sign up, subscribe or contact us forms.
- *
- * Examples also include three validation states: `default`, `invalid`, `valid`.
- *
- * Ensure to use a unique `id` for each input, and helpful placeholder text which shows an example of what should be input is very useful to users.
- */
+
 const TextInput = React.forwardRef((props, ref) => {
   const {
     inverted,
@@ -246,7 +257,6 @@ const TextInput = React.forwardRef((props, ref) => {
     mandatory,
     iconLeft,
     iconRight,
-    dataTestId,
     ...InputStyles
   } = props;
 
@@ -276,11 +286,12 @@ const TextInput = React.forwardRef((props, ref) => {
       {numberProps ? (
         <NumberInput
           getInputRef={getNumberInputRef}
+          data-testid={props["data-testid"]}
           {...rest}
           {...numberProps}
         />
       ) : (
-        <Input dataTestId={dataTestId} ref={ref} {...rest} />
+        <Input data-testid={props["data-testid"]} ref={ref} {...rest} />
       )}
       {label && floating ? (
         <Label
@@ -341,7 +352,9 @@ TextInput.propTypes = {
   /** Set inverted styling for dark backgrounds */
   inverted: PropTypes.bool,
   /** Specifies the `data-testid` attribute for testing. */
-  dataTestId: PropTypes.string
+  "data-testid": PropTypes.string,
+  /** Specifies any additional `space` and `layout` props for the entire component */
+  InputStyles: PropTypes.object
 };
 
 export default TextInput;

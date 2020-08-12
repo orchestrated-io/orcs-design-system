@@ -17,6 +17,7 @@ export const defaultTextInput = () => (
       type="text"
       label="Full name"
       placeholder="E.g. John Smith"
+      my="20px"
     />
     <TextInput
       id="textInput2"
