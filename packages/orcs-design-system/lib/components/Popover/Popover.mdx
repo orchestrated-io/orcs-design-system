@@ -3,7 +3,7 @@ import Popover from ".";
 
 # Popover
 
-[Default Popover](#default-Popover) | [Directions](#directions) | [Specified width](#specified-width) | [Text alignment](#text-alignment) | [Inline](#inline) | [Properties](#properties)
+[Default Popover](#default-Popover) | [Directions](#directions) | [Specified width](#specified-width) | [Text alignment](#text-alignment) | [Display inline-block](#display-inline-block) | [Properties](#properties)
 
 This popover component is intended to be used to supplement buttons (or other elements) that require some helper text. It supports customisation of direction and width. This is so that you can ensure that the popover doesn't run off the screen, and that the width suits the amount of text in the popover.
 
@@ -17,11 +17,15 @@ If you don't specify a width, 200px is the default, but as a general guide try a
 
 ## Directions
 
+Use direction prop to set the direction of the tooltip so that it is positioned in a good place relative to the user interface around it. By default this is set to right. For example, you might use left instead if the element that triggers the popover is on the right side edge of the browser, so that the tooltip does not go off the edge of the screen.
+
 <Preview>
   <Story id="components-popover--direction" />
 </Preview>
 
 ## Specified width
+
+The width prop should be used to tailor the size of the popover to the content that will be presented inside it. Try and select a width that best suits the content.
 
 <Preview>
   <Story id="components-popover--specified-width" />
@@ -29,14 +33,18 @@ If you don't specify a width, 200px is the default, but as a general guide try a
 
 ## Text alignment
 
+Use this to set the text alignment to what looks best. Typically one to a few words will look better centered, a sentence or paragraph will look better left aligned. Left aligned is set by default so only really need to make use of this prop if you want the tooltip text centered.
+
 <Preview>
   <Story id="components-popover--text-alignment" />
 </Preview>
 
-## Inline
+## Display inline-block
+
+Use this prop if the Popover tooltip does not look correct, in some cases it will need to be displayed as inline-block.
 
 <Preview>
-  <Story id="components-popover--inline" />
+  <Story id="components-popover--display-inline-block" />
 </Preview>
 
 ## Properties

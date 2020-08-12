@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../Button";
 import Popover from ".";
 import Box from "../Box";
+import Grid from "../Grid";
 import Flex from "../Flex";
 import mdx from "./Popover.mdx";
 
@@ -21,57 +22,85 @@ export default {
 };
 
 export const defaultPopover = () => (
-  <Popover text="Text description of what this button does">
+  <Popover text="Description that explains child element">
     <Button>Hover Me!</Button>
   </Popover>
 );
 defaultPopover.storyName = "Default";
 
 export const direction = () => (
-  <>
-    <Popover direction="right" text="Text description of what this button does">
-      <Button>Right Hover</Button>
+  <Grid
+    gridTemplateColumns="1fr 1fr 1fr"
+    gridAutoFlow="row"
+    gridGap="r"
+    alignItems="center"
+    justifyContent="center"
+  >
+    <Popover direction="topLeft" text="Description that explains child element">
+      <Button width="125px">Top left</Button>
     </Popover>
-    <Popover direction="left" text="Text description of what this button does">
-      <Button>Left Hover</Button>
+    <Popover direction="top" text="Description that explains child element">
+      <Button width="125px">Top</Button>
     </Popover>
     <Popover
-      direction="bottom"
-      text="Centered description of what this button does"
+      direction="topRight"
+      text="Description that explains child element"
     >
-      <Button>Bottom Hover</Button>
+      <Button width="125px">Top right</Button>
     </Popover>
-    <Popover direction="top" text="Text description of what this button does">
-      <Button>Top Hover</Button>
+    <Popover direction="left" text="Description that explains child element">
+      <Button width="125px">Left</Button>
     </Popover>
-  </>
+    <Box height="32px" width="125px" bg="greyLighter" m="auto" />
+    <Popover direction="right" text="Description that explains child element">
+      <Button width="125px">Right</Button>
+    </Popover>
+    <Popover
+      direction="bottomLeft"
+      text="Description that explains child element"
+    >
+      <Button width="125px">Bottom left</Button>
+    </Popover>
+    <Popover direction="bottom" text="Description that explains child element">
+      <Button width="125px">Bottom</Button>
+    </Popover>
+    <Popover
+      direction="bottomRight"
+      text="Description that explains child element"
+    >
+      <Button width="125px">Bottom right</Button>
+    </Popover>
+  </Grid>
 );
 direction.storyName = "Direction";
 
 export const specifiedWidth = () => (
-  <Popover text="Text description of what this button does" width="100px">
+  <Popover text="Description that explains child element" width="240px">
     <Button>Hover Me</Button>
   </Popover>
 );
 
 export const textAlignment = () => (
-  <Popover textAlign="center" text="Text description of what this button does">
+  <Popover
+    textAlign="center"
+    text="Centered description that explains child element"
+  >
     <Button>Hover Me</Button>
   </Popover>
 );
 
-export const inline = () => (
+export const DisplayInlineBlock = () => (
   <>
-    <Popover text="Text description of what this button does" inlineBlock>
+    <Popover text="Description that explains child element" inlineBlock>
       <Button>Inline Block Set</Button>
     </Popover>
-    <Popover text="Text description of what this button does" inlineBlock>
+    <Popover text="Description that explains child element" inlineBlock>
       <Button>Inline Block Set</Button>
     </Popover>
-    <Popover text="Centered description of what this button does">
+    <Popover text="Description that explains child element">
       <Button>Not Inline</Button>
     </Popover>
-    <Popover direction="top" text="Text description of what this button does">
+    <Popover direction="top" text="Description that explains child element">
       <Button>Not Inline</Button>
     </Popover>
   </>

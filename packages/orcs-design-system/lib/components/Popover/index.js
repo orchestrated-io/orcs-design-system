@@ -18,6 +18,7 @@ ${layout}
       opacity: 1;
       z-index: 100;
       visibility: visible;
+      pointer-events: auto;
     }
   }
 `;
@@ -45,6 +46,8 @@ const Text = styled.div`
   opacity: 0;
   z-index: -100;
   visibility: hidden;
+  pointer-events: none;
+  user-select: all;
 
   &:before {
     content: "";
@@ -94,9 +97,55 @@ const Text = styled.div`
             height: calc(100% + 10px);
           }
         `
+      : direction === "topRight"
+      ? css`
+          left: 100%;
+          top: auto;
+          bottom: 100%;
+          transform: translateX(5px) translateY(-5px);
+          box-shadow: 0 4px 14px 0 ${rgba(colours.greyDarkest, 0.15)};
+          &:before {
+            left: 0;
+            top: auto;
+            margin-top: 0;
+            bottom: -5px;
+            margin-left: -5px;
+            transform: rotate(-45deg);
+            border-width: 5px 10px 5px 0;
+          }
+          &:after {
+            left: -20px;
+            top: 0;
+            width: calc(100% + 20px);
+            height: calc(100% + 20px);
+          }
+        `
       : direction === "right"
       ? css`
           /* No changes as same as default */
+        `
+      : direction === "bottomRight"
+      ? css`
+          left: 100%;
+          top: 100%;
+          bottom: auto;
+          transform: translateX(5px) translateY(5px);
+          box-shadow: 0 4px 14px 0 ${rgba(colours.greyDarkest, 0.15)};
+          &:before {
+            left: 0;
+            bottom: auto;
+            margin-top: 0;
+            top: -5px;
+            margin-left: -5px;
+            transform: rotate(45deg);
+            border-width: 5px 10px 5px 0;
+          }
+          &:after {
+            left: -20px;
+            top: -20px;
+            width: calc(100% + 20px);
+            height: calc(100% + 20px);
+          }
         `
       : direction === "bottom"
       ? css`
@@ -119,6 +168,31 @@ const Text = styled.div`
             height: calc(100% + 10px);
           }
         `
+      : direction === "bottomLeft"
+      ? css`
+          right: 100%;
+          left: auto;
+          top: 100%;
+          bottom: auto;
+          transform: translateX(-5px) translateY(5px);
+          box-shadow: 0 4px 14px 0 ${rgba(colours.greyDarkest, 0.15)};
+          &:before {
+            right: 0;
+            left: auto;
+            bottom: auto;
+            margin-top: 0;
+            top: -5px;
+            margin-right: -5px;
+            transform: rotate(135deg);
+            border-width: 5px 10px 5px 0;
+          }
+          &:after {
+            left: 0;
+            top: -20px;
+            width: calc(100% + 20px);
+            height: calc(100% + 20px);
+          }
+        `
       : direction === "left"
       ? css`
           left: auto;
@@ -133,6 +207,31 @@ const Text = styled.div`
           &:after {
             left: auto;
             right: -10px;
+          }
+        `
+      : direction === "topLeft"
+      ? css`
+          right: 100%;
+          left: auto;
+          top: auto;
+          bottom: 100%;
+          transform: translateX(-5px) translateY(-5px);
+          box-shadow: 0 4px 14px 0 ${rgba(colours.greyDarkest, 0.15)};
+          &:before {
+            right: 0;
+            left: auto;
+            top: auto;
+            margin-top: 0;
+            bottom: -5px;
+            margin-right: -5px;
+            transform: rotate(225deg);
+            border-width: 5px 10px 5px 0;
+          }
+          &:after {
+            left: 0;
+            top: 0;
+            width: calc(100% + 20px);
+            height: calc(100% + 20px);
           }
         `
       : css``};
