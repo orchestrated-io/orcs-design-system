@@ -38,7 +38,6 @@ const Text = styled.div`
   padding: 8px 10px;
   border-radius: ${variables.borderRadiusSmall};
   transform: translateX(10px) translateY(-50%);
-  transition: ${variables.defaultTransition};
   box-shadow: -3px 0px 12px 0 ${rgba(colours.greyDarkest, 0.15)};
   width: ${props => (props.width ? props.width : "200px")};
   background: ${colours.greyDarker};
@@ -116,7 +115,7 @@ const Text = styled.div`
           &:after {
             left: -20px;
             top: 0;
-            width: calc(100% + 20px);
+            width: 40px;
             height: calc(100% + 20px);
           }
         `
@@ -143,7 +142,7 @@ const Text = styled.div`
           &:after {
             left: -20px;
             top: -20px;
-            width: calc(100% + 20px);
+            width: 40px;
             height: calc(100% + 20px);
           }
         `
@@ -187,9 +186,10 @@ const Text = styled.div`
             border-width: 5px 10px 5px 0;
           }
           &:after {
-            left: 0;
+            left: auto;
+            right: -20px;
             top: -20px;
-            width: calc(100% + 20px);
+            width: 40px;
             height: calc(100% + 20px);
           }
         `
@@ -228,9 +228,10 @@ const Text = styled.div`
             border-width: 5px 10px 5px 0;
           }
           &:after {
-            left: 0;
+            left: auto;
+            right: -20px;
             top: 0;
-            width: calc(100% + 20px);
+            width: 40px;
             height: calc(100% + 20px);
           }
         `
