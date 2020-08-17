@@ -147,7 +147,8 @@ export const Button = ({
   rightIcon,
   children,
   onClick,
-  ...ButtonStyles
+  ButtonStyles,
+  ...props
 }) => {
   return (
     <ThemeProvider theme={theme}>
@@ -168,6 +169,7 @@ export const Button = ({
         variant={disabled ? "disabled" : null}
         onClick={onClick}
         {...ButtonStyles}
+        {...props}
       >
         {leftIcon && <Icon icon={leftIcon} mr={small ? "xxs" : "xs"} />}
         {children}
@@ -213,6 +215,8 @@ Button.propTypes = {
   onClick: PropTypes.func,
   /** The text label on the button is passed as a child. Keep this text short and descriptive. Use an action word or confirmation if possible. */
   children: PropTypes.node,
+  /** Adds additional styling to the rendered `<button>` using `space`, `layout`, `color` and `border` prop categories */
+  ButtonStyles: PropTypes.object,
   /** Specifies the `data-testid` attribute for testing. */
   dataTestId: PropTypes.string,
   /** Specifies the color theme object. */
