@@ -132,24 +132,24 @@ const StyledButton = styled("button")
   ButtonStyles
 );
 
-export const Button = ({
-  large,
-  small,
-  fullWidth,
-  isLoading,
-  iconLeft,
-  iconRight,
-  iconOnly,
-  dataTestId,
-  disabled,
-  theme,
-  leftIcon,
-  rightIcon,
-  children,
-  onClick,
-  ButtonStyles,
-  ...props
-}) => {
+export const Button = React.forwardRef((props, ref) => {
+  const {
+    large,
+    small,
+    fullWidth,
+    isLoading,
+    iconLeft,
+    iconRight,
+    iconOnly,
+    dataTestId,
+    disabled,
+    theme,
+    leftIcon,
+    rightIcon,
+    children,
+    onClick,
+    ButtonStyles
+  } = props;
   return (
     <ThemeProvider theme={theme}>
       <StyledButton
@@ -168,6 +168,7 @@ export const Button = ({
         disabled={disabled}
         variant={disabled ? "disabled" : null}
         onClick={onClick}
+        ref={ref}
         {...ButtonStyles}
         {...props}
       >
@@ -178,7 +179,7 @@ export const Button = ({
       </StyledButton>
     </ThemeProvider>
   );
-};
+});
 
 export default Button;
 
