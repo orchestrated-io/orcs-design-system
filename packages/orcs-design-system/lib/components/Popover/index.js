@@ -113,10 +113,10 @@ const Text = styled.div`
             border-width: 5px 10px 5px 0;
           }
           &:after {
-            left: -20px;
+            left: -10px;
             top: 0;
             width: 40px;
-            height: calc(100% + 20px);
+            height: calc(100% + 10px);
           }
         `
       : direction === "right"
@@ -140,10 +140,10 @@ const Text = styled.div`
             border-width: 5px 10px 5px 0;
           }
           &:after {
-            left: -20px;
-            top: -20px;
+            left: -10px;
+            top: -10px;
             width: 40px;
-            height: calc(100% + 20px);
+            height: calc(100% + 10px);
           }
         `
       : direction === "bottom"
@@ -187,10 +187,10 @@ const Text = styled.div`
           }
           &:after {
             left: auto;
-            right: -20px;
-            top: -20px;
+            right: -10px;
+            top: -10px;
             width: 40px;
-            height: calc(100% + 20px);
+            height: calc(100% + 10px);
           }
         `
       : direction === "left"
@@ -229,10 +229,10 @@ const Text = styled.div`
           }
           &:after {
             left: auto;
-            right: -20px;
+            right: -10px;
             top: 0;
             width: 40px;
-            height: calc(100% + 20px);
+            height: calc(100% + 10px);
           }
         `
       : css``};
