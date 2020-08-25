@@ -81,6 +81,8 @@ const Modal = ({
   onClose,
   theme,
   visible,
+  overlayID,
+  modalID,
   ...restProps
 }) => {
   const handleKeypress = useCallback(
@@ -110,7 +112,7 @@ const Modal = ({
             <Overlay
               alignItems="center"
               justifyContent="center"
-              id="modal-overlay"
+              id={overlayID}
               {...restProps}
             >
               <Container
@@ -120,7 +122,7 @@ const Modal = ({
                 borderRadius="2"
                 bg="white"
                 p="r"
-                className="modal-container"
+                id={modalID}
               >
                 <CloseButton onClick={onClose} small px="6px">
                   <Icon icon={["fas", "times"]} color="greyDark" size="lg" />
@@ -152,6 +154,10 @@ Modal.propTypes = {
   onClose: PropTypes.func,
   /** Specifies whether the Modal overflow is visible or not, default is `hidden`. If height is not enough, vertical scrollbar will be displayed (`overflow-y: auto`) */
   overflow: PropTypes.string,
+  /** Specifies the id of the overlay element for targeting */
+  overlayID: PropTypes.string,
+  /** Specifies the id of the modal element for targeting */
+  modalID: PropTypes.string,
   /** Sets the theme for the Modal */
   theme: PropTypes.object
 };
@@ -159,6 +165,8 @@ Modal.propTypes = {
 Modal.defaultProps = {
   width: "300px",
   height: "auto",
+  overlayID: "modal-overlay",
+  modalID: "modal-container",
   theme: systemtheme
 };
 
