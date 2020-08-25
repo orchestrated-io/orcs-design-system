@@ -96,12 +96,12 @@ exports[`Storyshots Components/Avatar Default 1`] = `
     className="Avatar__TextContent-sc-1wtet2j-1 emrUQv"
   >
     <h3
-      className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 TZuyA"
+      className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 hgcehb"
     >
       Ayden Lundgre
     </h3>
     <span
-      className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 lgvTgY"
+      className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 hbMTNs"
     >
       Senior Business Analyst
     </span>
@@ -128,12 +128,12 @@ exports[`Storyshots Components/Avatar Icon only 1`] = `
     className="Avatar__TextContent-sc-1wtet2j-1 emrUQv"
   >
     <h3
-      className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 TZuyA"
+      className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 hgcehb"
     >
       Ayden Lundgre
     </h3>
     <span
-      className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 lgvTgY"
+      className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 hbMTNs"
     >
       Senior Business Analyst
     </span>
@@ -162,13 +162,13 @@ exports[`Storyshots Components/Avatar Inverted 1`] = `
         type="inverted"
       >
         <h3
-          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 jXpBeJ"
+          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 cUZcly"
           type="inverted"
         >
           Ayden Lundgre
         </h3>
         <span
-          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 bdyzed"
+          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 hFwCrJ"
           type="inverted"
         >
           Senior Business Analyst
@@ -192,7 +192,7 @@ exports[`Storyshots Components/Avatar Inverted 1`] = `
         type="inverted"
       >
         <h3
-          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 jXpBeJ"
+          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 cUZcly"
           type="inverted"
         >
           <a
@@ -204,7 +204,7 @@ exports[`Storyshots Components/Avatar Inverted 1`] = `
           </a>
         </h3>
         <span
-          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 bdyzed"
+          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 hFwCrJ"
           type="inverted"
         >
           Senior Business Analyst
@@ -236,13 +236,13 @@ exports[`Storyshots Components/Avatar Inverted 1`] = `
         type="inverted"
       >
         <h3
-          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 exCJCn"
+          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 kikwHM"
           type="inverted"
         >
           Ayden Lundgre
         </h3>
         <span
-          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 kyXVZS"
+          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 ceQqS"
           type="inverted"
         >
           Senior Business Analyst
@@ -266,7 +266,7 @@ exports[`Storyshots Components/Avatar Inverted 1`] = `
         type="inverted"
       >
         <h3
-          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 exCJCn"
+          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 kikwHM"
           type="inverted"
         >
           <a
@@ -278,7 +278,7 @@ exports[`Storyshots Components/Avatar Inverted 1`] = `
           </a>
         </h3>
         <span
-          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 kyXVZS"
+          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 ceQqS"
           type="inverted"
         >
           Senior Business Analyst
@@ -301,7 +301,7 @@ exports[`Storyshots Components/Avatar Name as link 1`] = `
     className="Avatar__TextContent-sc-1wtet2j-1 emrUQv"
   >
     <h3
-      className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 TZuyA"
+      className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 hgcehb"
     >
       <a
         className="StyledLink__Hyperlink-sc-1beg6q3-2 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
@@ -312,7 +312,7 @@ exports[`Storyshots Components/Avatar Name as link 1`] = `
       </a>
     </h3>
     <span
-      className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 lgvTgY"
+      className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 hbMTNs"
     >
       Senior Business Analyst
     </span>
@@ -337,12 +337,12 @@ Array [
         className="Avatar__TextContent-sc-1wtet2j-1 emrUQv"
       >
         <h3
-          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 TZuyA"
+          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 hgcehb"
         >
           Ayden Lundgre
         </h3>
         <span
-          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 lgvTgY"
+          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 hbMTNs"
         >
           Senior Business Analyst
         </span>
@@ -364,12 +364,12 @@ Array [
         className="Avatar__TextContent-sc-1wtet2j-1 emrUQv"
       >
         <h3
-          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 TZuyA"
+          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 hgcehb"
         >
           Ayden Lundgre
         </h3>
         <span
-          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 lgvTgY"
+          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 hbMTNs"
         >
           Senior Business Analyst
         </span>
@@ -396,12 +396,12 @@ Array [
         className="Avatar__TextContent-sc-1wtet2j-1 gtYgsc"
       >
         <h3
-          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 dbTNMm"
+          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 krjHTV"
         >
           Ayden Lundgre
         </h3>
         <span
-          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 kAvPxL"
+          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 euGroT"
         >
           Senior Business Analyst
         </span>
@@ -422,12 +422,12 @@ Array [
         className="Avatar__TextContent-sc-1wtet2j-1 gtYgsc"
       >
         <h3
-          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 dbTNMm"
+          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 krjHTV"
         >
           Ayden Lundgre
         </h3>
         <span
-          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 kAvPxL"
+          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 euGroT"
         >
           Senior Business Analyst
         </span>
@@ -448,7 +448,7 @@ Array [
         className="Avatar__TextContent-sc-1wtet2j-1 gtYgsc"
       >
         <h3
-          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 dbTNMm"
+          className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 krjHTV"
         >
           <a
             className="StyledLink__Hyperlink-sc-1beg6q3-2 StyledLink-sc-1beg6q3-0 kGEvAk StyledLink"
@@ -459,7 +459,7 @@ Array [
           </a>
         </h3>
         <span
-          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 kAvPxL"
+          className="Typography__Text-sc-1613j99-7 Avatar__Subtitle-sc-1wtet2j-5 euGroT"
         >
           Senior Business Analyst
         </span>
@@ -669,7 +669,7 @@ exports[`Storyshots Components/Box Background colour 1`] = `
   data-testid={null}
 >
   <p
-    className="Typography__P-sc-1613j99-6 cdYHMX"
+    className="Typography__P-sc-1613j99-6 hSjZRI"
   >
     This is a Box that has background colour set to 
     <code>
@@ -686,7 +686,7 @@ exports[`Storyshots Components/Box Border Box 1`] = `
   data-testid={null}
 >
   <p
-    className="Typography__P-sc-1613j99-6 cdYHMX"
+    className="Typography__P-sc-1613j99-6 hSjZRI"
   >
     This is a variant of a Box with a border.
   </p>
@@ -699,7 +699,7 @@ exports[`Storyshots Components/Box Default Box 1`] = `
   data-testid={null}
 >
   <p
-    className="Typography__P-sc-1613j99-6 cdYHMX"
+    className="Typography__P-sc-1613j99-6 hSjZRI"
   >
     This is an example of the basic Box with no properties applied to it.
   </p>
@@ -712,7 +712,7 @@ exports[`Storyshots Components/Box Drop shadow 1`] = `
   data-testid={null}
 >
   <p
-    className="Typography__P-sc-1613j99-6 cdYHMX"
+    className="Typography__P-sc-1613j99-6 hSjZRI"
   >
     This is a variant of a Box with a slight drop shadow.
   </p>
@@ -725,7 +725,7 @@ exports[`Storyshots Components/Box Padding 1`] = `
   data-testid={null}
 >
   <p
-    className="Typography__P-sc-1613j99-6 cdYHMX"
+    className="Typography__P-sc-1613j99-6 hSjZRI"
   >
     This is a bordered Box variant with specified padding that overrides the default padding value.
   </p>
@@ -738,7 +738,7 @@ exports[`Storyshots Components/Box Rounded corners 1`] = `
   data-testid={null}
 >
   <p
-    className="Typography__P-sc-1613j99-6 cdYHMX"
+    className="Typography__P-sc-1613j99-6 hSjZRI"
   >
     This is a bordered Box variant with rounded corners.
      
@@ -1185,12 +1185,12 @@ exports[`Storyshots Components/Card Alternate card 1`] = `
         />
       </span>
       <h3
-        className="Typography__H3-sc-1613j99-2 oYbxO"
+        className="Typography__H3-sc-1613j99-2 iRaAnp"
       >
         Works for
       </h3>
       <h6
-        className="Typography__H6-sc-1613j99-5 bRBAKr"
+        className="Typography__H6-sc-1613j99-5 iTCcVk"
       >
         18
       </h6>
@@ -1199,7 +1199,7 @@ exports[`Storyshots Components/Card Alternate card 1`] = `
       className="Card__Content-yfq75p-2 goaCw"
     >
       <p
-        className="Typography__P-sc-1613j99-6 cdYHMX"
+        className="Typography__P-sc-1613j99-6 hSjZRI"
       >
         This is an alternate style card that supports an icon and moves the subtitle to the right of the title, rather than underneath it.
       </p>
@@ -1220,12 +1220,12 @@ exports[`Storyshots Components/Card Basic card 1`] = `
       className="Card__Header-yfq75p-1 hQcgPp"
     >
       <h3
-        className="Typography__H3-sc-1613j99-2 oYbxO"
+        className="Typography__H3-sc-1613j99-2 iRaAnp"
       >
         Card title
       </h3>
       <h6
-        className="Typography__H6-sc-1613j99-5 bRBAKr"
+        className="Typography__H6-sc-1613j99-5 iTCcVk"
       >
         Subtitle
       </h6>
@@ -1234,7 +1234,7 @@ exports[`Storyshots Components/Card Basic card 1`] = `
       className="Card__Content-yfq75p-2 goaCw"
     >
       <p
-        className="Typography__P-sc-1613j99-6 eqWAJp"
+        className="Typography__P-sc-1613j99-6 foDsQu"
       >
         Card content lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       </p>
@@ -1272,12 +1272,12 @@ exports[`Storyshots Components/Card Coloured cards 1`] = `
           />
         </span>
         <h3
-          className="Typography__H3-sc-1613j99-2 oYbxO"
+          className="Typography__H3-sc-1613j99-2 iRaAnp"
         >
           Locations
         </h3>
         <h6
-          className="Typography__H6-sc-1613j99-5 bRBAKr"
+          className="Typography__H6-sc-1613j99-5 iTCcVk"
         >
           57
         </h6>
@@ -1286,7 +1286,7 @@ exports[`Storyshots Components/Card Coloured cards 1`] = `
         className="Card__Content-yfq75p-2 goaCw"
       >
         <p
-          className="Typography__P-sc-1613j99-6 cdYHMX"
+          className="Typography__P-sc-1613j99-6 hSjZRI"
         >
           This is an alternate style card that supports a coloured border, an icon and moves the subtitle to the right of the title, rather than underneath it.
         </p>
@@ -1310,12 +1310,12 @@ exports[`Storyshots Components/Card Coloured cards 1`] = `
           />
         </span>
         <h3
-          className="Typography__H3-sc-1613j99-2 oYbxO"
+          className="Typography__H3-sc-1613j99-2 iRaAnp"
         >
           Roles
         </h3>
         <h6
-          className="Typography__H6-sc-1613j99-5 bRBAKr"
+          className="Typography__H6-sc-1613j99-5 iTCcVk"
         >
           Here is a subtitle
         </h6>
@@ -1324,7 +1324,7 @@ exports[`Storyshots Components/Card Coloured cards 1`] = `
         className="Card__Content-yfq75p-2 goaCw"
       >
         <p
-          className="Typography__P-sc-1613j99-6 cdYHMX"
+          className="Typography__P-sc-1613j99-6 hSjZRI"
         >
           This is an alternate style card that supports a coloured border, an icon and moves the subtitle to the right of the title, rather than underneath it.
         </p>
@@ -1348,7 +1348,7 @@ exports[`Storyshots Components/Card Coloured cards 1`] = `
           />
         </span>
         <h3
-          className="Typography__H3-sc-1613j99-2 oYbxO"
+          className="Typography__H3-sc-1613j99-2 iRaAnp"
         >
           4,539 People
         </h3>
@@ -1362,7 +1362,7 @@ exports[`Storyshots Components/Card Coloured cards 1`] = `
         className="Card__Content-yfq75p-2 goaCw"
       >
         <p
-          className="Typography__P-sc-1613j99-6 cdYHMX"
+          className="Typography__P-sc-1613j99-6 hSjZRI"
         >
           This is an alternate style card that supports a coloured border, an icon and shows a delta change.
         </p>
@@ -1386,7 +1386,7 @@ exports[`Storyshots Components/Card Coloured cards 1`] = `
           />
         </span>
         <h3
-          className="Typography__H3-sc-1613j99-2 oYbxO"
+          className="Typography__H3-sc-1613j99-2 iRaAnp"
         >
           12 Divisions
         </h3>
@@ -1403,7 +1403,7 @@ exports[`Storyshots Components/Card Coloured cards 1`] = `
         className="Card__Content-yfq75p-2 goaCw"
       >
         <p
-          className="Typography__P-sc-1613j99-6 cdYHMX"
+          className="Typography__P-sc-1613j99-6 hSjZRI"
         >
           This is an alternate style card that supports a coloured border, an icon and shows a delta change.
         </p>
@@ -1427,7 +1427,7 @@ exports[`Storyshots Components/Card Coloured cards 1`] = `
           />
         </span>
         <h3
-          className="Typography__H3-sc-1613j99-2 oYbxO"
+          className="Typography__H3-sc-1613j99-2 iRaAnp"
         >
           289 Teams
         </h3>
@@ -1444,7 +1444,7 @@ exports[`Storyshots Components/Card Coloured cards 1`] = `
         className="Card__Content-yfq75p-2 goaCw"
       >
         <p
-          className="Typography__P-sc-1613j99-6 cdYHMX"
+          className="Typography__P-sc-1613j99-6 hSjZRI"
         >
           This is an alternate style card that supports a coloured border, an icon and shows a delta change.
         </p>
@@ -1481,12 +1481,12 @@ exports[`Storyshots Components/Card Complex card 1`] = `
             />
           </span>
           <h3
-            className="Typography__H3-sc-1613j99-2 oYbxO"
+            className="Typography__H3-sc-1613j99-2 iRaAnp"
           >
             Create new
           </h3>
           <p
-            className="Typography__P-sc-1613j99-6 cdYHMX"
+            className="Typography__P-sc-1613j99-6 hSjZRI"
           >
             Start with a blank slate and add your own data
           </p>
@@ -1518,12 +1518,12 @@ exports[`Storyshots Components/Card Complex card 1`] = `
             />
           </span>
           <h3
-            className="Typography__H3-sc-1613j99-2 oYbxO"
+            className="Typography__H3-sc-1613j99-2 iRaAnp"
           >
             Explore app
           </h3>
           <p
-            className="Typography__P-sc-1613j99-6 cdYHMX"
+            className="Typography__P-sc-1613j99-6 hSjZRI"
           >
             Look at pre-populated data to see app in action
           </p>
@@ -1920,7 +1920,7 @@ exports[`Storyshots Components/Expandable Default Expandable 1`] = `
           className="Expandable__Text-na4gdb-2 kgTlSW"
         >
           <h4
-            className="Typography__H4-sc-1613j99-3 cvPFAr"
+            className="Typography__H4-sc-1613j99-3 iCJHGU"
           >
             Details
           </h4>
@@ -1931,7 +1931,7 @@ exports[`Storyshots Components/Expandable Default Expandable 1`] = `
       className="Expandable__Content-na4gdb-3 dNUyVo"
     >
       <p
-        className="Typography__P-sc-1613j99-6 cdYHMX"
+        className="Typography__P-sc-1613j99-6 hSjZRI"
       >
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
       </p>
@@ -1960,7 +1960,7 @@ exports[`Storyshots Components/Expandable Expandable With Badge 1`] = `
           className="Expandable__Text-na4gdb-2 kgTlSW"
         >
           <h4
-            className="Typography__H4-sc-1613j99-3 cvPFAr"
+            className="Typography__H4-sc-1613j99-3 iCJHGU"
           >
             Complex example
           </h4>
@@ -1977,7 +1977,7 @@ exports[`Storyshots Components/Expandable Expandable With Badge 1`] = `
       className="Expandable__Content-na4gdb-3 dNUyVo"
     >
       <p
-        className="Typography__P-sc-1613j99-6 cdYHMX"
+        className="Typography__P-sc-1613j99-6 hSjZRI"
       >
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
       </p>
@@ -2006,15 +2006,15 @@ exports[`Storyshots Components/Expandable Expandable With Subtitle 1`] = `
           className="Expandable__Text-na4gdb-2 kgTlSW"
         >
           <h4
-            className="Typography__H4-sc-1613j99-3 cvPFAr"
+            className="Typography__H4-sc-1613j99-3 iCJHGU"
           >
             Complex example
           </h4>
-          <span
-            className="sc-AxjAm wVQLA"
+          <small
+            className="sc-AxjAm bXhRGR"
           >
             Subtitle
-          </span>
+          </small>
         </div>
       </div>
     </button>
@@ -2022,7 +2022,7 @@ exports[`Storyshots Components/Expandable Expandable With Subtitle 1`] = `
       className="Expandable__Content-na4gdb-3 dNUyVo"
     >
       <p
-        className="Typography__P-sc-1613j99-6 cdYHMX"
+        className="Typography__P-sc-1613j99-6 hSjZRI"
       >
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
       </p>
@@ -2053,7 +2053,7 @@ exports[`Storyshots Components/Expandable Open Expandable 1`] = `
           className="Expandable__Text-na4gdb-2 kgTlSW"
         >
           <h4
-            className="Typography__H4-sc-1613j99-3 cvPFAr"
+            className="Typography__H4-sc-1613j99-3 iCJHGU"
           >
             Details
           </h4>
@@ -2065,7 +2065,7 @@ exports[`Storyshots Components/Expandable Open Expandable 1`] = `
       open={true}
     >
       <p
-        className="Typography__P-sc-1613j99-6 cdYHMX"
+        className="Typography__P-sc-1613j99-6 hSjZRI"
       >
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
       </p>
@@ -2587,7 +2587,7 @@ Array [
             type="inverted"
           >
             <h3
-              className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 exCJCn"
+              className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 kikwHM"
               type="inverted"
             >
               John
@@ -2647,7 +2647,7 @@ Array [
             type="inverted"
           >
             <h3
-              className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 exCJCn"
+              className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 kikwHM"
               type="inverted"
             >
               John
@@ -2759,10 +2759,10 @@ Array [
         className="Spacer__SpacerBox-sc-1acikjz-0 iGoMbw"
       >
         <div
-          className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+          className="Popover__Container-sc-1bwoak-0 gJwXEG"
         >
           <div
-            className="Popover__Text-sc-1bwoak-1 eREcMi tooltip"
+            className="Popover__Text-sc-1bwoak-1 boRorT tooltip"
             direction="bottom"
             width="160px"
           >
@@ -2781,7 +2781,7 @@ Array [
               type="inverted"
             >
               <h3
-                className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 exCJCn"
+                className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 kikwHM"
                 type="inverted"
               >
                 John
@@ -2842,7 +2842,7 @@ Array [
             type="inverted"
           >
             <h3
-              className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 exCJCn"
+              className="Typography__H3-sc-1613j99-2 Avatar__Title-sc-1wtet2j-4 kikwHM"
               type="inverted"
             >
               John
@@ -3638,12 +3638,12 @@ exports[`Storyshots Components/Popover Default 1`] = `
     data-testid={null}
   >
     <div
-      className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+      className="Popover__Container-sc-1bwoak-0 gJwXEG"
     >
       <div
-        className="Popover__Text-sc-1bwoak-1 jwsBmN tooltip"
+        className="Popover__Text-sc-1bwoak-1 iurKag tooltip"
       >
-        Text description of what this button does
+        Description that explains child element
       </div>
       <button
         className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
@@ -3667,78 +3667,155 @@ exports[`Storyshots Components/Popover Direction 1`] = `
     data-testid={null}
   >
     <div
-      className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+      className="Grid__GridWrapper-sc-1rlajun-0 gfXsXn"
+      data-testid={null}
     >
       <div
-        className="Popover__Text-sc-1bwoak-1 jwsBmN tooltip"
-        direction="right"
+        className="Popover__Container-sc-1bwoak-0 gJwXEG"
       >
-        Text description of what this button does
+        <div
+          className="Popover__Text-sc-1bwoak-1 eRNmIH tooltip"
+          direction="topLeft"
+        >
+          Description that explains child element
+        </div>
+        <button
+          className="Button__StyledButton-sc-10uojnk-0 jkaaIM"
+          data-testid={null}
+          disabled={false}
+        >
+          Top left
+        </button>
       </div>
-      <button
-        className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
-        data-testid={null}
-        disabled={false}
-      >
-        Right Hover
-      </button>
-    </div>
-    <div
-      className="Popover__Container-sc-1bwoak-0 ifLbBJ"
-    >
       <div
-        className="Popover__Text-sc-1bwoak-1 eDxeZo tooltip"
-        direction="left"
+        className="Popover__Container-sc-1bwoak-0 gJwXEG"
       >
-        Text description of what this button does
+        <div
+          className="Popover__Text-sc-1bwoak-1 ecxFQH tooltip"
+          direction="top"
+        >
+          Description that explains child element
+        </div>
+        <button
+          className="Button__StyledButton-sc-10uojnk-0 jkaaIM"
+          data-testid={null}
+          disabled={false}
+        >
+          Top
+        </button>
       </div>
-      <button
-        className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
-        data-testid={null}
-        disabled={false}
-      >
-        Left Hover
-      </button>
-    </div>
-    <div
-      className="Popover__Container-sc-1bwoak-0 ifLbBJ"
-    >
       <div
-        className="Popover__Text-sc-1bwoak-1 goQkAT tooltip"
-        direction="bottom"
+        className="Popover__Container-sc-1bwoak-0 gJwXEG"
       >
-        Centered description of what this button does
+        <div
+          className="Popover__Text-sc-1bwoak-1 gbXtYq tooltip"
+          direction="topRight"
+        >
+          Description that explains child element
+        </div>
+        <button
+          className="Button__StyledButton-sc-10uojnk-0 jkaaIM"
+          data-testid={null}
+          disabled={false}
+        >
+          Top right
+        </button>
       </div>
-      <button
-        className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
-        data-testid={null}
-        disabled={false}
-      >
-        Bottom Hover
-      </button>
-    </div>
-    <div
-      className="Popover__Container-sc-1bwoak-0 ifLbBJ"
-    >
       <div
-        className="Popover__Text-sc-1bwoak-1 hPuoUG tooltip"
-        direction="top"
+        className="Popover__Container-sc-1bwoak-0 gJwXEG"
       >
-        Text description of what this button does
+        <div
+          className="Popover__Text-sc-1bwoak-1 gQLhkt tooltip"
+          direction="left"
+        >
+          Description that explains child element
+        </div>
+        <button
+          className="Button__StyledButton-sc-10uojnk-0 jkaaIM"
+          data-testid={null}
+          disabled={false}
+        >
+          Left
+        </button>
       </div>
-      <button
-        className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+      <div
+        className="Box__BoxWrapper-jr1api-0 eTmXui"
         data-testid={null}
-        disabled={false}
+      />
+      <div
+        className="Popover__Container-sc-1bwoak-0 gJwXEG"
       >
-        Top Hover
-      </button>
+        <div
+          className="Popover__Text-sc-1bwoak-1 iurKag tooltip"
+          direction="right"
+        >
+          Description that explains child element
+        </div>
+        <button
+          className="Button__StyledButton-sc-10uojnk-0 jkaaIM"
+          data-testid={null}
+          disabled={false}
+        >
+          Right
+        </button>
+      </div>
+      <div
+        className="Popover__Container-sc-1bwoak-0 gJwXEG"
+      >
+        <div
+          className="Popover__Text-sc-1bwoak-1 kHjVBg tooltip"
+          direction="bottomLeft"
+        >
+          Description that explains child element
+        </div>
+        <button
+          className="Button__StyledButton-sc-10uojnk-0 jkaaIM"
+          data-testid={null}
+          disabled={false}
+        >
+          Bottom left
+        </button>
+      </div>
+      <div
+        className="Popover__Container-sc-1bwoak-0 gJwXEG"
+      >
+        <div
+          className="Popover__Text-sc-1bwoak-1 Zxqnq tooltip"
+          direction="bottom"
+        >
+          Description that explains child element
+        </div>
+        <button
+          className="Button__StyledButton-sc-10uojnk-0 jkaaIM"
+          data-testid={null}
+          disabled={false}
+        >
+          Bottom
+        </button>
+      </div>
+      <div
+        className="Popover__Container-sc-1bwoak-0 gJwXEG"
+      >
+        <div
+          className="Popover__Text-sc-1bwoak-1 gzCFRW tooltip"
+          direction="bottomRight"
+        >
+          Description that explains child element
+        </div>
+        <button
+          className="Button__StyledButton-sc-10uojnk-0 jkaaIM"
+          data-testid={null}
+          disabled={false}
+        >
+          Bottom right
+        </button>
+      </div>
     </div>
   </div>
 </div>
 `;
 
-exports[`Storyshots Components/Popover Inline 1`] = `
+exports[`Storyshots Components/Popover Display Inline Block 1`] = `
 <div
   className="Box__BoxWrapper-jr1api-0 gILfyj"
   data-testid={null}
@@ -3748,12 +3825,12 @@ exports[`Storyshots Components/Popover Inline 1`] = `
     data-testid={null}
   >
     <div
-      className="Popover__Container-sc-1bwoak-0 HfJTx"
+      className="Popover__Container-sc-1bwoak-0 hAXzge"
     >
       <div
-        className="Popover__Text-sc-1bwoak-1 jwsBmN tooltip"
+        className="Popover__Text-sc-1bwoak-1 iurKag tooltip"
       >
-        Text description of what this button does
+        Description that explains child element
       </div>
       <button
         className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
@@ -3764,12 +3841,12 @@ exports[`Storyshots Components/Popover Inline 1`] = `
       </button>
     </div>
     <div
-      className="Popover__Container-sc-1bwoak-0 HfJTx"
+      className="Popover__Container-sc-1bwoak-0 hAXzge"
     >
       <div
-        className="Popover__Text-sc-1bwoak-1 jwsBmN tooltip"
+        className="Popover__Text-sc-1bwoak-1 iurKag tooltip"
       >
-        Text description of what this button does
+        Description that explains child element
       </div>
       <button
         className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
@@ -3780,12 +3857,12 @@ exports[`Storyshots Components/Popover Inline 1`] = `
       </button>
     </div>
     <div
-      className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+      className="Popover__Container-sc-1bwoak-0 gJwXEG"
     >
       <div
-        className="Popover__Text-sc-1bwoak-1 jwsBmN tooltip"
+        className="Popover__Text-sc-1bwoak-1 iurKag tooltip"
       >
-        Centered description of what this button does
+        Description that explains child element
       </div>
       <button
         className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
@@ -3796,13 +3873,13 @@ exports[`Storyshots Components/Popover Inline 1`] = `
       </button>
     </div>
     <div
-      className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+      className="Popover__Container-sc-1bwoak-0 gJwXEG"
     >
       <div
-        className="Popover__Text-sc-1bwoak-1 hPuoUG tooltip"
+        className="Popover__Text-sc-1bwoak-1 ecxFQH tooltip"
         direction="top"
       >
-        Text description of what this button does
+        Description that explains child element
       </div>
       <button
         className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
@@ -3826,13 +3903,13 @@ exports[`Storyshots Components/Popover Specified Width 1`] = `
     data-testid={null}
   >
     <div
-      className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+      className="Popover__Container-sc-1bwoak-0 gJwXEG"
     >
       <div
-        className="Popover__Text-sc-1bwoak-1 jAUnCe tooltip"
-        width="100px"
+        className="Popover__Text-sc-1bwoak-1 sufkQ tooltip"
+        width="240px"
       >
-        Text description of what this button does
+        Description that explains child element
       </div>
       <button
         className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
@@ -3856,12 +3933,12 @@ exports[`Storyshots Components/Popover Text Alignment 1`] = `
     data-testid={null}
   >
     <div
-      className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+      className="Popover__Container-sc-1bwoak-0 gJwXEG"
     >
       <div
-        className="Popover__Text-sc-1bwoak-1 hCeyYV tooltip"
+        className="Popover__Text-sc-1bwoak-1 bkTMvY tooltip"
       >
-        Text description of what this button does
+        Centered description that explains child element
       </div>
       <button
         className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
@@ -4378,16 +4455,16 @@ exports[`Storyshots Components/Select Default 1`] = `
       className="Select__Label-bfi43f-1 ioBnwi"
     />
     <div
-      className=" css-drms3i-container"
+      className=" css-epl5p4-container"
       onKeyDown={[Function]}
     >
       <div
-        className=" css-e67xwx-control"
+        className=" css-zen5jz-control"
         onMouseDown={[Function]}
         onTouchEnd={[Function]}
       >
         <div
-          className=" css-1ppb8y7-Component"
+          className=" css-l1xr2i-Component"
         >
           <div
             className=" css-12r8v8r-placeholder"
@@ -4460,7 +4537,7 @@ exports[`Storyshots Components/Select Default 1`] = `
           />
           <div
             aria-hidden="true"
-            className=" css-1ur6b96-indicatorContainer"
+            className=" css-19hpetq-indicatorContainer"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -4490,7 +4567,7 @@ exports[`Storyshots Components/Select Inverted 1`] = `
   data-testid={null}
 >
   <div
-    className="Box__BoxWrapper-jr1api-0 QqLhx"
+    className="Box__BoxWrapper-jr1api-0 dLMhuz"
     data-testid={null}
   >
     <div
@@ -4509,16 +4586,16 @@ exports[`Storyshots Components/Select Inverted 1`] = `
           className="Select__Label-bfi43f-1 hmcamX"
         />
         <div
-          className=" css-4laq5b-container"
+          className=" css-194edlj-container"
           onKeyDown={[Function]}
         >
           <div
-            className=" css-11ghqnx-control"
+            className=" css-1m4e57f-control"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
             <div
-              className=" css-1ppb8y7-Component"
+              className=" css-l1xr2i-Component"
             >
               <div
                 className=" css-1hvxwfy-placeholder"
@@ -4591,7 +4668,7 @@ exports[`Storyshots Components/Select Inverted 1`] = `
               />
               <div
                 aria-hidden="true"
-                className=" css-1p54kpi-indicatorContainer"
+                className=" css-1n9hfvs-indicatorContainer"
                 onMouseDown={[Function]}
                 onTouchEnd={[Function]}
               >
@@ -4629,16 +4706,16 @@ exports[`Storyshots Components/Select Inverted 1`] = `
           className="Select__Label-bfi43f-1 hmcamX"
         />
         <div
-          className=" css-4laq5b-container"
+          className=" css-194edlj-container"
           onKeyDown={[Function]}
         >
           <div
-            className=" css-11ghqnx-control"
+            className=" css-1m4e57f-control"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
             <div
-              className=" css-1ppb8y7-Component"
+              className=" css-l1xr2i-Component"
             >
               <div
                 className=" css-1hvxwfy-placeholder"
@@ -4711,7 +4788,7 @@ exports[`Storyshots Components/Select Inverted 1`] = `
               />
               <div
                 aria-hidden="true"
-                className=" css-1p54kpi-indicatorContainer"
+                className=" css-1n9hfvs-indicatorContainer"
                 onMouseDown={[Function]}
                 onTouchEnd={[Function]}
               >
@@ -4755,16 +4832,16 @@ exports[`Storyshots Components/Select Multi-select 1`] = `
       className="Select__Label-bfi43f-1 ioBnwi"
     />
     <div
-      className=" css-drms3i-container"
+      className=" css-epl5p4-container"
       onKeyDown={[Function]}
     >
       <div
-        className=" css-e67xwx-control"
+        className=" css-zen5jz-control"
         onMouseDown={[Function]}
         onTouchEnd={[Function]}
       >
         <div
-          className=" css-1ppb8y7-Component"
+          className=" css-l1xr2i-Component"
         >
           <div
             className=" css-12r8v8r-placeholder"
@@ -4837,7 +4914,7 @@ exports[`Storyshots Components/Select Multi-select 1`] = `
           />
           <div
             aria-hidden="true"
-            className=" css-1ur6b96-indicatorContainer"
+            className=" css-19hpetq-indicatorContainer"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -4879,16 +4956,16 @@ exports[`Storyshots Components/Select With Data ID 1`] = `
       className="Select__Label-bfi43f-1 ioBnwi"
     />
     <div
-      className=" css-drms3i-container"
+      className=" css-epl5p4-container"
       onKeyDown={[Function]}
     >
       <div
-        className=" css-e67xwx-control"
+        className=" css-zen5jz-control"
         onMouseDown={[Function]}
         onTouchEnd={[Function]}
       >
         <div
-          className=" css-1ppb8y7-Component"
+          className=" css-l1xr2i-Component"
         >
           <div
             className=" css-12r8v8r-placeholder"
@@ -4961,7 +5038,7 @@ exports[`Storyshots Components/Select With Data ID 1`] = `
           />
           <div
             aria-hidden="true"
-            className=" css-1ur6b96-indicatorContainer"
+            className=" css-19hpetq-indicatorContainer"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -5003,16 +5080,16 @@ exports[`Storyshots Components/Select With Selected Value 1`] = `
       className="Select__Label-bfi43f-1 ioBnwi"
     />
     <div
-      className=" css-drms3i-container"
+      className=" css-epl5p4-container"
       onKeyDown={[Function]}
     >
       <div
-        className=" css-e67xwx-control"
+        className=" css-zen5jz-control"
         onMouseDown={[Function]}
         onTouchEnd={[Function]}
       >
         <div
-          className=" css-1ppb8y7-Component"
+          className=" css-l1xr2i-Component"
         >
           <div
             className=" css-r447wv-singleValue"
@@ -5085,7 +5162,7 @@ exports[`Storyshots Components/Select With Selected Value 1`] = `
           />
           <div
             aria-hidden="true"
-            className=" css-1ur6b96-indicatorContainer"
+            className=" css-19hpetq-indicatorContainer"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -5117,7 +5194,7 @@ exports[`Storyshots Components/Sidebar Default Sidebar 1`] = `
     className="Sidebar__SidebarTabs-wr9mfw-1 iyffQQ"
   >
     <label
-      className="Sidebar__SidebarTab-wr9mfw-2 fdfhB Sidebar__Badge"
+      className="Sidebar__SidebarTab-wr9mfw-2 cxvgzX Sidebar__Badge"
     >
       <span
         className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
@@ -5128,7 +5205,7 @@ exports[`Storyshots Components/Sidebar Default Sidebar 1`] = `
       </span>
     </label>
     <label
-      className="Sidebar__SidebarTab-wr9mfw-2 ekAwQv"
+      className="Sidebar__SidebarTab-wr9mfw-2 fxQFBJ"
     >
       <span
         className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
@@ -5139,7 +5216,7 @@ exports[`Storyshots Components/Sidebar Default Sidebar 1`] = `
       </span>
     </label>
     <label
-      className="Sidebar__SidebarTab-wr9mfw-2 ekAwQv"
+      className="Sidebar__SidebarTab-wr9mfw-2 fxQFBJ"
     >
       <span
         className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
@@ -5246,10 +5323,10 @@ exports[`Storyshots Components/StatusDot Colour 1`] = `
       className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
     >
       <div
-        className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+        className="Popover__Container-sc-1bwoak-0 gJwXEG"
       >
         <div
-          className="Popover__Text-sc-1bwoak-1 jaBCFX tooltip"
+          className="Popover__Text-sc-1bwoak-1 hXBLlW tooltip"
           direction="top"
           width="250px"
         >
@@ -5264,10 +5341,10 @@ exports[`Storyshots Components/StatusDot Colour 1`] = `
       className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
     >
       <div
-        className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+        className="Popover__Container-sc-1bwoak-0 gJwXEG"
       >
         <div
-          className="Popover__Text-sc-1bwoak-1 jaBCFX tooltip"
+          className="Popover__Text-sc-1bwoak-1 hXBLlW tooltip"
           direction="top"
           width="250px"
         >
@@ -5282,10 +5359,10 @@ exports[`Storyshots Components/StatusDot Colour 1`] = `
       className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
     >
       <div
-        className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+        className="Popover__Container-sc-1bwoak-0 gJwXEG"
       >
         <div
-          className="Popover__Text-sc-1bwoak-1 jaBCFX tooltip"
+          className="Popover__Text-sc-1bwoak-1 hXBLlW tooltip"
           direction="top"
           width="250px"
         >
@@ -5310,10 +5387,10 @@ exports[`Storyshots Components/StatusDot Default 1`] = `
     data-testid={null}
   >
     <div
-      className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+      className="Popover__Container-sc-1bwoak-0 gJwXEG"
     >
       <div
-        className="Popover__Text-sc-1bwoak-1 gmaSeC tooltip"
+        className="Popover__Text-sc-1bwoak-1 krTueD tooltip"
         direction="top"
         width="170px"
       >
@@ -5340,10 +5417,10 @@ exports[`Storyshots Components/StatusDot With Icon 1`] = `
       className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
     >
       <div
-        className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+        className="Popover__Container-sc-1bwoak-0 gJwXEG"
       >
         <div
-          className="Popover__Text-sc-1bwoak-1 dFOCLM tooltip"
+          className="Popover__Text-sc-1bwoak-1 jGzOjx tooltip"
           direction="top"
           width="110px"
         >
@@ -5367,10 +5444,10 @@ exports[`Storyshots Components/StatusDot With Icon 1`] = `
       className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
     >
       <div
-        className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+        className="Popover__Container-sc-1bwoak-0 gJwXEG"
       >
         <div
-          className="Popover__Text-sc-1bwoak-1 dFOCLM tooltip"
+          className="Popover__Text-sc-1bwoak-1 jGzOjx tooltip"
           direction="top"
           width="110px"
         >
@@ -5394,10 +5471,10 @@ exports[`Storyshots Components/StatusDot With Icon 1`] = `
       className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
     >
       <div
-        className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+        className="Popover__Container-sc-1bwoak-0 gJwXEG"
       >
         <div
-          className="Popover__Text-sc-1bwoak-1 dFOCLM tooltip"
+          className="Popover__Text-sc-1bwoak-1 jGzOjx tooltip"
           direction="top"
           width="110px"
         >
@@ -5583,10 +5660,10 @@ exports[`Storyshots Components/Tabs Default Tabs 1`] = `
       </a>
     </div>
     <div
-      className="Popover__Container-sc-1bwoak-0 ifLbBJ"
+      className="Popover__Container-sc-1bwoak-0 gJwXEG"
     >
       <div
-        className="Popover__Text-sc-1bwoak-1 ekMAAj tooltip"
+        className="Popover__Text-sc-1bwoak-1 bZNGCa tooltip"
         direction="top"
         width="218px"
       >
