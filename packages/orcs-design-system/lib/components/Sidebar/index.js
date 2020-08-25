@@ -73,7 +73,6 @@ export const SidebarTab = styled("label").attrs(props => ({
           top: 3,
           right: 3,
           display: "flex",
-          lineHeight: themeGet("sizes.4")(props),
           alignItems: "center",
           justifyContent: "center",
           width: 4,

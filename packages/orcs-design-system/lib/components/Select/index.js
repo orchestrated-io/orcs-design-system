@@ -49,11 +49,6 @@ const Select = forwardRef((props, ref) => {
     menu: (provided, state) => ({
       ...provided,
       opacity: state.isDisabled ? 0.7 : 1,
-      borderColor: state.isSelected
-        ? themeGet("colors.primary")(props)
-        : state.isFocused
-        ? themeGet("colors.primary")(props)
-        : null,
       backgroundColor: props.inverted
         ? themeGet("colors.greyDarker")(props)
         : themeGet("colors.white")(props),
@@ -61,58 +56,34 @@ const Select = forwardRef((props, ref) => {
         ? themeGet("colors.greyLighter")
         : themeGet("colors.greyDarkest")(props),
       fontSize: themeGet("fontSizes.1")(props),
-      boxShadow: props.inverted
-        ? "0 0 0 " +
-          themeGet("borderWidths.1")(props) +
-          " " +
-          themeGet("colors.primaryLight")(props)
-        : "0 0 0 " +
-          themeGet("borderWidths.1")(props) +
-          " " +
-          themeGet("colors.primary")(props),
-      border: !state.isFocused
-        ? 0
-        : props.inverted
+      border: props.inverted
         ? themeGet("borderWidths.1")(props) +
           " solid " +
           themeGet("colors.primaryLight")(props)
         : themeGet("borderWidths.1")(props) +
           " solid " +
           themeGet("colors.primary")(props),
-      borderRadius:
-        "0 0 " + themeGet("radii.2")(props) + " " + themeGet("radii.2")(props),
+      borderRadius: themeGet("radii.2")(props),
       marginBottom: "0",
-      marginTop: "0",
+      marginTop: themeGet("space.xs")(props),
       overflow: "hidden"
     }),
     menuList: provided => ({
       ...provided,
       paddingTop: "0",
-      borderRadius:
-        "0 0 " + themeGet("radii.2")(props) + " " + themeGet("radii.2")(props),
-      overflow: "auto"
+      overflow: "auto",
+      color: props.inverted
+        ? themeGet("colors.greyLightest")(props)
+        : themeGet("colors.greyDarkest")(props)
     }),
     control: (provided, state) => ({
       ...provided,
+      boxShadow: "none",
       opacity: state.isDisabled ? 0.7 : 1,
-      boxShadow: !state.isFocused
-        ? 0
-        : props.inverted
-        ? "0 0 0 " +
-          themeGet("borderWidths.1")(props) +
-          " " +
-          themeGet("colors.primaryLight")(props)
-        : "0 0 0 " +
-          themeGet("borderWidths.1")(props) +
-          " " +
-          themeGet("colors.primary")(props),
       "&:hover": {
         borderColor: themeGet("colors.primary")(props)
       },
       borderColor: state.isFocused
-        ? themeGet("colors.primary")(props)
-        : themeGet("colors.grey")(props),
-      outline: state.isFocused
         ? themeGet("colors.primary")(props)
         : themeGet("colors.grey")(props),
       backgroundColor: props.inverted
@@ -121,18 +92,25 @@ const Select = forwardRef((props, ref) => {
       color: props.inverted
         ? themeGet("colors.greyLighter")(props)
         : themeGet("colors.greyDarkest")(props),
-      borderRadius: state.isFocused
-        ? themeGet("radii.2")(props) + " " + themeGet("radii.2")(props) + " 0 0"
-        : themeGet("radii.2")(props),
+      borderRadius: themeGet("radii.2")(props),
       fontSize: themeGet("fontSizes.1")(props)
     }),
-    valueContainer: provided => ({
+    container: (provided, state) => ({
       ...provided,
-      padding: themeGet("space.2")(props)
+      opacity: state.isDisabled ? 0.7 : 1,
+      color: props.inverted
+        ? themeGet("colors.greyLighter")
+        : themeGet("colors.grey")(props),
+      backgroundColor: props.inverted
+        ? themeGet("colors.greyDarkest")(props)
+        : themeGet("colors.white")(props),
+      marginTop: themeGet("space.s")(props),
+      fontSize: themeGet("fontSizes.1")(props)
     }),
     clearIndicator: (provided, state) => ({
       ...provided,
       opacity: state.isDisabled ? 0.7 : 1,
+      padding: themeGet("space.xxs")(props),
       color:
         !state.isFocused && !props.inverted
           ? themeGet("colors.greyDark")(props)
@@ -152,22 +130,10 @@ const Select = forwardRef((props, ref) => {
             : themeGet("colors.white")(props)
       }
     }),
-    container: (provided, state) => ({
-      ...provided,
-      opacity: state.isDisabled ? 0.7 : 1,
-      color: props.inverted
-        ? themeGet("colors.greyLighter")
-        : themeGet("colors.grey")(props),
-      backgroundColor: props.inverted
-        ? themeGet("colors.greyDarkest")(props)
-        : themeGet("colors.white")(props),
-      marginTop: themeGet("space.s")(props),
-      fontSize: themeGet("fontSizes.1")(props),
-      borderRadius: themeGet("radii.2")(props)
-    }),
     dropdownIndicator: (provided, state) => ({
       ...provided,
       opacity: state.isDisabled ? 0.7 : 1,
+      padding: themeGet("space.xxs")(props),
       color:
         !state.isFocused && !props.inverted
           ? themeGet("colors.greyDark")(props)
@@ -231,7 +197,7 @@ const Select = forwardRef((props, ref) => {
           : state.isFocused && !props.inverted
           ? themeGet("colors.primaryLightest")(props)
           : !state.isFocused && props.inverted
-          ? themeGet("colors.black")(props)
+          ? themeGet("colors.greyDarker")(props)
           : themeGet("colors.primaryDark")(props),
       fontSize: themeGet("fontSizes.1")(props),
       whiteSpace: "wrap"
