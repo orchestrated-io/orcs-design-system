@@ -68,7 +68,7 @@ Grid.propTypes = {
 };
 
 Grid.defaultProps = {
-  gridAutoFlow: "column",
+  gridAutoFlow: "row",
   gridGap: "0",
   theme: systemtheme
 };
