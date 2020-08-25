@@ -120,14 +120,7 @@ const Select = forwardRef((props, ref) => {
           ? themeGet("colors.white")(props)
           : themeGet("colors.primaryLight")(props),
       "&:hover": {
-        color:
-          !state.isFocused && !props.inverted
-            ? themeGet("colors.primary")(props)
-            : state.isFocused && !props.inverted
-            ? themeGet("colors.primaryDarkest")(props)
-            : !state.isFocused && props.inverted
-            ? themeGet("colors.primary")(props)
-            : themeGet("colors.white")(props)
+        color: themeGet("colors.danger")(props)
       }
     }),
     dropdownIndicator: (provided, state) => ({
@@ -183,6 +176,8 @@ const Select = forwardRef((props, ref) => {
         : themeGet("colors.primary")(props),
       color: themeGet("colors.white")(props),
       borderRadius: themeGet("radii.2")(props),
+      paddingLeft: themeGet("space.0")(props),
+      paddingRight: themeGet("space.1")(props),
       "&:hover": {
         backgroundColor: themeGet("colors.primaryDarkest")(props),
         color: themeGet("colors.white")(props)

@@ -41,10 +41,10 @@ multiSelect.story = {
 };
 
 export const invertedSelect = () => (
-  <Box bg="greyDarkest" width="100%" height="800px" p="r">
+  <Box bg="greyDarkest" width="100%" height="600px" p="r">
     <Spacer my="r">
       <Select options={options} inverted />
-      <Select options={options} inverted isMulti menuIsOpen />
+      <Select options={options} inverted isMulti />
     </Spacer>
   </Box>
 );
