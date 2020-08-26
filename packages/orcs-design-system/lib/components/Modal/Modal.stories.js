@@ -106,8 +106,10 @@ const Advanced = () => {
     <>
       <Button onClick={handleOnButtonClick}>Open advanced modal</Button>
       <Modal
-        width="500px"
-        height="400px"
+        maxWidth="500px"
+        maxHeight="400px"
+        height="90vh"
+        width="90vw"
         visible={visible}
         handleOnConfirm={handleOnConfirm}
         onClose={onToggleModal(false)}
@@ -171,8 +173,10 @@ advancedModal.parameters = {
           <>
             <Button onClick={handleOnButtonClick}>Open advanced modal</Button>
             <Modal
-              width="500px"
-              height="400px"
+              maxWidth="500px"
+              maxHeight="400px"
+              height="90vh"
+              width="90vw"
               visible={visible}
               handleOnConfirm={handleOnConfirm}
               onClose={onToggleModal(false)}

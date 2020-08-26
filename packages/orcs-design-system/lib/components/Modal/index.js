@@ -53,7 +53,6 @@ const Overlay = styled(Flex)`
 const Container = styled(Box)`
   position: relative;
   z-index: 9001;
-  max-height: 90vh;
   animation: 300ms ${fadeIn} ease-in-out, 300ms ${scaleIn} ease-in-out;
   display: flex;
   flex-direction: column;
@@ -145,6 +144,8 @@ const Modal = ({
   children,
   width,
   height,
+  maxWidth,
+  maxHeight,
   overflow,
   onClose,
   theme,
@@ -177,6 +178,8 @@ const Modal = ({
                 <Container
                   width={width}
                   height={height}
+                  maxWidth={maxWidth}
+                  maxHeight={maxHeight}
                   overflow={overflow}
                   borderRadius="2"
                   bg="white"
@@ -240,10 +243,14 @@ Modal.propTypes = {
   headerContent: PropTypes.oneOfType([PropTypes.element, PropTypes.node]),
   /** Specifies content for the header of the modal */
   footerContent: PropTypes.oneOfType([PropTypes.element, PropTypes.node]),
-  /** Specifies the width of the Modal in pixels */
+  /** Specifies the width of the Modal */
   width: PropTypes.string,
-  /** Specifies the height of the Modal in pixels */
+  /** Specifies the max width of the Modal */
+  maxWidth: PropTypes.string,
+  /** Specifies the height of the Modal */
   height: PropTypes.string,
+  /** Specifies the max height of the Modal */
+  maxHeight: PropTypes.string,
   /** Specifies the visibility of the Modal */
   visible: PropTypes.bool,
   /** Specifies the function to run on clicking X icon. Ensure that this function will close Modal through the `visible` prop */
@@ -259,8 +266,9 @@ Modal.propTypes = {
 };
 
 Modal.defaultProps = {
-  width: "300px",
+  width: "350px",
   height: "auto",
+  maxHeight: "90vh",
   overlayID: "modal-overlay",
   modalID: "modal-container",
   theme: systemtheme
