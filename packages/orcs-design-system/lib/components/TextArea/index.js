@@ -85,7 +85,7 @@ const Label = styled("label").withConfig({ shouldForwardProp })(
       display: "block",
       zIndex: "2",
       textAlign: "left",
-      fontSize: "3",
+      fontSize: "1",
       fontWeight: props.bold ? "2" : "1",
       transition: themeGet("transition.defaultTransition")(props),
       mb: props.floating ? 0 : "xs",

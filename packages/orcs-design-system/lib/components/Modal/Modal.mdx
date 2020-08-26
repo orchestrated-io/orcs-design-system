@@ -9,12 +9,38 @@ The `Modal` component brings up a popup container upon clicking on a `Button` th
 
 This is a blank slate and functions to close the `Modal` and take any action must be specified (including any `Button` elements contained in the popup). The only element included by default is the close icon `X` on the upper right corner, which fires the `onClose` function when it is clicked.
 
-For a special case of this component that has Confirm and Cancel functionality baked in, see [Dialogue](./?path=/docs/components-dialogue--basic).
+You can set the height of a modal, and the content inside will scroll vertically if it exceeds the height of the modal.
 
-## Default
+For a dialogue pattern of this component that has Confirm and Cancel buttons, see [Dialogue](#basic-dialogue-modal) example below.
+
+## Basic modal
 
 <Preview>
   <Story id="components-modal--basic-modal" />
+</Preview>
+
+## Advanced modal
+
+If required you can specify content for both a header and/or footer for the modal to get the following treatment, where the header and footer is fixed, and the body content scrollable.
+
+<Preview>
+  <Story id="components-modal--advanced-modal" />
+</Preview>
+
+## Basic dialogue modal
+
+This basic dialogue pattern should be used when Modal functions as a yes/no, ok/cancel style user interaction.
+
+<Preview>
+  <Story id="components-modal--basic-dialogue-modal" />
+</Preview>
+
+## Edit dialogue modal
+
+This edit dialogue pattern should be used when Modal functions as a save/cancel, update/cancel style user interaction.
+
+<Preview>
+  <Story id="components-modal--edit-dialogue-modal" />
 </Preview>
 
 ## Properties
