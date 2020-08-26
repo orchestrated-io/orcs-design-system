@@ -54,8 +54,9 @@ const Container = styled(Box)`
   position: relative;
   z-index: 9001;
   max-height: 90vh;
-  overflow-y: auto;
   animation: 300ms ${fadeIn} ease-in-out, 300ms ${scaleIn} ease-in-out;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 `;
 
@@ -78,6 +79,68 @@ const CloseButton = styled(Button)(props =>
   })
 );
 
+const HeaderContent = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: ${themeGet("space.r")};
+  border-bottom: solid 1px ${themeGet("colors.greyLighter")};
+  flex: 0 0 auto;
+`;
+
+const FooterContent = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: ${themeGet("space.r")};
+  border-top: solid 1px ${themeGet("colors.greyLighter")};
+  flex: 0 0 auto;
+`;
+
+const ScrollableContent = styled.div`
+  --scrollbar-size: 8px;
+  --scrollbar-minlength: 30px; /* Minimum length of scrollbar thumb (width of horizontal, height of vertical) */
+  --scrollbar-ff-width: thin; /* FF-only accepts auto, thin, none */
+  --scrollbar-track-color: rgba(0, 0, 0, 0.05);
+  --scrollbar-color: rgba(0, 0, 0, 0.2);
+  --scrollbar-color-hover: rgba(0, 0, 0, 0.35);
+  --scrollbar-color-active: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  margin-top: ${props => (props.headerContent ? "0" : "20px")};
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: var(--scrollbar-ff-width);
+  scrollbar-color: var(--scrollbar-color) var(--scrollbar-track-color);
+  &::-webkit-scrollbar {
+    height: var(--scrollbar-size);
+    width: var(--scrollbar-size);
+  }
+  &::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track-color);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-color);
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-color-hover);
+  }
+  &::-webkit-scrollbar-thumb:active {
+    background-color: var(--scrollbar-color-active);
+  }
+  &::-webkit-scrollbar-thumb:vertical {
+    min-height: var(--scrollbar-minlength);
+  }
+  &::-webkit-scrollbar-thumb:horizontal {
+    min-width: var(--scrollbar-minlength);
+  }
+`;
+
 const Modal = ({
   children,
   width,
@@ -88,6 +151,8 @@ const Modal = ({
   visible,
   overlayID,
   modalID,
+  headerContent,
+  footerContent,
   ...restProps
 }) => {
   const modalRef = useOnclickOutside(() => {
@@ -118,15 +183,42 @@ const Modal = ({
                   p="r"
                   id={modalID}
                 >
-                  <CloseButton
-                    onClick={onClose}
-                    small
-                    px="6px"
-                    className="modal-close"
-                  >
-                    <Icon icon={["fas", "times"]} color="greyDark" size="lg" />
-                  </CloseButton>
-                  {children}
+                  {headerContent ? (
+                    <HeaderContent>
+                      <Box mr="l">{headerContent}</Box>
+                      <CloseButton
+                        onClick={onClose}
+                        className="modal-close"
+                        small
+                        px="6px"
+                      >
+                        <Icon
+                          icon={["fas", "times"]}
+                          color="greyDark"
+                          size="lg"
+                        />
+                      </CloseButton>
+                    </HeaderContent>
+                  ) : (
+                    <CloseButton
+                      onClick={onClose}
+                      className="modal-close"
+                      small
+                      px="6px"
+                    >
+                      <Icon
+                        icon={["fas", "times"]}
+                        color="greyDark"
+                        size="lg"
+                      />
+                    </CloseButton>
+                  )}
+                  <ScrollableContent headerContent={headerContent}>
+                    {children}
+                  </ScrollableContent>
+                  {footerContent && (
+                    <FooterContent>{footerContent}</FooterContent>
+                  )}
                 </Container>
               </div>
             </Overlay>
@@ -144,6 +236,10 @@ Modal.propTypes = {
     PropTypes.string,
     PropTypes.node
   ]),
+  /** Specifies content for the header of the modal */
+  headerContent: PropTypes.oneOfType([PropTypes.element, PropTypes.node]),
+  /** Specifies content for the header of the modal */
+  footerContent: PropTypes.oneOfType([PropTypes.element, PropTypes.node]),
   /** Specifies the width of the Modal in pixels */
   width: PropTypes.string,
   /** Specifies the height of the Modal in pixels */
