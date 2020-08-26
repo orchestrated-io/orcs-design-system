@@ -20,7 +20,7 @@ export const useKeyPress = (targetKey, callback) => {
 
   // If pressed key is our target key then set to true
   const downHandler = ({ key }) => {
-    if (key === matchedKey) {
+    if (key === targetKey) {
       setKeyPressed(true);
       callback();
     }
@@ -28,7 +28,7 @@ export const useKeyPress = (targetKey, callback) => {
 
   // If released key is our target key then set to false
   const upHandler = ({ key }) => {
-    if (key === matchedKey) {
+    if (key === targetKey) {
       setKeyPressed(false);
       callback();
     }
@@ -43,7 +43,7 @@ export const useKeyPress = (targetKey, callback) => {
       window.removeEventListener("keydown", downHandler);
       window.removeEventListener("keyup", upHandler);
     };
-  }, []); // Empty array ensures that effect is only run on mount and unmount
+  });
 
   return keyPressed;
 };

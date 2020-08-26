@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import useOnclickOutside from "react-cool-onclickoutside";
 import PropTypes from "prop-types";
