@@ -1,14 +1,19 @@
-import React, { useEffect, useCallback } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
+import useOnclickOutside from "react-cool-onclickoutside";
 import PropTypes from "prop-types";
 import styled, { keyframes, ThemeProvider } from "styled-components";
+
 import { css } from "@styled-system/css";
+import themeGet from "@styled-system/theme-get";
+
+import { commonKeys, useKeyPress } from "../../hooks/keypress";
+import systemtheme from "../../systemtheme";
+
 import Icon from "../Icon";
 import Button from "../Button";
 import Flex from "../Flex";
 import Box from "../Box";
-import systemtheme from "../../systemtheme";
-import themeGet from "@styled-system/theme-get";
 
 const scaleIn = keyframes`
   0% {
@@ -81,26 +86,16 @@ const Modal = ({
   onClose,
   theme,
   visible,
+  overlayID,
+  modalID,
   ...restProps
 }) => {
-  const handleKeypress = useCallback(
-    event => {
-      var code = event.keyCode || event.which;
-      if (code === 27) {
-        // 27 is the escape keycode
-        onClose();
-      }
-    },
-    [onClose]
-  );
+  const modalRef = useOnclickOutside(() => {
+    onClose();
+  });
 
-  useEffect(() => {
-    document.addEventListener("keydown", handleKeypress);
-
-    return () => {
-      document.removeEventListener("keydown", handleKeypress);
-    };
-  }, [handleKeypress]);
+  useKeyPress(commonKeys.ESCAPE, onClose);
+  useKeyPress(commonKeys.ESC, onClose);
 
   return (
     <ThemeProvider theme={theme}>
@@ -110,23 +105,30 @@ const Modal = ({
             <Overlay
               alignItems="center"
               justifyContent="center"
-              id="modal-overlay"
+              id={overlayID}
               {...restProps}
             >
-              <Container
-                width={width}
-                height={height}
-                overflow={overflow}
-                borderRadius="2"
-                bg="white"
-                p="r"
-                className="modal-container"
-              >
-                <CloseButton onClick={onClose} small px="6px">
-                  <Icon icon={["fas", "times"]} color="greyDark" size="lg" />
-                </CloseButton>
-                {children}
-              </Container>
+              <div ref={modalRef}>
+                <Container
+                  width={width}
+                  height={height}
+                  overflow={overflow}
+                  borderRadius="2"
+                  bg="white"
+                  p="r"
+                  id={modalID}
+                >
+                  <CloseButton
+                    onClick={onClose}
+                    small
+                    px="6px"
+                    className="modal-close"
+                  >
+                    <Icon icon={["fas", "times"]} color="greyDark" size="lg" />
+                  </CloseButton>
+                  {children}
+                </Container>
+              </div>
             </Overlay>
           </ThemeProvider>,
           document.body
@@ -152,6 +154,10 @@ Modal.propTypes = {
   onClose: PropTypes.func,
   /** Specifies whether the Modal overflow is visible or not, default is `hidden`. If height is not enough, vertical scrollbar will be displayed (`overflow-y: auto`) */
   overflow: PropTypes.string,
+  /** Specifies the id of the overlay element for targeting */
+  overlayID: PropTypes.string,
+  /** Specifies the id of the modal element for targeting */
+  modalID: PropTypes.string,
   /** Sets the theme for the Modal */
   theme: PropTypes.object
 };
@@ -159,6 +165,8 @@ Modal.propTypes = {
 Modal.defaultProps = {
   width: "300px",
   height: "auto",
+  overlayID: "modal-overlay",
+  modalID: "modal-container",
   theme: systemtheme
 };
 
