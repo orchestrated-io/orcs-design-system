@@ -45,7 +45,7 @@ exports[`Storyshots Components/ActionsMenu Left offset 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 epDpoM"
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 kvfGxQ"
     data-testid={null}
   >
     <div
@@ -476,7 +476,7 @@ Array [
     data-testid={null}
   >
     <div
-      className="Flex__FlexWrapper-sc-1f3kfw7-0 gEccMi"
+      className="Flex__FlexWrapper-sc-1f3kfw7-0 evMDyO"
       data-testid={null}
     >
       <div
@@ -566,7 +566,7 @@ Array [
     data-testid={null}
   >
     <div
-      className="Flex__FlexWrapper-sc-1f3kfw7-0 gEccMi"
+      className="Flex__FlexWrapper-sc-1f3kfw7-0 evMDyO"
       data-testid={null}
     >
       <div
@@ -1460,7 +1460,7 @@ exports[`Storyshots Components/Card Complex card 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 gSqVEO"
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 bkUNSO"
     data-testid={null}
   >
     <div
@@ -1913,7 +1913,7 @@ exports[`Storyshots Components/Expandable Default Expandable 1`] = `
       onClick={[Function]}
     >
       <div
-        className="Flex__FlexWrapper-sc-1f3kfw7-0 cThWPn"
+        className="Flex__FlexWrapper-sc-1f3kfw7-0 hkyosr"
         data-testid={null}
       >
         <div
@@ -1953,7 +1953,7 @@ exports[`Storyshots Components/Expandable Expandable With Badge 1`] = `
       onClick={[Function]}
     >
       <div
-        className="Flex__FlexWrapper-sc-1f3kfw7-0 cThWPn"
+        className="Flex__FlexWrapper-sc-1f3kfw7-0 hkyosr"
         data-testid={null}
       >
         <div
@@ -1999,7 +1999,7 @@ exports[`Storyshots Components/Expandable Expandable With Subtitle 1`] = `
       onClick={[Function]}
     >
       <div
-        className="Flex__FlexWrapper-sc-1f3kfw7-0 cThWPn"
+        className="Flex__FlexWrapper-sc-1f3kfw7-0 hkyosr"
         data-testid={null}
       >
         <div
@@ -2046,7 +2046,7 @@ exports[`Storyshots Components/Expandable Open Expandable 1`] = `
       open={true}
     >
       <div
-        className="Flex__FlexWrapper-sc-1f3kfw7-0 cThWPn"
+        className="Flex__FlexWrapper-sc-1f3kfw7-0 hkyosr"
         data-testid={null}
       >
         <div
@@ -2076,7 +2076,7 @@ exports[`Storyshots Components/Expandable Open Expandable 1`] = `
 
 exports[`Storyshots Components/Flex Basic Flex 1`] = `
 <div
-  className="Flex__FlexWrapper-sc-1f3kfw7-0 cThWPn"
+  className="Flex__FlexWrapper-sc-1f3kfw7-0 hkyosr"
   data-testid={null}
 >
   <div
@@ -2150,7 +2150,7 @@ exports[`Storyshots Components/Flex Basic Flex 1`] = `
 
 exports[`Storyshots Components/Flex Using Flex Item 1`] = `
 <div
-  className="Flex__FlexWrapper-sc-1f3kfw7-0 jGRLSf"
+  className="Flex__FlexWrapper-sc-1f3kfw7-0 gBXggL"
   data-testid={null}
 >
   <div
@@ -2209,7 +2209,7 @@ exports[`Storyshots Components/Flex Using Flex Item 1`] = `
 
 exports[`Storyshots Components/Grid Default Grid 1`] = `
 <div
-  className="Grid__GridWrapper-sc-1rlajun-0 kHYecJ"
+  className="Grid__GridWrapper-sc-1rlajun-0 jgFkpR"
   data-testid={null}
 >
   <div
@@ -2253,7 +2253,7 @@ exports[`Storyshots Components/Grid Default Grid 1`] = `
 
 exports[`Storyshots Components/Grid Template columns and rows 1`] = `
 <div
-  className="Grid__GridWrapper-sc-1rlajun-0 cqpzbN"
+  className="Grid__GridWrapper-sc-1rlajun-0 jngOeN"
   data-testid={null}
 >
   <div
@@ -2297,7 +2297,7 @@ exports[`Storyshots Components/Grid Template columns and rows 1`] = `
 
 exports[`Storyshots Components/Grid Text with GridItem 1`] = `
 <div
-  className="Grid__GridWrapper-sc-1rlajun-0 fwPkbV"
+  className="Grid__GridWrapper-sc-1rlajun-0 cpccDB"
   data-testid={null}
 >
   <div
@@ -2341,7 +2341,7 @@ exports[`Storyshots Components/Grid Text with GridItem 1`] = `
 
 exports[`Storyshots Components/Grid Width-based columns and rows 1`] = `
 <div
-  className="Grid__GridWrapper-sc-1rlajun-0 gsXKSS"
+  className="Grid__GridWrapper-sc-1rlajun-0 gZQHnm"
   data-testid={null}
 >
   <div
@@ -2397,7 +2397,7 @@ exports[`Storyshots Components/Grid Width-based columns and rows 1`] = `
 
 exports[`Storyshots Components/Grid With GridItem 1`] = `
 <div
-  className="Grid__GridWrapper-sc-1rlajun-0 dGbirI"
+  className="Grid__GridWrapper-sc-1rlajun-0 fPxfho"
   data-testid={null}
 >
   <div
@@ -2449,7 +2449,7 @@ exports[`Storyshots Components/Grid With GridItem 1`] = `
 
 exports[`Storyshots Components/Grid With background colours 1`] = `
 <div
-  className="Grid__GridWrapper-sc-1rlajun-0 kHYecJ"
+  className="Grid__GridWrapper-sc-1rlajun-0 jgFkpR"
   data-testid={null}
 >
   <div
@@ -2493,7 +2493,7 @@ exports[`Storyshots Components/Grid With background colours 1`] = `
 
 exports[`Storyshots Components/Grid Without GridItem 1`] = `
 <div
-  className="Grid__GridWrapper-sc-1rlajun-0 dGbirI"
+  className="Grid__GridWrapper-sc-1rlajun-0 fPxfho"
   data-testid={null}
 >
   <button
@@ -3634,7 +3634,7 @@ exports[`Storyshots Components/Popover Default 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 jSQlXT"
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 gRxNeP"
     data-testid={null}
   >
     <div
@@ -3663,7 +3663,7 @@ exports[`Storyshots Components/Popover Direction 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 jSQlXT"
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 gRxNeP"
     data-testid={null}
   >
     <div
@@ -3821,7 +3821,7 @@ exports[`Storyshots Components/Popover Display Inline Block 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 jSQlXT"
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 gRxNeP"
     data-testid={null}
   >
     <div
@@ -3899,7 +3899,7 @@ exports[`Storyshots Components/Popover Specified Width 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 jSQlXT"
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 gRxNeP"
     data-testid={null}
   >
     <div
@@ -3929,7 +3929,7 @@ exports[`Storyshots Components/Popover Text Alignment 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 jSQlXT"
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 gRxNeP"
     data-testid={null}
   >
     <div
@@ -5569,7 +5569,7 @@ exports[`Storyshots Components/StyledLink Inverted 1`] = `
     data-testid={null}
   >
     <div
-      className="Flex__FlexWrapper-sc-1f3kfw7-0 gSqVEO"
+      className="Flex__FlexWrapper-sc-1f3kfw7-0 bkUNSO"
       data-testid={null}
     >
       <div
@@ -5695,7 +5695,7 @@ exports[`Storyshots Components/Tabs Default Tabs 1`] = `
 
 exports[`Storyshots Components/Tag Default 1`] = `
 <div
-  className="Flex__FlexWrapper-sc-1f3kfw7-0 cThWPn"
+  className="Flex__FlexWrapper-sc-1f3kfw7-0 hkyosr"
   data-testid={null}
 >
   <button
@@ -5710,7 +5710,7 @@ exports[`Storyshots Components/Tag Default 1`] = `
 
 exports[`Storyshots Components/Tag Disabled 1`] = `
 <div
-  className="Flex__FlexWrapper-sc-1f3kfw7-0 cThWPn"
+  className="Flex__FlexWrapper-sc-1f3kfw7-0 hkyosr"
   data-testid={null}
 >
   <div
@@ -5762,7 +5762,7 @@ exports[`Storyshots Components/Tag Disabled 1`] = `
 
 exports[`Storyshots Components/Tag No Cross 1`] = `
 <div
-  className="Flex__FlexWrapper-sc-1f3kfw7-0 cThWPn"
+  className="Flex__FlexWrapper-sc-1f3kfw7-0 hkyosr"
   data-testid={null}
 >
   <div
@@ -5814,7 +5814,7 @@ exports[`Storyshots Components/Tag No Cross 1`] = `
 
 exports[`Storyshots Components/Tag Selected 1`] = `
 <div
-  className="Flex__FlexWrapper-sc-1f3kfw7-0 cThWPn"
+  className="Flex__FlexWrapper-sc-1f3kfw7-0 hkyosr"
   data-testid={null}
 >
   <div
@@ -6573,7 +6573,7 @@ exports[`Storyshots Components/Tooltip Default 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 gSqVEO"
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 bkUNSO"
     data-testid={null}
   >
     <button
@@ -6597,7 +6597,7 @@ exports[`Storyshots Components/Tooltip Default 1`] = `
 
 exports[`Storyshots Components/Tooltip Direction 1`] = `
 <div
-  className="Flex__FlexWrapper-sc-1f3kfw7-0 gSqVEO"
+  className="Flex__FlexWrapper-sc-1f3kfw7-0 bkUNSO"
   data-testid={null}
 >
   <div
@@ -6689,7 +6689,7 @@ exports[`Storyshots Components/Tooltip Inverted 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 gSqVEO"
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 bkUNSO"
     data-testid={null}
   >
     <button
@@ -6713,7 +6713,7 @@ exports[`Storyshots Components/Tooltip Inverted 1`] = `
 
 exports[`Storyshots Components/Tooltip Size 1`] = `
 <div
-  className="Flex__FlexWrapper-sc-1f3kfw7-0 gSqVEO"
+  className="Flex__FlexWrapper-sc-1f3kfw7-0 bkUNSO"
   data-testid={null}
 >
   <div
