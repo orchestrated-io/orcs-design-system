@@ -124,7 +124,12 @@ const Modal = ({
                 p="r"
                 id={modalID}
               >
-                <CloseButton onClick={onClose} small px="6px">
+                <CloseButton
+                  onClick={onClose}
+                  small
+                  px="6px"
+                  className="modal-close"
+                >
                   <Icon icon={["fas", "times"]} color="greyDark" size="lg" />
                 </CloseButton>
                 {children}
