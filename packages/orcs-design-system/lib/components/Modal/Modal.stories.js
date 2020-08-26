@@ -23,37 +23,18 @@ const Basic = () => {
   const handleOnConfirm = () => {
     setVisible(false);
   };
-  //  const handleClose = () => {
-  //    setVisible(false);
-  //  };
-  useEffect(() => {
-    if (!visible) {
-      return;
-    }
-    const handleClicked = () => {
-      setVisible(false);
-    };
-    // handle click to hide modal
-    document
-      .getElementById("modal-overlay")
-      .addEventListener("click", handleClicked);
-    document
-      .getElementById("modal-container")
-      .addEventListener("click", e => e.stopPropagation());
-    document
-      .getElementById("modal-container")
-      .getElementsByClassName("modal-close")[0]
-      .addEventListener("click", handleClicked);
-    return () => {
-      // If menu closed, unregister event listener to prevent memory leaks
-      document.removeEventListener("click", handleClicked);
-    };
-  }, [visible]);
+  const onToggleModal = visible => () => {
+    setVisible(visible);
+  };
 
   return (
     <>
       <Button onClick={handleOnButtonClick}>Open Modal</Button>
-      <Modal visible={visible} handleOnConfirm={handleOnConfirm}>
+      <Modal
+        visible={visible}
+        handleOnConfirm={handleOnConfirm}
+        onClose={onToggleModal(false)}
+      >
         <Spacer mb="r">
           <H3>Modal Title</H3>
           <P>
@@ -68,44 +49,22 @@ export const basicModal = () => <Basic />;
 basicModal.parameters = {
   docs: {
     source: {
-      code: `const [visible, setVisible] = useState(false);
+      code: `
+        const [visible, setVisible] = useState(false);
         const handleOnButtonClick = () => {
           setVisible(true);
         };
         const handleOnConfirm = () => {
           setVisible(false);
         };
-        //  const handleClose = () => {
-        //    setVisible(false);
-        //  };
-        useEffect(() => {
-          if (!visible) {
-            return;
-          }
-          const handleClicked = () => {
-            setVisible(false);
-          };
-          // handle click to hide modal
-          document
-            .getElementById("modal-overlay")
-            .addEventListener("click", handleClicked);
-          document
-            .getElementById("modal-container")
-            .addEventListener("click", e => e.stopPropagation());
-          document
-            .getElementById("modal-container")
-            .getElementsByClassName("modal-close")[0]
-            .addEventListener("click", handleClicked);
-          return () => {
-            // If menu closed, unregister event listener to prevent memory leaks
-            document.removeEventListener("click", handleClicked);
-          };
-        }, [visible]);
+        const onToggleModal = (visible) => () => {
+          setVisible(visible);
+        };
 
         return (
           <>
             <Button onClick={handleOnButtonClick}>Open Modal</Button>
-            <Modal visible={visible} handleOnConfirm={handleOnConfirm}>
+            <Modal visible={visible} handleOnConfirm={handleOnConfirm} onClose={onToggleModal(false)}>
               <Spacer mb="r">
                 <H3>Modal Title</H3>
                 <P>
