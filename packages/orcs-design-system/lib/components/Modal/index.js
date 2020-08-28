@@ -188,7 +188,9 @@ const Modal = ({
                 >
                   {headerContent ? (
                     <HeaderContent>
-                      <Box mr="l">{headerContent}</Box>
+                      <Box mr="l" width="100%">
+                        {headerContent}
+                      </Box>
                       <CloseButton
                         onClick={onClose}
                         className="modal-close"
