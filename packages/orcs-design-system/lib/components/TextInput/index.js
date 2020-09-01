@@ -256,8 +256,7 @@ const TextInput = React.forwardRef((props, ref) => {
     fullWidth,
     mandatory,
     iconLeft,
-    iconRight,
-    ...InputStyles
+    iconRight
   } = props;
 
   // Strip numberProps from props for Input

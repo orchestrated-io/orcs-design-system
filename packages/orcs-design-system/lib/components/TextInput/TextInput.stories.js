@@ -113,6 +113,7 @@ export const withIcons = () => (
       label="Phone number"
       placeholder="E.g. (03) 9451 1786"
       iconLeft={["fas", "phone"]}
+      aria-hidden-by="test"
     />
 
     <TextInput
