@@ -1,9 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { keyframes, ThemeProvider } from "styled-components";
-import colours from "../../colours";
-import variables from "../../variables";
-import { rgba } from "polished";
 import { space, layout } from "styled-system";
 import systemtheme from "../../systemtheme";
 
@@ -132,7 +129,9 @@ const Item = styled.div`
   display: block;
   transform: translateZ(0);
   color: ${props =>
-    props.colour === "white" ? colours.white : colours.greyDarkest};
+    props.colour === "white"
+      ? systemtheme.colors.white
+      : systemtheme.colors.greyDarkest};
 `;
 
 const Label = styled.label`
@@ -157,28 +156,29 @@ const Control = styled.input.attrs({
   &:focus {
     + div {
       border-radius: 2px;
-      box-shadow: 0 0 0 3px
-        ${props =>
-          props.colour && colours[props.colour]
-            ? rgba(colours[props.colour], 0.4)
-            : rgba(colours.greyDarker, 0.4)};
+      box-shadow: ${props =>
+        props.colour && systemtheme.colors[props.colour]
+          ? systemtheme.shadows.thinOutline +
+            " " +
+            systemtheme.colors[props.colour + "30"]
+          : systemtheme.shadows.thinOutline + " " + systemtheme.colors.black30};
     }
   }
 
   /* Targeting box */
   + div {
-    transition: ${variables.defaultTransition};
+    transition: ${systemtheme.transition.transitionDefault};
     &:before {
       background-color: ${props =>
-        props.colour && colours[props.colour]
-          ? colours[props.colour]
-          : colours.greyDarker};
+        props.colour && systemtheme.colors[props.colour]
+          ? systemtheme.colors[props.colour]
+          : systemtheme.colors.greyDarker};
     }
     > div {
       color: ${props =>
-        props.colour && colours[props.colour]
-          ? colours[props.colour]
-          : colours.greyDarker};
+        props.colour && systemtheme.colors[props.colour]
+          ? systemtheme.colors[props.colour]
+          : systemtheme.colors.greyDarker};
     }
   }
 
@@ -234,7 +234,7 @@ const Box = styled.div`
     margin: 0;
     pointer-events: none;
     /*transform: scale3d(2.3, 2.3, 1);*/
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: ${systemtheme.colors.black50};
   }
 `;
 
@@ -244,10 +244,10 @@ const Check = styled.div`
   width: 20px;
   height: 20px;
   border: 2px solid;
-  border-radius: ${variables.borderRadiusSmall};
+  border-radius: ${systemtheme.radii[1]};
   overflow: hidden;
   z-index: 1;
-  color: ${colours.greyDarker};
+  color: ${systemtheme.colors.greyDarker};
 
   :before {
     content: "";

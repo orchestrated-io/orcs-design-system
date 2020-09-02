@@ -85,7 +85,9 @@ const Select = forwardRef((props, ref) => {
       },
       borderColor: state.isFocused
         ? themeGet("colors.primary")(props)
-        : themeGet("colors.grey")(props),
+        : props.inverted
+        ? themeGet("colors.white30")(props)
+        : themeGet("colors.black30")(props),
       backgroundColor: props.inverted
         ? themeGet("colors.greyDarker")(props)
         : themeGet("colors.white")(props),

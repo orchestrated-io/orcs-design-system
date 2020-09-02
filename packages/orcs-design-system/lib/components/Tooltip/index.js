@@ -1,9 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css, ThemeProvider } from "styled-components";
-import colours from "../../colours";
-import variables from "../../variables";
-import { rgba } from "polished";
 import { space, layout } from "styled-system";
 import systemtheme from "../../systemtheme";
 
@@ -19,18 +16,19 @@ const Container = styled.button`
   -webkit-font-smoothing: antialiased;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   border-radius: 10px;
-  color: ${props => (props.inverted ? colours.greyDarkest : colours.white)};
+  color: ${props =>
+    props.inverted ? systemtheme.colors.greyDarkest : systemtheme.colors.white};
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: ${variables.defaultTransition};
+  transition: ${systemtheme.transition.transitionDefault};
   background: ${props =>
-    props.inverted ? colours.white : colours.greyDarkest};
+    props.inverted ? systemtheme.colors.white : systemtheme.colors.greyDarkest};
 
   &:hover,
   &:focus {
     outline: 0;
-    background: ${colours.primary};
+    background: ${systemtheme.colors.primary};
 
     > div {
       outline: 0;
@@ -61,12 +59,11 @@ const Text = styled.div`
   opacity: 0;
   padding: 8px 10px;
   pointer-events: none;
-  border-radius: ${variables.borderRadiusSmall};
-  box-shadow: 0 2px 5px ${rgba(colours.greyDarkest, 0.3)};
-  transition: ${variables.defaultTransition};
+  border-radius: ${systemtheme.radii[1]};
+  transition: ${systemtheme.transition.transitionDefault};
   width: ${props => (props.width ? props.width : "200px")};
   background: ${props =>
-    props.inverted ? colours.white : colours.greyDarkest};
+    props.inverted ? systemtheme.colors.white : systemtheme.colors.greyDarkest};
 
   &:before {
     content: "";
@@ -77,7 +74,9 @@ const Text = styled.div`
     border-width: 6px 8px 6px 0;
     border-color: transparent;
     border-right-color: ${props =>
-      props.inverted ? colours.white : colours.greyDarkest};
+      props.inverted
+        ? systemtheme.colors.white
+        : systemtheme.colors.greyDarkest};
     position: absolute;
   }
 

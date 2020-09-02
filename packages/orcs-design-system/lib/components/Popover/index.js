@@ -1,10 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css, ThemeProvider } from "styled-components";
-import colours from "../../colours";
-import variables from "../../variables";
 import { space, layout } from "styled-system";
-import { rgba } from "polished";
+import Icon from "../Icon";
 import systemtheme from "../../systemtheme";
 
 const Container = styled.div`
@@ -13,13 +11,24 @@ ${layout}
   display: ${props =>
     props.inlineBlock ? "inline-block !important" : "block !important"};
   position: relative;
-  &:hover {
+  &:hover,
+  &:focus-within {
     .tooltip {
       opacity: 1;
       z-index: 100;
       visibility: visible;
       pointer-events: auto;
     }
+  }
+`;
+
+const TooltipControl = styled.div`
+  cursor: help;
+  transition: ${systemtheme.transition.transitionDefault};
+  &:hover,
+  &:focus {
+    outline: 0;
+    color: ${systemtheme.colors.primary};
   }
 `;
 
@@ -33,14 +42,13 @@ const Text = styled.div`
   word-break: break-word;
   left: 100%;
   top: 50%;
-  color: ${colours.white};
+  color: ${systemtheme.colors.white};
   outline: 0;
   padding: 8px 10px;
-  border-radius: ${variables.borderRadiusSmall};
+  border-radius: ${systemtheme.radii[1]};
   transform: translateX(10px) translateY(-50%);
-  box-shadow: -3px 0px 12px 0 ${rgba(colours.greyDarkest, 0.15)};
   width: ${props => (props.width ? props.width : "200px")};
-  background: ${colours.greyDarker};
+  background: ${systemtheme.colors.greyDarkest};
   transition: all 300ms ease-in-out;
   opacity: 0;
   z-index: -100;
@@ -56,7 +64,7 @@ const Text = styled.div`
     border-style: solid;
     border-width: 6px 6px 6px 0;
     border-color: transparent;
-    border-right-color: ${colours.greyDarker};
+    border-right-color: ${systemtheme.colors.greyDarkest};
     left: -6px;
     top: 50%;
     margin-top: -6px;
@@ -80,7 +88,6 @@ const Text = styled.div`
           top: auto;
           bottom: 100%;
           transform: translateX(-50%) translateY(-10px);
-          box-shadow: 0 4px 14px 0 ${rgba(colours.greyDarkest, 0.15)};
           &:before {
             left: 50%;
             top: auto;
@@ -102,7 +109,6 @@ const Text = styled.div`
           top: auto;
           bottom: 100%;
           transform: translateX(5px) translateY(-5px);
-          box-shadow: 0 4px 14px 0 ${rgba(colours.greyDarkest, 0.15)};
           &:before {
             left: 0;
             top: auto;
@@ -129,7 +135,6 @@ const Text = styled.div`
           top: 100%;
           bottom: auto;
           transform: translateX(5px) translateY(5px);
-          box-shadow: 0 4px 14px 0 ${rgba(colours.greyDarkest, 0.15)};
           &:before {
             left: 0;
             bottom: auto;
@@ -151,7 +156,6 @@ const Text = styled.div`
           left: 50%;
           top: 100%;
           transform: translateX(-50%) translateY(10px);
-          box-shadow: 0 -3px 12px 0 ${rgba(colours.greyDarkest, 0.15)};
           &:before {
             left: 50%;
             top: -9px;
@@ -174,7 +178,6 @@ const Text = styled.div`
           top: 100%;
           bottom: auto;
           transform: translateX(-5px) translateY(5px);
-          box-shadow: 0 4px 14px 0 ${rgba(colours.greyDarkest, 0.15)};
           &:before {
             right: 0;
             left: auto;
@@ -198,7 +201,6 @@ const Text = styled.div`
           left: auto;
           right: 100%;
           transform: translateX(-10px) translateY(-50%);
-          box-shadow: 3px 0 12px 0 ${rgba(colours.greyDarkest, 0.15)};
           &:before {
             left: auto;
             right: -6px;
@@ -216,7 +218,6 @@ const Text = styled.div`
           top: auto;
           bottom: 100%;
           transform: translateX(-5px) translateY(-5px);
-          box-shadow: 0 4px 14px 0 ${rgba(colours.greyDarkest, 0.15)};
           &:before {
             right: 0;
             left: auto;
@@ -252,6 +253,7 @@ export default function Popover({
   text,
   inlineBlock,
   theme,
+  variant,
   ...props
 }) {
   return (
@@ -265,6 +267,11 @@ export default function Popover({
         >
           {text}
         </Text>
+        {variant === "tooltip" && (
+          <TooltipControl tabIndex="0">
+            <Icon transform="grow-4" icon={["fas", "question-circle"]} />
+          </TooltipControl>
+        )}
         {children}
       </Container>
     </ThemeProvider>
@@ -284,6 +291,8 @@ Popover.propTypes = {
   width: PropTypes.string,
   /** Sets display property of popover tooltip to inline-block */
   inlineBlock: PropTypes.bool,
+  /** Specifies the variant of the popover. */
+  variant: PropTypes.oneOf(["tooltip"]),
   /** Specifies the system design theme. */
   theme: PropTypes.object
 };

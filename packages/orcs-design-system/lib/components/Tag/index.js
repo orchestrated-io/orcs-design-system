@@ -1,8 +1,6 @@
 import React from "react";
 import styled, { css, ThemeProvider } from "styled-components";
 import PropTypes from "prop-types";
-import variables from "../../variables";
-import { rgba, darken } from "polished";
 import systemtheme from "../../systemtheme";
 import { space, layout } from "styled-system";
 
@@ -21,7 +19,7 @@ const TagWrapper = styled.button`
   margin: 3px;
   white-space: nowrap;
   position: relative;
-  transition: ${variables.defaultTransition};
+  transition: ${systemtheme.transition.transitionDefault};
   cursor: ${props => (props.disabled ? "default" : "pointer")};
   border: solid 1px
     ${props =>
@@ -54,19 +52,21 @@ const TagWrapper = styled.button`
       ? css``
       : css`
           &:hover {
-            border: solid 1px ${darken(0.1, systemtheme.colors.primary)};
+            border: solid 1px ${systemtheme.colors.primaryDark};
             color: ${props =>
               props.selected
                 ? systemtheme.colors.white
-                : darken(0.2, systemtheme.colors.primary)};
+                : systemtheme.colors.primaryDark};
             background: ${props =>
               props.selected
-                ? darken(0.11, systemtheme.colors.primary)
+                ? systemtheme.colors.primaryDark
                 : systemtheme.colors.white};
           }
         `} &:focus {
     outline: 0;
-    box-shadow: 0 0 0 3px ${rgba(systemtheme.colors.primary, 0.4)};
+    box-shadow: ${systemtheme.shadows.thinOutline +
+      " " +
+      systemtheme.colors.primary30};
   }
 
   ${props =>
@@ -85,7 +85,7 @@ const TagWrapper = styled.button`
             font-weight: 600;
             transform-origin: 50% 50%;
             color: ${systemtheme.colors.white};
-            transition: ${variables.defaultTransition};
+            transition: ${systemtheme.transition.transitionDefault};
             opacity: ${props => (props.selected ? 1 : 0)};
             transform: ${props =>
               props.selected

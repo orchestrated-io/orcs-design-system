@@ -105,3 +105,12 @@ export const DisplayInlineBlock = () => (
     </Popover>
   </>
 );
+
+export const tooltipExample = () => (
+  <Popover
+    text="This tooltip helps explain stuff"
+    direction="top"
+    variant="tooltip"
+  />
+);
+tooltipExample.storyName = "Tooltip Example";

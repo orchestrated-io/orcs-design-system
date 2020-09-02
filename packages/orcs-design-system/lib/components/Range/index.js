@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css, ThemeProvider } from "styled-components";
-import colours from "../../colours";
 import { space, layout } from "styled-system";
 import systemtheme from "../../systemtheme";
 
@@ -17,7 +16,7 @@ const thumb = () => `
     width: ${vars.thumbDiameter};
     height: ${vars.thumbDiameter};
     border-radius: ${vars.thumbDiameter};
-    background: ${colours.primary};
+    background: ${systemtheme.colors.primary};
 `;
 
 const track = () => `
@@ -25,7 +24,7 @@ const track = () => `
     border: none;
     width: 100%;
     height: ${vars.trackHeight};
-	  background: ${colours.greyLight};
+	  background: ${systemtheme.colors.greyLight};
     border-radius: 4px;
 `;
 
@@ -55,24 +54,24 @@ ${layout}
         ? css`
             &:before,
             &:after {
-              color: ${colours.white};
+              color: ${systemtheme.colors.white};
             }
             input {
               &:focus {
                 background: rgba(255, 255, 255, 0.1);
               }
               &::-webkit-slider-runnable-track {
-                background: ${colours.greyDark};
+                background: ${systemtheme.colors.greyDark};
               }
               &::-moz-range-track {
-                background: ${colours.greyDark};
+                background: ${systemtheme.colors.greyDark};
               }
               &::-ms-track {
-                background: ${colours.greyDark};
+                background: ${systemtheme.colors.greyDark};
               }
             }
             output {
-              color: ${colours.white};
+              color: ${systemtheme.colors.white};
             }
           `
         : css``}
@@ -143,7 +142,7 @@ const Output = styled.output`
   text-align: center;
   flex: 1 1 100%;
   order: 4;
-  color: ${colours.greyDarker};
+  color: ${systemtheme.colors.greyDarker};
 `;
 /**
  * Range component is pretty self explanatory, used to select a number out of a range, make sure to set a min, max and default value.

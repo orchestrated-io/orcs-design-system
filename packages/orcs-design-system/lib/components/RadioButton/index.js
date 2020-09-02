@@ -50,7 +50,8 @@ const RadioButtonControl = styled.input.attrs({ type: "radio" })(
         transform: "scale(1)"
       },
       "&:focus + div": {
-        boxShadow: "0 0 0 3px" + themeGet("colors.greyLight")(props)
+        boxShadow:
+          systemtheme.shadows.thinOutline + " " + systemtheme.colors.black30
       }
     }),
   props =>
@@ -59,27 +60,40 @@ const RadioButtonControl = styled.input.attrs({ type: "radio" })(
         default: {},
         white: {
           "&:focus + div": {
-            boxShadow: "0 0 0 3px" + themeGet("colors.white10")(props)
+            boxShadow:
+              systemtheme.shadows.thinOutline + " " + systemtheme.colors.white30
           }
         },
         primary: {
           "&:focus + div": {
-            boxShadow: "0 0 0 3px" + themeGet("colors.primaryLighter")(props)
+            boxShadow:
+              systemtheme.shadows.thinOutline +
+              " " +
+              systemtheme.colors.primary30
           }
         },
         success: {
           "&:focus + div": {
-            boxShadow: "0 0 0 3px" + themeGet("colors.successLighter")(props)
+            boxShadow:
+              systemtheme.shadows.thinOutline +
+              " " +
+              systemtheme.colors.success30
           }
         },
         warning: {
           "&:focus + div": {
-            boxShadow: "0 0 0 3px" + themeGet("colors.warningLighter")(props)
+            boxShadow:
+              systemtheme.shadows.thinOutline +
+              " " +
+              systemtheme.colors.warning30
           }
         },
         danger: {
           "&:focus + div": {
-            boxShadow: "0 0 0 3px" + themeGet("colors.dangerLighter")(props)
+            boxShadow:
+              systemtheme.shadows.thinOutline +
+              " " +
+              systemtheme.colors.danger30
           }
         }
       }

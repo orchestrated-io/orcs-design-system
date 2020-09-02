@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import PropTypes from "prop-types";
-import colours from "../../colours";
-import variables from "../../variables";
 import Flex from "../Flex";
 import Typography from "../Typography";
 import Badge from "../Badge";
-import { darken } from "polished";
 import systemtheme from "../../systemtheme";
 
 const Item = styled.div`
@@ -27,21 +24,21 @@ const Button = styled.button`
   margin: 0;
   font-size: 1.8rem;
   text-align: left;
-  color: ${colours.greyDark};
+  color: ${systemtheme.colors.greyDarker};
   padding: 18px 38px 18px 16px;
-  border-left: solid 3px ${colours.greyLightest};
-  border-radius: ${variables.borderRadiusSmall};
-  background: ${colours.greyLightest};
-  transition: ${variables.defaultTransition};
+  border-left: solid 3px ${systemtheme.colors.greyLightest};
+  border-radius: ${systemtheme.radii[1]};
+  background: ${systemtheme.colors.greyLightest};
+  transition: ${systemtheme.transition.transitionDefault};
 
   &:hover {
-    background: ${darken(0.05, colours.greyLightest)};
-    border-left: solid 3px ${colours.greyLighter};
+    background: ${systemtheme.colors.greyLighter};
+    border-left: solid 3px ${systemtheme.colors.greyLighter};
   }
 
   &:focus {
     outline: 0;
-    border-left: solid 3px ${colours.primary};
+    border-left: solid 3px ${systemtheme.colors.primary};
   }
 
   &:after,
@@ -52,9 +49,9 @@ const Button = styled.button`
     transform: translateY(-50%);
     width: 2px;
     height: 12px;
-    right: ${variables.defaultSpacing};
-    background-color: ${colours.greyDark};
-    transition: ${variables.defaultTransition};
+    right: ${systemtheme.space.r};
+    background-color: ${systemtheme.colors.greyDark};
+    transition: ${systemtheme.transition.transitionDefault};
   }
   &:before {
     transform: ${props =>
@@ -71,8 +68,8 @@ const Text = styled.div`
 
 const Content = styled.div`
   overflow: hidden;
-  padding: ${variables.defaultSpacing};
-  transition: ${variables.defaultTransition};
+  padding: ${systemtheme.space.r};
+  transition: ${systemtheme.transition.transitionDefault};
   display: ${props => (props.open ? "block" : "none")};
 `;
 

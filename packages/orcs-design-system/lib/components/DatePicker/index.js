@@ -8,9 +8,8 @@ import "react-dates/initialize";
 
 import { DateRangePicker, SingleDatePicker } from "react-dates";
 import styled from "styled-components";
-import colours from "../../colours";
-import variables from "../../variables";
-import { rgba } from "polished";
+import { themeGet } from "@styled-system/theme-get";
+import systemtheme from "../../systemtheme";
 
 import { DateRangePickerPhrases } from "react-dates/lib/defaultPhrases";
 import DateRangePickerShape from "react-dates/lib/shapes/DateRangePickerShape";
@@ -105,7 +104,7 @@ const DatePickerContainer = styled.div`
     background: none;
   }
   .DateRangePickerInput_arrow_svg path {
-    fill: ${colours.greyLight};
+    fill: ${themeGet("colors.greyLight")};
   }
   .SingleDatePicker_picker,
   .DateRangePicker_picker {
@@ -121,39 +120,43 @@ const DatePickerContainer = styled.div`
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1.4rem;
     z-index: 1;
-    transition: ${variables.defaultTransition};
-    background: ${colours.white};
-    color: ${colours.greyDarkest};
+    transition: ${themeGet("transition.transitionDefault")};
+    background: ${themeGet("colors.white")};
+    color: ${themeGet("colors.greyDarkest")};
     height: 40px;
     width: 110px;
     padding: 5px 12px 6px 12px;
-    border-radius: ${variables.borderRadius};
-    border: 1px solid ${rgba(colours.black, 0.2)};
+    border-radius: ${themeGet("radii.2")};
+    border: 1px solid ${themeGet("colors.black30")};
     &:hover {
-      border: 1px solid ${colours.primary};
+      border: 1px solid ${themeGet("colors.primary")};
     }
     &:focus {
       outline: 0;
-      box-shadow: 0 0 0 3px ${rgba(colours.primary, 0.4)};
-      border: 1px solid ${colours.primary};
+      box-shadow: ${systemtheme.shadows.thinOutline +
+        " " +
+        systemtheme.colors.primary30};
+      border: 1px solid ${themeGet("colors.primary")};
     }
   }
   .DateInput_input__focused {
     outline: 0;
-    box-shadow: 0 0 0 3px ${rgba(colours.primary, 0.4)};
-    border: 1px solid ${colours.primary};
+    box-shadow: ${systemtheme.shadows.thinOutline +
+      " " +
+      systemtheme.colors.primary30};
+    border: 1px solid ${themeGet("colors.primary")};
   }
   .DayPickerKeyboardShortcuts_panel {
-    color: ${colours.greyDarkest};
+    color: ${themeGet("colors.greyDarkest")};
   }
   .CalendarDay__default {
-    transition: ${variables.defaultTransition};
+    transition: ${themeGet("transition.transitionDefault")};
   }
   .CalendarDay__selected,
   .CalendarDay__selected:active,
   .CalendarDay__selected:hover {
-    background: ${colours.primary};
-    border: 1px solid ${colours.primary};
+    background: ${themeGet("colors.primary")};
+    border: 1px solid ${themeGet("colors.primary")};
   }
   .DayPickerKeyboardShortcuts_show__bottomRight {
     border-radius: 0 0 3px 0;
@@ -165,33 +168,33 @@ const DatePickerContainer = styled.div`
   }
   .DayPickerKeyboardShortcuts_show__bottomRight:before,
   .DayPickerKeyboardShortcuts_show__topRight:before {
-    border-right: 33px solid ${colours.primary};
-    transition: ${variables.defaultTransition};
+    border-right: 33px solid ${themeGet("colors.primary")};
+    transition: ${themeGet("transition.transitionDefault")};
   }
   .DayPickerKeyboardShortcuts_show__bottomRight:hover:before,
   .DayPickerKeyboardShortcuts_show__topRight:hover:before {
-    border-right: 33px solid ${colours.primaryDark};
+    border-right: 33px solid ${themeGet("colors.primaryDark")};
   }
 
   .CalendarDay__selected_span,
   .CalendarDay__hovered_span,
   .CalendarDay__hovered_span:active {
-    background: ${colours.primaryLight};
-    border: 1px solid ${colours.primaryLight};
-    color: ${colours.white};
+    background: ${themeGet("colors.primaryLight")};
+    border: 1px solid ${themeGet("colors.primaryLight")};
+    color: ${themeGet("colors.white")};
   }
   /*  .CalendarDay__hovered_span, */
   .CalendarDay__hovered_span:hover,
   .CalendarDay__default:hover {
-    background: ${colours.primary};
-    border: 1px double ${colours.primary};
-    color: ${colours.white};
+    background: ${themeGet("colors.primary")};
+    border: 1px double ${themeGet("colors.primary")};
+    color: ${themeGet("colors.white")};
   }
 
   .CalendarDay__selected_span:active,
   .CalendarDay__selected_span:hover {
-    background: ${colours.primaryDarker};
-    border: 1px solid ${colours.primaryDarker};
+    background: ${themeGet("colors.primaryDarker")};
+    border: 1px solid ${themeGet("colors.primaryDarker")};
   }
   .DateInput_fang {
     margin-top: 1px;
