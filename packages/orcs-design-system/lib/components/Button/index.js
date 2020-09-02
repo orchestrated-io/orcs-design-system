@@ -68,71 +68,64 @@ const StyledButton = styled("button")
           systemtheme.shadows.thinOutline + " " + systemtheme.colors.primary30
       }
     }),
-  props =>
-    variant({
-      variants: {
-        default: {},
-        success: {
-          bg: "success",
-          color: "white",
-          borderColor: "success",
-          "&:hover": {
-            bg: "successDark",
-            borderColor: "successDark"
-          },
-          "&:focus": {
-            outline: "0",
-            boxShadow:
-              systemtheme.shadows.thinOutline +
-              " " +
-              systemtheme.colors.success30
-          }
+  variant({
+    variants: {
+      default: {},
+      success: {
+        bg: "success",
+        color: "white",
+        borderColor: "success",
+        "&:hover": {
+          bg: "successDark",
+          borderColor: "successDark"
         },
-        danger: {
-          bg: "danger",
-          color: "white",
-          borderColor: "danger",
-          "&:hover": {
-            bg: "dangerDark",
-            borderColor: "dangerDark"
-          },
-          "&:focus": {
-            outline: "0",
-            boxShadow:
-              systemtheme.shadows.thinOutline +
-              " " +
-              systemtheme.colors.danger30
-          }
+        "&:focus": {
+          outline: "0",
+          boxShadow:
+            systemtheme.shadows.thinOutline + " " + systemtheme.colors.success30
+        }
+      },
+      danger: {
+        bg: "danger",
+        color: "white",
+        borderColor: "danger",
+        "&:hover": {
+          bg: "dangerDark",
+          borderColor: "dangerDark"
         },
-        disabled: {
+        "&:focus": {
+          outline: "0",
+          boxShadow:
+            systemtheme.shadows.thinOutline + " " + systemtheme.colors.danger30
+        }
+      },
+      disabled: {
+        bg: "greyLighter",
+        color: "grey",
+        borderColor: "greyLighter",
+        "&:hover": {
           bg: "greyLighter",
           color: "grey",
-          borderColor: "greyLighter",
-          "&:hover": {
-            bg: "greyLighter",
-            color: "grey",
-            borderColor: "greyLighter"
-          }
+          borderColor: "greyLighter"
+        }
+      },
+      ghost: {
+        bg: "primaryLightest",
+        color: "primary",
+        borderColor: "primaryLightest",
+        "&:hover": {
+          bg: "primaryLighter",
+          borderColor: "primaryLighter",
+          color: "primaryDark"
         },
-        ghost: {
-          bg: "primaryLightest",
-          color: "primary",
-          borderColor: "primaryLightest",
-          "&:hover": {
-            bg: "primaryLighter",
-            borderColor: "primaryLighter",
-            color: "primaryDark"
-          },
-          "&:focus": {
-            outline: "0",
-            boxShadow:
-              systemtheme.shadows.thinOutline +
-              " " +
-              systemtheme.colors.primary20
-          }
+        "&:focus": {
+          outline: "0",
+          boxShadow:
+            systemtheme.shadows.thinOutline + " " + systemtheme.colors.primary20
         }
       }
-    }),
+    }
+  }),
   ButtonStyles
 );
 

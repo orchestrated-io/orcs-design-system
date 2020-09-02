@@ -59,7 +59,7 @@ const Container = styled(Box)`
   overflow: hidden;
 `;
 
-const CloseButton = styled(Button)(props =>
+const CloseButton = styled(Button)(
   css({
     position: "absolute",
     top: "s",

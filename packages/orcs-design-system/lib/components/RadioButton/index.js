@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { ThemeProvider } from "styled-components";
-import { themeGet } from "@styled-system/theme-get";
 import { space, layout, compose, variant } from "styled-system";
 import { css } from "@styled-system/css";
 import systemtheme from "../../systemtheme";
@@ -33,71 +32,62 @@ const RadioButtonLabel = styled("label")(props =>
 );
 
 const RadioButtonControl = styled.input.attrs({ type: "radio" })(
-  props =>
-    css({
-      opacity: "0",
-      position: "absolute",
-      margin: "0",
-      zIndex: "-1",
-      width: "0",
-      height: "0",
-      overflow: "hidden",
-      pointerEvents: "none",
-      "+ div > div": {
-        transform: "scale(0)"
+  css({
+    opacity: "0",
+    position: "absolute",
+    margin: "0",
+    zIndex: "-1",
+    width: "0",
+    height: "0",
+    overflow: "hidden",
+    pointerEvents: "none",
+    "+ div > div": {
+      transform: "scale(0)"
+    },
+    "&:checked + div > div": {
+      transform: "scale(1)"
+    },
+    "&:focus + div": {
+      boxShadow:
+        systemtheme.shadows.thinOutline + " " + systemtheme.colors.black30
+    }
+  }),
+
+  variant({
+    variants: {
+      default: {},
+      white: {
+        "&:focus + div": {
+          boxShadow:
+            systemtheme.shadows.thinOutline + " " + systemtheme.colors.white30
+        }
       },
-      "&:checked + div > div": {
-        transform: "scale(1)"
+      primary: {
+        "&:focus + div": {
+          boxShadow:
+            systemtheme.shadows.thinOutline + " " + systemtheme.colors.primary30
+        }
       },
-      "&:focus + div": {
-        boxShadow:
-          systemtheme.shadows.thinOutline + " " + systemtheme.colors.black30
-      }
-    }),
-  props =>
-    variant({
-      variants: {
-        default: {},
-        white: {
-          "&:focus + div": {
-            boxShadow:
-              systemtheme.shadows.thinOutline + " " + systemtheme.colors.white30
-          }
-        },
-        primary: {
-          "&:focus + div": {
-            boxShadow:
-              systemtheme.shadows.thinOutline +
-              " " +
-              systemtheme.colors.primary30
-          }
-        },
-        success: {
-          "&:focus + div": {
-            boxShadow:
-              systemtheme.shadows.thinOutline +
-              " " +
-              systemtheme.colors.success30
-          }
-        },
-        warning: {
-          "&:focus + div": {
-            boxShadow:
-              systemtheme.shadows.thinOutline +
-              " " +
-              systemtheme.colors.warning30
-          }
-        },
-        danger: {
-          "&:focus + div": {
-            boxShadow:
-              systemtheme.shadows.thinOutline +
-              " " +
-              systemtheme.colors.danger30
-          }
+      success: {
+        "&:focus + div": {
+          boxShadow:
+            systemtheme.shadows.thinOutline + " " + systemtheme.colors.success30
+        }
+      },
+      warning: {
+        "&:focus + div": {
+          boxShadow:
+            systemtheme.shadows.thinOutline + " " + systemtheme.colors.warning30
+        }
+      },
+      danger: {
+        "&:focus + div": {
+          boxShadow:
+            systemtheme.shadows.thinOutline + " " + systemtheme.colors.danger30
         }
       }
-    })
+    }
+  })
 );
 
 const RadioButtonCircle = styled("div")(
