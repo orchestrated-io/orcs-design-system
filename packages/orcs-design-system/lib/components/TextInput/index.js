@@ -187,7 +187,7 @@ const InputStyle = css`
 `;
 
 const Input = styled("input").attrs(props => ({
-  "data-testid": props.dataTestId
+  "data-testid": props["data-testid"] ? props["data-testid"] : null
 }))`
   ${InputStyle}
 `;
