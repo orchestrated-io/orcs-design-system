@@ -6,6 +6,7 @@ import { css } from "@styled-system/css";
 import systemtheme from "../../systemtheme";
 import shouldForwardProp from "@styled-system/should-forward-prop";
 import Icon from "../Icon";
+import { themeGet } from "@styled-system/theme-get";
 
 const ButtonStyles = compose(space, layout, color, border);
 
@@ -65,67 +66,76 @@ const StyledButton = styled("button")
       "&:focus": {
         outline: "0",
         boxShadow:
-          systemtheme.shadows.thinOutline + " " + systemtheme.colors.primary30
+          themeGet("shadows.thinOutline")(props) +
+          " " +
+          themeGet("colors.primary30")(props)
       }
     }),
-  variant({
-    variants: {
-      default: {},
-      success: {
-        bg: "success",
-        color: "white",
-        borderColor: "success",
-        "&:hover": {
-          bg: "successDark",
-          borderColor: "successDark"
+  props =>
+    variant({
+      variants: {
+        default: {},
+        success: {
+          bg: "success",
+          color: "white",
+          borderColor: "success",
+          "&:hover": {
+            bg: "successDark",
+            borderColor: "successDark"
+          },
+          "&:focus": {
+            outline: "0",
+            boxShadow:
+              themeGet("shadows.thinOutline")(props) +
+              " " +
+              themeGet("colors.success30")(props)
+          }
         },
-        "&:focus": {
-          outline: "0",
-          boxShadow:
-            systemtheme.shadows.thinOutline + " " + systemtheme.colors.success30
-        }
-      },
-      danger: {
-        bg: "danger",
-        color: "white",
-        borderColor: "danger",
-        "&:hover": {
-          bg: "dangerDark",
-          borderColor: "dangerDark"
+        danger: {
+          bg: "danger",
+          color: "white",
+          borderColor: "danger",
+          "&:hover": {
+            bg: "dangerDark",
+            borderColor: "dangerDark"
+          },
+          "&:focus": {
+            outline: "0",
+            boxShadow:
+              themeGet("shadows.thinOutline")(props) +
+              " " +
+              themeGet("colors.danger30")(props)
+          }
         },
-        "&:focus": {
-          outline: "0",
-          boxShadow:
-            systemtheme.shadows.thinOutline + " " + systemtheme.colors.danger30
-        }
-      },
-      disabled: {
-        bg: "greyLighter",
-        color: "grey",
-        borderColor: "greyLighter",
-        "&:hover": {
+        disabled: {
           bg: "greyLighter",
           color: "grey",
-          borderColor: "greyLighter"
-        }
-      },
-      ghost: {
-        bg: "primaryLightest",
-        color: "primary",
-        borderColor: "primaryLightest",
-        "&:hover": {
-          bg: "primaryLighter",
-          borderColor: "primaryLighter",
-          color: "primaryDark"
+          borderColor: "greyLighter",
+          "&:hover": {
+            bg: "greyLighter",
+            color: "grey",
+            borderColor: "greyLighter"
+          }
         },
-        "&:focus": {
-          outline: "0",
-          boxShadow:
-            systemtheme.shadows.thinOutline + " " + systemtheme.colors.primary20
+        ghost: {
+          bg: "primaryLightest",
+          color: "primary",
+          borderColor: "primaryLightest",
+          "&:hover": {
+            bg: "primaryLighter",
+            borderColor: "primaryLighter",
+            color: "primaryDark"
+          },
+          "&:focus": {
+            outline: "0",
+            boxShadow:
+              themeGet("shadows.thinOutline")(props) +
+              " " +
+              themeGet("colors.primary20")(props)
+          }
         }
       }
-    }
-  }),
+    }),
   ButtonStyles
 );
 

@@ -3,6 +3,7 @@ import styled, { css, keyframes, ThemeProvider } from "styled-components";
 import PropTypes from "prop-types";
 import { space, layout } from "styled-system";
 import systemtheme from "../../systemtheme";
+import { themeGet } from "@styled-system/theme-get";
 
 const crossTransform1 = keyframes`
   0% {
@@ -52,7 +53,7 @@ const Wrapper = styled.div`
 
 const Control = styled.button`
   position: relative;
-  background-color: ${systemtheme.colors.greyLighter};
+  background-color: ${themeGet("colors.greyLighter")};
   border: none;
   display: flex;
   align-items: center;
@@ -63,15 +64,15 @@ const Control = styled.button`
   box-shadow: none;
   text-decoration: none;
   text-align: center;
-  border-radius: ${systemtheme.radii[2]};
-  transition: ${systemtheme.transition.transitionDefault};
+  border-radius: ${themeGet("radii.2")};
+  transition: ${themeGet("transition.transitionDefault")};
   cursor: pointer;
   width: 30px;
   height: 30px;
   &:hover,
   &:focus {
     outline: 0;
-    background-color: ${systemtheme.colors.greyLight};
+    background-color: ${themeGet("colors.greyLight")};
   }
 `;
 
@@ -79,7 +80,7 @@ const Icon = styled.div`
   border-radius: 2px;
   height: 4px;
   width: 4px;
-  background-color: ${systemtheme.colors.greyDarker};
+  background-color: ${themeGet("colors.greyDarker")};
   &:before,
   &:after {
     content: "";
@@ -88,8 +89,8 @@ const Icon = styled.div`
     border-radius: 2px;
     height: 4px;
     width: 4px;
-    background-color: ${systemtheme.colors.greyDarker};
-    transition: ${systemtheme.transition.transitionDefault};
+    background-color: ${themeGet("colors.greyDarker")};
+    transition: ${themeGet("transition.transitionDefault")};
     transform-origin: 50% 50%;
   }
   &:before {
@@ -119,8 +120,8 @@ const Menu = styled.div`
   top: 0;
   width: auto;
   z-index: 5;
-  background-color: ${systemtheme.colors.greyDarker};
-  border-radius: ${systemtheme.radii[2]};
+  background-color: ${themeGet("colors.greyDarker")};
+  border-radius: ${themeGet("radii.2")};
   transform: scale(0);
   opacity: 0;
   pointer-events: none;
@@ -144,22 +145,22 @@ const Menu = styled.div`
     width: 100%;
     text-align: left;
     cursor: pointer;
-    padding: ${systemtheme.space[3]};
+    padding: ${themeGet("space.3")};
     appearance: none;
     background-color: transparent;
     border: none;
-    color: ${systemtheme.colors.white};
-    font-size: ${systemtheme.fontSizes[1]};
-    line-height: ${systemtheme.fontSizes[1]};
-    font-family: ${systemtheme.fonts.main};
-    font-weight: ${systemtheme.fontWeights[2]};
+    color: ${themeGet("colors.white")};
+    font-size: ${themeGet("fontSizes.1")};
+    line-height: ${themeGet("fontSizes1")};
+    font-family: ${themeGet("fonts.main")};
+    font-weight: ${themeGet("fontWeights.2")};
     text-decoration: none;
-    border-bottom: solid 1px ${systemtheme.colors.greyDarkest};
-    transition: ${systemtheme.transition.transitionDefault};
+    border-bottom: solid 1px ${themeGet("colors.greyDarkest")};
+    transition: ${themeGet("transition.transitionDefault")};
     &:hover,
     &:focus {
       outline: 0;
-      background-color: ${systemtheme.colors.primaryDark};
+      background-color: ${themeGet("colors.primaryDark")};
     }
     &:last-child {
       border-bottom: none;

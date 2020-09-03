@@ -59,7 +59,7 @@ const Container = styled(Box)`
   overflow: hidden;
 `;
 
-const CloseButton = styled(Button)(
+const CloseButton = styled(Button)(props =>
   css({
     position: "absolute",
     top: "s",
@@ -74,7 +74,9 @@ const CloseButton = styled(Button)(
     "&:focus": {
       outline: "0",
       boxShadow:
-        systemtheme.shadows.thinOutline + " " + systemtheme.colors.black30
+        themeGet("shadows.thinOutline")(props) +
+        " " +
+        themeGet("colors.black20")(props)
     }
   })
 );

@@ -6,6 +6,7 @@ import { H3, Text } from "../Typography";
 import Icon from "../Icon";
 import css from "@styled-system/css";
 import systemtheme from "../../systemtheme";
+import { themeGet } from "@styled-system/theme-get";
 
 const AvatarWrapper = styled("div")(
   layout,
@@ -53,32 +54,35 @@ const TextContent = styled("div")(
 );
 
 const Image = styled("img")(
+  props => ({
+    width: `calc(${themeGet("space.5")(props)} * 2)`,
+    height: `calc(${themeGet("space.5")(props)} * 2)`
+  }),
   css({
-    width: `calc(${systemtheme.space[5]} * 2)`,
-    height: `calc(${systemtheme.space[5]} * 2)`,
     flex: "0 0 auto",
     backgroundColor: "greyLighter",
     border: "0",
     display: "block",
     borderRadius: "50%"
   }),
-  variant({
-    prop: "sizing",
-    variants: {
-      small: {
-        width: `calc(${systemtheme.space[4]} * 2.25)`,
-        height: `calc(${systemtheme.space[4]} * 2.25)`
+  props =>
+    variant({
+      prop: "sizing",
+      variants: {
+        small: {
+          width: `calc(${themeGet("space.4")(props)} * 2.25)`,
+          height: `calc(${themeGet("space.4")(props)} * 2.25)`
+        }
       }
-    }
-  })
+    })
 );
 
 const Circle = styled("div")(
   props =>
     css({
-      width: `calc(${systemtheme.space[5]} * 2)`,
-      height: `calc(${systemtheme.space[5]} * 2)`,
-      fontWeight: systemtheme.fontWeights[2],
+      width: `calc(${themeGet("space.5")(props)}* 2)`,
+      height: `calc(${themeGet("space.5")(props)}* 2)`,
+      fontWeight: themeGet("fontWeights.2")(props),
       flex: "0 0 auto",
       backgroundColor: "greyLighter",
       color: props.whiteInitials ? "white" : "greyDarkest",
@@ -94,16 +98,17 @@ const Circle = styled("div")(
       },
       "&.inverted a": { color: "white" }
     }),
-  variant({
-    prop: "sizing",
-    variants: {
-      small: {
-        width: `calc(${systemtheme.space[4]} * 2.25)`,
-        height: `calc(${systemtheme.space[4]} * 2.25)`
-      },
-      default: {}
-    }
-  }),
+  props =>
+    variant({
+      prop: "sizing",
+      variants: {
+        small: {
+          width: `calc(${themeGet("space.4")(props)} * 2.25)`,
+          height: `calc(${themeGet("space.4")(props)} * 2.25)`
+        },
+        default: {}
+      }
+    }),
   variant({
     prop: "type",
     variants: {

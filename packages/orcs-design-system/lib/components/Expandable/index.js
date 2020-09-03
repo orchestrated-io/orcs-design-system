@@ -5,6 +5,7 @@ import Flex from "../Flex";
 import Typography from "../Typography";
 import Badge from "../Badge";
 import systemtheme from "../../systemtheme";
+import { themeGet } from "@styled-system/theme-get";
 
 const Item = styled.div`
   margin: 4px 0;
@@ -24,21 +25,21 @@ const Button = styled.button`
   margin: 0;
   font-size: 1.8rem;
   text-align: left;
-  color: ${systemtheme.colors.greyDarker};
-  padding: 18px 38px 18px 16px;
-  border-left: solid 3px ${systemtheme.colors.greyLightest};
-  border-radius: ${systemtheme.radii[1]};
-  background: ${systemtheme.colors.greyLightest};
-  transition: ${systemtheme.transition.transitionDefault};
+  color: ${themeGet("colors.greyDarker")};
+  padding: 18px 48px 18px 16px;
+  border-left: solid 3px ${themeGet("colors.greyLightest")};
+  border-radius: ${themeGet("radii.1")};
+  background: ${themeGet("colors.greyLightest")};
+  transition: ${themeGet("transition.transitionDefault")};
 
   &:hover {
-    background: ${systemtheme.colors.greyLighter};
-    border-left: solid 3px ${systemtheme.colors.greyLighter};
+    background: ${themeGet("colors.greyLighter")};
+    border-left: solid 3px ${themeGet("colors.greyLighter")};
   }
 
   &:focus {
     outline: 0;
-    border-left: solid 3px ${systemtheme.colors.primary};
+    border-left: solid 3px ${themeGet("colors.primary")};
   }
 
   &:after,
@@ -49,9 +50,9 @@ const Button = styled.button`
     transform: translateY(-50%);
     width: 2px;
     height: 12px;
-    right: ${systemtheme.space.r};
-    background-color: ${systemtheme.colors.greyDark};
-    transition: ${systemtheme.transition.transitionDefault};
+    right: ${themeGet("space.l")};
+    background-color: ${themeGet("colors.greyDark")};
+    transition: ${themeGet("transition.transitionDefault")};
   }
   &:before {
     transform: ${props =>
@@ -68,8 +69,8 @@ const Text = styled.div`
 
 const Content = styled.div`
   overflow: hidden;
-  padding: ${systemtheme.space.r};
-  transition: ${systemtheme.transition.transitionDefault};
+  padding: ${themeGet("space.r")};
+  transition: ${themeGet("transition.transitionDefault")};
   display: ${props => (props.open ? "block" : "none")};
 `;
 
@@ -120,12 +121,10 @@ export default function Expandable({
         >
           <Flex justifyBetween alignCenter>
             <Text>
-              {title ? <Typography.H4>{title}</Typography.H4> : null}
-              {subtitle ? (
-                <Typography.Small grey>{subtitle}</Typography.Small>
-              ) : null}
+              {title && <Typography.H4>{title}</Typography.H4>}
+              {subtitle && <Typography.Small grey>{subtitle}</Typography.Small>}
             </Text>
-            {badge ? <Badge colour={badgeColour}>{badge}</Badge> : null}
+            {badge && <Badge colour={badgeColour}>{badge}</Badge>}
           </Flex>
         </Button>
         <Content open={baseState} expanded={toggleState}>

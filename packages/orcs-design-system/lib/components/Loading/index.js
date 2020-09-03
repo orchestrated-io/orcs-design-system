@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import { space, layout, compose } from "styled-system";
 import systemtheme from "../../systemtheme";
+import { themeGet } from "@styled-system/theme-get";
 
 const LoadingStyles = compose(space, layout);
 
@@ -29,22 +30,22 @@ const Item = styled.div`
     return borderStyle;
   }};
   border-color: ${props => {
-    let borderColour = systemtheme.colors.black30;
+    let borderColour = themeGet("colors.black30");
     if (props.large) {
-      borderColour = systemtheme.colors.black20;
+      borderColour = themeGet("colors.black20");
     }
     if (props.inverted) {
-      borderColour = systemtheme.colors.white40;
+      borderColour = themeGet("colors.white40");
     }
     return borderColour;
   }};
   border-right-color: ${props => {
-    let borderRightColour = systemtheme.colors.black70;
+    let borderRightColour = themeGet("colors.black70");
     if (props.large) {
-      borderRightColour = systemtheme.colors.black70;
+      borderRightColour = themeGet("colors.black70");
     }
     if (props.inverted) {
-      borderRightColour = systemtheme.colors.white90;
+      borderRightColour = themeGet("colors.white90");
     }
     return borderRightColour;
   }};

@@ -9,7 +9,6 @@ import "react-dates/initialize";
 import { DateRangePicker, SingleDatePicker } from "react-dates";
 import styled from "styled-components";
 import { themeGet } from "@styled-system/theme-get";
-import systemtheme from "../../systemtheme";
 
 import { DateRangePickerPhrases } from "react-dates/lib/defaultPhrases";
 import DateRangePickerShape from "react-dates/lib/shapes/DateRangePickerShape";
@@ -133,17 +132,15 @@ const DatePickerContainer = styled.div`
     }
     &:focus {
       outline: 0;
-      box-shadow: ${systemtheme.shadows.thinOutline +
-        " " +
-        systemtheme.colors.primary30};
+      box-shadow: ${themeGet("shadows.thinOutline")}
+        ${themeGet("colors.primary30")};
       border: 1px solid ${themeGet("colors.primary")};
     }
   }
   .DateInput_input__focused {
     outline: 0;
-    box-shadow: ${systemtheme.shadows.thinOutline +
-      " " +
-      systemtheme.colors.primary30};
+    box-shadow: ${themeGet("shadows.thinOutline")}
+      ${themeGet("colors.primary30")};
     border: 1px solid ${themeGet("colors.primary")};
   }
   .DayPickerKeyboardShortcuts_panel {

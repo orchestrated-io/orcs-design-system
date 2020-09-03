@@ -9,7 +9,7 @@ import {
   props
 } from "@styled-system/should-forward-prop";
 import Icon from "../Icon";
-import systemtheme from "../../systemtheme";
+import { themeGet } from "@styled-system/theme-get";
 
 const InputStyles = compose(space, layout);
 
@@ -84,10 +84,10 @@ const InputStyle = css`
   box-shadow: none;
   font-size: 1.4rem;
   z-index: 1;
-  border-radius: ${systemtheme.radii[2]};
-  transition: ${systemtheme.transition.transitionDefault};
-  background: ${systemtheme.colors.white};
-  color: ${systemtheme.colors.greyDarkest};
+  border-radius: ${themeGet("radii.2")};
+  transition: ${themeGet("transition.transitionDefault")};
+  background: ${themeGet("colors.white")};
+  color: ${themeGet("colors.greyDarkest")};
   width: ${props => (props.fullWidth ? `100%` : `auto`)};
   height: ${props => (props.floating ? `58px` : `40px`)};
   padding: ${props => {
@@ -100,10 +100,10 @@ const InputStyle = css`
   border: 1px solid
     ${props =>
       props.invalid
-        ? systemtheme.colors.danger
+        ? themeGet("colors.danger")
         : props.valid
-        ? systemtheme.colors.success
-        : systemtheme.colors.black30};
+        ? themeGet("colors.success")
+        : themeGet("colors.black30")};
 
   ${props =>
     props.floating
@@ -132,50 +132,56 @@ const InputStyle = css`
         `
       : css`
           &::placeholder {
-            color: ${systemtheme.colors.grey};
+            color: ${themeGet("colors.grey")};
           }
         `} &:hover {
     border: 1px solid
       ${props =>
         props.invalid
-          ? systemtheme.colors.dangerDark
+          ? themeGet("colors.dangerDark")
           : props.valid
-          ? systemtheme.colors.successDark
-          : systemtheme.colors.primary};
+          ? themeGet("colors.successDark")
+          : themeGet("colors.primary")};
   }
 
   &:focus {
     outline: 0;
     box-shadow: ${props =>
       props.invalid
-        ? systemtheme.shadows.thinOutline + " " + systemtheme.colors.danger30
+        ? themeGet("shadows.thinOutline")(props) +
+          " " +
+          themeGet("colors.danger30")(props)
         : props.valid
-        ? systemtheme.shadows.thinOutline + " " + systemtheme.colors.success30
-        : systemtheme.shadows.thinOutline + " " + systemtheme.colors.primary30};
+        ? themeGet("shadows.thinOutline")(props) +
+          " " +
+          themeGet("colors.success30")(props)
+        : themeGet("shadows.thinOutline")(props) +
+          " " +
+          themeGet("colors.primary30")(props)};
 
     border: 1px solid
       ${props =>
         props.invalid
-          ? systemtheme.colors.dangerDark
+          ? themeGet("colors.dangerDark")
           : props.valid
-          ? systemtheme.colors.successDark
-          : systemtheme.colors.primary};
+          ? themeGet("colors.successDark")
+          : themeGet("colors.primary")};
 
     ${props =>
       props.floating
         ? css`
             &::placeholder {
-              color: ${systemtheme.colors.greyLight};
+              color: ${themeGet("colors.greyLight")};
             }
             ~ label {
               transform: translateY(-10px);
               font-size: 1.2rem;
               color: ${props =>
                 props.invalid
-                  ? systemtheme.colors.dangerDark
+                  ? themeGet("colors.dangerDark")
                   : props.valid
-                  ? systemtheme.colors.successDark
-                  : systemtheme.colors.primary};
+                  ? themeGet("colors.successDark")
+                  : themeGet("colors.primary")};
             }
           `
         : css``};
@@ -199,19 +205,19 @@ const Label = styled.label`
   z-index: 2;
   text-align: left;
   font-size: 1.4rem;
-  transition: ${systemtheme.transition.transitionDefault};
+  transition: ${themeGet("transition.transitionDefault")};
   padding-right: ${props =>
     props.floating && props.iconRight ? `40px` : `12px`};
-  margin-bottom: ${props => (props.floating ? 0 : systemtheme.space.xs)};
+  margin-bottom: ${props => (props.floating ? 0 : themeGet("space.xs"))};
 
   color: ${props =>
     props.inverted
-      ? systemtheme.colors.white
+      ? themeGet("colors.white")
       : props.valid
-      ? systemtheme.colors.successDark
+      ? themeGet("colors.successDark")
       : props.invalid
-      ? systemtheme.colors.dangerDark
-      : systemtheme.colors.greyDarkest};
+      ? themeGet("colors.dangerDark")
+      : themeGet("colors.greyDarkest")};
 
   ${props =>
     props.floating
@@ -222,10 +228,10 @@ const Label = styled.label`
           top: 22px;
           color: ${props =>
             props.invalid
-              ? systemtheme.colors.dangerDark
+              ? themeGet("colors.dangerDark")
               : props.valid
-              ? systemtheme.colors.successDark
-              : systemtheme.colors.grey};
+              ? themeGet("colors.successDark")
+              : themeGet("colors.grey")};
         `
       : css``};
 
@@ -234,7 +240,7 @@ const Label = styled.label`
       ? css`
           &:after {
             content: " *";
-            color: ${systemtheme.colors.danger};
+            color: ${themeGet("colors.danger")};
           }
         `
       : css``};

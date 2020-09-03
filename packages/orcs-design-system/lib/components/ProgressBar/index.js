@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled, { css, keyframes, ThemeProvider } from "styled-components";
 import systemtheme from "../../systemtheme";
 import { space, layout } from "styled-system";
+import { themeGet } from "@styled-system/theme-get";
 
 const expandWidth = keyframes`
   0% { width: 0; }
@@ -12,7 +13,7 @@ const Background = styled.div`
   ${space}
   ${layout}
   position: relative;
-  background: ${systemtheme.colors.greyLighter};
+  background: ${themeGet("colors.greyLighter")};
   height: 16px;
   border-radius: 8px;
 `;
@@ -24,19 +25,19 @@ const Fill = styled.div`
   height: 10px;
   border-radius: 5px;
   animation: ${expandWidth} 1000ms ease-in-out 1;
-  transition: ${systemtheme.transition.transitionDefault};
+  transition: ${themeGet("transition.transitionDefault")};
   ${props =>
     props.gradient
       ? css`
           background: linear-gradient(
             to right,
-            ${systemtheme.colors.danger} 0%,
-            ${systemtheme.colors.warning} 50%,
-            ${systemtheme.colors.success} 100%
+            ${themeGet("colors.danger")} 0%,
+            ${themeGet("colors.warning")} 50%,
+            ${themeGet("colors.success")} 100%
           );
         `
       : css`
-          background: ${systemtheme.colors.primary};
+          background: ${themeGet("colors.primary")};
         `};
 `;
 

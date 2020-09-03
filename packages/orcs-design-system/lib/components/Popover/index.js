@@ -4,6 +4,7 @@ import styled, { css, ThemeProvider } from "styled-components";
 import { space, layout } from "styled-system";
 import Icon from "../Icon";
 import systemtheme from "../../systemtheme";
+import { themeGet } from "@styled-system/theme-get";
 
 const Container = styled.div`
 ${space}
@@ -24,11 +25,11 @@ ${layout}
 
 const TooltipControl = styled.div`
   cursor: help;
-  transition: ${systemtheme.transition.transitionDefault};
+  transition: ${themeGet("transition.transitionDefault")};
   &:hover,
   &:focus {
     outline: 0;
-    color: ${systemtheme.colors.primary};
+    color: ${themeGet("colors.primary")};
   }
 `;
 
@@ -42,13 +43,13 @@ const Text = styled.div`
   word-break: break-word;
   left: 100%;
   top: 50%;
-  color: ${systemtheme.colors.white};
+  color: ${themeGet("colors.white")};
   outline: 0;
   padding: 8px 10px;
-  border-radius: ${systemtheme.radii[1]};
+  border-radius: ${themeGet("radii[1]")};
   transform: translateX(10px) translateY(-50%);
   width: ${props => (props.width ? props.width : "200px")};
-  background: ${systemtheme.colors.greyDarkest};
+  background: ${themeGet("colors.greyDarkest")};
   transition: all 300ms ease-in-out;
   opacity: 0;
   z-index: -100;
@@ -64,7 +65,7 @@ const Text = styled.div`
     border-style: solid;
     border-width: 6px 6px 6px 0;
     border-color: transparent;
-    border-right-color: ${systemtheme.colors.greyDarkest};
+    border-right-color: ${themeGet("colors.greyDarkest")};
     left: -6px;
     top: 50%;
     margin-top: -6px;
