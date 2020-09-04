@@ -25,8 +25,8 @@ export const gradient = () => (
   <ProgressBar containerWidth={100} fillWidth={40} gradient />
 );
 
-export const inverted = () => (
-  <Box bg="greyDarker" p="r">
+export const onDarkBackground = () => (
+  <Box bg="greyDarkest" p="r">
     <Spacer m="r">
       <ProgressBar containerWidth={100} fillWidth={40} inverted />
       <ProgressBar containerWidth={100} fillWidth={70} gradient inverted />

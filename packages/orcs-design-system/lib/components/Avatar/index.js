@@ -5,8 +5,8 @@ import PropTypes from "prop-types";
 import { H3, Text } from "../Typography";
 import Icon from "../Icon";
 import css from "@styled-system/css";
-import themeGet from "@styled-system/theme-get";
 import systemtheme from "../../systemtheme";
+import { themeGet } from "@styled-system/theme-get";
 
 const AvatarWrapper = styled("div")(
   layout,
@@ -55,8 +55,8 @@ const TextContent = styled("div")(
 
 const Image = styled("img")(
   props => ({
-    width: "calc(" + themeGet("space.5")(props) + " * 2)",
-    height: "calc(" + themeGet("space.5")(props) + " * 2)"
+    width: `calc(${themeGet("space.5")(props)} * 2)`,
+    height: `calc(${themeGet("space.5")(props)} * 2)`
   }),
   css({
     flex: "0 0 auto",
@@ -70,21 +70,19 @@ const Image = styled("img")(
       prop: "sizing",
       variants: {
         small: {
-          width: "calc(" + themeGet("space.4")(props) + " * 2.25)",
-          height: "calc(" + themeGet("space.4")(props) + " * 2.25)"
+          width: `calc(${themeGet("space.4")(props)} * 2.25)`,
+          height: `calc(${themeGet("space.4")(props)} * 2.25)`
         }
       }
     })
 );
 
 const Circle = styled("div")(
-  props => ({
-    width: "calc(" + themeGet("space.5")(props) + " * 2)",
-    height: "calc(" + themeGet("space.5")(props) + " * 2)",
-    fontWeight: themeGet("fontWeights.2")(props)
-  }),
   props =>
     css({
+      width: `calc(${themeGet("space.5")(props)}* 2)`,
+      height: `calc(${themeGet("space.5")(props)}* 2)`,
+      fontWeight: themeGet("fontWeights.2")(props),
       flex: "0 0 auto",
       backgroundColor: "greyLighter",
       color: props.whiteInitials ? "white" : "greyDarkest",
@@ -105,8 +103,8 @@ const Circle = styled("div")(
       prop: "sizing",
       variants: {
         small: {
-          width: "calc(" + themeGet("space.4")(props) + " * 2.25)",
-          height: "calc(" + themeGet("space.4")(props) + " * 2.25)"
+          width: `calc(${themeGet("space.4")(props)} * 2.25)`,
+          height: `calc(${themeGet("space.4")(props)} * 2.25)`
         },
         default: {}
       }

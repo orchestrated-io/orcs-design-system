@@ -244,7 +244,7 @@ export const P = styled("p")(
 export const Small = styled("small").withConfig({ shouldForwardProp })(
   props =>
     css({
-      fontSize: "1.25rem",
+      fontSize: "1.3rem",
       textTransform: props.uppercase ? "uppercase" : "none"
     }),
   variant({
@@ -297,10 +297,9 @@ export const Quote = styled("blockquote")(
     fontWeight: 1,
     lineHeight: 1,
     borderLeftStyle: "solid",
-    borderLeftWidth: 2,
-    borderLeftColor: "greyDark",
-    px: 3,
-    py: 4,
+    borderLeftWidth: 3,
+    borderLeftColor: "greyLight",
+    p: 4,
     em: {
       display: "block",
       fontStyle: "italic",

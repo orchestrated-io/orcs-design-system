@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { ThemeProvider } from "styled-components";
-import { themeGet } from "@styled-system/theme-get";
 import { space, layout, compose, variant } from "styled-system";
 import { css } from "@styled-system/css";
 import systemtheme from "../../systemtheme";
+import { themeGet } from "@styled-system/theme-get";
 
 const RadioButtonStyles = compose(space, layout);
 
@@ -50,7 +50,10 @@ const RadioButtonControl = styled.input.attrs({ type: "radio" })(
         transform: "scale(1)"
       },
       "&:focus + div": {
-        boxShadow: "0 0 0 3px" + themeGet("colors.greyLight")(props)
+        boxShadow:
+          themeGet("shadows.thinOutline")(props) +
+          " " +
+          themeGet("colors.black30")(props)
       }
     }),
   props =>
@@ -59,27 +62,42 @@ const RadioButtonControl = styled.input.attrs({ type: "radio" })(
         default: {},
         white: {
           "&:focus + div": {
-            boxShadow: "0 0 0 3px" + themeGet("colors.white10")(props)
+            boxShadow:
+              themeGet("shadows.thinOutline")(props) +
+              " " +
+              themeGet("colors.white30")(props)
           }
         },
         primary: {
           "&:focus + div": {
-            boxShadow: "0 0 0 3px" + themeGet("colors.primaryLighter")(props)
+            boxShadow:
+              themeGet("shadows.thinOutline")(props) +
+              " " +
+              themeGet("colors.primary30")(props)
           }
         },
         success: {
           "&:focus + div": {
-            boxShadow: "0 0 0 3px" + themeGet("colors.successLighter")(props)
+            boxShadow:
+              themeGet("shadows.thinOutline")(props) +
+              " " +
+              themeGet("colors.success30")(props)
           }
         },
         warning: {
           "&:focus + div": {
-            boxShadow: "0 0 0 3px" + themeGet("colors.warningLighter")(props)
+            boxShadow:
+              themeGet("shadows.thinOutline")(props) +
+              " " +
+              themeGet("colors.warning30")(props)
           }
         },
         danger: {
           "&:focus + div": {
-            boxShadow: "0 0 0 3px" + themeGet("colors.dangerLighter")(props)
+            boxShadow:
+              themeGet("shadows.thinOutline")(props) +
+              " " +
+              themeGet("colors.danger30")(props)
           }
         }
       }

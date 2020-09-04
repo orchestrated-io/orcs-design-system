@@ -8,10 +8,8 @@ import {
   createShouldForwardProp,
   props
 } from "@styled-system/should-forward-prop";
-import colours from "../../colours";
-import variables from "../../variables";
 import Icon from "../Icon";
-import { rgba } from "polished";
+import { themeGet } from "@styled-system/theme-get";
 
 const InputStyles = compose(space, layout);
 
@@ -86,10 +84,10 @@ const InputStyle = css`
   box-shadow: none;
   font-size: 1.4rem;
   z-index: 1;
-  border-radius: ${variables.borderRadius};
-  transition: ${variables.defaultTransition};
-  background: ${colours.white};
-  color: ${colours.greyDarkest};
+  border-radius: ${themeGet("radii.2")};
+  transition: ${themeGet("transition.transitionDefault")};
+  background: ${themeGet("colors.white")};
+  color: ${themeGet("colors.greyDarkest")};
   width: ${props => (props.fullWidth ? `100%` : `auto`)};
   height: ${props => (props.floating ? `58px` : `40px`)};
   padding: ${props => {
@@ -102,10 +100,10 @@ const InputStyle = css`
   border: 1px solid
     ${props =>
       props.invalid
-        ? colours.dangerLight
+        ? themeGet("colors.danger")
         : props.valid
-        ? colours.successLight
-        : rgba(colours.black, 0.2)};
+        ? themeGet("colors.success")
+        : themeGet("colors.black30")};
 
   ${props =>
     props.floating
@@ -134,52 +132,56 @@ const InputStyle = css`
         `
       : css`
           &::placeholder {
-            color: ${colours.grey};
+            color: ${themeGet("colors.grey")};
           }
         `} &:hover {
     border: 1px solid
       ${props =>
         props.invalid
-          ? colours.dangerDark
+          ? themeGet("colors.dangerDark")
           : props.valid
-          ? colours.successDark
-          : colours.primary};
+          ? themeGet("colors.successDark")
+          : themeGet("colors.primary")};
   }
 
   &:focus {
     outline: 0;
-
-    box-shadow: 0 0 0 3px
-      ${props =>
-        props.invalid
-          ? rgba(colours.danger, 0.4)
-          : props.valid
-          ? rgba(colours.success, 0.4)
-          : rgba(colours.primary, 0.4)};
+    box-shadow: ${props =>
+      props.invalid
+        ? themeGet("shadows.thinOutline")(props) +
+          " " +
+          themeGet("colors.danger30")(props)
+        : props.valid
+        ? themeGet("shadows.thinOutline")(props) +
+          " " +
+          themeGet("colors.success30")(props)
+        : themeGet("shadows.thinOutline")(props) +
+          " " +
+          themeGet("colors.primary30")(props)};
 
     border: 1px solid
       ${props =>
         props.invalid
-          ? colours.dangerDark
+          ? themeGet("colors.dangerDark")
           : props.valid
-          ? colours.successDark
-          : colours.primary};
+          ? themeGet("colors.successDark")
+          : themeGet("colors.primary")};
 
     ${props =>
       props.floating
         ? css`
             &::placeholder {
-              color: ${colours.greyLight};
+              color: ${themeGet("colors.greyLight")};
             }
             ~ label {
               transform: translateY(-10px);
               font-size: 1.2rem;
               color: ${props =>
                 props.invalid
-                  ? colours.dangerDark
+                  ? themeGet("colors.dangerDark")
                   : props.valid
-                  ? colours.successDark
-                  : colours.primary};
+                  ? themeGet("colors.successDark")
+                  : themeGet("colors.primary")};
             }
           `
         : css``};
@@ -203,20 +205,19 @@ const Label = styled.label`
   z-index: 2;
   text-align: left;
   font-size: 1.4rem;
-  transition: ${variables.defaultTransition};
+  transition: ${themeGet("transition.transitionDefault")};
   padding-right: ${props =>
     props.floating && props.iconRight ? `40px` : `12px`};
-  margin-bottom: ${props =>
-    props.floating ? 0 : variables.defaultSpacingQuarter};
+  margin-bottom: ${props => (props.floating ? 0 : themeGet("space.xs"))};
 
   color: ${props =>
     props.inverted
-      ? colours.white
+      ? themeGet("colors.white")
       : props.valid
-      ? colours.successDark
+      ? themeGet("colors.successDark")
       : props.invalid
-      ? colours.dangerDark
-      : colours.greyDarkest};
+      ? themeGet("colors.dangerDark")
+      : themeGet("colors.greyDarkest")};
 
   ${props =>
     props.floating
@@ -227,10 +228,10 @@ const Label = styled.label`
           top: 22px;
           color: ${props =>
             props.invalid
-              ? colours.dangerDark
+              ? themeGet("colors.dangerDark")
               : props.valid
-              ? colours.successDark
-              : colours.grey};
+              ? themeGet("colors.successDark")
+              : themeGet("colors.grey")};
         `
       : css``};
 
@@ -239,7 +240,7 @@ const Label = styled.label`
       ? css`
           &:after {
             content: " *";
-            color: ${colours.danger};
+            color: ${themeGet("colors.danger")};
           }
         `
       : css``};

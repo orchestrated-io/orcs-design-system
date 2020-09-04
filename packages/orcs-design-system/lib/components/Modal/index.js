@@ -73,7 +73,10 @@ const CloseButton = styled(Button)(props =>
     },
     "&:focus": {
       outline: "0",
-      boxShadow: "0 0 0 3px " + themeGet("colors.greyLightest")(props)
+      boxShadow:
+        themeGet("shadows.thinOutline")(props) +
+        " " +
+        themeGet("colors.black20")(props)
     }
   })
 );

@@ -48,7 +48,7 @@ const Input = styled("textarea")
         ? "dangerLight"
         : props.valid
         ? "successLight"
-        : "black20",
+        : "black30",
       "&:hover": {
         borderColor: props.invalid
           ? "dangerDark"
@@ -61,14 +61,14 @@ const Input = styled("textarea")
         boxShadow: props.invalid
           ? themeGet("shadows.thinOutline")(props) +
             " " +
-            themeGet("colors.danger20")(props)
+            themeGet("colors.danger30")(props)
           : props.valid
           ? themeGet("shadows.thinOutline")(props) +
             " " +
-            themeGet("colors.success20")(props)
+            themeGet("colors.success30")(props)
           : themeGet("shadows.thinOutline")(props) +
             " " +
-            themeGet("colors.primary20")(props),
+            themeGet("colors.primary30")(props),
         borderColor: props.invalid
           ? "dangerDark"
           : props.valid

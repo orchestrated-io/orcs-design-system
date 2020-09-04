@@ -75,7 +75,7 @@ Flex.defaultProps = {
   flexDirection: "row",
   flexWrap: "nowrap",
   justifyContent: "flex-start",
-  alignItems: "normal",
+  alignItems: "stretch",
   theme: systemtheme
 };
 

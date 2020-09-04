@@ -1,16 +1,16 @@
 import { create } from "@storybook/theming/create";
-import colours from "../lib/colours";
+import { colors } from "../lib/systemtheme";
 
 export default create({
   base: "light",
 
-  colorPrimary: colours.primary,
-  colorSecondary: colours.primaryDark,
+  colorPrimary: colors.primary,
+  colorSecondary: colors.primaryDark,
 
   // UI
-  appBg: colours.greyLightest,
-  appContentBg: colours.white,
-  appBorderColor: colours.primary,
+  appBg: colors.greyLightest,
+  appContentBg: colors.white,
+  appBorderColor: colors.primary,
   appBorderRadius: 4,
 
   // Typography
@@ -18,13 +18,13 @@ export default create({
   fontCode: "monospace",
 
   // Text colors
-  textColor: colours.black,
-  textInverseColor: colours.white,
+  textColor: colors.black,
+  textInverseColor: colors.white,
 
   // Toolbar default and active colors
-  barTextColor: colours.white,
-  barSelectedColor: colours.primaryDarkest,
-  barBg: colours.primary,
+  barTextColor: colors.white,
+  barSelectedColor: colors.primaryDarkest,
+  barBg: colors.primary,
 
   // Form colors
   inputBg: "white",

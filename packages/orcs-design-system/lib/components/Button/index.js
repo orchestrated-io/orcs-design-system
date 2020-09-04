@@ -2,12 +2,11 @@ import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import PropTypes from "prop-types";
 import { space, layout, color, border, variant, compose } from "styled-system";
-import { rgba } from "polished";
 import { css } from "@styled-system/css";
-import { themeGet } from "@styled-system/theme-get";
 import systemtheme from "../../systemtheme";
 import shouldForwardProp from "@styled-system/should-forward-prop";
 import Icon from "../Icon";
+import { themeGet } from "@styled-system/theme-get";
 
 const ButtonStyles = compose(space, layout, color, border);
 
@@ -66,7 +65,10 @@ const StyledButton = styled("button")
       },
       "&:focus": {
         outline: "0",
-        boxShadow: "0 0 0 3px " + rgba(themeGet("colors.primary")(props), 0.4)
+        boxShadow:
+          themeGet("shadows.thinOutline")(props) +
+          " " +
+          themeGet("colors.primary30")(props)
       }
     }),
   props =>
@@ -74,17 +76,19 @@ const StyledButton = styled("button")
       variants: {
         default: {},
         success: {
-          bg: "successDark",
+          bg: "success",
           color: "white",
-          borderColor: "successDark",
+          borderColor: "success",
           "&:hover": {
-            bg: "successDarker",
-            borderColor: "successDarker"
+            bg: "successDark",
+            borderColor: "successDark"
           },
           "&:focus": {
             outline: "0",
             boxShadow:
-              "0 0 0 3px " + rgba(themeGet("colors.successDark")(props), 0.4)
+              themeGet("shadows.thinOutline")(props) +
+              " " +
+              themeGet("colors.success30")(props)
           }
         },
         danger: {
@@ -98,7 +102,9 @@ const StyledButton = styled("button")
           "&:focus": {
             outline: "0",
             boxShadow:
-              "0 0 0 3px " + rgba(themeGet("colors.dangerDark")(props), 0.4)
+              themeGet("shadows.thinOutline")(props) +
+              " " +
+              themeGet("colors.danger30")(props)
           }
         },
         disabled: {
@@ -123,8 +129,9 @@ const StyledButton = styled("button")
           "&:focus": {
             outline: "0",
             boxShadow:
-              "0 0 0 3px " +
-              rgba(themeGet("colors.primaryLightest")(props), 0.4)
+              themeGet("shadows.thinOutline")(props) +
+              " " +
+              themeGet("colors.primary20")(props)
           }
         }
       }
@@ -175,7 +182,9 @@ export const Button = React.forwardRef((props, ref) => {
         {leftIcon && <Icon icon={leftIcon} mr={small ? "xxs" : "xs"} />}
         {children}
         {rightIcon && <Icon icon={rightIcon} ml={small ? "xxs" : "xs"} />}
-        {isLoading && <Icon icon={["fas", "circle-notch"]} spin ml="s" />}
+        {isLoading && (
+          <Icon icon={["fas", "circle-notch"]} spin ml="s" color="white70" />
+        )}
       </StyledButton>
     </ThemeProvider>
   );

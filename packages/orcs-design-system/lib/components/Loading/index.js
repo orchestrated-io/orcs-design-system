@@ -1,9 +1,9 @@
 import styled, { css, keyframes, ThemeProvider } from "styled-components";
 import PropTypes from "prop-types";
 import React from "react";
-import { rgba } from "polished";
 import { space, layout, compose } from "styled-system";
 import systemtheme from "../../systemtheme";
+import { themeGet } from "@styled-system/theme-get";
 
 const LoadingStyles = compose(space, layout);
 
@@ -30,22 +30,22 @@ const Item = styled.div`
     return borderStyle;
   }};
   border-color: ${props => {
-    let borderColour = rgba(0, 0, 0, 0.3);
+    let borderColour = themeGet("colors.black30");
     if (props.large) {
-      borderColour = rgba(0, 0, 0, 0.2);
+      borderColour = themeGet("colors.black20");
     }
     if (props.inverted) {
-      borderColour = rgba(255, 255, 255, 0.4);
+      borderColour = themeGet("colors.white40");
     }
     return borderColour;
   }};
   border-right-color: ${props => {
-    let borderRightColour = rgba(0, 0, 0, 0.7);
+    let borderRightColour = themeGet("colors.black70");
     if (props.large) {
-      borderRightColour = rgba(0, 0, 0, 0.7);
+      borderRightColour = themeGet("colors.black70");
     }
     if (props.inverted) {
-      borderRightColour = rgba(255, 255, 255, 0.9);
+      borderRightColour = themeGet("colors.white90");
     }
     return borderRightColour;
   }};

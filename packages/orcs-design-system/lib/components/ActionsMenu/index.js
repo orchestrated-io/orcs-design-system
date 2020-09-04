@@ -121,7 +121,6 @@ const Menu = styled.div`
   width: auto;
   z-index: 5;
   background-color: ${themeGet("colors.greyDarker")};
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   border-radius: ${themeGet("radii.2")};
   transform: scale(0);
   opacity: 0;
@@ -152,7 +151,7 @@ const Menu = styled.div`
     border: none;
     color: ${themeGet("colors.white")};
     font-size: ${themeGet("fontSizes.1")};
-    line-height: ${themeGet("fontSizes.1")};
+    line-height: ${themeGet("fontSizes1")};
     font-family: ${themeGet("fonts.main")};
     font-weight: ${themeGet("fontWeights.2")};
     text-decoration: none;

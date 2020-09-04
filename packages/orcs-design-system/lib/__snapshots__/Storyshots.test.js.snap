@@ -17,7 +17,7 @@ exports[`Storyshots Components/ActionsMenu Default 1`] = `
       />
     </button>
     <div
-      className="ActionsMenu__Menu-yvbni2-3 dUQltz"
+      className="ActionsMenu__Menu-yvbni2-3 xnJvq"
     >
       <a
         href="https://orchestrated.io/"
@@ -45,7 +45,7 @@ exports[`Storyshots Components/ActionsMenu Left offset 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 kvfGxQ"
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 grvjYs"
     data-testid={null}
   >
     <div
@@ -60,7 +60,7 @@ exports[`Storyshots Components/ActionsMenu Left offset 1`] = `
         />
       </button>
       <div
-        className="ActionsMenu__Menu-yvbni2-3 ldBWdI"
+        className="ActionsMenu__Menu-yvbni2-3 eBztox"
         direction="left"
       >
         <a
@@ -114,7 +114,7 @@ exports[`Storyshots Components/Avatar Icon only 1`] = `
   className="Avatar__AvatarWrapper-sc-1wtet2j-0 ihQtwr"
 >
   <div
-    className="Avatar__Circle-sc-1wtet2j-3 jnNHLv"
+    className="Avatar__Circle-sc-1wtet2j-3 dZDmXM"
   >
     <span
       className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
@@ -220,7 +220,7 @@ exports[`Storyshots Components/Avatar Inverted 1`] = `
       type="inverted"
     >
       <div
-        className="Avatar__Circle-sc-1wtet2j-3 kgvvgo inverted"
+        className="Avatar__Circle-sc-1wtet2j-3 kMEqkD inverted"
         type="inverted"
       >
         <a
@@ -329,7 +329,7 @@ Array [
       className="Avatar__AvatarWrapper-sc-1wtet2j-0 ihQtwr"
     >
       <div
-        className="Avatar__Circle-sc-1wtet2j-3 jnNHLv"
+        className="Avatar__Circle-sc-1wtet2j-3 dZDmXM"
       >
         AL
       </div>
@@ -356,7 +356,7 @@ Array [
       className="Avatar__AvatarWrapper-sc-1wtet2j-0 ihQtwr"
     >
       <div
-        className="Avatar__Circle-sc-1wtet2j-3 gbMWCO"
+        className="Avatar__Circle-sc-1wtet2j-3 hVnDoJ"
       >
         AL
       </div>
@@ -388,7 +388,7 @@ Array [
       className="Avatar__AvatarWrapper-sc-1wtet2j-0 jrXiJY"
     >
       <div
-        className="Avatar__Circle-sc-1wtet2j-3 jMcDte"
+        className="Avatar__Circle-sc-1wtet2j-3 hfmfjF"
       >
         AL
       </div>
@@ -476,7 +476,7 @@ Array [
     data-testid={null}
   >
     <div
-      className="Flex__FlexWrapper-sc-1f3kfw7-0 evMDyO"
+      className="Flex__FlexWrapper-sc-1f3kfw7-0 jUgEye"
       data-testid={null}
     >
       <div
@@ -566,7 +566,7 @@ Array [
     data-testid={null}
   >
     <div
-      className="Flex__FlexWrapper-sc-1f3kfw7-0 evMDyO"
+      className="Flex__FlexWrapper-sc-1f3kfw7-0 jUgEye"
       data-testid={null}
     >
       <div
@@ -765,7 +765,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 JzNtk"
+      className="Button__StyledButton-sc-10uojnk-0 izvGgN"
       data-testid={null}
       disabled={false}
       onClick={[Function]}
@@ -777,7 +777,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 kBbUFJ"
+      className="Button__StyledButton-sc-10uojnk-0 kvlZvs"
       data-testid={null}
       disabled={false}
       onClick={[Function]}
@@ -794,7 +794,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 fFQkav"
+      className="Button__StyledButton-sc-10uojnk-0 lduBWI"
       data-testid={null}
       disabled={false}
       onClick={[Function]}
@@ -806,7 +806,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 kYYsuP"
+      className="Button__StyledButton-sc-10uojnk-0 jlXqpY"
       data-testid={null}
       disabled={false}
       onClick={[Function]}
@@ -818,7 +818,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 hixPBU"
+      className="Button__StyledButton-sc-10uojnk-0 cBjcSn"
       data-testid={null}
       disabled={false}
       onClick={[Function]}
@@ -830,7 +830,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 fkyQnL"
+      className="Button__StyledButton-sc-10uojnk-0 hYtJmo"
       data-testid={null}
       disabled={false}
       onClick={[Function]}
@@ -843,7 +843,7 @@ Array [
 
 exports[`Storyshots Components/Button Default button 1`] = `
 <button
-  className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+  className="Button__StyledButton-sc-10uojnk-0 bnyiuG"
   data-testid={null}
   disabled={false}
 >
@@ -857,7 +857,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 kfmDZK"
+      className="Button__StyledButton-sc-10uojnk-0 dstfyh"
       data-testid={null}
       disabled={true}
     >
@@ -868,7 +868,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 kfmDZK"
+      className="Button__StyledButton-sc-10uojnk-0 dstfyh"
       data-testid={null}
       disabled={true}
     >
@@ -880,7 +880,7 @@ Array [
 
 exports[`Storyshots Components/Button Full width 1`] = `
 <button
-  className="Button__StyledButton-sc-10uojnk-0 hiHMYe"
+  className="Button__StyledButton-sc-10uojnk-0 iyjzEd"
   data-testid={null}
   disabled={false}
 >
@@ -894,7 +894,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 grNQWc"
+      className="Button__StyledButton-sc-10uojnk-0 kNuczi"
       data-testid={null}
       disabled={false}
       onClick={[Function]}
@@ -906,7 +906,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 fTbKTC"
+      className="Button__StyledButton-sc-10uojnk-0 dyKarQ"
       data-testid={null}
       disabled={false}
       onClick={[Function]}
@@ -918,7 +918,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 fonkow"
+      className="Button__StyledButton-sc-10uojnk-0 ijWRGG"
       data-testid={null}
       disabled={false}
       onClick={[Function]}
@@ -935,7 +935,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 fFQkav"
+      className="Button__StyledButton-sc-10uojnk-0 lduBWI"
       data-testid={null}
       disabled={false}
     >
@@ -952,7 +952,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+      className="Button__StyledButton-sc-10uojnk-0 bnyiuG"
       data-testid={null}
       disabled={false}
     >
@@ -969,7 +969,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 kYLAEE"
+      className="Button__StyledButton-sc-10uojnk-0 cBVIFf"
       data-testid={null}
       disabled={false}
     >
@@ -991,13 +991,14 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 fvvpPn"
+      className="Button__StyledButton-sc-10uojnk-0 hfhJrY"
       data-testid={null}
       disabled={false}
     >
       Loading...
       <span
-        className="Icon__IconWrapper-xeqnbo-0 cSOlIO"
+        className="Icon__IconWrapper-xeqnbo-0 hlohGm"
+        color="white70"
       >
         <svg
           className="svg-inline--fa fa-undefined"
@@ -1009,13 +1010,14 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 ioCevm"
+      className="Button__StyledButton-sc-10uojnk-0 efEzPv"
       data-testid={null}
       disabled={false}
     >
       Saving...
       <span
-        className="Icon__IconWrapper-xeqnbo-0 cSOlIO"
+        className="Icon__IconWrapper-xeqnbo-0 hlohGm"
+        color="white70"
       >
         <svg
           className="svg-inline--fa fa-undefined"
@@ -1027,13 +1029,14 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 eVmRGz"
+      className="Button__StyledButton-sc-10uojnk-0 grTwoO"
       data-testid={null}
       disabled={false}
     >
       Deleting...
       <span
-        className="Icon__IconWrapper-xeqnbo-0 cSOlIO"
+        className="Icon__IconWrapper-xeqnbo-0 hlohGm"
+        color="white70"
       >
         <svg
           className="svg-inline--fa fa-undefined"
@@ -1050,7 +1053,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 dMwfxz"
+      className="Button__StyledButton-sc-10uojnk-0 jGiMWs"
       data-testid={null}
       disabled={false}
     >
@@ -1068,7 +1071,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 cYJods"
+      className="Button__StyledButton-sc-10uojnk-0 cQFaBn"
       data-testid={null}
       disabled={false}
     >
@@ -1086,7 +1089,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkunnu"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+      className="Button__StyledButton-sc-10uojnk-0 bnyiuG"
       data-testid={null}
       disabled={false}
     >
@@ -1460,7 +1463,7 @@ exports[`Storyshots Components/Card Complex card 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 bkUNSO"
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 esFCVi"
     data-testid={null}
   >
     <div
@@ -1491,7 +1494,7 @@ exports[`Storyshots Components/Card Complex card 1`] = `
             Start with a blank slate and add your own data
           </p>
           <button
-            className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+            className="Button__StyledButton-sc-10uojnk-0 bnyiuG"
             data-testid={null}
             disabled={false}
           >
@@ -1528,7 +1531,7 @@ exports[`Storyshots Components/Card Complex card 1`] = `
             Look at pre-populated data to see app in action
           </p>
           <button
-            className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+            className="Button__StyledButton-sc-10uojnk-0 bnyiuG"
             data-testid={null}
             disabled={false}
           >
@@ -1543,21 +1546,21 @@ exports[`Storyshots Components/Card Complex card 1`] = `
 
 exports[`Storyshots Components/Checkbox Checked 1`] = `
 <div
-  className="Checkbox__Item-p4d19b-0 bvDiDr"
+  className="Checkbox__Item-p4d19b-0 kmwnNg"
 >
   <label
     className="Checkbox__Label-p4d19b-1 kOyQzY"
   >
     <input
       checked={true}
-      className="Checkbox__Control-p4d19b-2 eYCfEr"
+      className="Checkbox__Control-p4d19b-2 iytFGt"
       type="checkbox"
     />
     <div
-      className="Checkbox__Box-p4d19b-3 csKNKp"
+      className="Checkbox__Box-p4d19b-3 jWEbQu"
     >
       <div
-        className="Checkbox__Check-p4d19b-4 eTdZLy"
+        className="Checkbox__Check-p4d19b-4 eRPQKn"
       />
     </div>
     <div
@@ -1575,20 +1578,20 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
   >
     <div
-      className="Checkbox__Item-p4d19b-0 bvDiDr"
+      className="Checkbox__Item-p4d19b-0 kmwnNg"
     >
       <label
         className="Checkbox__Label-p4d19b-1 kOyQzY"
       >
         <input
-          className="Checkbox__Control-p4d19b-2 dEruue"
+          className="Checkbox__Control-p4d19b-2 eZXCdx"
           type="checkbox"
         />
         <div
-          className="Checkbox__Box-p4d19b-3 csKNKp"
+          className="Checkbox__Box-p4d19b-3 jWEbQu"
         >
           <div
-            className="Checkbox__Check-p4d19b-4 eTdZLy"
+            className="Checkbox__Check-p4d19b-4 eRPQKn"
           />
         </div>
         <div
@@ -1603,20 +1606,20 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
   >
     <div
-      className="Checkbox__Item-p4d19b-0 bvDiDr"
+      className="Checkbox__Item-p4d19b-0 kmwnNg"
     >
       <label
         className="Checkbox__Label-p4d19b-1 kOyQzY"
       >
         <input
-          className="Checkbox__Control-p4d19b-2 ksOOIp"
+          className="Checkbox__Control-p4d19b-2 ezMRmW"
           type="checkbox"
         />
         <div
-          className="Checkbox__Box-p4d19b-3 csKNKp"
+          className="Checkbox__Box-p4d19b-3 jWEbQu"
         >
           <div
-            className="Checkbox__Check-p4d19b-4 eTdZLy"
+            className="Checkbox__Check-p4d19b-4 eRPQKn"
           />
         </div>
         <div
@@ -1631,20 +1634,20 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
   >
     <div
-      className="Checkbox__Item-p4d19b-0 bvDiDr"
+      className="Checkbox__Item-p4d19b-0 kmwnNg"
     >
       <label
         className="Checkbox__Label-p4d19b-1 kOyQzY"
       >
         <input
-          className="Checkbox__Control-p4d19b-2 hBvgQm"
+          className="Checkbox__Control-p4d19b-2 kFhRkB"
           type="checkbox"
         />
         <div
-          className="Checkbox__Box-p4d19b-3 csKNKp"
+          className="Checkbox__Box-p4d19b-3 jWEbQu"
         >
           <div
-            className="Checkbox__Check-p4d19b-4 eTdZLy"
+            className="Checkbox__Check-p4d19b-4 eRPQKn"
           />
         </div>
         <div
@@ -1659,20 +1662,20 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
   >
     <div
-      className="Checkbox__Item-p4d19b-0 bvDiDr"
+      className="Checkbox__Item-p4d19b-0 kmwnNg"
     >
       <label
         className="Checkbox__Label-p4d19b-1 kOyQzY"
       >
         <input
-          className="Checkbox__Control-p4d19b-2 gFMsFc"
+          className="Checkbox__Control-p4d19b-2 jKuJuj"
           type="checkbox"
         />
         <div
-          className="Checkbox__Box-p4d19b-3 csKNKp"
+          className="Checkbox__Box-p4d19b-3 jWEbQu"
         >
           <div
-            className="Checkbox__Check-p4d19b-4 eTdZLy"
+            className="Checkbox__Check-p4d19b-4 eRPQKn"
           />
         </div>
         <div
@@ -1688,20 +1691,20 @@ Array [
 
 exports[`Storyshots Components/Checkbox Default 1`] = `
 <div
-  className="Checkbox__Item-p4d19b-0 bvDiDr"
+  className="Checkbox__Item-p4d19b-0 kmwnNg"
 >
   <label
     className="Checkbox__Label-p4d19b-1 kOyQzY"
   >
     <input
-      className="Checkbox__Control-p4d19b-2 eYCfEr"
+      className="Checkbox__Control-p4d19b-2 iytFGt"
       type="checkbox"
     />
     <div
-      className="Checkbox__Box-p4d19b-3 csKNKp"
+      className="Checkbox__Box-p4d19b-3 jWEbQu"
     >
       <div
-        className="Checkbox__Check-p4d19b-4 eTdZLy"
+        className="Checkbox__Check-p4d19b-4 eRPQKn"
       />
     </div>
     <div
@@ -1719,22 +1722,22 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
   >
     <div
-      className="Checkbox__Item-p4d19b-0 bvDiDr"
+      className="Checkbox__Item-p4d19b-0 kmwnNg"
     >
       <label
         className="Checkbox__Label-p4d19b-1 bMlqJq"
         disabled={true}
       >
         <input
-          className="Checkbox__Control-p4d19b-2 eYCfEr"
+          className="Checkbox__Control-p4d19b-2 iytFGt"
           disabled={true}
           type="checkbox"
         />
         <div
-          className="Checkbox__Box-p4d19b-3 csKNKp"
+          className="Checkbox__Box-p4d19b-3 jWEbQu"
         >
           <div
-            className="Checkbox__Check-p4d19b-4 eTdZLy"
+            className="Checkbox__Check-p4d19b-4 eRPQKn"
           />
         </div>
         <div
@@ -1749,7 +1752,7 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 kKJzGZ"
   >
     <div
-      className="Checkbox__Item-p4d19b-0 bvDiDr"
+      className="Checkbox__Item-p4d19b-0 kmwnNg"
     >
       <label
         className="Checkbox__Label-p4d19b-1 bMlqJq"
@@ -1757,15 +1760,15 @@ Array [
       >
         <input
           checked={true}
-          className="Checkbox__Control-p4d19b-2 eYCfEr"
+          className="Checkbox__Control-p4d19b-2 iytFGt"
           disabled={true}
           type="checkbox"
         />
         <div
-          className="Checkbox__Box-p4d19b-3 csKNKp"
+          className="Checkbox__Box-p4d19b-3 jWEbQu"
         >
           <div
-            className="Checkbox__Check-p4d19b-4 eTdZLy"
+            className="Checkbox__Check-p4d19b-4 eRPQKn"
           />
         </div>
         <div
@@ -1785,20 +1788,20 @@ exports[`Storyshots Components/Checkbox Inverted 1`] = `
   data-testid={null}
 >
   <div
-    className="Checkbox__Item-p4d19b-0 fZqhjr"
+    className="Checkbox__Item-p4d19b-0 iryTZh"
   >
     <label
       className="Checkbox__Label-p4d19b-1 kOyQzY"
     >
       <input
-        className="Checkbox__Control-p4d19b-2 iShEdo"
+        className="Checkbox__Control-p4d19b-2 gWMNQv"
         type="checkbox"
       />
       <div
-        className="Checkbox__Box-p4d19b-3 csKNKp"
+        className="Checkbox__Box-p4d19b-3 jWEbQu"
       >
         <div
-          className="Checkbox__Check-p4d19b-4 eTdZLy"
+          className="Checkbox__Check-p4d19b-4 eRPQKn"
         />
       </div>
       <div
@@ -1813,7 +1816,7 @@ exports[`Storyshots Components/Checkbox Inverted 1`] = `
 
 exports[`Storyshots Components/Dialogue Basic Dialogue 1`] = `
 <button
-  className="Button__StyledButton-sc-10uojnk-0 kBbUFJ"
+  className="Button__StyledButton-sc-10uojnk-0 kvlZvs"
   data-testid={null}
   disabled={false}
   onClick={[Function]}
@@ -1831,7 +1834,7 @@ exports[`Storyshots Components/Dialogue Basic Dialogue 1`] = `
 
 exports[`Storyshots Components/Dialogue Edit Dialogue 1`] = `
 <button
-  className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+  className="Button__StyledButton-sc-10uojnk-0 bnyiuG"
   data-testid={null}
   disabled={false}
   onClick={[Function]}
@@ -1909,11 +1912,11 @@ exports[`Storyshots Components/Expandable Default Expandable 1`] = `
     className="Expandable__Item-na4gdb-0 dfSpXr"
   >
     <button
-      className="Expandable__Button-na4gdb-1 kkyPOz"
+      className="Expandable__Button-na4gdb-1 cFvmoJ"
       onClick={[Function]}
     >
       <div
-        className="Flex__FlexWrapper-sc-1f3kfw7-0 hkyosr"
+        className="Flex__FlexWrapper-sc-1f3kfw7-0 jmxlkn"
         data-testid={null}
       >
         <div
@@ -1928,7 +1931,7 @@ exports[`Storyshots Components/Expandable Default Expandable 1`] = `
       </div>
     </button>
     <div
-      className="Expandable__Content-na4gdb-3 dNUyVo"
+      className="Expandable__Content-na4gdb-3 dosxtt"
     >
       <p
         className="Typography__P-sc-1613j99-6 hSjZRI"
@@ -1949,11 +1952,11 @@ exports[`Storyshots Components/Expandable Expandable With Badge 1`] = `
     className="Expandable__Item-na4gdb-0 dfSpXr"
   >
     <button
-      className="Expandable__Button-na4gdb-1 kkyPOz"
+      className="Expandable__Button-na4gdb-1 cFvmoJ"
       onClick={[Function]}
     >
       <div
-        className="Flex__FlexWrapper-sc-1f3kfw7-0 hkyosr"
+        className="Flex__FlexWrapper-sc-1f3kfw7-0 jmxlkn"
         data-testid={null}
       >
         <div
@@ -1974,7 +1977,7 @@ exports[`Storyshots Components/Expandable Expandable With Badge 1`] = `
       </div>
     </button>
     <div
-      className="Expandable__Content-na4gdb-3 dNUyVo"
+      className="Expandable__Content-na4gdb-3 dosxtt"
     >
       <p
         className="Typography__P-sc-1613j99-6 hSjZRI"
@@ -1995,11 +1998,11 @@ exports[`Storyshots Components/Expandable Expandable With Subtitle 1`] = `
     className="Expandable__Item-na4gdb-0 dfSpXr"
   >
     <button
-      className="Expandable__Button-na4gdb-1 kkyPOz"
+      className="Expandable__Button-na4gdb-1 cFvmoJ"
       onClick={[Function]}
     >
       <div
-        className="Flex__FlexWrapper-sc-1f3kfw7-0 hkyosr"
+        className="Flex__FlexWrapper-sc-1f3kfw7-0 jmxlkn"
         data-testid={null}
       >
         <div
@@ -2011,7 +2014,7 @@ exports[`Storyshots Components/Expandable Expandable With Subtitle 1`] = `
             Complex example
           </h4>
           <small
-            className="sc-AxjAm bXhRGR"
+            className="sc-AxjAm kKvfLB"
           >
             Subtitle
           </small>
@@ -2019,7 +2022,7 @@ exports[`Storyshots Components/Expandable Expandable With Subtitle 1`] = `
       </div>
     </button>
     <div
-      className="Expandable__Content-na4gdb-3 dNUyVo"
+      className="Expandable__Content-na4gdb-3 dosxtt"
     >
       <p
         className="Typography__P-sc-1613j99-6 hSjZRI"
@@ -2041,12 +2044,12 @@ exports[`Storyshots Components/Expandable Open Expandable 1`] = `
   >
     <button
       aria-expanded={true}
-      className="Expandable__Button-na4gdb-1 jXwJcg"
+      className="Expandable__Button-na4gdb-1 kZrVZG"
       onClick={[Function]}
       open={true}
     >
       <div
-        className="Flex__FlexWrapper-sc-1f3kfw7-0 hkyosr"
+        className="Flex__FlexWrapper-sc-1f3kfw7-0 jmxlkn"
         data-testid={null}
       >
         <div
@@ -2061,7 +2064,7 @@ exports[`Storyshots Components/Expandable Open Expandable 1`] = `
       </div>
     </button>
     <div
-      className="Expandable__Content-na4gdb-3 hhEXij"
+      className="Expandable__Content-na4gdb-3 itSDry"
       open={true}
     >
       <p
@@ -2076,14 +2079,14 @@ exports[`Storyshots Components/Expandable Open Expandable 1`] = `
 
 exports[`Storyshots Components/Flex Basic Flex 1`] = `
 <div
-  className="Flex__FlexWrapper-sc-1f3kfw7-0 hkyosr"
+  className="Flex__FlexWrapper-sc-1f3kfw7-0 jmxlkn"
   data-testid={null}
 >
   <div
     className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+      className="Button__StyledButton-sc-10uojnk-0 bnyiuG"
       data-testid={null}
       disabled={false}
     >
@@ -2094,7 +2097,7 @@ exports[`Storyshots Components/Flex Basic Flex 1`] = `
     className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+      className="Button__StyledButton-sc-10uojnk-0 bnyiuG"
       data-testid={null}
       disabled={false}
     >
@@ -2105,7 +2108,7 @@ exports[`Storyshots Components/Flex Basic Flex 1`] = `
     className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+      className="Button__StyledButton-sc-10uojnk-0 bnyiuG"
       data-testid={null}
       disabled={false}
     >
@@ -2116,7 +2119,7 @@ exports[`Storyshots Components/Flex Basic Flex 1`] = `
     className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+      className="Button__StyledButton-sc-10uojnk-0 bnyiuG"
       data-testid={null}
       disabled={false}
     >
@@ -2127,7 +2130,7 @@ exports[`Storyshots Components/Flex Basic Flex 1`] = `
     className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+      className="Button__StyledButton-sc-10uojnk-0 bnyiuG"
       data-testid={null}
       disabled={false}
     >
@@ -2138,7 +2141,7 @@ exports[`Storyshots Components/Flex Basic Flex 1`] = `
     className="Spacer__SpacerBox-sc-1acikjz-0 bkFJpB"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+      className="Button__StyledButton-sc-10uojnk-0 bnyiuG"
       data-testid={null}
       disabled={false}
     >
@@ -2150,14 +2153,14 @@ exports[`Storyshots Components/Flex Basic Flex 1`] = `
 
 exports[`Storyshots Components/Flex Using Flex Item 1`] = `
 <div
-  className="Flex__FlexWrapper-sc-1f3kfw7-0 gBXggL"
+  className="Flex__FlexWrapper-sc-1f3kfw7-0 esrIXn"
   data-testid={null}
 >
   <div
     className="Flex__FlexItem-sc-1f3kfw7-1 IqzNM"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 cYJods"
+      className="Button__StyledButton-sc-10uojnk-0 cQFaBn"
       data-testid={null}
       disabled={false}
     >
@@ -2175,7 +2178,7 @@ exports[`Storyshots Components/Flex Using Flex Item 1`] = `
     className="Flex__FlexItem-sc-1f3kfw7-1 IqzNM"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+      className="Button__StyledButton-sc-10uojnk-0 bnyiuG"
       data-testid={null}
       disabled={false}
     >
@@ -2186,7 +2189,7 @@ exports[`Storyshots Components/Flex Using Flex Item 1`] = `
     className="Flex__FlexItem-sc-1f3kfw7-1 IqzNM"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+      className="Button__StyledButton-sc-10uojnk-0 bnyiuG"
       data-testid={null}
       disabled={false}
     >
@@ -2197,7 +2200,7 @@ exports[`Storyshots Components/Flex Using Flex Item 1`] = `
     className="Flex__FlexItem-sc-1f3kfw7-1 zLAMg"
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 kfmDZK"
+      className="Button__StyledButton-sc-10uojnk-0 dstfyh"
       data-testid={null}
       disabled={true}
     >
@@ -2405,7 +2408,7 @@ exports[`Storyshots Components/Grid With GridItem 1`] = `
     data-testid={null}
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+      className="Button__StyledButton-sc-10uojnk-0 bnyiuG"
       data-testid={null}
       disabled={false}
     >
@@ -2417,7 +2420,7 @@ exports[`Storyshots Components/Grid With GridItem 1`] = `
     data-testid={null}
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+      className="Button__StyledButton-sc-10uojnk-0 bnyiuG"
       data-testid={null}
       disabled={false}
     >
@@ -2429,7 +2432,7 @@ exports[`Storyshots Components/Grid With GridItem 1`] = `
     data-testid={null}
   >
     <button
-      className="Button__StyledButton-sc-10uojnk-0 hiHMYe"
+      className="Button__StyledButton-sc-10uojnk-0 iyjzEd"
       data-testid={null}
       disabled={false}
     >
@@ -2497,21 +2500,21 @@ exports[`Storyshots Components/Grid Without GridItem 1`] = `
   data-testid={null}
 >
   <button
-    className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+    className="Button__StyledButton-sc-10uojnk-0 bnyiuG"
     data-testid={null}
     disabled={false}
   >
     Default Button
   </button>
   <button
-    className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+    className="Button__StyledButton-sc-10uojnk-0 bnyiuG"
     data-testid={null}
     disabled={false}
   >
     Success
   </button>
   <button
-    className="Button__StyledButton-sc-10uojnk-0 hiHMYe"
+    className="Button__StyledButton-sc-10uojnk-0 iyjzEd"
     data-testid={null}
     disabled={false}
   >
@@ -2542,10 +2545,11 @@ Array [
       className="Header__SearchContainer-yf04b-2 gTnCUW"
     >
       <div
-        className="sc-AxirZ ldFVTk"
+        className="sc-AxirZ hFsQEn"
       >
         <input
-          className="TextInput__Input-shde0o-1 laTqlo"
+          className="TextInput__Input-shde0o-1 eHhPXz"
+          data-testid={null}
           id="search"
           placeholder="Search for..."
           type="text"
@@ -2759,10 +2763,10 @@ Array [
         className="Spacer__SpacerBox-sc-1acikjz-0 iGoMbw"
       >
         <div
-          className="Popover__Container-sc-1bwoak-0 gJwXEG"
+          className="Popover__Container-sc-1bwoak-0 goUUSm"
         >
           <div
-            className="Popover__Text-sc-1bwoak-1 boRorT tooltip"
+            className="Popover__Text-sc-1bwoak-2 lkmeuL tooltip"
             direction="bottom"
             width="160px"
           >
@@ -3247,7 +3251,7 @@ exports[`Storyshots Components/Loading Large 1`] = `
 
 exports[`Storyshots Components/Modal Advanced Modal 1`] = `
 <button
-  className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+  className="Button__StyledButton-sc-10uojnk-0 bnyiuG"
   data-testid={null}
   disabled={false}
   onClick={[Function]}
@@ -3258,7 +3262,7 @@ exports[`Storyshots Components/Modal Advanced Modal 1`] = `
 
 exports[`Storyshots Components/Modal Basic Dialogue Modal 1`] = `
 <button
-  className="Button__StyledButton-sc-10uojnk-0 jqFmMv"
+  className="Button__StyledButton-sc-10uojnk-0 cDtdDW"
   data-testid={null}
   disabled={false}
   onClick={[Function]}
@@ -3276,7 +3280,7 @@ exports[`Storyshots Components/Modal Basic Dialogue Modal 1`] = `
 
 exports[`Storyshots Components/Modal Basic Modal 1`] = `
 <button
-  className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+  className="Button__StyledButton-sc-10uojnk-0 bnyiuG"
   data-testid={null}
   disabled={false}
   onClick={[Function]}
@@ -3287,7 +3291,7 @@ exports[`Storyshots Components/Modal Basic Modal 1`] = `
 
 exports[`Storyshots Components/Modal Edit Dialogue Modal 1`] = `
 <button
-  className="Button__StyledButton-sc-10uojnk-0 dMwfxz"
+  className="Button__StyledButton-sc-10uojnk-0 jGiMWs"
   data-testid={null}
   disabled={false}
   onClick={[Function]}
@@ -3681,19 +3685,19 @@ exports[`Storyshots Components/Popover Default 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 gRxNeP"
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 mpYAn"
     data-testid={null}
   >
     <div
-      className="Popover__Container-sc-1bwoak-0 gJwXEG"
+      className="Popover__Container-sc-1bwoak-0 goUUSm"
     >
       <div
-        className="Popover__Text-sc-1bwoak-1 iurKag tooltip"
+        className="Popover__Text-sc-1bwoak-2 eFHzUp tooltip"
       >
         Description that explains child element
       </div>
       <button
-        className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+        className="Button__StyledButton-sc-10uojnk-0 bnyiuG"
         data-testid={null}
         disabled={false}
       >
@@ -3710,7 +3714,7 @@ exports[`Storyshots Components/Popover Direction 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 gRxNeP"
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 mpYAn"
     data-testid={null}
   >
     <div
@@ -3718,16 +3722,16 @@ exports[`Storyshots Components/Popover Direction 1`] = `
       data-testid={null}
     >
       <div
-        className="Popover__Container-sc-1bwoak-0 gJwXEG"
+        className="Popover__Container-sc-1bwoak-0 goUUSm"
       >
         <div
-          className="Popover__Text-sc-1bwoak-1 eRNmIH tooltip"
+          className="Popover__Text-sc-1bwoak-2 hjoouH tooltip"
           direction="topLeft"
         >
           Description that explains child element
         </div>
         <button
-          className="Button__StyledButton-sc-10uojnk-0 jkaaIM"
+          className="Button__StyledButton-sc-10uojnk-0 ghospD"
           data-testid={null}
           disabled={false}
         >
@@ -3735,16 +3739,16 @@ exports[`Storyshots Components/Popover Direction 1`] = `
         </button>
       </div>
       <div
-        className="Popover__Container-sc-1bwoak-0 gJwXEG"
+        className="Popover__Container-sc-1bwoak-0 goUUSm"
       >
         <div
-          className="Popover__Text-sc-1bwoak-1 ecxFQH tooltip"
+          className="Popover__Text-sc-1bwoak-2 gtGHar tooltip"
           direction="top"
         >
           Description that explains child element
         </div>
         <button
-          className="Button__StyledButton-sc-10uojnk-0 jkaaIM"
+          className="Button__StyledButton-sc-10uojnk-0 ghospD"
           data-testid={null}
           disabled={false}
         >
@@ -3752,16 +3756,16 @@ exports[`Storyshots Components/Popover Direction 1`] = `
         </button>
       </div>
       <div
-        className="Popover__Container-sc-1bwoak-0 gJwXEG"
+        className="Popover__Container-sc-1bwoak-0 goUUSm"
       >
         <div
-          className="Popover__Text-sc-1bwoak-1 gbXtYq tooltip"
+          className="Popover__Text-sc-1bwoak-2 gWqUaW tooltip"
           direction="topRight"
         >
           Description that explains child element
         </div>
         <button
-          className="Button__StyledButton-sc-10uojnk-0 jkaaIM"
+          className="Button__StyledButton-sc-10uojnk-0 ghospD"
           data-testid={null}
           disabled={false}
         >
@@ -3769,16 +3773,16 @@ exports[`Storyshots Components/Popover Direction 1`] = `
         </button>
       </div>
       <div
-        className="Popover__Container-sc-1bwoak-0 gJwXEG"
+        className="Popover__Container-sc-1bwoak-0 goUUSm"
       >
         <div
-          className="Popover__Text-sc-1bwoak-1 gQLhkt tooltip"
+          className="Popover__Text-sc-1bwoak-2 laYdNw tooltip"
           direction="left"
         >
           Description that explains child element
         </div>
         <button
-          className="Button__StyledButton-sc-10uojnk-0 jkaaIM"
+          className="Button__StyledButton-sc-10uojnk-0 ghospD"
           data-testid={null}
           disabled={false}
         >
@@ -3790,16 +3794,16 @@ exports[`Storyshots Components/Popover Direction 1`] = `
         data-testid={null}
       />
       <div
-        className="Popover__Container-sc-1bwoak-0 gJwXEG"
+        className="Popover__Container-sc-1bwoak-0 goUUSm"
       >
         <div
-          className="Popover__Text-sc-1bwoak-1 iurKag tooltip"
+          className="Popover__Text-sc-1bwoak-2 eFHzUp tooltip"
           direction="right"
         >
           Description that explains child element
         </div>
         <button
-          className="Button__StyledButton-sc-10uojnk-0 jkaaIM"
+          className="Button__StyledButton-sc-10uojnk-0 ghospD"
           data-testid={null}
           disabled={false}
         >
@@ -3807,16 +3811,16 @@ exports[`Storyshots Components/Popover Direction 1`] = `
         </button>
       </div>
       <div
-        className="Popover__Container-sc-1bwoak-0 gJwXEG"
+        className="Popover__Container-sc-1bwoak-0 goUUSm"
       >
         <div
-          className="Popover__Text-sc-1bwoak-1 kHjVBg tooltip"
+          className="Popover__Text-sc-1bwoak-2 fnnflE tooltip"
           direction="bottomLeft"
         >
           Description that explains child element
         </div>
         <button
-          className="Button__StyledButton-sc-10uojnk-0 jkaaIM"
+          className="Button__StyledButton-sc-10uojnk-0 ghospD"
           data-testid={null}
           disabled={false}
         >
@@ -3824,16 +3828,16 @@ exports[`Storyshots Components/Popover Direction 1`] = `
         </button>
       </div>
       <div
-        className="Popover__Container-sc-1bwoak-0 gJwXEG"
+        className="Popover__Container-sc-1bwoak-0 goUUSm"
       >
         <div
-          className="Popover__Text-sc-1bwoak-1 Zxqnq tooltip"
+          className="Popover__Text-sc-1bwoak-2 SEPqq tooltip"
           direction="bottom"
         >
           Description that explains child element
         </div>
         <button
-          className="Button__StyledButton-sc-10uojnk-0 jkaaIM"
+          className="Button__StyledButton-sc-10uojnk-0 ghospD"
           data-testid={null}
           disabled={false}
         >
@@ -3841,16 +3845,16 @@ exports[`Storyshots Components/Popover Direction 1`] = `
         </button>
       </div>
       <div
-        className="Popover__Container-sc-1bwoak-0 gJwXEG"
+        className="Popover__Container-sc-1bwoak-0 goUUSm"
       >
         <div
-          className="Popover__Text-sc-1bwoak-1 gzCFRW tooltip"
+          className="Popover__Text-sc-1bwoak-2 bAquoS tooltip"
           direction="bottomRight"
         >
           Description that explains child element
         </div>
         <button
-          className="Button__StyledButton-sc-10uojnk-0 jkaaIM"
+          className="Button__StyledButton-sc-10uojnk-0 ghospD"
           data-testid={null}
           disabled={false}
         >
@@ -3868,19 +3872,19 @@ exports[`Storyshots Components/Popover Display Inline Block 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 gRxNeP"
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 mpYAn"
     data-testid={null}
   >
     <div
-      className="Popover__Container-sc-1bwoak-0 hAXzge"
+      className="Popover__Container-sc-1bwoak-0 HHNAG"
     >
       <div
-        className="Popover__Text-sc-1bwoak-1 iurKag tooltip"
+        className="Popover__Text-sc-1bwoak-2 eFHzUp tooltip"
       >
         Description that explains child element
       </div>
       <button
-        className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+        className="Button__StyledButton-sc-10uojnk-0 bnyiuG"
         data-testid={null}
         disabled={false}
       >
@@ -3888,15 +3892,15 @@ exports[`Storyshots Components/Popover Display Inline Block 1`] = `
       </button>
     </div>
     <div
-      className="Popover__Container-sc-1bwoak-0 hAXzge"
+      className="Popover__Container-sc-1bwoak-0 HHNAG"
     >
       <div
-        className="Popover__Text-sc-1bwoak-1 iurKag tooltip"
+        className="Popover__Text-sc-1bwoak-2 eFHzUp tooltip"
       >
         Description that explains child element
       </div>
       <button
-        className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+        className="Button__StyledButton-sc-10uojnk-0 bnyiuG"
         data-testid={null}
         disabled={false}
       >
@@ -3904,15 +3908,15 @@ exports[`Storyshots Components/Popover Display Inline Block 1`] = `
       </button>
     </div>
     <div
-      className="Popover__Container-sc-1bwoak-0 gJwXEG"
+      className="Popover__Container-sc-1bwoak-0 goUUSm"
     >
       <div
-        className="Popover__Text-sc-1bwoak-1 iurKag tooltip"
+        className="Popover__Text-sc-1bwoak-2 eFHzUp tooltip"
       >
         Description that explains child element
       </div>
       <button
-        className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+        className="Button__StyledButton-sc-10uojnk-0 bnyiuG"
         data-testid={null}
         disabled={false}
       >
@@ -3920,16 +3924,16 @@ exports[`Storyshots Components/Popover Display Inline Block 1`] = `
       </button>
     </div>
     <div
-      className="Popover__Container-sc-1bwoak-0 gJwXEG"
+      className="Popover__Container-sc-1bwoak-0 goUUSm"
     >
       <div
-        className="Popover__Text-sc-1bwoak-1 ecxFQH tooltip"
+        className="Popover__Text-sc-1bwoak-2 gtGHar tooltip"
         direction="top"
       >
         Description that explains child element
       </div>
       <button
-        className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+        className="Button__StyledButton-sc-10uojnk-0 bnyiuG"
         data-testid={null}
         disabled={false}
       >
@@ -3946,20 +3950,20 @@ exports[`Storyshots Components/Popover Specified Width 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 gRxNeP"
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 mpYAn"
     data-testid={null}
   >
     <div
-      className="Popover__Container-sc-1bwoak-0 gJwXEG"
+      className="Popover__Container-sc-1bwoak-0 goUUSm"
     >
       <div
-        className="Popover__Text-sc-1bwoak-1 sufkQ tooltip"
+        className="Popover__Text-sc-1bwoak-2 jIexOJ tooltip"
         width="240px"
       >
         Description that explains child element
       </div>
       <button
-        className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+        className="Button__StyledButton-sc-10uojnk-0 bnyiuG"
         data-testid={null}
         disabled={false}
       >
@@ -3976,24 +3980,59 @@ exports[`Storyshots Components/Popover Text Alignment 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 gRxNeP"
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 mpYAn"
     data-testid={null}
   >
     <div
-      className="Popover__Container-sc-1bwoak-0 gJwXEG"
+      className="Popover__Container-sc-1bwoak-0 goUUSm"
     >
       <div
-        className="Popover__Text-sc-1bwoak-1 bkTMvY tooltip"
+        className="Popover__Text-sc-1bwoak-2 jLVlbd tooltip"
       >
         Centered description that explains child element
       </div>
       <button
-        className="Button__StyledButton-sc-10uojnk-0 hGZBLJ"
+        className="Button__StyledButton-sc-10uojnk-0 bnyiuG"
         data-testid={null}
         disabled={false}
       >
         Hover Me
       </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Popover Tooltip Example 1`] = `
+<div
+  className="Box__BoxWrapper-jr1api-0 gILfyj"
+  data-testid={null}
+>
+  <div
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 mpYAn"
+    data-testid={null}
+  >
+    <div
+      className="Popover__Container-sc-1bwoak-0 goUUSm"
+    >
+      <div
+        className="Popover__Text-sc-1bwoak-2 gtGHar tooltip"
+        direction="top"
+      >
+        This tooltip helps explain stuff
+      </div>
+      <div
+        className="Popover__TooltipControl-sc-1bwoak-1 mdjZf"
+        tabIndex="0"
+      >
+        <span
+          className="Icon__IconWrapper-xeqnbo-0 kzKQCj"
+        >
+          <svg
+            className="svg-inline--fa fa-undefined"
+          />
+        </span>
+      </div>
     </div>
   </div>
 </div>
@@ -4008,7 +4047,7 @@ exports[`Storyshots Components/ProgressBar Default 1`] = `
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="ProgressBar__Background-q9qaaf-0 ctVlUv"
+      className="ProgressBar__Background-q9qaaf-0 iwyiWK"
       style={
         Object {
           "width": "100%",
@@ -4016,7 +4055,7 @@ exports[`Storyshots Components/ProgressBar Default 1`] = `
       }
     >
       <div
-        className="ProgressBar__Fill-q9qaaf-1 kOCBNh"
+        className="ProgressBar__Fill-q9qaaf-1 jbdOSI"
         style={
           Object {
             "width": "40%",
@@ -4029,7 +4068,7 @@ exports[`Storyshots Components/ProgressBar Default 1`] = `
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="ProgressBar__Background-q9qaaf-0 ctVlUv"
+      className="ProgressBar__Background-q9qaaf-0 iwyiWK"
       style={
         Object {
           "width": "50%",
@@ -4037,7 +4076,7 @@ exports[`Storyshots Components/ProgressBar Default 1`] = `
       }
     >
       <div
-        className="ProgressBar__Fill-q9qaaf-1 kOCBNh"
+        className="ProgressBar__Fill-q9qaaf-1 jbdOSI"
         style={
           Object {
             "width": "70%",
@@ -4055,7 +4094,7 @@ exports[`Storyshots Components/ProgressBar Gradient 1`] = `
   data-testid={null}
 >
   <div
-    className="ProgressBar__Background-q9qaaf-0 ctVlUv"
+    className="ProgressBar__Background-q9qaaf-0 iwyiWK"
     style={
       Object {
         "width": "100%",
@@ -4074,20 +4113,20 @@ exports[`Storyshots Components/ProgressBar Gradient 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components/ProgressBar Inverted 1`] = `
+exports[`Storyshots Components/ProgressBar On Dark Background 1`] = `
 <div
   className="Box__BoxWrapper-jr1api-0 ezPMxm"
   data-testid={null}
 >
   <div
-    className="Box__BoxWrapper-jr1api-0 cQxHnQ"
+    className="Box__BoxWrapper-jr1api-0 eFGCqk"
     data-testid={null}
   >
     <div
       className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
     >
       <div
-        className="ProgressBar__Background-q9qaaf-0 cTuA-DY"
+        className="ProgressBar__Background-q9qaaf-0 iwyiWK"
         style={
           Object {
             "width": "100%",
@@ -4095,7 +4134,7 @@ exports[`Storyshots Components/ProgressBar Inverted 1`] = `
         }
       >
         <div
-          className="ProgressBar__Fill-q9qaaf-1 hMAPDb"
+          className="ProgressBar__Fill-q9qaaf-1 jbdOSI"
           style={
             Object {
               "width": "40%",
@@ -4108,7 +4147,7 @@ exports[`Storyshots Components/ProgressBar Inverted 1`] = `
       className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
     >
       <div
-        className="ProgressBar__Background-q9qaaf-0 cTuA-DY"
+        className="ProgressBar__Background-q9qaaf-0 iwyiWK"
         style={
           Object {
             "width": "100%",
@@ -4138,7 +4177,7 @@ exports[`Storyshots Components/RadioButton Checked 1`] = `
   >
     <input
       checked={true}
-      className="RadioButton__RadioButtonControl-d2jy6y-2 kdKDlH"
+      className="RadioButton__RadioButtonControl-d2jy6y-2 emkShz"
       name="RadioButtons02"
       type="radio"
     />
@@ -4170,7 +4209,7 @@ Array [
         className="RadioButton__RadioButtonLabel-d2jy6y-1 dpSbtL"
       >
         <input
-          className="RadioButton__RadioButtonControl-d2jy6y-2 jYQeIN"
+          className="RadioButton__RadioButtonControl-d2jy6y-2 yFiIf"
           name="RadioButtons"
           type="radio"
         />
@@ -4199,7 +4238,7 @@ Array [
         className="RadioButton__RadioButtonLabel-d2jy6y-1 dpSbtL"
       >
         <input
-          className="RadioButton__RadioButtonControl-d2jy6y-2 bdpfvB"
+          className="RadioButton__RadioButtonControl-d2jy6y-2 ixYPKU"
           name="RadioButtons"
           type="radio"
         />
@@ -4228,7 +4267,7 @@ Array [
         className="RadioButton__RadioButtonLabel-d2jy6y-1 dpSbtL"
       >
         <input
-          className="RadioButton__RadioButtonControl-d2jy6y-2 eOwlHp"
+          className="RadioButton__RadioButtonControl-d2jy6y-2 kJeEdX"
           name="RadioButtons"
           type="radio"
         />
@@ -4257,7 +4296,7 @@ Array [
         className="RadioButton__RadioButtonLabel-d2jy6y-1 dpSbtL"
       >
         <input
-          className="RadioButton__RadioButtonControl-d2jy6y-2 hjZZDd"
+          className="RadioButton__RadioButtonControl-d2jy6y-2 ckXqqx"
           name="RadioButtons"
           type="radio"
         />
@@ -4291,7 +4330,7 @@ Array [
         className="RadioButton__RadioButtonLabel-d2jy6y-1 dpSbtL"
       >
         <input
-          className="RadioButton__RadioButtonControl-d2jy6y-2 kdKDlH"
+          className="RadioButton__RadioButtonControl-d2jy6y-2 emkShz"
           name="RadioButtons01"
           type="radio"
         />
@@ -4320,7 +4359,7 @@ Array [
         className="RadioButton__RadioButtonLabel-d2jy6y-1 dpSbtL"
       >
         <input
-          className="RadioButton__RadioButtonControl-d2jy6y-2 kdKDlH"
+          className="RadioButton__RadioButtonControl-d2jy6y-2 emkShz"
           name="RadioButtons01"
           type="radio"
         />
@@ -4355,7 +4394,7 @@ Array [
         disabled={true}
       >
         <input
-          className="RadioButton__RadioButtonControl-d2jy6y-2 kdKDlH"
+          className="RadioButton__RadioButtonControl-d2jy6y-2 emkShz"
           disabled={true}
           name="RadioButtons03"
           type="radio"
@@ -4387,7 +4426,7 @@ Array [
       >
         <input
           checked={true}
-          className="RadioButton__RadioButtonControl-d2jy6y-2 kdKDlH"
+          className="RadioButton__RadioButtonControl-d2jy6y-2 emkShz"
           disabled={true}
           name="RadioButtons03"
           type="radio"
@@ -4422,7 +4461,7 @@ exports[`Storyshots Components/RadioButton Inverted 1`] = `
       className="RadioButton__RadioButtonLabel-d2jy6y-1 dpSbtL"
     >
       <input
-        className="RadioButton__RadioButtonControl-d2jy6y-2 hVPBQb"
+        className="RadioButton__RadioButtonControl-d2jy6y-2 hZUSqt"
         name="RadioButtons04"
         type="radio"
       />
@@ -4450,11 +4489,11 @@ exports[`Storyshots Components/Range Default 1`] = `
   min={0}
 >
   <input
-    className="Range__Input-zb0zps-1 faEVHp"
+    className="Range__Input-zb0zps-1 ehltPk"
     type="range"
   />
   <output
-    className="Range__Output-zb0zps-2 dQbfcl"
+    className="Range__Output-zb0zps-2 bVUMlw"
   >
     10
   </output>
@@ -4467,16 +4506,16 @@ exports[`Storyshots Components/Range Inverted 1`] = `
   data-testid={null}
 >
   <div
-    className="Range__Wrapper-zb0zps-0 hudaPL"
+    className="Range__Wrapper-zb0zps-0 bEFYKb"
     max={20}
     min={0}
   >
     <input
-      className="Range__Input-zb0zps-1 faEVHp"
+      className="Range__Input-zb0zps-1 ehltPk"
       type="range"
     />
     <output
-      className="Range__Output-zb0zps-2 dQbfcl"
+      className="Range__Output-zb0zps-2 bVUMlw"
     >
       10
     </output>
@@ -4506,7 +4545,7 @@ exports[`Storyshots Components/Select Default 1`] = `
       onKeyDown={[Function]}
     >
       <div
-        className=" css-zen5jz-control"
+        className=" css-1ypt19i-control"
         onMouseDown={[Function]}
         onTouchEnd={[Function]}
       >
@@ -4637,7 +4676,7 @@ exports[`Storyshots Components/Select Inverted 1`] = `
           onKeyDown={[Function]}
         >
           <div
-            className=" css-1m4e57f-control"
+            className=" css-vl47wb-control"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -4757,7 +4796,7 @@ exports[`Storyshots Components/Select Inverted 1`] = `
           onKeyDown={[Function]}
         >
           <div
-            className=" css-1m4e57f-control"
+            className=" css-vl47wb-control"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -4883,7 +4922,7 @@ exports[`Storyshots Components/Select Multi-select 1`] = `
       onKeyDown={[Function]}
     >
       <div
-        className=" css-zen5jz-control"
+        className=" css-1ypt19i-control"
         onMouseDown={[Function]}
         onTouchEnd={[Function]}
       >
@@ -5007,7 +5046,7 @@ exports[`Storyshots Components/Select With Data ID 1`] = `
       onKeyDown={[Function]}
     >
       <div
-        className=" css-zen5jz-control"
+        className=" css-1ypt19i-control"
         onMouseDown={[Function]}
         onTouchEnd={[Function]}
       >
@@ -5131,7 +5170,7 @@ exports[`Storyshots Components/Select With Selected Value 1`] = `
       onKeyDown={[Function]}
     >
       <div
-        className=" css-zen5jz-control"
+        className=" css-1ypt19i-control"
         onMouseDown={[Function]}
         onTouchEnd={[Function]}
       >
@@ -5370,10 +5409,10 @@ exports[`Storyshots Components/StatusDot Colour 1`] = `
       className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
     >
       <div
-        className="Popover__Container-sc-1bwoak-0 gJwXEG"
+        className="Popover__Container-sc-1bwoak-0 goUUSm"
       >
         <div
-          className="Popover__Text-sc-1bwoak-1 hXBLlW tooltip"
+          className="Popover__Text-sc-1bwoak-2 egEpSK tooltip"
           direction="top"
           width="250px"
         >
@@ -5388,10 +5427,10 @@ exports[`Storyshots Components/StatusDot Colour 1`] = `
       className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
     >
       <div
-        className="Popover__Container-sc-1bwoak-0 gJwXEG"
+        className="Popover__Container-sc-1bwoak-0 goUUSm"
       >
         <div
-          className="Popover__Text-sc-1bwoak-1 hXBLlW tooltip"
+          className="Popover__Text-sc-1bwoak-2 egEpSK tooltip"
           direction="top"
           width="250px"
         >
@@ -5406,10 +5445,10 @@ exports[`Storyshots Components/StatusDot Colour 1`] = `
       className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
     >
       <div
-        className="Popover__Container-sc-1bwoak-0 gJwXEG"
+        className="Popover__Container-sc-1bwoak-0 goUUSm"
       >
         <div
-          className="Popover__Text-sc-1bwoak-1 hXBLlW tooltip"
+          className="Popover__Text-sc-1bwoak-2 egEpSK tooltip"
           direction="top"
           width="250px"
         >
@@ -5434,10 +5473,10 @@ exports[`Storyshots Components/StatusDot Default 1`] = `
     data-testid={null}
   >
     <div
-      className="Popover__Container-sc-1bwoak-0 gJwXEG"
+      className="Popover__Container-sc-1bwoak-0 goUUSm"
     >
       <div
-        className="Popover__Text-sc-1bwoak-1 krTueD tooltip"
+        className="Popover__Text-sc-1bwoak-2 fvVaPb tooltip"
         direction="top"
         width="170px"
       >
@@ -5464,10 +5503,10 @@ exports[`Storyshots Components/StatusDot With Icon 1`] = `
       className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
     >
       <div
-        className="Popover__Container-sc-1bwoak-0 gJwXEG"
+        className="Popover__Container-sc-1bwoak-0 goUUSm"
       >
         <div
-          className="Popover__Text-sc-1bwoak-1 jGzOjx tooltip"
+          className="Popover__Text-sc-1bwoak-2 eYbAqZ tooltip"
           direction="top"
           width="110px"
         >
@@ -5491,10 +5530,10 @@ exports[`Storyshots Components/StatusDot With Icon 1`] = `
       className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
     >
       <div
-        className="Popover__Container-sc-1bwoak-0 gJwXEG"
+        className="Popover__Container-sc-1bwoak-0 goUUSm"
       >
         <div
-          className="Popover__Text-sc-1bwoak-1 jGzOjx tooltip"
+          className="Popover__Text-sc-1bwoak-2 eYbAqZ tooltip"
           direction="top"
           width="110px"
         >
@@ -5518,10 +5557,10 @@ exports[`Storyshots Components/StatusDot With Icon 1`] = `
       className="Spacer__SpacerBox-sc-1acikjz-0 ehNYX"
     >
       <div
-        className="Popover__Container-sc-1bwoak-0 gJwXEG"
+        className="Popover__Container-sc-1bwoak-0 goUUSm"
       >
         <div
-          className="Popover__Text-sc-1bwoak-1 jGzOjx tooltip"
+          className="Popover__Text-sc-1bwoak-2 eYbAqZ tooltip"
           direction="top"
           width="110px"
         >
@@ -5616,7 +5655,7 @@ exports[`Storyshots Components/StyledLink Inverted 1`] = `
     data-testid={null}
   >
     <div
-      className="Flex__FlexWrapper-sc-1f3kfw7-0 bkUNSO"
+      className="Flex__FlexWrapper-sc-1f3kfw7-0 esFCVi"
       data-testid={null}
     >
       <div
@@ -5707,10 +5746,10 @@ exports[`Storyshots Components/Tabs Default Tabs 1`] = `
       </a>
     </div>
     <div
-      className="Popover__Container-sc-1bwoak-0 gJwXEG"
+      className="Popover__Container-sc-1bwoak-0 goUUSm"
     >
       <div
-        className="Popover__Text-sc-1bwoak-1 bZNGCa tooltip"
+        className="Popover__Text-sc-1bwoak-2 cGkaNC tooltip"
         direction="top"
         width="218px"
       >
@@ -5742,11 +5781,11 @@ exports[`Storyshots Components/Tabs Default Tabs 1`] = `
 
 exports[`Storyshots Components/Tag Default 1`] = `
 <div
-  className="Flex__FlexWrapper-sc-1f3kfw7-0 hkyosr"
+  className="Flex__FlexWrapper-sc-1f3kfw7-0 jmxlkn"
   data-testid={null}
 >
   <button
-    className="Tag__TagWrapper-sc-1dh2aa8-0 bCioSy"
+    className="Tag__TagWrapper-sc-1dh2aa8-0 iRWqRY"
     disabled={false}
     selected={false}
   >
@@ -5757,157 +5796,109 @@ exports[`Storyshots Components/Tag Default 1`] = `
 
 exports[`Storyshots Components/Tag Disabled 1`] = `
 <div
-  className="Flex__FlexWrapper-sc-1f3kfw7-0 hkyosr"
+  className="Flex__FlexWrapper-sc-1f3kfw7-0 jmxlkn"
   data-testid={null}
 >
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 dbEzUg"
+  <button
+    className="Tag__TagWrapper-sc-1dh2aa8-0 fqBSUL"
+    disabled={true}
+    selected={false}
   >
-    <button
-      className="Tag__TagWrapper-sc-1dh2aa8-0 jpSajg"
-      disabled={true}
-      selected={false}
-    >
-      devops
-    </button>
-  </div>
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 dbEzUg"
+    devops
+  </button>
+  <button
+    className="Tag__TagWrapper-sc-1dh2aa8-0 fqBSUL"
+    disabled={true}
+    selected={false}
   >
-    <button
-      className="Tag__TagWrapper-sc-1dh2aa8-0 jpSajg"
-      disabled={true}
-      selected={false}
-    >
-      software engineering
-    </button>
-  </div>
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 dbEzUg"
+    software engineering
+  </button>
+  <button
+    className="Tag__TagWrapper-sc-1dh2aa8-0 fqBSUL"
+    disabled={true}
+    selected={false}
   >
-    <button
-      className="Tag__TagWrapper-sc-1dh2aa8-0 jpSajg"
-      disabled={true}
-      selected={false}
-    >
-      product design
-    </button>
-  </div>
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 dbEzUg"
+    product design
+  </button>
+  <button
+    className="Tag__TagWrapper-sc-1dh2aa8-0 fqBSUL"
+    disabled={true}
+    selected={false}
   >
-    <button
-      className="Tag__TagWrapper-sc-1dh2aa8-0 jpSajg"
-      disabled={true}
-      selected={false}
-    >
-      digital transformation
-    </button>
-  </div>
+    digital transformation
+  </button>
 </div>
 `;
 
 exports[`Storyshots Components/Tag No Cross 1`] = `
 <div
-  className="Flex__FlexWrapper-sc-1f3kfw7-0 hkyosr"
+  className="Flex__FlexWrapper-sc-1f3kfw7-0 jmxlkn"
   data-testid={null}
 >
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 dbEzUg"
+  <button
+    className="Tag__TagWrapper-sc-1dh2aa8-0 fdyjjI"
+    disabled={false}
+    selected={true}
   >
-    <button
-      className="Tag__TagWrapper-sc-1dh2aa8-0 krNWfN"
-      disabled={false}
-      selected={true}
-    >
-      devops
-    </button>
-  </div>
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 dbEzUg"
+    devops
+  </button>
+  <button
+    className="Tag__TagWrapper-sc-1dh2aa8-0 fdyjjI"
+    disabled={false}
+    selected={true}
   >
-    <button
-      className="Tag__TagWrapper-sc-1dh2aa8-0 krNWfN"
-      disabled={false}
-      selected={true}
-    >
-      software engineering
-    </button>
-  </div>
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 dbEzUg"
+    software engineering
+  </button>
+  <button
+    className="Tag__TagWrapper-sc-1dh2aa8-0 iRWqRY"
+    disabled={false}
+    selected={false}
   >
-    <button
-      className="Tag__TagWrapper-sc-1dh2aa8-0 bCioSy"
-      disabled={false}
-      selected={false}
-    >
-      product design
-    </button>
-  </div>
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 dbEzUg"
+    product design
+  </button>
+  <button
+    className="Tag__TagWrapper-sc-1dh2aa8-0 iRWqRY"
+    disabled={false}
+    selected={false}
   >
-    <button
-      className="Tag__TagWrapper-sc-1dh2aa8-0 bCioSy"
-      disabled={false}
-      selected={false}
-    >
-      digital transformation
-    </button>
-  </div>
+    digital transformation
+  </button>
 </div>
 `;
 
 exports[`Storyshots Components/Tag Selected 1`] = `
 <div
-  className="Flex__FlexWrapper-sc-1f3kfw7-0 hkyosr"
+  className="Flex__FlexWrapper-sc-1f3kfw7-0 jmxlkn"
   data-testid={null}
 >
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 dbEzUg"
+  <button
+    className="Tag__TagWrapper-sc-1dh2aa8-0 eeyXDw"
+    disabled={false}
+    selected={true}
   >
-    <button
-      className="Tag__TagWrapper-sc-1dh2aa8-0 cIWlIV"
-      disabled={false}
-      selected={true}
-    >
-      devops
-    </button>
-  </div>
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 dbEzUg"
+    devops
+  </button>
+  <button
+    className="Tag__TagWrapper-sc-1dh2aa8-0 eeyXDw"
+    disabled={false}
+    selected={true}
   >
-    <button
-      className="Tag__TagWrapper-sc-1dh2aa8-0 cIWlIV"
-      disabled={false}
-      selected={true}
-    >
-      software engineering
-    </button>
-  </div>
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 dbEzUg"
+    software engineering
+  </button>
+  <button
+    className="Tag__TagWrapper-sc-1dh2aa8-0 iRWqRY"
+    disabled={false}
+    selected={false}
   >
-    <button
-      className="Tag__TagWrapper-sc-1dh2aa8-0 bCioSy"
-      disabled={false}
-      selected={false}
-    >
-      product design
-    </button>
-  </div>
-  <div
-    className="Spacer__SpacerBox-sc-1acikjz-0 dbEzUg"
+    product design
+  </button>
+  <button
+    className="Tag__TagWrapper-sc-1dh2aa8-0 iRWqRY"
+    disabled={false}
+    selected={false}
   >
-    <button
-      className="Tag__TagWrapper-sc-1dh2aa8-0 bCioSy"
-      disabled={false}
-      selected={false}
-    >
-      digital transformation
-    </button>
-  </div>
+    digital transformation
+  </button>
 </div>
 `;
 
@@ -5927,7 +5918,7 @@ exports[`Storyshots Components/TextArea Bold Label 1`] = `
        
     </label>
     <textarea
-      className="TextArea__Input-sc-1oyenoa-0 bwEUUr"
+      className="TextArea__Input-sc-1oyenoa-0 coOzQW"
       data-testid="test-input"
       id="TextAreaBold"
     />
@@ -5951,7 +5942,7 @@ exports[`Storyshots Components/TextArea Default 1`] = `
        
     </label>
     <textarea
-      className="TextArea__Input-sc-1oyenoa-0 bwEUUr"
+      className="TextArea__Input-sc-1oyenoa-0 coOzQW"
       data-testid="Test-id"
       id="TextArea01"
     />
@@ -5975,7 +5966,7 @@ exports[`Storyshots Components/TextArea Full-width 1`] = `
        
     </label>
     <textarea
-      className="TextArea__Input-sc-1oyenoa-0 eoBnJg"
+      className="TextArea__Input-sc-1oyenoa-0 khagDV"
       data-testid={null}
       id="TextArea05"
     />
@@ -6006,7 +5997,7 @@ exports[`Storyshots Components/TextArea Inverted 1`] = `
            
         </label>
         <textarea
-          className="TextArea__Input-sc-1oyenoa-0 bwEUUr"
+          className="TextArea__Input-sc-1oyenoa-0 coOzQW"
           data-testid={null}
           id="TextArea06"
         />
@@ -6026,7 +6017,7 @@ exports[`Storyshots Components/TextArea Inverted 1`] = `
            
         </label>
         <textarea
-          className="TextArea__Input-sc-1oyenoa-0 bboggD"
+          className="TextArea__Input-sc-1oyenoa-0 cCpBwT"
           data-testid={null}
           id="TextArea07"
         />
@@ -6046,7 +6037,7 @@ exports[`Storyshots Components/TextArea Inverted 1`] = `
            
         </label>
         <textarea
-          className="TextArea__Input-sc-1oyenoa-0 gfUANn"
+          className="TextArea__Input-sc-1oyenoa-0 bZlGob"
           data-testid={null}
           id="TextArea08"
         />
@@ -6075,7 +6066,7 @@ exports[`Storyshots Components/TextArea Mandatory 1`] = `
       </span>
     </label>
     <textarea
-      className="TextArea__Input-sc-1oyenoa-0 bwEUUr"
+      className="TextArea__Input-sc-1oyenoa-0 coOzQW"
       data-testid={null}
       id="TextAreaMandatory"
     />
@@ -6099,7 +6090,7 @@ exports[`Storyshots Components/TextArea Size 1`] = `
        
     </label>
     <textarea
-      className="TextArea__Input-sc-1oyenoa-0 bwEUUr"
+      className="TextArea__Input-sc-1oyenoa-0 coOzQW"
       cols="50"
       data-testid={null}
       id="TextArea02"
@@ -6128,7 +6119,7 @@ exports[`Storyshots Components/TextArea States 1`] = `
          
       </label>
       <textarea
-        className="TextArea__Input-sc-1oyenoa-0 bboggD"
+        className="TextArea__Input-sc-1oyenoa-0 cCpBwT"
         data-testid={null}
         id="TextArea03"
       />
@@ -6148,7 +6139,7 @@ exports[`Storyshots Components/TextArea States 1`] = `
          
       </label>
       <textarea
-        className="TextArea__Input-sc-1oyenoa-0 gfUANn"
+        className="TextArea__Input-sc-1oyenoa-0 bZlGob"
         data-testid={null}
         id="TextArea04"
       />
@@ -6163,16 +6154,17 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="sc-AxirZ jSSjhL"
+      className="sc-AxirZ gbFaog"
     >
       <label
-        className="TextInput__Label-shde0o-3 kLmJEa"
+        className="TextInput__Label-shde0o-3 ilLgKo"
         htmlFor="textInput1"
       >
         Full name
       </label>
       <input
-        className="TextInput__Input-shde0o-1 cAHiXc"
+        className="TextInput__Input-shde0o-1 eMWSlL"
+        data-testid={null}
         id="textInput1"
         label="Full name"
         placeholder="E.g. John Smith"
@@ -6184,16 +6176,17 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="sc-AxirZ kfOHSf"
+      className="sc-AxirZ gbFaog"
     >
       <label
-        className="TextInput__Label-shde0o-3 jLNJsh"
+        className="TextInput__Label-shde0o-3 fESapg"
         htmlFor="textInput2"
       >
         Full name
       </label>
       <input
-        className="TextInput__Input-shde0o-1 iITdun"
+        className="TextInput__Input-shde0o-1 iEvCUz"
+        data-testid={null}
         id="textInput2"
         label="Full name"
         placeholder="E.g. John Smith"
@@ -6205,16 +6198,17 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="sc-AxirZ kfOHSf"
+      className="sc-AxirZ gbFaog"
     >
       <label
-        className="TextInput__Label-shde0o-3 dGzwji"
+        className="TextInput__Label-shde0o-3 gzzMHN"
         htmlFor="textInput3"
       >
         Full name
       </label>
       <input
-        className="TextInput__Input-shde0o-1 iQZByb"
+        className="TextInput__Input-shde0o-1 kFHXEm"
+        data-testid={null}
         id="textInput3"
         label="Full name"
         placeholder="E.g. John Smith"
@@ -6226,16 +6220,17 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="sc-AxirZ kfOHSf"
+      className="sc-AxirZ gbFaog"
     >
       <label
-        className="TextInput__Label-shde0o-3 bhEaoS"
+        className="TextInput__Label-shde0o-3 cIfZTE"
         htmlFor="textInput4"
       >
         Full name
       </label>
       <input
-        className="TextInput__Input-shde0o-1 cAHiXc"
+        className="TextInput__Input-shde0o-1 eMWSlL"
+        data-testid={null}
         id="textInput4"
         label="Full name"
         placeholder="E.g. John Smith"
@@ -6252,17 +6247,18 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="sc-AxirZ kfOHSf"
+      className="sc-AxirZ gbFaog"
     >
       <input
-        className="TextInput__Input-shde0o-1 bLZXHZ"
+        className="TextInput__Input-shde0o-1 gJlMqD"
+        data-testid={null}
         id="textInput5"
         label="Full name"
         placeholder="E.g. John Smith"
         type="text"
       />
       <label
-        className="TextInput__Label-shde0o-3 rLDmY"
+        className="TextInput__Label-shde0o-3 bEARQn"
         htmlFor="textInput5"
       >
         Full name
@@ -6273,17 +6269,18 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="sc-AxirZ kfOHSf"
+      className="sc-AxirZ gbFaog"
     >
       <input
-        className="TextInput__Input-shde0o-1 bUmpzL"
+        className="TextInput__Input-shde0o-1 fsESiK"
+        data-testid={null}
         id="textInput6"
         label="Full name"
         placeholder="E.g. John Smith"
         type="text"
       />
       <label
-        className="TextInput__Label-shde0o-3 eCVpHP"
+        className="TextInput__Label-shde0o-3 kXHwlX"
         htmlFor="textInput6"
       >
         Full name
@@ -6294,17 +6291,18 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="sc-AxirZ kfOHSf"
+      className="sc-AxirZ gbFaog"
     >
       <input
-        className="TextInput__Input-shde0o-1 gtEfZk"
+        className="TextInput__Input-shde0o-1 hDQgiO"
+        data-testid={null}
         id="textInput7"
         label="Full name"
         placeholder="E.g. John Smith"
         type="text"
       />
       <label
-        className="TextInput__Label-shde0o-3 hEfZVX"
+        className="TextInput__Label-shde0o-3 fklbEf"
         htmlFor="textInput7"
       >
         Full name
@@ -6315,17 +6313,18 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="sc-AxirZ kfOHSf"
+      className="sc-AxirZ gbFaog"
     >
       <input
-        className="TextInput__Input-shde0o-1 bLZXHZ"
+        className="TextInput__Input-shde0o-1 gJlMqD"
+        data-testid={null}
         id="textInput8"
         label="Full name"
         placeholder="E.g. John Smith"
         type="text"
       />
       <label
-        className="TextInput__Label-shde0o-3 fMA-dCE"
+        className="TextInput__Label-shde0o-3 SshHL"
         htmlFor="textInput8"
       >
         Full name
@@ -6337,17 +6336,16 @@ Array [
 
 exports[`Storyshots Components/TextInput Number 1`] = `
 <div
-  className="sc-AxirZ kfOHSf"
-  value="345345.55"
+  className="sc-AxirZ gbFaog"
 >
   <label
-    className="TextInput__Label-shde0o-3 kLmJEa"
+    className="TextInput__Label-shde0o-3 ilLgKo"
     htmlFor="numInput1"
   >
     Currency
   </label>
   <input
-    className="TextInput__NumberInput-shde0o-2 eMbHnI"
+    className="TextInput__NumberInput-shde0o-2 chYewj"
     data-testid={null}
     id="numInput1"
     inputMode="numeric"
@@ -6369,16 +6367,18 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="sc-AxirZ kfOHSf"
+      className="sc-AxirZ gbFaog"
     >
       <label
-        className="TextInput__Label-shde0o-3 kLmJEa"
+        className="TextInput__Label-shde0o-3 ilLgKo"
         htmlFor="textInput9"
       >
         Phone number
       </label>
       <input
-        className="TextInput__Input-shde0o-1 evtjJL"
+        aria-hidden-by="test"
+        className="TextInput__Input-shde0o-1 hSzCLc"
+        data-testid="test-id"
         id="textInput9"
         label="Phone number"
         placeholder="E.g. (03) 9451 1786"
@@ -6406,17 +6406,18 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="sc-AxirZ kfOHSf"
+      className="sc-AxirZ gbFaog"
     >
       <input
-        className="TextInput__Input-shde0o-1 iUfvyG"
+        className="TextInput__Input-shde0o-1 cvlrak"
+        data-testid={null}
         id="textInput10"
         label="Phone number"
         placeholder="E.g. (03) 9451 1786"
         type="text"
       />
       <label
-        className="TextInput__Label-shde0o-3 JrWNP"
+        className="TextInput__Label-shde0o-3 bmUypw"
         htmlFor="textInput10"
       >
         Phone number
@@ -6443,16 +6444,17 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="sc-AxirZ ldFVTk"
+      className="sc-AxirZ hFsQEn"
     >
       <label
-        className="TextInput__Label-shde0o-3 kLmJEa"
+        className="TextInput__Label-shde0o-3 ilLgKo"
         htmlFor="textInput11"
       >
         What are you looking for?
       </label>
       <input
-        className="TextInput__Input-shde0o-1 laTqlo"
+        className="TextInput__Input-shde0o-1 eHhPXz"
+        data-testid={null}
         id="textInput11"
         label="What are you looking for?"
         placeholder="E.g. agile teams"
@@ -6480,17 +6482,18 @@ Array [
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <div
-      className="sc-AxirZ ldFVTk"
+      className="sc-AxirZ hFsQEn"
     >
       <input
-        className="TextInput__Input-shde0o-1 ldTexF"
+        className="TextInput__Input-shde0o-1 bRrBLn"
+        data-testid={null}
         id="textInput12"
         label="What are you looking for?"
         placeholder="E.g. agile teams"
         type="text"
       />
       <label
-        className="TextInput__Label-shde0o-3 bLlXZj"
+        className="TextInput__Label-shde0o-3 kTySYA"
         htmlFor="textInput12"
       >
         What are you looking for?
@@ -6521,12 +6524,12 @@ exports[`Storyshots Components/Toggle Default 1`] = `
   className="Toggle__Group-f6l22k-0 dfPeJz"
 >
   <input
-    className="Toggle__Input-f6l22k-1 iVVGvY"
+    className="Toggle__Input-f6l22k-1 bFaxFQ"
     id="autosave"
     type="checkbox"
   />
   <label
-    className="Toggle__Item-f6l22k-2 jklSmo"
+    className="Toggle__Item-f6l22k-2 kTtlEH"
     htmlFor="autosave"
   />
   <label
@@ -6547,15 +6550,15 @@ exports[`Storyshots Components/Toggle Inverted 1`] = `
     className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
   >
     <div
-      className="Toggle__Group-f6l22k-0 fdTRoC"
+      className="Toggle__Group-f6l22k-0 etoUny"
     >
       <input
-        className="Toggle__Input-f6l22k-1 iVVGvY"
+        className="Toggle__Input-f6l22k-1 bFaxFQ"
         id="autosave3"
         type="checkbox"
       />
       <label
-        className="Toggle__Item-f6l22k-2 fVtFEp"
+        className="Toggle__Item-f6l22k-2 jTVWky"
         htmlFor="autosave3"
       />
       <label
@@ -6570,15 +6573,15 @@ exports[`Storyshots Components/Toggle Inverted 1`] = `
     className="Spacer__SpacerBox-sc-1acikjz-0 fIajRC"
   >
     <div
-      className="Toggle__Group-f6l22k-0 fdTRoC"
+      className="Toggle__Group-f6l22k-0 etoUny"
     >
       <input
-        className="Toggle__Input-f6l22k-1 iVVGvY"
+        className="Toggle__Input-f6l22k-1 bFaxFQ"
         id="autosave4"
         type="checkbox"
       />
       <label
-        className="Toggle__Item-f6l22k-2 jklSmo"
+        className="Toggle__Item-f6l22k-2 kTtlEH"
         htmlFor="autosave4"
       />
       <label
@@ -6597,12 +6600,12 @@ exports[`Storyshots Components/Toggle Small 1`] = `
   className="Toggle__Group-f6l22k-0 dfPeJz"
 >
   <input
-    className="Toggle__Input-f6l22k-1 iVVGvY"
+    className="Toggle__Input-f6l22k-1 bFaxFQ"
     id="autosave2"
     type="checkbox"
   />
   <label
-    className="Toggle__Item-f6l22k-2 fVtFEp"
+    className="Toggle__Item-f6l22k-2 jTVWky"
     htmlFor="autosave2"
   />
   <label
@@ -6620,11 +6623,11 @@ exports[`Storyshots Components/Tooltip Default 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 bkUNSO"
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 esFCVi"
     data-testid={null}
   >
     <button
-      className="Tooltip__Container-vx1y1f-0 cXJzHd"
+      className="Tooltip__Container-vx1y1f-0 dhdSyw"
     >
       <span
         className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
@@ -6632,7 +6635,7 @@ exports[`Storyshots Components/Tooltip Default 1`] = `
         ?
       </span>
       <div
-        className="Tooltip__Text-vx1y1f-2 bbWFig"
+        className="Tooltip__Text-vx1y1f-2 cxFQqt"
         width="200px"
       >
         This tooltip helps explain stuff.
@@ -6644,14 +6647,14 @@ exports[`Storyshots Components/Tooltip Default 1`] = `
 
 exports[`Storyshots Components/Tooltip Direction 1`] = `
 <div
-  className="Flex__FlexWrapper-sc-1f3kfw7-0 bkUNSO"
+  className="Flex__FlexWrapper-sc-1f3kfw7-0 esFCVi"
   data-testid={null}
 >
   <div
     className="Spacer__SpacerBox-sc-1acikjz-0 dchEdD"
   >
     <button
-      className="Tooltip__Container-vx1y1f-0 cXJzHd"
+      className="Tooltip__Container-vx1y1f-0 dhdSyw"
     >
       <span
         className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
@@ -6659,7 +6662,7 @@ exports[`Storyshots Components/Tooltip Direction 1`] = `
         ?
       </span>
       <div
-        className="Tooltip__Text-vx1y1f-2 bbWFig"
+        className="Tooltip__Text-vx1y1f-2 cxFQqt"
         direction="top"
         width="200px"
       >
@@ -6671,7 +6674,7 @@ exports[`Storyshots Components/Tooltip Direction 1`] = `
     className="Spacer__SpacerBox-sc-1acikjz-0 dchEdD"
   >
     <button
-      className="Tooltip__Container-vx1y1f-0 cXJzHd"
+      className="Tooltip__Container-vx1y1f-0 dhdSyw"
     >
       <span
         className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
@@ -6679,7 +6682,7 @@ exports[`Storyshots Components/Tooltip Direction 1`] = `
         ?
       </span>
       <div
-        className="Tooltip__Text-vx1y1f-2 cIeWlV"
+        className="Tooltip__Text-vx1y1f-2 hqRnaE"
         direction="right"
         width="200px"
       >
@@ -6691,7 +6694,7 @@ exports[`Storyshots Components/Tooltip Direction 1`] = `
     className="Spacer__SpacerBox-sc-1acikjz-0 dchEdD"
   >
     <button
-      className="Tooltip__Container-vx1y1f-0 cXJzHd"
+      className="Tooltip__Container-vx1y1f-0 dhdSyw"
     >
       <span
         className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
@@ -6699,7 +6702,7 @@ exports[`Storyshots Components/Tooltip Direction 1`] = `
         ?
       </span>
       <div
-        className="Tooltip__Text-vx1y1f-2 breOgW"
+        className="Tooltip__Text-vx1y1f-2 gVJyxb"
         direction="bottom"
         width="200px"
       >
@@ -6711,7 +6714,7 @@ exports[`Storyshots Components/Tooltip Direction 1`] = `
     className="Spacer__SpacerBox-sc-1acikjz-0 dchEdD"
   >
     <button
-      className="Tooltip__Container-vx1y1f-0 cXJzHd"
+      className="Tooltip__Container-vx1y1f-0 dhdSyw"
     >
       <span
         className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
@@ -6719,7 +6722,7 @@ exports[`Storyshots Components/Tooltip Direction 1`] = `
         ?
       </span>
       <div
-        className="Tooltip__Text-vx1y1f-2 hTORIs"
+        className="Tooltip__Text-vx1y1f-2 cDiGVJ"
         direction="left"
         width="200px"
       >
@@ -6736,11 +6739,11 @@ exports[`Storyshots Components/Tooltip Inverted 1`] = `
   data-testid={null}
 >
   <div
-    className="Flex__FlexWrapper-sc-1f3kfw7-0 bkUNSO"
+    className="Flex__FlexWrapper-sc-1f3kfw7-0 esFCVi"
     data-testid={null}
   >
     <button
-      className="Tooltip__Container-vx1y1f-0 fdqOMp"
+      className="Tooltip__Container-vx1y1f-0 hyZFtQ"
     >
       <span
         className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
@@ -6748,7 +6751,7 @@ exports[`Storyshots Components/Tooltip Inverted 1`] = `
         ?
       </span>
       <div
-        className="Tooltip__Text-vx1y1f-2 fufIuM"
+        className="Tooltip__Text-vx1y1f-2 hVWZRN"
         width="200px"
       >
         Inverted example description
@@ -6760,14 +6763,14 @@ exports[`Storyshots Components/Tooltip Inverted 1`] = `
 
 exports[`Storyshots Components/Tooltip Size 1`] = `
 <div
-  className="Flex__FlexWrapper-sc-1f3kfw7-0 bkUNSO"
+  className="Flex__FlexWrapper-sc-1f3kfw7-0 esFCVi"
   data-testid={null}
 >
   <div
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <button
-      className="Tooltip__Container-vx1y1f-0 cXJzHd"
+      className="Tooltip__Container-vx1y1f-0 dhdSyw"
     >
       <span
         className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
@@ -6775,7 +6778,7 @@ exports[`Storyshots Components/Tooltip Size 1`] = `
         ?
       </span>
       <div
-        className="Tooltip__Text-vx1y1f-2 fDasZr"
+        className="Tooltip__Text-vx1y1f-2 dRTBlC"
         width="90px"
       >
         Short tooltip
@@ -6786,7 +6789,7 @@ exports[`Storyshots Components/Tooltip Size 1`] = `
     className="Spacer__SpacerBox-sc-1acikjz-0 fkJFNa"
   >
     <button
-      className="Tooltip__Container-vx1y1f-0 cXJzHd"
+      className="Tooltip__Container-vx1y1f-0 dhdSyw"
     >
       <span
         className="Tooltip__QuestionMark-vx1y1f-1 jDenfM"
@@ -6794,7 +6797,7 @@ exports[`Storyshots Components/Tooltip Size 1`] = `
         ?
       </span>
       <div
-        className="Tooltip__Text-vx1y1f-2 jqleph"
+        className="Tooltip__Text-vx1y1f-2 hHxcxQ"
         width="250px"
       >
         Long tooltip to accommodate more text.

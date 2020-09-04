@@ -74,7 +74,7 @@ sizes.xl = sizes[6];
 sizes.xxl = sizes[7];
 sizes.xxxl = sizes[8];
 
-// COLOUR PALETTE
+// OLD COLOUR PALETTE
 const black = "#000";
 const white = "#fff";
 const grey = "#90979A"; // Base grey - Mainly used for UI elements like backgrounds, muted text, icons, dividers or borders
@@ -84,6 +84,17 @@ const secondary = "#8E41F0"; // Change to #7211ED with new colour palette. Poten
 const success = "#ACD036"; // Base brand success colour (green) - Mainly used to indicate success, status=good, valid, add, or save states
 const warning = "#EDC652"; // Base brand warning colour - Mainly used to indicate warnings, slipping or near due states
 const danger = "#D42A59"; // Base brand danger/error colour - Mainly used to indicate error, status=bad, at risk or over due states
+
+// NEW COLOUR PALETTE
+// const black = "#000";
+// const white = "#fff";
+// const grey = "#90979A"; // Base grey - Mainly used for UI elements like backgrounds, muted text, icons, dividers or borders
+// const primary = "#2F80ED"; // Potential new colour: #2a5ec1. Base primary brand colour (blue) - Mainly used for buttons, links and selected states
+// const secondary = "#9B51E0"; // Change to #7211ED with new colour palette. Potential new purple colour. Introduce new secondary colour maybe purple when we re-design our colour palette
+// // const tertiary = "orange"; A tertiary colour is maybe not needed. Introduce new tertiary colour maybe orange when we re-design our colour palette
+// const success = "#1DB85F"; // Base brand success colour (green) - Mainly used to indicate success, status=good, valid, add, or save states
+// const warning = "#FF9E44"; // Base brand warning colour - Mainly used to indicate warnings, slipping or near due states
+// const danger = "#EC465A"; // Base brand danger/error colour - Mainly used to indicate error, status=bad, at risk or over due states
 
 export const colors = {
   /* Greyscale */
@@ -122,10 +133,15 @@ export const colors = {
   primaryDark: darken(0.1, primary),
   primaryDarker: darken(0.25, primary),
   primaryDarkest: darken(0.35, primary),
+  primary10: rgba(primary, 0.1),
   primary20: rgba(primary, 0.2),
+  primary30: rgba(primary, 0.3),
   primary40: rgba(primary, 0.4),
+  primary50: rgba(primary, 0.5),
   primary60: rgba(primary, 0.6),
+  primary70: rgba(primary, 0.7),
   primary80: rgba(primary, 0.8),
+  primary90: rgba(primary, 0.9),
   secondary,
   secondaryLight: lighten(0.1, secondary),
   secondaryLighter: lighten(0.2, secondary),
@@ -133,10 +149,15 @@ export const colors = {
   secondaryDark: darken(0.1, secondary),
   secondaryDarker: darken(0.2, secondary),
   secondaryDarkest: darken(0.3, secondary),
+  secondary10: rgba(secondary, 0.1),
   secondary20: rgba(secondary, 0.2),
+  secondary30: rgba(secondary, 0.3),
   secondary40: rgba(secondary, 0.4),
+  secondary50: rgba(secondary, 0.5),
   secondary60: rgba(secondary, 0.6),
+  secondary70: rgba(secondary, 0.7),
   secondary80: rgba(secondary, 0.8),
+  secondary90: rgba(secondary, 0.9),
   success,
   successLight: lighten(0.15, success),
   successLighter: lighten(0.25, success),
@@ -144,10 +165,15 @@ export const colors = {
   successDark: darken(0.1, success),
   successDarker: darken(0.2, success),
   successDarkest: darken(0.3, success),
+  success10: rgba(success, 0.1),
   success20: rgba(success, 0.2),
+  success30: rgba(success, 0.3),
   success40: rgba(success, 0.4),
+  success50: rgba(success, 0.5),
   success60: rgba(success, 0.6),
+  success70: rgba(success, 0.7),
   success80: rgba(success, 0.8),
+  success90: rgba(success, 0.9),
   warning,
   warningLight: lighten(0.15, warning),
   warningLighter: lighten(0.25, warning),
@@ -155,10 +181,15 @@ export const colors = {
   warningDark: darken(0.1, warning),
   warningDarker: darken(0.25, warning),
   warningDarkest: darken(0.35, warning),
+  warning10: rgba(warning, 0.1),
   warning20: rgba(warning, 0.2),
+  warning30: rgba(warning, 0.3),
   warning40: rgba(warning, 0.4),
+  warning50: rgba(warning, 0.5),
   warning60: rgba(warning, 0.6),
+  warning70: rgba(warning, 0.7),
   warning80: rgba(warning, 0.8),
+  warning90: rgba(warning, 0.9),
   danger,
   dangerLight: lighten(0.15, danger),
   dangerLighter: lighten(0.25, danger),
@@ -166,10 +197,15 @@ export const colors = {
   dangerDark: darken(0.1, danger),
   dangerDarker: darken(0.25, danger),
   dangerDarkest: darken(0.35, danger),
+  danger10: rgba(danger, 0.1),
   danger20: rgba(danger, 0.2),
+  danger30: rgba(danger, 0.3),
   danger40: rgba(danger, 0.4),
+  danger50: rgba(danger, 0.5),
   danger60: rgba(danger, 0.6),
-  danger80: rgba(danger, 0.8)
+  danger70: rgba(danger, 0.7),
+  danger80: rgba(danger, 0.8),
+  danger90: rgba(danger, 0.9)
 };
 
 // BORDERS
@@ -179,7 +215,7 @@ export const borderWidths = [0, "1px", "2px", "3px"];
 // SHADOWS
 export const shadows = {
   boxDefault: `0 2px 5px 0 ${colors.black10}`,
-  thinOutline: `0 0 0 2px`
+  thinOutline: `0 0 0 3px`
 };
 
 // ANIMATION

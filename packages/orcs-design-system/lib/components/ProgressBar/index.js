@@ -1,10 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css, keyframes, ThemeProvider } from "styled-components";
-import colours from "../../colours";
-import variables from "../../variables";
 import systemtheme from "../../systemtheme";
 import { space, layout } from "styled-system";
+import { themeGet } from "@styled-system/theme-get";
 
 const expandWidth = keyframes`
   0% { width: 0; }
@@ -14,9 +13,7 @@ const Background = styled.div`
   ${space}
   ${layout}
   position: relative;
-  background: ${colours.greyLighter};
-  background: ${props =>
-    props.inverted ? colours.greyDark : colours.greyLighter};
+  background: ${themeGet("colors.greyLighter")};
   height: 16px;
   border-radius: 8px;
 `;
@@ -28,23 +25,19 @@ const Fill = styled.div`
   height: 10px;
   border-radius: 5px;
   animation: ${expandWidth} 1000ms ease-in-out 1;
-  transition: ${variables.defaultTransition};
+  transition: ${themeGet("transition.transitionDefault")};
   ${props =>
     props.gradient
       ? css`
           background: linear-gradient(
             to right,
-            ${colours.danger} 0%,
-            ${colours.warning} 50%,
-            ${colours.success} 100%
+            ${themeGet("colors.danger")} 0%,
+            ${themeGet("colors.warning")} 50%,
+            ${themeGet("colors.success")} 100%
           );
         `
-      : props.inverted
-      ? css`
-          background: ${colours.primaryLight};
-        `
       : css`
-          background: ${colours.primaryDark};
+          background: ${themeGet("colors.primary")};
         `};
 `;
 
@@ -60,22 +53,13 @@ export default function ProgressBar({
   containerWidth,
   fillWidth,
   gradient,
-  inverted,
   theme,
   ...props
 }) {
   return (
     <ThemeProvider theme={theme}>
-      <Background
-        inverted={inverted}
-        style={{ width: containerWidth + "%" }}
-        {...props}
-      >
-        <Fill
-          gradient={gradient}
-          inverted={inverted}
-          style={{ width: fillWidth + "%" }}
-        />
+      <Background style={{ width: containerWidth + "%" }} {...props}>
+        <Fill gradient={gradient} style={{ width: fillWidth + "%" }} />
       </Background>
     </ThemeProvider>
   );
@@ -88,8 +72,6 @@ ProgressBar.propTypes = {
   fillWidth: PropTypes.number,
   /** Changes fill to have a gradient */
   gradient: PropTypes.bool,
-  /** Changes appearance to suit dark backgrounds */
-  inverted: PropTypes.bool,
   /** Specifies the system design theme. */
   theme: PropTypes.object
 };

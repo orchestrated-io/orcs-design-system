@@ -5,8 +5,6 @@ test("all components exported", () => {
     "systemtheme",
     "GlobalStyles",
     "SystemThemeProvider",
-    "variables",
-    "colours",
     "ActionsMenu",
     "Avatar",
     "Badge",
