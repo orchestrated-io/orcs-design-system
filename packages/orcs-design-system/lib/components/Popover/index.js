@@ -283,7 +283,15 @@ Popover.propTypes = {
   /** The element that requires the popover helper text. */
   children: PropTypes.element,
   /** Specifies the direction of the popover. Defaults to right if not specified */
-  direction: PropTypes.oneOf(["top", "right", "bottom", "left"]),
+  direction: PropTypes.oneOf([
+    "top",
+    "topRight",
+    "right",
+    "bottomRight",
+    "bottom",
+    "bottomLeft",
+    "left"
+  ]),
   /** The text contained in the popover element */
   text: PropTypes.node,
   /** Specifies the alignment of the text inside the popover */
