@@ -3,28 +3,29 @@ import PropTypes from "prop-types";
 import styled, { css, ThemeProvider } from "styled-components";
 import { space, layout } from "styled-system";
 import systemtheme from "../../systemtheme";
+import { themeGet } from "@styled-system/theme-get";
 
 const vars = {
   trackHeight: "4px",
   thumbDiameter: "20px"
 };
 
-const thumb = () => `
+const thumb = props => `
     margin-top: -8px;
     box-sizing: border-box;
     border: none;
     width: ${vars.thumbDiameter};
     height: ${vars.thumbDiameter};
     border-radius: ${vars.thumbDiameter};
-    background: ${systemtheme.colors.primary};
+    background: ${themeGet("colors.primary")(props)};
 `;
 
-const track = () => `
+const track = props => `
     box-sizing: border-box;
     border: none;
     width: 100%;
     height: ${vars.trackHeight};
-	  background: ${systemtheme.colors.greyLight};
+	  background: ${themeGet("colors.greyLight")(props)};
     border-radius: 4px;
 `;
 
@@ -54,24 +55,24 @@ ${layout}
         ? css`
             &:before,
             &:after {
-              color: ${systemtheme.colors.white};
+              color: ${themeGet("colors.white")};
             }
             input {
               &:focus {
                 background: rgba(255, 255, 255, 0.1);
               }
               &::-webkit-slider-runnable-track {
-                background: ${systemtheme.colors.greyDark};
+                background: ${themeGet("colors.greyDark")};
               }
               &::-moz-range-track {
-                background: ${systemtheme.colors.greyDark};
+                background: ${themeGet("colors.greyDark")};
               }
               &::-ms-track {
-                background: ${systemtheme.colors.greyDark};
+                background: ${themeGet("colors.greyDark")};
               }
             }
             output {
-              color: ${systemtheme.colors.white};
+              color: ${themeGet("colors.white")};
             }
           `
         : css``}
@@ -142,7 +143,7 @@ const Output = styled.output`
   text-align: center;
   flex: 1 1 100%;
   order: 4;
-  color: ${systemtheme.colors.greyDarker};
+  color: ${themeGet("colors.greyDarker")};
 `;
 /**
  * Range component is pretty self explanatory, used to select a number out of a range, make sure to set a min, max and default value.

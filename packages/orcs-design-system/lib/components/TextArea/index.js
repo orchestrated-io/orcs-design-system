@@ -59,12 +59,16 @@ const Input = styled("textarea")
       "&:focus": {
         outline: "0",
         boxShadow: props.invalid
-          ? systemtheme.shadows.thinOutline + " " + systemtheme.colors.danger30
-          : props.valid
-          ? systemtheme.shadows.thinOutline + " " + systemtheme.colors.success30
-          : systemtheme.shadows.thinOutline +
+          ? themeGet("shadows.thinOutline")(props) +
             " " +
-            systemtheme.colors.primary30,
+            themeGet("colors.danger30")(props)
+          : props.valid
+          ? themeGet("shadows.thinOutline")(props) +
+            " " +
+            themeGet("colors.success30")(props)
+          : themeGet("shadows.thinOutline")(props) +
+            " " +
+            themeGet("colors.primary30")(props),
         borderColor: props.invalid
           ? "dangerDark"
           : props.valid

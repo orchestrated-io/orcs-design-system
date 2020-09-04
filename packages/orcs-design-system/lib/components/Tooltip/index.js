@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled, { css, ThemeProvider } from "styled-components";
 import { space, layout } from "styled-system";
 import systemtheme from "../../systemtheme";
+import { themeGet } from "@styled-system/theme-get";
 
 const Container = styled.button`
   ${space}
@@ -17,18 +18,18 @@ const Container = styled.button`
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   border-radius: 10px;
   color: ${props =>
-    props.inverted ? systemtheme.colors.greyDarkest : systemtheme.colors.white};
+    props.inverted ? themeGet("colors.greyDarkest") : themeGet("colors.white")};
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: ${systemtheme.transition.transitionDefault};
+  transition: ${themeGet("transition.transitionDefault")};
   background: ${props =>
-    props.inverted ? systemtheme.colors.white : systemtheme.colors.greyDarkest};
+    props.inverted ? themeGet("colors.white") : themeGet("colors.greyDarkest")};
 
   &:hover,
   &:focus {
     outline: 0;
-    background: ${systemtheme.colors.primary};
+    background: ${themeGet("colors.primary")};
 
     > div {
       outline: 0;
@@ -59,11 +60,11 @@ const Text = styled.div`
   opacity: 0;
   padding: 8px 10px;
   pointer-events: none;
-  border-radius: ${systemtheme.radii[1]};
-  transition: ${systemtheme.transition.transitionDefault};
+  border-radius: ${themeGet("radii[1]")};
+  transition: ${themeGet("transition.transitionDefault")};
   width: ${props => (props.width ? props.width : "200px")};
   background: ${props =>
-    props.inverted ? systemtheme.colors.white : systemtheme.colors.greyDarkest};
+    props.inverted ? themeGet("colors.white") : themeGet("colors.greyDarkest")};
 
   &:before {
     content: "";
@@ -75,8 +76,8 @@ const Text = styled.div`
     border-color: transparent;
     border-right-color: ${props =>
       props.inverted
-        ? systemtheme.colors.white
-        : systemtheme.colors.greyDarkest};
+        ? themeGet("colors.white")
+        : themeGet("colors.greyDarkest")};
     position: absolute;
   }
 

@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled, { css, ThemeProvider } from "styled-components";
 import systemtheme from "../../systemtheme";
 import { space, layout } from "styled-system";
+import { themeGet } from "@styled-system/theme-get";
 
 const Group = styled.div`
   ${space}
@@ -15,16 +16,16 @@ const Group = styled.div`
           input {
             &:focus {
               + label {
-                box-shadow: ${systemtheme.shadows.thinOutline +
+                box-shadow: ${themeGet("shadows.thinOutline")(props) +
                   " " +
-                  systemtheme.colors.black30};
+                  themeGet("colors.black30")(props)};
               }
             }
           }
           label {
-            color: ${systemtheme.colors.white};
+            color: ${themeGet("colors.white")};
             &:first-of-type {
-              background: ${systemtheme.colors.greyDark};
+              background: ${themeGet("colors.greyDark")};
             }
           }
         `
@@ -44,15 +45,16 @@ const Input = styled.input.attrs({
   pointer-events: none;
   &:focus {
     + label {
-      box-shadow: ${systemtheme.shadows.thinOutline +
+      box-shadow: ${props =>
+        themeGet("shadows.thinOutline")(props) +
         " " +
-        systemtheme.colors.black30};
+        themeGet("colors.black30")(props)};
     }
   }
 
   :checked {
     + label {
-      background: ${systemtheme.colors.success};
+      background: ${themeGet("colors.success")};
       &:after {
         left: calc(100% - 3px);
         transform: translateX(-100%);
@@ -60,9 +62,10 @@ const Input = styled.input.attrs({
     }
     &:focus {
       + label {
-        box-shadow: ${systemtheme.shadows.thinOutline +
+        box-shadow: ${props =>
+          themeGet("shadows.thinOutline")(props) +
           " " +
-          systemtheme.colors.success30};
+          themeGet("colors.success30")(props)};
       }
     }
   }
@@ -74,8 +77,8 @@ const Item = styled.label`
   margin: 0;
   display: block;
   position: relative;
-  transition: ${systemtheme.transition.transitionDefault};
-  background: ${systemtheme.colors.greyDarker};
+  transition: ${themeGet("transition.transitionDefault")};
+  background: ${themeGet("colors.greyDarker")};
   width: ${props => (props.small ? "36px" : "44px")};
   height: ${props => (props.small ? "20px" : "24px")};
   border-radius: ${props => (props.small ? "10px" : "12px")};
@@ -85,8 +88,8 @@ const Item = styled.label`
     position: absolute;
     top: 3px;
     left: 3px;
-    background: ${systemtheme.colors.white};
-    transition: ${systemtheme.transition.transitionDefault};
+    background: ${themeGet("colors.white")};
+    transition: ${themeGet("transition.transitionDefault")};
     width: ${props => (props.small ? "14px" : "18px")};
     height: ${props => (props.small ? "14px" : "18px")};
     border-radius: ${props => (props.small ? "7px" : "9px")};

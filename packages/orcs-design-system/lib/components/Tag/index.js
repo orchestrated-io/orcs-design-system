@@ -3,6 +3,7 @@ import styled, { css, ThemeProvider } from "styled-components";
 import PropTypes from "prop-types";
 import systemtheme from "../../systemtheme";
 import { space, layout } from "styled-system";
+import { themeGet } from "@styled-system/theme-get";
 
 const TagWrapper = styled.button`
   ${space}
@@ -19,13 +20,13 @@ const TagWrapper = styled.button`
   margin: 3px;
   white-space: nowrap;
   position: relative;
-  transition: ${systemtheme.transition.transitionDefault};
+  transition: ${themeGet("transition.transitionDefault")};
   cursor: ${props => (props.disabled ? "default" : "pointer")};
   border: solid 1px
     ${props =>
       props.disabled
-        ? systemtheme.colors.greyDark
-        : systemtheme.colors.primary};
+        ? themeGet("colors.greyDark")
+        : themeGet("colors.primary")};
   padding: ${props =>
     props.hideCross
       ? "3px 12px 4px 12px;"
@@ -35,38 +36,39 @@ const TagWrapper = styled.button`
 
   background: ${props =>
     props.selected
-      ? systemtheme.colors.primary
+      ? themeGet("colors.primary")
       : props.disabled
-      ? systemtheme.colors.greyDark
-      : systemtheme.colors.white};
+      ? themeGet("colors.greyDark")
+      : themeGet("colors.white")};
 
   color: ${props =>
     props.selected
-      ? systemtheme.colors.white
+      ? themeGet("colors.white")
       : props.disabled
-      ? systemtheme.colors.white
-      : systemtheme.colors.primary};
+      ? themeGet("colors.white")
+      : themeGet("colors.primary")};
 
   ${props =>
     props.disabled
       ? css``
       : css`
           &:hover {
-            border: solid 1px ${systemtheme.colors.primaryDark};
+            border: solid 1px ${themeGet("colors.primaryDark")};
             color: ${props =>
               props.selected
-                ? systemtheme.colors.white
-                : systemtheme.colors.primaryDark};
+                ? themeGet("colors.white")
+                : themeGet("colors.primaryDark")};
             background: ${props =>
               props.selected
-                ? systemtheme.colors.primaryDark
-                : systemtheme.colors.white};
+                ? themeGet("colors.primaryDark")
+                : themeGet("colors.white")};
           }
         `} &:focus {
     outline: 0;
-    box-shadow: ${systemtheme.shadows.thinOutline +
+    box-shadow: ${props =>
+      themeGet("shadows.thinOutline")(props) +
       " " +
-      systemtheme.colors.primary30};
+      themeGet("colors.primary30")(props)};
   }
 
   ${props =>
@@ -84,8 +86,8 @@ const TagWrapper = styled.button`
             font-size: 1.8rem;
             font-weight: 600;
             transform-origin: 50% 50%;
-            color: ${systemtheme.colors.white};
-            transition: ${systemtheme.transition.transitionDefault};
+            color: ${themeGet("colors.white")};
+            transition: ${themeGet("transition.transitionDefault")};
             opacity: ${props => (props.selected ? 1 : 0)};
             transform: ${props =>
               props.selected
