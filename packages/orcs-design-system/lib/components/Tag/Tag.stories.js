@@ -1,7 +1,6 @@
 import React from "react";
 import Tag from ".";
 import Flex from "../Flex";
-import Spacer from "../Spacer";
 import mdx from "./Tag.mdx";
 
 export default {
