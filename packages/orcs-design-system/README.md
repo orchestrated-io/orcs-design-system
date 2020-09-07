@@ -37,7 +37,15 @@ A new browser window will open with a random localhost port. ORCS runs [Storyboo
 
 All library files are located in `/lib`. Static files are located in `/assets`.
 
+### Viewing changes in PM / TD.
+
+As an alternative to `npm link` you can run `npm run dist` and then copy the `es` folder directly into TD or PM:
+
+`cp -R es/ ../../../team-directory/node_modules/orcs-design-system/`
+
 ### Symlinking with `npm link`
+
+##### We haven't had much success with this recently
 
 If you need to do `npm link` in your local environment you might encounter the following issues:
 
