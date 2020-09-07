@@ -1,0 +1,29 @@
+name: Run Percy on Storybook snapshots
+
+#on:
+#  workflow_dispatch
+
+on:
+  push:
+    branches:
+      - "*" # matches every branch
+      - "*/*" # matches every branch containing a single '/'
+      - "master" # includes master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1.0.0
+      - name: Install dependencies
+        run: npm i
+      - name: Percy Test
+        working-directory: packages/orcs-design-system
+        uses: percy/storybook-action@v0.1.2
+        with:
+          percy-flags: "--widths=320,1024"
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}

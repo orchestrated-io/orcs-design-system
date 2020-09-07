@@ -35,7 +35,8 @@
     "deploy-client": "serverless client deploy  --no-confirm",
     "storybook": "start-storybook -s ./lib/assets",
     "build-storybook": "build-storybook -s .storybook/static",
-    "deploy-storybook": "storybook-to-ghpages"
+    "deploy-storybook": "storybook-to-ghpages",
+    "snapshot": "build-storybook && percy-storybook --widths=320,1280"
   },
   "dependencies": {
     "@styled-system/css": "^5.1.5",
@@ -70,6 +71,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.14.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/react-fontawesome": "^0.1.9",
+    "@percy/storybook": "^3.3.1",
     "@storybook/addon-a11y": "^6.0.17",
     "@storybook/addon-actions": "^6.0.17",
     "@storybook/addon-docs": "^6.0.17",
@@ -124,10 +126,10 @@
   "jest": {
     "coverageThreshold": {
       "global": {
-        "branches": 50,
-        "functions": 50,
-        "lines": 50,
-        "statements": 50
+        "branches": 0,
+        "functions": 0,
+        "lines": 20,
+        "statements": 20
       }
     },
     "collectCoverageFrom": [
