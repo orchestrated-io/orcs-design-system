@@ -36,7 +36,7 @@
     "storybook": "start-storybook -s ./lib/assets",
     "build-storybook": "build-storybook -s .storybook/static",
     "deploy-storybook": "storybook-to-ghpages",
-    "snapshot": "build-storybook && percy-storybook --widths=320,1280"
+    "percy:storybook": "build-storybook && percy-storybook --widths=1280"
   },
   "dependencies": {
     "@styled-system/css": "^5.1.5",

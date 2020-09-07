@@ -19,11 +19,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1.0.0
       - name: Install dependencies
-        run: npm i
+        run: |
+          npm ci
+          npm run bootstrap
       - name: Percy Test
-        working-directory: packages/orcs-design-system
         uses: percy/storybook-action@v0.1.2
         with:
-          percy-flags: "--widths=320,1024"
+          percy-flags: "--widths=1080"
+          working-directory: "./packages/orcs-design-system"
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
