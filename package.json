@@ -8,8 +8,7 @@
     "start": "lerna run start",
     "dist": "lerna run dist",
     "publish:canary": "lerna publish --canary --yes",
-    "publish:package": "lerna publish from-package --yes",
-    "percy:storybook": "lerna run percy:storybook"
+    "publish:package": "lerna publish from-package --yes"
   },
   "lint-staged": {
     "packages/*/{src,lib}/**/*.{js,jsx,json,css}": [
