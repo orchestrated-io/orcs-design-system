@@ -1,4 +1,4 @@
-import { rgba, lighten, darken, desaturate } from "polished";
+import { rgba, lighten, darken } from "polished";
 
 // FONTS
 export const fonts = {
