@@ -66,7 +66,9 @@ export const ButtonGroupContainer = ({
   return (
     <ThemeProvider theme={theme}>
       <Flex alignItems="center" {...props}>
-        <ButtonGroupControlLabel>{controlLabel}</ButtonGroupControlLabel>
+        {controlLabel && (
+          <ButtonGroupControlLabel>{controlLabel}</ButtonGroupControlLabel>
+        )}
         <ButtonGroupWrapper>{children}</ButtonGroupWrapper>
       </Flex>
     </ThemeProvider>

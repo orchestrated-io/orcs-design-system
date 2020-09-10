@@ -79,7 +79,7 @@ export const withIcon = () => (
               icon={["fas", "check"]}
               color="white"
               size="xs"
-              transform="up-1 right-1"
+              transform="up-1"
             />
           </StatusDot>
         </Popover>
@@ -95,7 +95,7 @@ export const withIcon = () => (
               icon={["fas", "exclamation"]}
               color="white"
               size="xs"
-              transform="up-1 right-1"
+              transform="up-1"
             />
           </StatusDot>
         </Popover>
@@ -111,7 +111,7 @@ export const withIcon = () => (
               icon={["fas", "bell"]}
               color="white"
               size="xs"
-              transform="up-1 right-1"
+              transform="up-1"
             />
           </StatusDot>
         </Popover>

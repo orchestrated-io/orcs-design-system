@@ -46,7 +46,7 @@ const Text = styled.div`
   color: ${themeGet("colors.white")};
   outline: 0;
   padding: 8px 10px;
-  border-radius: ${themeGet("radii[1]")};
+  border-radius: ${themeGet("radii.1")};
   transform: translateX(10px) translateY(-50%);
   width: ${props => (props.width ? props.width : "200px")};
   background: ${themeGet("colors.greyDarkest")};

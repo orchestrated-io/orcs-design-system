@@ -1,4 +1,4 @@
-import { rgba, lighten, darken } from "polished";
+import { rgba, lighten, darken, desaturate } from "polished";
 
 // FONTS
 export const fonts = {
@@ -80,8 +80,8 @@ const white = "#fff";
 const grey = "#90979A"; // Base grey - Mainly used for UI elements like backgrounds, muted text, icons, dividers or borders
 const primary = "#30ABD6"; // Potential new colour: #2a5ec1. Base primary brand colour (blue) - Mainly used for buttons, links and selected states
 const secondary = "#8E41F0"; // Change to #7211ED with new colour palette. Potential new purple colour. Introduce new secondary colour maybe purple when we re-design our colour palette
-// const tertiary = "orange"; A tertiary colour is maybe not needed. Introduce new tertiary colour maybe orange when we re-design our colour palette
 const success = "#ACD036"; // Base brand success colour (green) - Mainly used to indicate success, status=good, valid, add, or save states
+const successDesaturated = desaturate(0.1, success); // This is because the lighter versions of success were too saturated and 'minty' coloured.
 const warning = "#EDC652"; // Base brand warning colour - Mainly used to indicate warnings, slipping or near due states
 const danger = "#D42A59"; // Base brand danger/error colour - Mainly used to indicate error, status=bad, at risk or over due states
 
@@ -89,11 +89,12 @@ const danger = "#D42A59"; // Base brand danger/error colour - Mainly used to ind
 // const black = "#000";
 // const white = "#fff";
 // const grey = "#90979A"; // Base grey - Mainly used for UI elements like backgrounds, muted text, icons, dividers or borders
-// const primary = "#2F80ED"; // Potential new colour: #2a5ec1. Base primary brand colour (blue) - Mainly used for buttons, links and selected states
+// const primary = "#0091EA"; // Potential new colour: #2a5ec1. Base primary brand colour (blue) - Mainly used for buttons, links and selected states
 // const secondary = "#9B51E0"; // Change to #7211ED with new colour palette. Potential new purple colour. Introduce new secondary colour maybe purple when we re-design our colour palette
-// // const tertiary = "orange"; A tertiary colour is maybe not needed. Introduce new tertiary colour maybe orange when we re-design our colour palette
-// const success = "#1DB85F"; // Base brand success colour (green) - Mainly used to indicate success, status=good, valid, add, or save states
-// const warning = "#FF9E44"; // Base brand warning colour - Mainly used to indicate warnings, slipping or near due states
+// //const tertiary = "#FF9E44"; // A tertiary colour for limited use. Not sure if needed.
+// const success = "#1BC363"; // Base brand success colour (green) - Mainly used to indicate success, status=good, valid, add, or save states
+// const successDesaturated = desaturate(0.1, success); // This is because the lighter versions of success were too saturated and 'minty' coloured.
+// const warning = "#ffbc00"; // Base brand warning colour - Mainly used to indicate warnings, slipping or near due states
 // const danger = "#EC465A"; // Base brand danger/error colour - Mainly used to indicate error, status=bad, at risk or over due states
 
 export const colors = {
@@ -158,10 +159,29 @@ export const colors = {
   secondary70: rgba(secondary, 0.7),
   secondary80: rgba(secondary, 0.8),
   secondary90: rgba(secondary, 0.9),
+  // tertiary,
+  // tertiaryLight: lighten(0.1, tertiary),
+  // tertiaryLighter: lighten(0.2, tertiary),
+  // tertiaryLightest: lighten(0.3, tertiary),
+  // tertiaryDark: darken(0.1, tertiary),
+  // tertiaryDarker: darken(0.2, tertiary),
+  // tertiaryDarkest: darken(0.3, tertiary),
+  // tertiary10: rgba(tertiary, 0.1),
+  // tertiary20: rgba(tertiary, 0.2),
+  // tertiary30: rgba(tertiary, 0.3),
+  // tertiary40: rgba(tertiary, 0.4),
+  // tertiary50: rgba(tertiary, 0.5),
+  // tertiary60: rgba(tertiary, 0.6),
+  // tertiary70: rgba(tertiary, 0.7),
+  // tertiary80: rgba(tertiary, 0.8),
+  // tertiary90: rgba(tertiary, 0.9),
   success,
-  successLight: lighten(0.15, success),
+  successLight: lighten(0.11, success),
   successLighter: lighten(0.25, success),
-  successLightest: lighten(0.4, success),
+  successLightest: lighten(0.35, success),
+  // successLight: lighten(0.11, successDesaturated),
+  // successLighter: lighten(0.25, successDesaturated),
+  // successLightest: lighten(0.35, successDesaturated),
   successDark: darken(0.1, success),
   successDarker: darken(0.2, success),
   successDarkest: darken(0.3, success),
@@ -191,9 +211,9 @@ export const colors = {
   warning80: rgba(warning, 0.8),
   warning90: rgba(warning, 0.9),
   danger,
-  dangerLight: lighten(0.15, danger),
-  dangerLighter: lighten(0.25, danger),
-  dangerLightest: lighten(0.4, danger),
+  dangerLight: lighten(0.1, danger),
+  dangerLighter: lighten(0.2, danger),
+  dangerLightest: lighten(0.3, danger),
   dangerDark: darken(0.1, danger),
   dangerDarker: darken(0.25, danger),
   dangerDarkest: darken(0.35, danger),

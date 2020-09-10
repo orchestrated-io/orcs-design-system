@@ -22,38 +22,38 @@ const Item = styled("span")
     px: 3,
     cursor: "default",
     borderRadius: 1,
-    color: "greyDarker",
+    color: "greyDarkest",
     bg: "greyLighter"
   }),
   variant({
     variants: {
       default: {},
       success: {
-        color: "successDarker",
+        color: "successDarkest",
         bg: "successLighter"
       },
       warning: {
-        color: "warningDarker",
+        color: "warningDarkest",
         bg: "warningLighter"
       },
       danger: {
-        color: "dangerDarker",
-        bg: "dangerLighter"
+        color: "dangerDarkest",
+        bg: "dangerLightest"
       },
       primaryLight: {
         color: "primaryDarker",
         bg: "primaryLightest"
       },
       primary: {
-        color: "primaryDarker",
+        color: "primaryDarkest",
         bg: "primaryLighter"
       },
       primaryDark: {
-        color: "primaryDarker",
+        color: "primaryDarkest",
         bg: "primaryLight"
       },
       secondary: {
-        color: "secondary",
+        color: "secondaryDarker",
         bg: "secondaryLightest"
       }
     }

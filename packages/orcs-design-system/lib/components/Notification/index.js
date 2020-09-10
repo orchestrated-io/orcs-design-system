@@ -20,7 +20,7 @@ const NotificationWrapper = styled("div")
     position: "relative",
     color: "white",
     fontSize: "1",
-    fontWeight: "1",
+    fontWeight: "2",
     px: "s",
     py: "s",
     cursor: "default",
@@ -46,10 +46,10 @@ const NotificationWrapper = styled("div")
         bg: "successDark"
       },
       danger: {
-        bg: "warningDark"
+        bg: "dangerDark"
       },
       warning: {
-        bg: "warningDark"
+        bg: "warning"
       },
       default: {}
     }
@@ -60,10 +60,10 @@ const NotificationWrapper = styled("div")
         bg: "successDark"
       },
       danger: {
-        bg: "warningDark"
+        bg: "dangerDark"
       },
       warning: {
-        bg: "warningDark"
+        bg: "warning"
       },
       default: {
         bg: "primaryDark"
