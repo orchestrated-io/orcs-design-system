@@ -13,28 +13,30 @@ const Item = styled("span")
   .attrs(props => ({
     "data-testid": props["data-testid"] ? props["data-testid"] : null
   }))(
-  css({
-    fontSize: 0,
-    fontWeight: 2,
-    display: "inline-block",
-    position: "relative",
-    py: 2,
-    px: 3,
-    cursor: "default",
-    borderRadius: 1,
-    color: "greyDarkest",
-    bg: "greyLighter"
-  }),
+  props =>
+    css({
+      fontSize: 0,
+      fontWeight: 2,
+      display: "inline-block",
+      position: "relative",
+      py: 2,
+      px: 3,
+      cursor: "default",
+      borderRadius: 1,
+      color: "greyDarkest",
+      bg: "greyLighter",
+      whiteSpace: props.noWrap ? "nowrap" : "normal"
+    }),
   variant({
     variants: {
       default: {},
       success: {
         color: "successDarkest",
-        bg: "successLighter"
+        bg: "successLightest"
       },
       warning: {
         color: "warningDarkest",
-        bg: "warningLighter"
+        bg: "warningLightest"
       },
       danger: {
         color: "dangerDarkest",
@@ -61,10 +63,12 @@ const Item = styled("span")
   BadgeStyles
 );
 
-export default function Badge({ children, theme, ...props }) {
+export default function Badge({ noWrap, children, theme, ...props }) {
   return (
     <ThemeProvider theme={theme}>
-      <Item {...props}>{children}</Item>
+      <Item noWrap={noWrap} {...props}>
+        {children}
+      </Item>
     </ThemeProvider>
   );
 }
@@ -80,6 +84,8 @@ Badge.propTypes = {
     "primaryDark",
     "secondary"
   ]),
+  /** Specified whether the badge text should be able to wrap or not */
+  noWrap: PropTypes.bool,
   /** The label text on the badge is passed as a child element. */
   children: PropTypes.node,
   /** Specifies the system theme. */
