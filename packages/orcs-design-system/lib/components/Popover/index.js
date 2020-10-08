@@ -290,7 +290,8 @@ Popover.propTypes = {
     "bottomRight",
     "bottom",
     "bottomLeft",
-    "left"
+    "left",
+    "topLeft"
   ]),
   /** The text contained in the popover element */
   text: PropTypes.node,
