@@ -119,12 +119,12 @@ export default function Expandable({
           }
         }} */
         >
-          <Flex justifyBetween alignCenter>
+          <Flex alignItems="center" justifyContent="space-between">
             <Text>
               {title && <Typography.H4>{title}</Typography.H4>}
               {subtitle && <Typography.Small grey>{subtitle}</Typography.Small>}
             </Text>
-            {badge && <Badge colour={badgeColour}>{badge}</Badge>}
+            {badge && <Badge variant={badgeColour}>{badge}</Badge>}
           </Flex>
         </Button>
         <Content open={baseState} expanded={toggleState}>
