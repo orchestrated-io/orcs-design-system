@@ -49,7 +49,7 @@ const NotificationWrapper = styled("div")
         bg: "dangerDark"
       },
       warning: {
-        bg: "warning"
+        bg: "warningDark"
       },
       default: {}
     }
@@ -63,7 +63,7 @@ const NotificationWrapper = styled("div")
         bg: "dangerDark"
       },
       warning: {
-        bg: "warning"
+        bg: "warningDark"
       },
       default: {
         bg: "primaryDark"
@@ -88,7 +88,7 @@ const Close = styled("button")(
     ml: "auto",
     cursor: "pointer",
     opacity: "0.6",
-    transition: "defaultTransition",
+    transition: "transitionDefault",
     color: "white",
     "&:hover, &:focus": {
       outline: "0",
@@ -166,7 +166,9 @@ export default function Notification({
           notifClass={notifClass}
           {...props}
         >
-          {icon && <NotificationIcon icon={icon} {...iconProps} />}
+          {icon && (
+            <NotificationIcon colour={colour} icon={icon} {...iconProps} />
+          )}
           {loading && <LoadingIcon />}
           <NotificationContent>{children}</NotificationContent>
           {closable && (

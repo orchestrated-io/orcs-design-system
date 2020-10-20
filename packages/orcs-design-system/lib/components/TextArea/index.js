@@ -87,7 +87,7 @@ const Label = styled("label").withConfig({ shouldForwardProp })(
       textAlign: "left",
       fontSize: "1",
       fontWeight: props.bold ? "2" : "1",
-      transition: themeGet("transition.defaultTransition")(props),
+      transition: themeGet("transition.transitionDefault")(props),
       mb: props.floating ? 0 : "xs",
       span: {
         color: "danger",
