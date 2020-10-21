@@ -29,16 +29,9 @@ export const targetStyledLink = () => (
 );
 targetStyledLink.storyName = "Targeted";
 
-export const activeStyledLink = () => (
-  <StyledLink href="#" active>
-    Active Link
-  </StyledLink>
-);
-activeStyledLink.storyName = "Active";
-
 export const boldStyledLink = () => (
   <StyledLink href="#" bold>
-    Active Link
+    Bold Link
   </StyledLink>
 );
 boldStyledLink.storyName = "Bold";

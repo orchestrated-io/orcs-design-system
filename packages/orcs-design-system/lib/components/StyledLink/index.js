@@ -26,7 +26,11 @@ const styleLink = LinkComponent =>
       css({
         display: props.block ? "block" : "inline-block",
         fontWeight: props.bold ? 2 : "inherit",
-        color: props.active ? "primary" : props.white ? "white" : "primary",
+        color: props.active
+          ? "primaryLight"
+          : props.white
+          ? "white"
+          : "primary",
         position: "relative",
         textDecoration: "none",
         cursor: "pointer",

@@ -32,15 +32,15 @@ const Item = styled("span")
       default: {},
       success: {
         color: "successDarkest",
-        bg: "successLighter"
+        bg: "successLightest"
       },
       warning: {
         color: "warningDarkest",
-        bg: "warningLighter"
+        bg: "warningLightest"
       },
       danger: {
         color: "dangerDarkest",
-        bg: "dangerLighter"
+        bg: "dangerLightest"
       },
       primaryLight: {
         color: "primaryDarker",
