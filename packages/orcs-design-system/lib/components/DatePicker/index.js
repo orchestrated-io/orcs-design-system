@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import momentPropTypes from "react-moment-proptypes";
+import omit from "lodash/omit";
 
 import "react-dates/lib/css/_datepicker.css";
 import "react-dates/initialize";
@@ -8,7 +9,7 @@ import "react-dates/initialize";
 import { DateRangePicker, SingleDatePicker } from "react-dates";
 import styled from "styled-components";
 import { themeGet } from "@styled-system/theme-get";
-
+import DateRangePickerShape from "react-dates/lib/shapes/DateRangePickerShape";
 import { DateRangePickerPhrases } from "react-dates/lib/defaultPhrases";
 import {
   START_DATE,
@@ -241,7 +242,25 @@ DatePicker.propTypes = {
   /** Input focused state */
   focusedInput: PropTypes.bool,
   /** Date format */
-  displayFormat: PropTypes.oneOfType([PropTypes.string, PropTypes.func])
+  displayFormat: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+
+  /**
+   * Should not be visible
+   * @ignore
+   */
+  autoFocus: PropTypes.bool,
+  autoFocusEndDate: PropTypes.bool,
+  stateDateWrapper: PropTypes.func,
+  initialStartDate: momentPropTypes.momentObj,
+  initialEndDate: momentPropTypes.momentObj,
+
+  ...omit(DateRangePickerShape, [
+    "startDate",
+    "endDate",
+    "onDatesChange",
+    "focusedInput",
+    "onFocusChange"
+  ])
 };
 
 /**
