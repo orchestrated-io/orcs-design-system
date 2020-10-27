@@ -19,15 +19,15 @@ export default {
   component: DatePicker
 };
 
-export const singleDate = () => {
+const SingleDate = () => {
   const [date, setDate] = useState(null);
   const [focused, setFocused] = useState(false);
 
-  const onDateChange = (selectedDate) => {
+  const onDateChange = selectedDate => {
     setDate(selectedDate);
   };
 
-  const onFocusChange = (el) => {
+  const onFocusChange = el => {
     setFocused(el.focused);
   };
 
@@ -45,11 +45,7 @@ export const singleDate = () => {
   );
 };
 
-singleDate.parameters = {
-  storyshots: { disable: true }
-};
-
-export const dateRange = () => {
+const DateRange = () => {
   const [dates, setDates] = useState({});
   const [focused, setFocused] = useState(null);
 
@@ -73,6 +69,67 @@ export const dateRange = () => {
   );
 };
 
+export const singleDate = () => <SingleDate />;
+singleDate.parameters = {
+  docs: {
+    source: {
+      code: `const SingleDate = () => {
+      const [date, setDate] = useState(null);
+      const [focused, setFocused] = useState(false);
+
+      const onDateChange = selectedDate => {
+        setDate(selectedDate);
+      };
+
+      const onFocusChange = el => {
+        setFocused(el.focused);
+      };
+
+      return (
+        <DatePicker
+          single
+          date={date}
+          placeholder="Date"
+          focused={focused}
+          onDateChange={onDateChange}
+          onFocusChange={onFocusChange}
+          numberOfMonths={1}
+          displayFormat="DD/MM/YY"
+        />
+      );
+    };
+        `
+    }
+  }
+};
+
+export const dateRange = () => <DateRange />;
 dateRange.parameters = {
-  storyshots: { disable: true }
+  docs: {
+    source: {
+      code: `const DateRange = () => {
+        const [dates, setDates] = useState({});
+        const [focused, setFocused] = useState(null);
+
+        const onDatesChange = ({ startDate, endDate }) => {
+          setDates({
+            startDate,
+            endDate
+          });
+        };
+
+        return (
+          <DatePicker
+            range
+            startDate={dates.startDate}
+            endDate={dates.endDate}
+            onDatesChange={onDatesChange}
+            focusedInput={focused}
+            onFocusChange={setFocused}
+            displayFormat="DD/MM/YY"
+          />
+        );
+      };`
+    }
+  }
 };
