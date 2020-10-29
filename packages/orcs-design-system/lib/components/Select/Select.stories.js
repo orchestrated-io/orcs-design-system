@@ -35,6 +35,13 @@ defaultSelect.story = {
   name: "Default"
 };
 
+export const SpecificHeightSelect = () => (
+  <Select height="58px" options={options} />
+);
+defaultSelect.story = {
+  name: "SpecificHeightSelect"
+};
+
 export const multiSelect = () => <Select options={options} isMulti />;
 multiSelect.story = {
   name: "Multi-select"

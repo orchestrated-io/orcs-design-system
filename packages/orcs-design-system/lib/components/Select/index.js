@@ -78,6 +78,7 @@ const Select = forwardRef((props, ref) => {
     }),
     control: (provided, state) => ({
       ...provided,
+      minHeight: props.height ? props.height : "38px",
       boxShadow: "none",
       opacity: state.isDisabled ? 0.7 : 1,
       "&:hover": {
@@ -241,6 +242,8 @@ Select.propTypes = {
   label: PropTypes.string,
   /** Specifies the id for the rendered `input` tag */
   id: PropTypes.string,
+  /** Specifies the height of the select box control, make sure to include the unit, e.g. px */
+  height: PropTypes.string,
   /** Specifies if the `Select` component is multi-select. */
   isMulti: PropTypes.bool,
   /** Styling for dark backgrounds. */
