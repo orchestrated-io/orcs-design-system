@@ -104,9 +104,6 @@ const Select = forwardRef((props, ref) => {
       color: props.inverted
         ? themeGet("colors.greyLighter")
         : themeGet("colors.grey")(props),
-      backgroundColor: props.inverted
-        ? themeGet("colors.greyDarkest")(props)
-        : themeGet("colors.white")(props),
       marginTop: themeGet("space.s")(props),
       fontSize: themeGet("fontSizes.1")(props)
     }),
