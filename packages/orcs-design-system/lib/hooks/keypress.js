@@ -14,7 +14,7 @@ export const commonKeys = {
   ESCAPE: "Escape"
 };
 
-export const useKeyPress = (targetKey, callback) => {
+export const useKeyPress = (targetKey, callback, options = {}) => {
   // State for keeping track of whether key is pressed
   const [keyPressed, setKeyPressed] = useState(false);
 
@@ -36,13 +36,21 @@ export const useKeyPress = (targetKey, callback) => {
 
   // Add event listeners
   useEffect(() => {
-    window.addEventListener("keydown", downHandler);
-    window.addEventListener("keyup", upHandler);
-    // Remove event listeners on cleanup
-    return () => {
+    const removeEventListeners = () => {
       window.removeEventListener("keydown", downHandler);
       window.removeEventListener("keyup", upHandler);
     };
+
+    if (options.disabled) {
+      removeEventListeners();
+      return;
+    }
+
+    window.addEventListener("keydown", downHandler);
+    window.addEventListener("keyup", upHandler);
+
+    // Remove event listeners on cleanup
+    return removeEventListeners;
   });
 
   return keyPressed;
