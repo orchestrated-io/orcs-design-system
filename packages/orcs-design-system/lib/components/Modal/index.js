@@ -159,17 +159,15 @@ const Modal = ({
   footerContent,
   ...restProps
 }) => {
-  const modalRef = useOnclickOutside(
-    () => {
-      onClose();
-    },
-    {
-      disabled: !visible
-    }
-  );
+  const options = {
+    disabled: !visible
+  };
+  const modalRef = useOnclickOutside(() => {
+    onClose();
+  }, options);
 
-  useKeyPress(commonKeys.ESCAPE, onClose);
-  useKeyPress(commonKeys.ESC, onClose);
+  useKeyPress(commonKeys.ESCAPE, onClose, options);
+  useKeyPress(commonKeys.ESC, onClose, options);
 
   return (
     <ThemeProvider theme={theme}>
