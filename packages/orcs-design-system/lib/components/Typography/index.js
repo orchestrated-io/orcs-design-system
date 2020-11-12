@@ -18,7 +18,8 @@ export const H1 = styled("h1")(
       fontFamily: "main",
       fontSize: 6,
       fontWeight: 1,
-      textTransform: props.uppercase ? "uppercase" : "none"
+      textTransform: props.uppercase ? "uppercase" : "none",
+      wordBreak: props.breakWord ? "break-word" : "normal"
     }),
   variant({
     prop: "weight",
@@ -51,7 +52,8 @@ export const H2 = styled("h2")(
       fontFamily: "main",
       fontSize: 5,
       fontWeight: 1,
-      textTransform: props.uppercase ? "uppercase" : "none"
+      textTransform: props.uppercase ? "uppercase" : "none",
+      wordBreak: props.breakWord ? "break-word" : "normal"
     }),
   variant({
     prop: "weight",
@@ -84,7 +86,8 @@ export const H3 = styled("h3")(
       fontFamily: "main",
       fontSize: 4,
       fontWeight: 1,
-      textTransform: props.uppercase ? "uppercase" : "none"
+      textTransform: props.uppercase ? "uppercase" : "none",
+      wordBreak: props.breakWord ? "break-word" : "normal"
     }),
   variant({
     prop: "weight",
@@ -117,7 +120,8 @@ export const H4 = styled("h4")(
       fontFamily: "main",
       fontSize: 3,
       fontWeight: 1,
-      textTransform: props.uppercase ? "uppercase" : "none"
+      textTransform: props.uppercase ? "uppercase" : "none",
+      wordBreak: props.breakWord ? "break-word" : "normal"
     }),
   variant({
     prop: "weight",
@@ -150,7 +154,8 @@ export const H5 = styled("h5")(
       fontFamily: "main",
       fontSize: 2,
       fontWeight: 1,
-      textTransform: props.uppercase ? "uppercase" : "none"
+      textTransform: props.uppercase ? "uppercase" : "none",
+      wordBreak: props.breakWord ? "break-word" : "normal"
     }),
   variant({
     prop: "weight",
@@ -183,7 +188,8 @@ export const H6 = styled("h6")(
       fontFamily: "main",
       fontSize: 1,
       fontWeight: 1,
-      textTransform: props.uppercase ? "uppercase" : "none"
+      textTransform: props.uppercase ? "uppercase" : "none",
+      wordBreak: props.breakWord ? "break-word" : "normal"
     }),
   variant({
     prop: "weight",
@@ -217,7 +223,8 @@ export const P = styled("p")(
       fontSize: 2,
       lineHeight: 1,
       fontWeight: 1,
-      textTransform: props.uppercase ? "uppercase" : "none"
+      textTransform: props.uppercase ? "uppercase" : "none",
+      wordBreak: props.breakWord ? "break-word" : "normal"
     }),
   variant({
     prop: "weight",
@@ -245,7 +252,8 @@ export const Small = styled("small").withConfig({ shouldForwardProp })(
   props =>
     css({
       fontSize: "1.3rem",
-      textTransform: props.uppercase ? "uppercase" : "none"
+      textTransform: props.uppercase ? "uppercase" : "none",
+      wordBreak: props.breakWord ? "break-word" : "normal"
     }),
   variant({
     prop: "weight",
@@ -266,7 +274,8 @@ export const Text = styled("span")(
     css({
       fontFamily: "main",
       fontWeight: 1,
-      textTransform: props.uppercase ? "uppercase" : "none"
+      textTransform: props.uppercase ? "uppercase" : "none",
+      wordBreak: props.breakWord ? "break-word" : "normal"
     }),
   variant({
     prop: "weight",
