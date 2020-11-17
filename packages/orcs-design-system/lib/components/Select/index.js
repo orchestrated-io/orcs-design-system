@@ -66,7 +66,8 @@ const Select = forwardRef((props, ref) => {
       borderRadius: themeGet("radii.2")(props),
       marginBottom: "0",
       marginTop: themeGet("space.xs")(props),
-      overflow: "hidden"
+      overflow: "hidden",
+      zIndex: 12
     }),
     menuList: provided => ({
       ...provided,
@@ -104,7 +105,7 @@ const Select = forwardRef((props, ref) => {
       color: props.inverted
         ? themeGet("colors.greyLighter")
         : themeGet("colors.grey")(props),
-      marginTop: themeGet("space.s")(props),
+      marginTop: props.label ? themeGet("space.s")(props) : "0",
       fontSize: themeGet("fontSizes.1")(props)
     }),
     clearIndicator: (provided, state) => ({
@@ -213,14 +214,16 @@ const Select = forwardRef((props, ref) => {
         data-testid={props["data-testid"]}
         {...SelectStyles}
       >
-        <Label inverted={props.inverted} htmlFor={props.id}>
-          {props.label}
-        </Label>
+        {props.label && (
+          <Label inverted={props.inverted} htmlFor={props.inputId}>
+            {props.label}
+          </Label>
+        )}
         <ReactSelect
           ref={ref}
           styles={customStyles}
           theme={props.theme}
-          inputId={props.id}
+          inputId={props.inputId}
           inverted={props.inverted}
           isMulti={props.isMulti}
           classNamePrefix={props.classNamePrefix}
@@ -237,8 +240,8 @@ Select.propTypes = {
   options: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   /** Specifies the label for the `Select` */
   label: PropTypes.string,
-  /** Specifies the id for the rendered `input` tag */
-  id: PropTypes.string,
+  /** Specifies the ID for the rendered Select box. If you use the label prop label will automatically point to this ID. */
+  inputId: PropTypes.string,
   /** Specifies the height of the select box control, make sure to include the unit, e.g. px */
   height: PropTypes.string,
   /** Specifies if the `Select` component is multi-select. */

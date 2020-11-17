@@ -32,6 +32,14 @@ const ButtonGroupRadio = styled.input.attrs({
   height: 0;
   overflow: hidden;
   pointer-events: none;
+  &:checked + label {
+    cursor: "default";
+    color: ${themeGet("colors.greyDarker")};
+    background-color: ${themeGet("colors.white")};
+    &:hover {
+      background-color: ${themeGet("colors.white")};
+    }
+  }
 `;
 
 const ButtonGroupLabel = styled.label`
@@ -92,7 +100,7 @@ export const ButtonGroupItem = ({
         checked={checked}
         onChange={onChange}
       />
-      <ButtonGroupLabel checked={checked} for={label}>
+      <ButtonGroupLabel checked={checked} htmlFor={label}>
         {label}
       </ButtonGroupLabel>
     </ThemeProvider>

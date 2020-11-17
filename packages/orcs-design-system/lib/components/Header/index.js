@@ -4,10 +4,10 @@ import styled, { ThemeProvider } from "styled-components";
 import { space, layout, variant } from "styled-system";
 import Avatar from "../Avatar";
 import Box from "../Box";
+import Flex, { FlexItem } from "../Flex";
 import Icon from "../Icon";
 import Spacer from "../Spacer";
 import StyledLink from "../StyledLink/";
-import Popover from "../Popover/";
 import { css } from "@styled-system/css";
 import shouldForwardProp from "@styled-system/should-forward-prop";
 import themeGet from "@styled-system/theme-get";
@@ -88,65 +88,16 @@ const SearchContainer = styled("div")(
   layout
 );
 
-const RightAlignedChildren = styled("div")(
-  css({
-    ml: "auto",
-    alignItems: "center",
-    display: ["none", "none", "none", "none", "flex", "flex"]
-  }),
-  variant({
-    variants: {
-      default: {},
-      search: {
-        "> div:first-child": {
-          ml: "0"
-        }
-      }
-    }
-  }),
-  space,
-  layout
-);
-
 const HeaderAvatar = styled(Avatar)(
   css({
     display: ["none", "none", "none", "none", "flex", "flex"]
   })
 );
-
-const HeaderPopover = ({
-  clientInfo,
-  userName,
-  avatarSource,
-  theme,
-  ...props
-}) =>
-  clientInfo ? (
-    <Popover
-      direction="bottom"
-      width="160px"
-      textAlign="center"
-      text={clientInfo}
-      {...props}
-    >
-      <HeaderAvatar
-        type="inverted"
-        sizing="small"
-        title={userName}
-        image={avatarSource}
-        theme={theme}
-      />
-    </Popover>
-  ) : (
-    <HeaderAvatar
-      type="inverted"
-      sizing="small"
-      title={userName}
-      image={avatarSource}
-      theme={theme}
-      {...props}
-    />
-  );
+const MenuAvatarContainer = styled(Box)(
+  css({
+    display: ["block", "block", "block", "block", "none", "none"]
+  })
+);
 
 const MobileMenuToggle = styled("label")(
   css({
@@ -156,8 +107,7 @@ const MobileMenuToggle = styled("label")(
     background: "none",
     border: "none",
     pb: 3,
-    display: ["block", "block", "block", "block", "none", "none"],
-    ml: "auto",
+    display: "block",
     "&:hover, &:focus": {
       outline: "0",
       span: {
@@ -330,9 +280,7 @@ export default function Header({
   userName,
   avatarSource,
   children,
-  clientInfo,
   logoutFunction,
-  rightAlignedLink,
   searchComponent,
   dataTestId,
   theme,
@@ -345,32 +293,27 @@ export default function Header({
         <Bar theme={theme} dataTestId={dataTestId} variant={variant}>
           <AppName variant={variant}>{appName}</AppName>
           <Spacer ml={4}>{children}</Spacer>
-          <SearchContainer>{searchComponent}</SearchContainer>
-          <RightAlignedChildren variant={variant}>
-            <Spacer ml={4}>
-              {rightAlignedLink}
-              <HeaderPopover
-                clientInfo={clientInfo}
-                userName={userName}
-                avatarSource={avatarSource}
+          {searchComponent && (
+            <SearchContainer>{searchComponent}</SearchContainer>
+          )}
+          <Flex alignItems="center" ml="auto">
+            <FlexItem flex="1 0 auto" mr="r">
+              <HeaderAvatar
+                type="inverted"
+                sizing="small"
+                title={userName}
+                image={avatarSource}
                 theme={theme}
               />
-              {logoutFunction && (
-                <StyledLink white bold onClick={logoutFunction}>
-                  <Icon icon={["fas", "lock"]} colour="white" />
-                  Logout
-                </StyledLink>
-              )}
-            </Spacer>
-          </RightAlignedChildren>
-
-          <MobileMenuToggle htmlFor="mobileMenuToggle" theme={theme}>
-            <Hamburger />
-          </MobileMenuToggle>
+            </FlexItem>
+            <MobileMenuToggle htmlFor="mobileMenuToggle" theme={theme}>
+              <Hamburger />
+            </MobileMenuToggle>
+          </Flex>
         </Bar>
         <MobileNavMenu>
           <Spacer p="s" display="block">
-            <Box
+            <MenuAvatarContainer
               borderBottomWidth={1}
               borderBottomStyle="solid"
               borderBottomColor="white20"
@@ -384,9 +327,8 @@ export default function Header({
                 image={avatarSource}
                 theme={theme}
               />
-            </Box>
+            </MenuAvatarContainer>
             {children}
-            {rightAlignedLink}
             {logoutFunction && (
               <StyledLink white bold onClick={logoutFunction}>
                 <Icon icon={["fas", "lock"]} colour="white" />
@@ -427,13 +369,6 @@ Header.propTypes = {
   variant: PropTypes.oneOf(["search"]),
   /** Allows for use of the `data-testid` attribute for testing. */
   dataTestId: PropTypes.string
-};
-
-HeaderPopover.propTypes = {
-  userName: PropTypes.node,
-  avatarSource: PropTypes.node,
-  clientInfo: PropTypes.node,
-  theme: PropTypes.object
 };
 
 Header.defaultProps = {

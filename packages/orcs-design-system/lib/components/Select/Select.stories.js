@@ -30,7 +30,9 @@ const options = [
   { value: "rocky road", label: "Rocky Road" }
 ];
 
-export const defaultSelect = () => <Select options={options} />;
+export const defaultSelect = () => (
+  <Select options={options} label="Select label" inputId="defaultSelect" />
+);
 defaultSelect.story = {
   name: "Default"
 };
