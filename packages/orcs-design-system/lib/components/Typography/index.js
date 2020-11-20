@@ -248,7 +248,9 @@ export const P = styled("p")(
   typeStyles
 );
 
-export const Small = styled("small").withConfig({ shouldForwardProp })(
+export const Small = styled("small")
+  .withConfig({ shouldForwardProp })
+  .attrs({ className: "Small" })(
   props =>
     css({
       fontSize: "1.3rem",

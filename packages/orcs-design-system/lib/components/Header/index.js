@@ -7,6 +7,7 @@ import Box from "../Box";
 import Flex, { FlexItem } from "../Flex";
 import Icon from "../Icon";
 import Spacer from "../Spacer";
+import { Small } from "../Typography";
 import StyledLink from "../StyledLink/";
 import { css } from "@styled-system/css";
 import shouldForwardProp from "@styled-system/should-forward-prop";
@@ -88,17 +89,6 @@ const SearchContainer = styled("div")(
   layout
 );
 
-const HeaderAvatar = styled(Avatar)(
-  css({
-    display: ["none", "none", "none", "none", "flex", "flex"]
-  })
-);
-const MenuAvatarContainer = styled(Box)(
-  css({
-    display: ["block", "block", "block", "block", "none", "none"]
-  })
-);
-
 const MobileMenuToggle = styled("label")(
   css({
     zIndex: 4,
@@ -177,21 +167,6 @@ const MobileNavToggle = styled("input")(props =>
     },
     "&:checked": {
       "~ [class^='Header__MobileNavMenu'], ~ [class*=' Header__MobileNavMenu']": {
-        "[class^='Spacer'], [class*=' Spacer']": {
-          ":nth-of-type(1)": { transitionDelay: "0.10s" },
-          ":nth-of-type(2)": { transitionDelay: "0.20s" },
-          ":nth-of-type(3)": { transitionDelay: "0.30s" },
-          ":nth-of-type(4)": { transitionDelay: "0.40s" },
-          ":nth-of-type(5)": { transitionDelay: "0.50s" },
-          ":nth-of-type(6)": { transitionDelay: "0.60s" },
-          ":nth-of-type(7)": { transitionDelay: "0.70s" },
-          ":nth-of-type(8)": { transitionDelay: "0.80s" },
-          ":nth-of-type(9)": { transitionDelay: "0.90s" },
-          ":nth-of-type(10)": { transitionDelay: "1s" },
-          ":nth-of-type(11)": { transitionDelay: "1.10s" },
-          opacity: "1",
-          transform: "translateX(0px)"
-        },
         transform:
           "translateX(-" + themeGet("appScale.mobileNavMenuWidth")(props) + ")"
       },
@@ -242,15 +217,45 @@ const MobileNavMenu = styled("div")(props =>
     right: "-" + themeGet("appScale.mobileNavMenuWidth")(props),
     top: 0,
     width: themeGet("appScale.mobileNavMenuWidth")(props),
-    bg: "#333",
+    bg: "greyDarkest",
     zIndex: 6,
     transition: "transitionDefault",
-    "[class^='Spacer'], [class*=' Spacer']": {
-      transform: "translateX(100px)",
+    "[class^='StyledLink'], [class*=' StyledLink']": {
+      color: "white",
       display: "block",
-      px: 4,
-      transition: "transitionDefault",
-      opacity: "0"
+      fontWeight: "600",
+      padding: "r",
+      borderRadius: 2,
+      "&:hover, &:focus": {
+        textDecoration: "none",
+        backgroundColor: "primary"
+      }
+    }
+  })
+);
+
+const InternalAppSwitcher = styled("div")(
+  css({
+    borderTop: "solid 1px rgba(255,255,255,0.3)",
+    paddingTop: "s",
+    marginTop: "s",
+    "[class^='Small'], [class*=' Small']": {
+      display: "block",
+      fontWeight: "400",
+      marginTop: "xs"
+    }
+  })
+);
+
+const ExternalAppSwitcher = styled("div")(
+  css({
+    borderTop: "solid 1px rgba(255,255,255,0.3)",
+    paddingTop: "s",
+    marginTop: "s",
+    "[class^='Small'], [class*=' Small']": {
+      display: "block",
+      fontWeight: "400",
+      marginTop: "xs"
     }
   })
 );
@@ -280,6 +285,9 @@ export default function Header({
   userName,
   avatarSource,
   children,
+  sideMenuContent,
+  InternalAppSwitcherContent,
+  ExternalAppSwitcherContent,
   logoutFunction,
   searchComponent,
   dataTestId,
@@ -298,12 +306,13 @@ export default function Header({
           )}
           <Flex alignItems="center" ml="auto">
             <FlexItem flex="1 0 auto" mr="r">
-              <HeaderAvatar
+              <Avatar
                 type="inverted"
                 sizing="small"
                 title={userName}
                 image={avatarSource}
                 theme={theme}
+                display={["none", "none", "none", "none", "flex", "flex"]}
               />
             </FlexItem>
             <MobileMenuToggle htmlFor="mobileMenuToggle" theme={theme}>
@@ -312,13 +321,15 @@ export default function Header({
           </Flex>
         </Bar>
         <MobileNavMenu>
-          <Spacer p="s" display="block">
-            <MenuAvatarContainer
+          <Box m="s">
+            <Box
               borderBottomWidth={1}
               borderBottomStyle="solid"
               borderBottomColor="white20"
               pt="s"
               pb="r"
+              mb="s"
+              display={["block", "block", "block", "block", "none", "none"]}
             >
               <Avatar
                 type="inverted"
@@ -327,15 +338,34 @@ export default function Header({
                 image={avatarSource}
                 theme={theme}
               />
-            </MenuAvatarContainer>
-            {children}
+            </Box>
+            <Box display={["block", "block", "block", "block", "none", "none"]}>
+              {children}
+            </Box>
+            {sideMenuContent}
             {logoutFunction && (
               <StyledLink white bold onClick={logoutFunction}>
                 <Icon icon={["fas", "lock"]} colour="white" />
                 Logout
               </StyledLink>
             )}
-          </Spacer>
+            {InternalAppSwitcherContent && (
+              <InternalAppSwitcher>
+                <Small color="white60" px="r" py="s" display="block">
+                  Switch to:
+                </Small>
+                {InternalAppSwitcherContent}
+              </InternalAppSwitcher>
+            )}
+            {ExternalAppSwitcherContent && (
+              <ExternalAppSwitcher>
+                <Small color="white60" px="r" py="s" display="block">
+                  External apps:
+                </Small>
+                {ExternalAppSwitcherContent}
+              </ExternalAppSwitcher>
+            )}
+          </Box>
         </MobileNavMenu>
         <Overlay htmlFor="mobileMenuToggle" />
       </ThemeProvider>
@@ -362,6 +392,21 @@ Header.propTypes = {
   theme: PropTypes.object,
   /** Navigation links are rendered as child components. */
   children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
+  ]),
+  /** sideMenuContent are links or other content that can be specified and will appear only in the slide out side menu */
+  sideMenuContent: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
+  ]),
+  /** InternalAppSwitcherContent are links or other content that can be specified and will appear only in the slide out side menu */
+  InternalAppSwitcherContent: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
+  ]),
+  /** ExternalAppSwitcherContent are links or other content that can be specified and will appear only in the slide out side menu */
+  ExternalAppSwitcherContent: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)
   ]),
