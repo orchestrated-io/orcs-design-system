@@ -213,6 +213,7 @@ const MobileNavToggle = styled("input")(props =>
 const MobileNavMenu = styled("div")(props =>
   css({
     position: "fixed",
+    overflowY: "auto",
     height: "100vh",
     right: "-" + themeGet("appScale.mobileNavMenuWidth")(props),
     top: 0,
