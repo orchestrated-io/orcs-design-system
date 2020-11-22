@@ -317,7 +317,7 @@ export default function Header({
               />
             </FlexItem>
             <MobileMenuToggle htmlFor="mobileMenuToggle" theme={theme}>
-              <Hamburger />
+              <Hamburger id="hamburger-menu-icon" />
             </MobileMenuToggle>
           </Flex>
         </Bar>
