@@ -2,6 +2,7 @@ import React from "react";
 import styled, { css, ThemeProvider } from "styled-components";
 import PropTypes from "prop-types";
 import Icon from "../Icon/";
+import Box from "../Box/";
 import { H3, H6 } from "../Typography";
 import { space, layout } from "styled-system";
 import { themeGet } from "@styled-system/theme-get";
@@ -78,15 +79,6 @@ const Item = styled.div`
       : css``};
 `;
 
-const Header = styled.div`
-  margin-bottom: ${themeGet("space.4")};
-  svg {
-    margin-right: ${themeGet("space.3")};
-  }
-`;
-
-const Content = styled.div``;
-
 const ChangeIcon = styled.div`
   display: inline-block;
   width: 14px;
@@ -152,15 +144,15 @@ export default function Card({
         {...props}
       >
         {!icon & !title & !subtitle ? null : (
-          <Header>
-            {icon ? <Icon icon={icon} size="lg" /> : null}
+          <Box mb="r">
+            {icon ? <Icon icon={icon} size="lg" mr="s" /> : null}
             {title ? <H3>{title}</H3> : null}
             {changeIcon ? <ChangeIcon changeIcon={changeIcon} /> : null}
             {changeValue ? <ChangeValue>{changeValue}</ChangeValue> : null}
             {subtitle ? <H6>{subtitle}</H6> : null}
-          </Header>
+          </Box>
         )}
-        <Content>{children}</Content>
+        <Box>{children}</Box>
       </Item>
     </ThemeProvider>
   );

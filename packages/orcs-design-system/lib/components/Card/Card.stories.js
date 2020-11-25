@@ -127,18 +127,22 @@ colouredCards.story = {
 
 export const complexCard = () => (
   <Flex justifyContent="center">
-    <Spacer mx={4}>
+    <Spacer mx="r">
       <Card center>
-        <Icon icon={["fas", "file"]} size="3x" color="greyLight" />
-        <H3>Create new</H3>
-        <P>Start with a blank slate and add your own data</P>
-        <Button>Start fresh</Button>
+        <Spacer my="s">
+          <Icon icon={["fas", "file"]} size="3x" color="greyLight" />
+          <H3>Create new</H3>
+          <P>Start with a blank slate and add your own data</P>
+          <Button>Start fresh</Button>
+        </Spacer>
       </Card>
       <Card center>
-        <Icon icon={["fas", "eye"]} size="3x" color="greyLight" />
-        <H3>Explore app</H3>
-        <P>Look at pre-populated data to see app in action</P>
-        <Button>View example</Button>
+        <Spacer my="s">
+          <Icon icon={["fas", "eye"]} size="3x" color="greyLight" />
+          <H3>Explore app</H3>
+          <P>Look at pre-populated data to see app in action</P>
+          <Button>View example</Button>
+        </Spacer>
       </Card>
     </Spacer>
   </Flex>
