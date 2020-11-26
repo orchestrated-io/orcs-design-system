@@ -11,7 +11,7 @@ import systemtheme from "../../systemtheme";
 const Item = styled.div`
   ${space}
   ${layout}
-  word-wrap: break-word;
+  word-break: break-word;
   width: ${props =>
     props.width ? props.width : props.fluid ? "100%" : "auto"};
   height: ${props => (props.fluid ? "100%" : "auto")};

@@ -1,12 +1,12 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { grid, space, layout, color, compose } from "styled-system";
+import { grid, space, layout, flex, color, compose } from "styled-system";
 import { css } from "@styled-system/css";
 import shouldForwardProp from "@styled-system/should-forward-prop";
 import PropTypes from "prop-types";
 import systemtheme from "../../systemtheme";
 
-const GridStyles = compose(space, layout, grid, color);
+const GridStyles = compose(space, layout, grid, flex, color);
 
 const GridWrapper = styled("div")
   .withConfig({ shouldForwardProp })
