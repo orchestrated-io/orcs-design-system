@@ -14,7 +14,7 @@ ${layout}
   position: relative;
   &:hover,
   &:focus-within {
-    .tooltip {
+    .popoverText {
       opacity: 1;
       z-index: 100;
       visibility: visible;
@@ -261,7 +261,7 @@ export default function Popover({
     <ThemeProvider theme={theme}>
       <Container inlineBlock={inlineBlock} {...props}>
         <Text
-          className="tooltip"
+          className="popoverText"
           textAlign={textAlign}
           direction={direction}
           width={width}
