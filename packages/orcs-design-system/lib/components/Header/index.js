@@ -356,7 +356,7 @@ export default function Header({
                 theme={theme}
               />
               {logoutFunction && (
-                <StyledLink white bold onClick={logoutFunction}>
+                <StyledLink id="logoutButton" white bold onClick={logoutFunction}>
                   <Icon icon={["fas", "lock"]} colour="white" />
                   Logout
                 </StyledLink>
