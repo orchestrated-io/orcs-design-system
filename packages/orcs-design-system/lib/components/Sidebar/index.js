@@ -41,7 +41,8 @@ export const SidebarTabs = styled("div")(
 );
 
 export const SidebarTab = styled("label").attrs(props => ({
-  className: props.badge ? "Sidebar__Badge" : ""
+  className: props.badge ? "Sidebar__Badge" : "",
+  marginTop: props.bottomAligned ? "auto" : "0"
 }))(
   props =>
     css({
@@ -111,12 +112,7 @@ const SidebarPanelStyle = styled("div")(
         " - " +
         themeGet("appScale.navBarSize")(props) +
         ")",
-      height:
-        "calc(100vh - ( " +
-        themeGet("appScale.navBarSize")(props) +
-        " + " +
-        themeGet("appScale.sidebarFooter")(props) +
-        "))",
+      height: "calc(100vh - ( " + themeGet("appScale.navBarSize")(props) + "))",
       overflowY: "auto",
       bg: "greyDarker"
     }),
@@ -146,32 +142,6 @@ export const SidebarClose = styled("label")(
       cursor: "w-resize",
       bg: "greyDarker"
     }),
-  SidebarStyles
-);
-
-export const SidebarFooter = styled("footer")(
-  css({
-    zIndex: 6,
-    px: 3,
-    py: 4,
-    position: "relative",
-    bottom: 0,
-    left: 0,
-    width: "100%",
-    bg: "greyDarker",
-    boxShadow: "0 -1px 0 0 rgba(0, 0, 0, 0.3)",
-    svg: {
-      display: "block",
-      mb: 3
-    },
-    small: {
-      display: "block",
-      fontSize: 0
-    },
-    a: {
-      color: "white"
-    }
-  }),
   SidebarStyles
 );
 
@@ -221,13 +191,8 @@ SidebarTabs.propTypes = {
 SidebarTab.propTypes = {
   /** SidebarTab children are rendered as node elements */
   children: PropTypes.node,
-  /** Set the styles for this subcomponent if needed, using the `space` and `layout` styled-system categories */
-  SidebarStyles: PropTypes.object
-};
-
-SidebarFooter.propTypes = {
-  /** Sidebar children are rendered as node elements */
-  children: PropTypes.node,
+  /** Sets last sidebar tab position to bottom of sidebar */
+  bottomAligned: PropTypes.bool,
   /** Set the styles for this subcomponent if needed, using the `space` and `layout` styled-system categories */
   SidebarStyles: PropTypes.object
 };

@@ -30,3 +30,6 @@ es
 # deploy-storybook
 packages/orc*-design-system/out*
 packages/orcs-design-system/storybook-static
+
+# Ignore interplay stuff for now
+packages/orcs-design-system/interplay

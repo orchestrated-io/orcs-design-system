@@ -40,7 +40,6 @@ export {
   SidebarTab,
   SidebarPanels,
   SidebarPanel,
-  SidebarFooter,
   SidebarClose
 } from "./components/Sidebar";
 export { default as Spacer } from "./components/Spacer";

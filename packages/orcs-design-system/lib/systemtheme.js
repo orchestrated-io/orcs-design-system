@@ -258,7 +258,6 @@ export const mediaQueries = {
 export const appScale = {
   navBarSize: "54px",
   sidebarMaxWidth: "360px",
-  sidebarFooter: "72px",
   mobileNavMenuWidth: "250px"
 };
 

@@ -66,8 +66,8 @@ export const headerWithSearch = () => (
   <Header
     variant="search"
     appName="App Name"
-    userName="John"
-    avatarSource="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+    userName="Michael"
+    avatarSource="https://uifaces.co/our-content/donated/N5PLzyan.jpg"
     logoutFunction={action("clicked-logout")}
     searchComponent={
       <TextInput

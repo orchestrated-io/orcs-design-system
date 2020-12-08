@@ -38,7 +38,6 @@ test("all components exported", () => {
     "SidebarTab",
     "SidebarPanels",
     "SidebarPanel",
-    "SidebarFooter",
     "SidebarClose",
     "Spacer",
     "StatusDot",
