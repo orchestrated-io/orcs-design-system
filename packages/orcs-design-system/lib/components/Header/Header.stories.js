@@ -4,7 +4,6 @@ import Header from "../Header";
 import StyledLink from "../StyledLink";
 import Icon from "../Icon";
 import { Small } from "../Typography";
-import Badge from "../Badge";
 import TextInput from "../TextInput";
 import mdx from "./Header.mdx";
 
