@@ -413,17 +413,17 @@ Header.propTypes = {
     PropTypes.arrayOf(PropTypes.node)
   ]),
   /** InternalAppSwitcherContent are links or other content that can be specified and will appear only in the slide out side menu */
-  InternalAppSwitcherContent: PropTypes.oneOfType([
+  internalAppSwitcherContent: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)
   ]),
   /** ExternalAppSwitcherContent are links or other content that can be specified and will appear only in the slide out side menu */
-  ExternalAppSwitcherContent: PropTypes.oneOfType([
+  externalAppSwitcherContent: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)
   ]),
   /** RightAlignedContent are links or other content that can be specified and will be positioned on the right side of the header */
-  RightAlignedContent: PropTypes.oneOfType([
+  rightAlignedContent: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)
   ]),
