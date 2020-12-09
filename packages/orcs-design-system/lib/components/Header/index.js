@@ -261,6 +261,13 @@ const ExternalAppSwitcher = styled("div")(
   })
 );
 
+const RightAligned = styled("div")(
+  css({
+    marginLeft: "auto",
+    marginRight: "r"
+  })
+);
+
 const Overlay = styled("label")(
   css({
     position: "fixed",
@@ -287,8 +294,9 @@ export default function Header({
   avatarSource,
   children,
   sideMenuContent,
-  InternalAppSwitcherContent,
-  ExternalAppSwitcherContent,
+  internalAppSwitcherContent,
+  externalAppSwitcherContent,
+  rightAlignedContent,
   logoutFunction,
   searchComponent,
   dataTestId,
@@ -306,6 +314,9 @@ export default function Header({
             <SearchContainer>{searchComponent}</SearchContainer>
           )}
           <Flex alignItems="center" ml="auto">
+            {rightAlignedContent && (
+              <RightAligned>{rightAlignedContent}</RightAligned>
+            )}
             <FlexItem flex="1 0 auto" mr="r">
               <Avatar
                 type="inverted"
@@ -350,20 +361,20 @@ export default function Header({
                 Logout
               </StyledLink>
             )}
-            {InternalAppSwitcherContent && (
+            {internalAppSwitcherContent && (
               <InternalAppSwitcher>
                 <Small color="white60" px="r" py="s" display="block">
                   Switch to:
                 </Small>
-                {InternalAppSwitcherContent}
+                {internalAppSwitcherContent}
               </InternalAppSwitcher>
             )}
-            {ExternalAppSwitcherContent && (
+            {externalAppSwitcherContent && (
               <ExternalAppSwitcher>
                 <Small color="white60" px="r" py="s" display="block">
                   External apps:
                 </Small>
-                {ExternalAppSwitcherContent}
+                {externalAppSwitcherContent}
               </ExternalAppSwitcher>
             )}
           </Box>
@@ -408,6 +419,11 @@ Header.propTypes = {
   ]),
   /** ExternalAppSwitcherContent are links or other content that can be specified and will appear only in the slide out side menu */
   ExternalAppSwitcherContent: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
+  ]),
+  /** RightAlignedContent are links or other content that can be specified and will be positioned on the right side of the header */
+  RightAlignedContent: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)
   ]),

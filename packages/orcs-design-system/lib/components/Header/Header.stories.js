@@ -4,6 +4,7 @@ import Header from "../Header";
 import StyledLink from "../StyledLink";
 import Icon from "../Icon";
 import { Small } from "../Typography";
+import Badge from "../Badge";
 import TextInput from "../TextInput";
 import mdx from "./Header.mdx";
 
@@ -30,7 +31,7 @@ export const defaultHeader = () => (
         Settings
       </StyledLink>
     }
-    InternalAppSwitcherContent={
+    internalAppSwitcherContent={
       <>
         <StyledLink href="#" target="_blank">
           App 2 Name
@@ -42,7 +43,7 @@ export const defaultHeader = () => (
         </StyledLink>
       </>
     }
-    ExternalAppSwitcherContent={
+    externalAppSwitcherContent={
       <StyledLink href="#" target="_blank">
         External App Name
         <Small>This is a description of external 3rd party app</Small>
