@@ -252,7 +252,7 @@ const Check = styled.div`
   z-index: 1;
   color: ${themeGet("colors.greyDarker")};
 
-  :before {
+  &:before {
     content: "";
     position: absolute;
     transform: rotate(45deg);
@@ -264,6 +264,13 @@ const Check = styled.div`
     box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0,
       0 0 0 0 inset;
     /*animation: checkboxOff 300ms forwards ease-out;*/
+    /* Safari only fix for checkbox */
+    @media not all and (min-resolution: 0.001dpcm) {
+      @supports (-webkit-appearance: none) {
+        width: 1px;
+        height: 1px;
+      }
+    }
   }
 `;
 
