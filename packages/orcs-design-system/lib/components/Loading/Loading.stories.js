@@ -9,7 +9,7 @@ export default {
   parameters: {
     docs: { page: mdx }
   },
-  decorators: [storyFn => <Box p="r">{storyFn()}</Box>],
+  decorators: [(storyFn) => <Box p="r">{storyFn()}</Box>],
   component: Loading
 };
 

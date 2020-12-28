@@ -10,7 +10,7 @@ const GridStyles = compose(space, layout, grid, flex, color);
 
 const GridWrapper = styled("div")
   .withConfig({ shouldForwardProp })
-  .attrs(props => ({
+  .attrs((props) => ({
     "data-testid": props.dataTestId
       ? props.dataTestId
       : props["data-testid"]
@@ -26,7 +26,7 @@ const GridWrapper = styled("div")
 
 const GridItem = styled("div")
   .withConfig({ shouldForwardProp })
-  .attrs(props => ({
+  .attrs((props) => ({
     "data-testid": props.dataTestId
       ? props.dataTestId
       : props["data-testid"]

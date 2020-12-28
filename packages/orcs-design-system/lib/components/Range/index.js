@@ -10,7 +10,7 @@ const vars = {
   thumbDiameter: "20px"
 };
 
-const thumb = props => `
+const thumb = (props) => `
     margin-top: -8px;
     box-sizing: border-box;
     border: none;
@@ -20,7 +20,7 @@ const thumb = props => `
     background: ${themeGet("colors.primary")(props)};
 `;
 
-const track = props => `
+const track = (props) => `
     box-sizing: border-box;
     border: none;
     width: 100%;
@@ -30,52 +30,52 @@ const track = props => `
 `;
 
 const Wrapper = styled.div`
-${space}
-${layout}
+  ${space}
+  ${layout}
     position:relative;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 
-    &:before {
-      content: "${props => props.min}";
-      font-size: 10px;
-      font-weight: bold;
-    }
+  &:before {
+    content: "${(props) => props.min}";
+    font-size: 10px;
+    font-weight: bold;
+  }
 
-    &:after {
-      content: "${props => props.max}";
-      font-size: 10px;
-      font-weight: bold;
-    }
+  &:after {
+    content: "${(props) => props.max}";
+    font-size: 10px;
+    font-weight: bold;
+  }
 
-    ${props =>
-      props.inverted
-        ? css`
-            &:before,
-            &:after {
-              color: ${themeGet("colors.white")};
+  ${(props) =>
+    props.inverted
+      ? css`
+          &:before,
+          &:after {
+            color: ${themeGet("colors.white")};
+          }
+          input {
+            &:focus {
+              background: rgba(255, 255, 255, 0.1);
             }
-            input {
-              &:focus {
-                background: rgba(255, 255, 255, 0.1);
-              }
-              &::-webkit-slider-runnable-track {
-                background: ${themeGet("colors.greyDark")};
-              }
-              &::-moz-range-track {
-                background: ${themeGet("colors.greyDark")};
-              }
-              &::-ms-track {
-                background: ${themeGet("colors.greyDark")};
-              }
+            &::-webkit-slider-runnable-track {
+              background: ${themeGet("colors.greyDark")};
             }
-            output {
-              color: ${themeGet("colors.white")};
+            &::-moz-range-track {
+              background: ${themeGet("colors.greyDark")};
             }
-          `
-        : css``}
+            &::-ms-track {
+              background: ${themeGet("colors.greyDark")};
+            }
+          }
+          output {
+            color: ${themeGet("colors.white")};
+          }
+        `
+      : css``}
 `;
 
 const Input = styled.input.attrs({

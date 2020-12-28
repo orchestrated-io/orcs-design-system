@@ -12,7 +12,7 @@ const FlexWrapper = styled("div")
   .withConfig({
     shouldForwardProp
   })
-  .attrs(props => ({
+  .attrs((props) => ({
     "data-testid": props.dataTestId
       ? props.dataTestId
       : props["data-testid"]

@@ -9,7 +9,7 @@ import mdx from "./Popover.mdx";
 export default {
   title: "Components/Popover",
   decorators: [
-    storyFn => (
+    (storyFn) => (
       <Box p="5">
         <Flex justifyContent="space-around">{storyFn()}</Flex>
       </Box>

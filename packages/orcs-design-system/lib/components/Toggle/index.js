@@ -10,15 +10,15 @@ const Group = styled.div`
   ${layout}
   display: flex;
   align-items: center;
-  ${props =>
+  ${(props) =>
     props.inverted
       ? css`
           input {
             &:focus {
               + label {
                 box-shadow: ${themeGet("shadows.thinOutline")(props) +
-                  " " +
-                  themeGet("colors.black30")(props)};
+                " " +
+                themeGet("colors.black30")(props)};
               }
             }
           }
@@ -45,7 +45,7 @@ const Input = styled.input.attrs({
   pointer-events: none;
   &:focus {
     + label {
-      box-shadow: ${props =>
+      box-shadow: ${(props) =>
         themeGet("shadows.thinOutline")(props) +
         " " +
         themeGet("colors.black30")(props)};
@@ -62,7 +62,7 @@ const Input = styled.input.attrs({
     }
     &:focus {
       + label {
-        box-shadow: ${props =>
+        box-shadow: ${(props) =>
           themeGet("shadows.thinOutline")(props) +
           " " +
           themeGet("colors.success30")(props)};
@@ -79,9 +79,9 @@ const Item = styled.label`
   position: relative;
   transition: ${themeGet("transition.transitionDefault")};
   background: ${themeGet("colors.greyDarker")};
-  width: ${props => (props.small ? "36px" : "44px")};
-  height: ${props => (props.small ? "20px" : "24px")};
-  border-radius: ${props => (props.small ? "10px" : "12px")};
+  width: ${(props) => (props.small ? "36px" : "44px")};
+  height: ${(props) => (props.small ? "20px" : "24px")};
+  border-radius: ${(props) => (props.small ? "10px" : "12px")};
 
   &:after {
     content: "";
@@ -90,14 +90,14 @@ const Item = styled.label`
     left: 3px;
     background: ${themeGet("colors.white")};
     transition: ${themeGet("transition.transitionDefault")};
-    width: ${props => (props.small ? "14px" : "18px")};
-    height: ${props => (props.small ? "14px" : "18px")};
-    border-radius: ${props => (props.small ? "7px" : "9px")};
+    width: ${(props) => (props.small ? "14px" : "18px")};
+    height: ${(props) => (props.small ? "14px" : "18px")};
+    border-radius: ${(props) => (props.small ? "7px" : "9px")};
   }
 
   :active {
     &:after {
-      width: ${props => (props.small ? "20px" : "24px")};
+      width: ${(props) => (props.small ? "20px" : "24px")};
     }
   }
 `;
@@ -106,7 +106,7 @@ const Label = styled.label`
   margin: 0;
   padding-left: 8px;
   cursor: pointer;
-  font-size: ${props => (props.small ? "1.4rem" : "1.6rem")};
+  font-size: ${(props) => (props.small ? "1.4rem" : "1.6rem")};
 `;
 
 /**

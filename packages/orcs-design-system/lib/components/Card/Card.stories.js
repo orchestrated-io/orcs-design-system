@@ -15,7 +15,7 @@ export default {
     docs: { page: mdx }
   },
   decorators: [
-    storyFn => (
+    (storyFn) => (
       <Box bg="greyLightest" p="r">
         {storyFn()}
       </Box>

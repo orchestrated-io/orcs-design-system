@@ -18,10 +18,10 @@ const Bar = styled("header")
   .withConfig({
     shouldForwardProp
   })
-  .attrs(props => ({
+  .attrs((props) => ({
     "data-testid": props.dataTestId
   }))(
-  props => ({ height: themeGet("appScale.navBarSize")(props) }),
+  (props) => ({ height: themeGet("appScale.navBarSize")(props) }),
   css({
     width: "100%",
     zIndex: 12,
@@ -50,7 +50,7 @@ const Bar = styled("header")
 );
 
 const AppName = styled("div")(
-  props =>
+  (props) =>
     css({
       height: themeGet("appScale.navBarSize")(props),
       display: "flex",
@@ -110,7 +110,7 @@ const MobileMenuToggle = styled("label")(
   })
 );
 
-const Hamburger = styled("span")(props =>
+const Hamburger = styled("span")((props) =>
   css({
     "::before": {
       top: "calc( " + themeGet("space.3")(props) + " * 1.25)",
@@ -152,7 +152,7 @@ const Hamburger = styled("span")(props =>
   })
 );
 
-const MobileNavToggle = styled("input")(props =>
+const MobileNavToggle = styled("input")((props) =>
   css({
     opacity: "0",
     position: "absolute",
@@ -210,7 +210,7 @@ const MobileNavToggle = styled("input")(props =>
   })
 );
 
-const MobileNavMenu = styled("div")(props =>
+const MobileNavMenu = styled("div")((props) =>
   css({
     position: "fixed",
     overflowY: "auto",

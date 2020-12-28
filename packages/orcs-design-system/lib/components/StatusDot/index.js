@@ -8,7 +8,7 @@ import systemtheme from "../../systemtheme";
 const StatusDotStyles = compose(space, layout, color);
 
 const StatusDotItem = styled("div")(
-  props =>
+  (props) =>
     css({
       width: props.icon ? "18px" : "10px",
       height: props.icon ? "18px" : "10px",

@@ -14,7 +14,7 @@ export default {
   },
   component: Select,
   decorators: [
-    storyFn => (
+    (storyFn) => (
       <Box p="r" height="250px">
         {storyFn()}
       </Box>

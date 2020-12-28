@@ -5,7 +5,7 @@ import { ButtonGroupContainer, ButtonGroupItem } from ".";
 export default {
   title: "Components/ButtonGroup",
   decorators: [
-    storyFn => (
+    (storyFn) => (
       <Box bg="greyDark" p="r">
         {storyFn()}
       </Box>

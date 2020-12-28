@@ -12,9 +12,9 @@ const Item = styled.div`
   ${space}
   ${layout}
   word-break: break-word;
-  width: ${props =>
+  width: ${(props) =>
     props.width ? props.width : props.fluid ? "100%" : "auto"};
-  height: ${props => (props.fluid ? "100%" : "auto")};
+  height: ${(props) => (props.fluid ? "100%" : "auto")};
   background: ${themeGet("colors.white")};
   border-radius: ${themeGet("radii.2")};
   padding: ${themeGet("space.4")};
@@ -50,7 +50,7 @@ const Item = styled.div`
           border-top: 0;
         `};
 
-  ${props =>
+  ${(props) =>
     props.center
       ? css`
           ,
@@ -63,7 +63,7 @@ const Item = styled.div`
         `
       : css``};
 
-  ${props =>
+  ${(props) =>
     props.alternate
       ? css`
           > div:first-of-type {
@@ -86,7 +86,7 @@ const ChangeIcon = styled.div`
   background-size: 14px 14px;
   background-color: ${themeGet("colors.grey")};
   margin: 0 0 0 ${themeGet("space.3")};
-  ${props =>
+  ${(props) =>
     props.changeIcon === "arrowUp"
       ? css`
           background-color: transparent;

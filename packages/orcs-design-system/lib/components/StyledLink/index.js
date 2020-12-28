@@ -7,12 +7,12 @@ import { space, layout, variant } from "styled-system";
 import { css } from "@styled-system/css";
 import systemtheme from "../../systemtheme";
 
-const styleLink = LinkComponent =>
+const styleLink = (LinkComponent) =>
   styled(LinkComponent)
     .withConfig({
       shouldForwardProp
     })
-    .attrs(props => ({
+    .attrs((props) => ({
       className: "StyledLink",
       to: props.to,
       target: props.target,
@@ -22,7 +22,7 @@ const styleLink = LinkComponent =>
         ? props["data-testid"]
         : null
     }))(
-    props =>
+    (props) =>
       css({
         display: props.block ? "block" : "inline-block",
         fontWeight: props.bold ? 2 : "inherit",
@@ -51,12 +51,12 @@ const styleLink = LinkComponent =>
     layout
   );
 
-const styleButtonLink = LinkComponent =>
+const styleButtonLink = (LinkComponent) =>
   styled(LinkComponent)
     .withConfig({
       shouldForwardProp
     })
-    .attrs(props => ({
+    .attrs((props) => ({
       className: "StyledLink",
       to: props.to,
       target: props.target,
@@ -71,7 +71,7 @@ const styleButtonLink = LinkComponent =>
         ? true
         : false
     }))(
-    props =>
+    (props) =>
       css({
         bg: "primary",
         color: "white",

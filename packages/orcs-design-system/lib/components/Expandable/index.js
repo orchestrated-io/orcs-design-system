@@ -55,7 +55,7 @@ const Button = styled.button`
     transition: ${themeGet("transition.transitionDefault")};
   }
   &:before {
-    transform: ${props =>
+    transform: ${(props) =>
       props.open ? "translateY(-50%) rotate(90deg)" : "translateY(-50%)"};
   }
   &:after {
@@ -71,7 +71,7 @@ const Content = styled.div`
   overflow: hidden;
   padding: ${themeGet("space.r")};
   transition: ${themeGet("transition.transitionDefault")};
-  display: ${props => (props.open ? "block" : "none")};
+  display: ${(props) => (props.open ? "block" : "none")};
 `;
 
 /**

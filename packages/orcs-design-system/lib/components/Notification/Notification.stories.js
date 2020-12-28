@@ -13,7 +13,7 @@ export default {
   },
   component: Notification,
   decorators: [
-    storyFn => (
+    (storyFn) => (
       <Box p="r" height="250px">
         {storyFn()}
       </Box>

@@ -60,7 +60,7 @@ const Basic = () => {
       const result = confirmAction();
       if (result && result.then) {
         // we have been given a promise
-        return result.then(r => {
+        return result.then((r) => {
           if (r) {
             setVisible(false);
           }
@@ -74,7 +74,7 @@ const Basic = () => {
       const result = cancelAction();
       if (result && result.then) {
         // we have been given a promise
-        return result.then(r => {
+        return result.then((r) => {
           if (r) {
             setVisible(false);
           }
@@ -247,7 +247,7 @@ const Edit = () => {
       const result = confirmAction();
       if (result && result.then) {
         // we have been given a promise
-        return result.then(r => {
+        return result.then((r) => {
           if (r) {
             setVisible(false);
           }
@@ -261,7 +261,7 @@ const Edit = () => {
       const result = cancelAction();
       if (result && result.then) {
         // we have been given a promise
-        return result.then(r => {
+        return result.then((r) => {
           if (r) {
             setVisible(false);
           }

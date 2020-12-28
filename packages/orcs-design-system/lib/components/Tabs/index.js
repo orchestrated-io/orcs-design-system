@@ -18,7 +18,7 @@ export const TabsContainerItem = styled("div")(
 );
 
 export const TabItem = styled("div")(
-  props =>
+  (props) =>
     css({
       marginRight: 3,
       a: {

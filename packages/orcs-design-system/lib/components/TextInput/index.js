@@ -29,7 +29,7 @@ const shouldForwardProp = createShouldForwardProp([
 ]);
 
 const Group = styled("div").withConfig({ shouldForwardProp })(
-  props =>
+  (props) =>
     sscss({
       position: "relative",
       width: props.fullWidth ? "100%" : "auto"
@@ -42,7 +42,7 @@ const IconWrapper = styled.label`
     opacity: 0.4;
     position: absolute;
   }
-  ${props =>
+  ${(props) =>
     props.iconLeft && !props.floating
       ? css`
           svg {
@@ -88,9 +88,9 @@ const InputStyle = css`
   transition: ${themeGet("transition.transitionDefault")};
   background: ${themeGet("colors.white")};
   color: ${themeGet("colors.greyDarkest")};
-  width: ${props => (props.fullWidth ? `100%` : `auto`)};
-  height: ${props => (props.floating ? `58px` : `40px`)};
-  padding: ${props => {
+  width: ${(props) => (props.fullWidth ? `100%` : `auto`)};
+  height: ${(props) => (props.floating ? `58px` : `40px`)};
+  padding: ${(props) => {
     let left = props.iconLeft ? 40 : 12;
     let right = props.iconRight ? 40 : 12;
     let top = props.floating ? 25 : 5;
@@ -98,14 +98,14 @@ const InputStyle = css`
     return `${top}px ${right}px ${bottom}px ${left}px`;
   }};
   border: 1px solid
-    ${props =>
+    ${(props) =>
       props.invalid
         ? themeGet("colors.danger")
         : props.valid
         ? themeGet("colors.success")
         : themeGet("colors.black30")};
 
-  ${props =>
+  ${(props) =>
     props.floating
       ? css`
           &::placeholder {
@@ -136,7 +136,7 @@ const InputStyle = css`
           }
         `} &:hover {
     border: 1px solid
-      ${props =>
+      ${(props) =>
         props.invalid
           ? themeGet("colors.dangerDark")
           : props.valid
@@ -146,7 +146,7 @@ const InputStyle = css`
 
   &:focus {
     outline: 0;
-    box-shadow: ${props =>
+    box-shadow: ${(props) =>
       props.invalid
         ? themeGet("shadows.thinOutline")(props) +
           " " +
@@ -160,14 +160,14 @@ const InputStyle = css`
           themeGet("colors.primary30")(props)};
 
     border: 1px solid
-      ${props =>
+      ${(props) =>
         props.invalid
           ? themeGet("colors.dangerDark")
           : props.valid
           ? themeGet("colors.successDark")
           : themeGet("colors.primary")};
 
-    ${props =>
+    ${(props) =>
       props.floating
         ? css`
             &::placeholder {
@@ -176,7 +176,7 @@ const InputStyle = css`
             ~ label {
               transform: translateY(-10px);
               font-size: 1.2rem;
-              color: ${props =>
+              color: ${(props) =>
                 props.invalid
                   ? themeGet("colors.dangerDark")
                   : props.valid
@@ -188,13 +188,13 @@ const InputStyle = css`
   }
 `;
 
-const Input = styled("input").attrs(props => ({
+const Input = styled("input").attrs((props) => ({
   "data-testid": props["data-testid"] ? props["data-testid"] : null
 }))`
   ${InputStyle}
 `;
 
-const NumberInput = styled(NumberFormat).attrs(props => ({
+const NumberInput = styled(NumberFormat).attrs((props) => ({
   "data-testid": props["data-testid"] ? props["data-testid"] : null
 }))`
   ${InputStyle}
@@ -206,11 +206,11 @@ const Label = styled.label`
   text-align: left;
   font-size: 1.4rem;
   transition: ${themeGet("transition.transitionDefault")};
-  padding-right: ${props =>
+  padding-right: ${(props) =>
     props.floating && props.iconRight ? `40px` : `12px`};
-  margin-bottom: ${props => (props.floating ? 0 : themeGet("space.xs"))};
+  margin-bottom: ${(props) => (props.floating ? 0 : themeGet("space.xs"))};
 
-  color: ${props =>
+  color: ${(props) =>
     props.inverted
       ? themeGet("colors.white")
       : props.valid
@@ -219,14 +219,14 @@ const Label = styled.label`
       ? themeGet("colors.dangerDark")
       : themeGet("colors.greyDarkest")};
 
-  ${props =>
+  ${(props) =>
     props.floating
       ? css`
-          padding-left: ${props => (props.iconLeft ? "41px" : "13px")};
+          padding-left: ${(props) => (props.iconLeft ? "41px" : "13px")};
           cursor: text;
           position: absolute;
           top: 22px;
-          color: ${props =>
+          color: ${(props) =>
             props.invalid
               ? themeGet("colors.dangerDark")
               : props.valid
@@ -235,7 +235,7 @@ const Label = styled.label`
         `
       : css``};
 
-  ${props =>
+  ${(props) =>
     props.mandatory
       ? css`
           &:after {
@@ -265,7 +265,7 @@ const TextInput = React.forwardRef((props, ref) => {
 
   let getNumberInputRef = null;
   if (numberProps && ref) {
-    getNumberInputRef = node => {
+    getNumberInputRef = (node) => {
       ref.current = node;
     };
   }

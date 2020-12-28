@@ -7,7 +7,7 @@ export default {
   title: "Components/Tag",
   component: Tag,
   parameters: { docs: { page: mdx } },
-  decorators: [storyFn => <Flex center>{storyFn()}</Flex>]
+  decorators: [(storyFn) => <Flex center>{storyFn()}</Flex>]
 };
 
 export const defaultTag = () => <Tag>Default Tag</Tag>;

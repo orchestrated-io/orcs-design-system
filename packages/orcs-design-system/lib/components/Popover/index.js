@@ -7,9 +7,9 @@ import systemtheme from "../../systemtheme";
 import { themeGet } from "@styled-system/theme-get";
 
 const Container = styled.div`
-${space}
-${layout}
-  display: ${props =>
+  ${space}
+  ${layout}
+  display: ${(props) =>
     props.inlineBlock ? "inline-block !important" : "block !important"};
   position: relative;
   &:hover,
@@ -39,7 +39,7 @@ const Text = styled.div`
   font-size: 1.2rem;
   line-height: 1.4rem;
   font-weight: 400;
-  text-align: ${props => (props.textAlign ? props.textAlign : "left")};
+  text-align: ${(props) => (props.textAlign ? props.textAlign : "left")};
   word-break: break-word;
   left: 100%;
   top: 50%;
@@ -48,7 +48,7 @@ const Text = styled.div`
   padding: 8px 10px;
   border-radius: ${themeGet("radii.1")};
   transform: translateX(10px) translateY(-50%);
-  width: ${props => (props.width ? props.width : "200px")};
+  width: ${(props) => (props.width ? props.width : "200px")};
   background: ${themeGet("colors.greyDarkest")};
   transition: all 300ms ease-in-out;
   opacity: 0;

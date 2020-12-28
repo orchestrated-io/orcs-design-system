@@ -14,7 +14,7 @@ export default {
     docs: { page: mdx }
   },
   decorators: [
-    storyFn => (
+    (storyFn) => (
       <Box p="3">
         <Flex alignItems="center" justifyContent="space-around">
           {storyFn()}

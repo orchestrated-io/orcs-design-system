@@ -10,10 +10,10 @@ const BadgeStyles = compose(space, layout, color);
 
 const Item = styled("span")
   .withConfig({ shouldForwardProp })
-  .attrs(props => ({
+  .attrs((props) => ({
     "data-testid": props["data-testid"] ? props["data-testid"] : null
   }))(
-  props =>
+  (props) =>
     css({
       fontSize: 0,
       fontWeight: 2,
