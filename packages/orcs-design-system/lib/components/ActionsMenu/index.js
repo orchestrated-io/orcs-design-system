@@ -99,7 +99,7 @@ const Icon = styled.div`
   &:after {
     transform: translate(0, 6px) scaleX(1);
   }
-  ${props =>
+  ${(props) =>
     props.isOpen
       ? css`
           &:before {
@@ -115,8 +115,8 @@ const Icon = styled.div`
 const Menu = styled.div`
   display: inline-block;
   position: absolute;
-  left: ${props => (props.direction == "left" ? "auto" : "34px")};
-  right: ${props => (props.direction == "left" ? "34px" : "auto")};
+  left: ${(props) => (props.direction == "left" ? "auto" : "34px")};
+  right: ${(props) => (props.direction == "left" ? "34px" : "auto")};
   top: 0;
   width: auto;
   z-index: 5;
@@ -126,11 +126,11 @@ const Menu = styled.div`
   opacity: 0;
   pointer-events: none;
   overflow: hidden;
-  transform-origin: ${props =>
+  transform-origin: ${(props) =>
     props.direction == "left" ? "top right" : "top left"};
   transition: all 300ms;
   transition-timing-function: cubic-bezier(0, 1.4, 1, 1);
-  ${props =>
+  ${(props) =>
     props.isOpen
       ? css`
           transform: scale(1);
@@ -183,19 +183,22 @@ const ActionsMenu = ({
     }
 
     const handleClicked = () => {
-      setToggle(false);
+      // As the event listener is attached in capture phase, need to do this make sure the sate change are after react event cycle.
+      setTimeout(() => setToggle(false), 0);
     };
 
     // handle click to hide menu
-    document.addEventListener("click", handleClicked);
+    // If any of the actions are using stopPropagation(), the event will stop in the react mounting root.
+    // So use capture phase to detect anything clicked.
+    document.addEventListener("click", handleClicked, true);
 
     return () => {
       // If menu closed, unregister event listener to prevent memory leaks
-      document.removeEventListener("click", handleClicked);
+      document.removeEventListener("click", handleClicked, true);
     };
   }, [toggleState]);
 
-  const onToggle = e => {
+  const onToggle = (e) => {
     e.stopPropagation();
     setToggle(!toggleState);
   };

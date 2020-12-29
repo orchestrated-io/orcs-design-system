@@ -4,12 +4,12 @@ import { space, layout, color, border } from "styled-system";
 import PropTypes from "prop-types";
 
 const LayoutWrapper = styled.div`
-${space}
-${layout}
+  ${space}
+  ${layout}
 ${color}
 ${border}
   box-sizing: border-box;
-  `;
+`;
 
 export default function Layout({ children, ...props }) {
   return <LayoutWrapper {...props}>{children}</LayoutWrapper>;

@@ -6,7 +6,7 @@ import { TabsContainer, Tab } from ".";
 export default {
   title: "Components/Tabs",
   decorators: [
-    storyFn => (
+    (storyFn) => (
       <Box bg="greyLightest" p="xl">
         {storyFn()}
       </Box>

@@ -13,7 +13,7 @@ const NotificationWrapper = styled("div")
   .withConfig({
     shouldForwardProp
   })
-  .attrs(props => ({
+  .attrs((props) => ({
     className: props.notifClass
   }))(
   css({

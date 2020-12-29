@@ -52,13 +52,13 @@ const ButtonGroupLabel = styled.label`
   transition: ${themeGet("transition.transitionDefault")};
   font-size: ${themeGet("fontSizes.1")};
   font-weight: ${themeGet("fontWeights.2")};
-  cursor: ${props => (props.checked ? "default" : "pointer")};
-  color: ${props =>
+  cursor: ${(props) => (props.checked ? "default" : "pointer")};
+  color: ${(props) =>
     props.checked ? themeGet("colors.greyDarker") : themeGet("colors.white")};
-  background-color: ${props =>
+  background-color: ${(props) =>
     props.checked ? themeGet("colors.white") : "#5e686d"};
   &:hover {
-    background-color: ${props =>
+    background-color: ${(props) =>
       props.checked ? themeGet("colors.white") : themeGet("colors.primary")};
   }
 `;

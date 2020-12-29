@@ -9,7 +9,7 @@ import "react-dates/initialize";
 export default {
   title: "Components/DatePicker",
   decorators: [
-    storyFn => (
+    (storyFn) => (
       <Box bg="greyLightest" height="400px" p="r">
         {storyFn()}
       </Box>
@@ -23,11 +23,11 @@ const SingleDate = () => {
   const [date, setDate] = useState(null);
   const [focused, setFocused] = useState(false);
 
-  const onDateChange = selectedDate => {
+  const onDateChange = (selectedDate) => {
     setDate(selectedDate);
   };
 
-  const onFocusChange = el => {
+  const onFocusChange = (el) => {
     setFocused(el.focused);
   };
 

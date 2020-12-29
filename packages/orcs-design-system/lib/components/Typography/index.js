@@ -13,7 +13,7 @@ import shouldForwardProp from "@styled-system/should-forward-prop";
 const typeStyles = compose(typography, color, space, layout);
 
 export const H1 = styled("h1")(
-  props =>
+  (props) =>
     css({
       fontFamily: "main",
       fontSize: 6,
@@ -47,7 +47,7 @@ export const H1 = styled("h1")(
 );
 
 export const H2 = styled("h2")(
-  props =>
+  (props) =>
     css({
       fontFamily: "main",
       fontSize: 5,
@@ -81,7 +81,7 @@ export const H2 = styled("h2")(
 );
 
 export const H3 = styled("h3")(
-  props =>
+  (props) =>
     css({
       fontFamily: "main",
       fontSize: 4,
@@ -115,7 +115,7 @@ export const H3 = styled("h3")(
 );
 
 export const H4 = styled("h4")(
-  props =>
+  (props) =>
     css({
       fontFamily: "main",
       fontSize: 3,
@@ -149,7 +149,7 @@ export const H4 = styled("h4")(
 );
 
 export const H5 = styled("h5")(
-  props =>
+  (props) =>
     css({
       fontFamily: "main",
       fontSize: 2,
@@ -183,7 +183,7 @@ export const H5 = styled("h5")(
 );
 
 export const H6 = styled("h6")(
-  props =>
+  (props) =>
     css({
       fontFamily: "main",
       fontSize: 1,
@@ -217,7 +217,7 @@ export const H6 = styled("h6")(
 );
 
 export const P = styled("p")(
-  props =>
+  (props) =>
     css({
       fontFamily: "main",
       fontSize: 2,
@@ -251,7 +251,7 @@ export const P = styled("p")(
 export const Small = styled("small")
   .withConfig({ shouldForwardProp })
   .attrs({ className: "Small" })(
-  props =>
+  (props) =>
     css({
       fontSize: "1.3rem",
       textTransform: props.uppercase ? "uppercase" : "none",
@@ -272,7 +272,7 @@ export const Small = styled("small")
 );
 
 export const Text = styled("span")(
-  props =>
+  (props) =>
     css({
       fontFamily: "main",
       fontWeight: 1,

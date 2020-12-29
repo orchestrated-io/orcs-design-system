@@ -27,7 +27,7 @@ const Basic = () => {
   const handleOnConfirm = () => {
     setVisible(false);
   };
-  const onToggleModal = visible => () => {
+  const onToggleModal = (visible) => () => {
     setVisible(visible);
   };
 
@@ -95,7 +95,7 @@ const Advanced = () => {
   const handleOnConfirm = () => {
     setVisible(false);
   };
-  const onToggleModal = visible => () => {
+  const onToggleModal = (visible) => () => {
     setVisible(visible);
   };
   const modalHeader = <H3>Modal Title</H3>;
@@ -230,7 +230,7 @@ const BasicDialogue = () => {
   const handleOnConfirm = () => {
     setVisible(false);
   };
-  const onToggleModal = visible => () => {
+  const onToggleModal = (visible) => () => {
     setVisible(visible);
   };
   const modalFooter = (
@@ -327,7 +327,7 @@ const EditDialogue = () => {
   const handleOnConfirm = () => {
     setVisible(false);
   };
-  const onToggleModal = visible => () => {
+  const onToggleModal = (visible) => () => {
     setVisible(visible);
   };
   const modalHeader = <H3>Modify Details</H3>;

@@ -10,8 +10,8 @@ const Item = styled.div`
   ${color}
   display: block;
   width: 100%;
-  height: ${props => (props.thick ? "3px" : "1px")};
-  grid-column: ${props => (props.spanGrid ? "1 / -1" : "auto")};
+  height: ${(props) => (props.thick ? "3px" : "1px")};
+  grid-column: ${(props) => (props.spanGrid ? "1 / -1" : "auto")};
 `;
 
 export default function Divider({

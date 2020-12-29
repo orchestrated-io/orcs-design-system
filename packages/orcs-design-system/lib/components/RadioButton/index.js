@@ -23,7 +23,7 @@ const RadioButtonItem = styled("div")(
   RadioButtonStyles
 );
 
-const RadioButtonLabel = styled("label")(props =>
+const RadioButtonLabel = styled("label")((props) =>
   css({
     display: "flex",
     alignItems: "center",
@@ -33,7 +33,7 @@ const RadioButtonLabel = styled("label")(props =>
 );
 
 const RadioButtonControl = styled.input.attrs({ type: "radio" })(
-  props =>
+  (props) =>
     css({
       opacity: "0",
       position: "absolute",
@@ -56,7 +56,7 @@ const RadioButtonControl = styled.input.attrs({ type: "radio" })(
           themeGet("colors.black30")(props)
       }
     }),
-  props =>
+  (props) =>
     variant({
       variants: {
         default: {},

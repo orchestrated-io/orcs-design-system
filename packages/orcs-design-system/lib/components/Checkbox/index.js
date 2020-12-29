@@ -129,7 +129,7 @@ const Item = styled.div`
   ${layout}
   display: block;
   transform: translateZ(0);
-  color: ${props =>
+  color: ${(props) =>
     props.colour === "white"
       ? themeGet("colors.white")
       : themeGet("colors.greyDarkest")};
@@ -138,8 +138,8 @@ const Item = styled.div`
 const Label = styled.label`
   display: flex;
   align-items: center;
-  cursor: ${props => (props.disabled ? "default" : "pointer")};
-  opacity: ${props => (props.disabled ? "0.5" : "1")};
+  cursor: ${(props) => (props.disabled ? "default" : "pointer")};
+  opacity: ${(props) => (props.disabled ? "0.5" : "1")};
 `;
 
 const Control = styled.input.attrs({
@@ -157,7 +157,7 @@ const Control = styled.input.attrs({
   &:focus {
     + div {
       border-radius: 2px;
-      box-shadow: ${props =>
+      box-shadow: ${(props) =>
         props.colour
           ? themeGet("shadows.thinOutline")(props) +
             " " +
@@ -172,13 +172,13 @@ const Control = styled.input.attrs({
   + div {
     transition: ${themeGet("transition.transitionDefault")};
     &:before {
-      background-color: ${props =>
+      background-color: ${(props) =>
         props.colour
           ? themeGet("colors." + props.colour)
           : themeGet("colors.greyDarker")};
     }
     > div {
-      color: ${props =>
+      color: ${(props) =>
         props.colour
           ? themeGet("colors." + props.colour)
           : themeGet("colors.greyDarker")};

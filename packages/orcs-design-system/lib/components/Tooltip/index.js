@@ -17,13 +17,13 @@ const Container = styled.button`
   -webkit-font-smoothing: antialiased;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   border-radius: 10px;
-  color: ${props =>
+  color: ${(props) =>
     props.inverted ? themeGet("colors.greyDarkest") : themeGet("colors.white")};
   display: flex;
   align-items: center;
   justify-content: center;
   transition: ${themeGet("transition.transitionDefault")};
-  background: ${props =>
+  background: ${(props) =>
     props.inverted ? themeGet("colors.white") : themeGet("colors.greyDarkest")};
 
   &:hover,
@@ -62,8 +62,8 @@ const Text = styled.div`
   pointer-events: none;
   border-radius: ${themeGet("radii[1]")};
   transition: ${themeGet("transition.transitionDefault")};
-  width: ${props => (props.width ? props.width : "200px")};
-  background: ${props =>
+  width: ${(props) => (props.width ? props.width : "200px")};
+  background: ${(props) =>
     props.inverted ? themeGet("colors.white") : themeGet("colors.greyDarkest")};
 
   &:before {
@@ -74,7 +74,7 @@ const Text = styled.div`
     border-style: solid;
     border-width: 6px 8px 6px 0;
     border-color: transparent;
-    border-right-color: ${props =>
+    border-right-color: ${(props) =>
       props.inverted
         ? themeGet("colors.white")
         : themeGet("colors.greyDarkest")};

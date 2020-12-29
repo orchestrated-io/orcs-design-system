@@ -12,7 +12,7 @@ export default {
     }
   },
   component: TextArea,
-  decorators: [storyFn => <Box p="r">{storyFn()}</Box>]
+  decorators: [(storyFn) => <Box p="r">{storyFn()}</Box>]
 };
 
 export const defaultTextArea = () => (

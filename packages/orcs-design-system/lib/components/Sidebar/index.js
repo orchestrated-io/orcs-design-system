@@ -9,7 +9,7 @@ import PropTypes from "prop-types";
 const SidebarStyles = compose(space, layout);
 
 const SidebarWrapper = styled("div")(
-  props =>
+  (props) =>
     css({
       bg: "greyDarkest",
       color: "white",
@@ -26,7 +26,7 @@ const SidebarWrapper = styled("div")(
 );
 
 export const SidebarTabs = styled("div")(
-  props =>
+  (props) =>
     css({
       minWidth: themeGet("appScale.navBarSize")(props),
       minHeight: "calc(100vh - " + themeGet("appScale.navBarSize")(props) + ")",
@@ -40,11 +40,11 @@ export const SidebarTabs = styled("div")(
   SidebarStyles
 );
 
-export const SidebarTab = styled("label").attrs(props => ({
+export const SidebarTab = styled("label").attrs((props) => ({
   className: props.badge ? "Sidebar__Badge" : "",
   marginTop: props.bottomAligned ? "auto" : "0"
 }))(
-  props =>
+  (props) =>
     css({
       minWidth: themeGet("appScale.navBarSize")(props),
       minHeight: themeGet("appScale.navBarSize")(props),
@@ -97,7 +97,7 @@ export const SidebarPanels = styled("div")(
 );
 
 const SidebarPanelStyle = styled("div")(
-  props =>
+  (props) =>
     css({
       display: props.active ? "block" : "none",
       minWidth:
@@ -128,7 +128,7 @@ export const SidebarPanel = ({ SidebarStyles, children, ...props }) => {
 };
 
 export const SidebarClose = styled("label")(
-  props =>
+  (props) =>
     css({
       position: "absolute",
       right: "calc(-1 * " + themeGet("space.3")(props) + ")",

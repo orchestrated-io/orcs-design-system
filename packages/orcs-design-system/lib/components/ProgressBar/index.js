@@ -26,7 +26,7 @@ const Fill = styled.div`
   border-radius: 5px;
   animation: ${expandWidth} 1000ms ease-in-out 1;
   transition: ${themeGet("transition.transitionDefault")};
-  ${props =>
+  ${(props) =>
     props.gradient
       ? css`
           background: linear-gradient(

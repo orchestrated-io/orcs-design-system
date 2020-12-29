@@ -14,7 +14,7 @@ const LabelStyles = compose(space, layout, typography, color);
 const InputStyles = compose(space, layout, typography, color);
 
 const Wrapper = styled("div").withConfig({ shouldForwardProp })(
-  props =>
+  (props) =>
     css({
       position: "relative",
       width: props.fullWidth ? "100%" : "auto"
@@ -24,10 +24,10 @@ const Wrapper = styled("div").withConfig({ shouldForwardProp })(
 
 const Input = styled("textarea")
   .withConfig({ shouldForwardProp })
-  .attrs(props => ({
+  .attrs((props) => ({
     "data-testid": props["data-testid"] ? props["data-testid"] : null
   }))(
-  props =>
+  (props) =>
     css({
       display: "block",
       cursor: "text",
@@ -80,7 +80,7 @@ const Input = styled("textarea")
 );
 
 const Label = styled("label").withConfig({ shouldForwardProp })(
-  props =>
+  (props) =>
     css({
       display: "block",
       zIndex: "2",

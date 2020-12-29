@@ -75,7 +75,7 @@ const defaultProps = {
   monthFormat: "MMMM YYYY",
   phrases: DateRangePickerPhrases,
 
-  stateDateWrapper: date => date
+  stateDateWrapper: (date) => date
 };
 
 const DatePickerContainer = styled.div`

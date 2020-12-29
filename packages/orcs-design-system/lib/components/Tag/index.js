@@ -21,57 +21,57 @@ const TagWrapper = styled.button`
   white-space: nowrap;
   position: relative;
   transition: ${themeGet("transition.transitionDefault")};
-  cursor: ${props => (props.disabled ? "default" : "pointer")};
+  cursor: ${(props) => (props.disabled ? "default" : "pointer")};
   border: solid 1px
-    ${props =>
+    ${(props) =>
       props.disabled
         ? themeGet("colors.greyDark")
         : themeGet("colors.primary")};
-  padding: ${props =>
+  padding: ${(props) =>
     props.hideCross
       ? "3px 12px 4px 12px;"
       : props.selected
       ? "3px 25px 4px 12px;"
       : "3px 12px 4px 12px;"};
 
-  background: ${props =>
+  background: ${(props) =>
     props.selected
       ? themeGet("colors.primary")
       : props.disabled
       ? themeGet("colors.greyDark")
       : themeGet("colors.white")};
 
-  color: ${props =>
+  color: ${(props) =>
     props.selected
       ? themeGet("colors.white")
       : props.disabled
       ? themeGet("colors.white")
       : themeGet("colors.primary")};
 
-  ${props =>
+  ${(props) =>
     props.disabled
       ? css``
       : css`
           &:hover {
             border: solid 1px ${themeGet("colors.primaryDark")};
-            color: ${props =>
+            color: ${(props) =>
               props.selected
                 ? themeGet("colors.white")
                 : themeGet("colors.primaryDark")};
-            background: ${props =>
+            background: ${(props) =>
               props.selected
                 ? themeGet("colors.primaryDark")
                 : themeGet("colors.white")};
           }
         `} &:focus {
     outline: 0;
-    box-shadow: ${props =>
+    box-shadow: ${(props) =>
       themeGet("shadows.thinOutline")(props) +
       " " +
       themeGet("colors.primary30")(props)};
   }
 
-  ${props =>
+  ${(props) =>
     props.hideCross
       ? css``
       : css`
@@ -88,8 +88,8 @@ const TagWrapper = styled.button`
             transform-origin: 50% 50%;
             color: ${themeGet("colors.white")};
             transition: ${themeGet("transition.transitionDefault")};
-            opacity: ${props => (props.selected ? 1 : 0)};
-            transform: ${props =>
+            opacity: ${(props) => (props.selected ? 1 : 0)};
+            transform: ${(props) =>
               props.selected
                 ? "rotate(45deg) scale(1)"
                 : "rotate(45deg) scale(0)"};

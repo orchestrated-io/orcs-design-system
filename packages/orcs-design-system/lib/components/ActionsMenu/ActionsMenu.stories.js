@@ -6,7 +6,7 @@ import mdx from "./ActionsMenu.mdx";
 
 export default {
   title: "Components/ActionsMenu",
-  decorators: [storyFn => <Box pb="xxl">{storyFn()}</Box>],
+  decorators: [(storyFn) => <Box pb="xxl">{storyFn()}</Box>],
   parameters: {
     docs: { page: mdx }
   },

@@ -54,7 +54,7 @@ const TextContent = styled("div")(
 );
 
 const Image = styled("img")(
-  props => ({
+  (props) => ({
     width: `calc(${themeGet("space.5")(props)} * 2)`,
     height: `calc(${themeGet("space.5")(props)} * 2)`
   }),
@@ -65,7 +65,7 @@ const Image = styled("img")(
     display: "block",
     borderRadius: "50%"
   }),
-  props =>
+  (props) =>
     variant({
       prop: "sizing",
       variants: {
@@ -78,7 +78,7 @@ const Image = styled("img")(
 );
 
 const Circle = styled("div")(
-  props =>
+  (props) =>
     css({
       width: `calc(${themeGet("space.5")(props)}* 2)`,
       height: `calc(${themeGet("space.5")(props)}* 2)`,
@@ -98,7 +98,7 @@ const Circle = styled("div")(
       },
       "&.inverted a": { color: "white" }
     }),
-  props =>
+  (props) =>
     variant({
       prop: "sizing",
       variants: {

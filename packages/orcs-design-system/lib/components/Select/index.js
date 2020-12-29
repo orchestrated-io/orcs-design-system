@@ -9,7 +9,7 @@ import { themeGet } from "@styled-system/theme-get";
 
 const SelectStyles = compose(space, layout);
 
-const Wrapper = styled("div").attrs(props => ({
+const Wrapper = styled("div").attrs((props) => ({
   "data-testid": props["data-testid"] ? props["data-testid"] : null
 }))(
   css({
@@ -19,9 +19,9 @@ const Wrapper = styled("div").attrs(props => ({
   SelectStyles
 );
 
-const Label = styled("label").attrs(props => ({
+const Label = styled("label").attrs((props) => ({
   for: props.id
-}))(props =>
+}))((props) =>
   css({
     color: props.inverted ? "white" : "greyDarkest",
     fontWeight: "2",
@@ -69,7 +69,7 @@ const Select = forwardRef((props, ref) => {
       overflow: "hidden",
       zIndex: 12
     }),
-    menuList: provided => ({
+    menuList: (provided) => ({
       ...provided,
       paddingTop: "0",
       overflow: "auto",
@@ -158,7 +158,7 @@ const Select = forwardRef((props, ref) => {
       fontSize: themeGet("fontSizes.1")(props),
       wordWrap: "break-word"
     }),
-    multiValueLabel: provided => ({
+    multiValueLabel: (provided) => ({
       ...provided,
       backgroundColor: props.inverted
         ? themeGet("colors.primaryDark")(props)
@@ -170,7 +170,7 @@ const Select = forwardRef((props, ref) => {
       wordWrap: "break-word",
       whiteSpace: "wrap"
     }),
-    multiValueRemove: provided => ({
+    multiValueRemove: (provided) => ({
       ...provided,
       backgroundColor: props.inverted
         ? themeGet("colors.primaryDark")(props)

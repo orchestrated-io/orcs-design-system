@@ -18,18 +18,18 @@ const LoadingWrapper = styled("div")(LoadingStyles);
 const Item = styled.div`
   position: relative;
   border-radius: 50%;
-  width: ${props => (props.large ? "50px" : "16px")};
-  height: ${props => (props.large ? "50px" : "16px")};
-  margin: ${props => (props.centered ? "0 auto" : "0")};
+  width: ${(props) => (props.large ? "50px" : "16px")};
+  height: ${(props) => (props.large ? "50px" : "16px")};
+  margin: ${(props) => (props.centered ? "0 auto" : "0")};
 
-  border: ${props => {
+  border: ${(props) => {
     let borderStyle = "2px solid";
     if (props.large) {
       borderStyle = "4px solid";
     }
     return borderStyle;
   }};
-  border-color: ${props => {
+  border-color: ${(props) => {
     let borderColour = themeGet("colors.black30");
     if (props.large) {
       borderColour = themeGet("colors.black20");
@@ -39,7 +39,7 @@ const Item = styled.div`
     }
     return borderColour;
   }};
-  border-right-color: ${props => {
+  border-right-color: ${(props) => {
     let borderRightColour = themeGet("colors.black70");
     if (props.large) {
       borderRightColour = themeGet("colors.black70");
@@ -49,7 +49,7 @@ const Item = styled.div`
     }
     return borderRightColour;
   }};
-  ${props =>
+  ${(props) =>
     props.large
       ? css`
           animation: ${loadingSpin} 800ms infinite linear;

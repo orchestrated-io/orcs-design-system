@@ -56,10 +56,10 @@ const Container = styled(Box)`
   animation: 300ms ${fadeIn} ease-in-out, 300ms ${scaleIn} ease-in-out;
   display: flex;
   flex-direction: column;
-  overflow: ${props => (props.overflow === "visible" ? "visible" : "hidden")};
+  overflow: ${(props) => (props.overflow === "visible" ? "visible" : "hidden")};
 `;
 
-const CloseButton = styled(Button)(props =>
+const CloseButton = styled(Button)((props) =>
   css({
     position: "absolute",
     top: "s",
@@ -111,8 +111,8 @@ const ScrollableContent = styled.div`
   --scrollbar-color-active: rgba(0, 0, 0, 0.5);
   height: 100%;
   flex: 1 1 auto;
-  overflow-y: ${props => (props.overflow === "visible" ? "visible" : "auto")};
-  margin-top: ${props => (props.headerContent ? "0" : "20px")};
+  overflow-y: ${(props) => (props.overflow === "visible" ? "visible" : "auto")};
+  margin-top: ${(props) => (props.headerContent ? "0" : "20px")};
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;

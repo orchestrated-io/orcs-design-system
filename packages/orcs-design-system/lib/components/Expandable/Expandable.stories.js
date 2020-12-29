@@ -9,7 +9,7 @@ export default {
   parameters: {
     docs: { page: mdx }
   },
-  decorators: [storyFn => <Box height="300px">{storyFn()}</Box>],
+  decorators: [(storyFn) => <Box height="300px">{storyFn()}</Box>],
   component: Expandable
 };
 

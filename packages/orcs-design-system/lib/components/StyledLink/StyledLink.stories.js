@@ -14,7 +14,7 @@ export default {
     }
   },
   component: StyledLink,
-  decorators: [storyFn => <Box p="r">{storyFn()}</Box>]
+  decorators: [(storyFn) => <Box p="r">{storyFn()}</Box>]
 };
 
 export const defaultStyledLink = () => (

@@ -10,7 +10,7 @@ const boxStyles = compose(space, layout, color, border);
 
 const BoxWrapper = styled("div")
   .withConfig({ shouldForwardProp })
-  .attrs(props => ({
+  .attrs((props) => ({
     "data-testid": props.dataTestId
       ? props.dataTestId
       : props["data-testid"]

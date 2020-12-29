@@ -12,7 +12,7 @@ const ButtonStyles = compose(space, layout, color, border);
 
 const StyledButton = styled("button")
   .withConfig({ shouldForwardProp })
-  .attrs(props => ({
+  .attrs((props) => ({
     "data-testid": props.dataTestId
       ? props.dataTestId
       : props["data-testid"]
@@ -20,7 +20,7 @@ const StyledButton = styled("button")
       : null,
     disabled: props.disabled ? true : props.variant == "disabled" ? true : false
   }))(
-  props =>
+  (props) =>
     css({
       bg: "primary",
       color: "white",
@@ -71,7 +71,7 @@ const StyledButton = styled("button")
           themeGet("colors.primary30")(props)
       }
     }),
-  props =>
+  (props) =>
     variant({
       variants: {
         default: {},
