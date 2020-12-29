@@ -183,15 +183,18 @@ const ActionsMenu = ({
     }
 
     const handleClicked = () => {
-      setToggle(false);
+      // As the event listener is attached in capture phase, need to do this make sure the sate change are after react event cycle.
+      setTimeout(() => setToggle(false), 0);
     };
 
     // handle click to hide menu
-    document.addEventListener("click", handleClicked);
+    // If any of the actions are using stopPropagation(), the event will stop in the react mounting root.
+    // So use capture phase to detect anything clicked.
+    document.addEventListener("click", handleClicked, true);
 
     return () => {
       // If menu closed, unregister event listener to prevent memory leaks
-      document.removeEventListener("click", handleClicked);
+      document.removeEventListener("click", handleClicked, true);
     };
   }, [toggleState]);
 
