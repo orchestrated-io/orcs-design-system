@@ -127,7 +127,7 @@ export default function Toggle({
   /*  const { inverted, small, id, label, theme } = props; */
   return (
     <ThemeProvider theme={theme}>
-      <Group inverted={inverted} {...props}>
+      <Group inverted={inverted}>
         <Input id={id} checked={checked} {...props} />
         <Item htmlFor={id} small={small} />
         <Label htmlFor={id} small={small}>

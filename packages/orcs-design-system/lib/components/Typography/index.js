@@ -7,6 +7,7 @@ import {
   variant,
   compose
 } from "styled-system";
+import systemtheme from "../../systemtheme";
 import css from "@styled-system/css";
 import shouldForwardProp from "@styled-system/should-forward-prop";
 
@@ -15,7 +16,7 @@ const typeStyles = compose(typography, color, space, layout);
 export const H1 = styled("h1")(
   (props) =>
     css({
-      fontFamily: "main",
+      fontFamily: systemtheme.font.main,
       fontSize: 6,
       fontWeight: 1,
       textTransform: props.uppercase ? "uppercase" : "none",
@@ -49,7 +50,7 @@ export const H1 = styled("h1")(
 export const H2 = styled("h2")(
   (props) =>
     css({
-      fontFamily: "main",
+      fontFamily: systemtheme.font.main,
       fontSize: 5,
       fontWeight: 1,
       textTransform: props.uppercase ? "uppercase" : "none",
@@ -83,7 +84,7 @@ export const H2 = styled("h2")(
 export const H3 = styled("h3")(
   (props) =>
     css({
-      fontFamily: "main",
+      fontFamily: systemtheme.font.main,
       fontSize: 4,
       fontWeight: 1,
       textTransform: props.uppercase ? "uppercase" : "none",
@@ -117,7 +118,7 @@ export const H3 = styled("h3")(
 export const H4 = styled("h4")(
   (props) =>
     css({
-      fontFamily: "main",
+      fontFamily: systemtheme.font.main,
       fontSize: 3,
       fontWeight: 1,
       textTransform: props.uppercase ? "uppercase" : "none",
@@ -151,7 +152,7 @@ export const H4 = styled("h4")(
 export const H5 = styled("h5")(
   (props) =>
     css({
-      fontFamily: "main",
+      fontFamily: systemtheme.font.main,
       fontSize: 2,
       fontWeight: 1,
       textTransform: props.uppercase ? "uppercase" : "none",
@@ -185,7 +186,7 @@ export const H5 = styled("h5")(
 export const H6 = styled("h6")(
   (props) =>
     css({
-      fontFamily: "main",
+      fontFamily: systemtheme.font.main,
       fontSize: 1,
       fontWeight: 1,
       textTransform: props.uppercase ? "uppercase" : "none",
@@ -219,7 +220,7 @@ export const H6 = styled("h6")(
 export const P = styled("p")(
   (props) =>
     css({
-      fontFamily: "main",
+      fontFamily: systemtheme.font.main,
       fontSize: 2,
       lineHeight: 1,
       fontWeight: 1,
@@ -274,7 +275,7 @@ export const Small = styled("small")
 export const Text = styled("span")(
   (props) =>
     css({
-      fontFamily: "main",
+      fontFamily: systemtheme.font.main,
       fontWeight: 1,
       textTransform: props.uppercase ? "uppercase" : "none",
       wordBreak: props.breakWord ? "break-word" : "normal"
