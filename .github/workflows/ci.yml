@@ -46,9 +46,9 @@ jobs:
           npm run publish:package
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-      - name: publish updated packages to npm registry with canary tag
+      - name: publish updated packages to npm registry
         run: |
-          npm run publish:canary
+          npm run publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
   
