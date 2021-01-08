@@ -25,7 +25,7 @@
   "private": false,
   "scripts": {
     "audit-ci": "audit-ci -m --config ./audit-ci.json",
-    "lint": "CI=true eslint --max-warnings=0 lib/",
+    "lint": "CI=true eslint lib/",
     "test": "jest",
     "test-coverage": "jest --collectCoverage",
     "build": "styleguidist build",
