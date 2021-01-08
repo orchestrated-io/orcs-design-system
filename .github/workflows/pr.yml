@@ -26,7 +26,6 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm ci
-          npm run bootstrap
           npm run lint
           npm run test
         env:
