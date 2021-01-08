@@ -25,6 +25,5 @@ jobs:
         uses: percy/storybook-action@v0.1.6
         with:
           percy-flags: "--widths=1080"
-          working-directory: "./lib"
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
