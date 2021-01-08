@@ -21,11 +21,10 @@ jobs:
       - name: Install dependencies
         run: |
           npm ci
-          npm run bootstrap
       - name: Percy Test
         uses: percy/storybook-action@v0.1.6
         with:
           percy-flags: "--widths=1080"
-          working-directory: "./packages/orcs-design-system"
+          working-directory: "./lib"
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}

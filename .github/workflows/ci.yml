@@ -23,7 +23,6 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm ci
-          npm run bootstrap
           npm run lint
           npm run dist
         env:
@@ -41,11 +40,6 @@ jobs:
           rm -rf git-secrets
           git secrets --register-aws
           git-secrets --scan -r
-      - name: publish packages where the latest version is not present in the registry
-        run: |
-          npm run publish:package
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
       - name: publish updated packages to npm registry
         run: |
           npm run publish
