@@ -1,14 +1,14 @@
-# See https:help.github.comignore-files for more about ignoring files.
+# See https://help.github.com/ignore-files/ for more about ignoring files.
 
 # dependencies
-node_modules
+/node_modules
 
 # production
-build
-demo
+/build
+/demo
 
 # testing
-coverage
+/coverage
 
 # misc
 .DS_Store
@@ -23,13 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 # serverless
-.serverless
-dist
-es
-
-# deploy-storybook
-packages/orc*-design-system/out*
-packages/orcs-design-system/storybook-static
-
-# Ignore interplay stuff for now
-packages/orcs-design-system/interplay
+.serverless/
+/dist
+/es
