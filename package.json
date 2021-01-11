@@ -28,7 +28,6 @@
     "lint": "CI=true eslint lib/",
     "test": "jest",
     "test-coverage": "jest --collectCoverage",
-    "build": "styleguidist build",
     "dist": "BABEL_ENV=es babel lib -d es",
     "module": "BABEL_ENV=es babel lib -d es",
     "deploy-stack": "serverless deploy",
