@@ -9,17 +9,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [12.x]
-
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node-version }}
-          registry-url: https://registry.npmjs.org/
+          node-version: '12'
       - name: npm install, build, and test
         run: |
           npm ci
@@ -41,7 +36,7 @@ jobs:
           git secrets --register-aws
           git-secrets --scan -r
       - name:  'Release a new version of package to NPM registry'
-        uses: mikeal/merge-release@master
+        uses: mikeal/merge-release@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
