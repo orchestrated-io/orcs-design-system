@@ -40,9 +40,8 @@ jobs:
           rm -rf git-secrets
           git secrets --register-aws
           git-secrets --scan -r
-      - name: publish updated packages to npm registry
-        run: |
-          npm run publish
+      - name:  'Release a new version of package to NPM registry'
+        uses: mikeal/merge-release@master
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-  
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
