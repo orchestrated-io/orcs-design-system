@@ -2,18 +2,18 @@
 
 ## featuring Styled System + Styled Components
 
-[GitHub repository](https://github.com/orchestrated-io/orca-design-system) | [Deployed on GitHub Pages](https://orchestrated-io.github.io/orca-design-system/)
+[GitHub repository](https://github.com/orchestrated-io/orcs-design-system) | [Deployed on GitHub Pages](https://orchestrated-io.github.io/orcs-design-system/)
 
-[![npm version](https://badge.fury.io/js/orcs-design-system.svg)](https://badge.fury.io/js/orcs-design-system) ![GitHub last commit](https://img.shields.io/github/last-commit/orchestrated-io/orca-design-system) [![GitHub license](https://img.shields.io/github/license/orchestrated-io/orca-design-system.svg)](https://github.com/orchestrated-io/orca-design-system/blob/master/LICENSE)
+[![npm version](https://badge.fury.io/js/orcs-design-system.svg)](https://badge.fury.io/js/orcs-design-system) ![GitHub last commit](https://img.shields.io/github/last-commit/orchestrated-io/orcs-design-system) [![GitHub license](https://img.shields.io/github/license/orchestrated-io/orcs-design-system.svg)](https://github.com/orchestrated-io/orcs-design-system/blob/master/LICENSE)
 
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Forchestrated-io%2Forca-design-system.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Forchestrated-io%2Forca-design-system?ref=badge_large)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Forchestrated-io%2Forcs-design-system.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Forchestrated-io%2Forcs-design-system?ref=badge_large)
 
 ## Getting Started
 
 Clone repository:
 
 ```
-git clone https://github.com/orchestrated-io/orca-design-system.git
+git clone https://github.com/orchestrated-io/orcs-design-system.git
 ```
 
 Install dependencies:
@@ -27,7 +27,6 @@ npm install
 Start the ORCS development server:
 
 ```
-cd packages/orcs-design-system
 npm run storybook
 ```
 
@@ -35,7 +34,7 @@ A new browser window will open with a random localhost port. ORCS runs [Storyboo
 
 ## Working with ORCS
 
-All library files are located in `/lib`. Static files are located in `/assets`.
+All library components and files are located in `/lib`. Static files are located in `/assets`.
 
 ### Viewing changes in PM / TD.
 
@@ -99,7 +98,7 @@ npm run deploy-storybook
 In your project's root, install ORCS and styled-components:
 
 ```
-npm i orca-design-system
+npm i orcs-design-system
 npm i styled-components
 ```
 
@@ -115,7 +114,7 @@ import { Box } from "orcs-design-system"
 </Box>
 ```
 
-The [ORCS Storybook](https://orchestrated-io.github.io/orca-design-system) contains documentation for each component, including code examples and props tables.
+The [ORCS Storybook](https://orchestrated-io.github.io/orcs-design-system) contains documentation for each component, including code examples and props tables.
 
 For components with subcomponents, each subcomponent must be imported. For example, to use `Tabs`:
 
@@ -129,7 +128,7 @@ The design system components are built with [Styled System](https://styled-syste
 
 As a guide to using these props, see the [Styled System reference table](https://styled-system.com/table).
 
-The design system's theme scales are contained in [systemtheme](https://github.com/orchestrated-io/orca-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js).
+The design system's theme scales are contained in [systemtheme](https://github.com/orchestrated-io/orcs-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js).
 
 You may also find it useful to install the following Styled System utilities: theme-get and css.
 
