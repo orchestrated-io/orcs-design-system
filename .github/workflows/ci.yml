@@ -35,17 +35,12 @@ jobs:
           rm -rf git-secrets
           git secrets --register-aws
           git-secrets --scan -r
-      - name:  'Automated Version Bump'
-        uses:  'phips28/gh-action-bump-version@master'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          target-branch: 'master'
       - name: 'Publish version of package to NPM registry'
         uses: JS-DevTools/npm-publish@v1
         id: publish
         with:
           token: ${{ secrets.NPM_TOKEN }}
+          check-version: true
       - name: Create a Release
         if: steps.publish.outputs.type != 'none'
         id: create_release

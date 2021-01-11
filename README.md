@@ -77,7 +77,9 @@ npm run test
 
 ### Publishing changes
 
-GitHub [action](https://github.com/marketplace/actions/automated-releases-for-npm-packages) should publish your changes automatically.
+In order to publish a new version, you will have to patch and push your changes.
+Publish GitHub [action](https://github.com/marketplace/actions/npm-publish) should publish it to NPM repository for you.
+Release GitHub [action](https://github.com/marketplace/actions/create-a-release) should create a GitHub release record for you.
 
 ### Deploying to GitHub Pages
 
