@@ -77,13 +77,7 @@ npm run test
 
 ### Publishing changes
 
-```
-npm version patch
-git commit -am "Update to version n.m"
-git push
-```
-
-Your changes will be published to the NPM package when the commit is merged into (or pushed to) master.
+GitHub [action](https://github.com/marketplace/actions/automated-releases-for-npm-packages) should publish your changes automatically.
 
 ### Deploying to GitHub Pages
 
