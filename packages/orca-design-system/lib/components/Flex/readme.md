@@ -1,3 +1,0 @@
-Using 3rd party component. See: <https://www.npmjs.com/package/styled-flex-component> for usage.
-
-Note: You don't necessarily need to use `<FlexItem>` as the direct child elements to `<Flex>` unless you need to apply specific properties to the `<FlexItem>`. In most cases, once you set the desired properties on `<Flex>` it will layout the child elements as intended, whether these be `<FlexItem>` or any other component like `<Layout>` or even standard html like a `<div>` or `<span>`.
