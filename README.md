@@ -1,4 +1,4 @@
-# ORCS: Orchestrated design system
+# ORCS: Orchestrated Design System
 
 ## featuring Styled System + Styled Components
 
