@@ -7,7 +7,7 @@ import ActionsMenu from ".";
 
 This component should be used when an item in the UI has multiple actions that can be taken on it.
 
-The child components that are accepted by this component are standard html hyperlinks `<a>` or buttons `<button>`, or react router `<Link>` depending on what the function of the menu item needs to be.
+The child components `ActionsMenuItem` are rendered either as a react router link `<Link>`, standard html hyperlink `<a>`, or button `<button>`. Depending on what the function of the menu item needs to be, just use `to`, `href`, or `onClick={function} + type="button"` and this component will render the correct element.
 
 ## Default Actions Menu
 
@@ -22,6 +22,14 @@ The child components that are accepted by this component are standard html hyper
 </Preview>
 
 ## Advanced Actions Menu
+
+Advanced Actions Menu supports some further flexibility.
+
+You can specify a `customTriggerComponent={}` so you can use any component you wish to trigger this, rather than the default three dots one.
+
+You can control the closing behaviour of the menu by disabling default close using `closeOnClick={false}` and then setting your own function that calls `closeMenu` when you would like to close it.
+
+This component is also flexible in that you can put whatever other content you would like in here, and write custom functionality for it (to see example of this, click 'Other' in example below).
 
 <Preview>
   <Story id="components-actionsmenu--advanced-actions-menu" />
