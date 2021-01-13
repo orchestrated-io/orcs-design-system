@@ -7,7 +7,7 @@ import ActionsMenu from ".";
 
 This component should be used when an item in the UI has multiple actions that can be taken on it.
 
-The child components `ActionsMenuItem` are rendered either as a react router link `<Link>`, standard html hyperlink `<a>`, or button `<button>`. Depending on what the function of the menu item needs to be, just use `to`, `href`, or `onClick={function} + type="button"` and this component will render the correct element.
+The child components `ActionsMenuItem` are rendered either as a react router link `<Link>`, standard html hyperlink `<a>`, or button `<button>`. Depending on what the function of the menu item needs to be, just use `to={/route}` + `as={Link}`, `href`, or `onClick={function}` and this component will render the correct element (see example code below).
 
 ## Default Actions Menu
 
