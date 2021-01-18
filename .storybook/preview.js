@@ -11,7 +11,7 @@ import { default as systemtheme } from "../lib/systemtheme";
 
 library.add(far, fas);
 
-const ThemeDecorator = storyFn => {
+const ThemeDecorator = (storyFn) => {
   return (
     <ThemeProvider theme={systemtheme}>
       <>
@@ -33,5 +33,8 @@ addParameters({
     container: DocsContainer,
     page: DocsPage
   },
-  viewMode: "docs"
+  viewMode: "docs",
+  playroom: {
+    url: process.env.NODE_ENV === "production" ? "/playroom/" : undefined
+  }
 });

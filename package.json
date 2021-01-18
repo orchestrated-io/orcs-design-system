@@ -32,9 +32,12 @@
     "module": "BABEL_ENV=es babel lib -d es",
     "deploy-stack": "serverless deploy",
     "deploy-client": "serverless client deploy  --no-confirm",
+    "start": "run-p storybook playroom",
     "storybook": "start-storybook -s ./lib/assets",
     "build-storybook": "build-storybook -s .storybook/static",
     "deploy-storybook": "storybook-to-ghpages",
+    "playroom": "playroom start",
+    "build-playroom": "playroom build",
     "percy:storybook": "build-storybook && percy-storybook --widths=1280"
   },
   "dependencies": {
@@ -106,9 +109,12 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
+    "npm-run-all": "^4.1.5",
+    "playroom": "^0.22.4",
     "prettier": "^2.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "storybook-addon-playroom": "^2.0.0",
     "style-loader": "^2.0.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.11"
