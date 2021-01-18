@@ -33,8 +33,5 @@ addParameters({
     container: DocsContainer,
     page: DocsPage
   },
-  viewMode: "docs",
-  playroom: {
-    url: process.env.NODE_ENV === "production" ? "/playroom/" : undefined
-  }
+  viewMode: "docs"
 });
