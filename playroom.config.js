@@ -3,7 +3,7 @@ const path = require("path");
 module.exports = {
   components: "./lib",
   outputPath: ".storybook/static/playroom",
-  // snippets: "./snippets",
+  snippets: "./playroom/Snippets.js",
   widths: [320, 375, 768, 1024, 1600],
   frameComponent: "./playroom/FrameComponent.js",
   exampleCode: `
