@@ -11,7 +11,7 @@ import { default as systemtheme } from "../lib/systemtheme";
 
 library.add(far, fas);
 
-const ThemeDecorator = storyFn => {
+const ThemeDecorator = (storyFn) => {
   return (
     <ThemeProvider theme={systemtheme}>
       <>
