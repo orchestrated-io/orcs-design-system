@@ -3,6 +3,9 @@ import { colors } from "../lib/systemtheme";
 
 export default create({
   base: "light",
+  brandTitle: "Orcs Design System",
+  brandUrl: "https://orchestrated-io.github.io/orcs-design-system",
+  brandImage: "https://orchestrated.io/images/logo__orcsdesignsystem.png",
 
   colorPrimary: colors.primary,
   colorSecondary: colors.primaryDark,
@@ -30,9 +33,5 @@ export default create({
   inputBg: "white",
   inputBorder: "silver",
   inputTextColor: "black",
-  inputBorderRadius: 4,
-
-  brandTitle: "Orca Design System - version Orcs",
-  brandUrl: "https://orchestrated-io.github.io/orca-design-system",
-  brandImage: "https://orchestrated.io/images/logo__orcsdesignsystem.png"
+  inputBorderRadius: 4
 });
