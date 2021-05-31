@@ -176,6 +176,13 @@ Once you have purchased a license you need to add your Font Awesome NPM token as
 
 For further usage guidelines for the Icon component, [see the Icon docs](http://localhost:55322/?path=/docs/components-icon--default-icon).
 
+## Sandbox environment for playing with orcs, via [playroom](https://github.com/seek-oss/playroom):
+
+Playroom allows you to simultaneously design across a variety of themes and screen sizes, powered by JSX and your own component library.
+
+Playroom allows you to create a zero-install code-oriented design environment, built into a standalone bundle that can be deployed alongside your existing design system documentation.
+
+To run playroom, use this command: `npm run playroom`
 ## Browser/device support
 
 This design system is intended to work correctly on all modern desktop and mobile browsers.
