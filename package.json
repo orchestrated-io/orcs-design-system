@@ -71,6 +71,8 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "@interplay/cli": "^1.0.19",
+    "@interplay/cli-plugin-react": "^1.0.19",
     "@percy/storybook": "^3.3.1",
     "@storybook/addon-a11y": "^6.2.8",
     "@storybook/addon-actions": "^6.2.8",
