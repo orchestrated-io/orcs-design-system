@@ -5,7 +5,8 @@ export default create({
   base: "light",
   brandTitle: "Orcs Design System",
   brandUrl: "https://orchestrated-io.github.io/orcs-design-system",
-  brandImage: "https://orchestrated.io/images/logo__orcsdesignsystem.png",
+  brandImage:
+    "https://uploads-ssl.webflow.com/5f4852427e784b4cada3e0d0/60f7c55ecbc1d945a25c93ec_logo__orcsdesignsystem.png",
 
   colorPrimary: colors.primary,
   colorSecondary: colors.primaryDark,
@@ -17,7 +18,8 @@ export default create({
   appBorderRadius: 4,
 
   // Typography
-  fontBase: '"Open Sans", -apple-system, BlinkMacSystemFont, Roboto, sans-serif',
+  fontBase:
+    '"Open Sans", -apple-system, BlinkMacSystemFont, Roboto, sans-serif',
   fontCode: "monospace",
 
   // Text colors
