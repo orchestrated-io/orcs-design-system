@@ -24,8 +24,9 @@
   "sideEffects": false,
   "private": false,
   "scripts": {
-    "audit-ci": "audit-ci -m --config ./audit-ci.json",
     "lint": "CI=true eslint lib/",
+    "audit-ci": "audit-ci --config ./audit-ci.json",
+    "audit-ci:strict": "audit-ci --config ./audit-ci-strict.json",
     "test": "jest",
     "test-coverage": "jest --collectCoverage",
     "dist": "BABEL_ENV=es babel lib -d es",
