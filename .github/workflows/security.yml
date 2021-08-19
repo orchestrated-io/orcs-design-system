@@ -1,0 +1,36 @@
+name: Security Audit
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Run in strict mode'
+        required: false
+        default: 'strict'
+  push:
+    branches:
+      - "*" # matches every branch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - name: enable strict audit mode
+        run: |
+          echo "config_file_suffix=-strict" >> $GITHUB_ENV
+        if: github.event.inputs.mode == 'strict'
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: run security audit of npm packages
+        id: security_scan
+        run: |
+          npx audit-ci --config=audit-ci${{ env.config_file_suffix}}.json
+        env:
+          CI: true
