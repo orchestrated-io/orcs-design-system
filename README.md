@@ -190,3 +190,65 @@ This design system is intended to work correctly on all modern desktop and mobil
 ---
 
 > "A design system is a living, funded product with a roadmap and backlog, serving an ecosystem." — Nathan Curtis
+
+## Security vulnerability checks
+
+The `audit-ci` command runs to detect any **high** and **critical** severity security vunerabilities. Currently this runs:
+
+- as a part of the 'ci' github action before publishing a package (ci.yml)
+- as part of the PR and push workflow (pr.yml)
+
+This means we effectively stop the line for any high or critical security issues.  
+
+To run locally:
+
+``` 
+npm run audit-ci
+
+```
+or 
+
+``` 
+npx audit-ci 
+```
+
+This uses the default configuration file [audit-ci.json](audit-ci.json).
+
+### Addressing security issues
+
+More information on the specific vunerabilities can be found by adding the `--report` flag.
+
+`npm run audit-ci -- --report`
+or 
+`npx audit-ci --report`
+
+The built in `npm audit` command provides a useful output too but will not use the [audit-ci.json](audit-ci.json) configuration file so `npm audit fix` will fix everything it can rather than a single vunerability.
+
+You may find it easier to update issues invidually or by using `npm update DEP_NAME --depth nnn` or simlar. 
+
+### Allow list configuration
+
+Presently we have a number of high-criticality security issues in the allow list (see [audit-c.json](audit-ci.json).
+
+**TODO** Add more information on the allowed vunerabilities as comments in the config file. 
+
+### Strict mode checking
+
+We have an additional 'strict' mode check that allows us to run a full audit including medium or low severity issues. With suitable user permissions, this can be run from a github action:
+
+Triggering the GH action directly on a specific branch (including master):
+
+```
+gh workflow run security.yml --ref BRANCH_NAME
+
+```
+
+(add -f mode=notstrict to make it run the default audit-ci config if you wish)
+
+Or locally: 
+
+```
+npm run audit-ci:strict
+```
+
+This gives a fuller view of the vunerabilities relevant to the codebase. 
