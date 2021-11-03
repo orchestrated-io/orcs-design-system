@@ -10,11 +10,10 @@ This component uses React Select: <https://react-select.com/home>
 Usage of this component has changed since we have upgraded to the latest version of `react-select`. For example, field values are now defined as separate objects. for example:
 
        const options = [
+      { value: 'caramel', label: 'Caramel' },
       { value: 'chocolate', label: 'Chocolate' },
       { value: 'strawberry', label: 'Strawberry' },
-      { value: 'vanilla', label: 'Vanilla' },
-      { value: 'hazelnut', label: 'Hazelnut' },
-      { value: 'rocky road', label: 'Rocky Road' }
+      { value: 'vanilla', label: 'Vanilla' }
      ]
 
 For a full list of the changes, see <https://react-select.com/upgrade-guide>.
@@ -26,6 +25,8 @@ For a full list of the changes, see <https://react-select.com/upgrade-guide>.
 </Preview>
 
 ## Specific Height Select
+
+With height and padding props, you can select custom height and padding of select control. Be sure to include unit in the string, e.g. px.
 
 <Preview>
   <Story id="components-select--specific-height-select" />
