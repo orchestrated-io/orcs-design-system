@@ -1,6 +1,6 @@
 {
   "name": "orcs-design-system",
-  "version": "2.0.56",
+  "version": "2.0.57",
   "description": "Orchestrated's Design System, aka: ORCS",
   "keywords": [
     "design",
@@ -90,7 +90,7 @@
     "@testing-library/react": "^11.2.2",
     "@types/jest": "^26.0.19",
     "@types/styled-components": "^5.1.7",
-    "audit-ci": "^4.1.0",
+    "audit-ci": "^6.1.2",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^8.2.5",
     "babel-loader": "^8.1.0",
