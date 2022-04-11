@@ -78,8 +78,11 @@ npm run test
 ### Publishing changes
 
 In order to publish a new version, you will have to patch and push your changes.
-Publish GitHub [action](https://github.com/marketplace/actions/npm-publish) should publish it to NPM repository for you.
-Release GitHub [action](https://github.com/marketplace/actions/create-a-release) should create a GitHub release record for you.
+After your changes have been merged to master, from your master branch:
+```
+npm version patch
+git push
+```
 
 ### Deploying to GitHub Pages
 
