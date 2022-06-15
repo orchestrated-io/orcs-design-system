@@ -1,8 +1,14 @@
-import { Meta, ColorPalette, ColorItem, Story, Preview } from "@storybook/addon-docs/blocks";
+import {
+  Meta,
+  ColorPalette,
+  ColorItem,
+  Story,
+  Preview
+} from "@storybook/addon-docs/blocks";
 import { colors } from "./systemtheme";
 import Flex from "./components/Flex";
 import Colour from "./assets/Colour";
-import Box from "./components/Box/"
+import Box from "./components/Box/";
 
 <Meta title="System/Colour" />
 
@@ -11,15 +17,90 @@ import Box from "./components/Box/"
 These are the colours used throughout the design system, defined in `systemtheme`. They can be referenced using the `color` prop for components that accept this prop, or through referencing the theme object.
 
 ## Main palette
+
 <Preview>
-<ColorPalette>
-<ColorItem title="Greyscale" subtitle="Greyscale theme colours" colors={[colors.black, colors.greyDarkest, colors.greyDarker, colors.greyDark, colors.grey, colors.greyLight, colors.greyLighter, colors.greyLightest, colors.white]} />
-<ColorItem title="Primary" subtitle="Main theme colour" colors={[colors.primaryDarkest, colors.primaryDarker, colors.primaryDark, colors.primary, colors.primaryLight, colors.primaryLighter, colors.primaryLightest]}  />
-<ColorItem title="Secondary" subtitle="Secondary theme colour" colors={[colors.secondaryDarkest, colors.secondaryDarker, colors.secondaryDark, colors.secondary, colors.secondaryLight, colors.secondaryLighter, colors.secondaryLightest]}  />
-<ColorItem title="Success" subtitle="Success indicator colour" colors={[colors.successDarkest, colors.successDarker, colors.successDark, colors.success, colors.successLight, colors.successLighter, colors.successLightest]} />
-<ColorItem title="Warning" subtitle="Warning indicator colour" colors={[colors.warningDarkest, colors.warningDarker, colors.warningDark, colors.warning, colors.warningLight, colors.warningLighter, colors.warningLightest]} />
-<ColorItem title="Danger" subtitle="Danger indicator colour" colors={[colors.dangerDarkest, colors.dangerDarker, colors.dangerDark, colors.danger, colors.dangerLight, colors.dangerLighter, colors.dangerLightest]} />
-</ColorPalette>
+  <ColorPalette>
+    <ColorItem
+      title="Greyscale"
+      subtitle="Greyscale theme colours"
+      colors={[
+        colors.black,
+        colors.greyDarkest,
+        colors.greyDarker,
+        colors.greyDark,
+        colors.grey,
+        colors.greyLight,
+        colors.greyLighter,
+        colors.greyLightest,
+        colors.white
+      ]}
+    />
+    <ColorItem
+      title="Primary"
+      subtitle="Main theme colour"
+      colors={[
+        colors.primaryDarkest,
+        colors.primaryDarker,
+        colors.primaryDark,
+        colors.primary,
+        colors.primaryLight,
+        colors.primaryLighter,
+        colors.primaryLightest
+      ]}
+    />
+    <ColorItem
+      title="Secondary"
+      subtitle="Secondary theme colour"
+      colors={[
+        colors.secondaryDarkest,
+        colors.secondaryDarker,
+        colors.secondaryDark,
+        colors.secondary,
+        colors.secondaryLight,
+        colors.secondaryLighter,
+        colors.secondaryLightest
+      ]}
+    />
+    <ColorItem
+      title="Success"
+      subtitle="Success indicator colour"
+      colors={[
+        colors.successDarkest,
+        colors.successDarker,
+        colors.successDark,
+        colors.success,
+        colors.successLight,
+        colors.successLighter,
+        colors.successLightest
+      ]}
+    />
+    <ColorItem
+      title="Warning"
+      subtitle="Warning indicator colour"
+      colors={[
+        colors.warningDarkest,
+        colors.warningDarker,
+        colors.warningDark,
+        colors.warning,
+        colors.warningLight,
+        colors.warningLighter,
+        colors.warningLightest
+      ]}
+    />
+    <ColorItem
+      title="Danger"
+      subtitle="Danger indicator colour"
+      colors={[
+        colors.dangerDarkest,
+        colors.dangerDarker,
+        colors.dangerDark,
+        colors.danger,
+        colors.dangerLight,
+        colors.dangerLighter,
+        colors.dangerLightest
+      ]}
+    />
+  </ColorPalette>
 </Preview>
 
 ## Monochrome opacities
@@ -27,35 +108,124 @@ These are the colours used throughout the design system, defined in `systemtheme
 For black and white colours at different opacities, use the following scales.
 
 ### Black opacity scale
+
 <Preview>
-<Flex justifyContent="center">
-  <Colour bg="black" />
-  <Colour bg="black90" />
-  <Colour bg="black80" />
-  <Colour bg="black70" />
-  <Colour bg="black60" />
-  <Colour bg="black50" />
-  <Colour bg="black40" />
-  <Colour bg="black30" />
-  <Colour bg="black20" />
-  <Colour bg="black10" />
-</Flex>
+  <Flex justifyContent="center">
+    <Colour bg="black" />
+    <Colour bg="black90" />
+    <Colour bg="black80" />
+    <Colour bg="black70" />
+    <Colour bg="black60" />
+    <Colour bg="black50" />
+    <Colour bg="black40" />
+    <Colour bg="black30" />
+    <Colour bg="black20" />
+    <Colour bg="black10" />
+  </Flex>
 </Preview>
 
 ### White opacity scale
+
 <Preview>
-<Box bg="greyDarkest" padding="6">
-<Flex justifyContent="center">
-  <Colour bg="white" />
-  <Colour bg="white90" />
-  <Colour bg="white80" />
-  <Colour bg="white70" />
-  <Colour bg="white60" />
-  <Colour bg="white50" />
-  <Colour bg="white40" />
-  <Colour bg="white30" />
-  <Colour bg="white20" />
-  <Colour bg="white10" />
-</Flex>
-</Box>
+  <Box bg="greyDarkest" padding="6">
+    <Flex justifyContent="center">
+      <Colour bg="white" />
+      <Colour bg="white90" />
+      <Colour bg="white80" />
+      <Colour bg="white70" />
+      <Colour bg="white60" />
+      <Colour bg="white50" />
+      <Colour bg="white40" />
+      <Colour bg="white30" />
+      <Colour bg="white20" />
+      <Colour bg="white10" />
+    </Flex>
+  </Box>
+</Preview>
+
+## Coloured opacities
+
+### Primary opacity scale
+
+<Preview>
+  <Flex justifyContent="center">
+    <Colour bg="primary" />
+    <Colour bg="primary90" />
+    <Colour bg="primary80" />
+    <Colour bg="primary70" />
+    <Colour bg="primary60" />
+    <Colour bg="primary50" />
+    <Colour bg="primary40" />
+    <Colour bg="primary30" />
+    <Colour bg="primary20" />
+    <Colour bg="primary10" />
+  </Flex>
+</Preview>
+
+### Secondary opacity scale
+
+<Preview>
+  <Flex justifyContent="center">
+    <Colour bg="secondary" />
+    <Colour bg="secondary90" />
+    <Colour bg="secondary80" />
+    <Colour bg="secondary70" />
+    <Colour bg="secondary60" />
+    <Colour bg="secondary50" />
+    <Colour bg="secondary40" />
+    <Colour bg="secondary30" />
+    <Colour bg="secondary20" />
+    <Colour bg="secondary10" />
+  </Flex>
+</Preview>
+
+### Success opacity scale
+
+<Preview>
+  <Flex justifyContent="center">
+    <Colour bg="success" />
+    <Colour bg="success90" />
+    <Colour bg="success80" />
+    <Colour bg="success70" />
+    <Colour bg="success60" />
+    <Colour bg="success50" />
+    <Colour bg="success40" />
+    <Colour bg="success30" />
+    <Colour bg="success20" />
+    <Colour bg="success10" />
+  </Flex>
+</Preview>
+
+### Warning opacity scale
+
+<Preview>
+  <Flex justifyContent="center">
+    <Colour bg="warning" />
+    <Colour bg="warning90" />
+    <Colour bg="warning80" />
+    <Colour bg="warning70" />
+    <Colour bg="warning60" />
+    <Colour bg="warning50" />
+    <Colour bg="warning40" />
+    <Colour bg="warning30" />
+    <Colour bg="warning20" />
+    <Colour bg="warning10" />
+  </Flex>
+</Preview>
+
+### Danger opacity scale
+
+<Preview>
+  <Flex justifyContent="center">
+    <Colour bg="danger" />
+    <Colour bg="danger90" />
+    <Colour bg="danger80" />
+    <Colour bg="danger70" />
+    <Colour bg="danger60" />
+    <Colour bg="danger50" />
+    <Colour bg="danger40" />
+    <Colour bg="danger30" />
+    <Colour bg="danger20" />
+    <Colour bg="danger10" />
+  </Flex>
 </Preview>
