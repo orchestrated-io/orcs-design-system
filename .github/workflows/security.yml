@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: 'Run in strict mode'
+        description: "Run in strict mode"
         required: false
-        default: 'strict'
+        default: "strict"
   push:
     branches:
       - "*" # matches every branch
@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [16.15.0]
 
     steps:
       - name: enable strict audit mode
