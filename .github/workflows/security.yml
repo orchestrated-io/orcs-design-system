@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: 'Run in strict mode'
+        description: "Run in strict mode"
         required: false
-        default: 'strict'
+        default: "strict"
   push:
     branches:
       - "*" # matches every branch
