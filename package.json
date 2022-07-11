@@ -45,7 +45,7 @@
     "@styled-system/prop-types": "^5.1.5",
     "@styled-system/should-forward-prop": "^5.1.5",
     "@styled-system/theme-get": "^5.1.2",
-    "moment": "^2.29.2",
+    "moment": "^2.29.4",
     "polished": "^3.7.1",
     "prop-types": "^15.6.2",
     "react-app-polyfill": "^2.0.0",
