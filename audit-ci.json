@@ -1,5 +1,5 @@
 {
   "high": true,
   "skipDev": true,
-  "allowlist": [""]
+  "allowlist": []
 }
