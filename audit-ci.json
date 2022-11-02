@@ -1,5 +1,5 @@
 {
   "high": true,
   "skipDev": true,
-  "allowlist": ["GHSA-f8q6-p94x-37v3"]
+  "allowlist": []
 }
