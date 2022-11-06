@@ -6,6 +6,9 @@ module.exports = {
     "@storybook/addon-links/",
     "@storybook/addon-viewport/",
     "@storybook/addon-knobs/",
-    "@storybook/addon-a11y/"
+    "@storybook/addon-a11y/",
+    "@storybook/addon-toolbars",
+    "@storybook/components",
+    "@storybook/api"
   ]
 };
