@@ -1,6 +1,9 @@
 import React from "react";
 import { addDecorator, addParameters } from "@storybook/react";
-import { DocsPage, DocsContainer } from "@storybook/addon-docs/blocks";
+import {
+  DocsPage,
+  DocsContainer as BaseContainer
+} from "@storybook/addon-docs/blocks";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
@@ -24,9 +27,14 @@ const FlexItem = styled.div`
   margin: 0 10px;
 `;
 
+const getTheme = (context) => {
+  const theme = context.parameters.theme || context.globals.theme;
+  return theme === "default" ? systemtheme : systemThemeCollapsed;
+};
+
 const ThemeDecorator = (storyFn, context) => {
   const theme = context.parameters.theme || context.globals.theme;
-  const storyTheme = theme === "default" ? systemtheme : systemThemeCollapsed;
+  const storyTheme = getTheme(context);
 
   switch (theme) {
     case "side-by-side":
@@ -78,6 +86,16 @@ export const globalTypes = {
       ]
     }
   }
+};
+
+export const DocsContainer = ({ children, context }) => {
+  const storyTheme = getTheme(context);
+
+  return (
+    <BaseContainer context={context}>
+      <ThemeProvider theme={storyTheme}>{children}</ThemeProvider>
+    </BaseContainer>
+  );
 };
 
 addDecorator(withA11y);
