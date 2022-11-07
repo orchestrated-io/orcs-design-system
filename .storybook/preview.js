@@ -30,7 +30,7 @@ const ThemeDecorator = (storyFn, context) => {
     case "side-by-side":
       return (
         <FlexWrapper>
-          <FlexItem>
+          <FlexItem key="default">
             <ThemeProvider theme={systemtheme}>
               <>
                 <GlobalStyles />
@@ -39,7 +39,7 @@ const ThemeDecorator = (storyFn, context) => {
             </ThemeProvider>
           </FlexItem>
 
-          <FlexItem>
+          <FlexItem key="collapsed">
             <ThemeProvider theme={systemThemeCollapsed}>
               <>
                 <GlobalStyles />
