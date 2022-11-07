@@ -16,10 +16,12 @@ const FlexWrapper = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
 `;
 
 const FlexItem = styled.div`
-  width: 45%;
+  flex: 1;
+  margin: 0 10px;
 `;
 
 const ThemeDecorator = (storyFn, context) => {
