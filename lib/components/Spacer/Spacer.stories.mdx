@@ -35,7 +35,7 @@ Generally, `Spacer` should be used only when there is a need to specify precise 
 
 <Preview>
   <Story name="Margin">
-      <Spacer my={3}>
+    <Spacer my={3}>
       <Avatar
         title="Ayden Lundgre"
         subtitle="Senior Business Analyst"
@@ -46,7 +46,7 @@ Generally, `Spacer` should be used only when there is a need to specify precise 
         title="Ayden Lundgre"
         subtitle="Senior Business Analyst"
         initials="AL"
-        />
+      />
       <Avatar
         title={<StyledLink href="#">Ayden Lundgre</StyledLink>}
         subtitle="Senior Business Analyst"
@@ -67,15 +67,15 @@ Generally, `Spacer` should be used only when there is a need to specify precise 
         initials="AL"
         image="https://uifaces.co/our-content/donated/gPZwCbdS.jpg"
       />
-      </Spacer>
-</Story>
+    </Spacer>
+  </Story>
 </Preview>
 
 ### Padding
 
 <Preview>
   <Story name="Padding">
-      <Spacer padding={3}>
+    <Spacer padding={3}>
       <Avatar
         title="Ayden Lundgre"
         subtitle="Senior Business Analyst"
@@ -86,7 +86,7 @@ Generally, `Spacer` should be used only when there is a need to specify precise 
         title="Ayden Lundgre"
         subtitle="Senior Business Analyst"
         initials="AL"
-        />
+      />
       <Avatar
         title={<StyledLink href="#">Ayden Lundgre</StyledLink>}
         subtitle="Senior Business Analyst"
@@ -107,23 +107,6 @@ Generally, `Spacer` should be used only when there is a need to specify precise 
         initials="AL"
         image="https://uifaces.co/our-content/donated/gPZwCbdS.jpg"
       />
-      </Spacer>
+    </Spacer>
   </Story>
 </Preview>
-
-## Upgrading
-
-This component is a **breaking change** that replaces the [previous Layout component](./?path=/docs/layout--page)'s `childSpacing` properties. Use the following table as a guide to convert from the old properties to new `Spacer` properties. Refer to [systemtheme.js](https://github.com/orchestrated-io/orca-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js) for values.
-
-For `childChildSpacing` properties, wrap `<Spacer>` directly around the items you want to target and specify the desired properties.
-
-### `Spacer` properties
-
-| **Layout**                      | **Spacer**         |
-| ------------------------------- | ------------------ |
-| `childVerticalSpacing`          | `my={3}` |
-| `childVerticalSpacingHalf`      | `my={2}`           |
-| `childVerticalSpacingQuarter`   | `my={1}`           |
-| `childHorizontalSpacing`        | `mx={3}` |
-| `childHorizontalSpacingHalf`    | `mx={2}`           |
-| `childHorizontalSpacingQuarter` | `mx={1}`           |
