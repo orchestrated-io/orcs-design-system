@@ -1,8 +1,8 @@
-import systemtheme from "../../systemtheme";
 import { Meta, Typeset, Preview, Story } from "@storybook/addon-docs/blocks";
 import { H1, H2, H3, H4, H5, H6, P, Text, Quote, Small, Code } from ".";
 import Box from "../Box";
 import Spacer from "../Spacer";
+import { themeGet } from "@styled-system/theme-get";
 
 <Meta title="System/Typography" />
 
@@ -24,68 +24,89 @@ By default, the design system uses **Open Sans**: https://fonts.google.com/speci
 
 Font defaults can be changed via [systemtheme.js](https://github.com/orchestrated-io/orca-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js).
 
-<Typeset fontSizes={systemtheme.fontSizes} fontFamily={systemtheme.font} />
+<Typeset
+  fontSizes={[
+    themeGet("fontSizes.0"),
+    themeGet("fontSizes.1"),
+    themeGet("fontSizes.2"),
+    themeGet("fontSizes.3"),
+    themeGet("fontSizes.4"),
+    themeGet("fontSizes.5"),
+    themeGet("fontSizes.6"),
+    themeGet("fontSizes.7"),
+    themeGet("fontSizes.8"),
+    themeGet("fontSizes.9")
+  ]}
+  fontFamily={themeGet("font")}
+/>
 
 ## Headings
+
 These use `<H1>` to `<H6>` tags. For semantic and accessibility usage guidelines, refer to [the W3C headings guide](https://www.w3.org/WAI/tutorials/page-structure/headings/) and its related WCAG resources.
 
 <Preview>
-<Story name="Headings/H1 to H6">
-<Spacer my={4}>
-<Box>
-<H1>Standard H1</H1>
-<H1 weight="light">Light version</H1>
-<H1 weight="bold">Bold version</H1>
-</Box>
-<Box>
-<H2>Standard H2</H2>
-<H2 weight="light">Light version</H2>
-<H2 weight="bold">Bold version</H2>
-</Box>
-<Box>
-<H3>Standard H3</H3>
-<H3 weight="light">Light version</H3>
-<H3 weight="bold">Bold version</H3>
-</Box>
-<Box>
-<H4>Standard H4</H4>
-<H4 weight="light">Light version</H4>
-<H4 weight="bold">Bold version</H4>
-</Box>
-<Box>
-<H5>Standard H5</H5>
-<H5 weight="light">Light version</H5>
-<H5 weight="bold">Bold version</H5>
-</Box>
-<Box>
-<H6>Standard H6</H6>
-<H6 weight="light">Light version</H6>
-<H6 weight="bold">Bold version</H6>
-</Box>
-</Spacer>
-</Story>
+  <Story name="Headings/H1 to H6">
+    <Spacer my={4}>
+      <Box>
+        <H1>Standard H1</H1>
+        <H1 weight="light">Light version</H1>
+        <H1 weight="bold">Bold version</H1>
+      </Box>
+      <Box>
+        <H2>Standard H2</H2>
+        <H2 weight="light">Light version</H2>
+        <H2 weight="bold">Bold version</H2>
+      </Box>
+      <Box>
+        <H3>Standard H3</H3>
+        <H3 weight="light">Light version</H3>
+        <H3 weight="bold">Bold version</H3>
+      </Box>
+      <Box>
+        <H4>Standard H4</H4>
+        <H4 weight="light">Light version</H4>
+        <H4 weight="bold">Bold version</H4>
+      </Box>
+      <Box>
+        <H5>Standard H5</H5>
+        <H5 weight="light">Light version</H5>
+        <H5 weight="bold">Bold version</H5>
+      </Box>
+      <Box>
+        <H6>Standard H6</H6>
+        <H6 weight="light">Light version</H6>
+        <H6 weight="bold">Bold version</H6>
+      </Box>
+    </Spacer>
+  </Story>
 </Preview>
 
 ## Body text
 
 <Preview>
-<Story name="Body text/Paragraph">
-<Spacer my={3}>
-<P>Regular paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet at elit sit amet iaculis. Cras eget sapien et ligula mollis placerat non venenatis dolor. Fusce id mi risus. Ut sit amet diam in dui maximus sagittis a at dolor. Cras volutpat est nec arcu interdum pulvinar in vitae erat.</P>
-<P textAlign="center">Centered paragraph text.</P>
-<P textAlign="right">Right-aligned paragraph text.</P>
-<P weight="light">Light paragraph text</P>
-<P sizing="small">Small paragraph text</P>
-</Spacer>
-</Story>
+  <Story name="Body text/Paragraph">
+    <Spacer my={3}>
+      <P>
+        Regular paragraph text. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Sed aliquet at elit sit amet iaculis. Cras eget sapien
+        et ligula mollis placerat non venenatis dolor. Fusce id mi risus. Ut sit
+        amet diam in dui maximus sagittis a at dolor. Cras volutpat est nec arcu
+        interdum pulvinar in vitae erat.
+      </P>
+      <P textAlign="center">Centered paragraph text.</P>
+      <P textAlign="right">Right-aligned paragraph text.</P>
+      <P weight="light">Light paragraph text</P>
+      <P sizing="small">Small paragraph text</P>
+    </Spacer>
+  </Story>
 </Preview>
 
 To render text in a `span` HTML element without the paragraph formatting, use the `Text` component. This is the preferred usage for short text.
 
 <Preview>
-<Story name="Body text/Text">
-<Text>Hello world</Text>
-</Story>
+  <Story name="Body text/Text">
+    <Text>Hello world</Text>
+  </Story>
 </Preview>
 
 ## Text styling
@@ -95,26 +116,30 @@ To render text in a `span` HTML element without the paragraph formatting, use th
 To render type smaller or larger, use `sizing="small"` or `sizing="large"` on a heading, or if needed you can use `fontSize` property or the `Small` element as demonstrated below. Unless it is for a very specific purpose, strongly recommend minimising the resizing of text and simply using the appropriate type element the next size up (or down) on the design system scale.
 
 <Preview>
-<Story name="Styling/Sizing">
-<Spacer my={3}>
-<H5 sizing="small">Small variant of H5</H5>
-<H5 sizing="large">Large variant of H5</H5>
-<H5 fontSize={2}>Even smaller H5, scaled down two steps in the fontSize array</H5>
-<P fontSize="10px">Very small text using a specific fontSize value</P>
-<Small>Small text using the Small component</Small>
-</Spacer>
-</Story>
+  <Story name="Styling/Sizing">
+    <Spacer my={3}>
+      <H5 sizing="small">Small variant of H5</H5>
+      <H5 sizing="large">Large variant of H5</H5>
+      <H5 fontSize={2}>
+        Even smaller H5, scaled down two steps in the fontSize array
+      </H5>
+      <P fontSize="10px">Very small text using a specific fontSize value</P>
+      <Small>Small text using the Small component</Small>
+    </Spacer>
+  </Story>
 </Preview>
 
 To render type with emphasis, use `weight="bold"` or wrap the type in a `<strong>` tag.
 
 <Preview>
-<Story name="Styling/Emphasis">
-<Spacer my={3}>
-<P weight="bold">Bold paragraph text lorem ipsum dolor sit amet</P>
-<P>Only <strong>partially bolded</strong> paragraph</P>
-</Spacer>
-</Story>
+  <Story name="Styling/Emphasis">
+    <Spacer my={3}>
+      <P weight="bold">Bold paragraph text lorem ipsum dolor sit amet</P>
+      <P>
+        Only <strong>partially bolded</strong> paragraph
+      </P>
+    </Spacer>
+  </Story>
 </Preview>
 
 ### Colours
@@ -122,29 +147,35 @@ To render type with emphasis, use `weight="bold"` or wrap the type in a `<strong
 To apply colour to text, use the `color` property in the `Text` component. Usage should be limited to the colours in the example below except in very specific design cases.
 
 <Preview>
-<Story name="Styling/Colours">
-<Spacer my={2}>
-<P color="grey">Grey-coloured text</P>
-<P color="success">Success-coloured text</P>
-<P color="warning">Warning-coloured text</P>
-<P color="danger">Danger-coloured text</P>
-<Box bg="greyDarker" p="r">
-    <P color="white">White text for dark backgrounds</P>
-</Box>
-</Spacer>
-</Story>
+  <Story name="Styling/Colours">
+    <Spacer my={2}>
+      <P color="grey">Grey-coloured text</P>
+      <P color="success">Success-coloured text</P>
+      <P color="warning">Warning-coloured text</P>
+      <P color="danger">Danger-coloured text</P>
+      <Box bg="greyDarker" p="r">
+        <P color="white">White text for dark backgrounds</P>
+      </Box>
+    </Spacer>
+  </Story>
 </Preview>
 
 ## Miscellaneous
 
 <Preview>
-<Story name="Miscellaneous/Blockquote">
-<Quote>"Used to display block quotes lorem ipsum dolor sit amet" <em> - Adam, 2018</em></Quote>
-</Story>
+  <Story name="Miscellaneous/Blockquote">
+    <Quote>
+      "Used to display block quotes lorem ipsum dolor sit amet"{" "}
+      <em> - Adam, 2018</em>
+    </Quote>
+  </Story>
 </Preview>
 
 <Preview>
-<Story name="Miscellaneous/Code">
-<Code>&lt;html&gt; &lt;head&gt; &lt;body&gt; Hello I am a code block &lt;/body&gt; &lt;/head&gt; &lt;/html&gt;</Code>
-</Story>
+  <Story name="Miscellaneous/Code">
+    <Code>
+      &lt;html&gt; &lt;head&gt; &lt;body&gt; Hello I am a code block
+      &lt;/body&gt; &lt;/head&gt; &lt;/html&gt;
+    </Code>
+  </Story>
 </Preview>
