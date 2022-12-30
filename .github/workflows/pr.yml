@@ -30,6 +30,11 @@ jobs:
       - name: run security audit of npm packages
         run: |
           npm run audit-ci
+      - name: run security check on code
+        id: code_security_scan
+        run: |
+          pip install --upgrade njsscan
+          njsscan .
       - name: scan for exposed aws secrets
         run: |
           git clone https://github.com/awslabs/git-secrets.git
