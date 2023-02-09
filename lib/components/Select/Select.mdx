@@ -3,11 +3,11 @@ import Select from "../Select";
 
 # Select
 
-[Default](#default) | [Multi-select](#multi-select) | [Inverted](#inverted) | [With default value](#with-selected-defaultvalue) | [With creatable](#with-creatable) | [With async](#with-async) | [With grouped options](#with-grouped-options) | [Properties](#properties)
+[Default](#default) | [Disabled](#disabled) | [Multi-select](#multi-select) | [Inverted](#inverted) | [With default value](#with-selected-defaultvalue) | [With creatable](#with-creatable) | [With async](#with-async) | [With grouped options](#with-grouped-options) | [Properties](#properties)
 
-This component uses React Select: <https://react-select.com/home>
+This component uses React Select: <https://react-select.com/home>. See link for all uses and props.
 
-Usage of this component has changed since we have upgraded to the latest version of `react-select`. For example, field values are now defined as separate objects. for example:
+Select values are defined as separate objects. for example:
 
        const options = [
       { value: 'caramel', label: 'Caramel' },
@@ -16,12 +16,16 @@ Usage of this component has changed since we have upgraded to the latest version
       { value: 'vanilla', label: 'Vanilla' }
      ]
 
-For a full list of the changes, see <https://react-select.com/upgrade-guide>.
-
 ## Default
 
 <Preview>
   <Story id="components-select--default-select" />
+</Preview>
+
+## Disabled
+
+<Preview>
+  <Story id="components-select--disabled-select" />
 </Preview>
 
 ## Specific Height Select
