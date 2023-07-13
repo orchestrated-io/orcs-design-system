@@ -7,7 +7,7 @@ on:
       - "*/*" # matches every branch containing a single '/'
       - "!master" # excludes master
   pull_request:
-    types: [assigned, opened]
+    types: [opened, synchronize]
 
 jobs:
   build:
