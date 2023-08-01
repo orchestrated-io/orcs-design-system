@@ -1,0 +1,34 @@
+import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import SideNav from ".";
+
+# SideNav
+
+This component is used for navigating the app and for providing extra options which are expanded and shown in the sidebar.
+
+Expanded sidebar supports any content you'd like to put in them and the panel will scroll vertically if the content is taller than browser height.
+
+Make sure you use an appropriate icon for each tab so that the intent of that tab section is conveyed as best as possible, e.g. filter icon for filters, cog icon for settings.
+
+Sidenav supports passing in an items array, which has to contain an icon and a name for the nav item and then one of either a component (if the nav item is expanding the side nav) or a react router link (if the nav item is just linking to another page/route), like so:
+
+    const items = [
+      {
+        icon: <i className="fa fa-user" />,
+        name: "My profile",
+        component: () => <Link to="/profile">Profile Link</Link>
+      },
+      {
+        icon: <i className="fa fa-cog" />,
+        name: "Settings",
+        component: <SettingsComponent />
+      }
+      // Add more items as needed...
+    ];
+
+<Preview>
+  <Story id="components-sidenav--sidebar-navigation" />
+</Preview>
+
+## Properties
+
+<Props of={SideNav} />
