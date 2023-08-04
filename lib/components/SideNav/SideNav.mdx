@@ -13,14 +13,31 @@ Sidenav supports passing in an items array, which has to contain an icon and a n
 
     const items = [
       {
-        icon: <i className="fa fa-user" />,
+        iconName: "user",
         name: "My profile",
-        component: () => <Link to="/profile">Profile Link</Link>
+        component: LinkComponent,
+        actionType: "link" // Use 'link' for a React Router link
       },
       {
-        icon: <i className="fa fa-cog" />,
-        name: "Settings",
-        component: <SettingsComponent />
+        iconName: "bell",
+        name: "Notifications",
+        badgeNumber: "3", // Specify a badgeNumber if you want to have a count on this item
+        component: Notifications,
+        actionType: "component" // Use 'component' for a component
+      },
+      {
+        iconName: "chart-bar",
+        name: "Browse teams",
+        large: true, // Specify large if you want the expanded sidebar to be wider
+        component: BrowseTeams,
+        actionType: "component" // Use 'component' for a component
+      },
+      {
+        iconName: "times-circle",
+        name: "Logout",
+        bottomAligned: true, // Specify bottomAligned if this item should appear at bottom of SideNav
+        onClick: () => alert("Logout function"), // Specify the onClick function for the button
+        actionType: "button" // Use 'button' for a button with onClick event
       }
       // Add more items as needed...
     ];
