@@ -15,21 +15,21 @@ Sidenav supports passing in an items array, which has to contain an icon and a n
       {
         iconName: "user",
         name: "My profile",
-        link: "/home", // Specify the link for React Router
+        component: LinkComponent,
         actionType: "link" // Use 'link' for a React Router link
       },
       {
         iconName: "bell",
         name: "Notifications",
         badgeNumber: "3", // Specify a badgeNumber if you want to have a count on this item
-        component: <Notifications />,
+        component: Notifications,
         actionType: "component" // Use 'component' for a component
       },
       {
         iconName: "chart-bar",
         name: "Browse teams",
         large: true, // Specify large if you want the expanded sidebar to be wider
-        component: <BrowseTeams />,
+        component: BrowseTeams,
         actionType: "component" // Use 'component' for a component
       },
       {
