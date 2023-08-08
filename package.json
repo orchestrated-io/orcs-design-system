@@ -38,7 +38,7 @@
     "deploy-storybook": "storybook-to-ghpages",
     "playroom": "playroom start",
     "build-playroom": "playroom build",
-    "percy:storybook": "storybook build && percy storybook --widths=1280"
+    "percy:storybook": "storybook build && percy storybook --config .percy.yaml"
   },
   "dependencies": {
     "@styled-system/css": "^5.1.5",
