@@ -1,5 +1,8 @@
-import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Canvas, Controls, Meta } from "@storybook/addon-docs";
 import StatusDot from ".";
+import * as stories from "./StatusDot.stories";
+
+<Meta of={stories} />
 
 # StatusDot
 
@@ -11,22 +14,22 @@ The horizontal layout and tooltip functionality comes from other components (Fle
 
 ## Default StatusDot
 
-<Preview>
+<Canvas>
   <Story id="components-statusdot--default-status-dot" />
-</Preview>
+</Canvas>
 
 ## Colour
 
-<Preview>
+<Canvas>
   <Story id="components-statusdot--colour" />
-</Preview>
+</Canvas>
 
 ## With icon
 
-<Preview>
+<Canvas>
   <Story id="components-statusdot--with-icon" />
-</Preview>
+</Canvas>
 
 ## Properties
 
-<Props of={StatusDot} />
+<Controls component={StatusDot} />

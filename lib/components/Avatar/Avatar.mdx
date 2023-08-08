@@ -1,5 +1,8 @@
 import Avatar from ".";
-import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Controls, Meta, Canvas } from "@storybook/addon-docs";
+import * as stories from "./Avatar.stories";
+
+<Meta of={stories} />
 
 # Avatar
 
@@ -21,89 +24,89 @@ Follow example code below to achieve desired option.
 
 ## Default avatar
 
-<Preview>
+<Canvas>
   <Story id="components-avatar--default-avatar" />
-</Preview>
+</Canvas>
 
 ## No image source
 
 In cases where an image is not available, fall back is to show initials.
 
-<Preview>
+<Canvas>
   <Story id="components-avatar--no-image" />
-</Preview>
+</Canvas>
 
 ## Image only
 
 In cases title and subtitle are not provided, show image only.
 
-<Preview>
+<Canvas>
   <Story id="components-avatar--image-only" />
-</Preview>
+</Canvas>
 
 ## Icon only
 
 In cases where neither an image or initials are available, fall back is to show icon.
 
-<Preview>
+<Canvas>
   <Story id="components-avatar--icon-only" />
-</Preview>
+</Canvas>
 
 ## Name as link
 
 This component can support a link for the name.
 
-<Preview>
+<Canvas>
   <Story id="components-avatar--name-link" />
-</Preview>
+</Canvas>
 
 ## Small size
 
-<Preview>
+<Canvas>
   <Story id="components-avatar--small" />
-</Preview>
+</Canvas>
 
 ## Large size
 
-<Preview>
+<Canvas>
   <Story id="components-avatar--large" />
-</Preview>
+</Canvas>
 
 ## Title Level
 
 This component supports defining the heading level of the title. Options are H1, H2, H3 (default), H4, H5, H6.
 
-<Preview>
+<Canvas>
   <Story id="components-avatar--title-level" />
-</Preview>
+</Canvas>
 
 ## Custom subtitle content
 
-<Preview>
+<Canvas>
   <Story id="components-avatar--subtitle-content" />
-</Preview>
+</Canvas>
 
 ## With local time
 
-<Preview>
+<Canvas>
   <Story id="components-avatar--local-time" />
-</Preview>
+</Canvas>
 
 ## Inverted
 
 For when Avatar is used on a dark background.
 
-<Preview>
+<Canvas>
   <Story id="components-avatar--inverted" />
-</Preview>
+</Canvas>
 
 ## Alternate Shapes
 
 Use a different shape when you would like to distinguish between an avatar for a person, and an avatar for another construct, like a team or tag.
 
-<Preview>
+<Canvas>
   <Story id="components-avatar--alternate-shapes" />
-</Preview>
+</Canvas>
 
 ## Properties
 
@@ -115,4 +118,4 @@ You can use two custom props: `sizing` and `type`.
 
 By default, we've set certain values on `Avatar` properties as documented in the table below. If these properties are not specified they will take on the default values.
 
-<Props of={Avatar} />
+<Controls />

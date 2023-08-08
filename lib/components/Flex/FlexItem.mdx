@@ -1,0 +1,36 @@
+import { Story, Meta, Canvas, Controls } from "@storybook/addon-docs";
+import { FlexItem } from ".";
+import Button from "../Button";
+import Icon from "../Icon";
+import * as stories from "./FlexItem.stories";
+
+<Meta of={stories} />
+
+# FlexItem
+
+[Properties](#properties) | [Examples](#examples) | [Upgrading](#upgrading)
+
+To use `FlexItem` to control the spacing between children of `Flex` you must also import it:
+`import { FlexItem } from "orca-design-system"`.
+
+### Using `FlexItem`
+
+You don't necessarily need to use `<FlexItem>` as the direct child element to `<Flex>` unless you need to apply specific `flexbox` properties to the item. In most cases, once you set the desired properties on `<Flex>` it will layout the child elements as intended, whether these be `<FlexItem>` or any other component like `<Box>` or even standard HTML like a `<div>` or `<span>`. However, if you want to use the flex-specific CSS properties for items within the container, like `flex` or `align-self`, you will need to use `FlexItem` to apply these properties.
+
+<Canvas>
+  <Story id="components-flexitem--basic-flex-item" />
+</Canvas>
+
+## Upgrading
+
+This component is a **breaking change** that replaces the [previous Flex component](https://www.npmjs.com/package/styled-flex-component). Use the following table as a guide to convert from the old properties to new `Flex` properties. Refer to [systemtheme.js](https://github.com/orchestrated-io/orca-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js) for values.
+
+### `FlexItem` properties
+
+| **Old**    | **New**          |
+| ---------- | ---------------- |
+| `order`    | `order`          |
+| `basis`    | `flexBasis`      |
+| `grow`     | `flexGrow`       |
+| `shrink`   | `flexShrink`     |
+| `noShrink` | `flexShrink="0"` |

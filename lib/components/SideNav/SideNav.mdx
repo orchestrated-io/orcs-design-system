@@ -1,5 +1,8 @@
-import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Canvas, Controls, Meta } from "@storybook/addon-docs";
 import SideNav from ".";
+import * as stories from "./SideNav.stories";
+
+<Meta of={stories} />
 
 # SideNav
 
@@ -11,41 +14,45 @@ Make sure you use an appropriate icon for each tab so that the intent of that ta
 
 Sidenav supports passing in an items array, which has to contain an icon and a name for the nav item and then one of either a component (if the nav item is expanding the side nav) or a react router link (if the nav item is just linking to another page/route), like so:
 
-    const items = [
-      {
-        iconName: "user",
-        name: "My profile",
-        component: LinkComponent,
-        actionType: "link" // Use 'link' for a React Router link
-      },
-      {
-        iconName: "bell",
-        name: "Notifications",
-        badgeNumber: "3", // Specify a badgeNumber if you want to have a count on this item
-        component: Notifications,
-        actionType: "component" // Use 'component' for a component
-      },
-      {
-        iconName: "chart-bar",
-        name: "Browse teams",
-        large: true, // Specify large if you want the expanded sidebar to be wider
-        component: BrowseTeams,
-        actionType: "component" // Use 'component' for a component
-      },
-      {
-        iconName: "times-circle",
-        name: "Logout",
-        bottomAligned: true, // Specify bottomAligned if this item should appear at bottom of SideNav
-        onClick: () => alert("Logout function"), // Specify the onClick function for the button
-        actionType: "button" // Use 'button' for a button with onClick event
-      }
-      // Add more items as needed...
-    ];
+```js run
+const items = [
+  {
+    iconName: "user",
+    name: "My profile",
+    component: LinkComponent,
+    actionType: "link" // Use 'link' for a React Router link
+  },
+  {
+    iconName: "bell",
+    name: "Notifications",
+    badgeNumber: "3", // Specify a badgeNumber if you want to have a count on this item
+    component: Notifications,
+    actionType: "component" // Use 'component' for a component
+  },
+  {
+    iconName: "chart-bar",
+    name: "Browse teams",
+    large: true, // Specify large if you want the expanded sidebar to be wider
+    component: BrowseTeams,
+    actionType: "component" // Use 'component' for a component
+  },
+  {
+    iconName: "times-circle",
+    name: "Logout",
+    bottomAligned: true, // Specify bottomAligned if this item should appear at bottom of SideNav
+    onClick: function () {
+      alert("Logout function");
+    }, // Specify the onClick function for the button
+    actionType: "button" // Use 'button' for a button with onClick event
+  }
+  // Add more items as needed...
+];
+```
 
-<Preview>
+<Canvas>
   <Story id="components-sidenav--sidebar-navigation" />
-</Preview>
+</Canvas>
 
 ## Properties
 
-<Props of={SideNav} />
+<Controls component={SideNav} />

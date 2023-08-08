@@ -1,5 +1,8 @@
-import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Meta, Canvas, Controls } from "@storybook/addon-docs";
 import Loading from ".";
+import * as stories from "./Loading.stories";
+
+<Meta of={stories} />
 
 # Loading
 
@@ -7,34 +10,34 @@ import Loading from ".";
 
 ## Default
 
-<Preview>
+<Canvas>
   <Story id="components-loading--default-loading" />
-</Preview>
+</Canvas>
 
 ## Large
 
-<Preview>
+<Canvas>
   <Story id="components-loading--large-loading" />
-</Preview>
+</Canvas>
 
 ## Centered
 
-<Preview>
+<Canvas>
   <Story id="components-loading--centered-loading" />
-</Preview>
+</Canvas>
 
 ## Coloured
 
-<Preview>
+<Canvas>
   <Story id="components-loading--coloured-loading" />
-</Preview>
+</Canvas>
 
 ## Inverted
 
-<Preview>
+<Canvas>
   <Story id="components-loading--inverted-loading" />
-</Preview>
+</Canvas>
 
 ## Properties
 
-<Props of={Loading} />
+<Controls component={Loading} />

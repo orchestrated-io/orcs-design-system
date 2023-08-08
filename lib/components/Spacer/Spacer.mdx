@@ -1,0 +1,44 @@
+import { Meta, Story, Canvas, Controls } from "@storybook/addon-docs";
+import Spacer from ".";
+import Avatar from "../Avatar";
+import Button from "../Button";
+import Box from "../Box";
+import Flex from "../Flex";
+import StyledLink from "../StyledLink";
+import * as stories from "./Spacer.stories";
+
+<Meta of={stories} />
+
+# Spacer
+
+[Properties](#properties) | [Examples](#examples) | [Upgrading](#upgrading)
+
+`Spacer` is a component that applies `layout` and `space` properties to its children. This can be useful in conjunction with components like `Box` or `Flex`, where you may want to specify `padding` and `margin` for all children without having to do so individually for each child.
+
+This replaces the `Layout` functionality for `childVerticalSpacing` and similar properties.
+
+Generally, `Spacer` should be used only when there is a need to specify precise spacing between items. In most such cases, `Grid` may be more semantically correct so it is recommended to investigate that option first and to use this component sparingly.
+
+### For reference, see:
+
+- [space on Styled-System](https://styled-system.com/table#space)
+- [layout on Styled-System](https://styled-system.com/table#layout)
+- [systemtheme.js](https://github.com/orchestrated-io/orca-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js) (our arrays for design system values)
+
+## Examples
+
+### Margin
+
+<Canvas>
+  <Story id="components-spacer--margin-spacer" />
+</Canvas>
+
+### Padding
+
+<Canvas>
+  <Story id="components-spacer--padding-spacer" />
+</Canvas>
+
+## Properties
+
+`Spacer` can use all `layout` and `space` properties. Note that these will override the values set for the child's properties, if any.

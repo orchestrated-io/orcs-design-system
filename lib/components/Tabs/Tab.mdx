@@ -1,0 +1,33 @@
+import * as stories from "./Tab.stories";
+import { Meta, Story, Controls, Canvas } from "@storybook/addon-docs";
+import { TabsContainer, Tab } from ".";
+
+<Meta of={stories} />
+
+[Default tabs](#tabs) | [Properties](#properties)
+
+# Tabs
+
+Tabs are intended to provide a way to navigate between distinct sections within the layout without leaving the page or triggering a page refresh.
+
+## Active tab
+
+<Canvas>
+  <Story id="components-tabs-tab--active-tab" />
+</Canvas>
+
+## With notifications tab
+
+<Canvas>
+  <Story id="components-tabs-tab--with-notifications-tab" />
+</Canvas>
+
+## With popover tab
+
+<Canvas>
+  <Story id="components-tabs-tab--with-popover-tab" />
+</Canvas>
+
+## Properties
+
+<Controls />

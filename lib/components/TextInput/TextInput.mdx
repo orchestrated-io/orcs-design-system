@@ -1,5 +1,8 @@
-import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Canvas, Controls, Meta } from "@storybook/addon-docs";
 import TextInput from ".";
+import * as stories from "./TextInput.stories";
+
+<Meta of={stories} />
 
 # TextInput
 
@@ -15,34 +18,34 @@ Ensure to use a unique id for each input, and helpful placeholder text which sho
 
 ## Default
 
-<Preview>
+<Canvas>
   <Story id="components-textinput--default-text-input" />
-</Preview>
+</Canvas>
 
 ## Number
 
-<Preview>
+<Canvas>
   <Story id="components-textinput--number" />
-</Preview>
+</Canvas>
 
 ## Floating label
 
-<Preview>
+<Canvas>
   <Story id="components-textinput--floating-label" />
-</Preview>
+</Canvas>
 
 ## With icons
 
-<Preview>
+<Canvas>
   <Story id="components-textinput--with-icons" />
-</Preview>
+</Canvas>
 
 ## Disabled
 
-<Preview>
+<Canvas>
   <Story id="components-textinput--disabled" />
-</Preview>
+</Canvas>
 
 ## Properties
 
-<Props of={TextInput} />
+<Controls />
