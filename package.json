@@ -38,7 +38,7 @@
     "deploy-storybook": "storybook-to-ghpages",
     "playroom": "playroom start",
     "build-playroom": "playroom build",
-    "percy:storybook": "storybook build && percy-storybook --widths=1280"
+    "percy:storybook": "storybook build && percy storybook --widths=1280"
   },
   "dependencies": {
     "@styled-system/css": "^5.1.5",
@@ -75,6 +75,7 @@
     "@fortawesome/react-fontawesome": "^0.1.14",
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
+    "@percy/cli": "^1.26.3",
     "@percy/storybook": "^4.3.6",
     "@storybook/addon-a11y": "^7.2.1",
     "@storybook/addon-actions": "^7.2.1",
