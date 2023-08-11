@@ -33,6 +33,13 @@ Sidenav supports passing in an items array, which has to contain an icon and a n
         actionType: "component" // Use 'component' for a component
       },
       {
+        iconName: "calendar-alt",
+        name: "Calendar",
+        pageSpecific: true, // Specify pageSpecific if you want this item to appear below a divider line separating common nav items from page/route specific items
+        component: Calendar,
+        actionType: "component" // Use 'component' for a component
+      },
+      {
         iconName: "times-circle",
         name: "Logout",
         bottomAligned: true, // Specify bottomAligned if this item should appear at bottom of SideNav
