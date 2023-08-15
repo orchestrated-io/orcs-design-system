@@ -1,17 +1,13 @@
 import React from "react";
-import { addDecorator, addParameters } from "@storybook/react";
-import {
-  DocsPage,
-  DocsContainer as BaseContainer
-} from "@storybook/addon-docs/blocks";
+import { DocsPage, DocsContainer as BaseContainer } from "@storybook/blocks";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
-import { withA11y } from "@storybook/addon-a11y";
 import { default as GlobalStyles } from "../lib/GlobalStyles";
 import { default as systemtheme } from "../lib/systemtheme";
 import { default as systemThemeCollapsed } from "../lib/systemThemeCollapsed";
 import styled, { ThemeProvider } from "styled-components";
+import { get } from "lodash";
 
 library.add(far, fas);
 
@@ -27,16 +23,19 @@ const FlexItem = styled.div`
   margin: 0 10px;
 `;
 
+const getThemeName = (context) =>
+  get(context, "parameters.theme") || get(context, "globals.theme");
+
 const getTheme = (context) => {
-  const theme = context.parameters.theme || context.globals.theme;
-  return theme === "default" ? systemtheme : systemThemeCollapsed;
+  const themeName = getThemeName(context);
+  return themeName === "default" ? systemtheme : systemThemeCollapsed;
 };
 
 const ThemeDecorator = (storyFn, context) => {
-  const theme = context.parameters.theme || context.globals.theme;
+  const themeName = getThemeName(context);
   const storyTheme = getTheme(context);
 
-  switch (theme) {
+  switch (themeName) {
     case "side-by-side":
       return (
         <FlexWrapper>
@@ -98,10 +97,8 @@ export const DocsContainer = ({ children, context }) => {
   );
 };
 
-addDecorator(withA11y);
-addDecorator(ThemeDecorator);
-
-addParameters({
+export const decorators = [ThemeDecorator];
+export const parameters = {
   options: {
     showRoots: true
   },
@@ -109,5 +106,6 @@ addParameters({
     container: DocsContainer,
     page: DocsPage
   },
+  a11y: { disable: false },
   viewMode: "docs"
-});
+};

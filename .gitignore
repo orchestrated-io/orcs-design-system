@@ -29,3 +29,5 @@ yarn-error.log*
 
 # interplay
 /interplay/*/
+
+.build_storybook

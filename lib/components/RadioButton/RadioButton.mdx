@@ -1,5 +1,8 @@
-import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Meta, Canvas, Controls } from "@storybook/addon-docs";
 import RadioButton from ".";
+import * as stories from "./RadioButton.stories";
+
+<Meta of={stories} />
 
 # Radio Button
 
@@ -9,34 +12,34 @@ The default radio button (or inverted if on dark background) should be used for 
 
 ## Default
 
-<Preview>
+<Canvas>
   <Story id="components-radiobutton--default-radio-button" />
-</Preview>
+</Canvas>
 
 ## Colour
 
-<Preview>
+<Canvas>
   <Story id="components-radiobutton--colour" />
-</Preview>
+</Canvas>
 
 ## Checked
 
-<Preview>
+<Canvas>
   <Story id="components-radiobutton--checked" />
-</Preview>
+</Canvas>
 
 ## Disabled
 
-<Preview>
+<Canvas>
   <Story id="components-radiobutton--disabled" />
-</Preview>
+</Canvas>
 
 ## Inverted
 
-<Preview>
+<Canvas>
   <Story id="components-radiobutton--inverted" />
-</Preview>
+</Canvas>
 
 ## Properties
 
-<Props of={RadioButton} />
+<Controls component={RadioButton} />

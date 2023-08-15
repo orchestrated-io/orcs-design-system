@@ -1,8 +1,8 @@
-import * as stories from "./ButtonGroup.stories.js";
-import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Meta, Story, Canvas, Controls } from "@storybook/addon-docs";
 import { ButtonGroupContainer, ButtonGroupItem } from ".";
+import * as stories from "./ButtonGroup.stories";
 
-<Meta title="Components/ButtonGroup" component={ButtonGroupContainer} />
+<Meta of={stories} />
 
 # ButtonGroup
 
@@ -10,15 +10,12 @@ import { ButtonGroupContainer, ButtonGroupItem } from ".";
 
 ButtonGroups should be used for switching views. Acts like radio buttons, in that only one can be selected/active.
 
-Use the prop `onChange` on the `ButtonGroupItem` to control behaviour on click of buttons.
-
 ## Default ButtonGroup
 
-<Preview>
+<Canvas>
   <Story id="components-buttongroup--default-button-group" />
-</Preview>
+</Canvas>
 
 ## Properties
 
-<Props of={ButtonGroupContainer} />
-<Props of={ButtonGroupItem} />
+<Controls component={ButtonGroupContainer} />

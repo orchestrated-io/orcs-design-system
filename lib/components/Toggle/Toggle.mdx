@@ -1,5 +1,8 @@
-import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Canvas, Controls, Meta } from "@storybook/addon-docs";
 import Toggle from ".";
+import * as stories from "./Toggle.stories";
+
+<Meta of={stories} />
 
 # Toggle
 
@@ -11,28 +14,28 @@ As a general rule, the small version should be used in any layout components lik
 
 ## Default
 
-<Preview>
+<Canvas>
   <Story id="components-toggle--default-toggle" />
-</Preview>
+</Canvas>
 
 ## Small
 
-<Preview>
+<Canvas>
   <Story id="components-toggle--small" />
-</Preview>
+</Canvas>
 
 ## Inverted
 
-<Preview>
+<Canvas>
   <Story id="components-toggle--inverted" />
-</Preview>
+</Canvas>
 
 ## Disabled
 
-<Preview>
+<Canvas>
   <Story id="components-toggle--disabled" />
-</Preview>
+</Canvas>
 
 ## Properties
 
-<Props of={Toggle} />
+<Controls />

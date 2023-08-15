@@ -1,5 +1,8 @@
-import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Meta, Controls, Canvas } from "@storybook/addon-docs";
 import { Box } from "../Box";
+import * as stories from "./Box.stories";
+
+<Meta of={stories} />
 
 # Box
 
@@ -9,39 +12,39 @@ Component to contain elements within a simple box. If your `Box` needs to contai
 
 ## Default
 
-<Preview>
+<Canvas>
   <Story id="components-box--basic-box" />
-</Preview>
+</Canvas>
 
 ## Border
 
-<Preview>
+<Canvas>
   <Story id="components-box--border-box" />
-</Preview>
+</Canvas>
 
 ## Shadow
 
-<Preview>
+<Canvas>
   <Story id="components-box--shadow" />
-</Preview>
+</Canvas>
 
 ## Background colour
 
-<Preview>
+<Canvas>
   <Story id="components-box--background-colour" />
-</Preview>
+</Canvas>
 
 ## Padding
 
-<Preview>
+<Canvas>
   <Story id="components-box--padding" />
-</Preview>
+</Canvas>
 
 ## Border Radius
 
-<Preview>
+<Canvas>
   <Story id="components-box--border-radius" />
-</Preview>
+</Canvas>
 
 ## Properties
 
@@ -53,11 +56,11 @@ You can use `space`, `layout`, `border`, and `color` properties with `Box`.
 - [layout on Styled-System](https://styled-system.com/table#layout)
 - [border on Styled-System](https://styled-system.com/table#border)
 - [color on Styled-System](https://styled-system.com/table#color)
-- [systemtheme.js](https://github.com/orchestrated-io/orca-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js) (our arrays and scales for design system values)
+- [systemtheme.js](https://github.com/orchestrated-io/orcs-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js) (our arrays and scales for design system values)
 
 By default, we've set certain values on `Box` properties as documented in the table below.
 
-<Props of={Box} />
+<Controls />
 
 **Note:** If specific `margin` or `padding` properties fail to override the defaults, specify the overall property and then the specific property. For example, to set a `Box` with a `margin-bottom: 8px`, use
 
