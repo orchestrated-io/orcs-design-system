@@ -1,5 +1,8 @@
-import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Controls, Meta, Canvas } from "@storybook/addon-docs";
 import Badge from ".";
+import * as stories from "./Badge.stories";
+
+<Meta of={stories} />
 
 # Badge
 
@@ -11,18 +14,18 @@ Without specifying a variant colour, the default badge will just take a grey col
 
 ## Default Badge
 
-<Preview>
+<Canvas>
   <Story id="components-badge--default-badge" />
-</Preview>
+</Canvas>
 
 ## Colour variants
 
 The variants can be used on light or dark backgrounds
 
-<Preview>
+<Canvas>
   <Story id="components-badge--colour-variants" />
-</Preview>
+</Canvas>
 
 ## Properties
 
-<Props of={Badge} />
+<Controls />

@@ -1,5 +1,8 @@
-import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Canvas, Controls, Meta } from "@storybook/addon-docs";
 import SideNav from ".";
+import * as stories from "./SideNav.stories";
+
+<Meta of={stories} />
 
 # SideNav
 
@@ -51,10 +54,10 @@ const items = [
 ];
 ```
 
-<Preview>
+<Canvas>
   <Story id="components-sidenav--sidebar-navigation" />
-</Preview>
+</Canvas>
 
 ## Properties
 
-<Props of={SideNav} />
+<Controls component={SideNav} />

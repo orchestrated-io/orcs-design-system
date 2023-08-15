@@ -1,5 +1,8 @@
-import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Controls, Meta, Canvas } from "@storybook/addon-docs";
 import ActionsMenu from ".";
+import * as stories from "./ActionsMenu.stories";
+
+<Meta of={stories} />
 
 # Actions Menu
 
@@ -11,15 +14,15 @@ The child components `ActionsMenuItem` are rendered either as a react router lin
 
 ## Default Actions Menu
 
-<Preview>
+<Canvas>
   <Story id="components-actionsmenu--default-actions-menu" />
-</Preview>
+</Canvas>
 
 ## Left offset Actions Menu
 
-<Preview>
+<Canvas>
   <Story id="components-actionsmenu--left-offset-actions-menu" />
-</Preview>
+</Canvas>
 
 ## Advanced Actions Menu
 
@@ -31,34 +34,34 @@ You can control the closing behaviour of the menu by disabling default close usi
 
 This component is also flexible in that you can put whatever other content you would like in here, and write custom functionality for it (to see example of this, click 'Other' in example below).
 
-<Preview>
+<Canvas>
   <Story id="components-actionsmenu--advanced-actions-menu" />
-</Preview>
+</Canvas>
 
 ## Custom Actions Menu
 
 If you would like to enhance the ActionsMenu without default behaviours, you can use `<ActionsMenuBody />` by passing in `toggleState` and `onToggle` props.
 
-<Preview>
+<Canvas>
   <Story id="components-actionsmenu--custom-actions-menu" />
-</Preview>
+</Canvas>
 
 ## Text Button Actions Menu
 
 An example of using ActionsMenu paired with a text button trigger.
 
-<Preview>
+<Canvas>
   <Story id="components-actionsmenu--text-button-actions-menu" />
-</Preview>
+</Canvas>
 
 ## Keep Actions Menu In View
 
 Keeps the Actions Menu in view by changing the direction if it naturally falls out of view.
 
-<Preview>
+<Canvas>
   <Story id="components-actionsmenu--keep-in-view-example" />
-</Preview>
+</Canvas>
 
 ## Properties
 
-<Props of={ActionsMenu} />
+<Controls />

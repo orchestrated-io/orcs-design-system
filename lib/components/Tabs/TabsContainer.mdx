@@ -1,8 +1,8 @@
-import * as stories from "./Tabs.stories.js";
-import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Meta, Story, Controls, Canvas } from "@storybook/addon-docs";
 import { TabsContainer, Tab } from ".";
+import * as stories from "./TabsContainer.stories";
 
-<Meta title="Components/Tabs" component={TabsContainer} />
+<Meta of={stories} />
 
 [Default tabs](#tabs) | [Properties](#properties)
 
@@ -10,11 +10,10 @@ import { TabsContainer, Tab } from ".";
 
 Tabs are intended to provide a way to navigate between distinct sections within the layout without leaving the page or triggering a page refresh.
 
-<Preview>
+<Canvas>
   <Story id="components-tabs--default-tabs" />
-</Preview>
+</Canvas>
 
 ## Properties
 
-<Props of={TabsContainer} />
-<Props of={Tab} />
+<Controls />
