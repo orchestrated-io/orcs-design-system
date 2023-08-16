@@ -3,8 +3,8 @@ import {
   ColorPalette,
   ColorItem,
   Story,
-  Preview
-} from "@storybook/addon-docs/blocks";
+  Canvas
+} from "@storybook/addon-docs";
 import { colors } from "./systemtheme";
 import Flex from "./components/Flex";
 import Colour from "./assets/Colour";
@@ -18,7 +18,7 @@ These are the colours used throughout the design system, defined in `systemtheme
 
 ## Main palette
 
-<Preview>
+<Canvas>
   <ColorPalette>
     <ColorItem
       title="Greyscale"
@@ -101,7 +101,7 @@ These are the colours used throughout the design system, defined in `systemtheme
       ]}
     />
   </ColorPalette>
-</Preview>
+</Canvas>
 
 ## Monochrome opacities
 
@@ -109,7 +109,7 @@ For black and white colours at different opacities, use the following scales.
 
 ### Black opacity scale
 
-<Preview>
+<Canvas>
   <Flex justifyContent="center">
     <Colour bg="black" />
     <Colour bg="black90" />
@@ -122,11 +122,11 @@ For black and white colours at different opacities, use the following scales.
     <Colour bg="black20" />
     <Colour bg="black10" />
   </Flex>
-</Preview>
+</Canvas>
 
 ### White opacity scale
 
-<Preview>
+<Canvas>
   <Box bg="greyDarkest" padding="6">
     <Flex justifyContent="center">
       <Colour bg="white" />
@@ -141,13 +141,13 @@ For black and white colours at different opacities, use the following scales.
       <Colour bg="white10" />
     </Flex>
   </Box>
-</Preview>
+</Canvas>
 
 ## Coloured opacities
 
 ### Primary opacity scale
 
-<Preview>
+<Canvas>
   <Flex justifyContent="center">
     <Colour bg="primary" />
     <Colour bg="primary90" />
@@ -160,11 +160,11 @@ For black and white colours at different opacities, use the following scales.
     <Colour bg="primary20" />
     <Colour bg="primary10" />
   </Flex>
-</Preview>
+</Canvas>
 
 ### Secondary opacity scale
 
-<Preview>
+<Canvas>
   <Flex justifyContent="center">
     <Colour bg="secondary" />
     <Colour bg="secondary90" />
@@ -177,11 +177,11 @@ For black and white colours at different opacities, use the following scales.
     <Colour bg="secondary20" />
     <Colour bg="secondary10" />
   </Flex>
-</Preview>
+</Canvas>
 
 ### Success opacity scale
 
-<Preview>
+<Canvas>
   <Flex justifyContent="center">
     <Colour bg="success" />
     <Colour bg="success90" />
@@ -194,11 +194,11 @@ For black and white colours at different opacities, use the following scales.
     <Colour bg="success20" />
     <Colour bg="success10" />
   </Flex>
-</Preview>
+</Canvas>
 
 ### Warning opacity scale
 
-<Preview>
+<Canvas>
   <Flex justifyContent="center">
     <Colour bg="warning" />
     <Colour bg="warning90" />
@@ -211,11 +211,11 @@ For black and white colours at different opacities, use the following scales.
     <Colour bg="warning20" />
     <Colour bg="warning10" />
   </Flex>
-</Preview>
+</Canvas>
 
 ### Danger opacity scale
 
-<Preview>
+<Canvas>
   <Flex justifyContent="center">
     <Colour bg="danger" />
     <Colour bg="danger90" />
@@ -228,4 +228,4 @@ For black and white colours at different opacities, use the following scales.
     <Colour bg="danger20" />
     <Colour bg="danger10" />
   </Flex>
-</Preview>
+</Canvas>

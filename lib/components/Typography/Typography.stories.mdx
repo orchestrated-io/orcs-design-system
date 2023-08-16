@@ -1,4 +1,4 @@
-import { Meta, Typeset, Preview, Story } from "@storybook/addon-docs/blocks";
+import { Meta, Typeset, Canvas, Story } from "@storybook/addon-docs";
 import { H1, H2, H3, H4, H5, H6, P, Text, Quote, Small, Code } from ".";
 import Box from "../Box";
 import Spacer from "../Spacer";
@@ -22,7 +22,7 @@ import { H1, H2, H3, H4, H5, H6, P, Text, Quote, Small, Code } from "orcs-design
 
 By default, the design system uses **Open Sans**: https://fonts.google.com/specimen/Open+Sans with other sans serif families as fallback. The default font weight is 400, and the system also uses 600 for bold or emphasised text and 300 for light weights (to be used sparingly).
 
-Font defaults can be changed via [systemtheme.js](https://github.com/orchestrated-io/orca-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js).
+Font defaults can be changed via [systemtheme.js](https://github.com/orchestrated-io/orcs-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js).
 
 <Typeset
   fontSizes={[
@@ -44,7 +44,7 @@ Font defaults can be changed via [systemtheme.js](https://github.com/orchestrate
 
 These use `<H1>` to `<H6>` tags. For semantic and accessibility usage guidelines, refer to [the W3C headings guide](https://www.w3.org/WAI/tutorials/page-structure/headings/) and its related WCAG resources.
 
-<Preview>
+<Canvas>
   <Story name="Headings/H1 to H6">
     <Spacer my={4}>
       <Box>
@@ -79,11 +79,11 @@ These use `<H1>` to `<H6>` tags. For semantic and accessibility usage guidelines
       </Box>
     </Spacer>
   </Story>
-</Preview>
+</Canvas>
 
 ## Body text
 
-<Preview>
+<Canvas>
   <Story name="Body text/Paragraph">
     <Spacer my={3}>
       <P>
@@ -99,15 +99,15 @@ These use `<H1>` to `<H6>` tags. For semantic and accessibility usage guidelines
       <P sizing="small">Small paragraph text</P>
     </Spacer>
   </Story>
-</Preview>
+</Canvas>
 
 To render text in a `span` HTML element without the paragraph formatting, use the `Text` component. This is the preferred usage for short text.
 
-<Preview>
+<Canvas>
   <Story name="Body text/Text">
     <Text>Hello world</Text>
   </Story>
-</Preview>
+</Canvas>
 
 ## Text styling
 
@@ -115,7 +115,7 @@ To render text in a `span` HTML element without the paragraph formatting, use th
 
 To render type smaller or larger, use `sizing="small"` or `sizing="large"` on a heading, or if needed you can use `fontSize` property or the `Small` element as demonstrated below. Unless it is for a very specific purpose, strongly recommend minimising the resizing of text and simply using the appropriate type element the next size up (or down) on the design system scale.
 
-<Preview>
+<Canvas>
   <Story name="Styling/Sizing">
     <Spacer my={3}>
       <H5 sizing="small">Small variant of H5</H5>
@@ -127,11 +127,11 @@ To render type smaller or larger, use `sizing="small"` or `sizing="large"` on a 
       <Small>Small text using the Small component</Small>
     </Spacer>
   </Story>
-</Preview>
+</Canvas>
 
 To render type with emphasis, use `weight="bold"` or wrap the type in a `<strong>` tag.
 
-<Preview>
+<Canvas>
   <Story name="Styling/Emphasis">
     <Spacer my={3}>
       <P weight="bold">Bold paragraph text lorem ipsum dolor sit amet</P>
@@ -140,13 +140,13 @@ To render type with emphasis, use `weight="bold"` or wrap the type in a `<strong
       </P>
     </Spacer>
   </Story>
-</Preview>
+</Canvas>
 
 ### Colours
 
 To apply colour to text, use the `color` property in the `Text` component. Usage should be limited to the colours in the example below except in very specific design cases.
 
-<Preview>
+<Canvas>
   <Story name="Styling/Colours">
     <Spacer my={2}>
       <P color="grey">Grey-coloured text</P>
@@ -158,24 +158,24 @@ To apply colour to text, use the `color` property in the `Text` component. Usage
       </Box>
     </Spacer>
   </Story>
-</Preview>
+</Canvas>
 
 ## Miscellaneous
 
-<Preview>
+<Canvas>
   <Story name="Miscellaneous/Blockquote">
     <Quote>
-      "Used to display block quotes lorem ipsum dolor sit amet"{" "}
+      "Used to display block quotes lorem ipsum dolor sit amet"
       <em> - Adam, 2018</em>
     </Quote>
   </Story>
-</Preview>
+</Canvas>
 
-<Preview>
+<Canvas>
   <Story name="Miscellaneous/Code">
     <Code>
       &lt;html&gt; &lt;head&gt; &lt;body&gt; Hello I am a code block
       &lt;/body&gt; &lt;/head&gt; &lt;/html&gt;
     </Code>
   </Story>
-</Preview>
+</Canvas>

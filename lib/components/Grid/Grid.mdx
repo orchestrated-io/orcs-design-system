@@ -1,6 +1,9 @@
-import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Meta, Story, Canvas, Controls } from "@storybook/addon-docs";
 import Grid, { GridItem } from ".";
 import Button from "../Button";
+import * as stories from "./Grid.stories";
+
+<Meta of={stories} />
 
 # Grid
 
@@ -10,9 +13,9 @@ Grid component using the built-in Styled System Grid Layout through its `grid` f
 
 Importing `GridItem` is recommended for use with `Grid` to retain sizing for the children; see [example](#without-griditem-vs-with-griditem) below.
 
-<Preview>
+<Canvas>
   <Story id="components-grid--basic-grid" />
-</Preview>
+</Canvas>
 
 ## Properties
 
@@ -25,62 +28,63 @@ This component uses Styled System props. `Grid` uses `space`, `layout`, `color` 
 - [color on Styled-System](https://styled-system.com/table#color)
 - [grid on Styled-System](https://styled-system.com/table#space)
 - [CSS Grid Properties](https://css-tricks.com/snippets/css/complete-guide-grid)
-- [systemtheme.js](https://github.com/orchestrated-io/orca-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js) (our arrays and scales for design system values)
+- [systemtheme.js](https://github.com/orchestrated-io/orcs-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js) (our arrays and scales for design system values)
 
 By default, we've set certain default values on `Grid` as documented in the table below.
 
-<Props of={Grid} />
+<Controls component={Grid} />
 
 ## Examples
 
 ### With Colours
 
-<Preview>
+<Canvas>
   <Story id="components-grid--background-colour-grid" />
-</Preview>
+</Canvas>
 
 ### Template Columns and Rows
 
-<Preview>
-<Story id="components-grid--template-columns-and-rows" />
-</Preview>
+<Canvas>
+  <Story id="components-grid--template-columns-and-rows" />
+</Canvas>
 
 ### Width-based Columns and Rows
 
-<Preview>
-<Story id="components-grid--width-columns-and-rows" />
-</Preview>
+<Canvas>
+  <Story id="components-grid--width-columns-and-rows" />
+</Canvas>
 
 ### Using `GridItem`
 
 Using `GridItem` to wrap individual children in the grid ensures that the children retain their original dimensions, as not using `GridItem` allows children to take up the full width of their grid cell. This does not affect the behaviour of text content.
 
 #### With `GridItem`
-Note that `GridItem` has default `padding="r"` where `r` refers to the **r**egular alias in the [space array scale](https://github.com/orchestrated-io/orca-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js).
 
-<Preview>
-<Story id="components-grid--with-grid-item" />
-</Preview>
+Note that `GridItem` has default `padding="r"` where `r` refers to the **r**egular alias in the [space array scale](https://github.com/orchestrated-io/orcs-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js).
 
-<Preview>
-<Story id="components-grid--text-with-grid-item" />
-</Preview>
+<Canvas>
+  <Story id="components-grid--with-grid-item" />
+</Canvas>
+
+<Canvas>
+  <Story id="components-grid--text-with-grid-item" />
+</Canvas>
 
 #### Without `GridItem`
 
-<Preview>
-<Story id="components-grid--without-grid-item" />
-</Preview>
+<Canvas>
+  <Story id="components-grid--without-grid-item" />
+</Canvas>
 
 ## Upgrading
 
 This component is a **breaking change** from the [previous version](https://www.npmjs.com/package/styled-grid-component) of `Grid`. Use the following table as a guide to convert from `styled-grid-component` properties to `styled-system` props.
 
-| **styled-grid-component** | **styled-system** |
-|-----------------------|---------------|
-| `width`                 | `width`         |
-| `height`                | `height`        |
-| `templateColumns`       | `gridTemplateColumns`     |
-| `templateRows`          | `gridTemplateRows`     |
-| `rowGap`                | `gridRowGap`       |
-| `autoRows`              | `gridAutoRows`  |
+| **styled-grid-component** | **styled-system**     |
+| ------------------------- | --------------------- |
+| `width`                   | `width`               |
+| `height`                  | `height`              |
+| `templateColumns`         | `gridTemplateColumns` |
+| `templateRows`            | `gridTemplateRows`    |
+| `rowGap`                  | `gridRowGap`          |
+| `autoRows`                | `gridAutoRows`        |

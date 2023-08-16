@@ -1,5 +1,8 @@
-import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Meta, Controls, Canvas } from "@storybook/addon-docs";
 import Header from "../Header";
+import * as stories from "./Header.stories";
+
+<Meta of={stories} />
 
 # Header
 
@@ -11,28 +14,28 @@ At screen sizes less than 1100px the links are instead moved into a mobile menu 
 
 ## Default Header
 
-<Preview>
+<Canvas>
   <Story id="components-header--default-header" />
-</Preview>
+</Canvas>
 
 ## Alternative Header with search
 
-<Preview>
+<Canvas>
   <Story id="components-header--header-with-search" />
-</Preview>
+</Canvas>
 
 ## Header with Search and Links
 
-<Preview>
+<Canvas>
   <Story id="components-header--header-with-search-and-links" />
-</Preview>
+</Canvas>
 
 ## Header with workspace switching
 
-<Preview>
+<Canvas>
   <Story id="components-header--header-with-workspace-switching" />
-</Preview>
+</Canvas>
 
 ## Properties
 
-<Props of={Header} />
+<Controls component={Header} />

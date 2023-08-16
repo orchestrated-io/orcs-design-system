@@ -1,10 +1,8 @@
-import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
-import Sidebar, {
-  SidebarTabs,
-  SidebarTab,
-  SidebarPanels,
-  SidebarPanel
-} from ".";
+import { Story, Canvas, Controls, Meta } from "@storybook/addon-docs";
+import Sidebar from ".";
+import * as stories from "./Sidebar.stories";
+
+<Meta of={stories} />
 
 # Sidebar
 
@@ -14,10 +12,10 @@ Make sure you use an appropriate icon for each tab so that the intent of that ta
 
 Use the subcomponent `SidebarClose` for functionality related to closing the sidebar.
 
-<Preview>
+<Canvas>
   <Story id="components-sidebar--default-sidebar" />
-</Preview>
+</Canvas>
 
 ## Properties
 
-<Props of={Sidebar} />
+<Controls component={Sidebar} />

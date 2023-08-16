@@ -1,93 +1,99 @@
-import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Canvas, Controls, Meta } from "@storybook/addon-docs/blocks";
 import Select from "../Select";
+import * as stories from "./Select.stories";
+
+<Meta of={stories} />
 
 # Select
 
 [Default](#default) | [Disabled](#disabled) | [Multi-select](#multi-select) | [Inverted](#inverted) | [With default value](#with-selected-defaultvalue) | [With creatable](#with-creatable) | [With async](#with-async) | [With grouped options](#with-grouped-options) | [Properties](#properties)
 
-This component uses React Select: <https://react-select.com/home>. See link for all uses and props.
+This component uses React Select: https://react-select.com/home. See link for all uses and props.
 
 Select values are defined as separate objects. for example:
 
-       const options = [
-      { value: 'caramel', label: 'Caramel' },
-      { value: 'chocolate', label: 'Chocolate' },
-      { value: 'strawberry', label: 'Strawberry' },
-      { value: 'vanilla', label: 'Vanilla' }
-     ]
+```js
+const options = [
+  { value: "caramel", label: "Caramel" },
+  { value: "chocolate", label: "Chocolate" },
+  { value: "strawberry", label: "Strawberry" },
+  { value: "vanilla", label: "Vanilla" }
+];
+```
 
 ## Default
 
-<Preview>
+<Canvas>
   <Story id="components-select--default-select" />
-</Preview>
+</Canvas>
 
 ## Disabled
 
-<Preview>
+<Canvas>
   <Story id="components-select--disabled-select" />
-</Preview>
+</Canvas>
 
 ## Specific Height Select
 
 With height and padding props, you can select custom height and padding of select control. Be sure to include unit in the string, e.g. px.
 
-<Preview>
+<Canvas>
   <Story id="components-select--specific-height-select" />
-</Preview>
+</Canvas>
 
 ## Multi-Select
 
-<Preview>
+<Canvas>
   <Story id="components-select--multi-select" />
-</Preview>
+</Canvas>
 
 ## Multi-Select with fixed options
 
-<Preview>
+<Canvas>
   <Story id="components-select--multi-select-with-fixed-options" />
-</Preview>
+</Canvas>
 
 ## Inverted
 
-<Preview>
+<Canvas>
   <Story id="components-select--inverted-select" />
-</Preview>
+</Canvas>
 
 ## With `data-testid` attribute
 
-<Preview>
+<Canvas>
   <Story id="components-select--with-data-id-select" />
-</Preview>
+</Canvas>
 
 ## With selected defaultValue
 
 This uses a custom `util`. To use, add `import { getOptionByValue } from "orcs-design-system"` to your imports.
 
-<Preview>
+<Canvas>
   <Story id="components-select--with-selected-value-select" />
-</Preview>
+</Canvas>
 
 ## With creatable
 
-<Preview>
+<Canvas>
   <Story id="components-select--with-creatable-select" />
-</Preview>
+</Canvas>
 
 ## With async
 
-<Preview>
+<Canvas>
   <Story id="components-select--with-async-select" />
-</Preview>
+</Canvas>
 
 ## With grouped options
 
 (Auto-expanded to show grouped options)
 
-<Preview>
+<Canvas height="700px">
   <Story id="components-select--with-grouped-options" />
-</Preview>
+</Canvas>
 
 ## Properties
 
-<Props of={Select} />
+<Controls component={Select} />
+````

@@ -1,24 +1,27 @@
 import DatePicker from ".";
-import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Controls, Meta, Canvas } from "@storybook/addon-docs";
+import * as stories from "./DatePicker.stories";
+
+<Meta of={stories} />
 
 # DatePicker
 
 [Single date](#single-date) | [Date range](#date-range) | [Properties](#properties)
 
-DatePicker uses Airbnb's [react-dates](https://github.com/airbnb/react-dates) under the hood. This is just a wrapper to override styles, the only props you need to specify is either single or range. For all functionality and additional required props refer to documentation here: <https://github.com/airbnb/react-dates>
+DatePicker uses Airbnb's [react-dates](https://github.com/airbnb/react-dates) under the hood. This is just a wrapper to override styles, the only props you need to specify is either single or range. For all functionality and additional required props refer to documentation here: https://github.com/airbnb/react-dates
 
 ## Single date
 
-<Preview height="400px">
+<Canvas>
   <Story id="components-datepicker--single-date" />
-</Preview>
+</Canvas>
 
 ## Date range
 
-<Preview height="400px">
+<Canvas>
   <Story id="components-datepicker--date-range" />
-</Preview>
+</Canvas>
 
 ## Properties
 
-<Props of={DatePicker} />
+<Controls />

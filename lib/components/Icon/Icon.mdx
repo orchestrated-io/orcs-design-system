@@ -1,5 +1,8 @@
-import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Controls, Canvas, Meta } from "@storybook/addon-docs";
 import Icon from ".";
+import * as stories from "./Icon.stories";
+
+<Meta of={stories} />
 
 # Icon
 
@@ -7,50 +10,50 @@ import Icon from ".";
 
 Using 3rd party icons from Font Awesome.
 
-For full list of icons see here: <https://fontawesome.com/icons?d=listing>.
+For full list of icons see here: https://fontawesome.com/icons?d=listing.
 
 Some examples of icons with props for size, colour or animation below. For full usage guidelines view the readme at https://github.com/FortAwesome/react-fontawesome#usage
 
 Note: There are two different icon set weightings available in the Font Awesome free icons sets. Regular and solid. To use we need to specify which set to use by prefixing icon with either "far" or "fas" as shown in example code below.
 
-To get started you can import the icons into Font Awesome library. Alternatively if you want to use their full icon set you need to purchase a PRO plan from Font awesome, and can install the full pro icon packages in your app. See the readme here for more details on how to use and install PRO: <https://github.com/orchestrated-io/orca-design-system>
+To get started you can import the icons into Font Awesome library. Alternatively if you want to use their full icon set you need to purchase a PRO plan from Font awesome, and can install the full pro icon packages in your app. See the readme here for more details on how to use and install PRO: https://github.com/orchestrated-io/orcs-design-system
 
 ## Default
 
-<Preview>
+<Canvas>
   <Story id="components-icon--default-icon" />
-</Preview>
+</Canvas>
 
 ## Colours
 
-<Preview>
+<Canvas>
   <Story id="components-icon--coloured-icon" />
-</Preview>
+</Canvas>
 
 ## Size
 
-<Preview>
+<Canvas>
   <Story id="components-icon--icon-size" />
-</Preview>
+</Canvas>
 
 ## Inverted
 
-<Preview>
+<Canvas>
   <Story id="components-icon--inverted-icons" />
-</Preview>
+</Canvas>
 
 ## Animated
 
-<Preview>
+<Canvas>
   <Story id="components-icon--animated-icons" />
-</Preview>
+</Canvas>
 
 ## Transforms and rotations
 
-<Preview>
+<Canvas>
   <Story id="components-icon--transforms-and-rotations" />
-</Preview>
+</Canvas>
 
 ## Properties
 
-<Props of={Icon} />
+<Controls component={Icon} />
