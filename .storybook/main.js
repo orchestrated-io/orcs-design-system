@@ -9,7 +9,9 @@ module.exports = {
     "@storybook/addon-toolbars",
     "@storybook/components",
     "@storybook/api",
-    "@storybook/addon-mdx-gfm"
+    "@storybook/addon-mdx-gfm",
+    "@storybook/manager-api",
+    "@storybook/core-events"
   ],
   framework: {
     name: "@storybook/react-webpack5",
