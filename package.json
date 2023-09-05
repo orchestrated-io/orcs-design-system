@@ -59,7 +59,6 @@
     "react-select": "^5.7.4",
     "react-test-renderer": "^18.2.0",
     "styled-system": "^5.1.5",
-
     "react-dates": "^21.8.0"
   },
   "devDependencies": {
