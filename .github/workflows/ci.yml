@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - fix/sidenav-bugs-v2.1.33
 
 jobs:
   build:
