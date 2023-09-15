@@ -37,8 +37,7 @@
     "build-storybook": "storybook build -s .storybook/static -o .build_storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "playroom": "playroom start",
-    "build-playroom": "playroom build",
-    "percy:storybook": "storybook build -o .build_storybook && percy storybook .build_storybook --config .percy.yaml"
+    "build-playroom": "playroom build"
   },
   "dependencies": {
     "@styled-system/css": "^5.1.5",
@@ -50,6 +49,7 @@
     "prop-types": "^15.6.2",
     "react-app-polyfill": "^2.0.0",
     "react-cool-onclickoutside": "^1.5.9",
+    "react-dates": "^21.8.0",
     "react-docgen": "^5.3.0",
     "react-intersection-observer": "^9.4.3",
     "react-moment-proptypes": "^1.8.1",
@@ -58,8 +58,7 @@
     "react-router-dom": "^5.2.0",
     "react-select": "^5.7.4",
     "react-test-renderer": "^18.2.0",
-    "styled-system": "^5.1.5",
-    "react-dates": "^21.8.0"
+    "styled-system": "^5.1.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.10",
@@ -75,8 +74,6 @@
     "@fortawesome/react-fontawesome": "^0.1.14",
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
-    "@percy/cli": "^1.26.3",
-    "@percy/storybook": "^4.3.6",
     "@storybook/addon-a11y": "^7.3.2",
     "@storybook/addon-actions": "^7.3.2",
     "@storybook/addon-docs": "^7.3.2",
