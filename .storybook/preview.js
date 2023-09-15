@@ -107,5 +107,6 @@ export const parameters = {
     page: DocsPage
   },
   a11y: { disable: false },
-  viewMode: "docs"
+  viewMode: "docs",
+  chromatic: { pauseAnimationAtEnd: true }
 };
