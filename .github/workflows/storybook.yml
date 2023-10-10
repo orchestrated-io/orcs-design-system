@@ -9,6 +9,10 @@ jobs:
   deploy-storybook:
     # needs: build
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      actions: write
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v3
