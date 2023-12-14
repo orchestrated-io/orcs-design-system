@@ -6,6 +6,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { default as GlobalStyles } from "../lib/GlobalStyles";
 import { default as systemtheme } from "../lib/systemtheme";
 import { default as systemThemeCollapsed } from "../lib/systemThemeCollapsed";
+import { default as systemThemeAccessible } from "../lib/systemThemeAccessible";
 import styled, { ThemeProvider } from "styled-components";
 import { get } from "lodash";
 
@@ -28,7 +29,11 @@ const getThemeName = (context) =>
 
 const getTheme = (context) => {
   const themeName = getThemeName(context);
-  return themeName === "default" ? systemtheme : systemThemeCollapsed;
+  return themeName === "default"
+    ? systemtheme
+    : themeName === "collapsed"
+    ? systemThemeCollapsed
+    : systemThemeAccessible;
 };
 
 const ThemeDecorator = (storyFn, context) => {
@@ -47,9 +52,16 @@ const ThemeDecorator = (storyFn, context) => {
               </>
             </ThemeProvider>
           </FlexItem>
-
           <FlexItem key="collapsed">
             <ThemeProvider theme={systemThemeCollapsed}>
+              <>
+                <GlobalStyles />
+                {storyFn()}
+              </>
+            </ThemeProvider>
+          </FlexItem>
+          <FlexItem key="accessible">
+            <ThemeProvider theme={systemThemeAccessible}>
               <>
                 <GlobalStyles />
                 {storyFn()}
@@ -81,6 +93,7 @@ export const globalTypes = {
       items: [
         { value: "default", title: "Default theme" },
         { value: "collapsed", title: "Collapsed theme" },
+        { value: "accessible", title: "Accessible theme" },
         { value: "side-by-side", title: "Side by side" }
       ]
     }
