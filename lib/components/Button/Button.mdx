@@ -1,7 +1,10 @@
 import Button from ".";
 import Icon from "../Icon";
 import Spacer from "../Spacer";
-import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Controls, Meta, Canvas } from "@storybook/addon-docs";
+import * as stories from "./Button.stories";
+
+<Meta of={stories} />
 
 # Button
 
@@ -21,58 +24,58 @@ Make use of icons when they help enhance or support the text or aesthetic of the
 
 ## Default button
 
-<Preview>
+<Canvas>
   <Story id="components-button--default-button" />
-</Preview>
+</Canvas>
 
 ## Alternate sizes
 
-<Preview>
+<Canvas>
   <Story id="components-button--alternate-size" />
-</Preview>
+</Canvas>
 
 ## Alternate colours
 
-<Preview>
+<Canvas>
   <Story id="components-button--alternate-colours" />
-</Preview>
+</Canvas>
 
 ## Ghost style
 
-<Preview>
+<Canvas>
   <Story id="components-button--ghost" />
-</Preview>
+</Canvas>
 
 ## Full width
 
-<Preview>
+<Canvas>
   <Story id="components-button--full-width" />
-</Preview>
+</Canvas>
 
 ## Disabled state
 
-<Preview>
+<Canvas>
   <Story id="components-button--disabled" />
-</Preview>
+</Canvas>
 
 ## Loading state
 
-<Preview>
+<Canvas>
   <Story id="components-button--loading" />
-</Preview>
+</Canvas>
 
 ## With icon
 
-<Preview>
+<Canvas>
   <Story id="components-button--with-icon" />
-</Preview>
+</Canvas>
 
 ## Icon only
 
-<Preview>
+<Canvas>
   <Story id="components-button--icon-only" />
-</Preview>
+</Canvas>
 
 ## Properties
 
-<Props of={Button} />
+<Controls />

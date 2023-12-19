@@ -1,5 +1,8 @@
 import Modal from ".";
-import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Meta, Canvas, Controls } from "@storybook/addon-docs";
+import * as stories from "./Modal.stories";
+
+<Meta of={stories} />
 
 # Modal
 
@@ -15,34 +18,34 @@ For a dialogue pattern of this component that has Confirm and Cancel buttons, se
 
 ## Basic modal
 
-<Preview>
+<Canvas>
   <Story id="components-modal--basic-modal" />
-</Preview>
+</Canvas>
 
 ## Advanced modal
 
 If required you can specify content for both a header and/or footer for the modal to get the following treatment, where the header and footer is fixed, and the body content scrollable.
 
-<Preview>
+<Canvas>
   <Story id="components-modal--advanced-modal" />
-</Preview>
+</Canvas>
 
 ## Basic dialogue modal
 
 This basic dialogue pattern should be used when Modal functions as a yes/no, ok/cancel style user interaction.
 
-<Preview>
+<Canvas>
   <Story id="components-modal--basic-dialogue-modal" />
-</Preview>
+</Canvas>
 
 ## Edit dialogue modal
 
 This edit dialogue pattern should be used when Modal functions as a save/cancel, update/cancel style user interaction.
 
-<Preview>
+<Canvas>
   <Story id="components-modal--edit-dialogue-modal" />
-</Preview>
+</Canvas>
 
 ## Properties
 
-<Props of={Modal} />
+<Controls component={Modal} />

@@ -1,5 +1,8 @@
-import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Canvas, Controls, Meta } from "@storybook/addon-docs";
 import TextArea from ".";
+import * as stories from "./TextArea.stories";
+
+<Meta of={stories} />
 
 # TextArea
 
@@ -15,52 +18,52 @@ Specify size using `cols` and `rows` like shown in the example. Adding `fullWidt
 
 ## Default
 
-<Preview>
+<Canvas>
   <Story id="components-textarea--default-text-area" />
-</Preview>
+</Canvas>
 
 ## Specified size
 
-<Preview>
+<Canvas>
   <Story id="components-textarea--size-text-area" />
-</Preview>
+</Canvas>
 
 ## Full-width
 
-<Preview>
+<Canvas>
   <Story id="components-textarea--full-width-text-area" />
-</Preview>
+</Canvas>
 
 ## Bold label
 
-<Preview>
+<Canvas>
   <Story id="components-textarea--bold-label-text-area" />
-</Preview>
+</Canvas>
 
 ## Mandatory
 
-<Preview>
+<Canvas>
   <Story id="components-textarea--mandatory-text-area" />
-</Preview>
+</Canvas>
 
 ## Invalid and valid states
 
-<Preview>
+<Canvas>
   <Story id="components-textarea--states-text-area" />
-</Preview>
+</Canvas>
 
 ## Inverted
 
-<Preview>
+<Canvas>
   <Story id="components-textarea--inverted-text-area" />
-</Preview>
+</Canvas>
 
 ## Disabled
 
-<Preview>
+<Canvas>
   <Story id="components-textarea--disabled-text-area" />
-</Preview>
+</Canvas>
 
 ## Properties
 
-<Props of={TextArea} />
+<Controls />

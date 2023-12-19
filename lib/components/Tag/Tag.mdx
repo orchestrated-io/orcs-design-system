@@ -1,70 +1,91 @@
-import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Canvas, Controls, Meta } from "@storybook/addon-docs";
 import Tag from ".";
+import * as stories from "./Tag.stories";
+
+<Meta of={stories} />
 
 # Tag
 
-[Default](#default) | [Selected](#selected) | [Show edit](#show-edit) | [Show remove](#show-remove) | [Show edit and remove](#show-edit-and-remove) | [Disabled](#disabled) | [With tag type](#with-tag-type) | [Properties](#properties)
+[Default](#default) | [Selected](#selected) | [Show info](#show-info) | [Show edit](#show-edit) | [Show remove](#show-remove) | [Show edit and remove](#show-edit-and-remove) | [Disabled](#disabled) | [With tag type](#with-tag-type) | [Small variant](#small-variant) | [Highlighted variant](#highlighted-variant) | [Person tag](#person-tag) | [Properties](#properties)
 
 ## Default
 
-<Preview>
+<Canvas>
   <Story id="components-tag--default-tag" />
-</Preview>
+</Canvas>
 
 ## Selected
 
-<Preview>
+<Canvas>
   <Story id="components-tag--selected" />
-</Preview>
+</Canvas>
+
+## Show info
+
+<Canvas>
+  <Story id="components-tag--show-info" />
+</Canvas>
 
 ## Show edit
 
-<Preview>
+<Canvas>
   <Story id="components-tag--show-edit" />
-</Preview>
+</Canvas>
 
 ## Show remove
 
-<Preview>
+<Canvas>
   <Story id="components-tag--show-remove" />
-</Preview>
+</Canvas>
 
 ## Show edit and remove
 
-<Preview>
+<Canvas>
   <Story id="components-tag--show-edit-and-remove" />
-</Preview>
+</Canvas>
 
 ## Disabled
 
-<Preview>
+<Canvas>
   <Story id="components-tag--disabled" />
-</Preview>
+</Canvas>
 
 ## Strikethrough
 
-<Preview>
+<Canvas>
   <Story id="components-tag--strikethrough" />
-</Preview>
+</Canvas>
 
 ## With tag type
 
-<Preview>
+<Canvas>
   <Story id="components-tag--with-tag-type" />
-</Preview>
+</Canvas>
 
 ## Small variant
 
-<Preview>
+<Canvas>
   <Story id="components-tag--small-variant" />
-</Preview>
+</Canvas>
 
 ## Highlighted variant
 
-<Preview>
+<Canvas>
   <Story id="components-tag--highlighted-variant" />
-</Preview>
+</Canvas>
+
+## Person tag
+
+<Canvas>
+  <Story id="components-tag--person-tag" />
+</Canvas>
+
+## Person tag small variant
+
+<Canvas>
+  <Story id="components-tag--person-tag-small" />
+</Canvas>
 
 ## Properties
 
-<Props of={Tag} />
+<Controls />

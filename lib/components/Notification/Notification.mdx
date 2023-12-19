@@ -1,5 +1,8 @@
-import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Meta, Canvas, Controls } from "@storybook/addon-docs";
 import Notification from ".";
+import * as stories from "./Notification.stories";
+
+<Meta of={stories} />
 
 # Notification
 
@@ -13,56 +16,56 @@ If you want your notification to be closable, you must use the onDismiss prop to
 
 ## Basic
 
-<Preview>
+<Canvas>
   <Story id="components-notification--basic-notification" />
-</Preview>
+</Canvas>
 
 ## Alternate Colours
 
-<Preview>
+<Canvas>
   <Story id="components-notification--colour-notification" />
-</Preview>
+</Canvas>
 
 ## With Icon
 
-<Preview>
+<Canvas>
   <Story id="components-notification--icon-notification" />
-</Preview>
+</Canvas>
 
 ## Text-only
 
-<Preview>
+<Canvas>
   <Story id="components-notification--text-only-notification" />
-</Preview>
+</Canvas>
 
 ## Close Disabled
 
-<Preview>
+<Canvas>
   <Story id="components-notification--close-disabled-notification" />
-</Preview>
+</Canvas>
 
 ## Loading
 
-<Preview>
+<Canvas>
   <Story id="components-notification--loading-notification" />
-</Preview>
+</Canvas>
 
 ## Floating
 
 This notification will appear on the bottom right corner of the browser's screen.
 
-<Preview>
+<Canvas>
   <Story id="components-notification--floating-notification" />
-</Preview>
+</Canvas>
 
 ## Floating and Centered
 
 This floating notification will appear in the center bottom of the browser's screen. Note that this behaviour only works if the component also has the `floating` prop. A positioning prop along the vertical axis, eg `top` or `bottom`, will also need to be specified.
 
-<Preview>
+<Canvas>
   <Story id="components-notification--centered-notification" />
-</Preview>
+</Canvas>
 
 ## Properties
 
-<Props of={Notification} />
+<Controls component={Notification} />

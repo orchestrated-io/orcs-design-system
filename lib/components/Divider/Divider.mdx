@@ -1,9 +1,12 @@
-import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Meta, Canvas, Controls } from "@storybook/addon-docs";
 import Divider from ".";
+import * as stories from "./Divider.stories";
+
+<Meta of={stories} />
 
 # Divider
 
-[Default](#default) | [Inverted](#inverted) | [Span grid](#span-grid) | [Properties](#properties)
+[Default](#default) | [Dash](#dash) | [Inverted](#inverted) | [Span grid](#span-grid) | [Properties](#properties)
 
 The Divider component should be used as a horizontal rule to break up content into meaningful sections.
 
@@ -13,26 +16,34 @@ As a general rule, the default divider with no props set should be used in most 
 
 To be used throughout most of the app, in most cases purely the default Divider with no props should be used.
 
-<Preview>
+<Canvas>
   <Story id="components-divider--default-divider" />
-</Preview>
+</Canvas>
+
+## Dash
+
+To be used if you want a dashed divider
+
+<Canvas>
+  <Story id="components-divider--dash-divider" />
+</Canvas>
 
 ## Inverted
 
 The inverted prop should be used if a divider is required on a dark background.
 
-<Preview>
+<Canvas>
   <Story id="components-divider--inverted-divider" />
-</Preview>
+</Canvas>
 
 ## Span grid
 
 This prop is to be used when you need to use a divider between rows in a grid, this will allow the divider to span across all columns in the grid.
 
-<Preview>
+<Canvas>
   <Story id="components-divider--span-grid" />
-</Preview>
+</Canvas>
 
 ## Properties
 
-<Props of={Divider} />
+<Controls component={Divider} />

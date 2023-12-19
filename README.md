@@ -30,7 +30,7 @@ Start the ORCS development server:
 npm run storybook
 ```
 
-A new browser window will open with a random localhost port. ORCS runs [Storybook 6](https://github.com/storybookjs/storybook/releases).
+A new browser window will open with a random localhost port. ORCS runs [Storybook 7](https://github.com/storybookjs/storybook/releases).
 
 ## Working with ORCS
 

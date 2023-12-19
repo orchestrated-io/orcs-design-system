@@ -1,5 +1,8 @@
-import { Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { Story, Meta, Canvas, Controls } from "@storybook/addon-docs";
 import HeaderSimple from ".";
+import * as stories from "./HeaderSimple.stories";
+
+<Meta of={stories} />
 
 # Header
 
@@ -7,16 +10,16 @@ Header component for app layout. Supports app name, username and avatar as props
 
 ## Default Header
 
-<Preview>
+<Canvas>
   <Story id="components-headersimple--default-header" />
-</Preview>
+</Canvas>
 
 ## Header with search
 
-<Preview>
+<Canvas>
   <Story id="components-headersimple--header-with-search" />
-</Preview>
+</Canvas>
 
 ## Properties
 
-<Props of={HeaderSimple} />
+<Controls component={HeaderSimple} />
