@@ -47,7 +47,6 @@ const ThemeDecorator = (storyFn, context) => {
               </>
             </ThemeProvider>
           </FlexItem>
-
           <FlexItem key="collapsed">
             <ThemeProvider theme={systemThemeCollapsed}>
               <>
