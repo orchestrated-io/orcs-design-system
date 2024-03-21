@@ -10,7 +10,7 @@
   "plugins": ["react", "jsx-a11y", "import", "prettier", "react-hooks", "jest"],
   "parserOptions": {
     "sourceType": "module",
-    "ecmaVersion": 2019
+    "ecmaVersion": 2020
   },
   "env": {
     "browser": true,
