@@ -1,4 +1,4 @@
-# ORCS: Orchestrated Design System
+# ORCS: TeamForm's Design System
 
 ## featuring Styled System + Styled Components
 
@@ -79,6 +79,7 @@ npm run test
 
 In order to publish a new version, you will have to patch and push your changes.
 After your changes have been merged to master, from your master branch:
+
 ```
 npm version patch
 git push
