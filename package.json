@@ -40,7 +40,8 @@
     "build-storybook": "storybook build -s .storybook/static -o .build_storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "playroom": "playroom start",
-    "build-playroom": "playroom build"
+    "build-playroom": "playroom build",
+    "dev": "nodemon --ignore es/ ./scripts/dev.js"
   },
   "dependencies": {
     "@styled-system/css": "^5.1.5",
@@ -109,7 +110,9 @@
     "babel-loader": "^8.1.0",
     "babel-plugin-react-docgen": "^4.1.0",
     "babel-plugin-styled-components": "^1.10.7",
+    "chalk": "^4.1.0",
     "css-loader": "^5.2.6",
+    "dotenv": "^16.4.5",
     "eslint": "^7.16.0",
     "eslint-config-prettier": "^7.1.0",
     "eslint-config-react-app": "^6.0.0",
@@ -123,11 +126,13 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
+    "nodemon": "^3.1.0",
     "npm-run-all": "^4.1.5",
     "playroom": "^0.32.1",
     "prettier": "^2.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "shelljs": "^0.8.5",
     "storybook": "^7.6.7",
     "style-loader": "^2.0.0",
     "styled-components": "^5.2.1",
