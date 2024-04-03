@@ -42,6 +42,17 @@ As an alternative to `npm link` you can run `npm run dist` and then copy the `es
 
 `cp -R es/ ../../../team-directory/node_modules/orcs-design-system/`
 
+This has now been added to a script with Nodemon.
+
+To get it to work:
+
+1. `cp .env.example .env`
+2. OPTIONAL: Update WORKING_DIR in env if orcs resides in a different working directory to your project. Else-wise Orcs will assume the project is one level up from itself.
+3. Add any projects to CONSUMERS in env separated by ',' (defaults with `CONSUMERS=teamform-app-ui`)
+4. Run `npm run dev`.
+
+Now you can make any changes in orcs and it will build and then copy the es from the build into your project's node_modules. Run `npm install` in your project dir if you want to revert to the npm installation.
+
 ### Symlinking with `npm link`
 
 ##### We haven't had much success with this recently
