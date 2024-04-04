@@ -32,7 +32,7 @@
     "audit-ci:strict": "audit-ci --config ./audit-ci-strict.json",
     "test": "jest",
     "test-coverage": "jest --collectCoverage",
-    "dist": "BABEL_ENV=es babel lib -d es",
+    "dist": "export BABEL_ENV=es && babel lib -d es && npx tsc",
     "module": "BABEL_ENV=es babel lib -d es",
     "deploy-stack": "serverless deploy",
     "deploy-client": "serverless client deploy  --no-confirm",
@@ -101,6 +101,7 @@
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@types/jest": "^26.0.19",
+    "@types/react-window": "^1.8.8",
     "@types/styled-components": "^5.1.7",
     "audit-ci": "^6.1.2",
     "babel-core": "^7.0.0-bridge.0",
@@ -130,6 +131,7 @@
     "storybook": "^7.3.2",
     "style-loader": "^2.0.0",
     "styled-components": "^5.2.1",
+    "typescript": "^5.4.3",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
   },
@@ -141,7 +143,9 @@
     "remark-parse": "10.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "eslint-plugin-testing-library": "^5.11.1"
+    "eslint-plugin-testing-library": "^5.11.1",
+    "typescript": "^5.4.3",
+    "webpack-dev-middleware": "6.1.2"
   },
   "browserslist": {
     "development": [
