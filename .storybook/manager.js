@@ -3,7 +3,7 @@ import orcsTheme from "./orcsTheme";
 import { STORY_RENDERED } from "@storybook/core-events";
 
 addons.register("TitleAddon", (api) => {
-  const customTitle = "ORCS Design System by Orchestrated"; // Define your customTitle title
+  const customTitle = "ORCS Design System by TeamForm"; // Define your customTitle title
   let interval = null;
   const setTitle = () => {
     clearTimeout(interval);

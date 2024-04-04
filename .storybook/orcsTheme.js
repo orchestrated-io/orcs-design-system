@@ -7,13 +7,14 @@ export default create({
   brandUrl: "https://orchestrated-io.github.io/orcs-design-system",
   brandImage:
     "https://uploads-ssl.webflow.com/5f4852427e784b4cada3e0d0/60f7c55ecbc1d945a25c93ec_logo__orcsdesignsystem.png",
-
+  brandTarget: "_self",
   colorPrimary: colors.primary,
   colorSecondary: colors.primaryDark,
 
   // UI
   appBg: colors.greyLightest,
   appContentBg: colors.white,
+  appPreviewBg: colors.white,
   appBorderColor: colors.primary,
   appBorderRadius: 4,
 
