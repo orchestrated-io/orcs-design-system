@@ -1,6 +1,6 @@
 {
   "name": "orcs-design-system",
-  "version": "3.1.35",
+  "version": "4.0.0",
   "engines": {
     "node": "18.17.1"
   },
@@ -18,8 +18,8 @@
   "licence": {
     "license": "SEE LICENSE IN LICENCE"
   },
-  "module": "es/index.js",
-  "main": "es/index.js",
+  "module": "dist/index.js",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/orchestrated-io/orcs-design-system.git"
@@ -32,8 +32,6 @@
     "audit-ci:strict": "audit-ci --config ./audit-ci-strict.json",
     "test": "jest",
     "test-coverage": "jest --collectCoverage",
-    "dist": "export BABEL_ENV=es && babel lib -d es && npx tsc",
-    "module": "BABEL_ENV=es babel lib -d es",
     "deploy-stack": "serverless deploy",
     "deploy-client": "serverless client deploy  --no-confirm",
     "storybook": "storybook dev -s ./lib/assets",
@@ -41,7 +39,8 @@
     "deploy-storybook": "storybook-to-ghpages",
     "playroom": "playroom start",
     "build-playroom": "playroom build",
-    "dev": "nodemon --ignore es/ ./scripts/dev.js"
+    "dev": "nodemon --ignore dist/ ./scripts/dev.js",
+    "build": "tsc"
   },
   "dependencies": {
     "@styled-system/css": "^5.1.5",
@@ -137,6 +136,7 @@
     "storybook": "^7.6.7",
     "style-loader": "^2.0.0",
     "styled-components": "^5.2.1",
+    "ts-loader": "^9.5.1",
     "typescript": "^5.4.3",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
@@ -167,7 +167,7 @@
     ]
   },
   "files": [
-    "es"
+    "dist"
   ],
   "jest": {
     "coverageThreshold": {

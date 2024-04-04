@@ -36,11 +36,11 @@ A new browser window will open with a random localhost port. ORCS runs [Storyboo
 
 All library components and files are located in `/lib`. Static files are located in `/assets`.
 
-### Viewing changes in PM / TD.
+### Viewing changes in your app.
 
-As an alternative to `npm link` you can run `npm run dist` and then copy the `es` folder directly into TD or PM:
+As an alternative to `npm link` you can run `npm run build` and then copy the `dist` folder directly into your app:
 
-`cp -R es/ ../../../team-directory/node_modules/orcs-design-system/`
+`cp -R dist/ ../../../your-app/node_modules/orcs-design-system/`
 
 **_This has now been been made easier with using Nodemon and a custom script. Read on for how to set this up._**
 
@@ -61,7 +61,7 @@ snapshot: {
 
 5. Run `npm run dev`.
 
-Now you can make any changes in orcs and it will build and then copy the es from the build into your project's node_modules. Run `npm install` in your project dir if you want to revert to the npm installation.
+Now you can make any changes in orcs and it will build and then copy the `dist` from the build into your project's node_modules. Run `npm install` in your project dir if you want to revert to the npm installation.
 
 ### Symlinking with `npm link`
 

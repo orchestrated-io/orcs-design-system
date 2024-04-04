@@ -2,9 +2,12 @@
   "compilerOptions": {
     "allowJs": true,
     "declaration": true,
-    "outDir": "./es",
+    "outDir": "./dist",
     "strict": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "target": "es5",
+    "jsx": "react"
   },
   "include": ["lib/**/*"],
   "exclude": ["node_modules"]

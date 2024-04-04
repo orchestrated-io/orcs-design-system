@@ -10,7 +10,7 @@ const workingDir = process.env.WORKING_DIR || "..";
 
 const targets = process.env.CONSUMERS.split(",");
 
-shell.exec("npm run dist", () => {
+shell.exec("npm run build", () => {
   targets.forEach((target) => {
     const path = `${workingDir}/${target}/node_modules/orcs-design-system/`;
 
@@ -25,6 +25,6 @@ shell.exec("npm run dist", () => {
       )} "${chalk.green(target)}" ${chalk.yellow("----]")}\n`
     );
 
-    shell.cp("-R", "es/", path);
+    shell.cp("-R", "dist/", path);
   });
 });
