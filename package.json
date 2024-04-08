@@ -40,7 +40,9 @@
     "playroom": "playroom start",
     "build-playroom": "playroom build",
     "dev": "nodemon --ignore dist/ ./scripts/dev.js",
-    "build": "tsc"
+    "prebuild": "rm -rf ./dist",
+    "build": "tsc",
+    "postbuild": "rsync -avm --include='*.d.ts' -f 'hide,! */' ./lib/ ./dist/"
   },
   "dependencies": {
     "@styled-system/css": "^5.1.5",
