@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const shell = require("shelljs");
 const dotenv = require("dotenv");
 const chalk = require("chalk");
@@ -25,6 +26,6 @@ shell.exec("npm run build", () => {
       )} "${chalk.green(target)}" ${chalk.yellow("----]")}\n`
     );
 
-    shell.cp("-R", "dist/", path);
+    shell.cp("-R", ["dist/", "package.json"], path);
   });
 });
