@@ -1,11 +1,5 @@
 name: Run Chromatic on Storybook
-on:
-  push:
-    branches:
-      - "master"
-  pull_request:
-    branches:
-      - "master"
+on: push
 
 jobs:
   chromatic-deployment:
@@ -26,3 +20,4 @@ jobs:
         uses: chromaui/action@v1
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          onlyChanged: true
