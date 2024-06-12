@@ -46,9 +46,9 @@
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
-    "@mui/icons-material": "^5.15.20",
-    "@mui/material": "^5.15.20",
-    "@mui/x-date-pickers": "^7.6.2",
+    "@mui/icons-material": "6.0.0-alpha.9",
+    "@mui/material": "6.0.0-alpha.9",
+    "@mui/x-date-pickers": "7.6.2",
     "@styled-system/css": "^5.1.5",
     "@styled-system/prop-types": "^5.1.5",
     "@styled-system/should-forward-prop": "^5.1.5",
@@ -144,6 +144,7 @@
     "webpack-cli": "^5.1.4"
   },
   "overrides": {
+    "@mui/material": "6.0.0-alpha.9",
     "nth-check": "2.1.0",
     "parse-url": "8.1.0",
     "postcss": "^8.4.31",
