@@ -153,7 +153,8 @@
     "eslint-plugin-testing-library": "^5.11.1",
     "typescript": "5.2.2",
     "webpack-dev-middleware": "6.1.2",
-    "jest": "$jest"
+    "jest": "$jest",
+    "@mui/utils": "6.0.0-alpha.9"
   },
   "browserslist": {
     "development": [
