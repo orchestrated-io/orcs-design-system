@@ -109,3 +109,4 @@ export const parameters = {
   viewMode: "docs",
   chromatic: { pauseAnimationAtEnd: true }
 };
+export const tags = ["autodocs"];
