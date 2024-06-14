@@ -1,6 +1,6 @@
 {
   "name": "orcs-design-system",
-  "version": "3.2.5",
+  "version": "3.2.6",
   "engines": {
     "node": "20.12.2"
   },
@@ -37,7 +37,7 @@
     "deploy-stack": "serverless deploy",
     "deploy-client": "serverless client deploy  --no-confirm",
     "storybook": "storybook dev",
-    "build-storybook": "storybook build",
+    "build-storybook": "storybook build -o .build_storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "playroom": "playroom start",
     "build-playroom": "playroom build",
