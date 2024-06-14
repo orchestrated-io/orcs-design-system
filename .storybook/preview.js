@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { DocsPage, DocsContainer as BaseContainer } from "@storybook/blocks";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { far } from "@fortawesome/free-regular-svg-icons";
@@ -26,46 +26,55 @@ const FlexItem = styled.div`
 const getThemeName = (context) =>
   get(context, "parameters.theme") || get(context, "globals.theme");
 
-const getTheme = (context) => {
-  const themeName = getThemeName(context);
+const getTheme = (themeName) => {
   return themeName === "default" ? systemtheme : systemThemeCollapsed;
 };
 
-const ThemeDecorator = (storyFn, context) => {
-  const themeName = getThemeName(context);
-  const storyTheme = getTheme(context);
+const withThemeDecorator = (storyFn, context) => {
+  const [finalThemeName, setFinalThemeName] = useState("default");
+  const [storyTheme, setStoryTheme] = useState(systemtheme);
 
-  switch (themeName) {
+  useEffect(() => {
+    const themeName = getThemeName(context);
+    setStoryTheme(getTheme(themeName));
+    setFinalThemeName(themeName);
+  }, [get(context, "parameters.theme"), get(context, "globals.theme")]);
+
+  switch (finalThemeName) {
     case "side-by-side":
       return (
-        <FlexWrapper>
-          <FlexItem key="default">
-            <ThemeProvider theme={systemtheme}>
-              <>
-                <GlobalStyles />
-                {storyFn()}
-              </>
-            </ThemeProvider>
-          </FlexItem>
-          <FlexItem key="collapsed">
-            <ThemeProvider theme={systemThemeCollapsed}>
-              <>
-                <GlobalStyles />
-                {storyFn()}
-              </>
-            </ThemeProvider>
-          </FlexItem>
-        </FlexWrapper>
+        <Suspense fallback={<div>Loading Themed Component</div>}>
+          <FlexWrapper>
+            <FlexItem key="default">
+              <ThemeProvider theme={systemtheme}>
+                <>
+                  <GlobalStyles />
+                  {storyFn()}
+                </>
+              </ThemeProvider>
+            </FlexItem>
+            <FlexItem key="collapsed">
+              <ThemeProvider theme={systemThemeCollapsed}>
+                <>
+                  <GlobalStyles />
+                  {storyFn()}
+                </>
+              </ThemeProvider>
+            </FlexItem>
+          </FlexWrapper>
+        </Suspense>
       );
 
     default:
       return (
-        <ThemeProvider theme={storyTheme}>
-          <>
-            <GlobalStyles />
-            {storyFn()}
-          </>
-        </ThemeProvider>
+        <Suspense fallback={<div>Loading Themed Component</div>}>
+          <ThemeProvider theme={storyTheme}>
+            <>
+              <GlobalStyles />
+              {storyFn()}
+            </>
+          </ThemeProvider>
+        </Suspense>
       );
   }
 };
@@ -77,6 +86,7 @@ export const globalTypes = {
     defaultValue: "default",
     toolbar: {
       icon: "sidebar",
+      dynamicTitle: true,
       items: [
         { value: "default", title: "Default theme" },
         { value: "collapsed", title: "Collapsed theme" },
@@ -96,7 +106,7 @@ export const DocsContainer = ({ children, context }) => {
   );
 };
 
-export const decorators = [ThemeDecorator];
+export const decorators = [withThemeDecorator];
 export const parameters = {
   options: {
     showRoots: true

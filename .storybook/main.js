@@ -1,23 +1,32 @@
 module.exports = {
   stories: ["../lib/**/*.@(mdx|stories.@(js))"],
+
   addons: [
     "@storybook/addon-docs",
     "@storybook/addon-links",
     "@storybook/addon-viewport",
-    "@storybook/addon-knobs",
     "@storybook/addon-a11y",
     "@storybook/addon-toolbars",
     "@storybook/components",
-    "@storybook/api",
-    "@storybook/addon-mdx-gfm",
     "@storybook/manager-api",
-    "@storybook/core-events"
+    "@storybook/core-events",
+    "@chromatic-com/storybook",
+    "@storybook/preset-create-react-app",
+    "@storybook/addon-webpack5-compiler-babel"
   ],
+
   framework: {
     name: "@storybook/react-webpack5",
     options: {}
   },
-  docs: {
-    autodocs: "docs"
-  }
+
+  swc: () => ({
+    jsc: {
+      transform: {
+        react: {
+          runtime: "automatic"
+        }
+      }
+    }
+  })
 };

@@ -1,4 +1,4 @@
-import { Meta } from "@storybook/addon-docs";
+import { Meta } from "@storybook/blocks";
 
 <Meta title="Intro" />
 
@@ -52,8 +52,8 @@ As an alternative to `npm link` you can run `npm run dist` and then copy the `es
 
 If you need to do `npm link` in your local environment you might encounter the following issues:
 
-- https://reactjs.org/warnings/invalid-hook-call-warning.html#duplicate-react
-- https://github.com/styled-components/styled-components/issues/2379
+* https://reactjs.org/warnings/invalid-hook-call-warning.html#duplicate-react
+* https://github.com/styled-components/styled-components/issues/2379
 
 Both react and styled-components cause duplicate instance issue after npm link, to fix that we need to ensure both app project and lib project are sharing the same instance of them.
 
@@ -124,7 +124,7 @@ import { TabsContainer, Tab } from "orcs-design-system"
 
 ### Using Styled System props
 
-The design system components are built with [Styled System](https://styled-system.com/) props. Generally, components can access the `space` and `layout` prop categories, with additional prop categories on a per-component basis. Check the _Properties_ section in a component's documentation to see what props it can use. Custom props will be listed in the props table.
+The design system components are built with [Styled System](https://styled-system.com/) props. Generally, components can access the `space` and `layout` prop categories, with additional prop categories on a per-component basis. Check the *Properties* section in a component's documentation to see what props it can use. Custom props will be listed in the props table.
 
 As a guide to using these props, see the [Styled System reference table](https://styled-system.com/table).
 
@@ -192,6 +192,6 @@ To run playroom, use this command: `npm run playroom`
 
 This design system is intended to work correctly on all modern desktop and mobile browsers.
 
----
+***
 
 > "A design system is a living, funded product with a roadmap and backlog, serving an ecosystem." — Nathan Curtis

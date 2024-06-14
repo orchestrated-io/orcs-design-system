@@ -13,9 +13,7 @@ Grid component using the built-in Styled System Grid Layout through its `grid` f
 
 Importing `GridItem` is recommended for use with `Grid` to retain sizing for the children; see [example](#without-griditem-vs-with-griditem) below.
 
-<Canvas>
-  <Story id="components-grid--basic-grid" />
-</Canvas>
+<Canvas of={stories.basicGrid} />
 
 ## Properties
 
@@ -38,21 +36,15 @@ By default, we've set certain default values on `Grid` as documented in the tabl
 
 ### With Colours
 
-<Canvas>
-  <Story id="components-grid--background-colour-grid" />
-</Canvas>
+<Canvas of={stories.backgroundColourGrid} />
 
 ### Template Columns and Rows
 
-<Canvas>
-  <Story id="components-grid--template-columns-and-rows" />
-</Canvas>
+<Canvas of={stories.templateColumnsAndRows} />
 
 ### Width-based Columns and Rows
 
-<Canvas>
-  <Story id="components-grid--width-columns-and-rows" />
-</Canvas>
+<Canvas of={stories.widthColumnsAndRows} />
 
 ### Using `GridItem`
 
@@ -62,19 +54,13 @@ Using `GridItem` to wrap individual children in the grid ensures that the childr
 
 Note that `GridItem` has default `padding="r"` where `r` refers to the **r**egular alias in the [space array scale](https://github.com/orchestrated-io/orcs-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js).
 
-<Canvas>
-  <Story id="components-grid--with-grid-item" />
-</Canvas>
+<Canvas of={stories.withGridItem} />
 
-<Canvas>
-  <Story id="components-grid--text-with-grid-item" />
-</Canvas>
+<Canvas of={stories.textWithGridItem} />
 
 #### Without `GridItem`
 
-<Canvas>
-  <Story id="components-grid--without-grid-item" />
-</Canvas>
+<Canvas of={stories.withoutGridItem} />
 
 ## Upgrading
 

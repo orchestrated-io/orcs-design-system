@@ -1,0 +1,137 @@
+import {
+  Meta,
+  ColorPalette,
+  ColorItem,
+  Story,
+  Canvas
+} from "@storybook/addon-docs";
+import { colors } from "./systemtheme";
+import Flex from "./components/Flex";
+import Colour from "./assets/Colour";
+import Box from "./components/Box/";
+import * as ColourStories from "./assets/Colour/Colour.stories";
+
+<Meta of={ColourStories} />
+
+# Colour
+
+These are the colours used throughout the design system, defined in `systemtheme`. They can be referenced using the `color` prop for components that accept this prop, or through referencing the theme object.
+
+## Main palette
+
+<ColorPalette>
+  <ColorItem
+    title="Greyscale"
+    subtitle="Greyscale theme colours"
+    colors={[
+      colors.black,
+      colors.greyDarkest,
+      colors.greyDarker,
+      colors.greyDark,
+      colors.grey,
+      colors.greyLight,
+      colors.greyLighter,
+      colors.greyLightest,
+      colors.white
+    ]}
+  />
+  <ColorItem
+    title="Primary"
+    subtitle="Main theme colour"
+    colors={[
+      colors.primaryDarkest,
+      colors.primaryDarker,
+      colors.primaryDark,
+      colors.primary,
+      colors.primaryLight,
+      colors.primaryLighter,
+      colors.primaryLightest
+    ]}
+  />
+  <ColorItem
+    title="Secondary"
+    subtitle="Secondary theme colour"
+    colors={[
+      colors.secondaryDarkest,
+      colors.secondaryDarker,
+      colors.secondaryDark,
+      colors.secondary,
+      colors.secondaryLight,
+      colors.secondaryLighter,
+      colors.secondaryLightest
+    ]}
+  />
+  <ColorItem
+    title="Success"
+    subtitle="Success indicator colour"
+    colors={[
+      colors.successDarkest,
+      colors.successDarker,
+      colors.successDark,
+      colors.success,
+      colors.successLight,
+      colors.successLighter,
+      colors.successLightest
+    ]}
+  />
+  <ColorItem
+    title="Warning"
+    subtitle="Warning indicator colour"
+    colors={[
+      colors.warningDarkest,
+      colors.warningDarker,
+      colors.warningDark,
+      colors.warning,
+      colors.warningLight,
+      colors.warningLighter,
+      colors.warningLightest
+    ]}
+  />
+  <ColorItem
+    title="Danger"
+    subtitle="Danger indicator colour"
+    colors={[
+      colors.dangerDarkest,
+      colors.dangerDarker,
+      colors.dangerDark,
+      colors.danger,
+      colors.dangerLight,
+      colors.dangerLighter,
+      colors.dangerLightest
+    ]}
+  />
+</ColorPalette>
+
+## Monochrome opacities
+
+For black and white colours at different opacities, use the following scales.
+
+### Black opacity scale
+
+<Canvas of={ColourStories.BlackOpacityScale} />
+
+### White opacity scale
+
+<Canvas of={ColourStories.WhiteOpacityScale} />
+
+## Coloured opacities
+
+### Primary opacity scale
+
+<Canvas of={ColourStories.PrimaryOpacityScale} />
+
+### Secondary opacity scale
+
+<Canvas of={ColourStories.SecondaryOpacityScale} />
+
+### Success opacity scale
+
+<Canvas of={ColourStories.SuccessOpacityScale} />
+
+### Warning opacity scale
+
+<Canvas of={ColourStories.WarningOpacityScale} />
+
+### Danger opacity scale
+
+<Canvas of={ColourStories.DangerOpacityScale} />

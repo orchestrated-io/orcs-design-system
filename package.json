@@ -1,6 +1,6 @@
 {
   "name": "orcs-design-system",
-  "version": "3.2.4",
+  "version": "3.2.5",
   "engines": {
     "node": "20.12.2"
   },
@@ -36,8 +36,8 @@
     "module": "BABEL_ENV=es babel lib -d es",
     "deploy-stack": "serverless deploy",
     "deploy-client": "serverless client deploy  --no-confirm",
-    "storybook": "storybook dev -s ./lib/assets",
-    "build-storybook": "storybook build -s .storybook/static -o .build_storybook",
+    "storybook": "storybook dev",
+    "build-storybook": "storybook build",
     "deploy-storybook": "storybook-to-ghpages",
     "playroom": "playroom start",
     "build-playroom": "playroom build",
@@ -76,32 +76,30 @@
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
     "@babel/runtime": "^7.12.5",
+    "@chromatic-com/storybook": "^1.5.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-regular-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
-    "@storybook/addon-a11y": "^7.6.7",
-    "@storybook/addon-actions": "^7.6.7",
-    "@storybook/addon-docs": "^7.6.7",
-    "@storybook/addon-knobs": "^7.0.2",
-    "@storybook/addon-links": "^7.6.7",
-    "@storybook/addon-mdx-gfm": "^7.6.7",
-    "@storybook/addon-storyshots": "^7.6.7",
-    "@storybook/addon-toolbars": "^7.6.7",
-    "@storybook/addon-viewport": "^7.6.7",
-    "@storybook/addons": "^7.6.7",
-    "@storybook/api": "^7.6.7",
-    "@storybook/blocks": "^7.6.7",
-    "@storybook/components": "^7.6.7",
-    "@storybook/core-events": "^7.6.7",
-    "@storybook/manager-api": "^7.6.7",
+    "@storybook/addon-a11y": "^8.1.7",
+    "@storybook/addon-actions": "^8.1.7",
+    "@storybook/addon-docs": "^8.1.7",
+    "@storybook/addon-links": "^8.1.7",
+    "@storybook/addon-toolbars": "^8.1.7",
+    "@storybook/addon-viewport": "^8.1.7",
+    "@storybook/addon-webpack5-compiler-babel": "^3.0.3",
+    "@storybook/blocks": "^8.1.7",
+    "@storybook/components": "^8.1.7",
+    "@storybook/core-events": "^8.1.7",
+    "@storybook/manager-api": "^8.1.7",
     "@storybook/mdx1-csf": "^1.0.0",
-    "@storybook/preset-create-react-app": "^7.6.7",
-    "@storybook/react": "^7.6.7",
-    "@storybook/react-webpack5": "^7.6.7",
+    "@storybook/preset-create-react-app": "^8.1.7",
+    "@storybook/react": "^8.1.7",
+    "@storybook/react-webpack5": "^8.1.7",
     "@storybook/storybook-deployer": "2.8.16",
+    "@storybook/theming": "^8.1.7",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@types/jest": "^27.5.2",
@@ -136,9 +134,10 @@
     "react-docgen": "^7.0.3",
     "react-dom": "^18.3.1",
     "shelljs": "^0.8.5",
-    "storybook": "^7.6.7",
+    "storybook": "^8.1.7",
     "style-loader": "^2.0.0",
     "styled-components": "^5.2.1",
+    "transform-loader": "^0.2.4",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
   },
@@ -154,21 +153,14 @@
     "typescript": "5.2.2",
     "webpack-dev-middleware": "6.1.2",
     "jest": "$jest",
-    "@mui/utils": "6.0.0-alpha.9"
+    "@mui/utils": "6.0.0-alpha.9",
+    "braces": "3.0.3"
   },
-  "browserslist": {
-    "development": [
-      "last 2 chrome versions",
-      "last 2 firefox versions",
-      "last 2 edge versions"
-    ],
-    "production": [
-      ">1%",
-      "last 4 versions",
-      "Firefox ESR",
-      "not ie < 11"
-    ]
-  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
   "files": [
     "es"
   ],
@@ -195,8 +187,7 @@
     "transform": {
       "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js",
-      "^.+\\.mdx?$": "<rootDir>/node_modules/@storybook/addon-docs/jest-transform-mdx"
+      "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
     },
     "transformIgnorePatterns": [
       "<rootDir>/lib/components/*/*.mdx",

@@ -1,6 +1,6 @@
 import { Meta, Story, Controls, Canvas } from "@storybook/addon-docs";
 import { ButtonGroupContainer, ButtonGroupItem } from ".";
-import * as stories from "./ButtonGroup.stories";
+import * as stories from "./ButtonGroupItem.stories";
 
 <Meta of={stories} />
 
@@ -12,9 +12,7 @@ Use the prop `onChange` on the `ButtonGroupItem` to control behaviour on click o
 
 ## Default ButtonGroupItem
 
-<Canvas>
-  <Story id="components-buttongroupitem--default-button-group-item" />
-</Canvas>
+<Canvas of={stories.defaultButtonGroupItem} />
 
 ## Properties
 
