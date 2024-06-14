@@ -1,0 +1,33 @@
+import { Meta, Story, Canvas } from "@storybook/blocks";
+
+<Meta title="System/Spacing" />
+
+# Spacing
+
+This design system uses a range of scales to define the space around and within components, as well as their sizes. These scales are part of the design system's theme (default: `systemtheme`) and can be utilized as values for [Styled System](https://styled-system.com/)-style props. Most components come with wrappers that can access Styled System's `space` and `layout` props.
+
+## Space Scale
+
+The **space** scale defines the spacing values. For ease of reference, t-shirt sizing aliases have been added. For example, `p="r"`, `p="4"`, and `p={4}` are all valid and equivalent.
+
+Our default spacing is `r`, which stands for "regular".
+
+| **Array Index** | **T-shirt Size** | **Value** |
+| --------------- | ---------------- | --------- |
+| 0               | -                | 0         |
+| 1               | xxs              | 2px       |
+| 2               | xs               | 4px       |
+| 3               | s                | 8px       |
+| 4               | r                | 16px      |
+| 5               | l                | 24px      |
+| 6               | xl               | 32px      |
+| 7               | xxl              | 64px      |
+| 8               | xxxl             | 128px     |
+
+## Sizes Scale
+
+The **sizes** scale operates similarly to the space scale, providing consistent sizing values for components.
+
+## Spacer Component
+
+To define uniform space between elements, such as controlling the spacing between `Button` components within a `Flex` row, use the `Spacer` component. For more details and examples, refer to the [Spacer component documentation](./?path=/docs/components-spacer--margin).

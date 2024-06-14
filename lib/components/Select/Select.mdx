@@ -23,87 +23,61 @@ const options = [
 
 ## Default
 
-<Canvas>
-  <Story id="components-select--default-select" />
-</Canvas>
+<Canvas of={stories.defaultSelect} />
 
 ## Invalid
 
-<Canvas>
-  <Story id="components-select--invalid-select" />
-</Canvas>
+<Canvas of={stories.invalidSelect} />
 
 ## Mandatory
 
-<Canvas>
-  <Story id="components-select--mandatory-select" />
-</Canvas>
+<Canvas of={stories.mandatorySelect} />
 
 ## Disabled
 
-<Canvas>
-  <Story id="components-select--disabled-select" />
-</Canvas>
+<Canvas of={stories.disabledSelect} />
 
 ## Specific Height Select
 
 With height and padding props, you can select custom height and padding of select control. Be sure to include unit in the string, e.g. px.
 
-<Canvas>
-  <Story id="components-select--specific-height-select" />
-</Canvas>
+<Canvas of={stories.SpecificHeightSelect} />
 
 ## Multi-Select
 
-<Canvas>
-  <Story id="components-select--multi-select" />
-</Canvas>
+<Canvas of={stories.multiSelect} />
 
 ## Multi-Select with fixed options
 
-<Canvas>
-  <Story id="components-select--multi-select-with-fixed-options" />
-</Canvas>
+<Canvas of={stories.multiSelectWithFixedOptions} />
 
 ## Inverted
 
-<Canvas>
-  <Story id="components-select--inverted-select" />
-</Canvas>
+<Canvas of={stories.invertedSelect} />
 
 ## With `data-testid` attribute
 
-<Canvas>
-  <Story id="components-select--with-data-id-select" />
-</Canvas>
+<Canvas of={stories.withDataIdSelect} />
 
 ## With selected defaultValue
 
 This uses a custom `util`. To use, add `import { getOptionByValue } from "orcs-design-system"` to your imports.
 
-<Canvas>
-  <Story id="components-select--with-selected-value-select" />
-</Canvas>
+<Canvas of={stories.withSelectedValueSelect} />
 
 ## With creatable
 
-<Canvas>
-  <Story id="components-select--with-creatable-select" />
-</Canvas>
+<Canvas of={stories.withCreatableSelect} />
 
 ## With async
 
-<Canvas>
-  <Story id="components-select--with-async-select" />
-</Canvas>
+<Canvas of={stories.withAsyncSelect} />
 
 ## With grouped options
 
 (Auto-expanded to show grouped options)
 
-<Canvas height="700px">
-  <Story id="components-select--with-grouped-options" />
-</Canvas>
+<Canvas of={stories.withGroupedOptions} height="700px" />
 
 ## Properties
 

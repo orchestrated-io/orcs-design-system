@@ -1,0 +1,80 @@
+import { Meta, Typeset, Canvas, Story } from "@storybook/blocks";
+import { H1, H2, H3, H4, H5, H6, P, Text, Quote, Small, Code } from ".";
+import Box from "../Box";
+import Spacer from "../Spacer";
+import { themeGet } from "@styled-system/theme-get";
+import * as TypographyStories from "./Typography.stories";
+
+<Meta of={TypographyStories} />
+
+# Typography
+
+[Usage](#usage) | [Font families](#font-families) | [Headings](#headings) | [Body text](#body-text) | [Text styling](#text-styling) | [Miscellaneous](#miscellaneous)
+
+## Usage
+
+The typography system requires you to import each subcomponent you want to use, for example:
+
+```
+import { H1, H2, H3, H4, H5, H6, P, Text, Quote, Small, Code } from "orcs-design-system";
+```
+
+## Font families
+
+By default, the design system uses **Open Sans**: https://fonts.google.com/specimen/Open+Sans with other sans serif families as fallback. The default font weight is 400, and the system also uses 600 for bold or emphasised text and 300 for light weights (to be used sparingly).
+
+Font defaults can be changed via [systemtheme.js](https://github.com/orchestrated-io/orcs-design-system/blob/master/packages/orcs-design-system/lib/systemtheme.js).
+
+<Typeset
+  fontSizes={[
+    themeGet("fontSizes.0"),
+    themeGet("fontSizes.1"),
+    themeGet("fontSizes.2"),
+    themeGet("fontSizes.3"),
+    themeGet("fontSizes.4"),
+    themeGet("fontSizes.5"),
+    themeGet("fontSizes.6"),
+    themeGet("fontSizes.7"),
+    themeGet("fontSizes.8"),
+    themeGet("fontSizes.9")
+  ]}
+  fontFamily={themeGet("font")}
+/>
+
+## Headings
+
+These use `<H1>` to `<H6>` tags. For semantic and accessibility usage guidelines, refer to [the W3C headings guide](https://www.w3.org/WAI/tutorials/page-structure/headings/) and its related WCAG resources.
+
+<Canvas of={TypographyStories.HeadingsH1ToH6} />
+
+## Body text
+
+<Canvas of={TypographyStories.BodyTextParagraph} />
+
+To render text in a `span` HTML element without the paragraph formatting, use the `Text` component. This is the preferred usage for short text.
+
+<Canvas of={TypographyStories.BodyTextText} />
+
+## Text styling
+
+### Size and emphasis
+
+To render type smaller or larger, use `sizing="small"` or `sizing="large"` on a heading, or if needed you can use `fontSize` property or the `Small` element as demonstrated below. Unless it is for a very specific purpose, strongly recommend minimising the resizing of text and simply using the appropriate type element the next size up (or down) on the design system scale.
+
+<Canvas of={TypographyStories.StylingSizing} />
+
+To render type with emphasis, use `weight="bold"` or wrap the type in a `<strong>` tag.
+
+<Canvas of={TypographyStories.StylingEmphasis} />
+
+### Colours
+
+To apply colour to text, use the `color` property in the `Text` component. Usage should be limited to the colours in the example below except in very specific design cases.
+
+<Canvas of={TypographyStories.StylingColours} />
+
+## Miscellaneous
+
+<Canvas of={TypographyStories.MiscellaneousBlockquote} />
+
+<Canvas of={TypographyStories.MiscellaneousCode} />

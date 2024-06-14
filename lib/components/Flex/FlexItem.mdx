@@ -17,9 +17,7 @@ To use `FlexItem` to control the spacing between children of `Flex` you must als
 
 You don't necessarily need to use `<FlexItem>` as the direct child element to `<Flex>` unless you need to apply specific `flexbox` properties to the item. In most cases, once you set the desired properties on `<Flex>` it will layout the child elements as intended, whether these be `<FlexItem>` or any other component like `<Box>` or even standard HTML like a `<div>` or `<span>`. However, if you want to use the flex-specific CSS properties for items within the container, like `flex` or `align-self`, you will need to use `FlexItem` to apply these properties.
 
-<Canvas>
-  <Story id="components-flexitem--basic-flex-item" />
-</Canvas>
+<Canvas of={stories.basicFlexItem} />
 
 ## Upgrading
 

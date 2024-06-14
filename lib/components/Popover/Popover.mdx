@@ -14,63 +14,47 @@ If you don't specify a width, 200px is the default, but as a general guide try a
 
 ## Default
 
-<Canvas>
-  <Story id="components-popover--default-popover" />
-</Canvas>
+<Canvas of={stories.defaultPopover} />
 
 ## Directions
 
 Use direction prop to set the direction of the tooltip so that it is positioned in a good place relative to the user interface around it. By default this is set to right. For example, you might use left instead if the element that triggers the popover is on the right side edge of the browser, so that the tooltip does not go off the edge of the screen.
 
-<Canvas>
-  <Story id="components-popover--direction" />
-</Canvas>
+<Canvas of={stories.direction} />
 
 ## Specified width
 
 The width prop should be used to tailor the size of the popover to the content that will be presented inside it. Try and select a width that best suits the content.
 
-<Canvas>
-  <Story id="components-popover--specified-width" />
-</Canvas>
+<Canvas of={stories.specifiedWidth} />
 
 ## Text alignment
 
 Use this to set the text alignment to what looks best. Typically one to a few words will look better centered, a sentence or paragraph will look better left aligned. Left aligned is set by default so only really need to make use of this prop if you want the tooltip text centered.
 
-<Canvas>
-  <Story id="components-popover--text-alignment" />
-</Canvas>
+<Canvas of={stories.textAlignment} />
 
 ## Display inline-block
 
 Use this prop if the Popover tooltip does not look correct, in some cases it will need to be displayed as inline-block.
 
-<Canvas>
-  <Story id="components-popover--display-inline-block" />
-</Canvas>
+<Canvas of={stories.DisplayInlineBlock} />
 
 ## Tooltip example
 
 Use this example when you want to use popover as a tooltip
 
-<Canvas>
-  <Story id="components-popover--tooltip-example" />
-</Canvas>
+<Canvas of={stories.tooltipExample} />
 
 Tooltip with link example
 
-<Canvas>
-  <Story id="components-popover--tooltip-with-link-example" />
-</Canvas>
+<Canvas of={stories.tooltipWithLinkExample} />
 
 ## Keep In View Example
 
 If the tooltip falls outside the view port, the direction is changed to bring it back into view. In this case the default is to right align the Popover but it must be left aligned to be visible.
 
-<Canvas>
-  <Story id="components-popover--keep-in-view-example" />
-</Canvas>
+<Canvas of={stories.keepInViewExample} />
 
 ## Properties
 
