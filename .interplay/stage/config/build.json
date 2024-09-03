@@ -1,9 +1,9 @@
 {
     "build": {
-        "cdnFolder": "1725335410602",
-        "cdnFolderURL": "https://cdn.interplay.io/ck0ronzww000002s6cht86oyw/um3l2J56Xr/master/1725335410602/",
+        "cdnFolder": "1725337472221",
+        "cdnFolderURL": "https://cdn.interplay.io/ck0ronzww000002s6cht86oyw/um3l2J56Xr/master/1725337472221/",
         "basePath": "/Users/adambottega/Documents/GitHub/orcs-design-system",
-        "publicPath": "https://cdn.interplay.io/ck0ronzww000002s6cht86oyw/um3l2J56Xr/master/1725335410602/.interplay/stage/files/interplay/build/",
+        "publicPath": "https://cdn.interplay.io/ck0ronzww000002s6cht86oyw/um3l2J56Xr/master/1725337472221/.interplay/stage/files/interplay/build/",
         "outputFolder": "/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/files/interplay/build/",
         "entry": {
             "orcs-design-system": "/Users/adambottega/Documents/GitHub/orcs-design-system/es/index.js",
@@ -19,6 +19,7 @@
             "react/": "/Users/adambottega/Documents/GitHub/orcs-design-system/node_modules/react",
             "react/jsx-runtime": "/Users/adambottega/Documents/GitHub/orcs-design-system/node_modules/react/jsx-runtime.js"
         },
+        "devBuild": true,
         "format": "umd",
         "externals": {
             "react": {

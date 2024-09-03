@@ -1,4 +1,3 @@
-
 // @ts-check
 /** @typedef {import("./config").InterplayCLI.Settings} InterplaySettings */
 
@@ -10,7 +9,6 @@
  */
 module.exports = () => {
   return {
-
     //-----------------------------------------------------------------------------------------------------------------
     //TOKENS SETTINGS
 
@@ -23,7 +21,6 @@ module.exports = () => {
     //    }
     // ],
 
-
     //-----------------------------------------------------------------------------------------------------------------
     //COMPONENTS SETTINGS
 
@@ -33,13 +30,13 @@ module.exports = () => {
     //Component packages to import from this code repo
     packages: [
       {
-        packagePath: "package.json",      //Path to package.json for package to import
-        build: "es/index.js",                //Entry file for component bundling
+        packagePath: "package.json", //Path to package.json for package to import
+        build: "es/index.js", //Entry file for component bundling
 
-        src: "lib/index.js",                  //Entry file for component parsing
+        src: "lib/index.js", //Entry file for component parsing
         //types: "./relative/path/to/index.d.ts",            //(Optional entry for component parsing instead of src)
-        ignoreExports: [],                                   //Exports to ignore when parsing
-      },
+        ignoreExports: [] //Exports to ignore when parsing
+      }
     ],
 
     //npm packages to build as externals (framework dependencies such as react and react-dom are set automatically)
@@ -51,10 +48,10 @@ module.exports = () => {
     //},
 
     //build in development mode instead of (default) production mode
-    //devBuild: true,
+    devBuild: true,
 
     //Component in your build to use as a wrapper component (if required) when rendering components.
-    wrapperComponent: "lib/SystemThemeProvider.js",
+    wrapperComponent: "lib/SystemThemeProvider.js"
 
     //Files to include on pages containing your components, in addition to the webpack bundle.
     //Can be list of urls and/or local relative paths or a glob pattern e.g. ./dist/bundle.css
