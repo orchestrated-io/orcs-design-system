@@ -1,0 +1,702 @@
+[2024-09-03T03:50:08.988Z]: Interplay CLI version:3.1.6 node:v16.15.0 (darwin, arm64, 10). Logging to .interplay/logs/cli.txt
+[2024-09-03T03:50:08.990Z]: Settings:{"cmd":"import","interplayFolder":".interplay","port":9000,"target":"default","basePath":"/Users/adambottega/Documents/GitHub/orcs-design-system","interplayFolderPath":"/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/","targetsFilePath":"/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/targets.json","settingsPath":"/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/interplay.config.js","logFolder":"/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/logs/","framework":{"id":"framework","name":"react"},"packages":[{"packagePath":"package.json","build":"es/index.js","src":"lib/index.js","ignoreExports":[]}],"wrapperComponent":"lib/SystemThemeProvider.js","targetsSettings":{"targets":{"default":{"projectId":"um3l2J56Xr","teamId":"ck0ronzww000002s6cht86oyw"}}},"projectId":"um3l2J56Xr","teamId":"ck0ronzww000002s6cht86oyw"}
+[2024-09-03T03:50:08.990Z]: Running import with teamId:ck0ronzww000002s6cht86oyw projectId:um3l2J56Xr branchId:master
+[2024-09-03T03:50:09.841Z]: Loaded plugin:@interplay/cli-plugin-react
+[2024-09-03T03:50:09.842Z]: Finding packages...
+[2024-09-03T03:50:09.842Z]: Expanding packages glob ["**/package.json","!**/node_modules/**","!**/pnpm-store/**","!**/.pnpm-store/**"] with options:{"cwd":"/Users/adambottega/Documents/GitHub/orcs-design-system","followSymbolicLinks":false,"throwErrorOnBrokenSymbolicLink":false,"suppressErrors":true}
+[2024-09-03T03:50:09.911Z]: Found 1 package.json files
+[2024-09-03T03:50:09.913Z]: Completed loading package information
+[2024-09-03T03:50:10.588Z]: Created Interplay API session token
+[2024-09-03T03:50:10.588Z]: Initialising context...
+[2024-09-03T03:50:10.589Z]: Resolving glob:[
+   "/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/init/*.json",
+   "!/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/init/*.tokens.json"
+]
+[2024-09-03T03:50:10.591Z]: Glob result:[]
+[2024-09-03T03:50:10.598Z]: Resolved react:/Users/adambottega/Documents/GitHub/orcs-design-system/node_modules/react/index.js
+[2024-09-03T03:50:10.598Z]: Resolved JSX runtime:/Users/adambottega/Documents/GitHub/orcs-design-system/node_modules/react/jsx-runtime.js
+[2024-09-03T03:50:10.598Z]: Using react runtime:automatic
+[2024-09-03T03:50:10.599Z]: Initialising context complete
+[2024-09-03T03:50:10.600Z]: Removing any previous build result file:/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/config/build.json
+[2024-09-03T03:50:10.635Z]: Bundling entries:{
+   "orcs-design-system": "/Users/adambottega/Documents/GitHub/orcs-design-system/es/index.js",
+   "styled-components": "/Users/adambottega/Documents/GitHub/orcs-design-system/node_modules/styled-components/dist/styled-components.cjs.js",
+   "@emotion/react": "/Users/adambottega/Documents/GitHub/orcs-design-system/node_modules/@emotion/react/dist/emotion-react.cjs.js",
+   "@emotion/styled": "/Users/adambottega/Documents/GitHub/orcs-design-system/node_modules/@emotion/styled/dist/emotion-styled.cjs.js"
+}
+[2024-09-03T03:50:10.636Z]: Found CLI install path:/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli
+[2024-09-03T03:50:10.636Z]: Found CLI parent node_modules:/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules
+[2024-09-03T03:50:10.697Z]: Webpack alias:{
+   "~": "/Users/adambottega/Documents/GitHub/orcs-design-system",
+   "orcs-design-system": "/Users/adambottega/Documents/GitHub/orcs-design-system",
+   "orcs-design-system/": "/Users/adambottega/Documents/GitHub/orcs-design-system",
+   "react": "/Users/adambottega/Documents/GitHub/orcs-design-system/node_modules/react/index.js",
+   "react/": "/Users/adambottega/Documents/GitHub/orcs-design-system/node_modules/react",
+   "react/jsx-runtime": "/Users/adambottega/Documents/GitHub/orcs-design-system/node_modules/react/jsx-runtime.js"
+}
+[2024-09-03T03:50:10.697Z]: Webpack externals:{
+   "react": {
+      "root": "React",
+      "commonjs2": "react",
+      "commonjs": "react",
+      "amd": "react",
+      "umd": "react"
+   },
+   "react-dom": {
+      "root": "ReactDOM",
+      "commonjs2": "react-dom",
+      "commonjs": "react-dom",
+      "amd": "react-dom",
+      "umd": "react-dom"
+   },
+   "styled-components": "styled-components",
+   "@emotion/react": "@emotion/react",
+   "@emotion/styled": "@emotion/styled"
+}
+[2024-09-03T03:51:01.500Z]: Bundle completed.
+[2024-09-03T03:51:01.501Z]: All package bundles completed.
+[2024-09-03T03:51:01.503Z]: Cleaning parsing working folder:/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/logs/parsing/
+[2024-09-03T03:51:01.507Z]: Removing any previous parsing result file:/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/config/parsing.json
+[2024-09-03T03:51:01.518Z]: Resolving glob:[
+   "/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/config/build.json"
+]
+[2024-09-03T03:51:01.524Z]: Glob result:[
+   "/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/config/build.json"
+]
+[2024-09-03T03:51:01.550Z]: Loading config for key:build from:/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/config/build.json
+[2024-09-03T03:51:01.551Z]: iterateSourceFiles for file:lib/index.js
+[2024-09-03T03:51:09.205Z]: iterateSourceFiles completed for file:lib/index.js
+[2024-09-03T03:51:09.227Z]: orcs-design-system - systemtheme resolved to: lib/systemtheme.js (default)
+[2024-09-03T03:51:09.228Z]: orcs-design-system - systemThemeCollapsed resolved to: lib/systemThemeCollapsed.js (default)
+[2024-09-03T03:51:09.228Z]: orcs-design-system - GlobalStyles resolved to: lib/GlobalStyles.js (default)
+[2024-09-03T03:51:09.228Z]: orcs-design-system - SystemThemeProvider resolved to: lib/SystemThemeProvider.js (default)
+[2024-09-03T03:51:09.228Z]: orcs-design-system - ActionsMenu resolved to: lib/components/ActionsMenu/index.js (default)
+[2024-09-03T03:51:09.228Z]: orcs-design-system - ActionsMenuBody resolved to: lib/components/ActionsMenu/index.js (ActionsMenuBody)
+[2024-09-03T03:51:09.228Z]: orcs-design-system - ActionsMenuHeading resolved to: lib/components/ActionsMenu/index.js (ActionsMenuHeading)
+[2024-09-03T03:51:09.228Z]: orcs-design-system - ActionsMenuItem resolved to: lib/components/ActionsMenu/index.js (ActionsMenuItem)
+[2024-09-03T03:51:09.228Z]: orcs-design-system - Avatar resolved to: lib/components/Avatar/index.js (default)
+[2024-09-03T03:51:09.228Z]: orcs-design-system - Badge resolved to: lib/components/Badge/index.js (default)
+[2024-09-03T03:51:09.229Z]: orcs-design-system - Box resolved to: lib/components/Box/index.js (default)
+[2024-09-03T03:51:09.229Z]: orcs-design-system - Button resolved to: lib/components/Button/index.js (default)
+[2024-09-03T03:51:09.229Z]: orcs-design-system - ButtonLink resolved to: lib/components/Button/index.js (ButtonLink)
+[2024-09-03T03:51:09.229Z]: orcs-design-system - VARIANT_COLORS resolved to: lib/components/Button/index.js (VARIANT_COLORS)
+[2024-09-03T03:51:09.229Z]: orcs-design-system - ButtonGroupContainer resolved to: lib/components/ButtonGroup/index.js (ButtonGroupContainer)
+[2024-09-03T03:51:09.229Z]: orcs-design-system - ButtonGroupItem resolved to: lib/components/ButtonGroup/index.js (ButtonGroupItem)
+[2024-09-03T03:51:09.229Z]: orcs-design-system - Card resolved to: lib/components/Card/index.js (default)
+[2024-09-03T03:51:09.229Z]: orcs-design-system - Checkbox resolved to: lib/components/Checkbox/index.js (default)
+[2024-09-03T03:51:09.229Z]: orcs-design-system - DatePicker resolved to: lib/components/DatePicker/index.js (default)
+[2024-09-03T03:51:09.229Z]: orcs-design-system - Divider resolved to: lib/components/Divider/index.js (default)
+[2024-09-03T03:51:09.229Z]: orcs-design-system - Expandable resolved to: lib/components/Expandable/index.js (default)
+[2024-09-03T03:51:09.229Z]: orcs-design-system - Flex resolved to: lib/components/Flex/index.js (default)
+[2024-09-03T03:51:09.229Z]: orcs-design-system - FlexItem resolved to: lib/components/Flex/index.js (FlexItem)
+[2024-09-03T03:51:09.229Z]: orcs-design-system - Grid resolved to: lib/components/Grid/index.js (default)
+[2024-09-03T03:51:09.229Z]: orcs-design-system - GridItem resolved to: lib/components/Grid/index.js (GridItem)
+[2024-09-03T03:51:09.229Z]: orcs-design-system - Header resolved to: lib/components/Header/index.js (default)
+[2024-09-03T03:51:09.229Z]: orcs-design-system - HeaderSimple resolved to: lib/components/HeaderSimple/index.js (default)
+[2024-09-03T03:51:09.229Z]: orcs-design-system - Icon resolved to: lib/components/Icon/index.js (default)
+[2024-09-03T03:51:09.229Z]: orcs-design-system - Loading resolved to: lib/components/Loading/index.js (default)
+[2024-09-03T03:51:09.229Z]: orcs-design-system - Modal resolved to: lib/components/Modal/index.js (default)
+[2024-09-03T03:51:09.229Z]: orcs-design-system - Notification resolved to: lib/components/Notification/index.js (default)
+[2024-09-03T03:51:09.230Z]: orcs-design-system - Popover resolved to: lib/components/Popover/index.js (default)
+[2024-09-03T03:51:09.230Z]: orcs-design-system - ProgressBar resolved to: lib/components/ProgressBar/index.js (default)
+[2024-09-03T03:51:09.230Z]: orcs-design-system - RadioButton resolved to: lib/components/RadioButton/index.js (default)
+[2024-09-03T03:51:09.230Z]: orcs-design-system - Range resolved to: lib/components/Range/index.js (default)
+[2024-09-03T03:51:09.230Z]: orcs-design-system - Select resolved to: lib/components/Select/index.js (default)
+[2024-09-03T03:51:09.230Z]: orcs-design-system - Sidebar resolved to: lib/components/Sidebar/index.js (default)
+[2024-09-03T03:51:09.230Z]: orcs-design-system - SidebarTabs resolved to: lib/components/Sidebar/index.js (SidebarTabs)
+[2024-09-03T03:51:09.230Z]: orcs-design-system - SidebarTab resolved to: lib/components/Sidebar/index.js (SidebarTab)
+[2024-09-03T03:51:09.230Z]: orcs-design-system - SidebarPanels resolved to: lib/components/Sidebar/index.js (SidebarPanels)
+[2024-09-03T03:51:09.230Z]: orcs-design-system - SidebarPanel resolved to: lib/components/Sidebar/index.js (SidebarPanel)
+[2024-09-03T03:51:09.230Z]: orcs-design-system - SidebarClose resolved to: lib/components/Sidebar/index.js (SidebarClose)
+[2024-09-03T03:51:09.230Z]: orcs-design-system - SideNav resolved to: lib/components/SideNav/index.js (default)
+[2024-09-03T03:51:09.230Z]: orcs-design-system - Spacer resolved to: lib/components/Spacer/index.js (default)
+[2024-09-03T03:51:09.230Z]: orcs-design-system - StatusDot resolved to: lib/components/StatusDot/index.js (default)
+[2024-09-03T03:51:09.230Z]: orcs-design-system - StyledLink resolved to: lib/components/StyledLink/index.js (default)
+[2024-09-03T03:51:09.230Z]: orcs-design-system - styleLink resolved to: lib/components/StyledLink/index.js (styleLink)
+[2024-09-03T03:51:09.231Z]: orcs-design-system - Table resolved to: lib/components/Table/index.js (default)
+[2024-09-03T03:51:09.231Z]: orcs-design-system - Tab resolved to: lib/components/Tabs/index.js (Tab)
+[2024-09-03T03:51:09.231Z]: orcs-design-system - TabsContainer resolved to: lib/components/Tabs/index.js (TabsContainer)
+[2024-09-03T03:51:09.231Z]: orcs-design-system - Tag resolved to: lib/components/Tag/index.js (default)
+[2024-09-03T03:51:09.231Z]: orcs-design-system - TextInput resolved to: lib/components/TextInput/index.js (default)
+[2024-09-03T03:51:09.231Z]: orcs-design-system - TextArea resolved to: lib/components/TextArea/index.js (default)
+[2024-09-03T03:51:09.231Z]: orcs-design-system - Toggle resolved to: lib/components/Toggle/index.js (default)
+[2024-09-03T03:51:09.231Z]: orcs-design-system - TreeNav resolved to: lib/components/TreeNav/index.js (default)
+[2024-09-03T03:51:09.231Z]: orcs-design-system - Typography resolved to: lib/components/Typography/index.js (default)
+[2024-09-03T03:51:09.231Z]: orcs-design-system - H1 resolved to: lib/components/Typography/index.js (H1)
+[2024-09-03T03:51:09.231Z]: orcs-design-system - H2 resolved to: lib/components/Typography/index.js (H2)
+[2024-09-03T03:51:09.231Z]: orcs-design-system - H3 resolved to: lib/components/Typography/index.js (H3)
+[2024-09-03T03:51:09.231Z]: orcs-design-system - H4 resolved to: lib/components/Typography/index.js (H4)
+[2024-09-03T03:51:09.231Z]: orcs-design-system - H5 resolved to: lib/components/Typography/index.js (H5)
+[2024-09-03T03:51:09.231Z]: orcs-design-system - H6 resolved to: lib/components/Typography/index.js (H6)
+[2024-09-03T03:51:09.231Z]: orcs-design-system - P resolved to: lib/components/Typography/index.js (P)
+[2024-09-03T03:51:09.231Z]: orcs-design-system - Text resolved to: lib/components/Typography/index.js (Text)
+[2024-09-03T03:51:09.231Z]: orcs-design-system - Small resolved to: lib/components/Typography/index.js (Small)
+[2024-09-03T03:51:09.231Z]: orcs-design-system - Quote resolved to: lib/components/Typography/index.js (Quote)
+[2024-09-03T03:51:09.231Z]: orcs-design-system - Code resolved to: lib/components/Typography/index.js (Code)
+[2024-09-03T03:51:09.231Z]: orcs-design-system - getOptionByValue resolved to: lib/utils/selectUtil.js (default)
+[2024-09-03T03:51:09.233Z]: Completed resolving components.
+[2024-09-03T03:51:09.236Z]: Parsing React components...
+[2024-09-03T03:51:10.061Z]: lib/systemtheme.js - react-docgen:Error: No suitable component definition found.
+[2024-09-03T03:51:10.817Z]: lib/systemThemeCollapsed.js - react-docgen:Error: No suitable component definition found.
+[2024-09-03T03:51:10.822Z]: lib/GlobalStyles.js - react-docgen:Error: No suitable component definition found.
+[2024-09-03T03:51:13.700Z]: lib/components/Modal/index.js - react-docgen:Error: No suitable component definition found.
+[2024-09-03T03:51:15.590Z]: lib/components/Typography/index.js - react-docgen:Error: No suitable component definition found.
+[2024-09-03T03:51:15.640Z]: lib/utils/selectUtil.js - react-docgen:Error: No suitable component definition found.
+[2024-09-03T03:51:15.642Z]: Did not find tsconfig file
+[2024-09-03T03:51:15.651Z]: Resolved react:/Users/adambottega/Documents/GitHub/orcs-design-system/node_modules/react/index.js
+[2024-09-03T03:51:15.651Z]: Resolved JSX runtime:/Users/adambottega/Documents/GitHub/orcs-design-system/node_modules/react/jsx-runtime.js
+[2024-09-03T03:51:15.651Z]: Adding example parsing alias orcs-design-system:/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/files/interplay/build/orcs-design-system.js
+[2024-09-03T03:51:15.651Z]: Adding example parsing alias styled-components:/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/files/interplay/build/styled-components.js
+[2024-09-03T03:51:15.651Z]: Adding example parsing alias @emotion/react:/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/files/interplay/build/@emotion/react.js
+[2024-09-03T03:51:15.651Z]: Adding example parsing alias @emotion/styled:/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/files/interplay/build/@emotion/styled.js
+[2024-09-03T03:51:15.651Z]: Babel using aliases:{
+   "~": "/Users/adambottega/Documents/GitHub/orcs-design-system",
+   "orcs-design-system": "/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/files/interplay/build/orcs-design-system.js",
+   "orcs-design-system/": "/Users/adambottega/Documents/GitHub/orcs-design-system",
+   "react": "/Users/adambottega/Documents/GitHub/orcs-design-system/node_modules/react/index.js",
+   "react/": "/Users/adambottega/Documents/GitHub/orcs-design-system/node_modules/react",
+   "react/jsx-runtime": "/Users/adambottega/Documents/GitHub/orcs-design-system/node_modules/react/jsx-runtime.js",
+   "styled-components": "/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/files/interplay/build/styled-components.js",
+   "@emotion/react": "/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/files/interplay/build/@emotion/react.js",
+   "@emotion/styled": "/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/files/interplay/build/@emotion/styled.js"
+}
+[2024-09-03T03:51:15.848Z]: React components parsing complete.
+[2024-09-03T03:51:15.858Z]: applyManifest called.
+[2024-09-03T03:51:15.858Z]: Checking manifest for package:orcs-design-system
+[2024-09-03T03:51:15.859Z]: No translationsPath set. No translations to parse.
+[2024-09-03T03:51:15.860Z]: Resolving glob:".interplay/examples/**/*.*"
+[2024-09-03T03:51:15.864Z]: Glob result:[
+   ".interplay/examples/orcs-design-system/ActionsMenu.example.js",
+   ".interplay/examples/orcs-design-system/Avatar.example.js",
+   ".interplay/examples/orcs-design-system/Badge.example.js",
+   ".interplay/examples/orcs-design-system/Box.example.js",
+   ".interplay/examples/orcs-design-system/Button.example.js",
+   ".interplay/examples/orcs-design-system/ButtonGroup.example.js",
+   ".interplay/examples/orcs-design-system/Card.example.js",
+   ".interplay/examples/orcs-design-system/Checkbox.example.js",
+   ".interplay/examples/orcs-design-system/DatePicker.example.js",
+   ".interplay/examples/orcs-design-system/Divider.example.js",
+   ".interplay/examples/orcs-design-system/Expandable.example.js",
+   ".interplay/examples/orcs-design-system/HeaderSimple.example.js",
+   ".interplay/examples/orcs-design-system/Icon.example.js",
+   ".interplay/examples/orcs-design-system/Notification.example.js",
+   ".interplay/examples/orcs-design-system/ProgressBar.example.js",
+   ".interplay/examples/orcs-design-system/RadioButton.example.js",
+   ".interplay/examples/orcs-design-system/Range.example.js",
+   ".interplay/examples/orcs-design-system/Select.example.js",
+   ".interplay/examples/orcs-design-system/SideNav.example.js",
+   ".interplay/examples/orcs-design-system/StatusDot.example.js",
+   ".interplay/examples/orcs-design-system/StyledLink.example.js",
+   ".interplay/examples/orcs-design-system/Tabs.example.js",
+   ".interplay/examples/orcs-design-system/Tag.example.js",
+   ".interplay/examples/orcs-design-system/TextArea.example.js",
+   ".interplay/examples/orcs-design-system/TextInput.example.js",
+   ".interplay/examples/orcs-design-system/Toggle.example.js",
+   ".interplay/examples/orcs-design-system/TreeNav.example.js",
+   ".interplay/examples/orcs-design-system/Typography.example.js"
+]
+[2024-09-03T03:51:15.872Z]: iterateSourceFiles for file:.interplay/examples/orcs-design-system/ActionsMenu.example.js
+[2024-09-03T03:51:19.766Z]: iterateSourceFiles completed for file:.interplay/examples/orcs-design-system/ActionsMenu.example.js
+[2024-09-03T03:51:19.766Z]: iterateSourceFiles for file:.interplay/examples/orcs-design-system/Avatar.example.js
+[2024-09-03T03:51:19.770Z]: iterateSourceFiles completed for file:.interplay/examples/orcs-design-system/Avatar.example.js
+[2024-09-03T03:51:19.770Z]: iterateSourceFiles for file:.interplay/examples/orcs-design-system/Badge.example.js
+[2024-09-03T03:51:19.771Z]: iterateSourceFiles completed for file:.interplay/examples/orcs-design-system/Badge.example.js
+[2024-09-03T03:51:19.771Z]: iterateSourceFiles for file:.interplay/examples/orcs-design-system/Box.example.js
+[2024-09-03T03:51:19.772Z]: iterateSourceFiles completed for file:.interplay/examples/orcs-design-system/Box.example.js
+[2024-09-03T03:51:19.772Z]: iterateSourceFiles for file:.interplay/examples/orcs-design-system/Button.example.js
+[2024-09-03T03:51:19.773Z]: iterateSourceFiles completed for file:.interplay/examples/orcs-design-system/Button.example.js
+[2024-09-03T03:51:19.773Z]: iterateSourceFiles for file:.interplay/examples/orcs-design-system/ButtonGroup.example.js
+[2024-09-03T03:51:19.774Z]: iterateSourceFiles completed for file:.interplay/examples/orcs-design-system/ButtonGroup.example.js
+[2024-09-03T03:51:19.774Z]: iterateSourceFiles for file:.interplay/examples/orcs-design-system/Card.example.js
+[2024-09-03T03:51:19.775Z]: iterateSourceFiles completed for file:.interplay/examples/orcs-design-system/Card.example.js
+[2024-09-03T03:51:19.775Z]: iterateSourceFiles for file:.interplay/examples/orcs-design-system/Checkbox.example.js
+[2024-09-03T03:51:19.776Z]: iterateSourceFiles completed for file:.interplay/examples/orcs-design-system/Checkbox.example.js
+[2024-09-03T03:51:19.776Z]: iterateSourceFiles for file:.interplay/examples/orcs-design-system/DatePicker.example.js
+[2024-09-03T03:51:19.779Z]: iterateSourceFiles completed for file:.interplay/examples/orcs-design-system/DatePicker.example.js
+[2024-09-03T03:51:19.779Z]: iterateSourceFiles for file:.interplay/examples/orcs-design-system/Divider.example.js
+[2024-09-03T03:51:19.780Z]: iterateSourceFiles completed for file:.interplay/examples/orcs-design-system/Divider.example.js
+[2024-09-03T03:51:19.781Z]: iterateSourceFiles for file:.interplay/examples/orcs-design-system/Expandable.example.js
+[2024-09-03T03:51:19.781Z]: iterateSourceFiles completed for file:.interplay/examples/orcs-design-system/Expandable.example.js
+[2024-09-03T03:51:19.782Z]: iterateSourceFiles for file:.interplay/examples/orcs-design-system/HeaderSimple.example.js
+[2024-09-03T03:51:19.782Z]: iterateSourceFiles completed for file:.interplay/examples/orcs-design-system/HeaderSimple.example.js
+[2024-09-03T03:51:19.782Z]: iterateSourceFiles for file:.interplay/examples/orcs-design-system/Icon.example.js
+[2024-09-03T03:51:19.784Z]: iterateSourceFiles completed for file:.interplay/examples/orcs-design-system/Icon.example.js
+[2024-09-03T03:51:19.784Z]: iterateSourceFiles for file:.interplay/examples/orcs-design-system/Notification.example.js
+[2024-09-03T03:51:19.785Z]: iterateSourceFiles completed for file:.interplay/examples/orcs-design-system/Notification.example.js
+[2024-09-03T03:51:19.785Z]: iterateSourceFiles for file:.interplay/examples/orcs-design-system/ProgressBar.example.js
+[2024-09-03T03:51:19.787Z]: iterateSourceFiles completed for file:.interplay/examples/orcs-design-system/ProgressBar.example.js
+[2024-09-03T03:51:19.787Z]: iterateSourceFiles for file:.interplay/examples/orcs-design-system/RadioButton.example.js
+[2024-09-03T03:51:19.791Z]: iterateSourceFiles completed for file:.interplay/examples/orcs-design-system/RadioButton.example.js
+[2024-09-03T03:51:19.791Z]: iterateSourceFiles for file:.interplay/examples/orcs-design-system/Range.example.js
+[2024-09-03T03:51:19.792Z]: iterateSourceFiles completed for file:.interplay/examples/orcs-design-system/Range.example.js
+[2024-09-03T03:51:19.792Z]: iterateSourceFiles for file:.interplay/examples/orcs-design-system/Select.example.js
+[2024-09-03T03:51:19.794Z]: iterateSourceFiles completed for file:.interplay/examples/orcs-design-system/Select.example.js
+[2024-09-03T03:51:19.794Z]: iterateSourceFiles for file:.interplay/examples/orcs-design-system/SideNav.example.js
+[2024-09-03T03:51:19.796Z]: iterateSourceFiles completed for file:.interplay/examples/orcs-design-system/SideNav.example.js
+[2024-09-03T03:51:19.796Z]: iterateSourceFiles for file:.interplay/examples/orcs-design-system/StatusDot.example.js
+[2024-09-03T03:51:19.799Z]: iterateSourceFiles completed for file:.interplay/examples/orcs-design-system/StatusDot.example.js
+[2024-09-03T03:51:19.799Z]: iterateSourceFiles for file:.interplay/examples/orcs-design-system/StyledLink.example.js
+[2024-09-03T03:51:19.801Z]: iterateSourceFiles completed for file:.interplay/examples/orcs-design-system/StyledLink.example.js
+[2024-09-03T03:51:19.801Z]: iterateSourceFiles for file:.interplay/examples/orcs-design-system/Tabs.example.js
+[2024-09-03T03:51:19.806Z]: iterateSourceFiles completed for file:.interplay/examples/orcs-design-system/Tabs.example.js
+[2024-09-03T03:51:19.806Z]: iterateSourceFiles for file:.interplay/examples/orcs-design-system/Tag.example.js
+[2024-09-03T03:51:19.808Z]: iterateSourceFiles completed for file:.interplay/examples/orcs-design-system/Tag.example.js
+[2024-09-03T03:51:19.808Z]: iterateSourceFiles for file:.interplay/examples/orcs-design-system/TextArea.example.js
+[2024-09-03T03:51:19.809Z]: iterateSourceFiles completed for file:.interplay/examples/orcs-design-system/TextArea.example.js
+[2024-09-03T03:51:19.809Z]: iterateSourceFiles for file:.interplay/examples/orcs-design-system/TextInput.example.js
+[2024-09-03T03:51:19.811Z]: iterateSourceFiles completed for file:.interplay/examples/orcs-design-system/TextInput.example.js
+[2024-09-03T03:51:19.811Z]: iterateSourceFiles for file:.interplay/examples/orcs-design-system/Toggle.example.js
+[2024-09-03T03:51:19.813Z]: iterateSourceFiles completed for file:.interplay/examples/orcs-design-system/Toggle.example.js
+[2024-09-03T03:51:19.813Z]: iterateSourceFiles for file:.interplay/examples/orcs-design-system/TreeNav.example.js
+[2024-09-03T03:51:19.816Z]: iterateSourceFiles completed for file:.interplay/examples/orcs-design-system/TreeNav.example.js
+[2024-09-03T03:51:19.816Z]: iterateSourceFiles for file:.interplay/examples/orcs-design-system/Typography.example.js
+[2024-09-03T03:51:19.818Z]: /Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/examples/orcs-design-system/Typography.example.js - error parsing file content:TypeError: Cannot read properties of undefined (reading 'buildError')
+[2024-09-03T03:51:19.818Z]: Cannot read properties of undefined (reading 'buildError')
+    err: {
+      "type": "TypeError",
+      "message": "Cannot read properties of undefined (reading 'buildError')",
+      "stack":
+          TypeError: Cannot read properties of undefined (reading 'buildError')
+              at Scope.checkBlockScopedCollisions (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/scope/index.js:396:22)
+              at Scope.registerBinding (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/scope/index.js:529:16)
+              at Scope.registerDeclaration (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/scope/index.js:481:14)
+              at Object.BlockScoped (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/scope/index.js:251:12)
+              at Object.newFn (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/visitors.js:176:17)
+              at NodePath._call (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/path/context.js:45:20)
+              at NodePath.call (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/path/context.js:32:14)
+              at NodePath.visit (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/path/context.js:80:31)
+              at TraversalContext.visitQueue (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/context.js:86:16)
+              at TraversalContext.visitSingle (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/context.js:65:19)
+              at TraversalContext.visit (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/context.js:109:19)
+              at traverseNode (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/traverse-node.js:18:17)
+              at NodePath.visit (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/path/context.js:86:52)
+              at TraversalContext.visitQueue (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/context.js:86:16)
+              at TraversalContext.visitMultiple (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/context.js:61:17)
+              at TraversalContext.visit (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/context.js:107:19)
+              at traverseNode (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/traverse-node.js:18:17)
+              at traverse (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/index.js:49:34)
+              at NodePath.traverse (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/path/index.js:108:24)
+              at Scope.crawl (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/scope/index.js:679:10)
+              at Scope.init (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/scope/index.js:650:12)
+              at NodePath.setScope (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/path/context.js:116:30)
+              at NodePath.setContext (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/path/context.js:128:8)
+              at NodePath.pushContext (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/path/context.js:183:8)
+              at TraversalContext.visitQueue (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/context.js:78:14)
+              at TraversalContext.visitSingle (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/context.js:65:19)
+              at TraversalContext.visit (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/context.js:109:19)
+              at traverseNode (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/traverse-node.js:18:17)
+              at traverse (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/node_modules/@babel/traverse/lib/index.js:49:34)
+              at o (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:27922)
+              at Ae (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:29093)
+              at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:32681
+              at async Ue (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:32527)
+              at async Es (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:96421)
+              at async Ps (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:98037)
+              at async /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:11477
+              at async J (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:11318)
+              at async /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:160313
+              at async op (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:159638)
+    }
+[2024-09-03T03:51:19.820Z]: iterateSourceFiles completed for file:.interplay/examples/orcs-design-system/Typography.example.js
+[2024-09-03T03:51:19.821Z]: Loading builds for example parsing...
+[2024-09-03T03:51:19.821Z]: Loading build for packageorcs-design-system
+[2024-09-03T03:51:19.821Z]: Loading build asset:/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/files/interplay/build/orcs-design-system.js
+[2024-09-03T03:51:39.616Z]: Loaded build for package:orcs-design-system
+[2024-09-03T03:51:39.617Z]: orcs-design-system -  Using bundle
+[2024-09-03T03:51:39.617Z]: Reconciling components with code exports...
+[2024-09-03T03:51:39.618Z]: Reconciling package build:orcs-design-system
+[2024-09-03T03:51:39.621Z]: Reconciling with loaded components complete.
+[2024-09-03T03:51:39.688Z]: Wrapper component specified but not loaded for parsing examples
+[2024-09-03T03:51:39.689Z]: Parsing examples...
+[2024-09-03T03:51:39.689Z]: Parsing examples from file:.interplay/examples/orcs-design-system/ActionsMenu.example.js
+[2024-09-03T03:51:39.782Z]: Processing story export:Basic
+[2024-09-03T03:51:40.047Z]: Found unknown component:ActionsMenu - could not match with any exports from your parsing index file.
+[2024-09-03T03:51:40.047Z]: .interplay/examples/orcs-design-system/ActionsMenu.example.js - could not load 'Basic': Error: Found unknown component:ActionsMenu - could not match with any exports from your parsing index file.
+[2024-09-03T03:51:40.047Z]: Found unknown component:ActionsMenu - could not match with any exports from your parsing index file.
+    err: {
+      "type": "Error",
+      "message": "Found unknown component:ActionsMenu - could not match with any exports from your parsing index file.",
+      "stack":
+          Error: Found unknown component:ActionsMenu - could not match with any exports from your parsing index file.
+              at e (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6507387)
+              at $t (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6508490)
+              at pr (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6511577)
+              at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6533355
+              at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6530691
+              at Object.parseExamples (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6530321)
+              at Es (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:96620)
+              at Ps (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:98037)
+              at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:11477
+              at J (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:11318)
+              at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:160313
+              at op (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:159638)
+    }
+[2024-09-03T03:51:40.048Z]: Parsing examples from file:.interplay/examples/orcs-design-system/Avatar.example.js
+[2024-09-03T03:51:40.077Z]: Processing story export:Basic
+[2024-09-03T03:51:40.077Z]: Found CSF instance:Avatar_Basic (orcs-design-system/Avatar)
+[2024-09-03T03:51:40.078Z]: Parsing examples from file:.interplay/examples/orcs-design-system/Badge.example.js
+[2024-09-03T03:51:40.105Z]: Processing story export:Basic
+[2024-09-03T03:51:40.106Z]: Found CSF instance:Badge_Basic (orcs-design-system/Badge)
+[2024-09-03T03:51:40.106Z]: Parsing examples from file:.interplay/examples/orcs-design-system/Box.example.js
+[2024-09-03T03:51:40.135Z]: Processing story export:Basic
+[2024-09-03T03:51:40.136Z]: Found CSF instance:Box_Basic (orcs-design-system/Box)
+[2024-09-03T03:51:40.136Z]: Parsing examples from file:.interplay/examples/orcs-design-system/Button.example.js
+[2024-09-03T03:51:40.162Z]: Processing story export:Basic
+[2024-09-03T03:51:40.162Z]: Found CSF instance:Button_Basic (orcs-design-system/Button)
+[2024-09-03T03:51:40.162Z]: Parsing examples from file:.interplay/examples/orcs-design-system/ButtonGroup.example.js
+[2024-09-03T03:51:40.188Z]: Could not load example file:.interplay/examples/orcs-design-system/ButtonGroup.example.js:ReferenceError: ButtonGroup is not defined. Will use static analysis instead.
+[2024-09-03T03:51:40.189Z]: ButtonGroup is not defined ReferenceError: ButtonGroup is not defined
+    at Object.<anonymous> (/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/examples/orcs-design-system/ButtonGroup.example.js:6:14)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module._compile (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/pirates/lib/index.js:117:24)
+    at O.t.extensions..js (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:7643)
+    at Object.newLoader [as .js] (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/pirates/lib/index.js:121:7)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at requireFromString (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/require-from-memory/dist/js/main/main.js:173:12)
+    at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6533329
+    at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6530691
+    at Object.parseExamples (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6530321)
+    at Es (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:96620)
+    at Ps (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:98037)
+    at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:11477
+    at J (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:11318)
+    at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:160313
+    at op (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:159638)
+[2024-09-03T03:51:40.189Z]: Parsing examples from file:.interplay/examples/orcs-design-system/Card.example.js
+[2024-09-03T03:51:40.214Z]: Processing story export:Basic
+[2024-09-03T03:51:40.214Z]: Found CSF instance:Card_Basic (orcs-design-system/Card)
+[2024-09-03T03:51:40.214Z]: Parsing examples from file:.interplay/examples/orcs-design-system/Checkbox.example.js
+[2024-09-03T03:51:40.241Z]: Processing story export:Basic
+[2024-09-03T03:51:40.241Z]: Found CSF instance:Checkbox_Basic (orcs-design-system/Checkbox)
+[2024-09-03T03:51:40.241Z]: Parsing examples from file:.interplay/examples/orcs-design-system/DatePicker.example.js
+[2024-09-03T03:51:40.262Z]: Processing story export:Basic
+[2024-09-03T03:51:40.263Z]: .interplay/examples/orcs-design-system/DatePicker.example.js - could not load 'Basic': ReferenceError: date is not defined
+[2024-09-03T03:51:40.263Z]: date is not defined
+    err: {
+      "type": "ReferenceError",
+      "message": "date is not defined",
+      "stack":
+          ReferenceError: date is not defined
+              at elementType (/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/examples/orcs-design-system/DatePicker.example.js:13:13)
+              at ReactShallowRenderer.render (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/react-test-renderer/cjs/react-test-renderer-shallow.development.js:829:32)
+              at e (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6504920)
+              at $t (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6508490)
+              at pr (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6511577)
+              at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6533355
+              at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6530691
+              at Object.parseExamples (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6530321)
+              at Es (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:96620)
+              at Ps (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:98037)
+              at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:11477
+              at J (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:11318)
+              at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:160313
+              at op (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:159638)
+    }
+[2024-09-03T03:51:40.264Z]: Parsing examples from file:.interplay/examples/orcs-design-system/Divider.example.js
+[2024-09-03T03:51:40.289Z]: Processing story export:Basic
+[2024-09-03T03:51:40.289Z]: Found CSF instance:Divider_Basic (orcs-design-system/Divider)
+[2024-09-03T03:51:40.290Z]: Parsing examples from file:.interplay/examples/orcs-design-system/Expandable.example.js
+[2024-09-03T03:51:40.316Z]: Processing story export:Basic
+[2024-09-03T03:51:40.316Z]: Found CSF instance:Expandable_Basic (orcs-design-system/Expandable)
+[2024-09-03T03:51:40.316Z]: Parsing examples from file:.interplay/examples/orcs-design-system/HeaderSimple.example.js
+[2024-09-03T03:51:40.342Z]: Processing story export:Basic
+[2024-09-03T03:51:40.343Z]: .interplay/examples/orcs-design-system/HeaderSimple.example.js - could not load 'Basic': ReferenceError: TextInput is not defined
+[2024-09-03T03:51:40.343Z]: TextInput is not defined
+    err: {
+      "type": "ReferenceError",
+      "message": "TextInput is not defined",
+      "stack":
+          ReferenceError: TextInput is not defined
+              at elementType (/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/examples/orcs-design-system/HeaderSimple.example.js:19:10)
+              at ReactShallowRenderer.render (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/react-test-renderer/cjs/react-test-renderer-shallow.development.js:829:32)
+              at e (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6504920)
+              at $t (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6508490)
+              at pr (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6511577)
+              at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6533355
+              at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6530691
+              at Object.parseExamples (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6530321)
+              at Es (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:96620)
+              at Ps (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:98037)
+              at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:11477
+              at J (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:11318)
+              at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:160313
+              at op (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:159638)
+    }
+[2024-09-03T03:51:40.344Z]: Parsing examples from file:.interplay/examples/orcs-design-system/Icon.example.js
+[2024-09-03T03:51:40.364Z]: Processing story export:Basic
+[2024-09-03T03:51:40.369Z]: Found CSF instance:Icon_Basic (orcs-design-system/Icon)
+[2024-09-03T03:51:40.369Z]: Parsing examples from file:.interplay/examples/orcs-design-system/Notification.example.js
+[2024-09-03T03:51:40.388Z]: Processing story export:Basic
+[2024-09-03T03:51:40.388Z]: Found CSF instance:Notification_Basic (orcs-design-system/Notification)
+[2024-09-03T03:51:40.389Z]: Parsing examples from file:.interplay/examples/orcs-design-system/ProgressBar.example.js
+[2024-09-03T03:51:40.412Z]: Processing story export:Basic
+[2024-09-03T03:51:40.412Z]: Found CSF instance:ProgressBar_Basic (orcs-design-system/ProgressBar)
+[2024-09-03T03:51:40.412Z]: Parsing examples from file:.interplay/examples/orcs-design-system/RadioButton.example.js
+[2024-09-03T03:51:40.435Z]: Processing story export:Basic
+[2024-09-03T03:51:40.436Z]: Found CSF instance:RadioButton_Basic (orcs-design-system/RadioButton)
+[2024-09-03T03:51:40.436Z]: Parsing examples from file:.interplay/examples/orcs-design-system/Range.example.js
+[2024-09-03T03:51:40.454Z]: Processing story export:Basic
+[2024-09-03T03:51:40.455Z]: Found CSF instance:Range_Basic (orcs-design-system/Range)
+[2024-09-03T03:51:40.455Z]: Parsing examples from file:.interplay/examples/orcs-design-system/Select.example.js
+[2024-09-03T03:51:40.479Z]: Processing story export:Basic
+[2024-09-03T03:51:40.480Z]: Found CSF instance:Select_Basic (orcs-design-system/Select)
+[2024-09-03T03:51:40.480Z]: Parsing examples from file:.interplay/examples/orcs-design-system/SideNav.example.js
+[2024-09-03T03:51:40.511Z]: Could not load example file:.interplay/examples/orcs-design-system/SideNav.example.js:ReferenceError: makeLinkComponent is not defined. Will use static analysis instead.
+[2024-09-03T03:51:40.512Z]: makeLinkComponent is not defined ReferenceError: makeLinkComponent is not defined
+    at Object.<anonymous> (/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/examples/orcs-design-system/SideNav.example.js:13:16)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module._compile (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/pirates/lib/index.js:117:24)
+    at O.t.extensions..js (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:7643)
+    at Object.newLoader [as .js] (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/pirates/lib/index.js:121:7)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at requireFromString (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/require-from-memory/dist/js/main/main.js:173:12)
+    at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6533329
+    at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6530691
+    at Object.parseExamples (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6530321)
+    at Es (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:96620)
+    at Ps (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:98037)
+    at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:11477
+    at J (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:11318)
+    at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:160313
+    at op (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:159638)
+[2024-09-03T03:51:40.512Z]: Parsing examples from file:.interplay/examples/orcs-design-system/StatusDot.example.js
+[2024-09-03T03:51:40.541Z]: Processing story export:Basic
+[2024-09-03T03:51:40.541Z]: Found CSF instance:StatusDot_Basic (orcs-design-system/StatusDot)
+[2024-09-03T03:51:40.541Z]: Processing story export:WithIcon
+[2024-09-03T03:51:40.544Z]: Found CSF instance:StatusDot_With_Icon (orcs-design-system/StatusDot)
+[2024-09-03T03:51:40.544Z]: Found CSF instance:StatusDot_With_Icon_1 (orcs-design-system/Icon)
+[2024-09-03T03:51:40.544Z]: Parsing examples from file:.interplay/examples/orcs-design-system/StyledLink.example.js
+[2024-09-03T03:51:40.569Z]: Processing story export:Basic
+[2024-09-03T03:51:40.569Z]: Found CSF instance:StyledLink_Basic (orcs-design-system/StyledLink)
+[2024-09-03T03:51:40.570Z]: Parsing examples from file:.interplay/examples/orcs-design-system/Tabs.example.js
+[2024-09-03T03:51:40.599Z]: Could not load example file:.interplay/examples/orcs-design-system/Tabs.example.js:ReferenceError: Tabs is not defined. Will use static analysis instead.
+[2024-09-03T03:51:40.600Z]: Tabs is not defined ReferenceError: Tabs is not defined
+    at Object.<anonymous> (/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/examples/orcs-design-system/Tabs.example.js:6:14)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module._compile (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/pirates/lib/index.js:117:24)
+    at O.t.extensions..js (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:7643)
+    at Object.newLoader [as .js] (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/pirates/lib/index.js:121:7)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at requireFromString (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/require-from-memory/dist/js/main/main.js:173:12)
+    at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6533329
+    at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6530691
+    at Object.parseExamples (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6530321)
+    at Es (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:96620)
+    at Ps (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:98037)
+    at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:11477
+    at J (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:11318)
+    at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:160313
+    at op (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:159638)
+[2024-09-03T03:51:40.600Z]: Parsing examples from file:.interplay/examples/orcs-design-system/Tag.example.js
+[2024-09-03T03:51:40.619Z]: Processing story export:Basic
+[2024-09-03T03:51:40.619Z]: Found CSF instance:Tag_Basic (orcs-design-system/Tag)
+[2024-09-03T03:51:40.619Z]: Parsing examples from file:.interplay/examples/orcs-design-system/TextArea.example.js
+[2024-09-03T03:51:40.643Z]: Processing story export:Basic
+[2024-09-03T03:51:40.643Z]: Found CSF instance:TextArea_Basic (orcs-design-system/TextArea)
+[2024-09-03T03:51:40.643Z]: Parsing examples from file:.interplay/examples/orcs-design-system/TextInput.example.js
+[2024-09-03T03:51:40.668Z]: Could not load example file:.interplay/examples/orcs-design-system/TextInput.example.js:ReferenceError: TextArea is not defined. Will use static analysis instead.
+[2024-09-03T03:51:40.669Z]: TextArea is not defined ReferenceError: TextArea is not defined
+    at Object.<anonymous> (/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/examples/orcs-design-system/TextInput.example.js:6:14)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module._compile (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/pirates/lib/index.js:117:24)
+    at O.t.extensions..js (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:7643)
+    at Object.newLoader [as .js] (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/pirates/lib/index.js:121:7)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at requireFromString (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/require-from-memory/dist/js/main/main.js:173:12)
+    at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6533329
+    at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6530691
+    at Object.parseExamples (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/dist/index.js:96:6530321)
+    at Es (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:96620)
+    at Ps (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:98037)
+    at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:11477
+    at J (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:11318)
+    at /Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:160313
+    at op (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli/dist/cli.js:2:159638)
+[2024-09-03T03:51:40.669Z]: Parsing examples from file:.interplay/examples/orcs-design-system/Toggle.example.js
+[2024-09-03T03:51:40.702Z]: Processing story export:Basic
+[2024-09-03T03:51:40.702Z]: Found CSF instance:Toggle_Basic (orcs-design-system/Toggle)
+[2024-09-03T03:51:40.702Z]: Parsing examples from file:.interplay/examples/orcs-design-system/TreeNav.example.js
+[2024-09-03T03:51:40.737Z]: Processing story export:Basic
+[2024-09-03T03:51:40.737Z]: Found CSF instance:TreeNav_Basic (orcs-design-system/TreeNav)
+[2024-09-03T03:51:40.737Z]: Parsing examples from file:.interplay/examples/orcs-design-system/Typography.example.js
+[2024-09-03T03:51:40.754Z]: Could not load example file:.interplay/examples/orcs-design-system/Typography.example.js:SyntaxError: /Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/examples/orcs-design-system/Typography.example.js: Identifier 'H1' has already been declared. (20:13)
+
+[0m [90m 18 |[39m }[33m;[39m[0m
+[0m [90m 19 |[39m[0m
+[0m[31m[1m>[22m[39m[90m 20 |[39m [36mexport[39m [36mconst[39m [33mH1[39m [33m=[39m {[0m
+[0m [90m    |[39m              [31m[1m^[22m[39m[0m
+[0m [90m 21 |[39m   render[33m:[39m () [33m=>[39m [33m<[39m[33mH1[39m[33m>[39m[33mStandard[39m [33mH1[39m[33m<[39m[33m/[39m[33mH1[39m[33m>[39m[0m
+[0m [90m 22 |[39m }[33m;[39m[0m
+[0m [90m 23 |[39m[0m. Will use static analysis instead.
+[2024-09-03T03:51:40.847Z]: /Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/examples/orcs-design-system/Typography.example.js: Identifier 'H1' has already been declared. (20:13)
+
+[0m [90m 18 |[39m }[33m;[39m[0m
+[0m [90m 19 |[39m[0m
+[0m[31m[1m>[22m[39m[90m 20 |[39m [36mexport[39m [36mconst[39m [33mH1[39m [33m=[39m {[0m
+[0m [90m    |[39m              [31m[1m^[22m[39m[0m
+[0m [90m 21 |[39m   render[33m:[39m () [33m=>[39m [33m<[39m[33mH1[39m[33m>[39m[33mStandard[39m [33mH1[39m[33m<[39m[33m/[39m[33mH1[39m[33m>[39m[0m
+[0m [90m 22 |[39m }[33m;[39m[0m
+[0m [90m 23 |[39m[0m SyntaxError: /Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/examples/orcs-design-system/Typography.example.js: Identifier 'H1' has already been declared. (20:13)
+
+[0m [90m 18 |[39m }[33m;[39m[0m
+[0m [90m 19 |[39m[0m
+[0m[31m[1m>[22m[39m[90m 20 |[39m [36mexport[39m [36mconst[39m [33mH1[39m [33m=[39m {[0m
+[0m [90m    |[39m              [31m[1m^[22m[39m[0m
+[0m [90m 21 |[39m   render[33m:[39m () [33m=>[39m [33m<[39m[33mH1[39m[33m>[39m[33mStandard[39m [33mH1[39m[33m<[39m[33m/[39m[33mH1[39m[33m>[39m[0m
+[0m [90m 22 |[39m }[33m;[39m[0m
+[0m [90m 23 |[39m[0m
+    at instantiate (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/parse-error/credentials.ts:62:21)
+    at toParseError (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/parse-error.ts:60:12)
+    at FlowParserMixin.raise (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/tokenizer/index.ts:1487:19)
+    at FlowScopeHandler.checkRedeclarationInScope (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/util/scope.ts:143:19)
+    at FlowScopeHandler.declareName (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/util/scope.ts:104:12)
+    at FlowScopeHandler.declareName (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/plugins/flow/scope.ts:30:11)
+    at FlowParserMixin.declareNameFromIdentifier (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/parser/lval.ts:703:16)
+    at FlowParserMixin.checkIdentifier (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/parser/lval.ts:698:12)
+    at FlowParserMixin.checkLVal (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/parser/lval.ts:611:12)
+    at FlowParserMixin.parseVarId (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/parser/statement.ts:1573:10)
+    at FlowParserMixin.parseVarId (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/plugins/flow/index.ts:2885:13)
+    at FlowParserMixin.parseVar (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/parser/statement.ts:1535:12)
+    at FlowParserMixin.parseVarStatement (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/parser/statement.ts:1201:10)
+    at FlowParserMixin.parseStatementContent (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/parser/statement.ts:554:21)
+    at FlowParserMixin.parseStatementLike (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/parser/statement.ts:417:17)
+    at FlowParserMixin.parseStatementLike (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/plugins/flow/index.ts:1952:26)
+    at FlowParserMixin.parseStatementListItem (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/parser/statement.ts:366:17)
+    at FlowParserMixin.parseExportDeclaration (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/parser/statement.ts:2580:17)
+    at FlowParserMixin.parseExportDeclaration (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/plugins/flow/index.ts:2278:22)
+    at FlowParserMixin.maybeParseExportDeclaration (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/parser/statement.ts:2502:31)
+    at FlowParserMixin.parseExport (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/parser/statement.ts:2395:29)
+    at FlowParserMixin.parseStatementContent (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/parser/statement.ts:597:25)
+    at FlowParserMixin.parseStatementLike (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/parser/statement.ts:417:17)
+    at FlowParserMixin.parseStatementLike (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/plugins/flow/index.ts:1952:26)
+    at FlowParserMixin.parseModuleItem (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/parser/statement.ts:354:17)
+    at FlowParserMixin.parseBlockOrModuleBlockBody (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/parser/statement.ts:1394:16)
+    at FlowParserMixin.parseBlockBody (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/parser/statement.ts:1368:10)
+    at FlowParserMixin.parseProgram (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/parser/statement.ts:213:10)
+    at FlowParserMixin.parseTopLevel (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/parser/statement.ts:195:25)
+    at FlowParserMixin.parseTopLevel (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/plugins/flow/index.ts:3314:30)
+    at FlowParserMixin.parse (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/parser/index.ts:45:10)
+    at parse (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/parser/src/index.ts:35:26)
+    at parser (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/core/src/parser/index.ts:28:14)
+    at parser.next (<anonymous>)
+    at normalizeFile (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/core/src/transformation/normalize-file.ts:43:18)
+    at normalizeFile.next (<anonymous>)
+    at run (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/core/src/transformation/index.ts:38:23)
+    at run.next (<anonymous>)
+    at transform (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/core/src/transform.ts:29:17)
+    at transform.next (<anonymous>)
+    at evaluateSync (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/gensync/index.js:251:28)
+    at fn (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/gensync/index.js:89:14)
+    at stopHiding - secret - don't use this - v1 (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/core/src/errors/rewrite-stack-trace.ts:97:14)
+    at Object.transformSync (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/core/src/transform.ts:66:10)
+    at exports.transformSync (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/register/lib/worker/transform.js:94:15)
+    at Function.handleMessage (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/register/lib/worker/handle-message.js:23:16)
+    at LocalClient.<anonymous> (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/register/lib/worker-client.js:134:86)
+    at LocalClient.transform (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/register/lib/worker-client.js:64:47)
+    at compile (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/register/lib/hook.js:58:25)
+    at compileBabel7 (/Users/adambottega/.nvm/versions/node/v16.15.0/lib/node_modules/@interplay/cli-plugin-react/node_modules/@babel/register/lib/hook.js:49:14)
+[2024-09-03T03:51:40.848Z]: Extracting examples via static analysis for:.interplay/examples/orcs-design-system/ActionsMenu.example.js
+[2024-09-03T03:51:40.848Z]: Extracting examples via static analysis for:.interplay/examples/orcs-design-system/ButtonGroup.example.js
+[2024-09-03T03:51:40.848Z]: Extracting examples via static analysis for:.interplay/examples/orcs-design-system/DatePicker.example.js
+[2024-09-03T03:51:40.848Z]: Extracting examples via static analysis for:.interplay/examples/orcs-design-system/HeaderSimple.example.js
+[2024-09-03T03:51:40.848Z]: Extracting examples via static analysis for:.interplay/examples/orcs-design-system/SideNav.example.js
+[2024-09-03T03:51:40.848Z]: Extracting examples via static analysis for:.interplay/examples/orcs-design-system/Tabs.example.js
+[2024-09-03T03:51:40.849Z]: Extracting examples via static analysis for:.interplay/examples/orcs-design-system/TextInput.example.js
+[2024-09-03T03:51:40.849Z]: Extracting examples via static analysis for:.interplay/examples/orcs-design-system/Typography.example.js
+[2024-09-03T03:51:40.880Z]: Parsing example files completed. Total instances found:39
+[2024-09-03T03:51:40.881Z]: Reconciling examples with component config...
+[2024-09-03T03:51:40.885Z]: .interplay/examples/orcs-design-system/ActionsMenu.example.js:orcs-design-system/ActionsMenuItem:href - Creating missing prop config:{"name":"href","override":{"filePath":".interplay/examples/orcs-design-system/ActionsMenu.example.js","source":"JSXElement"},"type":"string"}
+[2024-09-03T03:51:40.885Z]: .interplay/examples/orcs-design-system/ActionsMenu.example.js:orcs-design-system/ActionsMenuItem:children - Creating missing prop config:{"name":"children","override":{"filePath":".interplay/examples/orcs-design-system/ActionsMenu.example.js","source":"JSXElement"},"type":"array","items":{"type":"Node"}}
+[2024-09-03T03:51:40.886Z]: .interplay/examples/orcs-design-system/Box.example.js:orcs-design-system/Box:borderRadius - Creating missing prop config:{"name":"borderRadius","override":{"filePath":".interplay/examples/orcs-design-system/Box.example.js","source":"Basic"},"type":"number"}
+[2024-09-03T03:51:40.886Z]: .interplay/examples/orcs-design-system/Box.example.js:orcs-design-system/Box:boxBorder - Creating missing prop config:{"name":"boxBorder","override":{"filePath":".interplay/examples/orcs-design-system/Box.example.js","source":"Basic"},"type":"string"}
+[2024-09-03T03:51:40.886Z]: .interplay/examples/orcs-design-system/Box.example.js:orcs-design-system/Box:shadow - Creating missing prop config:{"name":"shadow","override":{"filePath":".interplay/examples/orcs-design-system/Box.example.js","source":"Basic"},"type":"string"}
+[2024-09-03T03:51:40.897Z]: .interplay/examples/orcs-design-system/HeaderSimple.example.js:orcs-design-system/TextInput:key - Creating missing prop config:{"name":"key","override":{"filePath":".interplay/examples/orcs-design-system/HeaderSimple.example.js","source":"JSXElement"},"type":"string"}
+[2024-09-03T03:51:40.897Z]: .interplay/examples/orcs-design-system/HeaderSimple.example.js:orcs-design-system/HeaderSimple:currentWorskapce - Creating missing prop config:{"name":"currentWorskapce","override":{"filePath":".interplay/examples/orcs-design-system/HeaderSimple.example.js","source":"JSXElement"},"type":"string"}
+[2024-09-03T03:51:40.899Z]: .interplay/examples/orcs-design-system/StyledLink.example.js:orcs-design-system/StyledLink:href - Creating missing prop config:{"name":"href","override":{"filePath":".interplay/examples/orcs-design-system/StyledLink.example.js","source":"Basic"},"type":"string"}
+[2024-09-03T03:51:40.900Z]: .interplay/examples/orcs-design-system/TextArea.example.js:orcs-design-system/TextArea:placeholder - Creating missing prop config:{"name":"placeholder","override":{"filePath":".interplay/examples/orcs-design-system/TextArea.example.js","source":"Basic"},"type":"string"}
+[2024-09-03T03:51:40.902Z]: .interplay/examples/orcs-design-system/TreeNav.example.js:orcs-design-system/TreeNav:openByDefault - Creating missing prop config:{"name":"openByDefault","override":{"filePath":".interplay/examples/orcs-design-system/TreeNav.example.js","source":"Basic"},"type":"boolean"}
+[2024-09-03T03:51:40.902Z]: .interplay/examples/orcs-design-system/TreeNav.example.js:orcs-design-system/TreeNav:width - Creating missing prop config:{"name":"width","override":{"filePath":".interplay/examples/orcs-design-system/TreeNav.example.js","source":"Basic"},"type":"number"}
+[2024-09-03T03:51:40.913Z]: Finished reconciling examples with component config.
+[2024-09-03T03:51:40.916Z]: orcs-design-system/DatePicker - displayFormat - updating unknown to type:{"type":"string"} which matched defaultValue:DD/MM/YYYY
+[2024-09-03T03:51:40.916Z]: orcs-design-system/DatePicker - horizontalMargin - updating unknown to type:{"type":"number"} from defaultValue:0
+[2024-09-03T03:51:40.916Z]: orcs-design-system/DatePicker - minimumNights - updating unknown to type:{"type":"number"} from defaultValue:1
+[2024-09-03T03:51:40.916Z]: orcs-design-system/Grid - gridGap - updating unknown to type:{"type":"string"} which matched defaultValue:0
+[2024-09-03T03:51:40.917Z]: Updating external components...
+[2024-09-03T03:51:40.917Z]: Removing inherited props matching commonTypePaths:[
+   "**/node_modules/@types/react/**"
+] except preservedProps:["children","onClick"]
+[2024-09-03T03:51:40.973Z]: Create subcomponent examples completed.
+[2024-09-03T03:51:41.215Z]: Cleaning deploy folder:/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/deploy/
+[2024-09-03T03:51:41.219Z]: Resolving glob:[
+   "/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/config/build.json"
+]
+[2024-09-03T03:51:41.222Z]: Glob result:[
+   "/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/config/build.json"
+]
+[2024-09-03T03:51:41.225Z]: Loading config for key:build from:/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/config/build.json
+[2024-09-03T03:51:41.225Z]: Resolving glob:[
+   "/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/config/parsing.json"
+]
+[2024-09-03T03:51:41.226Z]: Glob result:[
+   "/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/config/parsing.json"
+]
+[2024-09-03T03:51:41.309Z]: Loading config for key:components from:/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/config/parsing.json
+[2024-09-03T03:51:41.310Z]: Loading config for key:samples from:/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/config/parsing.json
+[2024-09-03T03:51:41.310Z]: Loading config for key:nodes from:/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/config/parsing.json
+[2024-09-03T03:51:41.310Z]: Validating config...
+[2024-09-03T03:51:41.314Z]: Found 68 valid components and 0 invalid components.
+[2024-09-03T03:51:41.315Z]: Found 27 valid samples and 0 invalid samples.
+[2024-09-03T03:51:41.315Z]: Found 39 valid nodes and 0 invalid nodes.
+[2024-09-03T03:51:41.315Z]: Found 0 valid extensions and 0 invalid extensions.
+[2024-09-03T03:51:41.316Z]: Found 0 valid translations and 0 invalid translations.
+[2024-09-03T03:51:41.317Z]: Setting component reset flags...
+[2024-09-03T03:51:41.317Z]: No design token files found to deploy.
+[2024-09-03T03:51:41.317Z]: Resolving glob:[
+   ".interplay/stage/files/interplay/build/**"
+]
+[2024-09-03T03:51:41.321Z]: Glob result:[
+   "/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/files/interplay/build/orcs-design-system.js",
+   "/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/files/interplay/build/orcs-design-system.js.LICENSE.txt",
+   "/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/files/interplay/build/styled-components.js",
+   "/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/files/interplay/build/styled-components.js.LICENSE.txt",
+   "/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/files/interplay/build/@emotion/react.js",
+   "/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/files/interplay/build/@emotion/react.js.LICENSE.txt",
+   "/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/files/interplay/build/@emotion/styled.js"
+]
+[2024-09-03T03:51:41.321Z]: Expected CDN files:
+[2024-09-03T03:51:41.321Z]: Files endpoint:https://app.interplay.io/api/project/files/ck0ronzww000002s6cht86oyw/um3l2J56Xr/master/1725335410602
+[2024-09-03T03:51:41.322Z]: Deploying file:.interplay/stage/files/interplay/build/@emotion/react.js
+[2024-09-03T03:51:42.219Z]: API response status200
+[2024-09-03T03:51:42.220Z]: Deploying file:.interplay/stage/files/interplay/build/@emotion/react.js.LICENSE.txt
+[2024-09-03T03:51:42.788Z]: API response status200
+[2024-09-03T03:51:42.789Z]: Deploying file:.interplay/stage/files/interplay/build/@emotion/styled.js
+[2024-09-03T03:51:43.460Z]: API response status200
+[2024-09-03T03:51:43.462Z]: Deploying file:.interplay/stage/files/interplay/build/orcs-design-system.js
+[2024-09-03T03:52:00.115Z]: API response status200
+[2024-09-03T03:52:00.116Z]: Deploying file:.interplay/stage/files/interplay/build/orcs-design-system.js.LICENSE.txt
+[2024-09-03T03:52:00.721Z]: API response status200
+[2024-09-03T03:52:00.722Z]: Deploying file:.interplay/stage/files/interplay/build/styled-components.js
+[2024-09-03T03:52:01.584Z]: API response status200
+[2024-09-03T03:52:01.585Z]: Deploying file:.interplay/stage/files/interplay/build/styled-components.js.LICENSE.txt
+[2024-09-03T03:52:02.129Z]: API response status200
+[2024-09-03T03:52:02.145Z]: Deploying configuration:.interplay/deploy/code.json
+[2024-09-03T03:52:05.055Z]: API response status200
+[2024-09-03T03:52:05.097Z]: Saving log...
+[2024-09-03T03:52:06.394Z]: API response status200
+[2024-09-03T03:52:06.408Z]: Deploy complete.
+[2024-09-03T03:52:06.408Z]: -------------------------------------------------------------------------------------------------------
+[2024-09-03T03:52:06.408Z]: [92mView in Interplay: https://app.interplay.io/app/ck0ronzww000002s6cht86oyw/p/um3l2J56Xr/components[39m
+[2024-09-03T03:52:06.409Z]: -------------------------------------------------------------------------------------------------------
+[2024-09-03T03:52:06.409Z]: Completed running Interplay CLI version:3.1.6 on node:v16.15.0 (darwin, arm64) Log:.interplay/logs/cli.txt

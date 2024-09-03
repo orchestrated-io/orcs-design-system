@@ -1,0 +1,412 @@
+{
+    "reportedChanges": {
+        "folders": {},
+        "components": {},
+        "samples": {},
+        "tokens": {},
+        "tokenGroups": {},
+        "themes": {},
+        "workflowActions": {},
+        "extensions": {},
+        "translations": {},
+        "screens": {},
+        "includes": {
+            "emotionReact": [
+                {
+                    "kind": "E",
+                    "path": [
+                        "emotionReact",
+                        "url"
+                    ],
+                    "lhs": "https://cdn.interplay.io/ck0ronzww000002s6cht86oyw/um3l2J56Xr/master/1725334916531/.interplay/stage/files/interplay/build/@emotion/react",
+                    "rhs": "https://cdn.interplay.io/ck0ronzww000002s6cht86oyw/um3l2J56Xr/master/1725335410602/.interplay/stage/files/interplay/build/@emotion/react",
+                    "name": "@emotion/react"
+                }
+            ],
+            "emotionStyled": [
+                {
+                    "kind": "E",
+                    "path": [
+                        "emotionStyled",
+                        "url"
+                    ],
+                    "lhs": "https://cdn.interplay.io/ck0ronzww000002s6cht86oyw/um3l2J56Xr/master/1725334916531/.interplay/stage/files/interplay/build/@emotion/styled",
+                    "rhs": "https://cdn.interplay.io/ck0ronzww000002s6cht86oyw/um3l2J56Xr/master/1725335410602/.interplay/stage/files/interplay/build/@emotion/styled",
+                    "name": "@emotion/styled"
+                }
+            ],
+            "orcsDesignSystem": [
+                {
+                    "kind": "E",
+                    "path": [
+                        "orcsDesignSystem",
+                        "url"
+                    ],
+                    "lhs": "https://cdn.interplay.io/ck0ronzww000002s6cht86oyw/um3l2J56Xr/master/1725334916531/.interplay/stage/files/interplay/build/orcs-design-system",
+                    "rhs": "https://cdn.interplay.io/ck0ronzww000002s6cht86oyw/um3l2J56Xr/master/1725335410602/.interplay/stage/files/interplay/build/orcs-design-system",
+                    "name": "orcs-design-system"
+                }
+            ],
+            "styledComponents": [
+                {
+                    "kind": "E",
+                    "path": [
+                        "styledComponents",
+                        "url"
+                    ],
+                    "lhs": "https://cdn.interplay.io/ck0ronzww000002s6cht86oyw/um3l2J56Xr/master/1725334916531/.interplay/stage/files/interplay/build/styled-components",
+                    "rhs": "https://cdn.interplay.io/ck0ronzww000002s6cht86oyw/um3l2J56Xr/master/1725335410602/.interplay/stage/files/interplay/build/styled-components",
+                    "name": "styled-components"
+                }
+            ],
+            "framework": [
+                {
+                    "kind": "N",
+                    "path": [
+                        "framework"
+                    ]
+                }
+            ]
+        },
+        "content": {},
+        "settings": {
+            "build": [
+                {
+                    "kind": "E",
+                    "path": [
+                        "build",
+                        "parseResultPath"
+                    ],
+                    "lhs": "ck0ronzww000002s6cht86oyw/um3l2J56Xr/master/1725334916531/1725335057016/code.json",
+                    "rhs": "ck0ronzww000002s6cht86oyw/um3l2J56Xr/master/1725335410602/1725335523261/code.json"
+                },
+                {
+                    "kind": "E",
+                    "path": [
+                        "build",
+                        "parseLogPath"
+                    ],
+                    "lhs": "ck0ronzww000002s6cht86oyw/um3l2J56Xr/master/1725334916531/1725335057016/cli.json",
+                    "rhs": "ck0ronzww000002s6cht86oyw/um3l2J56Xr/master/1725335410602/1725335523261/cli.json"
+                },
+                {
+                    "kind": "E",
+                    "path": [
+                        "build",
+                        "buildId"
+                    ],
+                    "lhs": "70074a56-8b9c-4643-a595-39b513467dc6",
+                    "rhs": "07224012-eb27-4448-a479-b8d3ff1215dd"
+                }
+            ]
+        }
+    },
+    "overrides": {
+        "components": {},
+        "examples": {},
+        "samples": {
+            "s_b8bce4a3d2d7caae2ce5034260f851a5": [
+                {
+                    "kind": "N",
+                    "path": [
+                        "s_b8bce4a3d2d7caae2ce5034260f851a5",
+                        "image"
+                    ],
+                    "name": "ActionsMenu",
+                    "componentId": "orcs-design-system/ActionsMenu"
+                }
+            ],
+            "Avatar_Basic": [
+                {
+                    "kind": "N",
+                    "path": [
+                        "Avatar_Basic",
+                        "image"
+                    ],
+                    "name": "Basic",
+                    "componentId": "orcs-design-system/Avatar"
+                }
+            ],
+            "Badge_Basic": [
+                {
+                    "kind": "N",
+                    "path": [
+                        "Badge_Basic",
+                        "image"
+                    ],
+                    "name": "Basic",
+                    "componentId": "orcs-design-system/Badge"
+                }
+            ],
+            "Box_Basic": [
+                {
+                    "kind": "N",
+                    "path": [
+                        "Box_Basic",
+                        "image"
+                    ],
+                    "name": "Basic",
+                    "componentId": "orcs-design-system/Box"
+                }
+            ],
+            "Button_Basic": [
+                {
+                    "kind": "N",
+                    "path": [
+                        "Button_Basic",
+                        "image"
+                    ],
+                    "name": "Basic",
+                    "componentId": "orcs-design-system/Button"
+                }
+            ],
+            "s_366c2e8ee12deb73c027f865e49e26eb": [
+                {
+                    "kind": "N",
+                    "path": [
+                        "s_366c2e8ee12deb73c027f865e49e26eb",
+                        "image"
+                    ],
+                    "name": "Label Dark ButtonGroupContainer",
+                    "componentId": "orcs-design-system/ButtonGroupContainer"
+                }
+            ],
+            "Card_Basic": [
+                {
+                    "kind": "N",
+                    "path": [
+                        "Card_Basic",
+                        "image"
+                    ],
+                    "name": "Basic",
+                    "componentId": "orcs-design-system/Card"
+                }
+            ],
+            "Checkbox_Basic": [
+                {
+                    "kind": "N",
+                    "path": [
+                        "Checkbox_Basic",
+                        "image"
+                    ],
+                    "name": "Basic",
+                    "componentId": "orcs-design-system/Checkbox"
+                }
+            ],
+            "s_1e91d7c45836f03b5729bcd706432bd3": [
+                {
+                    "kind": "N",
+                    "path": [
+                        "s_1e91d7c45836f03b5729bcd706432bd3",
+                        "image"
+                    ],
+                    "name": "Single DatePicker",
+                    "componentId": "orcs-design-system/DatePicker"
+                }
+            ],
+            "Divider_Basic": [
+                {
+                    "kind": "N",
+                    "path": [
+                        "Divider_Basic",
+                        "image"
+                    ],
+                    "name": "Basic",
+                    "componentId": "orcs-design-system/Divider"
+                }
+            ],
+            "Expandable_Basic": [
+                {
+                    "kind": "N",
+                    "path": [
+                        "Expandable_Basic",
+                        "image"
+                    ],
+                    "name": "Basic",
+                    "componentId": "orcs-design-system/Expandable"
+                }
+            ],
+            "s_6669b07ac96afe6388066642f7ea1da5": [
+                {
+                    "kind": "N",
+                    "path": [
+                        "s_6669b07ac96afe6388066642f7ea1da5",
+                        "image"
+                    ],
+                    "name": "Text Full Width TextInput",
+                    "componentId": "orcs-design-system/TextInput"
+                }
+            ],
+            "s_9a374812c67a39818666393bce51a1b2": [
+                {
+                    "kind": "N",
+                    "path": [
+                        "s_9a374812c67a39818666393bce51a1b2",
+                        "image"
+                    ],
+                    "name": "Search HeaderSimple",
+                    "componentId": "orcs-design-system/HeaderSimple"
+                }
+            ],
+            "Notification_Basic": [
+                {
+                    "kind": "N",
+                    "path": [
+                        "Notification_Basic",
+                        "image"
+                    ],
+                    "name": "Basic",
+                    "componentId": "orcs-design-system/Notification"
+                }
+            ],
+            "RadioButton_Basic": [
+                {
+                    "kind": "N",
+                    "path": [
+                        "RadioButton_Basic",
+                        "image"
+                    ],
+                    "name": "Basic",
+                    "componentId": "orcs-design-system/RadioButton"
+                }
+            ],
+            "Range_Basic": [
+                {
+                    "kind": "N",
+                    "path": [
+                        "Range_Basic",
+                        "image"
+                    ],
+                    "name": "Basic",
+                    "componentId": "orcs-design-system/Range"
+                }
+            ],
+            "Select_Basic": [
+                {
+                    "kind": "N",
+                    "path": [
+                        "Select_Basic",
+                        "image"
+                    ],
+                    "name": "Basic",
+                    "componentId": "orcs-design-system/Select"
+                }
+            ],
+            "StatusDot_Basic": [
+                {
+                    "kind": "N",
+                    "path": [
+                        "StatusDot_Basic",
+                        "image"
+                    ],
+                    "name": "Basic",
+                    "componentId": "orcs-design-system/StatusDot"
+                }
+            ],
+            "StatusDot_With_Icon": [
+                {
+                    "kind": "N",
+                    "path": [
+                        "StatusDot_With_Icon",
+                        "image"
+                    ],
+                    "name": "With Icon",
+                    "componentId": "orcs-design-system/StatusDot"
+                }
+            ],
+            "StyledLink_Basic": [
+                {
+                    "kind": "N",
+                    "path": [
+                        "StyledLink_Basic",
+                        "image"
+                    ],
+                    "name": "Basic",
+                    "componentId": "orcs-design-system/StyledLink"
+                }
+            ],
+            "s_b7ec9ab635927bde42b9bc279009c69e": [
+                {
+                    "kind": "N",
+                    "path": [
+                        "s_b7ec9ab635927bde42b9bc279009c69e",
+                        "image"
+                    ],
+                    "name": "TabsContainer",
+                    "componentId": "orcs-design-system/TabsContainer"
+                }
+            ],
+            "Tag_Basic": [
+                {
+                    "kind": "N",
+                    "path": [
+                        "Tag_Basic",
+                        "image"
+                    ],
+                    "name": "Basic",
+                    "componentId": "orcs-design-system/Tag"
+                }
+            ],
+            "TextArea_Basic": [
+                {
+                    "kind": "N",
+                    "path": [
+                        "TextArea_Basic",
+                        "image"
+                    ],
+                    "name": "Basic",
+                    "componentId": "orcs-design-system/TextArea"
+                }
+            ],
+            "s_e5a948d6ef17fa6bfb7bc39c27122929": [
+                {
+                    "kind": "N",
+                    "path": [
+                        "s_e5a948d6ef17fa6bfb7bc39c27122929",
+                        "image"
+                    ],
+                    "name": "Text TextInput",
+                    "componentId": "orcs-design-system/TextInput"
+                }
+            ],
+            "Toggle_Basic": [
+                {
+                    "kind": "N",
+                    "path": [
+                        "Toggle_Basic",
+                        "image"
+                    ],
+                    "name": "Basic",
+                    "componentId": "orcs-design-system/Toggle"
+                }
+            ],
+            "TreeNav_Basic": [
+                {
+                    "kind": "N",
+                    "path": [
+                        "TreeNav_Basic",
+                        "image"
+                    ],
+                    "name": "Basic",
+                    "componentId": "orcs-design-system/TreeNav"
+                }
+            ]
+        },
+        "nodes": {},
+        "settings": {
+            "context": [
+                {
+                    "kind": "E",
+                    "path": [
+                        "context",
+                        "componentId"
+                    ],
+                    "rhs": "orcs-design-system|SystemThemeProvider",
+                    "componentId": "orcs-design-system/SystemThemeProvider"
+                }
+            ]
+        },
+        "includes": {}
+    },
+    "managerUrl": "https://app.interplay.io/app/ck0ronzww000002s6cht86oyw/p/um3l2J56Xr/components"
+}

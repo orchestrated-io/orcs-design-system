@@ -1,0 +1,72 @@
+{
+    "build": {
+        "cdnFolder": "1725335410602",
+        "cdnFolderURL": "https://cdn.interplay.io/ck0ronzww000002s6cht86oyw/um3l2J56Xr/master/1725335410602/",
+        "basePath": "/Users/adambottega/Documents/GitHub/orcs-design-system",
+        "publicPath": "https://cdn.interplay.io/ck0ronzww000002s6cht86oyw/um3l2J56Xr/master/1725335410602/.interplay/stage/files/interplay/build/",
+        "outputFolder": "/Users/adambottega/Documents/GitHub/orcs-design-system/.interplay/stage/files/interplay/build/",
+        "entry": {
+            "orcs-design-system": "/Users/adambottega/Documents/GitHub/orcs-design-system/es/index.js",
+            "styled-components": "/Users/adambottega/Documents/GitHub/orcs-design-system/node_modules/styled-components/dist/styled-components.cjs.js",
+            "@emotion/react": "/Users/adambottega/Documents/GitHub/orcs-design-system/node_modules/@emotion/react/dist/emotion-react.cjs.js",
+            "@emotion/styled": "/Users/adambottega/Documents/GitHub/orcs-design-system/node_modules/@emotion/styled/dist/emotion-styled.cjs.js"
+        },
+        "alias": {
+            "~": "/Users/adambottega/Documents/GitHub/orcs-design-system",
+            "orcs-design-system": "/Users/adambottega/Documents/GitHub/orcs-design-system",
+            "orcs-design-system/": "/Users/adambottega/Documents/GitHub/orcs-design-system",
+            "react": "/Users/adambottega/Documents/GitHub/orcs-design-system/node_modules/react/index.js",
+            "react/": "/Users/adambottega/Documents/GitHub/orcs-design-system/node_modules/react",
+            "react/jsx-runtime": "/Users/adambottega/Documents/GitHub/orcs-design-system/node_modules/react/jsx-runtime.js"
+        },
+        "format": "umd",
+        "externals": {
+            "react": {
+                "root": "React",
+                "commonjs2": "react",
+                "commonjs": "react",
+                "amd": "react",
+                "umd": "react"
+            },
+            "react-dom": {
+                "root": "ReactDOM",
+                "commonjs2": "react-dom",
+                "commonjs": "react-dom",
+                "amd": "react-dom",
+                "umd": "react-dom"
+            },
+            "styled-components": "styled-components",
+            "@emotion/react": "@emotion/react",
+            "@emotion/styled": "@emotion/styled"
+        },
+        "extensions": [
+            ".ts",
+            ".tsx",
+            ".js",
+            ".jsx",
+            ".json",
+            ".mjs",
+            ".vue",
+            ".scss",
+            ".sass",
+            ".css",
+            ".svg",
+            ".json",
+            ".d.ts"
+        ],
+        "buildAssets": {
+            "orcs-design-system": [
+                ".interplay/stage/files/interplay/build/orcs-design-system.js"
+            ],
+            "styled-components": [
+                ".interplay/stage/files/interplay/build/styled-components.js"
+            ],
+            "@emotion/react": [
+                ".interplay/stage/files/interplay/build/@emotion/react.js"
+            ],
+            "@emotion/styled": [
+                ".interplay/stage/files/interplay/build/@emotion/styled.js"
+            ]
+        }
+    }
+}

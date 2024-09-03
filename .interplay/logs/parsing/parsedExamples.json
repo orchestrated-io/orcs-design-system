@@ -1,0 +1,1530 @@
+[
+    {
+        "example": {
+            "componentName": "ActionsMenuItem",
+            "props": {
+                "href": "https://teamform.co/",
+                "children": [
+                    "\n        Open website\n      "
+                ]
+            },
+            "componentId": "orcs-design-system/ActionsMenuItem"
+        },
+        "relativePath": ".interplay/examples/orcs-design-system/ActionsMenu.example.js",
+        "mode": "static",
+        "source": "JSXElement",
+        "origin": "node",
+        "componentId": "orcs-design-system/ActionsMenuItem",
+        "hash": "875f835adc4a7994d30cda94496f325b"
+    },
+    {
+        "example": {
+            "componentName": "ActionsMenu",
+            "props": {
+                "children": [
+                    {
+                        "componentName": "ActionsMenuItem",
+                        "props": {
+                            "href": "https://teamform.co/",
+                            "children": [
+                                "\n        Open website\n      "
+                            ]
+                        },
+                        "componentId": "orcs-design-system/ActionsMenuItem"
+                    }
+                ]
+            },
+            "componentId": "orcs-design-system/ActionsMenu"
+        },
+        "relativePath": ".interplay/examples/orcs-design-system/ActionsMenu.example.js",
+        "mode": "static",
+        "source": "JSXElement",
+        "origin": "base",
+        "componentId": "orcs-design-system/ActionsMenu",
+        "hash": "b8bce4a3d2d7caae2ce5034260f851a5",
+        "matched": 0,
+        "logs": [],
+        "name": "ActionsMenu",
+        "id": "s_b8bce4a3d2d7caae2ce5034260f851a5",
+        "status": "Parsed"
+    },
+    {
+        "example": {
+            "componentId": "orcs-design-system/Avatar",
+            "componentName": "Avatar",
+            "props": {
+                "title": "Ayden Lundgre",
+                "initials": "AL",
+                "subtitle": "Senior Business Analyst",
+                "image": "https://api.dicebear.com/7.x/personas/svg?seed=aydos"
+            }
+        },
+        "origin": "base",
+        "name": "Basic",
+        "id": "Avatar_Basic",
+        "relativePath": ".interplay/examples/orcs-design-system/Avatar.example.js",
+        "source": "Basic",
+        "componentId": "orcs-design-system/Avatar",
+        "hash": "e316335e291177a742f643b224ac6840",
+        "matched": 0,
+        "logs": [],
+        "status": "Parsed"
+    },
+    {
+        "example": {
+            "componentId": "orcs-design-system/Badge",
+            "componentName": "Badge",
+            "props": {
+                "children": [
+                    "Default"
+                ]
+            }
+        },
+        "origin": "base",
+        "name": "Basic",
+        "id": "Badge_Basic",
+        "relativePath": ".interplay/examples/orcs-design-system/Badge.example.js",
+        "source": "Basic",
+        "componentId": "orcs-design-system/Badge",
+        "hash": "9119c98ffa62368b4b11a20f45bbbb87",
+        "matched": 0,
+        "logs": [],
+        "status": "Parsed"
+    },
+    {
+        "example": {
+            "componentId": "orcs-design-system/Box",
+            "componentName": "Box",
+            "props": {
+                "borderRadius": 2,
+                "height": "100px",
+                "width": "200px",
+                "boxBorder": "default",
+                "shadow": "default",
+                "p": "r"
+            }
+        },
+        "origin": "base",
+        "name": "Basic",
+        "id": "Box_Basic",
+        "relativePath": ".interplay/examples/orcs-design-system/Box.example.js",
+        "source": "Basic",
+        "componentId": "orcs-design-system/Box",
+        "hash": "7985b2103285c2a71104d997513cbc77",
+        "matched": 0,
+        "logs": [],
+        "status": "Parsed"
+    },
+    {
+        "example": {
+            "componentId": "orcs-design-system/Button",
+            "componentName": "Button",
+            "props": {
+                "children": [
+                    "Default button"
+                ]
+            }
+        },
+        "origin": "base",
+        "name": "Basic",
+        "id": "Button_Basic",
+        "relativePath": ".interplay/examples/orcs-design-system/Button.example.js",
+        "source": "Basic",
+        "componentId": "orcs-design-system/Button",
+        "hash": "92707a5c00d104c88747409ec4c0bc4f",
+        "matched": 0,
+        "logs": [],
+        "status": "Parsed"
+    },
+    {
+        "example": {
+            "componentName": "ButtonGroupItem",
+            "props": {
+                "name": "viewMode",
+                "label": "Chapters",
+                "value": "Chapters view"
+            },
+            "componentId": "orcs-design-system/ButtonGroupItem"
+        },
+        "relativePath": ".interplay/examples/orcs-design-system/ButtonGroup.example.js",
+        "mode": "static",
+        "source": "JSXElement",
+        "origin": "node",
+        "componentId": "orcs-design-system/ButtonGroupItem",
+        "hash": "71c0b54d1fc80b724684ff27f81931dd"
+    },
+    {
+        "example": {
+            "componentName": "ButtonGroupItem",
+            "props": {
+                "name": "viewMode",
+                "label": "Groups",
+                "value": "Groups view",
+                "checked": true
+            },
+            "componentId": "orcs-design-system/ButtonGroupItem"
+        },
+        "relativePath": ".interplay/examples/orcs-design-system/ButtonGroup.example.js",
+        "mode": "static",
+        "source": "JSXElement",
+        "origin": "node",
+        "componentId": "orcs-design-system/ButtonGroupItem",
+        "hash": "1976498351039252e38d2959ec8d16d0"
+    },
+    {
+        "example": {
+            "componentName": "ButtonGroupItem",
+            "props": {
+                "name": "viewMode",
+                "label": "Constraints",
+                "value": "Constraints view"
+            },
+            "componentId": "orcs-design-system/ButtonGroupItem"
+        },
+        "relativePath": ".interplay/examples/orcs-design-system/ButtonGroup.example.js",
+        "mode": "static",
+        "source": "JSXElement",
+        "origin": "node",
+        "componentId": "orcs-design-system/ButtonGroupItem",
+        "hash": "0a4ac4e79812c7bf7090c8d1f83f97e4"
+    },
+    {
+        "example": {
+            "componentName": "ButtonGroupContainer",
+            "props": {
+                "controlLabel": "View:",
+                "labelDark": true,
+                "children": [
+                    {
+                        "componentName": "ButtonGroupItem",
+                        "props": {
+                            "name": "viewMode",
+                            "label": "Chapters",
+                            "value": "Chapters view"
+                        },
+                        "componentId": "orcs-design-system/ButtonGroupItem"
+                    },
+                    {
+                        "componentName": "ButtonGroupItem",
+                        "props": {
+                            "name": "viewMode",
+                            "label": "Groups",
+                            "value": "Groups view",
+                            "checked": true
+                        },
+                        "componentId": "orcs-design-system/ButtonGroupItem"
+                    },
+                    {
+                        "componentName": "ButtonGroupItem",
+                        "props": {
+                            "name": "viewMode",
+                            "label": "Constraints",
+                            "value": "Constraints view"
+                        },
+                        "componentId": "orcs-design-system/ButtonGroupItem"
+                    }
+                ]
+            },
+            "componentId": "orcs-design-system/ButtonGroupContainer"
+        },
+        "relativePath": ".interplay/examples/orcs-design-system/ButtonGroup.example.js",
+        "mode": "static",
+        "source": "JSXElement",
+        "origin": "base",
+        "componentId": "orcs-design-system/ButtonGroupContainer",
+        "hash": "366c2e8ee12deb73c027f865e49e26eb",
+        "matched": 0,
+        "logs": [],
+        "name": "Label Dark ButtonGroupContainer",
+        "id": "s_366c2e8ee12deb73c027f865e49e26eb",
+        "status": "Parsed"
+    },
+    {
+        "example": {
+            "componentId": "orcs-design-system/Card",
+            "componentName": "Card",
+            "props": {
+                "title": [
+                    "Card title"
+                ],
+                "subtitle": [
+                    "Subtitle"
+                ]
+            }
+        },
+        "origin": "base",
+        "name": "Basic",
+        "id": "Card_Basic",
+        "relativePath": ".interplay/examples/orcs-design-system/Card.example.js",
+        "source": "Basic",
+        "componentId": "orcs-design-system/Card",
+        "hash": "6fc08098f1379a25264e2c9fe52ef21f",
+        "matched": 0,
+        "logs": [
+            "Example prop 'title' updated to array value to match component config.",
+            "Example prop 'subtitle' updated to array value to match component config."
+        ],
+        "status": "Parsed"
+    },
+    {
+        "example": {
+            "componentId": "orcs-design-system/Checkbox",
+            "componentName": "Checkbox",
+            "props": {
+                "label": "Default checkbox"
+            }
+        },
+        "origin": "base",
+        "name": "Basic",
+        "id": "Checkbox_Basic",
+        "relativePath": ".interplay/examples/orcs-design-system/Checkbox.example.js",
+        "source": "Basic",
+        "componentId": "orcs-design-system/Checkbox",
+        "hash": "b46919d479ca8884322a4c296d195093",
+        "matched": 0,
+        "logs": [],
+        "status": "Parsed"
+    },
+    {
+        "example": {
+            "componentName": "DatePicker",
+            "props": {
+                "single": true,
+                "placeholder": "Date",
+                "numberOfMonths": 1
+            },
+            "componentId": "orcs-design-system/DatePicker"
+        },
+        "relativePath": ".interplay/examples/orcs-design-system/DatePicker.example.js",
+        "mode": "static",
+        "source": "JSXElement",
+        "origin": "base",
+        "componentId": "orcs-design-system/DatePicker",
+        "hash": "1e91d7c45836f03b5729bcd706432bd3",
+        "matched": 0,
+        "logs": [
+            "Could not parse property 'date'",
+            "Could not parse property 'focused'",
+            "Could not parse property 'onDateChange'",
+            "Could not parse property 'onFocusChange'",
+            "Example prop 'numberOfMonths' used to override existing prop config:{\"type\":\"unknown\"}"
+        ],
+        "name": "Single DatePicker",
+        "id": "s_1e91d7c45836f03b5729bcd706432bd3",
+        "status": "Parsed"
+    },
+    {
+        "example": {
+            "componentId": "orcs-design-system/Divider",
+            "componentName": "Divider",
+            "props": {}
+        },
+        "origin": "base",
+        "name": "Basic",
+        "id": "Divider_Basic",
+        "relativePath": ".interplay/examples/orcs-design-system/Divider.example.js",
+        "source": "Basic",
+        "componentId": "orcs-design-system/Divider",
+        "hash": "5e82ab3485d51aff8108ff0b1ef2daf9",
+        "matched": 0,
+        "logs": [],
+        "status": "Parsed"
+    },
+    {
+        "example": {
+            "componentId": "orcs-design-system/Expandable",
+            "componentName": "Expandable",
+            "props": {
+                "title": "Click to expand",
+                "children": "Expanded content goes here"
+            }
+        },
+        "origin": "base",
+        "name": "Basic",
+        "id": "Expandable_Basic",
+        "relativePath": ".interplay/examples/orcs-design-system/Expandable.example.js",
+        "source": "Basic",
+        "componentId": "orcs-design-system/Expandable",
+        "hash": "3be3339ed81799b4473eafae4614f796",
+        "matched": 0,
+        "logs": [],
+        "status": "Parsed"
+    },
+    {
+        "example": {
+            "componentName": "TextInput",
+            "props": {
+                "fullWidth": true,
+                "id": "search",
+                "key": "search",
+                "type": "text",
+                "placeholder": "Search for...",
+                "iconRight": [
+                    "fas",
+                    "search"
+                ]
+            },
+            "componentId": "orcs-design-system/TextInput"
+        },
+        "relativePath": ".interplay/examples/orcs-design-system/HeaderSimple.example.js",
+        "mode": "static",
+        "source": "JSXElement",
+        "origin": "base",
+        "componentId": "orcs-design-system/TextInput",
+        "hash": "6669b07ac96afe6388066642f7ea1da5",
+        "matched": 0,
+        "logs": [
+            "Example prop 'iconRight' used to override existing prop config:{\"type\":\"array\",\"items\":{\"type\":\"unknown\"}}"
+        ],
+        "name": "Text Full Width TextInput",
+        "id": "s_6669b07ac96afe6388066642f7ea1da5",
+        "status": "Parsed"
+    },
+    {
+        "example": {
+            "componentName": "HeaderSimple",
+            "props": {
+                "variant": "search",
+                "appName": [
+                    "App Name"
+                ],
+                "userName": [
+                    "Michael"
+                ],
+                "avatarSource": [
+                    "https://api.dicebear.com/7.x/personas/svg?seed=mike"
+                ],
+                "avatarAlt": "Avatar for Michael",
+                "currentWorskapce": "Org Design Workspace",
+                "searchComponent": [
+                    {
+                        "componentName": "TextInput",
+                        "props": {
+                            "fullWidth": true,
+                            "id": "search",
+                            "key": "search",
+                            "type": "text",
+                            "placeholder": "Search for...",
+                            "iconRight": [
+                                "fas",
+                                "search"
+                            ]
+                        },
+                        "componentId": "orcs-design-system/TextInput"
+                    }
+                ]
+            },
+            "componentId": "orcs-design-system/HeaderSimple"
+        },
+        "relativePath": ".interplay/examples/orcs-design-system/HeaderSimple.example.js",
+        "mode": "static",
+        "source": "JSXElement",
+        "origin": "base",
+        "componentId": "orcs-design-system/HeaderSimple",
+        "hash": "9a374812c67a39818666393bce51a1b2",
+        "matched": 0,
+        "logs": [
+            "Example prop 'appName' updated to array value to match component config.",
+            "Example prop 'userName' updated to array value to match component config.",
+            "Example prop 'avatarSource' updated to array value to match component config.",
+            "Example prop 'searchComponent' updated to array value to match component config."
+        ],
+        "name": "Search HeaderSimple",
+        "id": "s_9a374812c67a39818666393bce51a1b2",
+        "status": "Parsed"
+    },
+    {
+        "example": {
+            "componentId": "orcs-design-system/Icon",
+            "componentName": "Icon",
+            "props": {
+                "icon": [
+                    "fas",
+                    "angle-down"
+                ],
+                "title": "Down"
+            }
+        },
+        "origin": "base",
+        "name": "Basic",
+        "id": "Icon_Basic",
+        "relativePath": ".interplay/examples/orcs-design-system/Icon.example.js",
+        "source": "Basic",
+        "componentId": "orcs-design-system/Icon",
+        "hash": "e7d9af064abadbaaa97d2a934e89657c",
+        "matched": 0,
+        "logs": [
+            "Example prop 'icon' used to override existing prop config:{\"type\":\"array\",\"items\":{\"type\":\"unknown\"}}"
+        ],
+        "status": "Parsed"
+    },
+    {
+        "example": {
+            "componentId": "orcs-design-system/Notification",
+            "componentName": "Notification",
+            "props": {
+                "icon": [
+                    "fas",
+                    "share-square"
+                ],
+                "children": [
+                    "Notification message."
+                ]
+            }
+        },
+        "origin": "base",
+        "name": "Basic",
+        "id": "Notification_Basic",
+        "relativePath": ".interplay/examples/orcs-design-system/Notification.example.js",
+        "source": "Basic",
+        "componentId": "orcs-design-system/Notification",
+        "hash": "e04265715da7791736721822c76992f9",
+        "matched": 0,
+        "logs": [
+            "Example prop 'icon' used to override existing prop config:{\"type\":\"array\",\"items\":{\"type\":\"unknown\"}}"
+        ],
+        "status": "Parsed"
+    },
+    {
+        "example": {
+            "componentId": "orcs-design-system/ProgressBar",
+            "componentName": "ProgressBar",
+            "props": {
+                "ariaLabel": "CONFLICTINGTYPE",
+                "containerWidth": 100,
+                "fillWidth": 75
+            }
+        },
+        "origin": "base",
+        "name": "Basic",
+        "id": "ProgressBar_Basic",
+        "relativePath": ".interplay/examples/orcs-design-system/ProgressBar.example.js",
+        "source": "Basic",
+        "componentId": "orcs-design-system/ProgressBar",
+        "hash": "2203294dcdcf55376e20c5f95f0edc69",
+        "matched": 0,
+        "logs": [
+            "Example prop 'ariaLabel' contains type:{\"type\":\"string\"} - conflicts with existing config: {\"type\":\"object\"}"
+        ],
+        "status": "ParsingError"
+    },
+    {
+        "example": {
+            "componentId": "orcs-design-system/RadioButton",
+            "componentName": "RadioButton",
+            "props": {
+                "name": "RadioButtons01",
+                "label": "Default radio"
+            }
+        },
+        "origin": "base",
+        "name": "Basic",
+        "id": "RadioButton_Basic",
+        "relativePath": ".interplay/examples/orcs-design-system/RadioButton.example.js",
+        "source": "Basic",
+        "componentId": "orcs-design-system/RadioButton",
+        "hash": "9f3097c48f0ee9e0825f6df0b871d8b3",
+        "matched": 0,
+        "logs": [],
+        "status": "Parsed"
+    },
+    {
+        "example": {
+            "componentId": "orcs-design-system/Range",
+            "componentName": "Range",
+            "props": {
+                "min": 0,
+                "max": 20,
+                "defaultValue": 10,
+                "ariaLabel": "Default range slider"
+            }
+        },
+        "origin": "base",
+        "name": "Basic",
+        "id": "Range_Basic",
+        "relativePath": ".interplay/examples/orcs-design-system/Range.example.js",
+        "source": "Basic",
+        "componentId": "orcs-design-system/Range",
+        "hash": "d9b8cf08066bf404f6eb2a1b804d3619",
+        "matched": 0,
+        "logs": [],
+        "status": "Parsed"
+    },
+    {
+        "example": {
+            "componentId": "orcs-design-system/Select",
+            "componentName": "Select",
+            "props": {
+                "options": [
+                    {
+                        "value": "option1",
+                        "label": "Option 1"
+                    }
+                ],
+                "label": "Select label",
+                "inputId": "defaultSelect"
+            }
+        },
+        "origin": "base",
+        "name": "Basic",
+        "id": "Select_Basic",
+        "relativePath": ".interplay/examples/orcs-design-system/Select.example.js",
+        "source": "Basic",
+        "componentId": "orcs-design-system/Select",
+        "hash": "e79d3cefd920fadcc5d06660752e7caf",
+        "matched": 0,
+        "logs": [
+            "Example prop 'options' used to override existing prop config:{\"type\":\"unknown\"}",
+            "Example prop 'inputId' used to override existing prop config:{\"type\":\"unknown\"}"
+        ],
+        "status": "Parsed"
+    },
+    {
+        "example": {
+            "componentName": "Link",
+            "props": {
+                "to": "/teams/",
+                "key": "JSXEXPRESSION",
+                "children": [
+                    "JSXEXPRESSION"
+                ]
+            },
+            "COMPONENTSEARCH": {
+                "name": "Link",
+                "examplePackageName": "orcs-design-system"
+            }
+        },
+        "relativePath": ".interplay/examples/orcs-design-system/SideNav.example.js",
+        "mode": "static",
+        "source": "JSXElement",
+        "origin": "base",
+        "hash": "78ab84982cbec94fb8aa9d10b1cd90d2"
+    },
+    {
+        "example": {
+            "componentName": "Flex",
+            "props": {
+                "flexDirection": "column",
+                "children": "CONFLICTINGTYPE"
+            },
+            "componentId": "orcs-design-system/Flex"
+        },
+        "relativePath": ".interplay/examples/orcs-design-system/SideNav.example.js",
+        "mode": "static",
+        "source": "JSXElement",
+        "origin": "base",
+        "componentId": "orcs-design-system/Flex",
+        "hash": "65346903ef6af0f1ffdd7bdd17cf7a09",
+        "matched": 0,
+        "logs": [
+            "Example prop 'flexDirection' used to override existing prop config:{\"type\":\"unknown\"}",
+            "Example prop 'children' contains type:{\"type\":\"array\",\"items\":{\"type\":\"array\"}} - conflicts with existing config: {\"type\":\"array\",\"items\":{\"type\":\"Node\"}}"
+        ],
+        "name": "Flex",
+        "status": "ParsingError"
+    },
+    {
+        "example": {
+            "componentName": "SideNav",
+            "props": {
+                "items": [
+                    {
+                        "iconName": "building",
+                        "name": "Home",
+                        "component": "/",
+                        "actionType": "link",
+                        "isActive": {
+                            "path": "/",
+                            "exact": true
+                        }
+                    },
+                    {
+                        "iconName": "user",
+                        "name": "My profile",
+                        "component": "/profile",
+                        "actionType": "link",
+                        "isActive": {
+                            "path": "/profile"
+                        }
+                    },
+                    {
+                        "iconName": "id-card",
+                        "name": "Search Page",
+                        "component": "/search",
+                        "actionType": "link",
+                        "isActive": {
+                            "path": "/search"
+                        }
+                    },
+                    {
+                        "iconName": "snowflake",
+                        "name": "Filter",
+                        "component": "Filter",
+                        "actionType": "component",
+                        "pageSpecific": {
+                            "path": "/search"
+                        },
+                        "isExpandedByDefault": true
+                    },
+                    {
+                        "iconName": "sun",
+                        "name": "People",
+                        "component": "People",
+                        "actionType": "component",
+                        "pageSpecific": {
+                            "path": "/profile"
+                        },
+                        "isExpandedByDefault": true
+                    },
+                    {
+                        "iconName": "bell",
+                        "name": "Notifications",
+                        "badgeNumber": "3",
+                        "component": "Notifications",
+                        "actionType": "component"
+                    },
+                    {
+                        "iconName": "chart-bar",
+                        "name": "Browse teams",
+                        "large": true,
+                        "component": {
+                            "componentName": "Flex",
+                            "props": {
+                                "flexDirection": "column",
+                                "children": "CONFLICTINGTYPE"
+                            },
+                            "componentId": "orcs-design-system/Flex"
+                        },
+                        "actionType": "component"
+                    },
+                    {
+                        "iconName": "cog",
+                        "name": "Settings",
+                        "hide": true,
+                        "bottomAligned": true,
+                        "component": "Settings",
+                        "actionType": "component"
+                    },
+                    {
+                        "iconName": "calendar-alt",
+                        "name": "Calendar",
+                        "pageSpecific": true,
+                        "component": "Calendar",
+                        "actionType": "component"
+                    },
+                    {
+                        "iconName": "star",
+                        "name": "Announcements",
+                        "badgeDot": true,
+                        "bottomAligned": true,
+                        "component": "Announcements",
+                        "actionType": "component"
+                    },
+                    {
+                        "iconName": "times-circle",
+                        "name": "Logout",
+                        "bottomAligned": true,
+                        "actionType": "button"
+                    }
+                ],
+                "sideNavHeight": "500px"
+            },
+            "componentId": "orcs-design-system/SideNav"
+        },
+        "relativePath": ".interplay/examples/orcs-design-system/SideNav.example.js",
+        "mode": "static",
+        "source": "JSXElement",
+        "origin": "base",
+        "componentId": "orcs-design-system/SideNav",
+        "hash": "02ebe7ad30081c0b049713cb67c209ef",
+        "matched": 0,
+        "logs": [
+            "Could not parse object prop 'hide'",
+            "Could not parse object prop 'hide'",
+            "Could not parse object prop 'onClick'",
+            "Example prop 'flexDirection' used to override existing prop config:{\"type\":\"unknown\"}",
+            "Example prop 'children' contains type:{\"type\":\"array\",\"items\":{\"type\":\"array\"}} - conflicts with existing config: {\"type\":\"array\",\"items\":{\"type\":\"Node\"}}"
+        ],
+        "name": "SideNav",
+        "status": "ParsingError"
+    },
+    {
+        "example": {
+            "componentId": "orcs-design-system/StatusDot",
+            "componentName": "StatusDot",
+            "props": {}
+        },
+        "origin": "base",
+        "name": "Basic",
+        "id": "StatusDot_Basic",
+        "relativePath": ".interplay/examples/orcs-design-system/StatusDot.example.js",
+        "source": "Basic",
+        "componentId": "orcs-design-system/StatusDot",
+        "hash": "a8a24f3dd4154aa7503cf6a44b04e87f",
+        "matched": 0,
+        "logs": [],
+        "status": "Parsed"
+    },
+    {
+        "example": {
+            "componentId": "orcs-design-system/StatusDot",
+            "componentName": "StatusDot",
+            "props": {
+                "variant": "success",
+                "icon": true,
+                "children": [
+                    {
+                        "componentId": "orcs-design-system/Icon",
+                        "componentName": "Icon",
+                        "props": {
+                            "icon": [
+                                "fas",
+                                "check"
+                            ],
+                            "color": "white",
+                            "size": "xs",
+                            "transform": "up-2"
+                        }
+                    }
+                ]
+            }
+        },
+        "origin": "base",
+        "name": "With Icon",
+        "id": "StatusDot_With_Icon",
+        "relativePath": ".interplay/examples/orcs-design-system/StatusDot.example.js",
+        "source": "WithIcon",
+        "componentId": "orcs-design-system/StatusDot",
+        "hash": "83549f7c6234cb7c093b7bf458a1a99e",
+        "matched": 0,
+        "logs": [
+            "Example prop 'transform' used to override existing prop config:{\"type\":\"unknown\"}"
+        ],
+        "status": "Parsed"
+    },
+    {
+        "example": {
+            "componentId": "orcs-design-system/Icon",
+            "componentName": "Icon",
+            "props": {
+                "icon": [
+                    "fas",
+                    "check"
+                ],
+                "color": "white",
+                "size": "xs",
+                "transform": "up-2"
+            }
+        },
+        "origin": "node",
+        "name": "With Icon",
+        "id": "StatusDot_With_Icon_1",
+        "relativePath": ".interplay/examples/orcs-design-system/StatusDot.example.js",
+        "source": "WithIcon",
+        "componentId": "orcs-design-system/Icon",
+        "hash": "ac710f657ffc76170ad99391a6fa77ae"
+    },
+    {
+        "example": {
+            "componentId": "orcs-design-system/StyledLink",
+            "componentName": "StyledLink",
+            "props": {
+                "href": "#",
+                "children": [
+                    "Styled Link"
+                ]
+            }
+        },
+        "origin": "base",
+        "name": "Basic",
+        "id": "StyledLink_Basic",
+        "relativePath": ".interplay/examples/orcs-design-system/StyledLink.example.js",
+        "source": "Basic",
+        "componentId": "orcs-design-system/StyledLink",
+        "hash": "a3c3316fcedd997b69bbb4cf43bb132a",
+        "matched": 0,
+        "logs": [],
+        "status": "Parsed"
+    },
+    {
+        "example": {
+            "componentName": "Tab",
+            "props": {
+                "children": [
+                    {
+                        "componentName": "a",
+                        "props": {
+                            "href": "#",
+                            "children": [
+                                "Details"
+                            ]
+                        },
+                        "componentId": "a"
+                    }
+                ]
+            },
+            "componentId": "orcs-design-system/Tab"
+        },
+        "relativePath": ".interplay/examples/orcs-design-system/Tabs.example.js",
+        "mode": "static",
+        "source": "JSXElement",
+        "origin": "node",
+        "componentId": "orcs-design-system/Tab",
+        "hash": "b275fe7534fe044ba097b3cf1c773cfc"
+    },
+    {
+        "example": {
+            "componentName": "Tab",
+            "props": {
+                "active": true,
+                "children": [
+                    {
+                        "componentName": "a",
+                        "props": {
+                            "href": "#",
+                            "tabIndex": "-1",
+                            "children": [
+                                "\n          Additional information\n        "
+                            ]
+                        },
+                        "componentId": "a"
+                    }
+                ]
+            },
+            "componentId": "orcs-design-system/Tab"
+        },
+        "relativePath": ".interplay/examples/orcs-design-system/Tabs.example.js",
+        "mode": "static",
+        "source": "JSXElement",
+        "origin": "node",
+        "componentId": "orcs-design-system/Tab",
+        "hash": "e81437ea3aac7eaf70e577ab74f83db7"
+    },
+    {
+        "example": {
+            "componentName": "Tab",
+            "props": {
+                "children": [
+                    {
+                        "componentName": "a",
+                        "props": {
+                            "href": "#",
+                            "children": [
+                                "Planning"
+                            ]
+                        },
+                        "componentId": "a"
+                    }
+                ]
+            },
+            "componentId": "orcs-design-system/Tab"
+        },
+        "relativePath": ".interplay/examples/orcs-design-system/Tabs.example.js",
+        "mode": "static",
+        "source": "JSXElement",
+        "origin": "node",
+        "componentId": "orcs-design-system/Tab",
+        "hash": "22d44104725d5019aefb328d35e1d3df"
+    },
+    {
+        "example": {
+            "componentName": "TabsContainer",
+            "props": {
+                "children": [
+                    {
+                        "componentName": "Tab",
+                        "props": {
+                            "children": [
+                                {
+                                    "componentName": "a",
+                                    "props": {
+                                        "href": "#",
+                                        "children": [
+                                            "Details"
+                                        ]
+                                    },
+                                    "componentId": "a"
+                                }
+                            ]
+                        },
+                        "componentId": "orcs-design-system/Tab"
+                    },
+                    {
+                        "componentName": "Tab",
+                        "props": {
+                            "active": true,
+                            "children": [
+                                {
+                                    "componentName": "a",
+                                    "props": {
+                                        "href": "#",
+                                        "tabIndex": "-1",
+                                        "children": [
+                                            "\n          Additional information\n        "
+                                        ]
+                                    },
+                                    "componentId": "a"
+                                }
+                            ]
+                        },
+                        "componentId": "orcs-design-system/Tab"
+                    },
+                    {
+                        "componentName": "Tab",
+                        "props": {
+                            "children": [
+                                {
+                                    "componentName": "a",
+                                    "props": {
+                                        "href": "#",
+                                        "children": [
+                                            "Planning"
+                                        ]
+                                    },
+                                    "componentId": "a"
+                                }
+                            ]
+                        },
+                        "componentId": "orcs-design-system/Tab"
+                    }
+                ]
+            },
+            "componentId": "orcs-design-system/TabsContainer"
+        },
+        "relativePath": ".interplay/examples/orcs-design-system/Tabs.example.js",
+        "mode": "static",
+        "source": "JSXElement",
+        "origin": "base",
+        "componentId": "orcs-design-system/TabsContainer",
+        "hash": "b7ec9ab635927bde42b9bc279009c69e",
+        "matched": 0,
+        "logs": [],
+        "name": "TabsContainer",
+        "id": "s_b7ec9ab635927bde42b9bc279009c69e",
+        "status": "Parsed"
+    },
+    {
+        "example": {
+            "componentId": "orcs-design-system/Tag",
+            "componentName": "Tag",
+            "props": {
+                "children": [
+                    "Default Tag"
+                ]
+            }
+        },
+        "origin": "base",
+        "name": "Basic",
+        "id": "Tag_Basic",
+        "relativePath": ".interplay/examples/orcs-design-system/Tag.example.js",
+        "source": "Basic",
+        "componentId": "orcs-design-system/Tag",
+        "hash": "361579bb169f2e82cfda30be8a8d5d36",
+        "matched": 0,
+        "logs": [],
+        "status": "Parsed"
+    },
+    {
+        "example": {
+            "componentId": "orcs-design-system/TextArea",
+            "componentName": "TextArea",
+            "props": {
+                "label": "Message",
+                "placeholder": "Enter your message"
+            }
+        },
+        "origin": "base",
+        "name": "Basic",
+        "id": "TextArea_Basic",
+        "relativePath": ".interplay/examples/orcs-design-system/TextArea.example.js",
+        "source": "Basic",
+        "componentId": "orcs-design-system/TextArea",
+        "hash": "96964f05ce572cdc2ad208500396e2b6",
+        "matched": 0,
+        "logs": [],
+        "status": "Parsed"
+    },
+    {
+        "example": {
+            "componentName": "TextInput",
+            "props": {
+                "key": "textInput1",
+                "type": "text",
+                "label": "Full name",
+                "placeholder": "E.g. John Smith"
+            },
+            "componentId": "orcs-design-system/TextInput"
+        },
+        "relativePath": ".interplay/examples/orcs-design-system/TextInput.example.js",
+        "mode": "static",
+        "source": "JSXElement",
+        "origin": "base",
+        "componentId": "orcs-design-system/TextInput",
+        "hash": "e5a948d6ef17fa6bfb7bc39c27122929",
+        "matched": 0,
+        "logs": [],
+        "name": "Text TextInput",
+        "id": "s_e5a948d6ef17fa6bfb7bc39c27122929",
+        "status": "Parsed"
+    },
+    {
+        "example": {
+            "componentId": "orcs-design-system/Toggle",
+            "componentName": "Toggle",
+            "props": {
+                "id": "autosave",
+                "label": "Auto save"
+            }
+        },
+        "origin": "base",
+        "name": "Basic",
+        "id": "Toggle_Basic",
+        "relativePath": ".interplay/examples/orcs-design-system/Toggle.example.js",
+        "source": "Basic",
+        "componentId": "orcs-design-system/Toggle",
+        "hash": "4a91bd73fb53844511a707f3ade894cc",
+        "matched": 0,
+        "logs": [],
+        "status": "Parsed"
+    },
+    {
+        "example": {
+            "componentId": "orcs-design-system/TreeNav",
+            "componentName": "TreeNav",
+            "props": {
+                "data": [
+                    {
+                        "id": "1",
+                        "name": "Domains",
+                        "badgeText": "Domains",
+                        "badgeColour": "success",
+                        "children": [
+                            {
+                                "id": "1a",
+                                "name": "Business",
+                                "badgeText": "Domain",
+                                "badgeColour": "success",
+                                "checkbox": true,
+                                "children": [
+                                    {
+                                        "id": "1a1",
+                                        "name": "Capture & Release",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success",
+                                        "checkbox": true
+                                    },
+                                    {
+                                        "id": "1a2",
+                                        "name": "Goonsquad",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success",
+                                        "checkbox": true
+                                    },
+                                    {
+                                        "id": "1a3",
+                                        "name": "Wolfpack",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success",
+                                        "checkbox": true
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "1b",
+                                "name": "Hardware Product",
+                                "badgeText": "Domain",
+                                "badgeColour": "success",
+                                "children": [
+                                    {
+                                        "id": "1b1",
+                                        "name": "Blackhole",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1b2",
+                                        "name": "Marvel",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1b3",
+                                        "name": "Stargazers",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "1c",
+                                "name": "Innovation",
+                                "badgeText": "Domain",
+                                "badgeColour": "success",
+                                "children": [
+                                    {
+                                        "id": "1c1",
+                                        "name": "AI Master Race",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1c2",
+                                        "name": "Constellation",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1c3",
+                                        "name": "Dark Matter",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1c4",
+                                        "name": "Future Space",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1c5",
+                                        "name": "Innovation Lab",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "1d",
+                                "name": "Marketing",
+                                "badgeText": "Domain",
+                                "badgeColour": "success",
+                                "children": [
+                                    {
+                                        "id": "1d1",
+                                        "name": "Community",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1d2",
+                                        "name": "Product",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "1e",
+                                "name": "Operations",
+                                "badgeText": "Domain",
+                                "badgeColour": "success",
+                                "children": [
+                                    {
+                                        "id": "1e1",
+                                        "name": "Backbone",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1e2",
+                                        "name": "Blackops",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "1f",
+                                "name": "Platform",
+                                "badgeText": "Domain",
+                                "badgeColour": "success",
+                                "children": [
+                                    {
+                                        "id": "1f1",
+                                        "name": "Event Horizon",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1f2",
+                                        "name": "Transformers",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1f3",
+                                        "name": "Zeta Squad",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "1g",
+                                "name": "Research & Analysis",
+                                "badgeText": "Domain",
+                                "badgeColour": "success",
+                                "children": [
+                                    {
+                                        "id": "1g1",
+                                        "name": "Alpha Relay",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1g2",
+                                        "name": "Gizmosphere",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "1h",
+                                "name": "Software Product",
+                                "badgeText": "Domain",
+                                "badgeColour": "success",
+                                "children": [
+                                    {
+                                        "id": "1h1",
+                                        "name": "Alphazone",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1h2",
+                                        "name": "Asterism",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1h3",
+                                        "name": "Beta Testers",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1h4",
+                                        "name": "BobRossers",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1h5",
+                                        "name": "Flashdance",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1h3",
+                                        "name": "Matrix",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1h4",
+                                        "name": "Matter",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1h5",
+                                        "name": "The Incredibles",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "1i",
+                                "name": "Support",
+                                "badgeText": "Domain",
+                                "badgeColour": "success",
+                                "children": [
+                                    {
+                                        "id": "1i1",
+                                        "name": "Customer Support",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1i2",
+                                        "name": "Tech Support",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "2",
+                        "name": "Capabilities",
+                        "badgeText": "Capabilities",
+                        "badgeColour": "secondary",
+                        "children": [
+                            {
+                                "id": "2a",
+                                "name": "Analysts",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2b",
+                                "name": "Astrophysics & Aerospace Engineering",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2c",
+                                "name": "Consulting",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2d",
+                                "name": "Customer Success",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2e",
+                                "name": "Data Engineering",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2f",
+                                "name": "Design",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2g",
+                                "name": "DevOps",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2h",
+                                "name": "Finance",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2i",
+                                "name": "Hardware Engineering",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2j",
+                                "name": "Leadership",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2k",
+                                "name": "Management",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2l",
+                                "name": "Marketing",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2m",
+                                "name": "Operations",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2n",
+                                "name": "People & Culture",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2o",
+                                "name": "Product Management",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2p",
+                                "name": "Quality Assurance & Testing",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2q",
+                                "name": "Recruitment",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2r",
+                                "name": "Research",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2s",
+                                "name": "Sales",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2t",
+                                "name": "Security Engineering",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2u",
+                                "name": "Software Engineering",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2v",
+                                "name": "Support",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2w",
+                                "name": "Systems Engineering",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "name": "Omega Systems",
+                        "badgeText": "Contractor",
+                        "badgeColour": "primary"
+                    }
+                ],
+                "openByDefault": true,
+                "width": 400
+            }
+        },
+        "origin": "base",
+        "name": "Basic",
+        "id": "TreeNav_Basic",
+        "relativePath": ".interplay/examples/orcs-design-system/TreeNav.example.js",
+        "source": "Basic",
+        "componentId": "orcs-design-system/TreeNav",
+        "hash": "27b200e971f30942d681c23dd912ee0a",
+        "matched": 0,
+        "logs": [
+            "Example prop 'data' used to override existing prop config:{\"type\":\"array\",\"items\":{\"type\":\"unknown\"}}"
+        ],
+        "status": "Parsed"
+    }
+]

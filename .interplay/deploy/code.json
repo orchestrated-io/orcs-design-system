@@ -1,0 +1,4622 @@
+{
+    "includes": {
+        "emotionReact": {
+            "id": "emotionReact",
+            "url": "https://cdn.interplay.io/ck0ronzww000002s6cht86oyw/um3l2J56Xr/master/1725335410602/.interplay/stage/files/interplay/build/@emotion/react",
+            "type": "module",
+            "name": "@emotion/react",
+            "index": 1
+        },
+        "emotionStyled": {
+            "id": "emotionStyled",
+            "url": "https://cdn.interplay.io/ck0ronzww000002s6cht86oyw/um3l2J56Xr/master/1725335410602/.interplay/stage/files/interplay/build/@emotion/styled",
+            "type": "module",
+            "name": "@emotion/styled",
+            "index": 2
+        },
+        "orcsDesignSystem": {
+            "id": "orcsDesignSystem",
+            "url": "https://cdn.interplay.io/ck0ronzww000002s6cht86oyw/um3l2J56Xr/master/1725335410602/.interplay/stage/files/interplay/build/orcs-design-system",
+            "type": "module",
+            "name": "orcs-design-system",
+            "index": 3
+        },
+        "styledComponents": {
+            "id": "styledComponents",
+            "url": "https://cdn.interplay.io/ck0ronzww000002s6cht86oyw/um3l2J56Xr/master/1725335410602/.interplay/stage/files/interplay/build/styled-components",
+            "type": "module",
+            "name": "styled-components",
+            "index": 4
+        }
+    },
+    "components": {
+        "orcs-design-system/systemtheme": {
+            "id": "orcs-design-system/systemtheme",
+            "name": "systemtheme",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "systemtheme",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {}
+        },
+        "orcs-design-system/systemThemeCollapsed": {
+            "id": "orcs-design-system/systemThemeCollapsed",
+            "name": "systemThemeCollapsed",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "systemThemeCollapsed",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {}
+        },
+        "orcs-design-system/GlobalStyles": {
+            "id": "orcs-design-system/GlobalStyles",
+            "name": "GlobalStyles",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "GlobalStyles",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {}
+        },
+        "orcs-design-system/SystemThemeProvider": {
+            "id": "orcs-design-system/SystemThemeProvider",
+            "name": "SystemThemeProvider",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "SystemThemeProvider",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "children": {
+                    "name": "children",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    }
+                }
+            },
+            "relativePath": "lib/SystemThemeProvider.js"
+        },
+        "orcs-design-system/ActionsMenu": {
+            "id": "orcs-design-system/ActionsMenu",
+            "name": "ActionsMenu",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "ActionsMenu",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "isOpen": {
+                    "name": "isOpen",
+                    "type": "boolean"
+                },
+                "direction": {
+                    "name": "direction",
+                    "type": "string",
+                    "enum": [
+                        "left",
+                        "right",
+                        "top",
+                        "bottom",
+                        "top-start",
+                        "top-end",
+                        "bottom-start",
+                        "bottom-end",
+                        "left-start",
+                        "left-end",
+                        "right-start",
+                        "right-end"
+                    ]
+                },
+                "customTriggerComponent": {
+                    "name": "customTriggerComponent",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    }
+                },
+                "closeOnClick": {
+                    "name": "closeOnClick",
+                    "type": "boolean"
+                },
+                "children": {
+                    "name": "children",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "ui": {
+                        "suggested": [
+                            "orcs-design-system/ActionsMenuItem"
+                        ]
+                    }
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Specifies the colour theme"
+                },
+                "ariaLabel": {
+                    "name": "ariaLabel",
+                    "type": "object",
+                    "description": "Specifies the aria-label for the button"
+                }
+            },
+            "relativePath": "lib/components/ActionsMenu/index.js"
+        },
+        "orcs-design-system/ActionsMenuBody": {
+            "id": "orcs-design-system/ActionsMenuBody",
+            "name": "ActionsMenuBody",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "ActionsMenuBody",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "required": [
+                "onToggle",
+                "closeMenu",
+                "toggleState"
+            ],
+            "props": {
+                "onTriggerFocus": {
+                    "name": "onTriggerFocus",
+                    "type": "Event"
+                },
+                "onToggle": {
+                    "name": "onToggle",
+                    "type": "Event"
+                },
+                "closeMenu": {
+                    "name": "closeMenu",
+                    "type": "Event"
+                },
+                "toggleState": {
+                    "name": "toggleState",
+                    "type": "boolean"
+                },
+                "closeOnClick": {
+                    "name": "closeOnClick",
+                    "type": "boolean",
+                    "defaultValue": false
+                },
+                "direction": {
+                    "name": "direction",
+                    "type": "string",
+                    "defaultValue": "right-start"
+                },
+                "placement": {
+                    "name": "placement",
+                    "type": "string"
+                },
+                "menuTopPosition": {
+                    "name": "menuTopPosition",
+                    "type": "string"
+                },
+                "menuLeftPosition": {
+                    "name": "menuLeftPosition",
+                    "type": "string"
+                },
+                "menuRightPosition": {
+                    "name": "menuRightPosition",
+                    "type": "string"
+                },
+                "menuWidth": {
+                    "name": "menuWidth",
+                    "type": "string"
+                },
+                "customTriggerComponent": {
+                    "name": "customTriggerComponent",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    }
+                },
+                "children": {
+                    "name": "children",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    }
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object"
+                },
+                "ariaLabel": {
+                    "name": "ariaLabel",
+                    "type": "string",
+                    "defaultValue": "Options Menu"
+                },
+                "data-testid": {
+                    "name": "data-testid",
+                    "type": "unknown",
+                    "defaultValue": "ActionsMenu"
+                }
+            },
+            "relativePath": "lib/components/ActionsMenu/index.js"
+        },
+        "orcs-design-system/ActionsMenuHeading": {
+            "id": "orcs-design-system/ActionsMenuHeading",
+            "name": "ActionsMenuHeading",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "ActionsMenuHeading",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {},
+            "relativePath": "lib/components/ActionsMenu/index.js"
+        },
+        "orcs-design-system/ActionsMenuItem": {
+            "id": "orcs-design-system/ActionsMenuItem",
+            "name": "ActionsMenuItem",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "ActionsMenuItem",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "href": {
+                    "name": "href",
+                    "type": "string"
+                },
+                "children": {
+                    "name": "children",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    }
+                }
+            },
+            "relativePath": "lib/components/ActionsMenu/index.js"
+        },
+        "orcs-design-system/Avatar": {
+            "id": "orcs-design-system/Avatar",
+            "name": "Avatar",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Avatar",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "sizing": {
+                    "name": "sizing",
+                    "type": "string",
+                    "enum": [
+                        "small",
+                        "large",
+                        "default"
+                    ],
+                    "description": "Changes the sizing of the Avatar component"
+                },
+                "shape": {
+                    "name": "shape",
+                    "type": "string",
+                    "enum": [
+                        "square",
+                        "hexagon",
+                        "tag",
+                        "default"
+                    ],
+                    "description": "Changes the shape of the Avatar component"
+                },
+                "type": {
+                    "name": "type",
+                    "type": "string",
+                    "enum": [
+                        "inverted",
+                        "default"
+                    ],
+                    "description": "Specifies the inverted type for dark backgrounds"
+                },
+                "image": {
+                    "name": "image",
+                    "description": "Specifies a source path for an image",
+                    "type": "string"
+                },
+                "imageAlt": {
+                    "name": "imageAlt",
+                    "type": "unknown",
+                    "description": "Specifies the alt text for an image. This must be specified if image prop is used and title prop is not a string."
+                },
+                "initials": {
+                    "name": "initials",
+                    "description": "Specifies initials of person if available",
+                    "type": "string"
+                },
+                "subtitleContent": {
+                    "name": "subtitleContent",
+                    "type": "Node",
+                    "description": "Specifies custom content for avatar subtitle"
+                },
+                "whiteInitials": {
+                    "name": "whiteInitials",
+                    "type": "boolean",
+                    "description": "Turns white initials on for custom `Circle` backgrounds"
+                },
+                "uppercase": {
+                    "name": "uppercase",
+                    "type": "boolean",
+                    "defaultValue": true,
+                    "description": "Specifies whether to use uppercase for initials"
+                },
+                "title": {
+                    "name": "title",
+                    "description": "Specifies title / name as just plain text, or an element like a hyperlink or react router link",
+                    "type": "string"
+                },
+                "titleLevel": {
+                    "name": "titleLevel",
+                    "type": "string",
+                    "enum": [
+                        "H1",
+                        "H2",
+                        "H3",
+                        "H4",
+                        "H5",
+                        "H6"
+                    ],
+                    "defaultValue": "H3",
+                    "description": "Specifies the component to wrap the heading, defaults to H3"
+                },
+                "subtitle": {
+                    "name": "subtitle",
+                    "description": "Specifies subtitle / role",
+                    "type": "string"
+                },
+                "localTime": {
+                    "name": "localTime",
+                    "type": "string",
+                    "description": "Specifies local time"
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Specifies the colour theme"
+                }
+            },
+            "relativePath": "lib/components/Avatar/index.js"
+        },
+        "orcs-design-system/Badge": {
+            "id": "orcs-design-system/Badge",
+            "name": "Badge",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Badge",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "variant": {
+                    "name": "variant",
+                    "type": "string",
+                    "enum": [
+                        "success",
+                        "warning",
+                        "danger",
+                        "primaryLight",
+                        "primary",
+                        "primaryDark",
+                        "secondary"
+                    ],
+                    "description": "Specifies badge colour. Colours are taken from the standard design system colours."
+                },
+                "noWrap": {
+                    "name": "noWrap",
+                    "type": "boolean",
+                    "description": "Specified whether the badge text should be able to wrap or not"
+                },
+                "children": {
+                    "name": "children",
+                    "description": "The label text on the badge is passed as a child element.",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    }
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Specifies the system theme."
+                }
+            },
+            "relativePath": "lib/components/Badge/index.js"
+        },
+        "orcs-design-system/Box": {
+            "id": "orcs-design-system/Box",
+            "name": "Box",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Box",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "children": {
+                    "name": "children",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "description": "Children of `Box` are taken as node elements"
+                },
+                "display": {
+                    "name": "display",
+                    "type": "string",
+                    "enum": [
+                        "inline",
+                        "block",
+                        "contents",
+                        "inline-block",
+                        "none",
+                        "initial",
+                        "inherit"
+                    ],
+                    "description": "Sets `Box` display mode. Default is `block`."
+                },
+                "overflow": {
+                    "name": "overflow",
+                    "type": "string",
+                    "enum": [
+                        "visible",
+                        "hidden",
+                        "scroll",
+                        "auto"
+                    ],
+                    "description": "Sets behaviour of elements in `Box` that are larger than their container. Default is `visible`."
+                },
+                "p": {
+                    "name": "p",
+                    "description": "Sets the inner padding on all four sides. Takes values from the `space` array in `systemtheme.js`.",
+                    "type": "string"
+                },
+                "m": {
+                    "name": "m",
+                    "type": "number",
+                    "description": "Sets the outer margin on all four sides. Takes values from the `space` array in `systemtheme.js`."
+                },
+                "bg": {
+                    "name": "bg",
+                    "type": "string",
+                    "defaultValue": "transparent",
+                    "description": "Sets the background colour of the box."
+                },
+                "width": {
+                    "name": "width",
+                    "description": "Sets the width of the box.",
+                    "type": "string"
+                },
+                "height": {
+                    "name": "height",
+                    "description": "Sets the height of the box. Default is `auto`.",
+                    "type": "string"
+                },
+                "dataTestId": {
+                    "name": "dataTestId",
+                    "type": "string",
+                    "description": "Specifies the `data-testid` attribute for testing."
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Specifies the colour theme"
+                },
+                "borderRadius": {
+                    "name": "borderRadius",
+                    "type": "number"
+                },
+                "boxBorder": {
+                    "name": "boxBorder",
+                    "type": "string"
+                },
+                "shadow": {
+                    "name": "shadow",
+                    "type": "string"
+                }
+            },
+            "relativePath": "lib/components/Box/index.js"
+        },
+        "orcs-design-system/Button": {
+            "id": "orcs-design-system/Button",
+            "name": "Button",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Button",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "large": {
+                    "name": "large",
+                    "type": "boolean",
+                    "description": "Large button"
+                },
+                "small": {
+                    "name": "small",
+                    "type": "boolean",
+                    "description": "Small button"
+                },
+                "variant": {
+                    "name": "variant",
+                    "type": "string",
+                    "enum": [
+                        "success",
+                        "successAlternate",
+                        "danger",
+                        "dangerAlternate",
+                        "ghost",
+                        "disabled",
+                        "default"
+                    ],
+                    "defaultValue": "default",
+                    "description": "Specifies alternate button colours/styles."
+                },
+                "fullWidth": {
+                    "name": "fullWidth",
+                    "type": "boolean",
+                    "description": "Full width button that takes up all available space of parent"
+                },
+                "isLoading": {
+                    "name": "isLoading",
+                    "type": "boolean",
+                    "description": "Adds a spinner animation to indicate loading or processing"
+                },
+                "iconLeft": {
+                    "name": "iconLeft",
+                    "type": "boolean",
+                    "description": "Styles button to fit an icon on the left of text. Uses Icon component."
+                },
+                "iconRight": {
+                    "name": "iconRight",
+                    "type": "boolean",
+                    "description": "Styles button to fit an icon on the right of text. Uses Icon component."
+                },
+                "leftIcon": {
+                    "name": "leftIcon",
+                    "items": {
+                        "type": "unknown"
+                    },
+                    "type": "array",
+                    "description": "New functionality to specify an `Icon` on the left side without having to include it as a child."
+                },
+                "rightIcon": {
+                    "name": "rightIcon",
+                    "items": {
+                        "type": "unknown"
+                    },
+                    "type": "array",
+                    "description": "New functionality to specify an `Icon` on the right side without having to include it as a child."
+                },
+                "iconOnly": {
+                    "name": "iconOnly",
+                    "type": "boolean",
+                    "description": "Styles button to suit having only an icon. Uses Icon component."
+                },
+                "disabled": {
+                    "name": "disabled",
+                    "type": "boolean",
+                    "description": "Specifies whether the button is disabled."
+                },
+                "children": {
+                    "name": "children",
+                    "description": "The text label on the button is passed as a child. Keep this text short and descriptive. Use an action word or confirmation if possible.",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    }
+                },
+                "ButtonStyles": {
+                    "name": "ButtonStyles",
+                    "type": "object",
+                    "description": "Adds additional styling to the rendered `<button>` using `space`, `layout`, `color` and `border` prop categories"
+                },
+                "dataTestId": {
+                    "name": "dataTestId",
+                    "type": "string",
+                    "description": "Specifies the `data-testid` attribute for testing."
+                },
+                "ariaLabel": {
+                    "name": "ariaLabel",
+                    "type": "unknown",
+                    "description": "Specifies aria-label for iconOnly buttons. This is only required if the iconOnly button is used, as it doesn't have supporting text for accessibility."
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Specifies the color theme object."
+                },
+                "onClick": {
+                    "name": "onClick",
+                    "type": "Event",
+                    "description": "Function to run when the `Button` is clicked"
+                }
+            },
+            "relativePath": "lib/components/Button/index.js"
+        },
+        "orcs-design-system/ButtonLink": {
+            "id": "orcs-design-system/ButtonLink",
+            "name": "ButtonLink",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "ButtonLink",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "large": {
+                    "name": "large",
+                    "type": "boolean",
+                    "description": "Large button"
+                },
+                "small": {
+                    "name": "small",
+                    "type": "boolean",
+                    "description": "Small button"
+                },
+                "variant": {
+                    "name": "variant",
+                    "type": "string",
+                    "enum": [
+                        "success",
+                        "successAlternate",
+                        "danger",
+                        "dangerAlternate",
+                        "ghost",
+                        "disabled",
+                        "default"
+                    ],
+                    "defaultValue": "default",
+                    "description": "Specifies alternate button colours/styles."
+                },
+                "fullWidth": {
+                    "name": "fullWidth",
+                    "type": "boolean",
+                    "description": "Full width button that takes up all available space of parent"
+                },
+                "isLoading": {
+                    "name": "isLoading",
+                    "type": "boolean",
+                    "description": "Adds a spinner animation to indicate loading or processing"
+                },
+                "iconLeft": {
+                    "name": "iconLeft",
+                    "type": "boolean",
+                    "description": "Styles button to fit an icon on the left of text. Uses Icon component."
+                },
+                "iconRight": {
+                    "name": "iconRight",
+                    "type": "boolean",
+                    "description": "Styles button to fit an icon on the right of text. Uses Icon component."
+                },
+                "leftIcon": {
+                    "name": "leftIcon",
+                    "items": {
+                        "type": "unknown"
+                    },
+                    "type": "array",
+                    "description": "New functionality to specify an `Icon` on the left side without having to include it as a child."
+                },
+                "rightIcon": {
+                    "name": "rightIcon",
+                    "items": {
+                        "type": "unknown"
+                    },
+                    "type": "array",
+                    "description": "New functionality to specify an `Icon` on the right side without having to include it as a child."
+                },
+                "iconOnly": {
+                    "name": "iconOnly",
+                    "type": "boolean",
+                    "description": "Styles button to suit having only an icon. Uses Icon component."
+                },
+                "disabled": {
+                    "name": "disabled",
+                    "type": "boolean",
+                    "description": "Specifies whether the button is disabled."
+                },
+                "children": {
+                    "name": "children",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "description": "The text label on the button is passed as a child. Keep this text short and descriptive. Use an action word or confirmation if possible."
+                },
+                "ButtonStyles": {
+                    "name": "ButtonStyles",
+                    "type": "object",
+                    "description": "Adds additional styling to the rendered `<button>` using `space`, `layout`, `color` and `border` prop categories"
+                },
+                "dataTestId": {
+                    "name": "dataTestId",
+                    "type": "string",
+                    "description": "Specifies the `data-testid` attribute for testing."
+                },
+                "ariaLabel": {
+                    "name": "ariaLabel",
+                    "type": "unknown",
+                    "description": "Specifies aria-label for iconOnly buttons. This is only required if the iconOnly button is used, as it doesn't have supporting text for accessibility."
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Specifies the color theme object."
+                },
+                "target": {
+                    "name": "target",
+                    "type": "string"
+                },
+                "href": {
+                    "name": "href",
+                    "type": "string",
+                    "description": "Link to navigate user to"
+                }
+            },
+            "relativePath": "lib/components/Button/index.js"
+        },
+        "orcs-design-system/VARIANT_COLORS": {
+            "id": "orcs-design-system/VARIANT_COLORS",
+            "name": "VARIANT_COLORS",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "VARIANT_COLORS",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {}
+        },
+        "orcs-design-system/ButtonGroupContainer": {
+            "id": "orcs-design-system/ButtonGroupContainer",
+            "name": "ButtonGroupContainer",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "ButtonGroupContainer",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "children": {
+                    "name": "children",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "ui": {
+                        "suggested": [
+                            "orcs-design-system/ButtonGroupItem"
+                        ]
+                    }
+                },
+                "controlLabel": {
+                    "name": "controlLabel",
+                    "type": "string"
+                },
+                "labelDark": {
+                    "name": "labelDark",
+                    "type": "boolean"
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object"
+                }
+            },
+            "relativePath": "lib/components/ButtonGroup/index.js",
+            "description": "To do: look at renaming this to ButtonGroup, add a container component that can accept space and layout props"
+        },
+        "orcs-design-system/ButtonGroupItem": {
+            "id": "orcs-design-system/ButtonGroupItem",
+            "name": "ButtonGroupItem",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "ButtonGroupItem",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "label": {
+                    "name": "label",
+                    "type": "string"
+                },
+                "name": {
+                    "name": "name",
+                    "type": "string"
+                },
+                "value": {
+                    "name": "value",
+                    "type": "string"
+                },
+                "checked": {
+                    "name": "checked",
+                    "type": "boolean"
+                },
+                "onChange": {
+                    "name": "onChange",
+                    "type": "Event"
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object"
+                }
+            },
+            "relativePath": "lib/components/ButtonGroup/index.js"
+        },
+        "orcs-design-system/Card": {
+            "id": "orcs-design-system/Card",
+            "name": "Card",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Card",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "alternate": {
+                    "name": "alternate",
+                    "type": "boolean",
+                    "description": "Changes card styles to suit a card that holds alternate data"
+                },
+                "fluid": {
+                    "name": "fluid",
+                    "type": "boolean",
+                    "description": "Forces card to take 100% width and height of parent element"
+                },
+                "icon": {
+                    "name": "icon",
+                    "items": {
+                        "type": "unknown"
+                    },
+                    "type": "array",
+                    "description": "Applies an icon to header of specified name"
+                },
+                "title": {
+                    "name": "title",
+                    "description": "Card title",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    }
+                },
+                "subtitle": {
+                    "name": "subtitle",
+                    "description": "Card subtitle",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    }
+                },
+                "center": {
+                    "name": "center",
+                    "type": "boolean",
+                    "description": "Horizontally centers content inside card"
+                },
+                "width": {
+                    "name": "width",
+                    "type": "string",
+                    "description": "Can specify a width in pixels or percentages (make sure you specify units). Can also use calc (see code for example)"
+                },
+                "colour": {
+                    "name": "colour",
+                    "type": "string",
+                    "description": "Adds a coloured top border. Uses the system colours (eg primary, warning)"
+                },
+                "changeIcon": {
+                    "name": "changeIcon",
+                    "type": "string",
+                    "enum": [
+                        "arrowUp",
+                        "arrowDown"
+                    ],
+                    "description": "Specify the icon to be used for the changeValue element."
+                },
+                "changeValue": {
+                    "name": "changeValue",
+                    "type": "string",
+                    "description": "Adds a gray inline element to the card heading to describe change in value"
+                },
+                "children": {
+                    "name": "children",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "description": "Card contents."
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Specifies the system design theme."
+                }
+            },
+            "relativePath": "lib/components/Card/index.js",
+            "description": "Example of basic, alternative and complex cards. Child elements can be anything, plain text, graphs, or other components. Subtitles, icons, change values, coloured borders are all optional, not mandatory. If your UI is split into different areas or sections you can also choose to colour code your cards to match, by applying a colour prop which adds the corresponding colour as a top border."
+        },
+        "orcs-design-system/Checkbox": {
+            "id": "orcs-design-system/Checkbox",
+            "name": "Checkbox",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Checkbox",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "colour": {
+                    "name": "colour",
+                    "type": "string",
+                    "enum": [
+                        "success",
+                        "warning",
+                        "danger",
+                        "primary",
+                        "white"
+                    ],
+                    "description": "Sets the colour of the checkbox. Colours used are the design system standard colours."
+                },
+                "disabled": {
+                    "name": "disabled",
+                    "type": "boolean",
+                    "description": "Applies disabled attribute and styling"
+                },
+                "checked": {
+                    "name": "checked",
+                    "type": "boolean",
+                    "description": "Applies checked attribute and styling"
+                },
+                "name": {
+                    "name": "name",
+                    "type": "string",
+                    "description": "Input name attribute (should be unique id)"
+                },
+                "onChange": {
+                    "name": "onChange",
+                    "type": "Event",
+                    "description": "On checkbox input change handler"
+                },
+                "onClick": {
+                    "name": "onClick",
+                    "type": "string",
+                    "description": "On checkbox click handler"
+                },
+                "label": {
+                    "name": "label",
+                    "description": "Text label to display beside the checkbox",
+                    "type": "string"
+                },
+                "ariaLabel": {
+                    "name": "ariaLabel",
+                    "type": "unknown"
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Specifies the system design theme."
+                }
+            },
+            "relativePath": "lib/components/Checkbox/index.js",
+            "description": "The default checkbox (or inverted if on dark background) should be used for the majority of the UI; however, the coloured ones can be used in situations where the colour corresponds with some indication of status, e.g. in a task list, green could denote task completed, red could denote task overdue."
+        },
+        "orcs-design-system/DatePicker": {
+            "id": "orcs-design-system/DatePicker",
+            "name": "DatePicker",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "DatePicker",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "single": {
+                    "name": "single",
+                    "description": "Specifies a single date picker",
+                    "type": "boolean"
+                },
+                "range": {
+                    "name": "range",
+                    "type": "boolean",
+                    "description": "Specifies a range date picker"
+                },
+                "date": {
+                    "name": "date",
+                    "type": "unknown",
+                    "description": "For Single DatePicker Date"
+                },
+                "onDateChange": {
+                    "name": "onDateChange",
+                    "type": "Event",
+                    "description": "For Single DatePicker date change"
+                },
+                "placeholder": {
+                    "name": "placeholder",
+                    "description": "For Single DatePicker input placeholder",
+                    "type": "string"
+                },
+                "startDate": {
+                    "name": "startDate",
+                    "type": "unknown",
+                    "description": "For Range DatePicker Start Date"
+                },
+                "endDate": {
+                    "name": "endDate",
+                    "type": "unknown",
+                    "description": "For Range DatePicker End Date"
+                },
+                "onDatesChange": {
+                    "name": "onDatesChange",
+                    "type": "Event",
+                    "description": "For Range DatePicker dates change"
+                },
+                "onFocusChange": {
+                    "name": "onFocusChange",
+                    "type": "Event",
+                    "description": "For focus state change"
+                },
+                "focusedInput": {
+                    "name": "focusedInput",
+                    "type": "boolean",
+                    "description": "Input focused state"
+                },
+                "displayFormat": {
+                    "name": "displayFormat",
+                    "type": "string",
+                    "defaultValue": "DD/MM/YYYY",
+                    "description": "Date format"
+                },
+                "width": {
+                    "name": "width",
+                    "type": "string",
+                    "description": "For specifying width of input (specify units)"
+                },
+                "height": {
+                    "name": "height",
+                    "type": "string",
+                    "description": "For specifying height of input (specify units)"
+                },
+                "invalid": {
+                    "name": "invalid",
+                    "type": "boolean",
+                    "defaultValue": false,
+                    "description": "Applies invalid input styles"
+                },
+                "autoFocus": {
+                    "name": "autoFocus",
+                    "type": "boolean",
+                    "defaultValue": false,
+                    "description": "Should not be visible"
+                },
+                "autoFocusEndDate": {
+                    "name": "autoFocusEndDate",
+                    "type": "boolean",
+                    "defaultValue": false
+                },
+                "stateDateWrapper": {
+                    "name": "stateDateWrapper",
+                    "type": "Event"
+                },
+                "initialStartDate": {
+                    "name": "initialStartDate",
+                    "type": "unknown"
+                },
+                "initialEndDate": {
+                    "name": "initialEndDate",
+                    "type": "unknown"
+                },
+                "startDateId": {
+                    "name": "startDateId",
+                    "type": "unknown"
+                },
+                "startDatePlaceholderText": {
+                    "name": "startDatePlaceholderText",
+                    "type": "unknown",
+                    "defaultValue": "Start Date"
+                },
+                "endDateId": {
+                    "name": "endDateId",
+                    "type": "unknown"
+                },
+                "endDatePlaceholderText": {
+                    "name": "endDatePlaceholderText",
+                    "type": "unknown",
+                    "defaultValue": "End Date"
+                },
+                "disabled": {
+                    "name": "disabled",
+                    "type": "unknown",
+                    "defaultValue": "false"
+                },
+                "required": {
+                    "name": "required",
+                    "type": "unknown",
+                    "defaultValue": "false"
+                },
+                "screenReaderInputMessage": {
+                    "name": "screenReaderInputMessage",
+                    "type": "unknown",
+                    "defaultValue": ""
+                },
+                "showClearDates": {
+                    "name": "showClearDates",
+                    "type": "unknown",
+                    "defaultValue": "false"
+                },
+                "showDefaultInputIcon": {
+                    "name": "showDefaultInputIcon",
+                    "type": "unknown",
+                    "defaultValue": "false"
+                },
+                "customInputIcon": {
+                    "name": "customInputIcon",
+                    "type": "unknown"
+                },
+                "customArrowIcon": {
+                    "name": "customArrowIcon",
+                    "type": "unknown"
+                },
+                "customCloseIcon": {
+                    "name": "customCloseIcon",
+                    "type": "unknown"
+                },
+                "block": {
+                    "name": "block",
+                    "type": "unknown",
+                    "defaultValue": "false"
+                },
+                "small": {
+                    "name": "small",
+                    "type": "unknown",
+                    "defaultValue": "false"
+                },
+                "regular": {
+                    "name": "regular",
+                    "type": "unknown",
+                    "defaultValue": "false"
+                },
+                "renderMonthText": {
+                    "name": "renderMonthText",
+                    "type": "unknown"
+                },
+                "orientation": {
+                    "name": "orientation",
+                    "type": "unknown"
+                },
+                "anchorDirection": {
+                    "name": "anchorDirection",
+                    "type": "unknown"
+                },
+                "horizontalMargin": {
+                    "name": "horizontalMargin",
+                    "type": "number",
+                    "defaultValue": 0
+                },
+                "withPortal": {
+                    "name": "withPortal",
+                    "type": "unknown",
+                    "defaultValue": "false"
+                },
+                "withFullScreenPortal": {
+                    "name": "withFullScreenPortal",
+                    "type": "unknown",
+                    "defaultValue": "false"
+                },
+                "initialVisibleMonth": {
+                    "name": "initialVisibleMonth",
+                    "type": "unknown"
+                },
+                "numberOfMonths": {
+                    "name": "numberOfMonths",
+                    "defaultValue": 2,
+                    "type": "number"
+                },
+                "keepOpenOnDateSelect": {
+                    "name": "keepOpenOnDateSelect",
+                    "type": "unknown",
+                    "defaultValue": "false"
+                },
+                "reopenPickerOnClearDates": {
+                    "name": "reopenPickerOnClearDates",
+                    "type": "unknown",
+                    "defaultValue": "false"
+                },
+                "isRTL": {
+                    "name": "isRTL",
+                    "type": "unknown",
+                    "defaultValue": "false"
+                },
+                "navPosition": {
+                    "name": "navPosition",
+                    "type": "unknown"
+                },
+                "navPrev": {
+                    "name": "navPrev",
+                    "type": "unknown"
+                },
+                "navNext": {
+                    "name": "navNext",
+                    "type": "unknown"
+                },
+                "onPrevMonthClick": {
+                    "name": "onPrevMonthClick",
+                    "type": "unknown"
+                },
+                "onNextMonthClick": {
+                    "name": "onNextMonthClick",
+                    "type": "unknown"
+                },
+                "onClose": {
+                    "name": "onClose",
+                    "type": "unknown"
+                },
+                "renderCalendarDay": {
+                    "name": "renderCalendarDay",
+                    "type": "unknown"
+                },
+                "renderDayContents": {
+                    "name": "renderDayContents",
+                    "type": "unknown"
+                },
+                "minimumNights": {
+                    "name": "minimumNights",
+                    "type": "number",
+                    "defaultValue": 1
+                },
+                "enableOutsideDays": {
+                    "name": "enableOutsideDays",
+                    "type": "unknown",
+                    "defaultValue": "false"
+                },
+                "isDayBlocked": {
+                    "name": "isDayBlocked",
+                    "type": "unknown"
+                },
+                "isOutsideRange": {
+                    "name": "isOutsideRange",
+                    "type": "unknown"
+                },
+                "isDayHighlighted": {
+                    "name": "isDayHighlighted",
+                    "type": "unknown"
+                },
+                "monthFormat": {
+                    "name": "monthFormat",
+                    "type": "unknown",
+                    "defaultValue": "MMMM YYYY"
+                },
+                "phrases": {
+                    "name": "phrases",
+                    "type": "unknown"
+                }
+            },
+            "relativePath": "lib/components/DatePicker/index.js",
+            "description": "Datepicker uses airbnb's react datepicker under the hood. This is just a wrapper to override styles, the only props you need to specify is either single or range. For all functionality and additional required props refer to documentation here: <https://github.com/airbnb/react-dates>"
+        },
+        "orcs-design-system/Divider": {
+            "id": "orcs-design-system/Divider",
+            "name": "Divider",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Divider",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "light": {
+                    "name": "light",
+                    "type": "boolean",
+                    "description": "Divider will use a lighter grey colour"
+                },
+                "thick": {
+                    "name": "thick",
+                    "type": "boolean",
+                    "description": "Divider will be 3px instead of 1px"
+                },
+                "dash": {
+                    "name": "dash",
+                    "type": "boolean",
+                    "description": "Divider will have a dashed line instead of solid line"
+                },
+                "inverted": {
+                    "name": "inverted",
+                    "type": "boolean",
+                    "description": "Divider will be a darker colour more suited for dark backgrounds"
+                },
+                "spanGrid": {
+                    "name": "spanGrid",
+                    "type": "boolean",
+                    "description": "Divider will span all columns when in a grid so it can be used as a row divider"
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Specifies the system design theme."
+                }
+            },
+            "relativePath": "lib/components/Divider/index.js"
+        },
+        "orcs-design-system/Expandable": {
+            "id": "orcs-design-system/Expandable",
+            "name": "Expandable",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Expandable",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "isOpen": {
+                    "name": "isOpen",
+                    "type": "boolean",
+                    "description": "Sets expandable to open state by default"
+                },
+                "small": {
+                    "name": "small",
+                    "type": "boolean",
+                    "description": "Sets the styling to be a smaller version of the expandable"
+                },
+                "title": {
+                    "name": "title",
+                    "description": "Expandable title",
+                    "type": "string"
+                },
+                "subtitle": {
+                    "name": "subtitle",
+                    "type": "string",
+                    "description": "Expandable subtitle"
+                },
+                "badge": {
+                    "name": "badge",
+                    "type": "string",
+                    "description": "Adds a badge with text as string"
+                },
+                "badgeColour": {
+                    "name": "badgeColour",
+                    "type": "string",
+                    "enum": [
+                        "success",
+                        "warning",
+                        "danger",
+                        "primaryLight",
+                        "primaryDark",
+                        "primaryDarkest"
+                    ],
+                    "description": "Specifies badge colour"
+                },
+                "children": {
+                    "name": "children",
+                    "description": "Contents of expandable are rendered as a child element.",
+                    "type": "Node"
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Specifies the system design theme."
+                }
+            },
+            "relativePath": "lib/components/Expandable/index.js",
+            "description": "This component is to be used when there is a lot of content to present on a page that can instead be split into expandable sections to aid in user comprehension and explorability, rather than overwhelming the user with a whole page of content. A single expandable can also be used, for example if you had some content, but wanted to also have some additional less important subsidiary content hidden away unless the user wants to explore further, e.g. A few paragraphs on a company description, followed by an expandable with the title 'Read more about the history of this company'. This component supports any child elements, not just text, can be other components or any content you like."
+        },
+        "orcs-design-system/Flex": {
+            "id": "orcs-design-system/Flex",
+            "name": "Flex",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Flex",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "children": {
+                    "name": "children",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "description": "Children of `Flex` are taken as node elements"
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object"
+                },
+                "display": {
+                    "name": "display",
+                    "type": "unknown",
+                    "defaultValue": "flex"
+                },
+                "flexDirection": {
+                    "name": "flexDirection",
+                    "type": "unknown",
+                    "defaultValue": "row"
+                },
+                "flexWrap": {
+                    "name": "flexWrap",
+                    "type": "unknown",
+                    "defaultValue": "nowrap"
+                },
+                "justifyContent": {
+                    "name": "justifyContent",
+                    "type": "unknown",
+                    "defaultValue": "flex-start"
+                },
+                "alignItems": {
+                    "name": "alignItems",
+                    "type": "unknown",
+                    "defaultValue": "stretch"
+                }
+            },
+            "relativePath": "lib/components/Flex/index.js"
+        },
+        "orcs-design-system/FlexItem": {
+            "id": "orcs-design-system/FlexItem",
+            "name": "FlexItem",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "FlexItem",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {}
+        },
+        "orcs-design-system/Grid": {
+            "id": "orcs-design-system/Grid",
+            "name": "Grid",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Grid",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "children": {
+                    "name": "children",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "description": "Children of `Grid` are taken as node elements"
+                },
+                "gridAutoFlow": {
+                    "name": "gridAutoFlow",
+                    "type": "string",
+                    "enum": [
+                        "row",
+                        "column",
+                        "row dense",
+                        "column dense",
+                        "inherit",
+                        "initial",
+                        "unset"
+                    ],
+                    "defaultValue": "row",
+                    "description": "Auto flow direction and rules"
+                },
+                "gridGap": {
+                    "name": "gridGap",
+                    "type": "string",
+                    "defaultValue": "0",
+                    "description": "Defines the spacings between columns and rows. Takes the nth value, or a specific alias, from the design system spacing scale (specified in theme)."
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Specifies the system design theme."
+                }
+            },
+            "relativePath": "lib/components/Grid/index.js"
+        },
+        "orcs-design-system/GridItem": {
+            "id": "orcs-design-system/GridItem",
+            "name": "GridItem",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "GridItem",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {}
+        },
+        "orcs-design-system/Header": {
+            "id": "orcs-design-system/Header",
+            "name": "Header",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Header",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "logo": {
+                    "name": "logo",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "description": "Logo for app. Preferably an svg logo"
+                },
+                "appName": {
+                    "name": "appName",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "description": "Text for app name. Can be a plain text string or an svg logo"
+                },
+                "currentWorkspace": {
+                    "name": "currentWorkspace",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "description": "Current active workspace name. Can be a plain text string or a component"
+                },
+                "userName": {
+                    "name": "userName",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "description": "Text for username."
+                },
+                "avatarSource": {
+                    "name": "avatarSource",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "description": "Source path for avatar image."
+                },
+                "clientInfo": {
+                    "name": "clientInfo",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "description": "String of text for additional client info."
+                },
+                "logoutFunction": {
+                    "name": "logoutFunction",
+                    "type": "Event",
+                    "description": "Function for what should happen when logout link is clicked"
+                },
+                "rightAlignedLink": {
+                    "name": "rightAlignedLink",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "description": "Can specify a link that will be rendered on the right side of the header"
+                },
+                "searchComponent": {
+                    "name": "searchComponent",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "description": "Can specify a component to be used for searching"
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Applies the chosen theme to the entire header."
+                },
+                "appSwitcher": {
+                    "name": "appSwitcher",
+                    "type": "boolean",
+                    "description": "Specifies whether the app switcher should exist or not"
+                },
+                "lightAppSwitcher": {
+                    "name": "lightAppSwitcher",
+                    "type": "boolean",
+                    "description": "Changes the app switcher to light theme"
+                },
+                "children": {
+                    "name": "children",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "description": "Navigation links are rendered as child components."
+                },
+                "sideMenuContent": {
+                    "name": "sideMenuContent",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "description": "sideMenuContent are links or other content that can be specified and will appear only in the slide out side menu"
+                },
+                "internalAppSwitcherContent": {
+                    "name": "internalAppSwitcherContent",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "description": "InternalAppSwitcherContent are links or other content that can be specified and will appear only in the slide out side menu"
+                },
+                "externalAppSwitcherContent": {
+                    "name": "externalAppSwitcherContent",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "description": "ExternalAppSwitcherContent are links or other content that can be specified and will appear only in the slide out side menu"
+                },
+                "rightAlignedContent": {
+                    "name": "rightAlignedContent",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "description": "RightAlignedContent are links or other content that can be specified and will be positioned on the right side of the header"
+                },
+                "variant": {
+                    "name": "variant",
+                    "type": "string",
+                    "enum": [
+                        "search",
+                        "searchAndLinks"
+                    ],
+                    "description": "Specifies alternate versions of the header"
+                },
+                "dataTestId": {
+                    "name": "dataTestId",
+                    "type": "string",
+                    "description": "Allows for use of the `data-testid` attribute for testing."
+                },
+                "themeSwitcherContent": {
+                    "name": "themeSwitcherContent",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "description": "Theme related props *"
+                },
+                "workspaceSwitcherContent": {
+                    "name": "workspaceSwitcherContent",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    }
+                },
+                "navToggleId": {
+                    "name": "navToggleId",
+                    "type": "string",
+                    "defaultValue": "mobileMenuToggle"
+                }
+            },
+            "relativePath": "lib/components/Header/index.js",
+            "description": "Header component for global app navigation. At screen sizes less than 1100px the links are instead moved into a mobile menu toggled by a burger icon button to play nice with smaller devices."
+        },
+        "orcs-design-system/HeaderSimple": {
+            "id": "orcs-design-system/HeaderSimple",
+            "name": "HeaderSimple",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "HeaderSimple",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "logo": {
+                    "name": "logo",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "description": "Logo for app. Preferably an svg logo"
+                },
+                "appName": {
+                    "name": "appName",
+                    "description": "Text for app name. Can be a plain text string or an svg logo",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    }
+                },
+                "currentWorkspace": {
+                    "name": "currentWorkspace",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "description": "Current active workspace name. Can be a plain text string or a component"
+                },
+                "userName": {
+                    "name": "userName",
+                    "description": "Text for username.",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    }
+                },
+                "avatarSource": {
+                    "name": "avatarSource",
+                    "description": "Source path for avatar image.",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    }
+                },
+                "avatarAlt": {
+                    "name": "avatarAlt",
+                    "description": "Alt text for avatar image.",
+                    "type": "string"
+                },
+                "searchComponent": {
+                    "name": "searchComponent",
+                    "description": "Can specify a component to be used for searching",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "ui": {
+                        "suggested": [
+                            "orcs-design-system/TextInput"
+                        ]
+                    }
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Applies the chosen theme to the entire header."
+                },
+                "variant": {
+                    "name": "variant",
+                    "enum": [
+                        "search"
+                    ],
+                    "description": "Specifies alternate versions of the header",
+                    "type": "string"
+                },
+                "dataTestId": {
+                    "name": "dataTestId",
+                    "type": "string",
+                    "description": "Allows for use of the `data-testid` attribute for testing."
+                },
+                "currentWorskapce": {
+                    "name": "currentWorskapce",
+                    "type": "string"
+                }
+            },
+            "relativePath": "lib/components/HeaderSimple/index.js",
+            "description": "Header component for top of app."
+        },
+        "orcs-design-system/Icon": {
+            "id": "orcs-design-system/Icon",
+            "name": "Icon",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Icon",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "color": {
+                    "name": "color",
+                    "description": "Colours the icon using colours from the system colour palette",
+                    "type": "string"
+                },
+                "border": {
+                    "name": "border",
+                    "type": "boolean",
+                    "description": "Set a border around the icon"
+                },
+                "mask": {
+                    "name": "mask",
+                    "type": "string",
+                    "description": "Set an icon as a clipping mask around another icon"
+                },
+                "fixedWidth": {
+                    "name": "fixedWidth",
+                    "type": "boolean",
+                    "description": "Set icon to display as fixed width"
+                },
+                "inverse": {
+                    "name": "inverse",
+                    "type": "boolean",
+                    "description": "Invert the icon for use on dark backgrounds"
+                },
+                "flip": {
+                    "name": "flip",
+                    "type": "string",
+                    "enum": [
+                        "horizontal",
+                        "vertical",
+                        "both"
+                    ],
+                    "description": "Flip horizontally, vertically, or both"
+                },
+                "icon": {
+                    "name": "icon",
+                    "description": "Set the Font Awesome style/weight, and icon",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "listitem": {
+                    "name": "listitem",
+                    "type": "boolean",
+                    "description": "Set icon to render in the style of a list bullet"
+                },
+                "pull": {
+                    "name": "pull",
+                    "type": "string",
+                    "enum": [
+                        "left",
+                        "right"
+                    ],
+                    "description": "Pull an icon to float to the left or right of the element's other contents"
+                },
+                "pulse": {
+                    "name": "pulse",
+                    "type": "boolean",
+                    "description": "Set a slow pulse animation on the icon"
+                },
+                "rotation": {
+                    "name": "rotation",
+                    "type": "string",
+                    "enum": [
+                        "90",
+                        "180",
+                        "270"
+                    ],
+                    "description": "Rotate the icon by the specified degree"
+                },
+                "size": {
+                    "name": "size",
+                    "description": "Set the icon size based on FontAwesome usage for size",
+                    "type": "string"
+                },
+                "spin": {
+                    "name": "spin",
+                    "type": "boolean",
+                    "description": "Set an 8-frame spinning animation on the icon"
+                },
+                "symbol": {
+                    "name": "symbol",
+                    "type": "unknown",
+                    "description": "Set an icon as a symbol to use with the SVG Sprites technique"
+                },
+                "transform": {
+                    "name": "transform",
+                    "description": "Power transforms to scale and position the icon",
+                    "type": "string"
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Specifies the system design theme."
+                },
+                "title": {
+                    "name": "title",
+                    "description": "Set an accessabilty title for screen readers.",
+                    "type": "string"
+                }
+            },
+            "relativePath": "lib/components/Icon/index.js"
+        },
+        "orcs-design-system/Loading": {
+            "id": "orcs-design-system/Loading",
+            "name": "Loading",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Loading",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "large": {
+                    "name": "large",
+                    "type": "boolean",
+                    "description": "Large loading spinner"
+                },
+                "centered": {
+                    "name": "centered",
+                    "type": "boolean",
+                    "description": "Centered loading spinner"
+                },
+                "inverted": {
+                    "name": "inverted",
+                    "type": "boolean",
+                    "description": "Changes colours to work on dark background"
+                },
+                "primary": {
+                    "name": "primary",
+                    "type": "boolean",
+                    "description": "Changes colours to primary branding colour"
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Specifies the system design theme"
+                },
+                "ariaLabel": {
+                    "name": "ariaLabel",
+                    "type": "string",
+                    "defaultValue": "Loading",
+                    "description": "Specifies the aria-label for loading image"
+                }
+            },
+            "relativePath": "lib/components/Loading/index.js",
+            "description": "As a general guide, use the large prop for when whole pages or sections are loading, and the default (small) loading for smaller elements."
+        },
+        "orcs-design-system/Modal": {
+            "id": "orcs-design-system/Modal",
+            "name": "Modal",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Modal",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {}
+        },
+        "orcs-design-system/Notification": {
+            "id": "orcs-design-system/Notification",
+            "name": "Notification",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Notification",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "children": {
+                    "name": "children",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    }
+                },
+                "icon": {
+                    "name": "icon",
+                    "description": "Applies an icon to notification with specified name.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "iconProps": {
+                    "name": "iconProps",
+                    "type": "object",
+                    "description": "Specifies the props of the icon -- see `Icon` component for accepted props"
+                },
+                "colour": {
+                    "name": "colour",
+                    "type": "string",
+                    "enum": [
+                        "success",
+                        "warning",
+                        "danger",
+                        "primary"
+                    ],
+                    "description": "Specifies notification colour"
+                },
+                "loading": {
+                    "name": "loading",
+                    "type": "boolean",
+                    "description": "Specifies if the `Icon` should show the loading style."
+                },
+                "floating": {
+                    "name": "floating",
+                    "type": "boolean",
+                    "description": "Positions notification floating over content, instead of inline. Must be combined with top, right, bottom, left or centered props to correctly position in your desired location"
+                },
+                "top": {
+                    "name": "top",
+                    "type": "string",
+                    "description": "Specifies the position of a floating notification from top of browser window (units must be specified)"
+                },
+                "right": {
+                    "name": "right",
+                    "type": "string",
+                    "description": "Specifies the position of a floating notification from right of browser window (units must be specified)"
+                },
+                "bottom": {
+                    "name": "bottom",
+                    "type": "string",
+                    "description": "Specifies the position of a floating notification from bottom of browser window (units must be specified)"
+                },
+                "left": {
+                    "name": "left",
+                    "type": "string",
+                    "description": "Specifies the position of a floating notification from left of browser window (units must be specified)"
+                },
+                "centered": {
+                    "name": "centered",
+                    "type": "boolean",
+                    "description": "Horizontally centers a floating notification. If you use this, you don't need to specify left or right props, only top or bottom depending on if you want the notification to sit at the top or bottom of the screen"
+                },
+                "onDismiss": {
+                    "name": "onDismiss",
+                    "type": "Event",
+                    "description": "A callback function for the dismiss operation."
+                },
+                "closable": {
+                    "name": "closable",
+                    "type": "boolean",
+                    "defaultValue": true,
+                    "description": "Showing the close button, default to true."
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Specifies the system design theme."
+                }
+            },
+            "relativePath": "lib/components/Notification/index.js"
+        },
+        "orcs-design-system/Popover": {
+            "id": "orcs-design-system/Popover",
+            "name": "Popover",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Popover",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "children": {
+                    "name": "children",
+                    "type": "Node",
+                    "description": "The element that requires the popover helper text."
+                },
+                "direction": {
+                    "name": "direction",
+                    "type": "unknown",
+                    "defaultValue": "right",
+                    "description": "Specifies the direction of the popover. Defaults to right if not specified"
+                },
+                "text": {
+                    "name": "text",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "description": "The text contained in the popover element"
+                },
+                "textAlign": {
+                    "name": "textAlign",
+                    "type": "string",
+                    "enum": [
+                        "left",
+                        "right",
+                        "center"
+                    ],
+                    "description": "Specifies the alignment of the text inside the popover"
+                },
+                "width": {
+                    "name": "width",
+                    "type": "string",
+                    "description": "Specifies the width of the popover (you need to specify units, e.g. pixels, %). If you use % it will be a percentage of the width of the Popover container"
+                },
+                "inlineBlock": {
+                    "name": "inlineBlock",
+                    "type": "boolean",
+                    "description": "Sets display property of popover tooltip to inline-block"
+                },
+                "variant": {
+                    "name": "variant",
+                    "type": "string",
+                    "enum": [
+                        "tooltip"
+                    ],
+                    "description": "Specifies the variant of the popover."
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Specifies the system design theme."
+                },
+                "enableSelectAll": {
+                    "name": "enableSelectAll",
+                    "type": "boolean",
+                    "description": "Specifies whether enable select all behaviour"
+                },
+                "ariaLabel": {
+                    "name": "ariaLabel",
+                    "type": "string",
+                    "description": "Provide an aria-label if text is not a string"
+                },
+                "tabIndex": {
+                    "name": "tabIndex",
+                    "type": "number",
+                    "description": "Provide a tab index for accessibilty, defaults to 0"
+                }
+            },
+            "relativePath": "lib/components/Popover/index.js"
+        },
+        "orcs-design-system/ProgressBar": {
+            "id": "orcs-design-system/ProgressBar",
+            "name": "ProgressBar",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "ProgressBar",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "containerWidth": {
+                    "name": "containerWidth",
+                    "type": "number",
+                    "defaultValue": null,
+                    "description": "Sets the percentage width of the parent container"
+                },
+                "fillWidth": {
+                    "name": "fillWidth",
+                    "type": "number",
+                    "description": "Sets the percentage width of the fill"
+                },
+                "gradient": {
+                    "name": "gradient",
+                    "type": "boolean",
+                    "description": "Changes fill to have a gradient"
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Specifies the system design theme."
+                },
+                "ariaLabel": {
+                    "name": "ariaLabel",
+                    "type": "object",
+                    "defaultValue": "Progress",
+                    "description": "Specifies the aria-label for the progress bar"
+                }
+            },
+            "relativePath": "lib/components/ProgressBar/index.js",
+            "description": "Progress bar is not intended to be used for loading (that's what the Loading component is for). The intended use is for indicating progress through steps or progress towards a goal. A percentage width of the container (grey background) can be specified using the containerWidth prop, in most cases this should be 100. If not set the container is rendered without a CSS width property. A percentage width of the fill (coloured element) can be specified using the fillWidth prop. On page load the fill will animate from 0 to set value, and on change of the fillWidth prop value the fill will automatically animate to the new width value."
+        },
+        "orcs-design-system/RadioButton": {
+            "id": "orcs-design-system/RadioButton",
+            "name": "RadioButton",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "RadioButton",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "name": {
+                    "name": "name",
+                    "description": "Sets a name to define the radio button group",
+                    "type": "string"
+                },
+                "value": {
+                    "name": "value",
+                    "type": "string",
+                    "description": "Sets the value of the radio button"
+                },
+                "label": {
+                    "name": "label",
+                    "description": "Sets the label of the radio button",
+                    "type": "string"
+                },
+                "ariaLabel": {
+                    "name": "ariaLabel",
+                    "type": "unknown"
+                },
+                "variant": {
+                    "name": "variant",
+                    "type": "string",
+                    "enum": [
+                        "success",
+                        "warning",
+                        "danger",
+                        "primary",
+                        "white"
+                    ],
+                    "description": "Sets radio button colour. Default is greyDarker. Use white for inverted styling"
+                },
+                "disabled": {
+                    "name": "disabled",
+                    "type": "boolean",
+                    "description": "Applies disabled attribute and styling"
+                },
+                "checked": {
+                    "name": "checked",
+                    "type": "boolean",
+                    "description": "Applies checked attribute and styling"
+                },
+                "onChange": {
+                    "name": "onChange",
+                    "type": "Event",
+                    "description": "Function to call when checked"
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Specifies the system design theme"
+                }
+            },
+            "relativePath": "lib/components/RadioButton/index.js"
+        },
+        "orcs-design-system/Range": {
+            "id": "orcs-design-system/Range",
+            "name": "Range",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Range",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "required": [
+                "ariaLabel"
+            ],
+            "props": {
+                "min": {
+                    "name": "min",
+                    "description": "Sets the minimum value for the range",
+                    "type": "number"
+                },
+                "max": {
+                    "name": "max",
+                    "description": "Sets the maximum value for the range",
+                    "type": "number"
+                },
+                "defaultValue": {
+                    "name": "defaultValue",
+                    "description": "Sets the default value for the range",
+                    "type": "number"
+                },
+                "ariaLabel": {
+                    "name": "ariaLabel",
+                    "description": "Sets the aria-label for accessibility",
+                    "type": "string"
+                },
+                "inverted": {
+                    "name": "inverted",
+                    "type": "boolean",
+                    "description": "Changes appearance to suit dark backgrounds"
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Specifies the system design theme."
+                }
+            },
+            "relativePath": "lib/components/Range/index.js",
+            "description": "Range component is pretty self explanatory, used to select a number out of a range, make sure to set a min, max and default value."
+        },
+        "orcs-design-system/Select": {
+            "id": "orcs-design-system/Select",
+            "name": "Select",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Select",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "options": {
+                    "name": "options",
+                    "description": "Points to options object, see example code above",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "value": {
+                                "name": "value",
+                                "type": "string"
+                            },
+                            "label": {
+                                "name": "label",
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "label": {
+                    "name": "label",
+                    "description": "Specifies the label for the `Select`",
+                    "type": "string"
+                },
+                "ariaLabel": {
+                    "name": "ariaLabel",
+                    "type": "unknown"
+                },
+                "bold": {
+                    "name": "bold",
+                    "type": "boolean",
+                    "description": "Makes label bold"
+                },
+                "isDisabled": {
+                    "name": "isDisabled",
+                    "type": "boolean",
+                    "description": "Makes select disabled"
+                },
+                "inputId": {
+                    "name": "inputId",
+                    "description": "Specifies the ID for the rendered Select box. If you use the label prop label will automatically point to this ID, so this is required.",
+                    "type": "string"
+                },
+                "height": {
+                    "name": "height",
+                    "type": "string",
+                    "description": "Specifies the height of the select box control, make sure to include the unit, e.g. px"
+                },
+                "padding": {
+                    "name": "padding",
+                    "type": "string",
+                    "description": "Specifies the padding of the value showed in the select box control, make sure to include the unit, e.g. px"
+                },
+                "isMulti": {
+                    "name": "isMulti",
+                    "type": "boolean",
+                    "description": "Specifies if the `Select` component is multi-select."
+                },
+                "inverted": {
+                    "name": "inverted",
+                    "type": "boolean",
+                    "description": "Styling for dark backgrounds."
+                },
+                "dataTestId": {
+                    "name": "dataTestId",
+                    "type": "string",
+                    "description": "Specifies the `data-testid` attribute for testing."
+                },
+                "classNamePrefix": {
+                    "name": "classNamePrefix",
+                    "type": "string",
+                    "description": "Specifies prefix for the `#class` applied to the `Select` structures"
+                },
+                "data-testid": {
+                    "name": "data-testid",
+                    "type": "string",
+                    "description": "Specifies `data-testid` for testing"
+                },
+                "onChange": {
+                    "name": "onChange",
+                    "type": "Event",
+                    "description": "Specifies `onChange` function for the input"
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Specifies the system design theme object"
+                },
+                "selectType": {
+                    "name": "selectType",
+                    "type": "string",
+                    "enum": [
+                        "default",
+                        "createable",
+                        "async"
+                    ],
+                    "defaultValue": "default",
+                    "description": "Specify if you want react-select createable option"
+                },
+                "updateStyles": {
+                    "name": "updateStyles",
+                    "type": "Event",
+                    "description": "Specify if you want to overwrite existing customStyles"
+                },
+                "invalid": {
+                    "name": "invalid",
+                    "type": "boolean",
+                    "description": "Applies invalid input styles"
+                },
+                "mandatory": {
+                    "name": "mandatory",
+                    "type": "boolean",
+                    "description": "Shows asterisk to denote a mandatory field"
+                },
+                "focus": {
+                    "name": "focus",
+                    "type": "boolean",
+                    "description": "Focus on input"
+                },
+                "components": {
+                    "name": "components",
+                    "type": "object",
+                    "description": "Allows overrides of react-select components"
+                }
+            },
+            "relativePath": "lib/components/Select/index.js",
+            "description": "This component uses React Select: <https://react-select.com/home> Usage of this component has changed since we have upgraded to the latest version of `react-select`. For example, field values are now defined as separate objects. for example: const options = [ { value: 'chocolate', label: 'Chocolate' }, { value: 'strawberry', label: 'Strawberry' }, { value: 'vanilla', label: 'Vanilla' }, { value: 'hazelnut', label: 'Hazelnut' }, { value: 'rocky road', label: 'Rocky Road' } ] For a full list of the changes, see <https://react-select.com/upgrade-guide>."
+        },
+        "orcs-design-system/Sidebar": {
+            "id": "orcs-design-system/Sidebar",
+            "name": "Sidebar",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Sidebar",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "children": {
+                    "name": "children",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "description": "Sidebar children are rendered as node elements"
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Specifies the colour theme"
+                }
+            },
+            "relativePath": "lib/components/Sidebar/index.js"
+        },
+        "orcs-design-system/SidebarTabs": {
+            "id": "orcs-design-system/SidebarTabs",
+            "name": "SidebarTabs",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "SidebarTabs",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {}
+        },
+        "orcs-design-system/SidebarTab": {
+            "id": "orcs-design-system/SidebarTab",
+            "name": "SidebarTab",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "SidebarTab",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {}
+        },
+        "orcs-design-system/SidebarPanels": {
+            "id": "orcs-design-system/SidebarPanels",
+            "name": "SidebarPanels",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "SidebarPanels",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {}
+        },
+        "orcs-design-system/SidebarPanel": {
+            "id": "orcs-design-system/SidebarPanel",
+            "name": "SidebarPanel",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "SidebarPanel",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "children": {
+                    "name": "children",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "description": "SidebarPanel children, ie `SidebarPanels` components, are rendered as node elements"
+                },
+                "SidebarStyles": {
+                    "name": "SidebarStyles",
+                    "type": "object",
+                    "description": "Set the styles for this subcomponent if needed, using the `space` and `layout` styled-system categories"
+                }
+            },
+            "relativePath": "lib/components/Sidebar/index.js"
+        },
+        "orcs-design-system/SidebarClose": {
+            "id": "orcs-design-system/SidebarClose",
+            "name": "SidebarClose",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "SidebarClose",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {}
+        },
+        "orcs-design-system/SideNav": {
+            "id": "orcs-design-system/SideNav",
+            "name": "SideNav",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "SideNav",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "required": [
+                "sideNavHeight",
+                "items"
+            ],
+            "props": {
+                "sideNavHeight": {
+                    "name": "sideNavHeight",
+                    "type": "string"
+                },
+                "initiallyExpandedItemIndex": {
+                    "name": "initiallyExpandedItemIndex",
+                    "type": "number"
+                },
+                "items": {
+                    "name": "items",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "iconName": {
+                                "type": "string",
+                                "name": "iconName"
+                            },
+                            "name": {
+                                "type": "string",
+                                "name": "name"
+                            },
+                            "badgeNumber": {
+                                "type": "string",
+                                "name": "badgeNumber"
+                            },
+                            "badgeDot": {
+                                "type": "boolean",
+                                "name": "badgeDot"
+                            },
+                            "hide": {
+                                "type": "boolean",
+                                "name": "hide"
+                            },
+                            "large": {
+                                "type": "boolean",
+                                "name": "large"
+                            },
+                            "bottomAligned": {
+                                "type": "boolean",
+                                "name": "bottomAligned"
+                            },
+                            "actionType": {
+                                "type": "string",
+                                "enum": [
+                                    "component",
+                                    "link",
+                                    "button"
+                                ],
+                                "name": "actionType"
+                            },
+                            "component": {
+                                "type": "Component",
+                                "name": "component"
+                            },
+                            "link": {
+                                "type": "string",
+                                "name": "link"
+                            },
+                            "onClick": {
+                                "type": "Event",
+                                "name": "onClick"
+                            }
+                        },
+                        "required": [
+                            "iconName",
+                            "name",
+                            "actionType"
+                        ]
+                    },
+                    "type": "array"
+                },
+                "LinkComponent": {
+                    "name": "LinkComponent",
+                    "type": "Component"
+                }
+            },
+            "relativePath": "lib/components/SideNav/index.js"
+        },
+        "orcs-design-system/Spacer": {
+            "id": "orcs-design-system/Spacer",
+            "name": "Spacer",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Spacer",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {},
+            "relativePath": "lib/components/Spacer/index.js"
+        },
+        "orcs-design-system/StatusDot": {
+            "id": "orcs-design-system/StatusDot",
+            "name": "StatusDot",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "StatusDot",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "variant": {
+                    "name": "variant",
+                    "enum": [
+                        "success",
+                        "warning",
+                        "danger"
+                    ],
+                    "description": "Specifies StatusDot colour. Colours are taken from the standard design system colours.",
+                    "type": "string"
+                },
+                "icon": {
+                    "name": "icon",
+                    "description": "Specifies that this StatusDot contains an icon",
+                    "type": "boolean"
+                },
+                "children": {
+                    "name": "children",
+                    "description": "Can specify an Icon componet as a child item",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "ui": {
+                        "suggested": [
+                            "orcs-design-system/Icon"
+                        ]
+                    }
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Specifies the system design theme."
+                }
+            },
+            "relativePath": "lib/components/StatusDot/index.js"
+        },
+        "orcs-design-system/StyledLink": {
+            "id": "orcs-design-system/StyledLink",
+            "name": "StyledLink",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "StyledLink",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "children": {
+                    "name": "children",
+                    "description": "The content wrapped by the link component",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    }
+                },
+                "active": {
+                    "name": "active",
+                    "type": "boolean",
+                    "description": "Designates the active link, eg if in a navigation menu, it is the current screen"
+                },
+                "block": {
+                    "name": "block",
+                    "type": "boolean",
+                    "description": "Specifies if link is rendered as display:block"
+                },
+                "white": {
+                    "name": "white",
+                    "type": "boolean",
+                    "description": "Renders a white link (useful for dark backgrounds)"
+                },
+                "bold": {
+                    "name": "bold",
+                    "type": "boolean",
+                    "description": "Styles the link text in bold"
+                },
+                "to": {
+                    "name": "to",
+                    "type": "Node",
+                    "description": "Specifies the destination of react-router-dom `Link`"
+                },
+                "target": {
+                    "name": "target",
+                    "type": "string",
+                    "description": "Specifies the link target"
+                },
+                "button": {
+                    "name": "button",
+                    "type": "boolean",
+                    "description": "Specifies if the `StyledLink` should be visually styled to resemble a button"
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Specifies the system design theme."
+                },
+                "href": {
+                    "name": "href",
+                    "type": "string"
+                }
+            },
+            "relativePath": "lib/components/StyledLink/index.js",
+            "description": "This `StyledLink` component supports both standard html hyperlinks and react Link components (if using react router for example). The way to use this as a hyperlink is shown below in the examples and is quite straightforward. To wrap a react router Link component in these styles, you need to do the following: Ensure you have imported both the react router link, and the design system link, like so: import { Link } from 'react-router-dom'; import { StyledLink } from 'orchestrated-design-system'; At the top of your file give a name to the link, for example, lets say we are putting these links in a header component, so we'll call it HeaderLink: ```const HeaderLink = styleLink(Link);``` Then you can use in your code like so: <HeaderLink to={PATHS.DASHBOARD}> Dashboard </HeaderLink>"
+        },
+        "orcs-design-system/styleLink": {
+            "id": "orcs-design-system/styleLink",
+            "name": "styleLink",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "styleLink",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {}
+        },
+        "orcs-design-system/Table": {
+            "id": "orcs-design-system/Table",
+            "name": "Table",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Table",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {},
+            "relativePath": "lib/components/Table/index.js"
+        },
+        "orcs-design-system/Tab": {
+            "id": "orcs-design-system/Tab",
+            "name": "Tab",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Tab",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "active": {
+                    "name": "active",
+                    "description": "Specifies whether the tab is the active tab",
+                    "type": "boolean"
+                },
+                "notification": {
+                    "name": "notification",
+                    "type": "string",
+                    "description": "Specifies any notifications attached to the Tab"
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Specifies the colour theme"
+                },
+                "children": {
+                    "name": "children",
+                    "description": "The content of the Tab is passed as a child.",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    }
+                }
+            },
+            "relativePath": "lib/components/Tabs/index.js"
+        },
+        "orcs-design-system/TabsContainer": {
+            "id": "orcs-design-system/TabsContainer",
+            "name": "TabsContainer",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "TabsContainer",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "children": {
+                    "name": "children",
+                    "description": "The contents of the TabsContainer are passed as a child.",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    },
+                    "ui": {
+                        "suggested": [
+                            "orcs-design-system/Tab"
+                        ]
+                    }
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Specifies the colour theme of the container"
+                }
+            },
+            "relativePath": "lib/components/Tabs/index.js"
+        },
+        "orcs-design-system/Tag": {
+            "id": "orcs-design-system/Tag",
+            "name": "Tag",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Tag",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "children": {
+                    "name": "children",
+                    "type": "array",
+                    "items": {
+                        "type": "Node"
+                    }
+                },
+                "selected": {
+                    "name": "selected",
+                    "type": "boolean",
+                    "defaultValue": false,
+                    "description": "Adds selected styling to tag"
+                },
+                "onSelect": {
+                    "name": "onSelect",
+                    "type": "Event",
+                    "description": "On tag selected"
+                },
+                "showRemove": {
+                    "name": "showRemove",
+                    "type": "boolean",
+                    "defaultValue": false,
+                    "description": "Shows the remove button"
+                },
+                "onRemove": {
+                    "name": "onRemove",
+                    "type": "Event",
+                    "description": "On tag remove button clicked"
+                },
+                "showEdit": {
+                    "name": "showEdit",
+                    "type": "boolean",
+                    "defaultValue": false,
+                    "description": "Shows edit button"
+                },
+                "onEdit": {
+                    "name": "onEdit",
+                    "type": "Event",
+                    "description": "On tag edit button clicked"
+                },
+                "showInfo": {
+                    "name": "showInfo",
+                    "type": "boolean",
+                    "defaultValue": false,
+                    "description": "Shows info button"
+                },
+                "onInfo": {
+                    "name": "onInfo",
+                    "type": "Event",
+                    "description": "On tag info button clicked"
+                },
+                "tagType": {
+                    "name": "tagType",
+                    "type": "string",
+                    "description": "Can add a type to a tag as text"
+                },
+                "personAvatar": {
+                    "name": "personAvatar",
+                    "type": "string",
+                    "description": "Can add an img url for showing a person's avatar if the tag is used for a person"
+                },
+                "disabled": {
+                    "name": "disabled",
+                    "type": "boolean",
+                    "defaultValue": false,
+                    "description": "Adds disabled attribute and styling to tag"
+                },
+                "isPending": {
+                    "name": "isPending",
+                    "type": "boolean",
+                    "description": "Adds loading spinner to tag to indicate awaiting an action to complete"
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Specifies the design theme"
+                },
+                "showStrikeThrough": {
+                    "name": "showStrikeThrough",
+                    "type": "boolean",
+                    "defaultValue": false,
+                    "description": "Add a strikethrough to a tag value text"
+                },
+                "small": {
+                    "name": "small",
+                    "type": "boolean",
+                    "defaultValue": false,
+                    "description": "Applies the small variant styles"
+                },
+                "highlighted": {
+                    "name": "highlighted",
+                    "type": "boolean",
+                    "defaultValue": false,
+                    "description": "Applies a highlighted style and colour to the tag"
+                },
+                "personEntity": {
+                    "name": "personEntity",
+                    "type": "object",
+                    "description": "Allows you to set a person avatar image or initials"
+                }
+            },
+            "relativePath": "lib/components/Tag/index.js",
+            "description": "The top two rows are an example of how tags should be used when they are selectable/unselectable. There is the option to display the cross icon or not. The bottom row is when you want to show tags that aren't editable."
+        },
+        "orcs-design-system/TextInput": {
+            "id": "orcs-design-system/TextInput",
+            "name": "TextInput",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "TextInput",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "required": [
+                "id"
+            ],
+            "props": {
+                "id": {
+                    "name": "id",
+                    "description": "Must be used to specify a unique ID.",
+                    "type": "string"
+                },
+                "height": {
+                    "name": "height",
+                    "type": "string",
+                    "description": "Can be used to set a specific height."
+                },
+                "label": {
+                    "name": "label",
+                    "description": "Specifies the text for the label.",
+                    "type": "string"
+                },
+                "ariaLabel": {
+                    "name": "ariaLabel",
+                    "type": "unknown",
+                    "description": "Specifies aria-label for TextArea. This is only required if not using the label prop."
+                },
+                "bold": {
+                    "name": "bold",
+                    "type": "boolean",
+                    "description": "Makes label text bold"
+                },
+                "placeholder": {
+                    "name": "placeholder",
+                    "description": "Specifies the helper/example text for the placeholder.",
+                    "type": "string"
+                },
+                "type": {
+                    "name": "type",
+                    "description": "Specifies the type of text input, e.g. text, email, password, number",
+                    "type": "string"
+                },
+                "floating": {
+                    "name": "floating",
+                    "type": "boolean",
+                    "description": "Applies different styling for a floating animated label aesthetic"
+                },
+                "fullWidth": {
+                    "name": "fullWidth",
+                    "description": "Makes text box take up full width of parent",
+                    "type": "boolean"
+                },
+                "invalid": {
+                    "name": "invalid",
+                    "type": "boolean",
+                    "description": "Applies invalid input styles"
+                },
+                "valid": {
+                    "name": "valid",
+                    "type": "boolean",
+                    "description": "Applies valid input styles"
+                },
+                "mandatory": {
+                    "name": "mandatory",
+                    "type": "boolean",
+                    "description": "Shows asterisk to denote a mandatory field"
+                },
+                "iconLeft": {
+                    "name": "iconLeft",
+                    "items": {
+                        "type": "unknown"
+                    },
+                    "type": "array",
+                    "description": "Applies an icon to the left of the text box with specified name."
+                },
+                "iconRight": {
+                    "name": "iconRight",
+                    "description": "Applies an icon to the right of the text box with specified name.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "numberProps": {
+                    "name": "numberProps",
+                    "type": "object",
+                    "description": "Number format props, to render a number input textbox"
+                },
+                "inverted": {
+                    "name": "inverted",
+                    "type": "boolean",
+                    "description": "Set inverted styling for dark backgrounds"
+                },
+                "data-testid": {
+                    "name": "data-testid",
+                    "type": "string",
+                    "description": "Specifies the `data-testid` attribute for testing."
+                },
+                "InputStyles": {
+                    "name": "InputStyles",
+                    "type": "object",
+                    "description": "Specifies any additional `space` and `layout` props for the entire component"
+                },
+                "focus": {
+                    "name": "focus",
+                    "type": "boolean",
+                    "description": "Focus on input"
+                },
+                "key": {
+                    "name": "key",
+                    "type": "string"
+                }
+            },
+            "relativePath": "lib/components/TextInput/index.js"
+        },
+        "orcs-design-system/TextArea": {
+            "id": "orcs-design-system/TextArea",
+            "name": "TextArea",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "TextArea",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "required": [
+                "id"
+            ],
+            "props": {
+                "id": {
+                    "name": "id",
+                    "type": "string",
+                    "description": "Must be used to specify a unique ID."
+                },
+                "value": {
+                    "name": "value",
+                    "type": "string",
+                    "description": "Use value to specify text in text area."
+                },
+                "label": {
+                    "name": "label",
+                    "description": "Specifies the text for the TextArea label.",
+                    "type": "string"
+                },
+                "ariaLabel": {
+                    "name": "ariaLabel",
+                    "type": "unknown",
+                    "description": "Specifies aria-label for TextArea. This is only required if not using the label prop."
+                },
+                "bold": {
+                    "name": "bold",
+                    "type": "boolean",
+                    "description": "Set the label text to bold font-weight."
+                },
+                "disabled": {
+                    "name": "disabled",
+                    "type": "boolean",
+                    "description": "Sets disabled attribute and styling"
+                },
+                "fullWidth": {
+                    "name": "fullWidth",
+                    "type": "boolean",
+                    "description": "Makes text box take up full width of parent"
+                },
+                "cols": {
+                    "name": "cols",
+                    "type": "string",
+                    "description": "Sets specified width of input area in columns"
+                },
+                "rows": {
+                    "name": "rows",
+                    "type": "string",
+                    "description": "Sets specified height of input area in rows"
+                },
+                "invalid": {
+                    "name": "invalid",
+                    "type": "boolean",
+                    "description": "Applies invalid styles (coloured with \"warning\" colour from design system)"
+                },
+                "valid": {
+                    "name": "valid",
+                    "type": "boolean",
+                    "description": "Applies valid styles (coloured with \"success\" colour from design system)"
+                },
+                "mandatory": {
+                    "name": "mandatory",
+                    "type": "boolean",
+                    "description": "Shows asterisk to denote a mandatory field"
+                },
+                "inverted": {
+                    "name": "inverted",
+                    "type": "boolean",
+                    "description": "Set inverted styling for dark backgrounds"
+                },
+                "WrapperStyles": {
+                    "name": "WrapperStyles",
+                    "type": "object",
+                    "description": "Set additional styles for the `Wrapper` if needed"
+                },
+                "LabelStyles": {
+                    "name": "LabelStyles",
+                    "type": "object",
+                    "description": "Set additional styles for the `Label` if needed"
+                },
+                "InputStyles": {
+                    "name": "InputStyles",
+                    "type": "object",
+                    "description": "Set additional styles for the `Input` textarea if needed"
+                },
+                "data-testid": {
+                    "name": "data-testid",
+                    "type": "string",
+                    "description": "Specifies `data-testid` for testing"
+                },
+                "autoFocus": {
+                    "name": "autoFocus",
+                    "type": "boolean",
+                    "description": "Specifies whether TextArea should automatically get focus"
+                },
+                "onChange": {
+                    "name": "onChange",
+                    "type": "Event",
+                    "description": "Specifies `onChange` function"
+                },
+                "defaultValue": {
+                    "name": "defaultValue",
+                    "type": "string",
+                    "description": "Specifies `textarea` default value (different from placeholder)"
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Specifies the design theme object"
+                },
+                "placeholder": {
+                    "name": "placeholder",
+                    "type": "string"
+                }
+            },
+            "relativePath": "lib/components/TextArea/index.js"
+        },
+        "orcs-design-system/Toggle": {
+            "id": "orcs-design-system/Toggle",
+            "name": "Toggle",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Toggle",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "required": [
+                "id",
+                "label"
+            ],
+            "props": {
+                "id": {
+                    "name": "id",
+                    "description": "Must be used to specify a unique ID.",
+                    "type": "string"
+                },
+                "label": {
+                    "name": "label",
+                    "description": "Specifies the text for the label.",
+                    "type": "string"
+                },
+                "checked": {
+                    "name": "checked",
+                    "type": "boolean",
+                    "description": "Specifies whether the `checkbox` for Toggle is on or not."
+                },
+                "inverted": {
+                    "name": "inverted",
+                    "type": "boolean",
+                    "defaultValue": false,
+                    "description": "Changes appearance to suit a dark background."
+                },
+                "disabled": {
+                    "name": "disabled",
+                    "type": "boolean",
+                    "description": "Applies disabled attribute and styles"
+                },
+                "small": {
+                    "name": "small",
+                    "type": "boolean",
+                    "defaultValue": false,
+                    "description": "Makes toggle and label smaller."
+                },
+                "srHide": {
+                    "name": "srHide",
+                    "type": "boolean",
+                    "description": "Hides toggle from screen-reader. Only to be used when toggle alters visual presentation, not functional."
+                },
+                "theme": {
+                    "name": "theme",
+                    "type": "object",
+                    "description": "Specifies the theme for component design"
+                }
+            },
+            "relativePath": "lib/components/Toggle/index.js",
+            "description": "`Toggle` should be used for when functionality is required to turn something off/on, hide/show or disable/enable. Default is off (left/grey), this works like a checkbox, so clicking or applying a checked attribute with javascript will turn it on (right/green). As a general rule, the small version should be used in any layout components like `Header`, `Sidebar`, `MobileNav`; whereas the larger one can be used within the page content when required."
+        },
+        "orcs-design-system/TreeNav": {
+            "id": "orcs-design-system/TreeNav",
+            "name": "TreeNav",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "TreeNav",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {
+                "data": {
+                    "name": "data",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "name": "id",
+                                "type": "string"
+                            },
+                            "name": {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            "badgeText": {
+                                "name": "badgeText",
+                                "type": "string"
+                            },
+                            "badgeColour": {
+                                "name": "badgeColour",
+                                "type": "string"
+                            },
+                            "children": {
+                                "name": "children",
+                                "type": "array",
+                                "items": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "openByDefault": {
+                    "name": "openByDefault",
+                    "type": "boolean"
+                },
+                "width": {
+                    "name": "width",
+                    "type": "number"
+                }
+            },
+            "relativePath": "lib/components/TreeNav/index.js"
+        },
+        "orcs-design-system/Typography": {
+            "id": "orcs-design-system/Typography",
+            "name": "Typography",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Typography",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {}
+        },
+        "orcs-design-system/H1": {
+            "id": "orcs-design-system/H1",
+            "name": "H1",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "H1",
+                "exportedAs": [
+                    "H1",
+                    "Typography.H1"
+                ],
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {}
+        },
+        "orcs-design-system/H2": {
+            "id": "orcs-design-system/H2",
+            "name": "H2",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "H2",
+                "exportedAs": [
+                    "H2",
+                    "Typography.H2"
+                ],
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {}
+        },
+        "orcs-design-system/H3": {
+            "id": "orcs-design-system/H3",
+            "name": "H3",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "H3",
+                "exportedAs": [
+                    "H3",
+                    "Typography.H3"
+                ],
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {}
+        },
+        "orcs-design-system/H4": {
+            "id": "orcs-design-system/H4",
+            "name": "H4",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "H4",
+                "exportedAs": [
+                    "H4",
+                    "Typography.H4"
+                ],
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {}
+        },
+        "orcs-design-system/H5": {
+            "id": "orcs-design-system/H5",
+            "name": "H5",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "H5",
+                "exportedAs": [
+                    "H5",
+                    "Typography.H5"
+                ],
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {}
+        },
+        "orcs-design-system/H6": {
+            "id": "orcs-design-system/H6",
+            "name": "H6",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "H6",
+                "exportedAs": [
+                    "H6",
+                    "Typography.H6"
+                ],
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {}
+        },
+        "orcs-design-system/P": {
+            "id": "orcs-design-system/P",
+            "name": "P",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "P",
+                "exportedAs": [
+                    "P",
+                    "Typography.P"
+                ],
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {}
+        },
+        "orcs-design-system/Text": {
+            "id": "orcs-design-system/Text",
+            "name": "Text",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Text",
+                "exportedAs": [
+                    "Text",
+                    "Typography.Text"
+                ],
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {}
+        },
+        "orcs-design-system/Small": {
+            "id": "orcs-design-system/Small",
+            "name": "Small",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Small",
+                "exportedAs": [
+                    "Small",
+                    "Typography.Small"
+                ],
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {}
+        },
+        "orcs-design-system/Quote": {
+            "id": "orcs-design-system/Quote",
+            "name": "Quote",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Quote",
+                "exportedAs": [
+                    "Quote",
+                    "Typography.Quote"
+                ],
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {}
+        },
+        "orcs-design-system/Code": {
+            "id": "orcs-design-system/Code",
+            "name": "Code",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "Code",
+                "exportedAs": [
+                    "Code",
+                    "Typography.Code"
+                ],
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {}
+        },
+        "orcs-design-system/getOptionByValue": {
+            "id": "orcs-design-system/getOptionByValue",
+            "name": "getOptionByValue",
+            "code": {
+                "packageName": "orcs-design-system",
+                "exportName": "getOptionByValue",
+                "lib": "orcsDesignSystem"
+            },
+            "type": "Code",
+            "props": {}
+        }
+    },
+    "samples": {
+        "s_b8bce4a3d2d7caae2ce5034260f851a5": {
+            "id": "s_b8bce4a3d2d7caae2ce5034260f851a5",
+            "name": "ActionsMenu",
+            "componentId": "orcs-design-system/ActionsMenu",
+            "hash": "b8bce4a3d2d7caae2ce5034260f851a5",
+            "relativePath": ".interplay/examples/orcs-design-system/ActionsMenu.example.js",
+            "nodeId": "n_s_b8bce4a3d2d7caae2ce5034260f851a5_0"
+        },
+        "Avatar_Basic": {
+            "id": "Avatar_Basic",
+            "name": "Basic",
+            "componentId": "orcs-design-system/Avatar",
+            "hash": "e316335e291177a742f643b224ac6840",
+            "relativePath": ".interplay/examples/orcs-design-system/Avatar.example.js",
+            "nodeId": "n_Avatar_Basic_0"
+        },
+        "Badge_Basic": {
+            "id": "Badge_Basic",
+            "name": "Basic",
+            "componentId": "orcs-design-system/Badge",
+            "hash": "9119c98ffa62368b4b11a20f45bbbb87",
+            "relativePath": ".interplay/examples/orcs-design-system/Badge.example.js",
+            "nodeId": "n_Badge_Basic_0"
+        },
+        "Box_Basic": {
+            "id": "Box_Basic",
+            "name": "Basic",
+            "componentId": "orcs-design-system/Box",
+            "hash": "7985b2103285c2a71104d997513cbc77",
+            "relativePath": ".interplay/examples/orcs-design-system/Box.example.js",
+            "nodeId": "n_Box_Basic_0"
+        },
+        "Button_Basic": {
+            "id": "Button_Basic",
+            "name": "Basic",
+            "componentId": "orcs-design-system/Button",
+            "hash": "92707a5c00d104c88747409ec4c0bc4f",
+            "relativePath": ".interplay/examples/orcs-design-system/Button.example.js",
+            "nodeId": "n_Button_Basic_0"
+        },
+        "s_366c2e8ee12deb73c027f865e49e26eb": {
+            "id": "s_366c2e8ee12deb73c027f865e49e26eb",
+            "name": "Label Dark ButtonGroupContainer",
+            "componentId": "orcs-design-system/ButtonGroupContainer",
+            "hash": "366c2e8ee12deb73c027f865e49e26eb",
+            "relativePath": ".interplay/examples/orcs-design-system/ButtonGroup.example.js",
+            "nodeId": "n_s_366c2e8ee12deb73c027f865e49e26eb_0"
+        },
+        "Card_Basic": {
+            "id": "Card_Basic",
+            "name": "Basic",
+            "componentId": "orcs-design-system/Card",
+            "hash": "6fc08098f1379a25264e2c9fe52ef21f",
+            "relativePath": ".interplay/examples/orcs-design-system/Card.example.js",
+            "nodeId": "n_Card_Basic_0"
+        },
+        "Checkbox_Basic": {
+            "id": "Checkbox_Basic",
+            "name": "Basic",
+            "componentId": "orcs-design-system/Checkbox",
+            "hash": "b46919d479ca8884322a4c296d195093",
+            "relativePath": ".interplay/examples/orcs-design-system/Checkbox.example.js",
+            "nodeId": "n_Checkbox_Basic_0"
+        },
+        "s_1e91d7c45836f03b5729bcd706432bd3": {
+            "id": "s_1e91d7c45836f03b5729bcd706432bd3",
+            "name": "Single DatePicker",
+            "componentId": "orcs-design-system/DatePicker",
+            "hash": "1e91d7c45836f03b5729bcd706432bd3",
+            "relativePath": ".interplay/examples/orcs-design-system/DatePicker.example.js",
+            "nodeId": "n_s_1e91d7c45836f03b5729bcd706432bd3_0"
+        },
+        "Divider_Basic": {
+            "id": "Divider_Basic",
+            "name": "Basic",
+            "componentId": "orcs-design-system/Divider",
+            "hash": "5e82ab3485d51aff8108ff0b1ef2daf9",
+            "relativePath": ".interplay/examples/orcs-design-system/Divider.example.js",
+            "nodeId": "n_Divider_Basic_0"
+        },
+        "Expandable_Basic": {
+            "id": "Expandable_Basic",
+            "name": "Basic",
+            "componentId": "orcs-design-system/Expandable",
+            "hash": "3be3339ed81799b4473eafae4614f796",
+            "relativePath": ".interplay/examples/orcs-design-system/Expandable.example.js",
+            "nodeId": "n_Expandable_Basic_0"
+        },
+        "s_6669b07ac96afe6388066642f7ea1da5": {
+            "id": "s_6669b07ac96afe6388066642f7ea1da5",
+            "name": "Text Full Width TextInput",
+            "componentId": "orcs-design-system/TextInput",
+            "hash": "6669b07ac96afe6388066642f7ea1da5",
+            "relativePath": ".interplay/examples/orcs-design-system/HeaderSimple.example.js",
+            "nodeId": "n_s_6669b07ac96afe6388066642f7ea1da5_0"
+        },
+        "s_9a374812c67a39818666393bce51a1b2": {
+            "id": "s_9a374812c67a39818666393bce51a1b2",
+            "name": "Search HeaderSimple",
+            "componentId": "orcs-design-system/HeaderSimple",
+            "hash": "9a374812c67a39818666393bce51a1b2",
+            "relativePath": ".interplay/examples/orcs-design-system/HeaderSimple.example.js",
+            "nodeId": "n_s_9a374812c67a39818666393bce51a1b2_0"
+        },
+        "Icon_Basic": {
+            "id": "Icon_Basic",
+            "name": "Basic",
+            "componentId": "orcs-design-system/Icon",
+            "hash": "e7d9af064abadbaaa97d2a934e89657c",
+            "relativePath": ".interplay/examples/orcs-design-system/Icon.example.js",
+            "nodeId": "n_Icon_Basic_0"
+        },
+        "Notification_Basic": {
+            "id": "Notification_Basic",
+            "name": "Basic",
+            "componentId": "orcs-design-system/Notification",
+            "hash": "e04265715da7791736721822c76992f9",
+            "relativePath": ".interplay/examples/orcs-design-system/Notification.example.js",
+            "nodeId": "n_Notification_Basic_0"
+        },
+        "RadioButton_Basic": {
+            "id": "RadioButton_Basic",
+            "name": "Basic",
+            "componentId": "orcs-design-system/RadioButton",
+            "hash": "9f3097c48f0ee9e0825f6df0b871d8b3",
+            "relativePath": ".interplay/examples/orcs-design-system/RadioButton.example.js",
+            "nodeId": "n_RadioButton_Basic_0"
+        },
+        "Range_Basic": {
+            "id": "Range_Basic",
+            "name": "Basic",
+            "componentId": "orcs-design-system/Range",
+            "hash": "d9b8cf08066bf404f6eb2a1b804d3619",
+            "relativePath": ".interplay/examples/orcs-design-system/Range.example.js",
+            "nodeId": "n_Range_Basic_0"
+        },
+        "Select_Basic": {
+            "id": "Select_Basic",
+            "name": "Basic",
+            "componentId": "orcs-design-system/Select",
+            "hash": "e79d3cefd920fadcc5d06660752e7caf",
+            "relativePath": ".interplay/examples/orcs-design-system/Select.example.js",
+            "nodeId": "n_Select_Basic_0"
+        },
+        "StatusDot_Basic": {
+            "id": "StatusDot_Basic",
+            "name": "Basic",
+            "componentId": "orcs-design-system/StatusDot",
+            "hash": "a8a24f3dd4154aa7503cf6a44b04e87f",
+            "relativePath": ".interplay/examples/orcs-design-system/StatusDot.example.js",
+            "nodeId": "n_StatusDot_Basic_0"
+        },
+        "StatusDot_With_Icon": {
+            "id": "StatusDot_With_Icon",
+            "name": "With Icon",
+            "componentId": "orcs-design-system/StatusDot",
+            "hash": "83549f7c6234cb7c093b7bf458a1a99e",
+            "relativePath": ".interplay/examples/orcs-design-system/StatusDot.example.js",
+            "nodeId": "n_StatusDot_With_Icon_0"
+        },
+        "StyledLink_Basic": {
+            "id": "StyledLink_Basic",
+            "name": "Basic",
+            "componentId": "orcs-design-system/StyledLink",
+            "hash": "a3c3316fcedd997b69bbb4cf43bb132a",
+            "relativePath": ".interplay/examples/orcs-design-system/StyledLink.example.js",
+            "nodeId": "n_StyledLink_Basic_0"
+        },
+        "s_b7ec9ab635927bde42b9bc279009c69e": {
+            "id": "s_b7ec9ab635927bde42b9bc279009c69e",
+            "name": "TabsContainer",
+            "componentId": "orcs-design-system/TabsContainer",
+            "hash": "b7ec9ab635927bde42b9bc279009c69e",
+            "relativePath": ".interplay/examples/orcs-design-system/Tabs.example.js",
+            "nodeId": "n_s_b7ec9ab635927bde42b9bc279009c69e_0"
+        },
+        "Tag_Basic": {
+            "id": "Tag_Basic",
+            "name": "Basic",
+            "componentId": "orcs-design-system/Tag",
+            "hash": "361579bb169f2e82cfda30be8a8d5d36",
+            "relativePath": ".interplay/examples/orcs-design-system/Tag.example.js",
+            "nodeId": "n_Tag_Basic_0"
+        },
+        "TextArea_Basic": {
+            "id": "TextArea_Basic",
+            "name": "Basic",
+            "componentId": "orcs-design-system/TextArea",
+            "hash": "96964f05ce572cdc2ad208500396e2b6",
+            "relativePath": ".interplay/examples/orcs-design-system/TextArea.example.js",
+            "nodeId": "n_TextArea_Basic_0"
+        },
+        "s_e5a948d6ef17fa6bfb7bc39c27122929": {
+            "id": "s_e5a948d6ef17fa6bfb7bc39c27122929",
+            "name": "Text TextInput",
+            "componentId": "orcs-design-system/TextInput",
+            "hash": "e5a948d6ef17fa6bfb7bc39c27122929",
+            "relativePath": ".interplay/examples/orcs-design-system/TextInput.example.js",
+            "nodeId": "n_s_e5a948d6ef17fa6bfb7bc39c27122929_0"
+        },
+        "Toggle_Basic": {
+            "id": "Toggle_Basic",
+            "name": "Basic",
+            "componentId": "orcs-design-system/Toggle",
+            "hash": "4a91bd73fb53844511a707f3ade894cc",
+            "relativePath": ".interplay/examples/orcs-design-system/Toggle.example.js",
+            "nodeId": "n_Toggle_Basic_0"
+        },
+        "TreeNav_Basic": {
+            "id": "TreeNav_Basic",
+            "name": "Basic",
+            "componentId": "orcs-design-system/TreeNav",
+            "hash": "27b200e971f30942d681c23dd912ee0a",
+            "relativePath": ".interplay/examples/orcs-design-system/TreeNav.example.js",
+            "nodeId": "n_TreeNav_Basic_0"
+        }
+    },
+    "nodes": {
+        "n_s_b8bce4a3d2d7caae2ce5034260f851a5_0": {
+            "id": "n_s_b8bce4a3d2d7caae2ce5034260f851a5_0",
+            "name": "ActionsMenu",
+            "componentId": "orcs-design-system/ActionsMenu",
+            "props": {
+                "children": [
+                    {
+                        "__type": "node",
+                        "nodeId": "n_s_b8bce4a3d2d7caae2ce5034260f851a5_1"
+                    }
+                ]
+            }
+        },
+        "n_s_b8bce4a3d2d7caae2ce5034260f851a5_1": {
+            "id": "n_s_b8bce4a3d2d7caae2ce5034260f851a5_1",
+            "name": "ActionsMenuItem",
+            "componentId": "orcs-design-system/ActionsMenuItem",
+            "props": {
+                "href": "https://teamform.co/",
+                "children": [
+                    "\n        Open website\n      "
+                ]
+            }
+        },
+        "n_Avatar_Basic_0": {
+            "id": "n_Avatar_Basic_0",
+            "name": "Avatar",
+            "componentId": "orcs-design-system/Avatar",
+            "props": {
+                "title": "Ayden Lundgre",
+                "initials": "AL",
+                "subtitle": "Senior Business Analyst",
+                "image": "https://api.dicebear.com/7.x/personas/svg?seed=aydos"
+            }
+        },
+        "n_Badge_Basic_0": {
+            "id": "n_Badge_Basic_0",
+            "name": "Badge",
+            "componentId": "orcs-design-system/Badge",
+            "props": {
+                "children": [
+                    "Default"
+                ]
+            }
+        },
+        "n_Box_Basic_0": {
+            "id": "n_Box_Basic_0",
+            "name": "Box",
+            "componentId": "orcs-design-system/Box",
+            "props": {
+                "borderRadius": 2,
+                "height": "100px",
+                "width": "200px",
+                "boxBorder": "default",
+                "shadow": "default",
+                "p": "r"
+            }
+        },
+        "n_Button_Basic_0": {
+            "id": "n_Button_Basic_0",
+            "name": "Button",
+            "componentId": "orcs-design-system/Button",
+            "props": {
+                "children": [
+                    "Default button"
+                ]
+            }
+        },
+        "n_s_366c2e8ee12deb73c027f865e49e26eb_0": {
+            "id": "n_s_366c2e8ee12deb73c027f865e49e26eb_0",
+            "name": "ButtonGroupContainer",
+            "componentId": "orcs-design-system/ButtonGroupContainer",
+            "props": {
+                "controlLabel": "View:",
+                "labelDark": true,
+                "children": [
+                    {
+                        "__type": "node",
+                        "nodeId": "n_s_366c2e8ee12deb73c027f865e49e26eb_1"
+                    },
+                    {
+                        "__type": "node",
+                        "nodeId": "n_s_366c2e8ee12deb73c027f865e49e26eb_2"
+                    },
+                    {
+                        "__type": "node",
+                        "nodeId": "n_s_366c2e8ee12deb73c027f865e49e26eb_3"
+                    }
+                ]
+            }
+        },
+        "n_s_366c2e8ee12deb73c027f865e49e26eb_1": {
+            "id": "n_s_366c2e8ee12deb73c027f865e49e26eb_1",
+            "name": "ButtonGroupItem",
+            "componentId": "orcs-design-system/ButtonGroupItem",
+            "props": {
+                "name": "viewMode",
+                "label": "Chapters",
+                "value": "Chapters view"
+            }
+        },
+        "n_s_366c2e8ee12deb73c027f865e49e26eb_2": {
+            "id": "n_s_366c2e8ee12deb73c027f865e49e26eb_2",
+            "name": "ButtonGroupItem",
+            "componentId": "orcs-design-system/ButtonGroupItem",
+            "props": {
+                "name": "viewMode",
+                "label": "Groups",
+                "value": "Groups view",
+                "checked": true
+            }
+        },
+        "n_s_366c2e8ee12deb73c027f865e49e26eb_3": {
+            "id": "n_s_366c2e8ee12deb73c027f865e49e26eb_3",
+            "name": "ButtonGroupItem",
+            "componentId": "orcs-design-system/ButtonGroupItem",
+            "props": {
+                "name": "viewMode",
+                "label": "Constraints",
+                "value": "Constraints view"
+            }
+        },
+        "n_Card_Basic_0": {
+            "id": "n_Card_Basic_0",
+            "name": "Card",
+            "componentId": "orcs-design-system/Card",
+            "props": {
+                "title": [
+                    "Card title"
+                ],
+                "subtitle": [
+                    "Subtitle"
+                ]
+            }
+        },
+        "n_Checkbox_Basic_0": {
+            "id": "n_Checkbox_Basic_0",
+            "name": "Checkbox",
+            "componentId": "orcs-design-system/Checkbox",
+            "props": {
+                "label": "Default checkbox"
+            }
+        },
+        "n_s_1e91d7c45836f03b5729bcd706432bd3_0": {
+            "id": "n_s_1e91d7c45836f03b5729bcd706432bd3_0",
+            "name": "DatePicker",
+            "componentId": "orcs-design-system/DatePicker",
+            "props": {
+                "single": true,
+                "placeholder": "Date",
+                "numberOfMonths": 1
+            }
+        },
+        "n_Divider_Basic_0": {
+            "id": "n_Divider_Basic_0",
+            "name": "Divider",
+            "componentId": "orcs-design-system/Divider",
+            "props": {}
+        },
+        "n_Expandable_Basic_0": {
+            "id": "n_Expandable_Basic_0",
+            "name": "Expandable",
+            "componentId": "orcs-design-system/Expandable",
+            "props": {
+                "title": "Click to expand",
+                "children": [
+                    "Expanded content goes here"
+                ]
+            }
+        },
+        "n_s_6669b07ac96afe6388066642f7ea1da5_0": {
+            "id": "n_s_6669b07ac96afe6388066642f7ea1da5_0",
+            "name": "TextInput",
+            "componentId": "orcs-design-system/TextInput",
+            "props": {
+                "fullWidth": true,
+                "id": "search",
+                "key": "search",
+                "type": "text",
+                "placeholder": "Search for...",
+                "iconRight": [
+                    "fas",
+                    "search"
+                ]
+            }
+        },
+        "n_s_9a374812c67a39818666393bce51a1b2_0": {
+            "id": "n_s_9a374812c67a39818666393bce51a1b2_0",
+            "name": "HeaderSimple",
+            "componentId": "orcs-design-system/HeaderSimple",
+            "props": {
+                "variant": "search",
+                "appName": [
+                    "App Name"
+                ],
+                "userName": [
+                    "Michael"
+                ],
+                "avatarSource": [
+                    "https://api.dicebear.com/7.x/personas/svg?seed=mike"
+                ],
+                "avatarAlt": "Avatar for Michael",
+                "currentWorskapce": "Org Design Workspace",
+                "searchComponent": [
+                    {
+                        "__type": "node",
+                        "nodeId": "n_s_9a374812c67a39818666393bce51a1b2_1"
+                    }
+                ]
+            }
+        },
+        "n_s_9a374812c67a39818666393bce51a1b2_1": {
+            "id": "n_s_9a374812c67a39818666393bce51a1b2_1",
+            "name": "TextInput",
+            "componentId": "orcs-design-system/TextInput",
+            "props": {
+                "fullWidth": true,
+                "id": "search",
+                "key": "search",
+                "type": "text",
+                "placeholder": "Search for...",
+                "iconRight": [
+                    "fas",
+                    "search"
+                ]
+            }
+        },
+        "n_Icon_Basic_0": {
+            "id": "n_Icon_Basic_0",
+            "name": "Icon",
+            "componentId": "orcs-design-system/Icon",
+            "props": {
+                "icon": [
+                    "fas",
+                    "angle-down"
+                ],
+                "title": "Down"
+            }
+        },
+        "n_Notification_Basic_0": {
+            "id": "n_Notification_Basic_0",
+            "name": "Notification",
+            "componentId": "orcs-design-system/Notification",
+            "props": {
+                "icon": [
+                    "fas",
+                    "share-square"
+                ],
+                "children": [
+                    "Notification message."
+                ]
+            }
+        },
+        "n_RadioButton_Basic_0": {
+            "id": "n_RadioButton_Basic_0",
+            "name": "RadioButton",
+            "componentId": "orcs-design-system/RadioButton",
+            "props": {
+                "name": "RadioButtons01",
+                "label": "Default radio"
+            }
+        },
+        "n_Range_Basic_0": {
+            "id": "n_Range_Basic_0",
+            "name": "Range",
+            "componentId": "orcs-design-system/Range",
+            "props": {
+                "min": 0,
+                "max": 20,
+                "defaultValue": 10,
+                "ariaLabel": "Default range slider"
+            }
+        },
+        "n_Select_Basic_0": {
+            "id": "n_Select_Basic_0",
+            "name": "Select",
+            "componentId": "orcs-design-system/Select",
+            "props": {
+                "options": [
+                    {
+                        "value": "option1",
+                        "label": "Option 1"
+                    }
+                ],
+                "label": "Select label",
+                "inputId": "defaultSelect"
+            }
+        },
+        "n_StatusDot_Basic_0": {
+            "id": "n_StatusDot_Basic_0",
+            "name": "StatusDot",
+            "componentId": "orcs-design-system/StatusDot",
+            "props": {}
+        },
+        "n_StatusDot_With_Icon_0": {
+            "id": "n_StatusDot_With_Icon_0",
+            "name": "StatusDot",
+            "componentId": "orcs-design-system/StatusDot",
+            "props": {
+                "variant": "success",
+                "icon": true,
+                "children": [
+                    {
+                        "__type": "node",
+                        "nodeId": "n_StatusDot_With_Icon_1"
+                    }
+                ]
+            }
+        },
+        "n_StatusDot_With_Icon_1": {
+            "id": "n_StatusDot_With_Icon_1",
+            "name": "Icon",
+            "componentId": "orcs-design-system/Icon",
+            "props": {
+                "icon": [
+                    "fas",
+                    "check"
+                ],
+                "color": "white",
+                "size": "xs",
+                "transform": "up-2"
+            }
+        },
+        "n_StyledLink_Basic_0": {
+            "id": "n_StyledLink_Basic_0",
+            "name": "StyledLink",
+            "componentId": "orcs-design-system/StyledLink",
+            "props": {
+                "href": "#",
+                "children": [
+                    "Styled Link"
+                ]
+            }
+        },
+        "n_s_b7ec9ab635927bde42b9bc279009c69e_0": {
+            "id": "n_s_b7ec9ab635927bde42b9bc279009c69e_0",
+            "name": "TabsContainer",
+            "componentId": "orcs-design-system/TabsContainer",
+            "props": {
+                "children": [
+                    {
+                        "__type": "node",
+                        "nodeId": "n_s_b7ec9ab635927bde42b9bc279009c69e_1"
+                    },
+                    {
+                        "__type": "node",
+                        "nodeId": "n_s_b7ec9ab635927bde42b9bc279009c69e_3"
+                    },
+                    {
+                        "__type": "node",
+                        "nodeId": "n_s_b7ec9ab635927bde42b9bc279009c69e_5"
+                    }
+                ]
+            }
+        },
+        "n_s_b7ec9ab635927bde42b9bc279009c69e_1": {
+            "id": "n_s_b7ec9ab635927bde42b9bc279009c69e_1",
+            "name": "Tab",
+            "componentId": "orcs-design-system/Tab",
+            "props": {
+                "children": [
+                    {
+                        "__type": "node",
+                        "nodeId": "n_s_b7ec9ab635927bde42b9bc279009c69e_2"
+                    }
+                ]
+            }
+        },
+        "n_s_b7ec9ab635927bde42b9bc279009c69e_2": {
+            "id": "n_s_b7ec9ab635927bde42b9bc279009c69e_2",
+            "name": "a",
+            "componentId": "a",
+            "props": {
+                "href": "#",
+                "children": [
+                    "Details"
+                ]
+            }
+        },
+        "n_s_b7ec9ab635927bde42b9bc279009c69e_3": {
+            "id": "n_s_b7ec9ab635927bde42b9bc279009c69e_3",
+            "name": "Tab",
+            "componentId": "orcs-design-system/Tab",
+            "props": {
+                "active": true,
+                "children": [
+                    {
+                        "__type": "node",
+                        "nodeId": "n_s_b7ec9ab635927bde42b9bc279009c69e_4"
+                    }
+                ]
+            }
+        },
+        "n_s_b7ec9ab635927bde42b9bc279009c69e_4": {
+            "id": "n_s_b7ec9ab635927bde42b9bc279009c69e_4",
+            "name": "a",
+            "componentId": "a",
+            "props": {
+                "href": "#",
+                "tabIndex": "-1",
+                "children": [
+                    "\n          Additional information\n        "
+                ]
+            }
+        },
+        "n_s_b7ec9ab635927bde42b9bc279009c69e_5": {
+            "id": "n_s_b7ec9ab635927bde42b9bc279009c69e_5",
+            "name": "Tab",
+            "componentId": "orcs-design-system/Tab",
+            "props": {
+                "children": [
+                    {
+                        "__type": "node",
+                        "nodeId": "n_s_b7ec9ab635927bde42b9bc279009c69e_6"
+                    }
+                ]
+            }
+        },
+        "n_s_b7ec9ab635927bde42b9bc279009c69e_6": {
+            "id": "n_s_b7ec9ab635927bde42b9bc279009c69e_6",
+            "name": "a",
+            "componentId": "a",
+            "props": {
+                "href": "#",
+                "children": [
+                    "Planning"
+                ]
+            }
+        },
+        "n_Tag_Basic_0": {
+            "id": "n_Tag_Basic_0",
+            "name": "Tag",
+            "componentId": "orcs-design-system/Tag",
+            "props": {
+                "children": [
+                    "Default Tag"
+                ]
+            }
+        },
+        "n_TextArea_Basic_0": {
+            "id": "n_TextArea_Basic_0",
+            "name": "TextArea",
+            "componentId": "orcs-design-system/TextArea",
+            "props": {
+                "label": "Message",
+                "placeholder": "Enter your message"
+            }
+        },
+        "n_s_e5a948d6ef17fa6bfb7bc39c27122929_0": {
+            "id": "n_s_e5a948d6ef17fa6bfb7bc39c27122929_0",
+            "name": "TextInput",
+            "componentId": "orcs-design-system/TextInput",
+            "props": {
+                "key": "textInput1",
+                "type": "text",
+                "label": "Full name",
+                "placeholder": "E.g. John Smith"
+            }
+        },
+        "n_Toggle_Basic_0": {
+            "id": "n_Toggle_Basic_0",
+            "name": "Toggle",
+            "componentId": "orcs-design-system/Toggle",
+            "props": {
+                "id": "autosave",
+                "label": "Auto save"
+            }
+        },
+        "n_TreeNav_Basic_0": {
+            "id": "n_TreeNav_Basic_0",
+            "name": "TreeNav",
+            "componentId": "orcs-design-system/TreeNav",
+            "props": {
+                "data": [
+                    {
+                        "id": "1",
+                        "name": "Domains",
+                        "badgeText": "Domains",
+                        "badgeColour": "success",
+                        "children": [
+                            {
+                                "id": "1a",
+                                "name": "Business",
+                                "badgeText": "Domain",
+                                "badgeColour": "success",
+                                "checkbox": true,
+                                "children": [
+                                    {
+                                        "id": "1a1",
+                                        "name": "Capture & Release",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success",
+                                        "checkbox": true
+                                    },
+                                    {
+                                        "id": "1a2",
+                                        "name": "Goonsquad",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success",
+                                        "checkbox": true
+                                    },
+                                    {
+                                        "id": "1a3",
+                                        "name": "Wolfpack",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success",
+                                        "checkbox": true
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "1b",
+                                "name": "Hardware Product",
+                                "badgeText": "Domain",
+                                "badgeColour": "success",
+                                "children": [
+                                    {
+                                        "id": "1b1",
+                                        "name": "Blackhole",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1b2",
+                                        "name": "Marvel",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1b3",
+                                        "name": "Stargazers",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "1c",
+                                "name": "Innovation",
+                                "badgeText": "Domain",
+                                "badgeColour": "success",
+                                "children": [
+                                    {
+                                        "id": "1c1",
+                                        "name": "AI Master Race",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1c2",
+                                        "name": "Constellation",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1c3",
+                                        "name": "Dark Matter",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1c4",
+                                        "name": "Future Space",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1c5",
+                                        "name": "Innovation Lab",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "1d",
+                                "name": "Marketing",
+                                "badgeText": "Domain",
+                                "badgeColour": "success",
+                                "children": [
+                                    {
+                                        "id": "1d1",
+                                        "name": "Community",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1d2",
+                                        "name": "Product",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "1e",
+                                "name": "Operations",
+                                "badgeText": "Domain",
+                                "badgeColour": "success",
+                                "children": [
+                                    {
+                                        "id": "1e1",
+                                        "name": "Backbone",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1e2",
+                                        "name": "Blackops",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "1f",
+                                "name": "Platform",
+                                "badgeText": "Domain",
+                                "badgeColour": "success",
+                                "children": [
+                                    {
+                                        "id": "1f1",
+                                        "name": "Event Horizon",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1f2",
+                                        "name": "Transformers",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1f3",
+                                        "name": "Zeta Squad",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "1g",
+                                "name": "Research & Analysis",
+                                "badgeText": "Domain",
+                                "badgeColour": "success",
+                                "children": [
+                                    {
+                                        "id": "1g1",
+                                        "name": "Alpha Relay",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1g2",
+                                        "name": "Gizmosphere",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "1h",
+                                "name": "Software Product",
+                                "badgeText": "Domain",
+                                "badgeColour": "success",
+                                "children": [
+                                    {
+                                        "id": "1h1",
+                                        "name": "Alphazone",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1h2",
+                                        "name": "Asterism",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1h3",
+                                        "name": "Beta Testers",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1h4",
+                                        "name": "BobRossers",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1h5",
+                                        "name": "Flashdance",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1h3",
+                                        "name": "Matrix",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1h4",
+                                        "name": "Matter",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1h5",
+                                        "name": "The Incredibles",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "1i",
+                                "name": "Support",
+                                "badgeText": "Domain",
+                                "badgeColour": "success",
+                                "children": [
+                                    {
+                                        "id": "1i1",
+                                        "name": "Customer Support",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    },
+                                    {
+                                        "id": "1i2",
+                                        "name": "Tech Support",
+                                        "badgeText": "Team",
+                                        "badgeColour": "success"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "2",
+                        "name": "Capabilities",
+                        "badgeText": "Capabilities",
+                        "badgeColour": "secondary",
+                        "children": [
+                            {
+                                "id": "2a",
+                                "name": "Analysts",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2b",
+                                "name": "Astrophysics & Aerospace Engineering",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2c",
+                                "name": "Consulting",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2d",
+                                "name": "Customer Success",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2e",
+                                "name": "Data Engineering",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2f",
+                                "name": "Design",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2g",
+                                "name": "DevOps",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2h",
+                                "name": "Finance",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2i",
+                                "name": "Hardware Engineering",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2j",
+                                "name": "Leadership",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2k",
+                                "name": "Management",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2l",
+                                "name": "Marketing",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2m",
+                                "name": "Operations",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2n",
+                                "name": "People & Culture",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2o",
+                                "name": "Product Management",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2p",
+                                "name": "Quality Assurance & Testing",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2q",
+                                "name": "Recruitment",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2r",
+                                "name": "Research",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2s",
+                                "name": "Sales",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2t",
+                                "name": "Security Engineering",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2u",
+                                "name": "Software Engineering",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2v",
+                                "name": "Support",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            },
+                            {
+                                "id": "2w",
+                                "name": "Systems Engineering",
+                                "badgeText": "Capability",
+                                "badgeColour": "secondary"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "name": "Omega Systems",
+                        "badgeText": "Contractor",
+                        "badgeColour": "primary"
+                    }
+                ],
+                "openByDefault": true,
+                "width": 400
+            }
+        }
+    },
+    "settings": {
+        "build": {
+            "id": "build",
+            "cli": "3.1.6",
+            "node": "v16.15.0",
+            "platform": "darwin"
+        },
+        "framework": {
+            "id": "framework",
+            "name": "react",
+            "v": "18.3.1"
+        },
+        "context": {
+            "id": "context",
+            "componentId": "lib/SystemThemeProvider.js",
+            "updated": 1725335522130
+        }
+    }
+}
