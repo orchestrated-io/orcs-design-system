@@ -156,7 +156,8 @@
     "react-dom": "$react-dom",
     "typescript": "5.2.2",
     "webpack-dev-middleware": "6.1.2",
-    "ws": "8.17.1"
+    "ws": "8.17.1",
+    "path-to-regexp": "0.1.10"
   },
   "browserslist": [
     ">0.2%",
