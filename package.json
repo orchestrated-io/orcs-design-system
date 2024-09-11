@@ -47,9 +47,10 @@
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@floating-ui/react": "^0.26.19",
-    "@mui/icons-material": "^5.15.18",
-    "@mui/material": "^5.15.18",
-    "@mui/x-date-pickers": "^7.5.0",
+    "@mui/icons-material": "^6.0.2",
+    "@mui/material": "^6.0.2",
+    "@mui/utils": "^6.0.2",
+    "@mui/x-date-pickers": "^7.16.0",
     "@styled-system/css": "^5.1.5",
     "@styled-system/prop-types": "^5.1.5",
     "@styled-system/should-forward-prop": "^5.1.5",
@@ -59,7 +60,7 @@
     "polished": "^3.7.1",
     "prop-types": "^15.6.2",
     "react-app-polyfill": "^2.0.0",
-    "react-arborist": "^3.2.0",
+    "react-arborist": "^3.4.0",
     "react-cool-onclickoutside": "^1.5.9",
     "react-dates": "^21.8.0",
     "react-intersection-observer": "^9.4.3",
@@ -143,7 +144,6 @@
     "webpack-cli": "^5.1.4"
   },
   "overrides": {
-    "@mui/utils": "6.0.0-alpha.9",
     "braces": "3.0.3",
     "eslint-plugin-testing-library": "^5.11.1",
     "jest": "$jest",
@@ -163,7 +163,8 @@
     "react-router": {
       "path-to-regexp": "8.0.0"
     },
-    "send": "0.19.0"
+    "send": "0.19.0",
+    "redux": "4.2.1"
   },
   "browserslist": [
     ">0.2%",
