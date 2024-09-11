@@ -1,6 +1,6 @@
 {
   "name": "orcs-design-system",
-  "version": "3.2.38",
+  "version": "3.2.39",
   "engines": {
     "node": "20.12.2"
   },
@@ -152,14 +152,18 @@
     "postcss": "^8.4.31",
     "react-scripts": "5.0.1",
     "remark-parse": "10.0.2",
-    "react": "$react",
-    "react-dom": "$react-dom",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "typescript": "5.2.2",
     "webpack-dev-middleware": "6.1.2",
     "ws": "8.17.1",
-    "react-router-dom":{
+    "express": {
       "path-to-regexp": "0.1.10"
-    }
+    },
+    "react-router": {
+      "path-to-regexp": "8.0.0"
+    },
+    "send": "0.19.0"
   },
   "browserslist": [
     ">0.2%",
