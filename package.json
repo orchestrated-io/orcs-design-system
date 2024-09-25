@@ -96,7 +96,7 @@
     "@storybook/core-events": "^8.1.7",
     "@storybook/manager-api": "^8.1.7",
     "@storybook/mdx1-csf": "^1.0.0",
-    "@storybook/preset-create-react-app": "^8.1.7",
+    "@storybook/preset-create-react-app": "^8.3.3",
     "@storybook/react": "^8.1.7",
     "@storybook/react-webpack5": "^8.2.9",
     "@storybook/storybook-deployer": "2.8.16",
@@ -160,7 +160,16 @@
       "path-to-regexp": "0.1.10"
     },
     "send": "0.19.0",
-    "redux": "4.2.1"
+    "redux": "4.2.1",
+    "workbox-build": {
+      "rollup": ">=3.29.5"
+    },
+    "@rollup/plugin-babel": {
+      "rollup": ">=3.29.5"
+    },
+    "@rollup/plugin-replace": {
+      "rollup": ">=3.29.5"
+    }
   },
   "browserslist": [
     ">0.2%",
