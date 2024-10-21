@@ -67,7 +67,8 @@
     "react-number-format": "^5.3.0",
     "react-router-dom": "^5.3.4",
     "react-select": "^5.7.4",
-    "styled-system": "^5.1.5"
+    "styled-system": "^5.1.5",
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.10",
@@ -137,7 +138,6 @@
     "shelljs": "^0.8.5",
     "storybook": "^8.1.7",
     "style-loader": "^2.0.0",
-    "styled-components": "^5.2.1",
     "transform-loader": "^0.2.4",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
