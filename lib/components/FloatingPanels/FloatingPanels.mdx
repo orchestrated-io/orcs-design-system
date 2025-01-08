@@ -1,0 +1,56 @@
+import { Story, Canvas, Controls, Meta } from "@storybook/addon-docs";
+import FloatingPanels from ".";
+import * as stories from "./FloatingPanels.stories";
+
+<Meta of={stories} />
+
+# Floating Panels
+
+The Floating Panels Component is a flexible React component that creates a set of collapsible panels floating on the screen. It's ideal for displaying information or controls that need to be easily accessible but not always visible.
+
+## Features
+
+- Customizable position on the screen
+- Expandable/collapsible panels
+- Configurable icons and titles for each panel
+- Ability to include any content within panels
+
+## Usage
+
+```js run
+const panels = [
+  {
+    id: "legend",
+    iconName: "map",
+    title: "Legend",
+    defaultExpanded: true,
+    children: <div>Legend content goes here</div>
+  },
+  {
+    id: "view-options",
+    iconName: "eye",
+    title: "View Options",
+    defaultExpanded: true,
+    children: <div>View options content goes here</div>
+  },
+  {
+    id: "person-details",
+    iconName: "user",
+    title: "Person Details",
+    children: <div>Person details content goes here</div>
+  },
+  {
+    id: "properties",
+    iconName: "gear",
+    title: "Properties",
+    children: <div>Properties content goes here</div>
+  }
+  // Add more panels as needed...
+];
+```
+
+<Canvas of={stories.defaultFloatingPanels} />
+
+## Properties
+
+<Controls component={FloatingPanels} />
