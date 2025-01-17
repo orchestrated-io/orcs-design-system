@@ -10,10 +10,12 @@ The Floating Panels Component is a flexible React component that creates a set o
 
 ## Features
 
-- Customizable position on the screen
+- Customisable container height
+- Customisable position on the screen
 - Expandable/collapsible panels
 - Configurable icons and titles for each panel
-- Ability to include any content within panels
+- can default specific panels to start expanded on load
+- Ability to include any content within panels (can pass content as a component)
 
 ## Usage
 
@@ -24,26 +26,26 @@ const panels = [
     iconName: "map",
     title: "Legend",
     defaultExpanded: true,
-    children: <div>Legend content goes here</div>
+    content: <div>Legend content goes here</div>
   },
   {
     id: "view-options",
     iconName: "eye",
     title: "View Options",
     defaultExpanded: true,
-    children: <div>View options content goes here</div>
+    content: <div>View options content goes here</div>
   },
   {
     id: "person-details",
     iconName: "user",
     title: "Person Details",
-    children: <div>Person details content goes here</div>
+    content: <div>Person details content goes here</div>
   },
   {
     id: "properties",
     iconName: "gear",
     title: "Properties",
-    children: <div>Properties content goes here</div>
+    content: <div>Properties content goes here</div>
   }
   // Add more panels as needed...
 ];
