@@ -1,6 +1,6 @@
 {
   "name": "orcs-design-system",
-  "version": "3.3.11",
+  "version": "3.3.12",
   "engines": {
     "node": "20.12.2"
   },
