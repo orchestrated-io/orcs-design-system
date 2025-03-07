@@ -6,7 +6,10 @@ import * as stories from "./FloatingPanels.stories";
 
 # Floating Panels
 
-The Floating Panels Component is a flexible React component that creates a set of collapsible panels floating on the screen. It's ideal for displaying information or controls that need to be easily accessible but not always visible.
+The Floating Panels Component is a flexible React component that can be used in two different ways.
+
+1. Creates a set of collapsible panels floating on the screen. It's ideal for displaying information or controls that need to be easily accessible but not always visible.
+2. Can be used as a control panel for actions, where instead of a set of collapsible panels, it's a single panel with a set of actions.
 
 ## Features
 
@@ -18,6 +21,10 @@ The Floating Panels Component is a flexible React component that creates a set o
 - Ability to include any content within panels (can pass content as a component)
 
 ## Usage
+
+## Floating Panels as a set of collapsible panels
+
+#### For floating togglable pop out panels. You can define the panels you want to display, like so:
 
 ```js run
 const panels = [
@@ -51,6 +58,12 @@ const panels = [
 ```
 
 <Canvas of={stories.defaultFloatingPanels} />
+
+## Floating Panels as a control panel
+
+#### For a control panel, you can define the actions you want to display, like so:
+
+<Canvas of={stories.floatingActionsPanel} />
 
 ## Properties
 
