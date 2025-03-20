@@ -17,53 +17,28 @@ The Floating Panels Component is a flexible React component that can be used in 
 - Customisable position on the screen
 - Expandable/collapsible panels
 - Configurable icons and titles for each panel
-- can default specific panels to start expanded on load
+- Can chose panel to expand on initial load
 - Ability to include any content within panels (can pass content as a component)
-
-## Usage
 
 ## Floating Panels as a set of collapsible panels
 
-#### For floating togglable pop out panels. You can define the panels you want to display, like so:
-
-```js run
-const panels = [
-  {
-    id: "legend",
-    iconName: "map",
-    title: "Legend",
-    expanded: true,
-    content: <div>Legend content goes here</div>
-  },
-  {
-    id: "view-options",
-    iconName: "eye",
-    title: "View Options",
-    content: <div>View options content goes here</div>
-  },
-  {
-    id: "person-details",
-    iconName: "user",
-    title: "Person Details",
-    content: <div>Person details content goes here</div>
-  },
-  {
-    id: "properties",
-    iconName: "gear",
-    title: "Properties",
-    content: <div>Properties content goes here</div>
-  }
-  // Add more panels as needed...
-];
-```
+Simply include `content` on panels to render the content of the panel.
 
 <Canvas of={stories.defaultFloatingPanels} />
 
 ## Floating Panels as a control panel
 
-#### For a control panel, you can define the actions you want to display, like so:
+Exclude `content` to prevent selection and include `onClick` to respond to clicks.
 
-<Canvas of={stories.floatingActionsPanel} />
+<Canvas of={stories.floatingControlPanel} />
+
+## Temporarily disable panel selection
+
+Simply include `disablePanelSelection={true}` to prevent selection panel selection.
+
+Useful while a panel is doing async work (such as performing an API query).
+
+<Canvas of={stories.unselectableFloatingPanels} />
 
 ## Properties
 
