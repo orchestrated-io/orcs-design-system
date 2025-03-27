@@ -24,17 +24,19 @@ The Floating Panels Component is a flexible React component that can be used in 
 
 Simply include `content` on panels to render the content of the panel.
 
+Use `defaultExpandedPanelId` to pre-select a panel.
+
 <Canvas of={stories.defaultFloatingPanels} />
 
 ## Floating Panels as a control panel
 
-Exclude `content` to prevent selection and include `onClick` to respond to clicks.
+Exclude `content` to prevent selection, and include `onClick` to respond to clicks.
 
-<Canvas of={stories.floatingControlPanel} />
+<Canvas of={stories.buttonFloatingPanels} />
 
 ## Temporarily disable panel selection
 
-Simply include `disablePanelSelection={true}` to prevent selection panel selection.
+Simply include `disablePanelSelection={true}` to prevent selection changes.
 
 Useful while a panel is doing async work (such as performing an API query).
 
