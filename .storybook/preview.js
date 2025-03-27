@@ -8,6 +8,8 @@ import { default as systemtheme } from "../lib/systemtheme";
 import { default as systemThemeCollapsed } from "../lib/systemThemeCollapsed";
 import styled, { ThemeProvider } from "styled-components";
 import { get } from "lodash";
+import prettier from "prettier";
+import parserBabel from "prettier/parser-babel";
 
 library.add(far, fas);
 
@@ -113,7 +115,14 @@ export const parameters = {
   },
   docs: {
     container: DocsContainer,
-    page: DocsPage
+    page: DocsPage,
+    source: {
+      transform: (input) =>
+        prettier.format(input, {
+          parser: "babel",
+          plugins: [parserBabel]
+        }),
+    },
   },
   a11y: { disable: false },
   viewMode: "docs",
