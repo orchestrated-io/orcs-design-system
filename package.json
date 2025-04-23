@@ -82,7 +82,7 @@
     "@fortawesome/fontawesome-svg-core": "file:libs/fortawesome-fontawesome-svg-core-1.3.0.tgz",
     "@fortawesome/free-regular-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
-    "@fortawesome/react-fontawesome": "git://github.com/FortAwesome/react-fontawesome.git#0.2.2",
+    "@fortawesome/react-fontawesome": "git://github.com/FortAwesome/react-fontawesome.git",
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
     "@storybook/addon-a11y": "^8.6.12",
