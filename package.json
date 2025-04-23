@@ -1,6 +1,6 @@
 {
   "name": "orcs-design-system",
-  "version": "3.3.27",
+  "version": "3.3.28",
   "engines": {
     "node": "20.12.2"
   },
@@ -67,8 +67,8 @@
     "react-number-format": "^5.3.0",
     "react-router-dom": "^5.3.4",
     "react-select": "^5.7.4",
-    "styled-system": "^5.1.5",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "styled-system": "^5.1.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.10",
@@ -106,7 +106,7 @@
     "@testing-library/react": "^11.2.2",
     "@types/jest": "^27.5.2",
     "@types/styled-components": "^5.1.7",
-    "audit-ci": "^6.1.2",
+    "audit-ci": "^7.1.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.0",
     "babel-loader": "^8.1.0",
