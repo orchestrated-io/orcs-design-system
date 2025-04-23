@@ -15,9 +15,9 @@ jobs:
       actions: write
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: 20.12.2
+          node-version: 22.14.0
           registry-url: https://registry.npmjs.org/
       - name: npm install and deploy
         run: |
