@@ -171,7 +171,8 @@
     },
     "@rollup/plugin-replace": {
       "rollup": ">=3.29.5"
-    }
+    },
+    "react-is": "^19.1.0"
   },
   "browserslist": [
     ">0.2%",
