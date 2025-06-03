@@ -1,0 +1,33 @@
+import { Story, Controls, Meta, Canvas } from "@storybook/addon-docs";
+import Breadcrumbs from ".";
+import * as stories from "./Breadcrumbs.stories";
+
+<Meta of={stories} />
+
+# Breadcrumbs
+
+[Default](#default) | [White variant](#white-variant) | [Icon Tooltip variant](#icon-tooltip-variant) | [Properties](#properties)
+
+Breadcrumbs help users understand their location within a hierarchy and provide easy navigation back to previous levels.
+
+The Breadcrumbs component accepts a `config` array of `{ label, to }` objects. The last item is rendered as the current page (bold, not a link).
+
+## Default
+
+<Canvas of={stories.Default} />
+
+## White variant
+
+Use the `variant="white"` prop for use on dark or colored backgrounds.
+
+<Canvas of={stories.WhiteVariant} />
+
+## Icon Tooltip variant
+
+Use the `showAsIconTooltip` prop to render a compact breadcrumbs icon. Hovering the icon will show the full breadcrumbs in a popover. This is useful for saving space in dense UIs.
+
+<Canvas of={stories.IconTooltip} />
+
+## Properties
+
+<Controls component={Breadcrumbs} />

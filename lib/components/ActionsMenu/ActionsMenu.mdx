@@ -6,7 +6,7 @@ import * as stories from "./ActionsMenu.stories";
 
 # Actions Menu
 
-[Default actions menu](#default-actions-menu) | [Left offset actions menu](#left-offset-actions-menu) | [Advanced actions menu](#advanced-actions-menu) | [Custom actions menu](#custom-actions-menu) | [Text button actions menu](#text-button-actions-menu) | [Properties](#properties)
+[Default actions menu](#default-actions-menu) | [Left offset actions menu](#left-offset-actions-menu) | [Advanced actions menu](#advanced-actions-menu) | [Custom actions menu](#custom-actions-menu) | [Text button actions menu](#text-button-actions-menu) | [Circle variant](#circle-variant) | [Properties](#properties)
 
 This component should be used when an item in the UI has multiple actions that can be taken on it.
 
@@ -43,6 +43,12 @@ If you would like to enhance the ActionsMenu without default behaviours, you can
 An example of using ActionsMenu paired with a text button trigger.
 
 <Canvas of={stories.textButtonActionsMenu} />
+
+## Circle Variant
+
+The ActionsMenu can be displayed with a circular trigger button by using the `variant="circle"` prop. This variant provides a dark circular button with a larger size (35px x 35px).
+
+<Canvas of={stories.circleVariantActionsMenu} />
 
 ## Keep Actions Menu In View
 

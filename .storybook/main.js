@@ -7,6 +7,7 @@ module.exports = {
     "@storybook/addon-viewport",
     "@storybook/addon-a11y",
     "@storybook/addon-toolbars",
+    "@storybook/addon-actions",
     "@storybook/components",
     "@storybook/manager-api",
     "@storybook/core-events",
