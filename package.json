@@ -58,7 +58,6 @@
     "material-react-table": "^2.13.2",
     "polished": "^3.7.1",
     "prop-types": "^15.6.2",
-    "react-app-polyfill": "^2.0.0",
     "react-arborist": "^3.4.0",
     "react-cool-onclickoutside": "^1.5.9",
     "react-dates": "^21.8.0",
