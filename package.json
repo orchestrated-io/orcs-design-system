@@ -1,6 +1,6 @@
 {
   "name": "orcs-design-system",
-  "version": "3.3.28",
+  "version": "4.0.0",
   "engines": {
     "node": "20.12.2"
   },
@@ -58,7 +58,6 @@
     "material-react-table": "^2.13.2",
     "polished": "^3.7.1",
     "prop-types": "^15.6.2",
-    "react-app-polyfill": "^2.0.0",
     "react-arborist": "^3.4.0",
     "react-cool-onclickoutside": "^1.5.9",
     "react-dates": "^21.8.0",
@@ -133,9 +132,9 @@
     "playroom": "^0.43.0",
     "postcss": "8.5.2",
     "prettier": "^2.2.1",
-    "react": "^18.3.1",
+    "react": "^19.1.0",
     "react-docgen": "^7.0.3",
-    "react-dom": "^18.3.1",
+    "react-dom": "^19.1.0",
     "shelljs": "^0.8.5",
     "storybook": "^8.1.7",
     "style-loader": "^2.0.0",
@@ -153,8 +152,9 @@
     "postcss": "8.5.2",
     "react-scripts": "5.0.1",
     "remark-parse": "10.0.2",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-is": "^19.1.0",
     "typescript": "5.2.2",
     "webpack-dev-middleware": "6.1.2",
     "ws": "8.17.1",
@@ -176,7 +176,8 @@
   "browserslist": [
     ">0.2%",
     "not dead",
-    "not op_mini all"
+    "not op_mini all",
+    "not ie 11"
   ],
   "files": [
     "es"
