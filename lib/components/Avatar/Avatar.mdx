@@ -6,7 +6,7 @@ import * as stories from "./Avatar.stories";
 
 # Avatar
 
-[Default avatar](#default-avatar) | [No image source](#no-image-source) | [Image only](#image-only) | [Icon only](#icon-only) | [Name as link](#name-as-link) | [Small size](#small-size) | [Large size](#large-size) | [Custom size](#custom-size) | [Custom subtitle content](#custom-subtitle-content) | [With local time](#with-local-time) | [Inverted style](#inverted-style) | [Alternate shapes](#alternate-shapes) | [Properties](#properties)
+[Default avatar](#default-avatar) | [No image source](#no-image-source) | [Image only](#image-only) | [Icon only](#icon-only) | [Name as link](#name-as-link) | [Small size](#small-size) | [Large size](#large-size) | [Custom size](#custom-size) | [Custom subtitle content](#custom-subtitle-content) | [With local time](#with-local-time) | [Inverted style](#inverted-style) | [Alternate shapes](#alternate-shapes) | [Header Avatar Variant](#header-avatar-variant) | [Properties](#properties)
 
 Avatars can come in a few different options. Firstly regular or small size.
 
@@ -87,6 +87,16 @@ For when Avatar is used on a dark background.
 Use a different shape when you would like to distinguish between an avatar for a person, and an avatar for another construct, like a team or tag.
 
 <Canvas of={stories.alternateShapes} />
+
+## Header Avatar Variant
+
+This variant is designed for use in headers or profile sections where only the avatar is needed, with no title or subtitle. It supports custom sizing (small: 65px, large: 150px), shape, and an optional action button for editing or updating the avatar.
+
+- Use `headerAvatar` prop to enable this mode.
+- Use `onClick` to display the action button and pass onClick function to this button (only for large size).
+- A white border and drop shadow are applied for visual emphasis.
+
+<Canvas of={stories.headerAvatarVariants} />
 
 ## Properties
 
