@@ -103,8 +103,9 @@ After your changes have been merged to master, from your master branch:
 
 ```
 npm version patch
-git push
 ```
+
+Then create a new pull request to master with the version update.
 
 ### Deploying to GitHub Pages
 
