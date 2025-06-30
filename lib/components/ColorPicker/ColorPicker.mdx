@@ -1,0 +1,103 @@
+import ColorPicker from ".";
+import { Story, Controls, Meta, Canvas } from "@storybook/addon-docs";
+import * as stories from "./ColorPicker.stories";
+
+<Meta of={stories} />
+
+# ColorPicker
+
+The ColorPicker component is a wrapper around the `react-best-gradient-color-picker` library that provides a customizable color selection interface. It supports both solid colors and gradients, with extensive configuration options to show or hide various UI elements.
+
+## Features
+
+- **Flexible Trigger**: Accepts any React element or function as children to trigger the color picker
+- **Positioning**: Configurable positioning relative to the trigger element
+- **Customizable UI**: Extensive options to show/hide various picker controls
+- **Color & Gradient Support**: Handles both solid colors and gradient values
+- **Click Outside to Close**: Automatically closes when clicking outside the picker
+
+## Basic Usage
+
+The ColorPicker component requires a `value` (current color), `onChange` handler, and `children` (trigger element).
+
+```jsx
+import ColorPicker from "./ColorPicker";
+import Button from "../Button";
+
+const [color, setColor] = useState("#ff0000");
+
+<ColorPicker value={color} onChange={setColor}>
+  <Button>Pick Color</Button>
+</ColorPicker>;
+```
+
+## Function as Children
+
+You can also pass a function as children to get access to the toggle function and open state:
+
+```jsx
+<ColorPicker value={color} onChange={setColor}>
+  {({ isOpen, toggleColorPicker }) => (
+    <Button onClick={toggleColorPicker}>
+      {isOpen ? "Close Picker" : "Open Picker"}
+    </Button>
+  )}
+</ColorPicker>
+```
+
+## Examples
+
+### Default Color Picker
+
+<Canvas of={stories.Default} />
+
+## Properties
+
+<Controls />
+
+### Required Props
+
+- **value** (`string`): The current color value (hex, rgb, or gradient)
+- **onChange** (`function`): Callback function called when color changes
+- **children** (`node|function`): Trigger element or function that receives `{ isOpen, toggleColorPicker }`
+
+### Optional Props
+
+#### Positioning
+
+- **position** (`string`): Position of the picker relative to trigger. Options: `top-start`, `top-end`, `bottom-start`, `bottom-end`, `left-start`, `left-end`, `right-start`, `right-end`. Default: `bottom-start`
+- **zIndex** (`number`): Z-index of the picker popup. Default: `20`
+
+#### Styling
+
+- **bg** (`string`): Background color of the picker container. Default: `#202020`
+- **p** (`string`): Padding of the picker container. Default: `s`
+- **borderRadius** (`string`): Border radius of the picker container. Default: `2`
+
+#### Picker Configuration
+
+- **width** (`number`): Width of the color picker. Default: `250`
+- **height** (`number`): Height of the color picker. Default: `250`
+
+#### Visibility Controls
+
+- **hidePresets** (`boolean`): Hide preset colors. Default: `true`
+- **hideInputs** (`boolean`): Hide color input fields. Default: `false`
+- **hideControls** (`boolean`): Hide control buttons. Default: `false`
+- **hideOpacity** (`boolean`): Hide opacity slider. Default: `true`
+- **hideEyeDrop** (`boolean`): Hide eye dropper tool. Default: `true`
+- **hideAdvancedSliders** (`boolean`): Hide advanced color sliders. Default: `true`
+- **hideColorGuide** (`boolean`): Hide color guide. Default: `true`
+- **hideInputType** (`boolean`): Hide input type selector. Default: `true`
+- **hideColorTypeBtns** (`boolean`): Hide color type buttons. Default: `false`
+- **hideGradientType** (`boolean`): Hide gradient type selector. Default: `false`
+- **hideGradientAngle** (`boolean`): Hide gradient angle control. Default: `false`
+- **hideGradientStop** (`boolean`): Hide gradient stop controls. Default: `false`
+- **hideGradientControls** (`boolean`): Hide gradient control buttons. Default: `false`
+
+## Best Practices
+
+1. **Use function children** when you need to control the trigger element's state or styling based on the picker's open state
+2. **Consider positioning** - use `bottom-start` or `bottom-end` for most cases, but adjust based on available space
+3. **Hide unnecessary controls** to create a cleaner, more focused interface
+4. **Handle color values** - the component accepts various color formats including hex, rgb, and gradients

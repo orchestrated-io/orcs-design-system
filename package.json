@@ -60,6 +60,7 @@
     "prop-types": "^15.6.2",
     "react-app-polyfill": "^2.0.0",
     "react-arborist": "^3.4.0",
+    "react-best-gradient-color-picker": "^3.0.14",
     "react-cool-onclickoutside": "^1.5.9",
     "react-dates": "^21.8.0",
     "react-intersection-observer": "^9.4.3",
