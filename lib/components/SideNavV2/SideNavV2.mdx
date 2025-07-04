@@ -1,0 +1,120 @@
+import { Story, Canvas, Controls, Meta } from "@storybook/addon-docs";
+import SideNavV2 from ".";
+import * as stories from "./SideNavV2.stories";
+
+<Meta of={stories} />
+
+# SideNav
+
+This component is used for navigating the app and for providing extra options which are expanded and shown in the sidebar.
+
+Expanded sidebar supports any content you'd like to put in them and the panel will scroll vertically if the content is taller than browser height.
+
+Make sure you use an appropriate icon for each tab so that the intent of that tab section is conveyed as best as possible, e.g. filter icon for filters, cog icon for settings.
+
+Sidenav supports passing in an items array, which has to contain an icon and a name for the nav item and then one of either a component (if the nav item is expanding the side nav) or a react router link (if the nav item is just linking to another page/route), like so:
+
+```js run
+const items = [
+  {
+    iconName: "building",
+    name: "Home",
+    component: makeLinkComponent("/"),
+    actionType: "link",
+    isActive: matchPath(location.pathname, { path: "/", exact: true })
+  },
+  {
+    iconName: "user",
+    name: "My profile",
+    component: makeLinkComponent("/profile"),
+    actionType: "link",
+    isActive: matchPath(location.pathname, { path: "/profile" })
+  },
+  {
+    iconName: "id-card",
+    name: "Search Page",
+    component: makeLinkComponent("/search"),
+    actionType: "link",
+    isActive: matchPath(location.pathname, { path: "/search" })
+  },
+  {
+    iconName: "snowflake",
+    name: "Filter",
+    hide: !matchPath(location.pathname, { path: "/search" }), // Specify hide if you want to hide this item
+    component: makePanelComponent("Filter"),
+    actionType: "component", // Use 'component' for a component
+    pageSpecific: matchPath(location.pathname, { path: "/search" }),
+    isExpandedByDefault: true
+  },
+  {
+    iconName: "sun",
+    name: "People",
+    hide: !matchPath(location.pathname, { path: "/profile" }), // Specify hide if you want to hide this item
+    component: makePanelComponent("People"),
+    actionType: "component", // Use 'component' for a component
+    pageSpecific: matchPath(location.pathname, { path: "/profile" }),
+    isExpandedByDefault: true
+  },
+  {
+    iconName: "bell",
+    name: "Notifications",
+    badgeNumber: "3", // Specify a badgeNumber if you want to have a count on this item
+    component: makePanelComponent("Notifications"),
+    actionType: "component" // Use 'component' for a component
+  },
+  {
+    iconName: "chart-bar",
+    name: "Browse teams",
+    large: true, // Specify large if you want the expanded sidebar to be wider
+    component: makePanelComponent(
+      "BrowseTeams",
+      <Flex flexDirection="column">
+        {["Team 1", "Team 2", "Team 3"].map((team) => (
+          <Link to={`/teams/${team}`} key={team}>
+            {team}
+          </Link>
+        ))}
+      </Flex>
+    ),
+    actionType: "component" // Use 'component' for a component
+  },
+  {
+    iconName: "cog",
+    name: "Settings",
+    hide: true, // Specify hide if you want to hide this item
+    bottomAligned: true,
+    component: makePanelComponent("Settings"),
+    actionType: "component" // Use 'component' for a component
+  },
+
+  {
+    iconName: "calendar-alt",
+    name: "Calendar",
+    pageSpecific: true, // Specify pageSpecific if you want this item to appear below a divider line separating common nav items from page/route specific items
+    component: makePanelComponent("Calendar"),
+    actionType: "component" // Use 'component' for a component
+  },
+  {
+    iconName: "star",
+    name: "Announcements",
+    badgeDot: true, // Specify if you want to have a blue notification dot on this item
+    bottomAligned: true, // Specify bottomAligned if this item should appear at bottom of SideNav
+    component: makePanelComponent("Announcements"),
+    actionType: "component" // Use 'component' for a component
+  },
+  {
+    iconName: "times-circle",
+    name: "Logout",
+    bottomAligned: true, // Specify bottomAligned if this item should appear at bottom of SideNav
+    onClick: () => alert("Logout function"), // Specify the onClick function for the button
+    actionType: "button" // Use 'button' for a button with onClick event
+  }
+  // Add more items as needed...
+];
+```
+
+<Canvas of={stories.SidebarNavigationV2} />
+
+## Properties
+
+<Controls component={SideNavV2} />
