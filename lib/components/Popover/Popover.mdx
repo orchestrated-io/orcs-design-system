@@ -6,11 +6,13 @@ import * as stories from "./Popover.stories";
 
 # Popover
 
-[Default Popover](#default-Popover) | [Directions](#directions) | [Specified width](#specified-width) | [Text alignment](#text-alignment) | [Display inline-block](#display-inline-block) | [Tooltip example](#tooltip-example) | [Icon example](#popover-with-icon-trigger) | [Properties](#properties)
+[Default Popover](#default-Popover) | [Directions](#directions) | [Specified width](#specified-width) | [Text alignment](#text-alignment) | [Display inline-block](#display-inline-block) | [Tooltip example](#tooltip-example) | [Icon example](#popover-with-icon-trigger) | [Custom Offset](#custom-offset) | [Properties](#properties)
 
 This popover component is intended to be used to supplement buttons (or other elements) that require some helper text. It supports customisation of direction and width. This is so that you can ensure that the popover doesn't run off the screen, and that the width suits the amount of text in the popover.
 
 If you don't specify a width, 200px is the default, but as a general guide try and keep widths somewhere between 150-250 if you are modifying. Make sure if setting width you include the unit you want it to use, e.g. pixels, %.
+
+The component also supports custom offset positioning to fine-tune the popover's placement relative to its trigger element.
 
 ## Default
 
@@ -59,6 +61,25 @@ Tooltip with link example
 If the tooltip falls outside the view port, the direction is changed to bring it back into view. In this case the default is to right align the Popover but it must be left aligned to be visible.
 
 <Canvas of={stories.keepInViewExample} />
+
+## Custom Offset
+
+You can customize the offset positioning of the popover using the `offset` prop. This allows you to fine-tune the popover's placement relative to its trigger element.
+
+The offset can be specified as:
+
+- An object with `mainAxis` and/or `alignmentAxis` properties
+- A function that receives the rects and returns an offset object
+
+**Examples:**
+
+- `{ mainAxis: 20 }` - Move the popover 20px away from the trigger on the main axis
+- `{ alignmentAxis: -10 }` - Move the popover 10px in the opposite direction on the alignment axis (for aligned placements like `top-start`, `top-end`, etc.)
+- `{ mainAxis: 15, alignmentAxis: 5 }` - Combine both axes
+
+**Note:** For simple placements (`right`, `left`, `top`, `bottom`), the `alignmentAxis` property is automatically converted to `crossAxis` to ensure proper vertical/horizontal positioning.
+
+<Canvas of={stories.customOffset} />
 
 ## Properties
 
