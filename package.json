@@ -1,6 +1,6 @@
 {
   "name": "orcs-design-system",
-  "version": "3.3.33",
+  "version": "3.3.37",
   "engines": {
     "node": "20.12.2"
   },
@@ -172,7 +172,8 @@
     },
     "@rollup/plugin-replace": {
       "rollup": ">=3.29.5"
-    }
+    },
+    "webpack-dev-server": "5.2.2"
   },
   "browserslist": [
     ">0.2%",
