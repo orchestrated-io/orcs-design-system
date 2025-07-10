@@ -172,7 +172,8 @@
     },
     "@rollup/plugin-replace": {
       "rollup": ">=3.29.5"
-    }
+    },
+    "webpack-dev-server": "5.2.2"
   },
   "browserslist": [
     ">0.2%",
