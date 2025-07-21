@@ -157,23 +157,11 @@ function ProjectPage({ projectId }) {
 Hook to access the SideNav context directly.
 
 ```jsx
-const {
-  currentViewState,
-  updateCurrentViewState,
-  clearCurrentViewState,
-  isViewing,
-  expandedItem,
-  isExpanded,
-  expandedWidth
-} = useSideNavStateContext();
+const { expandedItem, isExpanded, expandedWidth } = useSideNavStateContext();
 ```
 
 #### Returns
 
-- `currentViewState`: Current viewing data
-- `updateCurrentViewState`: Function to set viewing data
-- `clearCurrentViewState`: Function to clear current viewing
-- `isViewing`: Boolean indicating if there's active viewing
 - `expandedItem`: Currently expanded item
 - `isExpanded`: Whether the side nav is expanded
 - `expandedWidth`: Width of the expanded panel
