@@ -6,7 +6,7 @@ import * as stories from "./ActionsMenu.stories";
 
 # Actions Menu
 
-[Default actions menu](#default-actions-menu) | [Left offset actions menu](#left-offset-actions-menu) | [Advanced actions menu](#advanced-actions-menu) | [Custom actions menu](#custom-actions-menu) | [Text button actions menu](#text-button-actions-menu) | [Circle variant](#circle-variant) | [Properties](#properties)
+[Default actions menu](#default-actions-menu) | [Left offset actions menu](#left-offset-actions-menu) | [Advanced actions menu](#advanced-actions-menu) | [Custom actions menu](#custom-actions-menu) | [Text button actions menu](#text-button-actions-menu) | [Circle variant](#circle-variant) | [Disabled states](#disabled-states) | [Properties](#properties)
 
 This component should be used when an item in the UI has multiple actions that can be taken on it.
 
@@ -55,6 +55,14 @@ The ActionsMenu can be displayed with a circular trigger button by using the `va
 Keeps the Actions Menu in view by changing the direction if it naturally falls out of view.
 
 <Canvas of={stories.keepInViewExample} />
+
+## Disabled States
+
+The ActionsMenu can be disabled by passing the `disabled` prop. When disabled, the trigger button will have a greyed-out appearance and will not respond to clicks. This is useful when the actions are not available in the current context.
+
+<Canvas of={stories.disabledActionsMenu} />
+
+<Canvas of={stories.disabledCircleVariantActionsMenu} />
 
 ## Properties
 
