@@ -4,39 +4,88 @@ import * as stories from "./SideNavV2.stories";
 
 <Meta of={stories} />
 
-# SideNav
+# SideNavV2
 
-This component is used for navigating the app and for providing extra options which are expanded and shown in the sidebar.
+A modern, responsive side navigation component with context-based state management, expandable panels, and support for multiple navigation sections.
 
-Expanded sidebar supports any content you'd like to put in them and the panel will scroll vertically if the content is taller than browser height.
+## Features
 
-Make sure you use an appropriate icon for each tab so that the intent of that tab section is conveyed as best as possible, e.g. filter icon for filters, cog icon for settings.
+- **Context Provider Pattern**: State management through React Context
+- **Responsive Design**: Adapts to different screen sizes
+- **Resizable Panels**: Drag to resize expanded panels
+- **Multiple Sections**: Current View, Teams, and Pinned Items sections
+- **React Portal Integration**: Current view section rendered via portal for better DOM placement
 
-> **Important!** New sidebar must be used with `SideNavStateProvider`
+> **Important!** SideNavV2 must be used with `SideNavStateProvider` context wrapper.
 
-## New Sections
+## Basic Usage
 
-SideNavV2 now supports three additional sections above the main navigation:
+```jsx
+import { SideNavStateProvider, SideNavV2 } from "./index";
 
-- **Current View**: Shows the current team, its type, and sub-navigation links (rendered via React Portal).
+const items = [
+  {
+    iconName: "building",
+    name: "Home",
+    actionType: "link",
+    link: "/",
+    isActive: true
+  },
+  {
+    iconName: "bell",
+    name: "Notifications",
+    actionType: "component",
+    component: NotificationsPanel,
+    badgeNumber: "3"
+  }
+];
+
+<SideNavStateProvider>
+  <SideNavV2 items={items} sideNavHeight="100vh" />
+</SideNavStateProvider>;
+```
+
+## Advanced Usage with All Sections
+
+SideNavV2 supports three additional sections above the main navigation:
+
+- **Current View**: Shows the current team/person, its type, and sub-navigation links (rendered via React Portal).
 - **Your Teams**: Shows a list of teams with avatars and links.
 - **Pinned Items**: Shows a list of pinned items with avatars and links.
 
-### Example Usage
+### Complete Example
 
-```js run
-import { SideNavStateProvider, RenderCurrentViewSection } from "./index";
+```jsx
+import {
+  SideNavStateProvider,
+  SideNavV2,
+  RenderCurrentViewSection
+} from "./index";
 
-const viewing = {
-  name: "Nebula UI",
-  teamLink: "/teams/nebula-ui",
-  avatar: "https://randomuser.me/api/portraits/lego/1.jpg",
-  subNav: [
-    { name: "Overview", link: "/teams/nebula-ui/overview", isActive: true },
-    { name: "Org chart", link: "/teams/nebula-ui/org-chart" }
-    // ...
-  ]
-};
+const items = [
+  {
+    iconName: "building",
+    name: "Home",
+    actionType: "link",
+    link: "/",
+    isActive: true
+  },
+  {
+    iconName: "snowflake",
+    name: "Filter",
+    actionType: "component",
+    component: FilterPanel,
+    pageSpecific: true,
+    isExpandedByDefault: true
+  },
+  {
+    iconName: "cog",
+    name: "Settings",
+    actionType: "component",
+    component: SettingsPanel,
+    bottomAligned: true
+  }
+];
 
 const yourTeams = [
   {
@@ -55,32 +104,117 @@ const pinnedItems = [
   {
     avatar: "https://randomuser.me/api/portraits/lego/2.jpg",
     name: "Engineering",
-    link: "/pinned/engineering"
+    link: "/pinned/engineering",
+    shape: "square",
+    onUnpin: () => console.log("Unpinned Engineering")
   },
   {
     avatar: "https://randomuser.me/api/portraits/lego/3.jpg",
     name: "New Account Creation",
-    link: "/pinned/new-account"
-  },
-  {
-    avatar: "https://randomuser.me/api/portraits/men/34.jpg",
-    name: "James Merrit",
-    link: "/pinned/james-merrit"
+    link: "/pinned/new-account",
+    shape: "hexagon"
   }
 ];
 
+const viewingState = {
+  name: "Nebula UI",
+  avatar: "https://randomuser.me/api/portraits/lego/1.jpg",
+  shape: "square",
+  badge: <Badge variant="success">Team</Badge>,
+  subNav: [
+    { name: "Overview", link: "/teams/nebula-ui/overview", isActive: true },
+    { name: "Org chart", link: "/teams/nebula-ui/org-chart" },
+    { name: "Strategy", link: "/teams/nebula-ui/strategy" }
+  ]
+};
+
+function App() {
+  return (
+    <SideNavStateProvider>
+      <SideNavV2
+        items={items}
+        sideNavHeight="100vh"
+        yourTeams={yourTeams}
+        pinnedItems={pinnedItems}
+      />
+      <div>
+        <RenderCurrentViewSection viewingState={viewingState} />
+        {/* Your app content */}
+      </div>
+    </SideNavStateProvider>
+  );
+}
+```
+
+## Navigation Item Configuration
+
+Each navigation item supports various configuration options:
+
+```jsx
+const navItem = {
+  // Required props
+  iconName: "bell", // FontAwesome icon name
+  name: "Notifications", // Display name
+  actionType: "component", // "component" | "link" | "button"
+
+  // Optional props
+  badgeNumber: "3", // Show badge with number
+  badgeDot: true, // Show notification dot
+  hide: false, // Hide this item
+  large: false, // Use larger expanded panel
+  bottomAligned: false, // Align to bottom of nav
+  pageSpecific: false, // Show below divider
+  isExpandedByDefault: false, // Auto-expand on mount
+
+  // Action-specific props
+  component: NotificationsPanel, // For actionType: "component"
+  link: "/notifications", // For actionType: "link"
+  onClick: handleClick, // For actionType: "button"
+
+  // State
+  isActive: false // Active state for styling
+};
+```
+
+## Context Provider
+
+The `SideNavStateProvider` is required and provides state management for the navigation:
+
+```jsx
+import { SideNavStateProvider, useSideNavStateContext } from "./index";
+
+// Provider must wrap both SideNav and content
 <SideNavStateProvider>
-  <SideNavV2
-    items={items}
-    sideNavHeight="600px"
-    yourTeams={yourTeams}
-    pinnedItems={pinnedItems}
-  />
-  <div>
-    <RenderCurrentViewSection viewingState={viewing} />
-    {/* Your app content */}
-  </div>
+  <SideNavV2 items={items} />
+  <main>Your app content</main>
 </SideNavStateProvider>;
+
+// Access state in components
+function MyComponent() {
+  const { expandedItem, isExpanded, expandedWidth } = useSideNavStateContext();
+  // ...
+}
+```
+
+## Current View Section
+
+Use `RenderCurrentViewSection` to display current context information:
+
+```jsx
+import { RenderCurrentViewSection } from "./index";
+
+const viewingState = {
+  name: "Engineering Team",
+  avatar: "/avatars/engineering.png",
+  shape: "square", // "square" | "circle" | "hexagon"
+  badge: <Badge variant="success">Team</Badge>,
+  subNav: [
+    { name: "Overview", link: "/teams/engineering/overview", isActive: true },
+    { name: "Members", link: "/teams/engineering/members" }
+  ]
+};
+
+<RenderCurrentViewSection viewingState={viewingState} />;
 ```
 
 <Canvas of={stories.SidebarNavigationV2} />
