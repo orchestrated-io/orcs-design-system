@@ -74,7 +74,7 @@
   "devDependencies": {
     "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
-    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-transform-class-properties": "^7.24.7",
     "@babel/plugin-transform-runtime": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
@@ -105,8 +105,9 @@
     "@storybook/theming": "^8.1.7",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^11.2.2",
-    "@types/jest": "^27.5.2",
+    "@types/jest": "^29.5.0",
     "@types/styled-components": "^5.1.7",
+    "jest-environment-jsdom": "^29.7.0",
     "audit-ci": "^7.1.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.0",
@@ -128,7 +129,7 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^27.5.1",
+    "jest": "^29.7.0",
     "nodemon": "^3.1.0",
     "npm-run-all": "^4.1.5",
     "playroom": "^0.43.0",
@@ -165,13 +166,25 @@
     "send": "0.19.0",
     "redux": "4.2.1",
     "workbox-build": {
-      "rollup": ">=3.29.5"
+      "rollup": ">=3.29.5",
+      "@rollup/plugin-node-resolve": "^15.0.0",
+      "@rollup/plugin-terser": "^0.4.0"
     },
     "@rollup/plugin-babel": {
       "rollup": ">=3.29.5"
     },
     "@rollup/plugin-replace": {
       "rollup": ">=3.29.5"
+    },
+    "@rollup/plugin-node-resolve": {
+      "rollup": ">=3.29.5"
+    },
+    "rollup-plugin-terser": {
+      "rollup": ">=3.29.5"
+    },
+    "react-arborist": {
+      "react-dnd": "^16.0.1",
+      "react-dnd-html5-backend": "^16.0.1"
     },
     "webpack-dev-server": "5.2.2"
   },
@@ -214,11 +227,16 @@
     },
     "transformIgnorePatterns": [
       "<rootDir>/lib/components/*/*.mdx",
-      "<rootDir>/lib/components/*/*.stories.mdx"
+      "<rootDir>/lib/components/*/*.stories.mdx",
+      "node_modules/(?!(react-arborist|react-dnd|@react-dnd)/)"
     ],
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
-      "\\.(css|less)$": "identity-obj-proxy"
+      "\\.(css|less)$": "identity-obj-proxy",
+      "^react-dnd$": "react-dnd/dist/index.js",
+      "^react-dnd-html5-backend$": "react-dnd-html5-backend/dist/index.js",
+      "^dnd-core$": "dnd-core/dist/index.js",
+      "^react-arborist$": "<rootDir>/__mocks__/react-arborist.js"
     }
   },
   "eslintConfig": {
